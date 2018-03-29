@@ -1,0 +1,33 @@
+---
+layout: post
+status: publish
+published: true
+title: You guys like stats, right?
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 534
+wordpress_url: https://basketball-gm.com/?p=534
+date: '2017-10-02 19:07:04 -0400'
+date_gmt: '2017-10-02 23:07:04 -0400'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- New Feature
+- Stats
+- Advanced Stats
+comments: []
+---
+<p>I rolled out a few new features over the past week, all aimed at one goal: more stats. Ideally, Basketball GM should provide you with all the advanced stats available for real basketball leagues. It's not there yet, but it's closer. Here's what's new:</p>
+<p><b>Team Opponent Stats</b>: On the Team Stats page, you can now switch between team stats, opponent stats, and advanced stats. For seasons played before this update, the only opponent stats will be blocks and points, since those have both been recorded for a long time. Then in new seasons you play, you will get all opponent stats.</p>
+<p><b>Team Playoff Stats</b>: Team playoff stats were always recorded, but there was no easy way to view them. Now you can toggle between Playoffs and Regular Season from the Team Stats page, just like you've always been able to do for Player Stats. It's crazy this feature was missing for so long!</p>
+<p><b>Player Advanced Stats</b>: This is the real juicy part, more advanced stats! When I put PER in the game, I never intended for it to be the only advanced stat. I always wanted more, but performance was kind of shitty in general and I didn't want to add more stuff to slow it down. But now, with <a href="https://basketball-gm.com/blog/tag/project-iverson/">the glorious success of Project Iverson</a>, I can add new features without too much concern for performance (don't worry, I benchmarked it and all these additional stats have very little performance impact).</p>
+<p>Player advanced stats now sit in their own table, which you can view on player pages for individual players, or on the Player Stats page by switching "Per Game" to "Advanced". In addition to the old standbys, I added TS%, 3PAr, FTr, ORB%, DRB%, TRB%, AST%, STL%, BLK%, TOV%, and USG%. See <a href="https://www.basketball-reference.com/about/glossary.html">Basketball-Reference.com for definitions</a>, cause that's where I got them from. Most of these won't be available for past seasons because they are based on the team opponent stats described above, but some will be.</p>
+<p>All the % stats (like ORB%) are calculated using the formulas at the page linked above, which means they are estimates. I could have stored data directly from game simulation to calculate real values, but I didn't do that. No real reason why. Arguments could be made either way, but at the end of the day I doubt it matters much.</p>
+<p>Hopefully this is just the start of more advanced stats. I'd love to add a better holistic stat than PER, which is really not a good metric. What do you want to see next? <a href="https://www.reddit.com/r/BasketballGM/comments/73whjb/you_guys_like_stats_right/">Let me know on Reddit.</a></p>

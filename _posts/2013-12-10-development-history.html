@@ -1,0 +1,70 @@
+---
+layout: post
+status: publish
+published: true
+title: Development History
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 41
+wordpress_url: http://basketball-gm.com/?p=41
+date: '2013-12-10 21:26:45 -0500'
+date_gmt: '2013-12-10 21:26:45 -0500'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- Technical
+comments:
+- id: 81991
+  author: cameron jones
+  author_email: cameron.jones@barbertonstudents.org
+  author_url: ''
+  date: '2017-03-31 16:34:56 -0400'
+  date_gmt: '2017-03-31 20:34:56 -0400'
+  content: make a pro wrestling gm game based on wwe
+- id: 81992
+  author: cameron jones
+  author_email: cameron.jones@barbertonstudents.org
+  author_url: ''
+  date: '2017-03-31 16:36:35 -0400'
+  date_gmt: '2017-03-31 20:36:35 -0400'
+  content: Also make a mma/ufc gm game
+- id: 81993
+  author: cameron jones
+  author_email: cameron.jones@barbertonstudents.org
+  author_url: ''
+  date: '2017-03-31 16:40:20 -0400'
+  date_gmt: '2017-03-31 20:40:20 -0400'
+  content: Also a soccer gm game &amp; boxing gm game
+- id: 81994
+  author: cameron jones
+  author_email: cameron.jones@barbertonstudents.org
+  author_url: ''
+  date: '2017-03-31 16:44:15 -0400'
+  date_gmt: '2017-03-31 20:44:15 -0400'
+  content: And with the wwe based pro wrestling gm game add a wwe draft
+- id: 82523
+  author: Thomas Burwell
+  author_email: tom123b@gmail.com
+  author_url: http://tryingtoseereality.blogspot.com
+  date: '2017-09-20 19:36:07 -0400'
+  date_gmt: '2017-09-20 23:36:07 -0400'
+  content: "Thank you so much for this Jeremy!\r\n\r\nI too played many hours of Baseball
+    Mogul about 10 years ago, and have been hoping that an open source version would
+    pop up! \r\n\r\nThanks!"
+---
+<p>I wrote the first line of code for Basketball GM back in 2008, after I had graduated from college but before I started grad school. That code was C#, which I had never used before. My primary goal was to learn a new programming language and learn how to make traditional desktop GUI software, as previously I had only made software with either command line or web UIs. I was not sure if I was a good enough programmer to complete such an ambitious project, but I figured I'd give it a shot.</p>
+<!--more-->
+<p>Quickly I grew frustrated with C# and switched to Python (and PyGTK), which I had also never used. Python is now my favorite language, in large part due to things I learned while working on Basketball GM. However, although the Python/PyGTK version did ultimately reach <a href="http://basketball-gm.com/old/">version 1.0</a>, I was no fool. I could see the tides changing. Nobody wanted to download and install software, they just wanted to go to a website and have everything automatically work.</p>
+<p>So, after a hiatus of several years, in 2012 I set off to make Basketball GM a web app. First I tried using Django, but I quickly grew frustrated with its heavy-handedness. Then I switched to Flask, which was much nicer, and eventually ported the entire game over. The only problem was that it would be completely infeasible to run Basketball GM on a server. It's far too CPU intensive. I'd have to come up with some other strategy, like charging a monthly fee, significantly simplifying the game, or moving some of the processing to client-side JavaScript. None of those options sounded particularly appealing, but the last one seemed like the least worst one. So I started to learn JavaScript.</p>
+<p>In the process of learning JavaScript, I also learned about all these fancy new HTML5 technologies. One of them, IndexedDB, seemed to me as if it would allow me to actually move all processing client-side, not just some. However, it had poor browser support, had an ugly API, and had hardly any people who had used it (let alone used it as intensively as I would need to). Despite that, the more I thought about it, the more I realized that this was the only path towards making a game that could be accessible to a wide audience.</p>
+<p>In under a year of part-time work, I learned JavaScript and ported Basketball GM over completely. Throughout this time, I continued to think of the game similarly to how I first did: as a way for me to learn new technologies and have fun. I still didn't really expect that it would lead to anything that other people might get interested in. But I kept working on it. As it improved over the years, I began to think of it as an insurance policy, that if I decided I wanted to switch careers and become a web developer, then Basketball GM would serve as a great resume. That never happened, though; instead, I finished grad school and found a good job in computational biology.</p>
+<p>But I continued to work on Basketball GM, adding features and improving the game until I felt it was something that at least some small subset of basketball nerds could enjoy. In August 2013, in between the time I finished grad school and started my job, <a href="http://www.reddit.com/r/nba/comments/1j1e6q/i_made_a_singleplayer_basketball_management/">I posted it to Reddit's /r/nba</a>, thinking that the only people reading that in the summer would be exactly the kind of person who would be interested in my game.</p>
+<p>And I was right. I got a really large and really positive response, and every day hundreds of people spend an average of 1.5 hours each playing Basketball GM. We even got <a href="http://www.reddit.com/r/nba/comments/1ki6w2/iam_the_houston_rockets_gm_ama_offseason_addition/cbp7ei9?context=1">a shout-out from Houston Rockets GM Daryl Morey</a>. This is all way more than I ever even hoped for when I started writing Basketball GM, but I still think there is a lot of room for growth, both in terms of improving the game and making the game more popular.</p>
+<p>(By the way, if you think you know how I can make Basketball GM more popular, please <a href="mailto:commissioner@basketball-gm.com">email me</a>.)</p>

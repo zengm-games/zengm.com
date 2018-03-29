@@ -1,0 +1,36 @@
+---
+layout: page-or-post
+status: publish
+published: true
+base_title: Basketball GM Blog
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 20
+wordpress_url: http://basketball-gm.com/blog/?page_id=20
+date: '2013-12-10 16:56:47 -0500'
+date_gmt: '2013-12-10 16:56:47 -0500'
+categories: []
+tags: []
+comments: []
+---
+
+{%- include blog-teaser.html -%}
+
+{%- for post in site.posts -%}
+  <div class="post">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    <p>{{ post.date | date: "%B %-d, %Y" }} - <?php the_tags('', ', ') ?></p>
+
+    {{ post.excerpt }}
+
+    {%- if post.excerpt != post.content -%}
+      <p><a href="{{ post.url | relative_url }}">Read more...</a></p>
+    {%- endif -%}
+  </div>
+{%- endfor -%}

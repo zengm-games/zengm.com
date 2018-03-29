@@ -1,0 +1,23 @@
+excerpt_separator: <!--more-->
+permalink: /blog/:year/:month/:title/
+
+# This stuff is just used by jekyll-seo-tag
+title: Basketball GM
+description: >-
+  Basketball GM is a single-player basketball management simulation game. Set
+  your roster, make trades, draft prospects, manage your finances, and try to
+  build a dynasty. Play it in your browser now, completely 100% free!
+facebook:
+  publisher: https://www.facebook.com/basketball.general.manager
+twitter:
+  username: basketball_gm
+logo: /files/logo.png
+social:
+  links:
+    - https://twitter.com/basketball_gm
+    - https://www.facebook.com/basketball.general.manager
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed

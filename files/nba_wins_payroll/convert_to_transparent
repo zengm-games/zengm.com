@@ -1,0 +1,7 @@
+#!/bin/bash
+# Run this before convert_to_thumbnails
+for file in `dir -d *.png` ; do
+echo "Processing image $file ..."
+/usr/bin/convert -transparent "#ffffff" $file $file
+done
+

@@ -1,0 +1,4249 @@
+---
+layout: post
+status: publish
+published: true
+title: The effect of a blocked jump shot on future jump shots in the NBA
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 4
+wordpress_url: http://basketball-gm.com/blog/?p=4
+date: '2013-04-30 21:09:20 -0400'
+date_gmt: '2013-04-30 21:09:20 -0400'
+categories:
+- Uncategorized
+tags:
+- Non-BBGM
+- Statistics
+- NBA
+comments:
+- id: 2
+  author: floppymoose
+  author_email: junk@floppymoose.com
+  author_url: ''
+  date: '2013-05-02 18:33:48 -0400'
+  date_gmt: '2013-05-02 18:33:48 -0400'
+  content: You need to control for lineups.  It may be that the decline is partly
+    due to a rim defender entering the game and being successful, and thus staying
+    in the game.  That would lower the "after the block" fg%, but would not be due
+    to a loss of confidence, but rather due to actual defensive improvement in the
+    opponent.
+---
+<p>If an NBA player gets a jump shot blocked, does it change the way he plays the rest of the game? You can imagine there could be a psychological effect like a loss of confidence, or a conscious/subconscious decision to try harder to avoid being blocked again which could harm shooting efficiency. Basketball statistics legend Dean Oliver recently Tweeted the claim that <a href="https://twitter.com/DeanO_ESPN/status/328989828618276865">it has a big effect on Steph Curry</a> and <a href="https://twitter.com/DeanO_ESPN/status/329011316268343296">basketball players in general</a>. But is it actually true? And how big is the effect? Let's look at some data.</p>
+<!--more-->
+<p>Here's the plan:</p>
+<ol>
+<li>For each player, find every game in which they had jump shot is blocked</li>
+<li>Calculate their field goal percentage (FG%) before and after their first blocked jump shot of the game</li>
+<li>See what the data tells us</li>
+</ol>
+<p>Doing this requires a lot of play-by-play game data that allows me to look specifically at jump shots (<a href="http://www.youtube.com/watch?v=9ces3yKpwS4">no dunks</a>). One source of this data I found was <a href="http://basketballvalue.com/downloads.php">BasketballValue.com</a>. They have data from 2005-2012; however, the first season is in a different format so I am ignoring it. So I have 6 seasons of data, from the 2006-2007 season up through last year. They do not (yet?) have data for this year, so all of the analysis below does not include the 2012-2013 season.</p>
+<p>So I did the analysis as I described above (<a href="https://github.com/dumbmatter/nba-blocked-jumper">data and source code are on GitHub</a>). First, I looked at the entire league, pooling together all players. The average FG% for a jump shot from 2006-2012 was 36%. The average FG% for a player who did not have any jump shots blocked in a game was also 36%. But what about players who did have a jump shot blocked?</p>
+<ul>
+<li><b>Before blocked jump shot: 38%</b></li>
+<li><b>After blocked jump shot: 34%</b></li>
+</ul>
+<p>This is no statistical fluke. These numbers are from tens of thousands of shots by thousands of players in thousands of games. The sample size is large.</p>
+<p>However, for individual players, the sample size is small. Steph Curry has only taken 289 jump shots in games where he had a jump shot blocked. And from those shots, he actually made a higher percentage (34% vs 29%) <i>after</i> he had a jump shot blocked. This goes against the leaguewide trend, but it's not horribly rare. Below you can see a table and scatter plot for every player who has taken more than a handful of shots in these situations.</p>
+<p>I would not read much into the value for individual players, since the sample sizes are relatively small, but the leaguewide trend is clear. NBA players shoot worse after they have a jump shot blocked.</p>
+<p>Why? Maybe they are overcompensating. Maybe they are scared. Maybe they play differently later in the game than earlier (due to the score, for instance), regardless of if a shot is blocked or not. Who knows? Certainly not me. If anyone wants to investigate further, you can just <a href="https://github.com/dumbmatter/nba-blocked-jumper">take my code and start hacking</a>.</p>
+<p><!--raw--></p>
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="nba-blocked-jumper-table">
+<thead>
+<tr>
+<th colspan="2"></th>
+<th colspan="2">Before Block</th>
+<th colspan="2">After Block</th>
+<th colspan="2">Overall</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>FG% difference</th>
+<th>FG%</th>
+<th>FGA</th>
+<th>FG%</th>
+<th>FGA</th>
+<th>FG%</th>
+<th>FGA</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<div id="nba-blocked-jumper-plot"></div>
+<p><script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.8/d3.min.js"></script><br />
+<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script></p>
+<link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" rel="stylesheet">
+<style type="text/css">
+#nba-blocked-jumper-plot {<br />
+    margin: 2.5em 0 1em 0;<br />
+    position: relative;<br />
+}<br />
+.tooltip {<br />
+    position: absolute;<br />
+    width: 220px;<br />
+    height: 68px;<br />
+    padding: 4px;<br />
+    font: 12px sans-serif;<br />
+    background: HotPink;<br />
+    border-radius: 8px;<br />
+    pointer-events: none;<br />
+}<br />
+</style>
+<p><script type="text/javascript"><br />
+function round(value, precision) {<br />
+    precision = precision !== undefined ? parseInt(precision, 10) : 0;</p>
+<p>    return value.toFixed(precision);<br />
+}</p>
+<p>//Width and height<br />
+var w = 638;<br />
+var h = 450;</p>
+<p>var dataset = [<br />
+    {<br />
+        "fga_after": 82,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 525,<br />
+        "fgp_after": 0.3902439024390244,<br />
+        "fgp_before": 0.4358974358974359,<br />
+        "fgp_overall": 0.35619047619047617,<br />
+        "name": "Brooks (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 613,<br />
+        "fga_before": 534,<br />
+        "fga_overall": 4075,<br />
+        "fgp_after": 0.367047308319739,<br />
+        "fgp_before": 0.38202247191011235,<br />
+        "fgp_overall": 0.38699386503067484,<br />
+        "name": "Durant (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 55,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 484,<br />
+        "fgp_after": 0.3090909090909091,<br />
+        "fgp_before": 0.34146341463414637,<br />
+        "fgp_overall": 0.3285123966942149,<br />
+        "name": "Thomas (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 27,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 530,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.23076923076923078,<br />
+        "fgp_overall": 0.3132075471698113,<br />
+        "name": "Daniels (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 91,<br />
+        "fga_before": 127,<br />
+        "fga_overall": 2159,<br />
+        "fgp_after": 0.45054945054945056,<br />
+        "fgp_before": 0.41732283464566927,<br />
+        "fgp_overall": 0.40389069013432144,<br />
+        "name": "Bibby (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 565,<br />
+        "fga_before": 621,<br />
+        "fga_overall": 5398,<br />
+        "fgp_after": 0.41238938053097346,<br />
+        "fgp_before": 0.4363929146537842,<br />
+        "fgp_overall": 0.4436828454983327,<br />
+        "name": "Nowitzki (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 417,<br />
+        "fga_before": 257,<br />
+        "fga_overall": 2267,<br />
+        "fgp_after": 0.40047961630695444,<br />
+        "fgp_before": 0.4046692607003891,<br />
+        "fgp_overall": 0.4106749007498897,<br />
+        "name": "Scola (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 41,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 552,<br />
+        "fgp_after": 0.5121951219512195,<br />
+        "fgp_before": 0.3392857142857143,<br />
+        "fgp_overall": 0.375,<br />
+        "name": "Williams (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 190,<br />
+        "fga_before": 100,<br />
+        "fga_overall": 2017,<br />
+        "fgp_after": 0.3894736842105263,<br />
+        "fgp_before": 0.35,<br />
+        "fgp_overall": 0.3877045116509668,<br />
+        "name": "Barbosa (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 113,<br />
+        "fga_before": 95,<br />
+        "fga_overall": 1012,<br />
+        "fgp_after": 0.36283185840707965,<br />
+        "fgp_before": 0.3684210526315789,<br />
+        "fgp_overall": 0.36561264822134387,<br />
+        "name": "Hill (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 33,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 297,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.3872053872053872,<br />
+        "name": "Gooden (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 203,<br />
+        "fga_before": 150,<br />
+        "fga_overall": 1718,<br />
+        "fgp_after": 0.2857142857142857,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.31664726426076834,<br />
+        "name": "Rondo (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 69,<br />
+        "fga_before": 110,<br />
+        "fga_overall": 748,<br />
+        "fgp_after": 0.4057971014492754,<br />
+        "fgp_before": 0.4090909090909091,<br />
+        "fgp_overall": 0.42513368983957217,<br />
+        "name": "Paul (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 57,<br />
+        "fga_before": 61,<br />
+        "fga_overall": 536,<br />
+        "fgp_after": 0.40350877192982454,<br />
+        "fgp_before": 0.32786885245901637,<br />
+        "fgp_overall": 0.35634328358208955,<br />
+        "name": "Harris (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 37,<br />
+        "fga_before": 59,<br />
+        "fga_overall": 817,<br />
+        "fgp_after": 0.32432432432432434,<br />
+        "fgp_before": 0.2711864406779661,<br />
+        "fgp_overall": 0.35495716034271724,<br />
+        "name": "Marion (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 495,<br />
+        "fgp_after": 0.390625,<br />
+        "fgp_before": 0.5454545454545454,<br />
+        "fgp_overall": 0.3939393939393939,<br />
+        "name": "Vujacic (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 1249,<br />
+        "fgp_after": 0.48936170212765956,<br />
+        "fgp_before": 0.475,<br />
+        "fgp_overall": 0.40512409927942356,<br />
+        "name": "House (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 34,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 554,<br />
+        "fgp_after": 0.35294117647058826,<br />
+        "fgp_before": 0.5869565217391305,<br />
+        "fgp_overall": 0.4602888086642599,<br />
+        "name": "Bass (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 471,<br />
+        "fga_before": 494,<br />
+        "fga_overall": 2538,<br />
+        "fgp_after": 0.3248407643312102,<br />
+        "fgp_before": 0.37449392712550605,<br />
+        "fgp_overall": 0.3798266351457841,<br />
+        "name": "Duncan (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 99,<br />
+        "fga_before": 89,<br />
+        "fga_overall": 584,<br />
+        "fgp_after": 0.3434343434343434,<br />
+        "fgp_before": 0.3258426966292135,<br />
+        "fgp_overall": 0.3047945205479452,<br />
+        "name": "Crawford (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 162,<br />
+        "fga_before": 168,<br />
+        "fga_overall": 2540,<br />
+        "fgp_after": 0.36419753086419754,<br />
+        "fgp_before": 0.44047619047619047,<br />
+        "fgp_overall": 0.3799212598425197,<br />
+        "name": "Carter (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 33,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 672,<br />
+        "fgp_after": 0.18181818181818182,<br />
+        "fgp_before": 0.25,<br />
+        "fgp_overall": 0.30952380952380953,<br />
+        "name": "Mbah (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 40,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 216,<br />
+        "fgp_after": 0.325,<br />
+        "fgp_before": 0.4375,<br />
+        "fgp_overall": 0.3148148148148148,<br />
+        "name": "Burks (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 68,<br />
+        "fga_before": 61,<br />
+        "fga_overall": 445,<br />
+        "fgp_after": 0.38235294117647056,<br />
+        "fgp_before": 0.22950819672131148,<br />
+        "fgp_overall": 0.34831460674157305,<br />
+        "name": "Blair (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 119,<br />
+        "fga_before": 95,<br />
+        "fga_overall": 699,<br />
+        "fgp_after": 0.46218487394957986,<br />
+        "fgp_before": 0.49473684210526314,<br />
+        "fgp_overall": 0.4291845493562232,<br />
+        "name": "O'Neal (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 49,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 500,<br />
+        "fgp_after": 0.30612244897959184,<br />
+        "fgp_before": 0.48717948717948717,<br />
+        "fgp_overall": 0.35,<br />
+        "name": "Dragic (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 116,<br />
+        "fga_before": 105,<br />
+        "fga_overall": 593,<br />
+        "fgp_after": 0.49137931034482757,<br />
+        "fgp_before": 0.42857142857142855,<br />
+        "fgp_overall": 0.4806070826306914,<br />
+        "name": "Bass (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 903,<br />
+        "fgp_after": 0.2765957446808511,<br />
+        "fgp_before": 0.45454545454545453,<br />
+        "fgp_overall": 0.3388704318936877,<br />
+        "name": "Walton (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 40,<br />
+        "fga_before": 37,<br />
+        "fga_overall": 295,<br />
+        "fgp_after": 0.3,<br />
+        "fgp_before": 0.43243243243243246,<br />
+        "fgp_overall": 0.29152542372881357,<br />
+        "name": "Maggette (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 82,<br />
+        "fga_before": 83,<br />
+        "fga_overall": 1856,<br />
+        "fgp_after": 0.5121951219512195,<br />
+        "fgp_before": 0.5301204819277109,<br />
+        "fgp_overall": 0.43103448275862066,<br />
+        "name": "Bonner (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 39,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 316,<br />
+        "fgp_after": 0.3076923076923077,<br />
+        "fgp_before": 0.3488372093023256,<br />
+        "fgp_overall": 0.3069620253164557,<br />
+        "name": "Daniels (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 95,<br />
+        "fga_before": 101,<br />
+        "fga_overall": 421,<br />
+        "fgp_after": 0.37894736842105264,<br />
+        "fgp_before": 0.40594059405940597,<br />
+        "fgp_overall": 0.4014251781472684,<br />
+        "name": "Landry (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 108,<br />
+        "fga_before": 117,<br />
+        "fga_overall": 1368,<br />
+        "fgp_after": 0.3425925925925926,<br />
+        "fgp_before": 0.358974358974359,<br />
+        "fgp_overall": 0.39035087719298245,<br />
+        "name": "Jefferson (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 116,<br />
+        "fga_before": 128,<br />
+        "fga_overall": 1493,<br />
+        "fgp_after": 0.43103448275862066,<br />
+        "fgp_before": 0.3125,<br />
+        "fgp_overall": 0.36570663094440725,<br />
+        "name": "Williams (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 225,<br />
+        "fga_before": 253,<br />
+        "fga_overall": 2769,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.40711462450592883,<br />
+        "fgp_overall": 0.36258577103647527,<br />
+        "name": "Ginobili (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 1136,<br />
+        "fga_before": 1022,<br />
+        "fga_overall": 6703,<br />
+        "fgp_after": 0.3274647887323944,<br />
+        "fgp_before": 0.3776908023483366,<br />
+        "fgp_overall": 0.3702819633000149,<br />
+        "name": "Bryant (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 413,<br />
+        "fgp_after": 0.3488372093023256,<br />
+        "fgp_before": 0.2571428571428571,<br />
+        "fgp_overall": 0.3728813559322034,<br />
+        "name": "Webster (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 86,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 649,<br />
+        "fgp_after": 0.29069767441860467,<br />
+        "fgp_before": 0.3958333333333333,<br />
+        "fgp_overall": 0.3266563944530046,<br />
+        "name": "Fields (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 50,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 892,<br />
+        "fgp_after": 0.46,<br />
+        "fgp_before": 0.27586206896551724,<br />
+        "fgp_overall": 0.32062780269058294,<br />
+        "name": "Morrison (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 78,<br />
+        "fga_overall": 601,<br />
+        "fgp_after": 0.2978723404255319,<br />
+        "fgp_before": 0.34615384615384615,<br />
+        "fgp_overall": 0.3910149750415973,<br />
+        "name": "Songaila (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 90,<br />
+        "fga_before": 55,<br />
+        "fga_overall": 572,<br />
+        "fgp_after": 0.3,<br />
+        "fgp_before": 0.4727272727272727,<br />
+        "fgp_overall": 0.35664335664335667,<br />
+        "name": "Nocioni (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 79,<br />
+        "fga_before": 51,<br />
+        "fga_overall": 1964,<br />
+        "fgp_after": 0.3037974683544304,<br />
+        "fgp_before": 0.45098039215686275,<br />
+        "fgp_overall": 0.3727087576374745,<br />
+        "name": "Kidd (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 162,<br />
+        "fga_before": 97,<br />
+        "fga_overall": 885,<br />
+        "fgp_after": 0.19135802469135801,<br />
+        "fgp_before": 0.28865979381443296,<br />
+        "fgp_overall": 0.29491525423728815,<br />
+        "name": "Hibbert (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 360,<br />
+        "fgp_after": 0.2,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.34444444444444444,<br />
+        "name": "Morris (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 215,<br />
+        "fga_before": 224,<br />
+        "fga_overall": 1435,<br />
+        "fgp_after": 0.33488372093023255,<br />
+        "fgp_before": 0.33482142857142855,<br />
+        "fgp_overall": 0.34425087108013935,<br />
+        "name": "Jackson (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 91,<br />
+        "fga_before": 85,<br />
+        "fga_overall": 443,<br />
+        "fgp_after": 0.2087912087912088,<br />
+        "fgp_before": 0.32941176470588235,<br />
+        "fgp_overall": 0.327313769751693,<br />
+        "name": "Gee (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 104,<br />
+        "fga_before": 97,<br />
+        "fga_overall": 770,<br />
+        "fgp_after": 0.3076923076923077,<br />
+        "fgp_before": 0.2268041237113402,<br />
+        "fgp_overall": 0.2753246753246753,<br />
+        "name": "Ariza (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 40,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 369,<br />
+        "fgp_after": 0.45,<br />
+        "fgp_before": 0.38,<br />
+        "fgp_overall": 0.37669376693766937,<br />
+        "name": "Maggette (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 470,<br />
+        "fga_before": 419,<br />
+        "fga_overall": 2631,<br />
+        "fgp_after": 0.34893617021276596,<br />
+        "fgp_before": 0.4224343675417661,<br />
+        "fgp_overall": 0.39718738122386926,<br />
+        "name": "West (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 166,<br />
+        "fga_before": 137,<br />
+        "fga_overall": 1818,<br />
+        "fgp_after": 0.37349397590361444,<br />
+        "fgp_before": 0.3722627737226277,<br />
+        "fgp_overall": 0.39823982398239827,<br />
+        "name": "Gomes (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 112,<br />
+        "fga_before": 119,<br />
+        "fga_overall": 1211,<br />
+        "fgp_after": 0.375,<br />
+        "fgp_before": 0.4369747899159664,<br />
+        "fgp_overall": 0.36498761354252685,<br />
+        "name": "Budinger (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 61,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 429,<br />
+        "fgp_after": 0.32786885245901637,<br />
+        "fgp_before": 0.4418604651162791,<br />
+        "fgp_overall": 0.3123543123543124,<br />
+        "name": "Davis (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 108,<br />
+        "fga_before": 100,<br />
+        "fga_overall": 1044,<br />
+        "fgp_after": 0.37037037037037035,<br />
+        "fgp_before": 0.42,<br />
+        "fgp_overall": 0.38984674329501917,<br />
+        "name": "Lee (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 71,<br />
+        "fga_before": 71,<br />
+        "fga_overall": 592,<br />
+        "fgp_after": 0.3380281690140845,<br />
+        "fgp_before": 0.30985915492957744,<br />
+        "fgp_overall": 0.3716216216216216,<br />
+        "name": "Navarro (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 41,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 380,<br />
+        "fgp_after": 0.2682926829268293,<br />
+        "fgp_before": 0.4186046511627907,<br />
+        "fgp_overall": 0.34210526315789475,<br />
+        "name": "Barnes (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 118,<br />
+        "fga_before": 138,<br />
+        "fga_overall": 1933,<br />
+        "fgp_after": 0.2457627118644068,<br />
+        "fgp_before": 0.391304347826087,<br />
+        "fgp_overall": 0.3450594930160372,<br />
+        "name": "Green (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 200,<br />
+        "fga_before": 210,<br />
+        "fga_overall": 2801,<br />
+        "fgp_after": 0.38,<br />
+        "fgp_before": 0.36666666666666664,<br />
+        "fgp_overall": 0.3859335951445912,<br />
+        "name": "Smith (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 115,<br />
+        "fga_before": 99,<br />
+        "fga_overall": 611,<br />
+        "fgp_after": 0.28695652173913044,<br />
+        "fgp_before": 0.29292929292929293,<br />
+        "fgp_overall": 0.309328968903437,<br />
+        "name": "Hickson (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 56,<br />
+        "fga_before": 74,<br />
+        "fga_overall": 642,<br />
+        "fgp_after": 0.21428571428571427,<br />
+        "fgp_before": 0.33783783783783783,<br />
+        "fgp_overall": 0.3099688473520249,<br />
+        "name": "Varejao (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 53,<br />
+        "fga_before": 69,<br />
+        "fga_overall": 1756,<br />
+        "fgp_after": 0.39622641509433965,<br />
+        "fgp_before": 0.30434782608695654,<br />
+        "fgp_overall": 0.34339407744874717,<br />
+        "name": "Alston (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 48,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 431,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.18421052631578946,<br />
+        "fgp_overall": 0.2900232018561485,<br />
+        "name": "Shumpert (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 268,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.39285714285714285,<br />
+        "fgp_overall": 0.291044776119403,<br />
+        "name": "Watson (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 83,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 536,<br />
+        "fgp_after": 0.3614457831325301,<br />
+        "fgp_before": 0.42,<br />
+        "fgp_overall": 0.30970149253731344,<br />
+        "name": "Young (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 76,<br />
+        "fga_before": 60,<br />
+        "fga_overall": 1287,<br />
+        "fgp_after": 0.42105263157894735,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.3923853923853924,<br />
+        "name": "Billups (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 40,<br />
+        "fga_before": 57,<br />
+        "fga_overall": 419,<br />
+        "fgp_after": 0.4,<br />
+        "fgp_before": 0.5087719298245614,<br />
+        "fgp_overall": 0.4439140811455847,<br />
+        "name": "Szczerbiak (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 184,<br />
+        "fga_before": 133,<br />
+        "fga_overall": 1878,<br />
+        "fgp_after": 0.33695652173913043,<br />
+        "fgp_before": 0.47368421052631576,<br />
+        "fgp_overall": 0.41480298189563364,<br />
+        "name": "Murphy (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 39,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 377,<br />
+        "fgp_after": 0.2564102564102564,<br />
+        "fgp_before": 0.4,<br />
+        "fgp_overall": 0.3183023872679045,<br />
+        "name": "Warrick (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 33,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 311,<br />
+        "fgp_after": 0.36363636363636365,<br />
+        "fgp_before": 0.4878048780487805,<br />
+        "fgp_overall": 0.35691318327974275,<br />
+        "name": "D. Brown (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 59,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 347,<br />
+        "fgp_after": 0.11864406779661017,<br />
+        "fgp_before": 0.3157894736842105,<br />
+        "fgp_overall": 0.2881844380403458,<br />
+        "name": "Monroe (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 140,<br />
+        "fga_before": 130,<br />
+        "fga_overall": 1728,<br />
+        "fgp_after": 0.35,<br />
+        "fgp_before": 0.38461538461538464,<br />
+        "fgp_overall": 0.3836805555555556,<br />
+        "name": "James (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 174,<br />
+        "fga_before": 151,<br />
+        "fga_overall": 1370,<br />
+        "fgp_after": 0.3850574712643678,<br />
+        "fgp_before": 0.3576158940397351,<br />
+        "fgp_overall": 0.354014598540146,<br />
+        "name": "Foye (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 26,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 235,<br />
+        "fgp_after": 0.15384615384615385,<br />
+        "fgp_before": 0.5666666666666667,<br />
+        "fgp_overall": 0.3404255319148936,<br />
+        "name": "Randolph (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 142,<br />
+        "fga_before": 166,<br />
+        "fga_overall": 1996,<br />
+        "fgp_after": 0.4295774647887324,<br />
+        "fgp_before": 0.4036144578313253,<br />
+        "fgp_overall": 0.39178356713426854,<br />
+        "name": "Stojakovic (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 83,<br />
+        "fga_overall": 1451,<br />
+        "fgp_after": 0.5,<br />
+        "fgp_before": 0.40963855421686746,<br />
+        "fgp_overall": 0.3859407305306685,<br />
+        "name": "Ilgauskas (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 50,<br />
+        "fga_before": 57,<br />
+        "fga_overall": 329,<br />
+        "fgp_after": 0.48,<br />
+        "fgp_before": 0.45614035087719296,<br />
+        "fgp_overall": 0.4316109422492401,<br />
+        "name": "Smith (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 66,<br />
+        "fga_before": 104,<br />
+        "fga_overall": 1789,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.36538461538461536,<br />
+        "fgp_overall": 0.368921185019564,<br />
+        "name": "Bell (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 633,<br />
+        "fga_before": 628,<br />
+        "fga_overall": 3615,<br />
+        "fgp_after": 0.3617693522906793,<br />
+        "fgp_before": 0.38057324840764334,<br />
+        "fgp_overall": 0.36929460580912865,<br />
+        "name": "Anthony (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 91,<br />
+        "fga_before": 88,<br />
+        "fga_overall": 1891,<br />
+        "fgp_after": 0.38461538461538464,<br />
+        "fgp_before": 0.29545454545454547,<br />
+        "fgp_overall": 0.39925965097831834,<br />
+        "name": "Frye (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 60,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 1261,<br />
+        "fgp_after": 0.36666666666666664,<br />
+        "fgp_before": 0.36,<br />
+        "fgp_overall": 0.3386201427438541,<br />
+        "name": "Fernandez (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 71,<br />
+        "fga_before": 85,<br />
+        "fga_overall": 1215,<br />
+        "fgp_after": 0.39436619718309857,<br />
+        "fgp_before": 0.4470588235294118,<br />
+        "fgp_overall": 0.3950617283950617,<br />
+        "name": "Parker (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 31,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 100,<br />
+        "fgp_after": 0.16129032258064516,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.29,<br />
+        "name": "Gordon (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 228,<br />
+        "fga_before": 212,<br />
+        "fga_overall": 2424,<br />
+        "fgp_after": 0.40350877192982454,<br />
+        "fgp_before": 0.3443396226415094,<br />
+        "fgp_overall": 0.3981023102310231,<br />
+        "name": "Lewis (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 45,<br />
+        "fga_overall": 347,<br />
+        "fgp_after": 0.40625,<br />
+        "fgp_before": 0.24444444444444444,<br />
+        "fgp_overall": 0.3746397694524496,<br />
+        "name": "Lucas (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 317,<br />
+        "fgp_after": 0.17777777777777778,<br />
+        "fgp_before": 0.23076923076923078,<br />
+        "fgp_overall": 0.19242902208201892,<br />
+        "name": "Haywood (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 55,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 318,<br />
+        "fgp_after": 0.3090909090909091,<br />
+        "fgp_before": 0.46875,<br />
+        "fgp_overall": 0.33647798742138363,<br />
+        "name": "Jefferson (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 62,<br />
+        "fga_overall": 676,<br />
+        "fgp_after": 0.359375,<br />
+        "fgp_before": 0.2903225806451613,<br />
+        "fgp_overall": 0.3180473372781065,<br />
+        "name": "Price (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 178,<br />
+        "fga_before": 158,<br />
+        "fga_overall": 2015,<br />
+        "fgp_after": 0.42134831460674155,<br />
+        "fgp_before": 0.3670886075949367,<br />
+        "fgp_overall": 0.3781637717121588,<br />
+        "name": "Dunleavy (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 120,<br />
+        "fga_before": 139,<br />
+        "fga_overall": 967,<br />
+        "fgp_after": 0.425,<br />
+        "fgp_before": 0.39568345323741005,<br />
+        "fgp_overall": 0.4074457083764219,<br />
+        "name": "Yao (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 344,<br />
+        "fgp_after": 0.34285714285714286,<br />
+        "fgp_before": 0.23076923076923078,<br />
+        "fgp_overall": 0.36046511627906974,<br />
+        "name": "Lopez (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 80,<br />
+        "fga_before": 120,<br />
+        "fga_overall": 1077,<br />
+        "fgp_after": 0.425,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.4076137418755803,<br />
+        "name": "M. Williams (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 554,<br />
+        "fga_before": 510,<br />
+        "fga_overall": 3536,<br />
+        "fgp_after": 0.26534296028880866,<br />
+        "fgp_before": 0.30392156862745096,<br />
+        "fgp_overall": 0.3130656108597285,<br />
+        "name": "Ellis (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 221,<br />
+        "fga_before": 106,<br />
+        "fga_overall": 1538,<br />
+        "fgp_after": 0.3212669683257919,<br />
+        "fgp_before": 0.37735849056603776,<br />
+        "fgp_overall": 0.32639791937581275,<br />
+        "name": "Green (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 739,<br />
+        "fgp_after": 0.4166666666666667,<br />
+        "fgp_before": 0.3157894736842105,<br />
+        "fgp_overall": 0.35859269282814615,<br />
+        "name": "Watson (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 80,<br />
+        "fga_overall": 597,<br />
+        "fgp_after": 0.37777777777777777,<br />
+        "fgp_before": 0.625,<br />
+        "fgp_overall": 0.4304857621440536,<br />
+        "name": "Smith (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 97,<br />
+        "fga_before": 107,<br />
+        "fga_overall": 952,<br />
+        "fgp_after": 0.27835051546391754,<br />
+        "fgp_before": 0.38317757009345793,<br />
+        "fgp_overall": 0.3634453781512605,<br />
+        "name": "Azubuike (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 91,<br />
+        "fga_before": 98,<br />
+        "fga_overall": 821,<br />
+        "fgp_after": 0.34065934065934067,<br />
+        "fgp_before": 0.2857142857142857,<br />
+        "fgp_overall": 0.35444579780755175,<br />
+        "name": "Hawes (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 45,<br />
+        "fga_overall": 705,<br />
+        "fgp_after": 0.4473684210526316,<br />
+        "fgp_before": 0.4444444444444444,<br />
+        "fgp_overall": 0.3475177304964539,<br />
+        "name": "Watson (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 208,<br />
+        "fga_before": 159,<br />
+        "fga_overall": 1627,<br />
+        "fgp_after": 0.3605769230769231,<br />
+        "fgp_before": 0.39622641509433965,<br />
+        "fgp_overall": 0.4074984634296251,<br />
+        "name": "Boozer (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 367,<br />
+        "fga_before": 274,<br />
+        "fga_overall": 1586,<br />
+        "fgp_after": 0.3460490463215259,<br />
+        "fgp_before": 0.4306569343065693,<br />
+        "fgp_overall": 0.4136191677175284,<br />
+        "name": "Jefferson (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 60,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 590,<br />
+        "fgp_after": 0.16666666666666666,<br />
+        "fgp_before": 0.4,<br />
+        "fgp_overall": 0.30847457627118646,<br />
+        "name": "Ariza (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 75,<br />
+        "fga_before": 112,<br />
+        "fga_overall": 871,<br />
+        "fgp_after": 0.41333333333333333,<br />
+        "fgp_before": 0.4642857142857143,<br />
+        "fgp_overall": 0.43398392652123996,<br />
+        "name": "Morrow (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 89,<br />
+        "fga_before": 123,<br />
+        "fga_overall": 1059,<br />
+        "fgp_after": 0.3595505617977528,<br />
+        "fgp_before": 0.37398373983739835,<br />
+        "fgp_overall": 0.31067044381491976,<br />
+        "name": "Crawford (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 80,<br />
+        "fga_before": 69,<br />
+        "fga_overall": 997,<br />
+        "fgp_after": 0.375,<br />
+        "fgp_before": 0.4782608695652174,<br />
+        "fgp_overall": 0.3731193580742227,<br />
+        "name": "Watson (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 30,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 500,<br />
+        "fgp_after": 0.3,<br />
+        "fgp_before": 0.32142857142857145,<br />
+        "fgp_overall": 0.344,<br />
+        "name": "Pargo (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 129,<br />
+        "fga_before": 121,<br />
+        "fga_overall": 883,<br />
+        "fgp_after": 0.3798449612403101,<br />
+        "fgp_before": 0.4049586776859504,<br />
+        "fgp_overall": 0.33975084937712347,<br />
+        "name": "Jack (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 324,<br />
+        "fga_before": 336,<br />
+        "fga_overall": 1666,<br />
+        "fgp_after": 0.35802469135802467,<br />
+        "fgp_before": 0.3482142857142857,<br />
+        "fgp_overall": 0.33613445378151263,<br />
+        "name": "Jamison (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 295,<br />
+        "fga_before": 298,<br />
+        "fga_overall": 1743,<br />
+        "fgp_after": 0.29491525423728815,<br />
+        "fgp_before": 0.3624161073825503,<br />
+        "fgp_overall": 0.3643144004589788,<br />
+        "name": "Martin (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 352,<br />
+        "fgp_after": 0.34375,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.3181818181818182,<br />
+        "name": "Parsons (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 86,<br />
+        "fga_before": 73,<br />
+        "fga_overall": 614,<br />
+        "fgp_after": 0.3023255813953488,<br />
+        "fgp_before": 0.3287671232876712,<br />
+        "fgp_overall": 0.33876221498371334,<br />
+        "name": "Teague (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 97,<br />
+        "fga_before": 154,<br />
+        "fga_overall": 1935,<br />
+        "fgp_after": 0.3917525773195876,<br />
+        "fgp_before": 0.4090909090909091,<br />
+        "fgp_overall": 0.4103359173126615,<br />
+        "name": "Haslem (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 117,<br />
+        "fga_before": 109,<br />
+        "fga_overall": 1358,<br />
+        "fgp_after": 0.3418803418803419,<br />
+        "fgp_before": 0.3211009174311927,<br />
+        "fgp_overall": 0.3402061855670103,<br />
+        "name": "Thornton (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 260,<br />
+        "fga_before": 334,<br />
+        "fga_overall": 1515,<br />
+        "fgp_after": 0.2846153846153846,<br />
+        "fgp_before": 0.3263473053892216,<br />
+        "fgp_overall": 0.35973597359735976,<br />
+        "name": "DeRozan (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 155,<br />
+        "fga_before": 198,<br />
+        "fga_overall": 1576,<br />
+        "fgp_after": 0.33548387096774196,<br />
+        "fgp_before": 0.41414141414141414,<br />
+        "fgp_overall": 0.3553299492385787,<br />
+        "name": "Butler (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 886,<br />
+        "fgp_after": 0.43478260869565216,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.3747178329571106,<br />
+        "name": "Jack (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 410,<br />
+        "fgp_after": 0.35555555555555557,<br />
+        "fgp_before": 0.4090909090909091,<br />
+        "fgp_overall": 0.3097560975609756,<br />
+        "name": "Iverson (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 203,<br />
+        "fga_before": 184,<br />
+        "fga_overall": 1852,<br />
+        "fgp_after": 0.3793103448275862,<br />
+        "fgp_before": 0.34782608695652173,<br />
+        "fgp_overall": 0.3644708423326134,<br />
+        "name": "Crawford (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 187,<br />
+        "fga_before": 159,<br />
+        "fga_overall": 882,<br />
+        "fgp_after": 0.3048128342245989,<br />
+        "fgp_before": 0.36477987421383645,<br />
+        "fgp_overall": 0.36167800453514737,<br />
+        "name": "Lee (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 158,<br />
+        "fga_before": 131,<br />
+        "fga_overall": 1722,<br />
+        "fgp_after": 0.34177215189873417,<br />
+        "fgp_before": 0.2900763358778626,<br />
+        "fgp_overall": 0.39314750290360045,<br />
+        "name": "Curry (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 40,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 957,<br />
+        "fgp_after": 0.4,<br />
+        "fgp_before": 0.29411764705882354,<br />
+        "fgp_overall": 0.3385579937304075,<br />
+        "name": "Johnson (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 52,<br />
+        "fga_overall": 427,<br />
+        "fgp_after": 0.4722222222222222,<br />
+        "fgp_before": 0.4230769230769231,<br />
+        "fgp_overall": 0.41451990632318503,<br />
+        "name": "Dunleavy (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 57,<br />
+        "fga_before": 49,<br />
+        "fga_overall": 223,<br />
+        "fgp_after": 0.3508771929824561,<br />
+        "fgp_before": 0.40816326530612246,<br />
+        "fgp_overall": 0.3811659192825112,<br />
+        "name": "O'Neal (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 27,<br />
+        "fga_overall": 321,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.4074074074074074,<br />
+        "fgp_overall": 0.3364485981308411,<br />
+        "name": "Casspi (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 248,<br />
+        "fga_before": 236,<br />
+        "fga_overall": 1492,<br />
+        "fgp_after": 0.3467741935483871,<br />
+        "fgp_before": 0.4194915254237288,<br />
+        "fgp_overall": 0.3873994638069705,<br />
+        "name": "Iverson (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 151,<br />
+        "fga_before": 178,<br />
+        "fga_overall": 1489,<br />
+        "fgp_after": 0.3708609271523179,<br />
+        "fgp_before": 0.47191011235955055,<br />
+        "fgp_overall": 0.38146406984553394,<br />
+        "name": "Ilyasova (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 528,<br />
+        "fga_before": 435,<br />
+        "fga_overall": 2475,<br />
+        "fgp_after": 0.32765151515151514,<br />
+        "fgp_before": 0.3448275862068966,<br />
+        "fgp_overall": 0.3187878787878788,<br />
+        "name": "Westbrook (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 28,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 1023,<br />
+        "fgp_after": 0.35714285714285715,<br />
+        "fgp_before": 0.4473684210526316,<br />
+        "fgp_overall": 0.4232649071358749,<br />
+        "name": "Korver (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 62,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 375,<br />
+        "fgp_after": 0.3387096774193548,<br />
+        "fgp_before": 0.32608695652173914,<br />
+        "fgp_overall": 0.3333333333333333,<br />
+        "name": "Wallace (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 409,<br />
+        "fga_before": 375,<br />
+        "fga_overall": 3482,<br />
+        "fgp_after": 0.37163814180929094,<br />
+        "fgp_before": 0.4186666666666667,<br />
+        "fgp_overall": 0.414704192992533,<br />
+        "name": "Hamilton (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 209,<br />
+        "fga_before": 349,<br />
+        "fga_overall": 1914,<br />
+        "fgp_after": 0.4019138755980861,<br />
+        "fgp_before": 0.44126074498567336,<br />
+        "fgp_overall": 0.4278996865203762,<br />
+        "name": "Gasol (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 56,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 494,<br />
+        "fgp_after": 0.32142857142857145,<br />
+        "fgp_before": 0.3541666666666667,<br />
+        "fgp_overall": 0.36639676113360325,<br />
+        "name": "Lee (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 153,<br />
+        "fga_before": 119,<br />
+        "fga_overall": 1029,<br />
+        "fgp_after": 0.30718954248366015,<br />
+        "fgp_before": 0.37815126050420167,<br />
+        "fgp_overall": 0.39941690962099125,<br />
+        "name": "Lawson (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 89,<br />
+        "fga_before": 122,<br />
+        "fga_overall": 722,<br />
+        "fgp_after": 0.42696629213483145,<br />
+        "fgp_before": 0.38524590163934425,<br />
+        "fgp_overall": 0.40166204986149584,<br />
+        "name": "Lewis (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 52,<br />
+        "fga_before": 51,<br />
+        "fga_overall": 327,<br />
+        "fgp_after": 0.36538461538461536,<br />
+        "fgp_before": 0.45098039215686275,<br />
+        "fgp_overall": 0.38837920489296635,<br />
+        "name": "Hinrich (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 37,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 221,<br />
+        "fgp_after": 0.21621621621621623,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.2850678733031674,<br />
+        "name": "Aminu (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 88,<br />
+        "fga_before": 72,<br />
+        "fga_overall": 653,<br />
+        "fgp_after": 0.3409090909090909,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.33843797856049007,<br />
+        "name": "Crawford (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 72,<br />
+        "fga_before": 113,<br />
+        "fga_overall": 849,<br />
+        "fgp_after": 0.4027777777777778,<br />
+        "fgp_before": 0.3008849557522124,<br />
+        "fgp_overall": 0.3875147232037691,<br />
+        "name": "Jefferson (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 105,<br />
+        "fga_before": 70,<br />
+        "fga_overall": 1129,<br />
+        "fgp_after": 0.2857142857142857,<br />
+        "fgp_before": 0.4857142857142857,<br />
+        "fgp_overall": 0.354295837023915,<br />
+        "name": "Maggette (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 218,<br />
+        "fga_before": 244,<br />
+        "fga_overall": 2051,<br />
+        "fgp_after": 0.28440366972477066,<br />
+        "fgp_before": 0.3442622950819672,<br />
+        "fgp_overall": 0.3603120429058996,<br />
+        "name": "Conley (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 278,<br />
+        "fga_before": 304,<br />
+        "fga_overall": 1804,<br />
+        "fgp_after": 0.34532374100719426,<br />
+        "fgp_before": 0.34210526315789475,<br />
+        "fgp_overall": 0.3309312638580931,<br />
+        "name": "Jackson (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 535,<br />
+        "fgp_after": 0.4222222222222222,<br />
+        "fgp_before": 0.4482758620689655,<br />
+        "fgp_overall": 0.34579439252336447,<br />
+        "name": "Smith (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 225,<br />
+        "fga_before": 190,<br />
+        "fga_overall": 1351,<br />
+        "fgp_after": 0.4222222222222222,<br />
+        "fgp_before": 0.5105263157894737,<br />
+        "fgp_overall": 0.43153219837157664,<br />
+        "name": "Afflalo (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 75,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 690,<br />
+        "fgp_after": 0.28,<br />
+        "fgp_before": 0.3793103448275862,<br />
+        "fgp_overall": 0.32753623188405795,<br />
+        "name": "Pavlovic (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 28,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 1058,<br />
+        "fgp_after": 0.32142857142857145,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.3705103969754253,<br />
+        "name": "Villanueva (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 55,<br />
+        "fga_overall": 842,<br />
+        "fgp_after": 0.2857142857142857,<br />
+        "fgp_before": 0.32727272727272727,<br />
+        "fgp_overall": 0.332541567695962,<br />
+        "name": "Artest (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 67,<br />
+        "fga_before": 70,<br />
+        "fga_overall": 800,<br />
+        "fgp_after": 0.3582089552238806,<br />
+        "fgp_before": 0.45714285714285713,<br />
+        "fgp_overall": 0.4175,<br />
+        "name": "Brand (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 103,<br />
+        "fga_before": 88,<br />
+        "fga_overall": 713,<br />
+        "fgp_after": 0.3883495145631068,<br />
+        "fgp_before": 0.3181818181818182,<br />
+        "fgp_overall": 0.3758765778401122,<br />
+        "name": "Humphries (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 63,<br />
+        "fga_before": 73,<br />
+        "fga_overall": 512,<br />
+        "fgp_after": 0.49206349206349204,<br />
+        "fgp_before": 0.4383561643835616,<br />
+        "fgp_overall": 0.453125,<br />
+        "name": "Bass (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 63,<br />
+        "fga_before": 37,<br />
+        "fga_overall": 809,<br />
+        "fgp_after": 0.36507936507936506,<br />
+        "fgp_before": 0.40540540540540543,<br />
+        "fgp_overall": 0.3757725587144623,<br />
+        "name": "Cassell (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 29,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 1148,<br />
+        "fgp_after": 0.06896551724137931,<br />
+        "fgp_before": 0.32142857142857145,<br />
+        "fgp_overall": 0.38414634146341464,<br />
+        "name": "Bibby (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 154,<br />
+        "fga_before": 205,<br />
+        "fga_overall": 1740,<br />
+        "fgp_after": 0.23376623376623376,<br />
+        "fgp_before": 0.33170731707317075,<br />
+        "fgp_overall": 0.3195402298850575,<br />
+        "name": "Young (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 39,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 1007,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.42857142857142855,<br />
+        "fgp_overall": 0.39622641509433965,<br />
+        "name": "Jones (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 418,<br />
+        "fgp_after": 0.2978723404255319,<br />
+        "fgp_before": 0.4375,<br />
+        "fgp_overall": 0.3277511961722488,<br />
+        "name": "Noah (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 63,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 544,<br />
+        "fgp_after": 0.38095238095238093,<br />
+        "fgp_before": 0.358974358974359,<br />
+        "fgp_overall": 0.40441176470588236,<br />
+        "name": "Boykins (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 30,<br />
+        "fga_before": 36,<br />
+        "fga_overall": 307,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.34527687296416937,<br />
+        "name": "Marion (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 44,<br />
+        "fga_before": 63,<br />
+        "fga_overall": 485,<br />
+        "fgp_after": 0.2727272727272727,<br />
+        "fgp_before": 0.2698412698412698,<br />
+        "fgp_overall": 0.3422680412371134,<br />
+        "name": "D. Jones (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 51,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 1237,<br />
+        "fgp_after": 0.43137254901960786,<br />
+        "fgp_before": 0.34,<br />
+        "fgp_overall": 0.41147938561034764,<br />
+        "name": "Miller (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 223,<br />
+        "fga_before": 219,<br />
+        "fga_overall": 1560,<br />
+        "fgp_after": 0.4125560538116592,<br />
+        "fgp_before": 0.3150684931506849,<br />
+        "fgp_overall": 0.3698717948717949,<br />
+        "name": "Gordon (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 105,<br />
+        "fga_before": 112,<br />
+        "fga_overall": 1282,<br />
+        "fgp_after": 0.29523809523809524,<br />
+        "fgp_before": 0.2857142857142857,<br />
+        "fgp_overall": 0.3494539781591264,<br />
+        "name": "Harrington (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 71,<br />
+        "fga_before": 72,<br />
+        "fga_overall": 769,<br />
+        "fgp_after": 0.19718309859154928,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.27698309492847856,<br />
+        "name": "Ford (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 37,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 420,<br />
+        "fgp_after": 0.3783783783783784,<br />
+        "fgp_before": 0.39473684210526316,<br />
+        "fgp_overall": 0.4357142857142857,<br />
+        "name": "White (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 322,<br />
+        "fga_before": 329,<br />
+        "fga_overall": 2334,<br />
+        "fgp_after": 0.2981366459627329,<br />
+        "fgp_before": 0.3221884498480243,<br />
+        "fgp_overall": 0.35389888603256214,<br />
+        "name": "Butler (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 83,<br />
+        "fga_before": 59,<br />
+        "fga_overall": 466,<br />
+        "fgp_after": 0.5060240963855421,<br />
+        "fgp_before": 0.3898305084745763,<br />
+        "fgp_overall": 0.3927038626609442,<br />
+        "name": "Okafor (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 106,<br />
+        "fga_before": 184,<br />
+        "fga_overall": 1689,<br />
+        "fgp_after": 0.36792452830188677,<br />
+        "fgp_before": 0.41847826086956524,<br />
+        "fgp_overall": 0.3664890467732386,<br />
+        "name": "Rush (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 107,<br />
+        "fga_before": 105,<br />
+        "fga_overall": 982,<br />
+        "fgp_after": 0.5233644859813084,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.3727087576374745,<br />
+        "name": "Meeks (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 31,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 535,<br />
+        "fgp_after": 0.2903225806451613,<br />
+        "fgp_before": 0.39285714285714285,<br />
+        "fgp_overall": 0.37570093457943926,<br />
+        "name": "Murray (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 132,<br />
+        "fga_before": 162,<br />
+        "fga_overall": 1343,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.3950617283950617,<br />
+        "fgp_overall": 0.3655994043186895,<br />
+        "name": "Delfino (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 27,<br />
+        "fga_before": 62,<br />
+        "fga_overall": 608,<br />
+        "fgp_after": 0.25925925925925924,<br />
+        "fgp_before": 0.4838709677419355,<br />
+        "fgp_overall": 0.38980263157894735,<br />
+        "name": "Bell (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 89,<br />
+        "fga_before": 74,<br />
+        "fga_overall": 941,<br />
+        "fgp_after": 0.34831460674157305,<br />
+        "fgp_before": 0.4189189189189189,<br />
+        "fgp_overall": 0.357066950053135,<br />
+        "name": "McCants (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 55,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 366,<br />
+        "fgp_after": 0.2727272727272727,<br />
+        "fgp_before": 0.45454545454545453,<br />
+        "fgp_overall": 0.3524590163934426,<br />
+        "name": "James (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 58,<br />
+        "fga_overall": 821,<br />
+        "fgp_after": 0.34285714285714286,<br />
+        "fgp_before": 0.3620689655172414,<br />
+        "fgp_overall": 0.36784409257003653,<br />
+        "name": "Lee (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 76,<br />
+        "fga_before": 73,<br />
+        "fga_overall": 730,<br />
+        "fgp_after": 0.34210526315789475,<br />
+        "fgp_before": 0.4931506849315068,<br />
+        "fgp_overall": 0.39315068493150684,<br />
+        "name": "Davis (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 29,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 1029,<br />
+        "fgp_after": 0.4482758620689655,<br />
+        "fgp_before": 0.38461538461538464,<br />
+        "fgp_overall": 0.44314868804664725,<br />
+        "name": "Korver (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 67,<br />
+        "fga_before": 78,<br />
+        "fga_overall": 1293,<br />
+        "fgp_after": 0.3582089552238806,<br />
+        "fgp_before": 0.3717948717948718,<br />
+        "fgp_overall": 0.37973704563031707,<br />
+        "name": "Anderson (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 261,<br />
+        "fga_before": 281,<br />
+        "fga_overall": 2609,<br />
+        "fgp_after": 0.42528735632183906,<br />
+        "fgp_before": 0.4128113879003559,<br />
+        "fgp_overall": 0.40590264469145265,<br />
+        "name": "Paul (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 97,<br />
+        "fga_before": 108,<br />
+        "fga_overall": 1102,<br />
+        "fgp_after": 0.27835051546391754,<br />
+        "fgp_before": 0.35185185185185186,<br />
+        "fgp_overall": 0.34754990925589835,<br />
+        "name": "Thomas (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 302,<br />
+        "fga_before": 245,<br />
+        "fga_overall": 1927,<br />
+        "fgp_after": 0.40728476821192056,<br />
+        "fgp_before": 0.4204081632653061,<br />
+        "fgp_overall": 0.40321743642968344,<br />
+        "name": "Brand (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 453,<br />
+        "fga_before": 407,<br />
+        "fga_overall": 3763,<br />
+        "fgp_after": 0.33995584988962474,<br />
+        "fgp_before": 0.36855036855036855,<br />
+        "fgp_overall": 0.37523252723890516,<br />
+        "name": "Pierce (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 182,<br />
+        "fga_before": 154,<br />
+        "fga_overall": 1540,<br />
+        "fgp_after": 0.31868131868131866,<br />
+        "fgp_before": 0.2987012987012987,<br />
+        "fgp_overall": 0.33116883116883117,<br />
+        "name": "Harris (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 37,<br />
+        "fga_overall": 672,<br />
+        "fgp_after": 0.3142857142857143,<br />
+        "fgp_before": 0.35135135135135137,<br />
+        "fgp_overall": 0.36755952380952384,<br />
+        "name": "Dooling (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 116,<br />
+        "fga_before": 76,<br />
+        "fga_overall": 1458,<br />
+        "fgp_after": 0.33620689655172414,<br />
+        "fgp_before": 0.3684210526315789,<br />
+        "fgp_overall": 0.3655692729766804,<br />
+        "name": "Howard (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 169,<br />
+        "fga_before": 186,<br />
+        "fga_overall": 1807,<br />
+        "fgp_after": 0.3905325443786982,<br />
+        "fgp_before": 0.43548387096774194,<br />
+        "fgp_overall": 0.423907028223575,<br />
+        "name": "M. Williams (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 39,<br />
+        "fga_before": 47,<br />
+        "fga_overall": 1106,<br />
+        "fgp_after": 0.358974358974359,<br />
+        "fgp_before": 0.40425531914893614,<br />
+        "fgp_overall": 0.39783001808318263,<br />
+        "name": "Mason (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 28,<br />
+        "fga_before": 36,<br />
+        "fga_overall": 303,<br />
+        "fgp_after": 0.21428571428571427,<br />
+        "fgp_before": 0.2777777777777778,<br />
+        "fgp_overall": 0.3201320132013201,<br />
+        "name": "Thornton (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 81,<br />
+        "fga_before": 52,<br />
+        "fga_overall": 573,<br />
+        "fgp_after": 0.19753086419753085,<br />
+        "fgp_before": 0.28846153846153844,<br />
+        "fgp_overall": 0.3472949389179756,<br />
+        "name": "Thomas (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 364,<br />
+        "fga_before": 317,<br />
+        "fga_overall": 3448,<br />
+        "fgp_after": 0.35714285714285715,<br />
+        "fgp_before": 0.40063091482649843,<br />
+        "fgp_overall": 0.3831206496519722,<br />
+        "name": "Johnson (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 83,<br />
+        "fga_before": 69,<br />
+        "fga_overall": 812,<br />
+        "fgp_after": 0.27710843373493976,<br />
+        "fgp_before": 0.36231884057971014,<br />
+        "fgp_overall": 0.3460591133004926,<br />
+        "name": "Casspi (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 170,<br />
+        "fga_before": 191,<br />
+        "fga_overall": 1968,<br />
+        "fgp_after": 0.3352941176470588,<br />
+        "fgp_before": 0.4083769633507853,<br />
+        "fgp_overall": 0.4095528455284553,<br />
+        "name": "Udrih (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 268,<br />
+        "fga_before": 283,<br />
+        "fga_overall": 2626,<br />
+        "fgp_after": 0.3246268656716418,<br />
+        "fgp_before": 0.31095406360424027,<br />
+        "fgp_overall": 0.31683168316831684,<br />
+        "name": "Smith (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 364,<br />
+        "fga_before": 300,<br />
+        "fga_overall": 3534,<br />
+        "fgp_after": 0.4175824175824176,<br />
+        "fgp_before": 0.4066666666666667,<br />
+        "fgp_overall": 0.3862478777589134,<br />
+        "name": "Bargnani (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 118,<br />
+        "fga_before": 134,<br />
+        "fga_overall": 849,<br />
+        "fgp_after": 0.2627118644067797,<br />
+        "fgp_before": 0.27611940298507465,<br />
+        "fgp_overall": 0.3250883392226148,<br />
+        "name": "Turner (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 211,<br />
+        "fga_before": 229,<br />
+        "fga_overall": 1215,<br />
+        "fgp_after": 0.2938388625592417,<br />
+        "fgp_before": 0.35807860262008734,<br />
+        "fgp_overall": 0.34238683127572017,<br />
+        "name": "Anthony (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 350,<br />
+        "fga_before": 233,<br />
+        "fga_overall": 1003,<br />
+        "fgp_after": 0.32571428571428573,<br />
+        "fgp_before": 0.3261802575107296,<br />
+        "fgp_overall": 0.33300099700897307,<br />
+        "name": "Cousins (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 215,<br />
+        "fga_before": 158,<br />
+        "fga_overall": 1115,<br />
+        "fgp_after": 0.34418604651162793,<br />
+        "fgp_before": 0.45569620253164556,<br />
+        "fgp_overall": 0.3757847533632287,<br />
+        "name": "Thompson (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 49,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 444,<br />
+        "fgp_after": 0.3469387755102041,<br />
+        "fgp_before": 0.36666666666666664,<br />
+        "fgp_overall": 0.3963963963963964,<br />
+        "name": "Smith (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 161,<br />
+        "fga_before": 169,<br />
+        "fga_overall": 934,<br />
+        "fgp_after": 0.3105590062111801,<br />
+        "fgp_before": 0.3905325443786982,<br />
+        "fgp_overall": 0.34475374732334046,<br />
+        "name": "Marion (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 232,<br />
+        "fga_before": 168,<br />
+        "fga_overall": 1356,<br />
+        "fgp_after": 0.2974137931034483,<br />
+        "fgp_before": 0.38095238095238093,<br />
+        "fgp_overall": 0.3997050147492625,<br />
+        "name": "Lopez (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 110,<br />
+        "fga_before": 80,<br />
+        "fga_overall": 721,<br />
+        "fgp_after": 0.32727272727272727,<br />
+        "fgp_before": 0.3375,<br />
+        "fgp_overall": 0.34119278779472956,<br />
+        "name": "George (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 403,<br />
+        "fga_before": 290,<br />
+        "fga_overall": 2699,<br />
+        "fgp_after": 0.34987593052109184,<br />
+        "fgp_before": 0.3482758620689655,<br />
+        "fgp_overall": 0.37754723971841425,<br />
+        "name": "Mayo (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 51,<br />
+        "fga_overall": 513,<br />
+        "fgp_after": 0.43478260869565216,<br />
+        "fgp_before": 0.29411764705882354,<br />
+        "fgp_overall": 0.3489278752436647,<br />
+        "name": "Lewis (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 136,<br />
+        "fga_before": 153,<br />
+        "fga_overall": 2369,<br />
+        "fgp_after": 0.33088235294117646,<br />
+        "fgp_before": 0.33986928104575165,<br />
+        "fgp_overall": 0.34655972984381594,<br />
+        "name": "Felton (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 572,<br />
+        "fgp_after": 0.3695652173913043,<br />
+        "fgp_before": 0.44642857142857145,<br />
+        "fgp_overall": 0.3513986013986014,<br />
+        "name": "Kleiza (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 142,<br />
+        "fga_before": 114,<br />
+        "fga_overall": 1544,<br />
+        "fgp_after": 0.3591549295774648,<br />
+        "fgp_before": 0.4298245614035088,<br />
+        "fgp_overall": 0.422279792746114,<br />
+        "name": "Parker (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 126,<br />
+        "fga_before": 107,<br />
+        "fga_overall": 2288,<br />
+        "fgp_after": 0.3492063492063492,<br />
+        "fgp_before": 0.42990654205607476,<br />
+        "fgp_overall": 0.40952797202797203,<br />
+        "name": "Okur (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 78,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 888,<br />
+        "fgp_after": 0.4230769230769231,<br />
+        "fgp_before": 0.39285714285714285,<br />
+        "fgp_overall": 0.3502252252252252,<br />
+        "name": "J. Richardson (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 29,<br />
+        "fga_before": 59,<br />
+        "fga_overall": 492,<br />
+        "fgp_after": 0.3793103448275862,<br />
+        "fgp_before": 0.3898305084745763,<br />
+        "fgp_overall": 0.4146341463414634,<br />
+        "name": "Bell (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 33,<br />
+        "fga_overall": 232,<br />
+        "fgp_after": 0.3157894736842105,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.31896551724137934,<br />
+        "name": "Aminu (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 402,<br />
+        "fgp_after": 0.3617021276595745,<br />
+        "fgp_before": 0.29850746268656714,<br />
+        "fgp_overall": 0.2960199004975124,<br />
+        "name": "Green (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 115,<br />
+        "fga_before": 121,<br />
+        "fga_overall": 874,<br />
+        "fgp_after": 0.48695652173913045,<br />
+        "fgp_before": 0.5371900826446281,<br />
+        "fgp_overall": 0.40274599542334094,<br />
+        "name": "Williams (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 218,<br />
+        "fga_before": 238,<br />
+        "fga_overall": 1643,<br />
+        "fgp_after": 0.3440366972477064,<br />
+        "fgp_before": 0.3697478991596639,<br />
+        "fgp_overall": 0.3676202069385271,<br />
+        "name": "Augustin (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 255,<br />
+        "fga_before": 269,<br />
+        "fga_overall": 1227,<br />
+        "fgp_after": 0.34509803921568627,<br />
+        "fgp_before": 0.3903345724907063,<br />
+        "fgp_overall": 0.3537082314588427,<br />
+        "name": "Beasley (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 491,<br />
+        "fgp_after": 0.3953488372093023,<br />
+        "fgp_before": 0.3953488372093023,<br />
+        "fgp_overall": 0.35234215885947046,<br />
+        "name": "Bayless (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 128,<br />
+        "fga_before": 102,<br />
+        "fga_overall": 1358,<br />
+        "fgp_after": 0.4140625,<br />
+        "fgp_before": 0.4215686274509804,<br />
+        "fgp_overall": 0.44035346097201766,<br />
+        "name": "Williams (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 378,<br />
+        "fga_before": 337,<br />
+        "fga_overall": 1780,<br />
+        "fgp_after": 0.38095238095238093,<br />
+        "fgp_before": 0.3768545994065282,<br />
+        "fgp_overall": 0.3792134831460674,<br />
+        "name": "Jefferson (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 41,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 688,<br />
+        "fgp_after": 0.2682926829268293,<br />
+        "fgp_before": 0.4791666666666667,<br />
+        "fgp_overall": 0.38953488372093026,<br />
+        "name": "Arthur (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 109,<br />
+        "fga_before": 112,<br />
+        "fga_overall": 843,<br />
+        "fgp_after": 0.25688073394495414,<br />
+        "fgp_before": 0.38392857142857145,<br />
+        "fgp_overall": 0.30604982206405695,<br />
+        "name": "Daniels (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 60,<br />
+        "fga_before": 104,<br />
+        "fga_overall": 986,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.4807692307692308,<br />
+        "fgp_overall": 0.40060851926977686,<br />
+        "name": "Neal (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 80,<br />
+        "fga_before": 92,<br />
+        "fga_overall": 1176,<br />
+        "fgp_after": 0.325,<br />
+        "fgp_before": 0.3804347826086957,<br />
+        "fgp_overall": 0.3401360544217687,<br />
+        "name": "Richardson (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 138,<br />
+        "fga_before": 88,<br />
+        "fga_overall": 1361,<br />
+        "fgp_after": 0.39855072463768115,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.4019103600293902,<br />
+        "name": "Nocioni (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 31,<br />
+        "fga_before": 57,<br />
+        "fga_overall": 327,<br />
+        "fgp_after": 0.5161290322580645,<br />
+        "fgp_before": 0.43859649122807015,<br />
+        "fgp_overall": 0.39755351681957185,<br />
+        "name": "Speights (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 263,<br />
+        "fga_before": 222,<br />
+        "fga_overall": 1885,<br />
+        "fgp_after": 0.49429657794676807,<br />
+        "fgp_before": 0.44594594594594594,<br />
+        "fgp_overall": 0.4143236074270557,<br />
+        "name": "Gasol (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 96,<br />
+        "fga_before": 97,<br />
+        "fga_overall": 587,<br />
+        "fgp_after": 0.4375,<br />
+        "fgp_before": 0.3917525773195876,<br />
+        "fgp_overall": 0.42078364565587734,<br />
+        "name": "West (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 276,<br />
+        "fga_before": 281,<br />
+        "fga_overall": 1798,<br />
+        "fgp_after": 0.36231884057971014,<br />
+        "fgp_before": 0.40569395017793597,<br />
+        "fgp_overall": 0.3520578420467186,<br />
+        "name": "Love (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 29,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 214,<br />
+        "fgp_after": 0.4482758620689655,<br />
+        "fgp_before": 0.3,<br />
+        "fgp_overall": 0.3177570093457944,<br />
+        "name": "Nocioni (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 136,<br />
+        "fga_before": 148,<br />
+        "fga_overall": 2828,<br />
+        "fgp_after": 0.375,<br />
+        "fgp_before": 0.3716216216216216,<br />
+        "fgp_overall": 0.36704384724186706,<br />
+        "name": "Turkoglu (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 212,<br />
+        "fga_before": 191,<br />
+        "fga_overall": 2638,<br />
+        "fgp_after": 0.38207547169811323,<br />
+        "fgp_before": 0.42408376963350786,<br />
+        "fgp_overall": 0.3813495072024261,<br />
+        "name": "Nelson (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 199,<br />
+        "fga_before": 175,<br />
+        "fga_overall": 937,<br />
+        "fgp_after": 0.2562814070351759,<br />
+        "fgp_before": 0.2857142857142857,<br />
+        "fgp_overall": 0.288153681963714,<br />
+        "name": "Griffin (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 114,<br />
+        "fga_before": 129,<br />
+        "fga_overall": 1147,<br />
+        "fgp_after": 0.2894736842105263,<br />
+        "fgp_before": 0.29457364341085274,<br />
+        "fgp_overall": 0.3129904097646033,<br />
+        "name": "Brewer (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 998,<br />
+        "fga_before": 642,<br />
+        "fga_overall": 4681,<br />
+        "fgp_after": 0.3527054108216433,<br />
+        "fgp_before": 0.35669781931464173,<br />
+        "fgp_overall": 0.36210211493270666,<br />
+        "name": "Granger (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 68,<br />
+        "fga_before": 83,<br />
+        "fga_overall": 1386,<br />
+        "fgp_after": 0.19117647058823528,<br />
+        "fgp_before": 0.3373493975903614,<br />
+        "fgp_overall": 0.35209235209235207,<br />
+        "name": "Stevenson (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 135,<br />
+        "fga_before": 85,<br />
+        "fga_overall": 1385,<br />
+        "fgp_after": 0.3111111111111111,<br />
+        "fgp_before": 0.4,<br />
+        "fgp_overall": 0.3783393501805054,<br />
+        "name": "Villanueva (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 63,<br />
+        "fga_before": 118,<br />
+        "fga_overall": 711,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.4152542372881356,<br />
+        "fgp_overall": 0.34739803094233473,<br />
+        "name": "Thornton (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 48,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 540,<br />
+        "fgp_after": 0.2916666666666667,<br />
+        "fgp_before": 0.35,<br />
+        "fgp_overall": 0.32222222222222224,<br />
+        "name": "Wilcox (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 82,<br />
+        "fga_before": 79,<br />
+        "fga_overall": 1327,<br />
+        "fgp_after": 0.32926829268292684,<br />
+        "fgp_before": 0.43037974683544306,<br />
+        "fgp_overall": 0.38281838733986434,<br />
+        "name": "Richardson (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 148,<br />
+        "fga_before": 81,<br />
+        "fga_overall": 859,<br />
+        "fgp_after": 0.2905405405405405,<br />
+        "fgp_before": 0.35802469135802467,<br />
+        "fgp_overall": 0.320139697322468,<br />
+        "name": "Miller (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 847,<br />
+        "fgp_after": 0.35714285714285715,<br />
+        "fgp_before": 0.4772727272727273,<br />
+        "fgp_overall": 0.36835891381345925,<br />
+        "name": "Butler (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 72,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 542,<br />
+        "fgp_after": 0.2222222222222222,<br />
+        "fgp_before": 0.16417910447761194,<br />
+        "fgp_overall": 0.2177121771217712,<br />
+        "name": "McGee (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 42,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 467,<br />
+        "fgp_after": 0.42857142857142855,<br />
+        "fgp_before": 0.43902439024390244,<br />
+        "fgp_overall": 0.3468950749464668,<br />
+        "name": "Barnes (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 166,<br />
+        "fga_before": 80,<br />
+        "fga_overall": 1229,<br />
+        "fgp_after": 0.3132530120481928,<br />
+        "fgp_before": 0.2625,<br />
+        "fgp_overall": 0.33116354759967453,<br />
+        "name": "D. Wright (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 191,<br />
+        "fga_before": 264,<br />
+        "fga_overall": 1948,<br />
+        "fgp_after": 0.32460732984293195,<br />
+        "fgp_before": 0.3712121212121212,<br />
+        "fgp_overall": 0.3490759753593429,<br />
+        "name": "Arenas (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 762,<br />
+        "fgp_after": 0.4722222222222222,<br />
+        "fgp_before": 0.3103448275862069,<br />
+        "fgp_overall": 0.39238845144356954,<br />
+        "name": "Harpring (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 50,<br />
+        "fga_before": 60,<br />
+        "fga_overall": 782,<br />
+        "fgp_after": 0.2,<br />
+        "fgp_before": 0.4166666666666667,<br />
+        "fgp_overall": 0.33631713554987214,<br />
+        "name": "Daye (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 69,<br />
+        "fga_overall": 792,<br />
+        "fgp_after": 0.296875,<br />
+        "fgp_before": 0.463768115942029,<br />
+        "fgp_overall": 0.39646464646464646,<br />
+        "name": "Crawford (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 509,<br />
+        "fga_before": 441,<br />
+        "fga_overall": 2798,<br />
+        "fgp_after": 0.37721021611001965,<br />
+        "fgp_before": 0.3310657596371882,<br />
+        "fgp_overall": 0.3556111508220157,<br />
+        "name": "Rose (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 26,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 706,<br />
+        "fgp_after": 0.3076923076923077,<br />
+        "fgp_before": 0.5161290322580645,<br />
+        "fgp_overall": 0.37252124645892354,<br />
+        "name": "Ridnour (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 69,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 853,<br />
+        "fgp_after": 0.4057971014492754,<br />
+        "fgp_before": 0.36585365853658536,<br />
+        "fgp_overall": 0.33528722157092616,<br />
+        "name": "Brown (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 87,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 345,<br />
+        "fgp_after": 0.27586206896551724,<br />
+        "fgp_before": 0.2857142857142857,<br />
+        "fgp_overall": 0.26956521739130435,<br />
+        "name": "Williams (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 111,<br />
+        "fga_before": 70,<br />
+        "fga_overall": 1308,<br />
+        "fgp_after": 0.40540540540540543,<br />
+        "fgp_before": 0.3142857142857143,<br />
+        "fgp_overall": 0.3348623853211009,<br />
+        "name": "Kirilenko (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 84,<br />
+        "fga_before": 131,<br />
+        "fga_overall": 1144,<br />
+        "fgp_after": 0.5119047619047619,<br />
+        "fgp_before": 0.44274809160305345,<br />
+        "fgp_overall": 0.38636363636363635,<br />
+        "name": "Jefferson (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 177,<br />
+        "fga_before": 186,<br />
+        "fga_overall": 2701,<br />
+        "fgp_after": 0.4124293785310734,<br />
+        "fgp_before": 0.41935483870967744,<br />
+        "fgp_overall": 0.43650499814883376,<br />
+        "name": "Garnett (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 103,<br />
+        "fga_before": 132,<br />
+        "fga_overall": 2278,<br />
+        "fgp_after": 0.36893203883495146,<br />
+        "fgp_before": 0.4621212121212121,<br />
+        "fgp_overall": 0.4113257243195786,<br />
+        "name": "Calderon (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 140,<br />
+        "fga_before": 130,<br />
+        "fga_overall": 1000,<br />
+        "fgp_after": 0.37142857142857144,<br />
+        "fgp_before": 0.36153846153846153,<br />
+        "fgp_overall": 0.354,<br />
+        "name": "Foye (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 214,<br />
+        "fga_before": 149,<br />
+        "fga_overall": 1595,<br />
+        "fgp_after": 0.35514018691588783,<br />
+        "fgp_before": 0.42953020134228187,<br />
+        "fgp_overall": 0.38369905956112854,<br />
+        "name": "Miller (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 207,<br />
+        "fga_before": 134,<br />
+        "fga_overall": 984,<br />
+        "fgp_after": 0.391304347826087,<br />
+        "fgp_before": 0.3805970149253731,<br />
+        "fgp_overall": 0.4166666666666667,<br />
+        "name": "Boozer (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 37,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 559,<br />
+        "fgp_after": 0.43243243243243246,<br />
+        "fgp_before": 0.34375,<br />
+        "fgp_overall": 0.3953488372093023,<br />
+        "name": "Lue (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 146,<br />
+        "fga_before": 106,<br />
+        "fga_overall": 1388,<br />
+        "fgp_after": 0.4246575342465753,<br />
+        "fgp_before": 0.44339622641509435,<br />
+        "fgp_overall": 0.37247838616714696,<br />
+        "name": "Batum (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 90,<br />
+        "fga_before": 111,<br />
+        "fga_overall": 858,<br />
+        "fgp_after": 0.4444444444444444,<br />
+        "fgp_before": 0.36936936936936937,<br />
+        "fgp_overall": 0.3811188811188811,<br />
+        "name": "Jo. Howard (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 52,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 627,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.32608695652173914,<br />
+        "fgp_overall": 0.2759170653907496,<br />
+        "name": "Bogut (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 388,<br />
+        "fga_before": 328,<br />
+        "fga_overall": 2644,<br />
+        "fgp_after": 0.2551546391752577,<br />
+        "fgp_before": 0.3719512195121951,<br />
+        "fgp_overall": 0.31883509833585477,<br />
+        "name": "Williams (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 125,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 578,<br />
+        "fgp_after": 0.16,<br />
+        "fgp_before": 0.208955223880597,<br />
+        "fgp_overall": 0.20761245674740483,<br />
+        "name": "Howard (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 86,<br />
+        "fga_before": 91,<br />
+        "fga_overall": 813,<br />
+        "fgp_after": 0.3953488372093023,<br />
+        "fgp_before": 0.34065934065934067,<br />
+        "fgp_overall": 0.3948339483394834,<br />
+        "name": "West (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 72,<br />
+        "fga_before": 55,<br />
+        "fga_overall": 596,<br />
+        "fgp_after": 0.4444444444444444,<br />
+        "fgp_before": 0.4909090909090909,<br />
+        "fgp_overall": 0.38422818791946306,<br />
+        "name": "Jamal (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 160,<br />
+        "fga_before": 192,<br />
+        "fga_overall": 1633,<br />
+        "fgp_after": 0.33125,<br />
+        "fgp_before": 0.40625,<br />
+        "fgp_overall": 0.36007348438456827,<br />
+        "name": "Brooks (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 85,<br />
+        "fga_before": 110,<br />
+        "fga_overall": 1312,<br />
+        "fgp_after": 0.27058823529411763,<br />
+        "fgp_before": 0.36363636363636365,<br />
+        "fgp_overall": 0.3666158536585366,<br />
+        "name": "Mobley (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 76,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 504,<br />
+        "fgp_after": 0.32894736842105265,<br />
+        "fgp_before": 0.4411764705882353,<br />
+        "fgp_overall": 0.38293650793650796,<br />
+        "name": "Irving (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 168,<br />
+        "fga_before": 118,<br />
+        "fga_overall": 896,<br />
+        "fgp_after": 0.35119047619047616,<br />
+        "fgp_before": 0.3559322033898305,<br />
+        "fgp_overall": 0.3549107142857143,<br />
+        "name": "Hansbrough (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 340,<br />
+        "fga_before": 316,<br />
+        "fga_overall": 3585,<br />
+        "fgp_after": 0.31470588235294117,<br />
+        "fgp_before": 0.3291139240506329,<br />
+        "fgp_overall": 0.3397489539748954,<br />
+        "name": "James (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 100,<br />
+        "fga_before": 128,<br />
+        "fga_overall": 873,<br />
+        "fgp_after": 0.3,<br />
+        "fgp_before": 0.3828125,<br />
+        "fgp_overall": 0.33104238258877433,<br />
+        "name": "Collison (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 34,<br />
+        "fga_overall": 296,<br />
+        "fgp_after": 0.28125,<br />
+        "fgp_before": 0.35294117647058826,<br />
+        "fgp_overall": 0.27702702702702703,<br />
+        "name": "Odom (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 78,<br />
+        "fga_before": 81,<br />
+        "fga_overall": 712,<br />
+        "fgp_after": 0.32051282051282054,<br />
+        "fgp_before": 0.32098765432098764,<br />
+        "fgp_overall": 0.31179775280898875,<br />
+        "name": "Flynn (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 34,<br />
+        "fga_before": 27,<br />
+        "fga_overall": 540,<br />
+        "fgp_after": 0.20588235294117646,<br />
+        "fgp_before": 0.37037037037037035,<br />
+        "fgp_overall": 0.38333333333333336,<br />
+        "name": "Jaric (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 90,<br />
+        "fga_before": 117,<br />
+        "fga_overall": 1227,<br />
+        "fgp_after": 0.4222222222222222,<br />
+        "fgp_before": 0.3504273504273504,<br />
+        "fgp_overall": 0.3830480847595762,<br />
+        "name": "Belinelli (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 89,<br />
+        "fga_before": 72,<br />
+        "fga_overall": 1433,<br />
+        "fgp_after": 0.3258426966292135,<br />
+        "fgp_before": 0.5833333333333334,<br />
+        "fgp_overall": 0.3621772505233775,<br />
+        "name": "Diaw (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 102,<br />
+        "fga_before": 89,<br />
+        "fga_overall": 857,<br />
+        "fgp_after": 0.30392156862745096,<br />
+        "fgp_before": 0.2808988764044944,<br />
+        "fgp_overall": 0.3570595099183197,<br />
+        "name": "Davis (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 935,<br />
+        "fgp_after": 0.515625,<br />
+        "fgp_before": 0.417910447761194,<br />
+        "fgp_overall": 0.3593582887700535,<br />
+        "name": "Ellington (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 34,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 442,<br />
+        "fgp_after": 0.5,<br />
+        "fgp_before": 0.34285714285714286,<br />
+        "fgp_overall": 0.4004524886877828,<br />
+        "name": "Mohammed (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 161,<br />
+        "fga_before": 129,<br />
+        "fga_overall": 1210,<br />
+        "fgp_after": 0.39751552795031053,<br />
+        "fgp_before": 0.4573643410852713,<br />
+        "fgp_overall": 0.3760330578512397,<br />
+        "name": "Kaman (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 31,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 312,<br />
+        "fgp_after": 0.25806451612903225,<br />
+        "fgp_before": 0.3870967741935484,<br />
+        "fgp_overall": 0.2980769230769231,<br />
+        "name": "Bledsoe (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 80,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 367,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.4166666666666667,<br />
+        "fgp_overall": 0.36239782016348776,<br />
+        "name": "Billups (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 68,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 426,<br />
+        "fgp_after": 0.27941176470588236,<br />
+        "fgp_before": 0.3695652173913043,<br />
+        "fgp_overall": 0.3615023474178404,<br />
+        "name": "Carter (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 61,<br />
+        "fga_before": 84,<br />
+        "fga_overall": 463,<br />
+        "fgp_after": 0.3114754098360656,<br />
+        "fgp_before": 0.34523809523809523,<br />
+        "fgp_overall": 0.34773218142548595,<br />
+        "name": "Fredette (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 168,<br />
+        "fga_before": 126,<br />
+        "fga_overall": 1843,<br />
+        "fgp_after": 0.34523809523809523,<br />
+        "fgp_before": 0.373015873015873,<br />
+        "fgp_overall": 0.34183396635919694,<br />
+        "name": "Chandler (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 166,<br />
+        "fga_before": 126,<br />
+        "fga_overall": 989,<br />
+        "fgp_after": 0.3855421686746988,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.339737108190091,<br />
+        "name": "Thornton (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 437,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.4358974358974359,<br />
+        "fgp_overall": 0.3890160183066362,<br />
+        "name": "Collison (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 41,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 906,<br />
+        "fgp_after": 0.4146341463414634,<br />
+        "fgp_before": 0.43902439024390244,<br />
+        "fgp_overall": 0.44370860927152317,<br />
+        "name": "Kapono (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 365,<br />
+        "fga_before": 307,<br />
+        "fga_overall": 3738,<br />
+        "fgp_after": 0.4246575342465753,<br />
+        "fgp_before": 0.4592833876221498,<br />
+        "fgp_overall": 0.4545211342964152,<br />
+        "name": "Nash (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 138,<br />
+        "fga_before": 72,<br />
+        "fga_overall": 930,<br />
+        "fgp_after": 0.2463768115942029,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.2946236559139785,<br />
+        "name": "Tinsley (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 139,<br />
+        "fga_before": 130,<br />
+        "fga_overall": 617,<br />
+        "fgp_after": 0.4748201438848921,<br />
+        "fgp_before": 0.46923076923076923,<br />
+        "fgp_overall": 0.42949756888168555,<br />
+        "name": "Gortat (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 52,<br />
+        "fga_overall": 389,<br />
+        "fgp_after": 0.45652173913043476,<br />
+        "fgp_before": 0.36538461538461536,<br />
+        "fgp_overall": 0.3444730077120823,<br />
+        "name": "Robinson (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 53,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 462,<br />
+        "fgp_after": 0.37735849056603776,<br />
+        "fgp_before": 0.4852941176470588,<br />
+        "fgp_overall": 0.4199134199134199,<br />
+        "name": "Butler (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 242,<br />
+        "fga_before": 255,<br />
+        "fga_overall": 2176,<br />
+        "fgp_after": 0.38016528925619836,<br />
+        "fgp_before": 0.403921568627451,<br />
+        "fgp_overall": 0.38143382352941174,<br />
+        "name": "Martin (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 191,<br />
+        "fga_before": 123,<br />
+        "fga_overall": 1339,<br />
+        "fgp_after": 0.28272251308900526,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.28976848394324123,<br />
+        "name": "Davis (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 156,<br />
+        "fga_before": 96,<br />
+        "fga_overall": 1263,<br />
+        "fgp_after": 0.33974358974358976,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.3657957244655582,<br />
+        "name": "Harden (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 42,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 334,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.36666666666666664,<br />
+        "fgp_overall": 0.2994011976047904,<br />
+        "name": "Davis (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 42,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 922,<br />
+        "fgp_after": 0.40476190476190477,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.3893709327548807,<br />
+        "name": "Maxiell (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 71,<br />
+        "fga_before": 76,<br />
+        "fga_overall": 1578,<br />
+        "fgp_after": 0.3380281690140845,<br />
+        "fgp_before": 0.35526315789473684,<br />
+        "fgp_overall": 0.38719898605830166,<br />
+        "name": "Chalmers (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 138,<br />
+        "fga_before": 106,<br />
+        "fga_overall": 831,<br />
+        "fgp_after": 0.2971014492753623,<br />
+        "fgp_before": 0.4339622641509434,<br />
+        "fgp_overall": 0.3345367027677497,<br />
+        "name": "Bynum (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 66,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 891,<br />
+        "fgp_after": 0.36363636363636365,<br />
+        "fgp_before": 0.23333333333333334,<br />
+        "fgp_overall": 0.35914702581369246,<br />
+        "name": "Wilkins (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 289,<br />
+        "fga_before": 236,<br />
+        "fga_overall": 2170,<br />
+        "fgp_after": 0.4013840830449827,<br />
+        "fgp_before": 0.4322033898305085,<br />
+        "fgp_overall": 0.41059907834101383,<br />
+        "name": "Bosh (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 179,<br />
+        "fga_before": 197,<br />
+        "fga_overall": 1780,<br />
+        "fgp_after": 0.3687150837988827,<br />
+        "fgp_before": 0.4213197969543147,<br />
+        "fgp_overall": 0.3938202247191011,<br />
+        "name": "Outlaw (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 82,<br />
+        "fga_before": 70,<br />
+        "fga_overall": 968,<br />
+        "fgp_after": 0.3048780487804878,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.33367768595041325,<br />
+        "name": "Telfair (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 254,<br />
+        "fga_before": 214,<br />
+        "fga_overall": 3366,<br />
+        "fgp_after": 0.3228346456692913,<br />
+        "fgp_before": 0.3878504672897196,<br />
+        "fgp_overall": 0.3740344622697564,<br />
+        "name": "Prince (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 44,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 797,<br />
+        "fgp_after": 0.4318181818181818,<br />
+        "fgp_before": 0.4857142857142857,<br />
+        "fgp_overall": 0.42785445420326224,<br />
+        "name": "Krstic (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 362,<br />
+        "fgp_after": 0.2857142857142857,<br />
+        "fgp_before": 0.25,<br />
+        "fgp_overall": 0.30662983425414364,<br />
+        "name": "Jackson (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 325,<br />
+        "fga_before": 295,<br />
+        "fga_overall": 2697,<br />
+        "fgp_after": 0.36923076923076925,<br />
+        "fgp_before": 0.34915254237288135,<br />
+        "fgp_overall": 0.3667037449017427,<br />
+        "name": "Young (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 94,<br />
+        "fga_before": 162,<br />
+        "fga_overall": 1011,<br />
+        "fgp_after": 0.30851063829787234,<br />
+        "fgp_before": 0.3395061728395062,<br />
+        "fgp_overall": 0.3669634025717112,<br />
+        "name": "Harrington (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 128,<br />
+        "fga_before": 113,<br />
+        "fga_overall": 1768,<br />
+        "fgp_after": 0.390625,<br />
+        "fgp_before": 0.3805309734513274,<br />
+        "fgp_overall": 0.36990950226244346,<br />
+        "name": "Robinson (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 62,<br />
+        "fga_before": 34,<br />
+        "fga_overall": 1375,<br />
+        "fgp_after": 0.3709677419354839,<br />
+        "fgp_before": 0.38235294117647056,<br />
+        "fgp_overall": 0.4,<br />
+        "name": "Blake (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 293,<br />
+        "fga_before": 250,<br />
+        "fga_overall": 1545,<br />
+        "fgp_after": 0.3174061433447099,<br />
+        "fgp_before": 0.316,<br />
+        "fgp_overall": 0.32427184466019415,<br />
+        "name": "Holiday (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 438,<br />
+        "fgp_after": 0.4418604651162791,<br />
+        "fgp_before": 0.34146341463414637,<br />
+        "fgp_overall": 0.4223744292237443,<br />
+        "name": "Landry (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 208,<br />
+        "fga_before": 331,<br />
+        "fga_overall": 2815,<br />
+        "fgp_after": 0.3557692307692308,<br />
+        "fgp_before": 0.3867069486404834,<br />
+        "fgp_overall": 0.4202486678507993,<br />
+        "name": "Gordon (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 487,<br />
+        "fgp_after": 0.3157894736842105,<br />
+        "fgp_before": 0.34782608695652173,<br />
+        "fgp_overall": 0.35728952772073924,<br />
+        "name": "Foye (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 49,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 1184,<br />
+        "fgp_after": 0.32653061224489793,<br />
+        "fgp_before": 0.4,<br />
+        "fgp_overall": 0.35050675675675674,<br />
+        "name": "Farmar (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 125,<br />
+        "fga_before": 155,<br />
+        "fga_overall": 2259,<br />
+        "fgp_after": 0.376,<br />
+        "fgp_before": 0.4258064516129032,<br />
+        "fgp_overall": 0.39575033200531207,<br />
+        "name": "Fisher (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 33,<br />
+        "fga_before": 39,<br />
+        "fga_overall": 465,<br />
+        "fgp_after": 0.36363636363636365,<br />
+        "fgp_before": 0.48717948717948717,<br />
+        "fgp_overall": 0.3634408602150538,<br />
+        "name": "Nene (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 46,<br />
+        "fga_overall": 288,<br />
+        "fgp_after": 0.234375,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.3020833333333333,<br />
+        "name": "Barea (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 54,<br />
+        "fga_before": 53,<br />
+        "fga_overall": 340,<br />
+        "fgp_after": 0.2037037037037037,<br />
+        "fgp_before": 0.37735849056603776,<br />
+        "fgp_overall": 0.3029411764705882,<br />
+        "name": "Randolph (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 131,<br />
+        "fga_before": 112,<br />
+        "fga_overall": 1437,<br />
+        "fgp_after": 0.40458015267175573,<br />
+        "fgp_before": 0.49107142857142855,<br />
+        "fgp_overall": 0.4112734864300626,<br />
+        "name": "Dudley (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 95,<br />
+        "fga_before": 52,<br />
+        "fga_overall": 716,<br />
+        "fgp_after": 0.4,<br />
+        "fgp_before": 0.36538461538461536,<br />
+        "fgp_overall": 0.33519553072625696,<br />
+        "name": "Barbosa (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 503,<br />
+        "fga_before": 494,<br />
+        "fga_overall": 4751,<br />
+        "fgp_after": 0.3856858846918489,<br />
+        "fgp_before": 0.4068825910931174,<br />
+        "fgp_overall": 0.4091770153651863,<br />
+        "name": "Terry (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 109,<br />
+        "fga_before": 98,<br />
+        "fga_overall": 1315,<br />
+        "fgp_after": 0.5137614678899083,<br />
+        "fgp_before": 0.46938775510204084,<br />
+        "fgp_overall": 0.4311787072243346,<br />
+        "name": "Allen (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 168,<br />
+        "fga_before": 150,<br />
+        "fga_overall": 1269,<br />
+        "fgp_after": 0.375,<br />
+        "fgp_before": 0.43333333333333335,<br />
+        "fgp_overall": 0.408983451536643,<br />
+        "name": "Bosh (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 51,<br />
+        "fga_before": 54,<br />
+        "fga_overall": 527,<br />
+        "fgp_after": 0.27450980392156865,<br />
+        "fgp_before": 0.35185185185185186,<br />
+        "fgp_overall": 0.36622390891840606,<br />
+        "name": "Weems (TOR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 440,<br />
+        "fgp_after": 0.34375,<br />
+        "fgp_before": 0.36585365853658536,<br />
+        "fgp_overall": 0.35,<br />
+        "name": "Lowry (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 409,<br />
+        "fga_before": 312,<br />
+        "fga_overall": 1901,<br />
+        "fgp_after": 0.2787286063569682,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.30457653866386114,<br />
+        "name": "Blatche (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 85,<br />
+        "fga_before": 97,<br />
+        "fga_overall": 1188,<br />
+        "fgp_after": 0.27058823529411763,<br />
+        "fgp_before": 0.30927835051546393,<br />
+        "fgp_overall": 0.32323232323232326,<br />
+        "name": "Douglas (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 92,<br />
+        "fga_before": 66,<br />
+        "fga_overall": 757,<br />
+        "fgp_after": 0.30434782608695654,<br />
+        "fgp_before": 0.2878787878787879,<br />
+        "fgp_overall": 0.35931307793923384,<br />
+        "name": "Carter (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 44,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 932,<br />
+        "fgp_after": 0.45454545454545453,<br />
+        "fgp_before": 0.4857142857142857,<br />
+        "fgp_overall": 0.3851931330472103,<br />
+        "name": "Mason (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 132,<br />
+        "fga_before": 110,<br />
+        "fga_overall": 688,<br />
+        "fgp_after": 0.2878787878787879,<br />
+        "fgp_before": 0.37272727272727274,<br />
+        "fgp_overall": 0.35755813953488375,<br />
+        "name": "Randolph (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 37,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 638,<br />
+        "fgp_after": 0.24324324324324326,<br />
+        "fgp_before": 0.3448275862068966,<br />
+        "fgp_overall": 0.3573667711598746,<br />
+        "name": "Pachulia (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 37,<br />
+        "fga_overall": 889,<br />
+        "fgp_after": 0.37142857142857144,<br />
+        "fgp_before": 0.40540540540540543,<br />
+        "fgp_overall": 0.39032620922384703,<br />
+        "name": "Korver (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 183,<br />
+        "fga_before": 229,<br />
+        "fga_overall": 2128,<br />
+        "fgp_after": 0.37158469945355194,<br />
+        "fgp_before": 0.3799126637554585,<br />
+        "fgp_overall": 0.40225563909774437,<br />
+        "name": "R. Allen (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 78,<br />
+        "fga_before": 137,<br />
+        "fga_overall": 721,<br />
+        "fgp_after": 0.38461538461538464,<br />
+        "fgp_before": 0.40145985401459855,<br />
+        "fgp_overall": 0.37309292649098474,<br />
+        "name": "Gooden (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 211,<br />
+        "fga_before": 273,<br />
+        "fga_overall": 2001,<br />
+        "fgp_after": 0.35545023696682465,<br />
+        "fgp_before": 0.3956043956043956,<br />
+        "fgp_overall": 0.3963018490754623,<br />
+        "name": "J. Johnson (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 87,<br />
+        "fga_before": 79,<br />
+        "fga_overall": 505,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.3670886075949367,<br />
+        "fgp_overall": 0.35445544554455444,<br />
+        "name": "Brown (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 269,<br />
+        "fga_before": 268,<br />
+        "fga_overall": 1767,<br />
+        "fgp_after": 0.34944237918215615,<br />
+        "fgp_before": 0.4141791044776119,<br />
+        "fgp_overall": 0.39558573853989815,<br />
+        "name": "Billups (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 87,<br />
+        "fga_before": 72,<br />
+        "fga_overall": 645,<br />
+        "fgp_after": 0.3793103448275862,<br />
+        "fgp_before": 0.3611111111111111,<br />
+        "fgp_overall": 0.37209302325581395,<br />
+        "name": "Artest (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 536,<br />
+        "fgp_after": 0.23255813953488372,<br />
+        "fgp_before": 0.3870967741935484,<br />
+        "fgp_overall": 0.3414179104477612,<br />
+        "name": "Gallinari (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 131,<br />
+        "fga_before": 104,<br />
+        "fga_overall": 629,<br />
+        "fgp_after": 0.2824427480916031,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.33068362480127184,<br />
+        "name": "Knight (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 59,<br />
+        "fga_overall": 511,<br />
+        "fgp_after": 0.234375,<br />
+        "fgp_before": 0.423728813559322,<br />
+        "fgp_overall": 0.30724070450097846,<br />
+        "name": "Okafor (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 63,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 343,<br />
+        "fgp_after": 0.42857142857142855,<br />
+        "fgp_before": 0.3,<br />
+        "fgp_overall": 0.32653061224489793,<br />
+        "name": "Howard (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 51,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 354,<br />
+        "fgp_after": 0.3333333333333333,<br />
+        "fgp_before": 0.3283582089552239,<br />
+        "fgp_overall": 0.3615819209039548,<br />
+        "name": "Randolph (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 80,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 458,<br />
+        "fgp_after": 0.3625,<br />
+        "fgp_before": 0.375,<br />
+        "fgp_overall": 0.36681222707423583,<br />
+        "name": "Hughes (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 57,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 1875,<br />
+        "fgp_after": 0.2982456140350877,<br />
+        "fgp_before": 0.3953488372093023,<br />
+        "fgp_overall": 0.36746666666666666,<br />
+        "name": "Wallace (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 302,<br />
+        "fga_before": 279,<br />
+        "fga_overall": 2155,<br />
+        "fgp_after": 0.40397350993377484,<br />
+        "fgp_before": 0.4014336917562724,<br />
+        "fgp_overall": 0.4013921113689095,<br />
+        "name": "Hill (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 60,<br />
+        "fga_before": 36,<br />
+        "fga_overall": 367,<br />
+        "fgp_after": 0.3,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.2997275204359673,<br />
+        "name": "Allen (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 67,<br />
+        "fga_before": 58,<br />
+        "fga_overall": 1089,<br />
+        "fgp_after": 0.2537313432835821,<br />
+        "fgp_before": 0.39655172413793105,<br />
+        "fgp_overall": 0.33884297520661155,<br />
+        "name": "Kleiza (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 61,<br />
+        "fga_before": 106,<br />
+        "fga_overall": 472,<br />
+        "fgp_after": 0.32786885245901637,<br />
+        "fgp_before": 0.4339622641509434,<br />
+        "fgp_overall": 0.3898305084745763,<br />
+        "name": "Landry (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 81,<br />
+        "fga_before": 66,<br />
+        "fga_overall": 761,<br />
+        "fgp_after": 0.4444444444444444,<br />
+        "fgp_before": 0.3939393939393939,<br />
+        "fgp_overall": 0.3771353482260184,<br />
+        "name": "Gibson (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 287,<br />
+        "fgp_after": 0.34375,<br />
+        "fgp_before": 0.5161290322580645,<br />
+        "fgp_overall": 0.3693379790940767,<br />
+        "name": "Telfair (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 141,<br />
+        "fga_before": 154,<br />
+        "fga_overall": 988,<br />
+        "fgp_after": 0.2695035460992908,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.32894736842105265,<br />
+        "name": "O'Neal (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 104,<br />
+        "fga_before": 119,<br />
+        "fga_overall": 1024,<br />
+        "fgp_after": 0.2692307692307692,<br />
+        "fgp_before": 0.3445378151260504,<br />
+        "fgp_overall": 0.357421875,<br />
+        "name": "Hughes (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 146,<br />
+        "fga_before": 120,<br />
+        "fga_overall": 1218,<br />
+        "fgp_after": 0.3904109589041096,<br />
+        "fgp_before": 0.4083333333333333,<br />
+        "fgp_overall": 0.3497536945812808,<br />
+        "name": "Cook (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 62,<br />
+        "fga_before": 80,<br />
+        "fga_overall": 469,<br />
+        "fgp_after": 0.2903225806451613,<br />
+        "fgp_before": 0.225,<br />
+        "fgp_overall": 0.2857142857142857,<br />
+        "name": "Miller (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 312,<br />
+        "fga_before": 209,<br />
+        "fga_overall": 1792,<br />
+        "fgp_after": 0.3301282051282051,<br />
+        "fgp_before": 0.3588516746411483,<br />
+        "fgp_overall": 0.38671875,<br />
+        "name": "Millsap (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 169,<br />
+        "fga_before": 169,<br />
+        "fga_overall": 1626,<br />
+        "fgp_after": 0.21893491124260356,<br />
+        "fgp_before": 0.4260355029585799,<br />
+        "fgp_overall": 0.33456334563345635,<br />
+        "name": "Wallace (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 75,<br />
+        "fga_before": 117,<br />
+        "fga_overall": 1614,<br />
+        "fgp_after": 0.4666666666666667,<br />
+        "fgp_before": 0.39316239316239315,<br />
+        "fgp_overall": 0.4076827757125155,<br />
+        "name": "Bell (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 29,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 525,<br />
+        "fgp_after": 0.3793103448275862,<br />
+        "fgp_before": 0.59375,<br />
+        "fgp_overall": 0.34095238095238095,<br />
+        "name": "Mullens (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 123,<br />
+        "fga_before": 87,<br />
+        "fga_overall": 671,<br />
+        "fgp_after": 0.21138211382113822,<br />
+        "fgp_before": 0.28735632183908044,<br />
+        "fgp_overall": 0.3025335320417288,<br />
+        "name": "Maggette (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 230,<br />
+        "fga_before": 192,<br />
+        "fga_overall": 1238,<br />
+        "fgp_after": 0.3695652173913043,<br />
+        "fgp_before": 0.3072916666666667,<br />
+        "fgp_overall": 0.3925686591276252,<br />
+        "name": "Beasley (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 45,<br />
+        "fga_before": 47,<br />
+        "fga_overall": 628,<br />
+        "fgp_after": 0.4222222222222222,<br />
+        "fgp_before": 0.425531914893617,<br />
+        "fgp_overall": 0.38057324840764334,<br />
+        "name": "Randolph (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 32,<br />
+        "fga_overall": 559,<br />
+        "fgp_after": 0.46875,<br />
+        "fgp_before": 0.46875,<br />
+        "fgp_overall": 0.37209302325581395,<br />
+        "name": "West (BOS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 178,<br />
+        "fga_before": 249,<br />
+        "fga_overall": 1275,<br />
+        "fgp_after": 0.3089887640449438,<br />
+        "fgp_before": 0.357429718875502,<br />
+        "fgp_overall": 0.3427450980392157,<br />
+        "name": "Williams (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 363,<br />
+        "fgp_after": 0.17391304347826086,<br />
+        "fgp_before": 0.325,<br />
+        "fgp_overall": 0.2644628099173554,<br />
+        "name": "World (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 262,<br />
+        "fga_before": 126,<br />
+        "fga_overall": 2369,<br />
+        "fgp_after": 0.4198473282442748,<br />
+        "fgp_before": 0.38095238095238093,<br />
+        "fgp_overall": 0.37441958632334316,<br />
+        "name": "McGrady (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 59,<br />
+        "fga_before": 99,<br />
+        "fga_overall": 628,<br />
+        "fgp_after": 0.22033898305084745,<br />
+        "fgp_before": 0.3838383838383838,<br />
+        "fgp_overall": 0.3359872611464968,<br />
+        "name": "Sessions (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 52,<br />
+        "fga_before": 33,<br />
+        "fga_overall": 779,<br />
+        "fgp_after": 0.3076923076923077,<br />
+        "fgp_before": 0.30303030303030304,<br />
+        "fgp_overall": 0.355584082156611,<br />
+        "name": "Bogans (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 61,<br />
+        "fga_before": 56,<br />
+        "fga_overall": 345,<br />
+        "fgp_after": 0.4262295081967213,<br />
+        "fgp_before": 0.4642857142857143,<br />
+        "fgp_overall": 0.4144927536231884,<br />
+        "name": "Hamilton (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 431,<br />
+        "fga_before": 395,<br />
+        "fga_overall": 3836,<br />
+        "fgp_after": 0.29930394431554525,<br />
+        "fgp_before": 0.37468354430379747,<br />
+        "fgp_overall": 0.34906152241918664,<br />
+        "name": "Wade (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 28,<br />
+        "fga_before": 27,<br />
+        "fga_overall": 320,<br />
+        "fgp_after": 0.35714285714285715,<br />
+        "fgp_before": 0.4074074074074074,<br />
+        "fgp_overall": 0.353125,<br />
+        "name": "Smith (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 26,<br />
+        "fga_before": 49,<br />
+        "fga_overall": 281,<br />
+        "fgp_after": 0.38461538461538464,<br />
+        "fgp_before": 0.42857142857142855,<br />
+        "fgp_overall": 0.35231316725978645,<br />
+        "name": "Boykins (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 131,<br />
+        "fga_before": 111,<br />
+        "fga_overall": 997,<br />
+        "fgp_after": 0.32061068702290074,<br />
+        "fgp_before": 0.36936936936936937,<br />
+        "fgp_overall": 0.320962888665998,<br />
+        "name": "Greene (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 49,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 530,<br />
+        "fgp_after": 0.3469387755102041,<br />
+        "fgp_before": 0.4186046511627907,<br />
+        "fgp_overall": 0.38301886792452833,<br />
+        "name": "Walker (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 140,<br />
+        "fga_before": 180,<br />
+        "fga_overall": 3833,<br />
+        "fgp_after": 0.29285714285714287,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.30707018001565356,<br />
+        "name": "Iguodala (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 475,<br />
+        "fgp_after": 0.34375,<br />
+        "fgp_before": 0.38461538461538464,<br />
+        "fgp_overall": 0.32421052631578945,<br />
+        "name": "Collison (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 90,<br />
+        "fga_before": 60,<br />
+        "fga_overall": 725,<br />
+        "fgp_after": 0.17777777777777778,<br />
+        "fgp_before": 0.26666666666666666,<br />
+        "fgp_overall": 0.31448275862068964,<br />
+        "name": "Walker (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 43,<br />
+        "fga_overall": 614,<br />
+        "fgp_after": 0.32558139534883723,<br />
+        "fgp_before": 0.5116279069767442,<br />
+        "fgp_overall": 0.41042345276872966,<br />
+        "name": "Quinn (MIA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 98,<br />
+        "fga_before": 113,<br />
+        "fga_overall": 1038,<br />
+        "fgp_after": 0.32653061224489793,<br />
+        "fgp_before": 0.4690265486725664,<br />
+        "fgp_overall": 0.42003853564547206,<br />
+        "name": "Miller (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 96,<br />
+        "fga_before": 101,<br />
+        "fga_overall": 976,<br />
+        "fgp_after": 0.3645833333333333,<br />
+        "fgp_before": 0.38613861386138615,<br />
+        "fgp_overall": 0.3422131147540984,<br />
+        "name": "Harrington (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 35,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 248,<br />
+        "fgp_after": 0.2571428571428571,<br />
+        "fgp_before": 0.3870967741935484,<br />
+        "fgp_overall": 0.3064516129032258,<br />
+        "name": "Harris (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 119,<br />
+        "fga_before": 104,<br />
+        "fga_overall": 938,<br />
+        "fgp_after": 0.29411764705882354,<br />
+        "fgp_before": 0.36538461538461536,<br />
+        "fgp_overall": 0.3326226012793177,<br />
+        "name": "Martin (DEN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 108,<br />
+        "fga_before": 105,<br />
+        "fga_overall": 1668,<br />
+        "fgp_after": 0.25925925925925924,<br />
+        "fgp_before": 0.34285714285714286,<br />
+        "fgp_overall": 0.3447242206235012,<br />
+        "name": "Odom (LAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 87,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 1430,<br />
+        "fgp_after": 0.367816091954023,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.4041958041958042,<br />
+        "name": "Carroll (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 87,<br />
+        "fga_before": 62,<br />
+        "fga_overall": 1155,<br />
+        "fgp_after": 0.39080459770114945,<br />
+        "fgp_before": 0.3064516129032258,<br />
+        "fgp_overall": 0.3619047619047619,<br />
+        "name": "Gallinari (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 476,<br />
+        "fga_before": 430,<br />
+        "fga_overall": 2969,<br />
+        "fgp_after": 0.34243697478991597,<br />
+        "fgp_before": 0.34186046511627904,<br />
+        "fgp_overall": 0.33546648703267096,<br />
+        "name": "Jamison (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 56,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 543,<br />
+        "fgp_after": 0.4642857142857143,<br />
+        "fgp_before": 0.4791666666666667,<br />
+        "fgp_overall": 0.44935543278084716,<br />
+        "name": "Patterson (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 44,<br />
+        "fga_before": 57,<br />
+        "fga_overall": 658,<br />
+        "fgp_after": 0.36363636363636365,<br />
+        "fgp_before": 0.2807017543859649,<br />
+        "fgp_overall": 0.37537993920972645,<br />
+        "name": "Hayward (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 76,<br />
+        "fga_before": 66,<br />
+        "fga_overall": 738,<br />
+        "fgp_after": 0.39473684210526316,<br />
+        "fgp_before": 0.3484848484848485,<br />
+        "fgp_overall": 0.4092140921409214,<br />
+        "name": "Ibaka (OKC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 44,<br />
+        "fga_overall": 434,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.3548387096774194,<br />
+        "name": "Carter (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 51,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 453,<br />
+        "fgp_after": 0.45098039215686275,<br />
+        "fgp_before": 0.44776119402985076,<br />
+        "fgp_overall": 0.3509933774834437,<br />
+        "name": "Iverson (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 71,<br />
+        "fga_before": 31,<br />
+        "fga_overall": 600,<br />
+        "fgp_after": 0.36619718309859156,<br />
+        "fgp_before": 0.3870967741935484,<br />
+        "fgp_overall": 0.38,<br />
+        "name": "Salmons (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 48,<br />
+        "fga_overall": 661,<br />
+        "fgp_after": 0.23684210526315788,<br />
+        "fgp_before": 0.3333333333333333,<br />
+        "fgp_overall": 0.3767019667170953,<br />
+        "name": "Gooden (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 56,<br />
+        "fga_before": 76,<br />
+        "fga_overall": 572,<br />
+        "fgp_after": 0.32142857142857145,<br />
+        "fgp_before": 0.42105263157894735,<br />
+        "fgp_overall": 0.34440559440559443,<br />
+        "name": "Outlaw (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 28,<br />
+        "fga_overall": 873,<br />
+        "fgp_after": 0.4166666666666667,<br />
+        "fgp_before": 0.2857142857142857,<br />
+        "fgp_overall": 0.3516609392898053,<br />
+        "name": "Brewer (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 229,<br />
+        "fga_before": 219,<br />
+        "fga_overall": 1257,<br />
+        "fgp_after": 0.34497816593886466,<br />
+        "fgp_before": 0.365296803652968,<br />
+        "fgp_overall": 0.38822593476531425,<br />
+        "name": "Randolph (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 93,<br />
+        "fga_overall": 695,<br />
+        "fgp_after": 0.18571428571428572,<br />
+        "fgp_before": 0.3010752688172043,<br />
+        "fgp_overall": 0.302158273381295,<br />
+        "name": "Bynum (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 198,<br />
+        "fga_before": 244,<br />
+        "fga_overall": 1594,<br />
+        "fgp_after": 0.3838383838383838,<br />
+        "fgp_before": 0.4139344262295082,<br />
+        "fgp_overall": 0.3958594730238394,<br />
+        "name": "Gordon (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 66,<br />
+        "fga_before": 59,<br />
+        "fga_overall": 1019,<br />
+        "fgp_after": 0.22727272727272727,<br />
+        "fgp_before": 0.288135593220339,<br />
+        "fgp_overall": 0.3434739941118744,<br />
+        "name": "Barea (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 225,<br />
+        "fga_before": 231,<br />
+        "fga_overall": 1515,<br />
+        "fgp_after": 0.3511111111111111,<br />
+        "fgp_before": 0.39826839826839827,<br />
+        "fgp_overall": 0.3551155115511551,<br />
+        "name": "Salmons (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 299,<br />
+        "fga_before": 286,<br />
+        "fga_overall": 1858,<br />
+        "fgp_after": 0.3010033444816054,<br />
+        "fgp_before": 0.3076923076923077,<br />
+        "fgp_overall": 0.32454251883745966,<br />
+        "name": "Stuckey (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 31,<br />
+        "fga_before": 38,<br />
+        "fga_overall": 836,<br />
+        "fgp_after": 0.45161290322580644,<br />
+        "fgp_before": 0.47368421052631576,<br />
+        "fgp_overall": 0.4222488038277512,<br />
+        "name": "Davis (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 41,<br />
+        "fga_overall": 391,<br />
+        "fgp_after": 0.3611111111111111,<br />
+        "fgp_before": 0.24390243902439024,<br />
+        "fgp_overall": 0.3350383631713555,<br />
+        "name": "Hughes (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 73,<br />
+        "fga_overall": 1356,<br />
+        "fgp_after": 0.3191489361702128,<br />
+        "fgp_before": 0.410958904109589,<br />
+        "fgp_overall": 0.3665191740412979,<br />
+        "name": "Webster (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 65,<br />
+        "fga_before": 51,<br />
+        "fga_overall": 422,<br />
+        "fgp_after": 0.3230769230769231,<br />
+        "fgp_before": 0.5490196078431373,<br />
+        "fgp_overall": 0.34834123222748814,<br />
+        "name": "Vasquez (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 52,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 1803,<br />
+        "fgp_after": 0.40384615384615385,<br />
+        "fgp_before": 0.3235294117647059,<br />
+        "fgp_overall": 0.3843594009983361,<br />
+        "name": "Battier (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 65,<br />
+        "fga_before": 68,<br />
+        "fga_overall": 946,<br />
+        "fgp_after": 0.3076923076923077,<br />
+        "fgp_before": 0.3382352941176471,<br />
+        "fgp_overall": 0.3985200845665962,<br />
+        "name": "Ridnour (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 46,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 353,<br />
+        "fgp_after": 0.17391304347826086,<br />
+        "fgp_before": 0.425,<br />
+        "fgp_overall": 0.2776203966005666,<br />
+        "name": "Rubio (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 205,<br />
+        "fga_before": 194,<br />
+        "fga_overall": 1996,<br />
+        "fgp_after": 0.37073170731707317,<br />
+        "fgp_before": 0.5154639175257731,<br />
+        "fgp_overall": 0.3982965931863727,<br />
+        "name": "Gibson (CLE)"<br />
+    },<br />
+    {<br />
+        "fga_after": 42,<br />
+        "fga_before": 35,<br />
+        "fga_overall": 282,<br />
+        "fgp_after": 0.30952380952380953,<br />
+        "fgp_before": 0.4857142857142857,<br />
+        "fgp_overall": 0.3333333333333333,<br />
+        "name": "Redd (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 303,<br />
+        "fga_before": 267,<br />
+        "fga_overall": 2366,<br />
+        "fgp_after": 0.3432343234323432,<br />
+        "fgp_before": 0.4044943820224719,<br />
+        "fgp_overall": 0.33727810650887574,<br />
+        "name": "Jennings (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 110,<br />
+        "fga_before": 66,<br />
+        "fga_overall": 1073,<br />
+        "fgp_after": 0.42727272727272725,<br />
+        "fgp_before": 0.3181818181818182,<br />
+        "fgp_overall": 0.37744641192917056,<br />
+        "name": "Henderson (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 43,<br />
+        "fga_before": 67,<br />
+        "fga_overall": 530,<br />
+        "fgp_after": 0.32558139534883723,<br />
+        "fgp_before": 0.43283582089552236,<br />
+        "fgp_overall": 0.37358490566037733,<br />
+        "name": "Jack (IND)"<br />
+    },<br />
+    {<br />
+        "fga_after": 292,<br />
+        "fga_before": 264,<br />
+        "fga_overall": 1449,<br />
+        "fgp_after": 0.2636986301369863,<br />
+        "fgp_before": 0.2727272727272727,<br />
+        "fgp_overall": 0.26224982746721875,<br />
+        "name": "Evans (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 106,<br />
+        "fga_before": 86,<br />
+        "fga_overall": 1196,<br />
+        "fgp_after": 0.3867924528301887,<br />
+        "fgp_before": 0.3372093023255814,<br />
+        "fgp_overall": 0.35618729096989965,<br />
+        "name": "Artest (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 298,<br />
+        "fga_before": 271,<br />
+        "fga_overall": 2952,<br />
+        "fgp_after": 0.3422818791946309,<br />
+        "fgp_before": 0.3837638376383764,<br />
+        "fgp_overall": 0.40311653116531165,<br />
+        "name": "Williams (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 162,<br />
+        "fga_before": 180,<br />
+        "fga_overall": 924,<br />
+        "fgp_after": 0.30864197530864196,<br />
+        "fgp_before": 0.36666666666666664,<br />
+        "fgp_overall": 0.3658008658008658,<br />
+        "name": "Durant (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 29,<br />
+        "fga_overall": 807,<br />
+        "fgp_after": 0.39473684210526316,<br />
+        "fgp_before": 0.5172413793103449,<br />
+        "fgp_overall": 0.37794299876084264,<br />
+        "name": "Pietrus (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 49,<br />
+        "fga_before": 42,<br />
+        "fga_overall": 760,<br />
+        "fgp_after": 0.3877551020408163,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.3684210526315789,<br />
+        "name": "Farmar (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 75,<br />
+        "fga_before": 100,<br />
+        "fga_overall": 985,<br />
+        "fgp_after": 0.38666666666666666,<br />
+        "fgp_before": 0.35,<br />
+        "fgp_overall": 0.37360406091370557,<br />
+        "name": "Warrick (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 292,<br />
+        "fga_before": 259,<br />
+        "fga_overall": 1032,<br />
+        "fgp_after": 0.2534246575342466,<br />
+        "fgp_before": 0.25096525096525096,<br />
+        "fgp_overall": 0.2451550387596899,<br />
+        "name": "Wall (WAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 95,<br />
+        "fga_before": 97,<br />
+        "fga_overall": 417,<br />
+        "fgp_after": 0.3473684210526316,<br />
+        "fgp_before": 0.44329896907216493,<br />
+        "fgp_overall": 0.41247002398081534,<br />
+        "name": "Kaman (NOH)"<br />
+    },<br />
+    {<br />
+        "fga_after": 157,<br />
+        "fga_before": 142,<br />
+        "fga_overall": 1615,<br />
+        "fgp_after": 0.4713375796178344,<br />
+        "fgp_before": 0.4154929577464789,<br />
+        "fgp_overall": 0.44643962848297214,<br />
+        "name": "Horford (ATL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 511,<br />
+        "fga_before": 339,<br />
+        "fga_overall": 3575,<br />
+        "fgp_after": 0.350293542074364,<br />
+        "fgp_before": 0.3893805309734513,<br />
+        "fgp_overall": 0.38181818181818183,<br />
+        "name": "Deng (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 41,<br />
+        "fga_before": 70,<br />
+        "fga_overall": 996,<br />
+        "fgp_after": 0.3170731707317073,<br />
+        "fgp_before": 0.4714285714285714,<br />
+        "fgp_overall": 0.4307228915662651,<br />
+        "name": "Ridnour (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 39,<br />
+        "fga_before": 55,<br />
+        "fga_overall": 531,<br />
+        "fgp_after": 0.38461538461538464,<br />
+        "fgp_before": 0.38181818181818183,<br />
+        "fgp_overall": 0.3446327683615819,<br />
+        "name": "Felton (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 38,<br />
+        "fga_before": 50,<br />
+        "fga_overall": 888,<br />
+        "fgp_after": 0.34210526315789475,<br />
+        "fgp_before": 0.34,<br />
+        "fgp_overall": 0.3524774774774775,<br />
+        "name": "Stackhouse (DAL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 165,<br />
+        "fga_before": 146,<br />
+        "fga_overall": 1183,<br />
+        "fgp_after": 0.34545454545454546,<br />
+        "fgp_before": 0.3698630136986301,<br />
+        "fgp_overall": 0.3617920540997464,<br />
+        "name": "Matthews (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 478,<br />
+        "fga_before": 490,<br />
+        "fga_overall": 3855,<br />
+        "fgp_after": 0.3200836820083682,<br />
+        "fgp_before": 0.32653061224489793,<br />
+        "fgp_overall": 0.36835278858625164,<br />
+        "name": "Gay (MEM)"<br />
+    },<br />
+    {<br />
+        "fga_after": 117,<br />
+        "fga_before": 122,<br />
+        "fga_overall": 1286,<br />
+        "fgp_after": 0.3504273504273504,<br />
+        "fgp_before": 0.36885245901639346,<br />
+        "fgp_overall": 0.42690513219284604,<br />
+        "name": "Morrow (NJN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 36,<br />
+        "fga_before": 36,<br />
+        "fga_overall": 520,<br />
+        "fgp_after": 0.25,<br />
+        "fgp_before": 0.3888888888888889,<br />
+        "fgp_overall": 0.36730769230769234,<br />
+        "name": "Jerebko (DET)"<br />
+    },<br />
+    {<br />
+        "fga_after": 34,<br />
+        "fga_before": 34,<br />
+        "fga_overall": 908,<br />
+        "fgp_after": 0.29411764705882354,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.39537444933920707,<br />
+        "name": "Head (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 376,<br />
+        "fga_before": 351,<br />
+        "fga_overall": 1860,<br />
+        "fgp_after": 0.46808510638297873,<br />
+        "fgp_before": 0.4444444444444444,<br />
+        "fgp_overall": 0.4553763440860215,<br />
+        "name": "Stoudemire (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 146,<br />
+        "fga_before": 138,<br />
+        "fga_overall": 1986,<br />
+        "fgp_after": 0.3904109589041096,<br />
+        "fgp_before": 0.34782608695652173,<br />
+        "fgp_overall": 0.3685800604229607,<br />
+        "name": "Garcia (SAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 245,<br />
+        "fga_before": 129,<br />
+        "fga_overall": 1985,<br />
+        "fgp_after": 0.2897959183673469,<br />
+        "fgp_before": 0.3178294573643411,<br />
+        "fgp_overall": 0.3385390428211587,<br />
+        "name": "Miles (UTA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 239,<br />
+        "fga_before": 199,<br />
+        "fga_overall": 2347,<br />
+        "fgp_after": 0.38493723849372385,<br />
+        "fgp_before": 0.4271356783919598,<br />
+        "fgp_overall": 0.3992330634853004,<br />
+        "name": "Hinrich (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 107,<br />
+        "fga_before": 58,<br />
+        "fga_overall": 1841,<br />
+        "fgp_after": 0.308411214953271,<br />
+        "fgp_before": 0.4482758620689655,<br />
+        "fgp_overall": 0.3932645301466594,<br />
+        "name": "Redick (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 139,<br />
+        "fga_before": 152,<br />
+        "fga_overall": 912,<br />
+        "fgp_after": 0.38848920863309355,<br />
+        "fgp_before": 0.3618421052631579,<br />
+        "fgp_overall": 0.38048245614035087,<br />
+        "name": "Salmons (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 30,<br />
+        "fga_overall": 265,<br />
+        "fgp_after": 0.4375,<br />
+        "fgp_before": 0.23333333333333334,<br />
+        "fgp_overall": 0.3169811320754717,<br />
+        "name": "Richardson (ORL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 70,<br />
+        "fga_before": 138,<br />
+        "fga_overall": 1109,<br />
+        "fgp_after": 0.34285714285714286,<br />
+        "fgp_before": 0.4492753623188406,<br />
+        "fgp_overall": 0.39675383228133454,<br />
+        "name": "Richardson (CHA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 151,<br />
+        "fga_before": 168,<br />
+        "fga_overall": 1256,<br />
+        "fgp_after": 0.304635761589404,<br />
+        "fgp_before": 0.4166666666666667,<br />
+        "fgp_overall": 0.3343949044585987,<br />
+        "name": "Lowry (HOU)"<br />
+    },<br />
+    {<br />
+        "fga_after": 60,<br />
+        "fga_before": 47,<br />
+        "fga_overall": 681,<br />
+        "fgp_after": 0.31666666666666665,<br />
+        "fgp_before": 0.425531914893617,<br />
+        "fgp_overall": 0.3641703377386197,<br />
+        "name": "Thomas (CHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 393,<br />
+        "fga_before": 348,<br />
+        "fga_overall": 3119,<br />
+        "fgp_after": 0.3384223918575064,<br />
+        "fgp_before": 0.39655172413793105,<br />
+        "fgp_overall": 0.3661429945495351,<br />
+        "name": "Parker (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 27,<br />
+        "fga_before": 40,<br />
+        "fga_overall": 388,<br />
+        "fgp_after": 0.37037037037037035,<br />
+        "fgp_before": 0.5,<br />
+        "fgp_overall": 0.4329896907216495,<br />
+        "name": "Rush (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 64,<br />
+        "fga_before": 66,<br />
+        "fga_overall": 1872,<br />
+        "fgp_after": 0.46875,<br />
+        "fgp_before": 0.5151515151515151,<br />
+        "fgp_overall": 0.3958333333333333,<br />
+        "name": "Finley (SAS)"<br />
+    },<br />
+    {<br />
+        "fga_after": 372,<br />
+        "fga_before": 280,<br />
+        "fga_overall": 1299,<br />
+        "fgp_after": 0.34408602150537637,<br />
+        "fgp_before": 0.35714285714285715,<br />
+        "fgp_overall": 0.37336412625096227,<br />
+        "name": "Stoudemire (NYK)"<br />
+    },<br />
+    {<br />
+        "fga_after": 47,<br />
+        "fga_before": 69,<br />
+        "fga_overall": 828,<br />
+        "fgp_after": 0.23404255319148937,<br />
+        "fgp_before": 0.30434782608695654,<br />
+        "fgp_overall": 0.37318840579710144,<br />
+        "name": "Allen (SEA)"<br />
+    },<br />
+    {<br />
+        "fga_after": 174,<br />
+        "fga_before": 143,<br />
+        "fga_overall": 2028,<br />
+        "fgp_after": 0.367816091954023,<br />
+        "fgp_before": 0.3986013986013986,<br />
+        "fgp_overall": 0.3698224852071006,<br />
+        "name": "Redd (MIL)"<br />
+    },<br />
+    {<br />
+        "fga_after": 32,<br />
+        "fga_before": 60,<br />
+        "fga_overall": 652,<br />
+        "fgp_after": 0.28125,<br />
+        "fgp_before": 0.4,<br />
+        "fgp_overall": 0.3496932515337423,<br />
+        "name": "Dragic (PHX)"<br />
+    },<br />
+    {<br />
+        "fga_after": 26,<br />
+        "fga_before": 26,<br />
+        "fga_overall": 249,<br />
+        "fgp_after": 0.46153846153846156,<br />
+        "fgp_before": 0.34615384615384615,<br />
+        "fgp_overall": 0.3092369477911647,<br />
+        "name": "Walker (MIN)"<br />
+    },<br />
+    {<br />
+        "fga_after": 413,<br />
+        "fga_before": 277,<br />
+        "fga_overall": 3532,<br />
+        "fgp_after": 0.34624697336561744,<br />
+        "fgp_before": 0.37906137184115524,<br />
+        "fgp_overall": 0.3977916194790487,<br />
+        "name": "Aldridge (POR)"<br />
+    },<br />
+    {<br />
+        "fga_after": 89,<br />
+        "fga_before": 78,<br />
+        "fga_overall": 589,<br />
+        "fgp_after": 0.39325842696629215,<br />
+        "fgp_before": 0.28205128205128205,<br />
+        "fgp_overall": 0.38879456706281834,<br />
+        "name": "Thompson (GSW)"<br />
+    },<br />
+    {<br />
+        "fga_after": 67,<br />
+        "fga_before": 60,<br />
+        "fga_overall": 502,<br />
+        "fgp_after": 0.29850746268656714,<br />
+        "fgp_before": 0.36666666666666664,<br />
+        "fgp_overall": 0.36852589641434264,<br />
+        "name": "Hawes (PHI)"<br />
+    },<br />
+    {<br />
+        "fga_after": 102,<br />
+        "fga_before": 103,<br />
+        "fga_overall": 1091,<br />
+        "fgp_after": 0.20588235294117646,<br />
+        "fgp_before": 0.2912621359223301,<br />
+        "fgp_overall": 0.28230980751604035,<br />
+        "name": "B. Davis (LAC)"<br />
+    },<br />
+    {<br />
+        "fga_after": 343,<br />
+        "fga_before": 251,<br />
+        "fga_overall": 2868,<br />
+        "fgp_after": 0.34110787172011664,<br />
+        "fgp_before": 0.44223107569721115,<br />
+        "fgp_overall": 0.37796373779637377,<br />
+        "name": "Roy (POR)"<br />
+    }<br />
+];</p>
+<p>$('#nba-blocked-jumper-table').dataTable( {<br />
+    "aaData": $.map(dataset, function (p) {<br />
+        return [[p.name, round(100 * (p.fgp_after - p.fgp_before), 1), round(100 * p.fgp_before, 1), p.fga_before, round(100 * p.fgp_after, 1), p.fga_after, round(100 * p.fgp_overall, 1), p.fga_overall]];<br />
+    })<br />
+});</p>
+<p>// Tooltips<br />
+var div = d3.select("#nba-blocked-jumper-plot").append("div")<br />
+    .attr("class", "tooltip")<br />
+    .style("opacity", 0);</p>
+<p>//Create SVG element<br />
+var svg = d3.select("#nba-blocked-jumper-plot")<br />
+    .append("svg")<br />
+    .attr("width", w)<br />
+    .attr("height", h);</p>
+<p>// Diagonal line<br />
+svg.append("svg:line")<br />
+    .attr("x1", 0)<br />
+    .attr("y1", 450)<br />
+    .attr("x2", 638)<br />
+    .attr("y2", 0)<br />
+    .style("stroke", "black")<br />
+    .style("stroke-width", 5);</p>
+<p>// Points<br />
+svg.selectAll("circle")<br />
+    .data(dataset)<br />
+    .enter()<br />
+    .append("circle")<br />
+    .style("fill", "steelblue")<br />
+    .style("opacity", .4)<br />
+    .style("stroke", "black")<br />
+    .style("stroke-opacity", 1)<br />
+    .style("stroke-width", 1)<br />
+    .attr("cx", function (d) { return 620 * (d.fgp_before - 0.0) / (0.65 - 0.0) + 14; })<br />
+    .attr("cy", function (d) { return 432 * (1 - (d.fgp_after - 0.0) / (0.65 - 0.00)) + 14; })<br />
+    .attr("r", function (d) { return Math.sqrt((d.fga_before + d.fga_after) / 5); })<br />
+    .on("mouseover", function (d) {<br />
+        div.transition()<br />
+            .duration(200)<br />
+            .style("opacity", .8);<br />
+        var parentOffset = $(this).parent().offset();<br />
+        div.html(d.name +<br />
+                 "<br>Before block: " + round(100 * d.fgp_before, 1) + "% (" + d.fga_before + " FGA)" +<br />
+                 "<br>After block: " + round(100 * d.fgp_after, 1) + "% (" + d.fga_after + " FGA)" +<br />
+                 "<br>Overall: " + round(100 * d.fgp_overall, 1) + "% (" + d.fga_overall + " FGA)")<br />
+           .style("left", (d3.event.pageX - parentOffset.left) + "px")<br />
+           .style("top", (d3.event.pageY - parentOffset.top - 28) + "px");<br />
+    })<br />
+    .on("mouseout", function(d) {<br />
+        div.transition()<br />
+            .duration(500)<br />
+            .style("opacity", 0);<br />
+    });</p>
+<p>svg.append("text")<br />
+    .attr("x", 60)<br />
+    .attr("y", 60)<br />
+    .text("Higher FG% after first blocked jumper")<br />
+    .attr("font-family", "sans-serif")<br />
+    .attr("font-size", "20px");</p>
+<p>svg.append("text")<br />
+    .attr("x", 220)<br />
+    .attr("y", 440)<br />
+    .text("Lower FG% after first blocked jumper")<br />
+    .attr("font-family", "sans-serif")<br />
+    .attr("font-size", "20px");<br />
+</script><br />
+<!--/raw--></p>

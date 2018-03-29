@@ -1,0 +1,118 @@
+---
+layout: post
+status: publish
+published: true
+title: Player ratings and development beta!
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 566
+wordpress_url: https://basketball-gm.com/?p=566
+date: '2018-02-07 17:21:54 -0500'
+date_gmt: '2018-02-07 22:21:54 -0500'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- Beta
+- New Feature
+- Player Ratings
+- Player Development
+comments:
+- id: 82731
+  author: riogho
+  author_email: riogho@gmail.com
+  author_url: http://dynasty720.proboards.com
+  date: '2018-02-15 13:55:15 -0500'
+  date_gmt: '2018-02-15 18:55:15 -0500'
+  content: "I have a multiplayer league that we currently are using custom rating
+    with (that we set up ourselves). \r\n\r\nI will immediately try to upload our
+    league into the beta version and look at the scaled rating changes, and also do
+    some test simulations and see what type of crazy differences we would notice."
+- id: 82734
+  author: Femi Zaccheus
+  author_email: fzaccheus@gmail.com
+  author_url: ''
+  date: '2018-02-17 15:23:40 -0500'
+  date_gmt: '2018-02-17 20:23:40 -0500'
+  content: The PERs seem kinda high in the beta, but really enjoying it so far!
+- id: 82746
+  author: ReverseBro
+  author_email: marioruberu@gmail.com
+  author_url: http://basketball-gm.com
+  date: '2018-03-07 21:06:08 -0500'
+  date_gmt: '2018-03-08 02:06:08 -0500'
+  content: change it back wtf
+- id: 82760
+  author: John
+  author_email: spamcrapspamcrap@gmail.com
+  author_url: ''
+  date: '2018-03-13 03:55:38 -0400'
+  date_gmt: '2018-03-13 07:55:38 -0400'
+  content: "Hey man,\r\nThe update to potential seems kind of odd at first. Specifically,
+    it makes drafting players way more difficult than before, because usually I would
+    just sort by potential and select one of the top prospects there. Now, it seems
+    like so many prospects have similar potential ratings. Another thing I noticed
+    was that it is extremely rare now that players make it to 80 OVR (way less than
+    before). The average rating of players seems to be way down, so do most statistical
+    categories. I liked how before, the top 2 or 3 picks in the draft would be surefire
+    stars."
+- id: 82779
+  author: Fxgzy
+  author_email: sduke9@outlook.com
+  author_url: ''
+  date: '2018-03-25 12:33:16 -0400'
+  date_gmt: '2018-03-25 16:33:16 -0400'
+  content: Is there anyway I can play with the old ratings system
+- id: 82780
+  author: Fxgzy
+  author_email: sduke9@outlook.com
+  author_url: ''
+  date: '2018-03-25 12:34:02 -0400'
+  date_gmt: '2018-03-25 16:34:02 -0400'
+  content: Is there anyway I can play with version 26
+- id: 82781
+  author: Tim
+  author_email: mackaytim@yahoo.ca
+  author_url: ''
+  date: '2018-03-26 00:04:31 -0400'
+  date_gmt: '2018-03-26 04:04:31 -0400'
+  content: "How much does the investment in a team's player development budget help
+    improve a players development with these new ratings? If I invest the most money
+    in the league do my players have a better chance of developing greater amounts
+    or sooner?\r\n\r\nAlso, does using the modifiers to give a rookie minutes even
+    though he might have low skill numbers help him develop more/sooner?\r\n\r\nThanks!"
+---
+<p>Today I released <a href="https://beta.basketball-gm.com/">a new beta of Basketball GM</a> featuring big changes to player ratings.</p>
+<p>There were a lot of things wrong with player ratings previously. For example, the career arcs of ratings were very unrealistic. For example, it was not uncommon for a player to enter the league with no jump shot and grow to become one of the all time great shooters, or for a player to enter the league with horrible athleticism but grow to become an elite athlete. Sure improvement is possible - but not that much! I mostly implemented <a href="https://www.reddit.com/r/BasketballGM/comments/7frlq6/how_do_pro_basketball_players_develop/">the changes described here</a> to make individual rating changes more realistic.</p>
+<!--more-->
+<p>However, for the most part, that means ratings change less. Horrible shooters never become great shooters. Horrible athletes never become great athlets. So what accounts for young players improving? Sure, some of it is driven by the old Basketball GM ratings, but I think a lot of it is basketball IQ. Things like defensive positioning, defensive rotations, moving without the ball, setting screens, etc. None of that was expressed in Basketball GM ratings, until now! There are two new ratings: offensive IQ (OIQ) and defensive IQ (DIQ - yes, I know, I know). These ratings influence many different aspects of the game, and young players almost always will have low OIQ and DIQ values. Then, as they gain experience and their basketball IQ improves, their improved performance is mostly due to improved intelligence allowing them to leverage their skills.</p>
+<p>As the saying goes, the Commissioner giveth and the Commissioner taketh away. So you have two new ratings, OIQ and DIQ. To compensate, I took away two ratings: BLK and STL. Now, blocks and steals are influenced by DIQ, size, and athleticism. I can already anticipate your complaint: "but what about players who get a lot of blocks/steals but aren't good defenders because they gamble?" Good question. Those types of players are not possible in the BBGM beta. However... they have never been possible in BBGM! Even with the BLK/STL ratings, blocks and steals increased monotonically with them. I could imagine some day having players with low DIQ accumulate blocks and steals while hurting the defense, but it's not there today.</p>
+<p>But I anticipate more complaints: "but why not leave the BLK/STL ratings and let a gambler be someone with high BLK/STL ratings but low DIQ?" Because I want to minimize the number of ratings. I could have a rating for every single little thing, and then I could easily simulate any type of player by tweaking those ratings. But it'd be fucking confusing. Already the game is complicated enough that it's challenging for me to work on. Change how one single rating develops - now it has a different distribution, so game simulation needs to be tweaked, and maybe the OVR formula needs to be edited to account for changes in game simulation, and maybe contracts need to be adjusted to account for different rating/stat distributions, and now maybe the league leader in assists is only averaging 7 per game so I need to go back and tweak something else, and on and on and on. Think of all the things that need to be realistic in a sports simulation game: player ratings, career arcs, player stats, team stats, variances and outliers of stats, correlations between different stats, effects of ratings on stats, team winning percentages, advanced stats, contracts, draft prospect quality... it is not a small problem. And you want me to add more ratings, to make it even more complicated? Not without a much better reason.</p>
+<p>Another big thing that's still missing is separating shot making ability with shot frequency, to simulate guys who are good shooters but don't shoot much, or guys who are bad shooters but shoot a lot. I think this should be more controlled by some hypothetical future coaching feature than ratings.</p>
+<p>Anyway, back to changes in the beta. Another weird thing with the current version of Basketball GM is the potential rating (POT). It has always been true that, all else equal, a player with a higher POT has a better chance of improving. However, it was never clear what POT actually meant. In practice, it didn't mean a heck of a lot. A 30 OVR 80 POT player might turn into a star, but more likely he would turn into a role player. WTF?</p>
+<p>In the beta, POT is completely redefined. In the past, POT worked by influencing player development. Players with high POTs were more likely to see rating improvements. Now, POT has absolutely not influence on player development. What? Yes. Think about it. It makes sense. When you look at a draft prospect, you judge him likely to improve or not based on his mix of skills and his mental and physical characteristics. That's it. There is no underlying "potential" variable. So there need not be one in Basketball GM. There is still a POT rating, but its meaning is completely different. It has switched from being an independent variable to a dependent variable. It does not influence player development, it just provides a description of what is likely to happen. This is done by simulating many possible career arcs for a player and picking the OVR rating in the 75th percentile. In other words, <a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">bootstrapping</a>. So when you see a POT rating for a draft prospect, think "there is a 25% chance he'll reach this rating or higher".</p>
+<p>I really like this change to POT. I hope you guys do to.</p>
+<p>Another problem with ratings is that they are bounded 0-100, and that full range is commonly used. So you might create a new league and see 5 players with a 100 3 point shooting rating. So 5 players simultaneously appeared, they are all the greatest shooter of all time, and they are all exactly identical in their shooting ability? Not very realistic. I thought about making ratings unbounded, but that is too drastic of a change. Instead, I rescaled them. A 100 in the past is now more like a 75 or 80. A 100 now is actually a rare thing. This means that you will see more unique players who can statistically do things that no other players in the league can do. And someone reaching 100 in a rating will be special.</p>
+<p>There are also a number of smaller changes that are also cool. Here's some of them:</p>
+<ul>
+<li>It's less likely for rookies to be immediate stars. Improvement is more gradual.</li>
+<li>Height can increase in young players, although it's quite rare.</li>
+<li>Short players can be efficient scorers - previously that was nearly impossible.</li>
+<li>Players in a new league are much more similar to players you draft in an existing league. Previously there were different code paths to generating them, so you would see different ratings distributions in new leagues than in leagues with >10 seasons played. But now the initial players are from actual simulated past draft classes.</li>
+<li>Players will no longer record literally 0 rebounds or assists or whatever for their entire career just because they have very low ratings. You will get some just by being on the floor. It's still possible to have 0 three point attempts, but that is a separate problem: there is no concept of a last second heave in the game simulation engine, so bad three point shooters will just not ever attempt any.</li>
+<li>Draft prospects are more like the NBA, in that the best players are usually young. Previously it'd just randomly pick players to keep in school for extra seasons. Now, it actually simulates that decision year by year - first the freshman declare, then the sophomores develop a year, then the sophomores declare, etc. The only unrealistic thing is that you can see fairly accurate projected ratings for draft classes 3 years out, when in reality you often don't know who late bloomers will be. But in terms of the actual draft class itself, it is much more realistic now.</li>
+<li>I fixed a longstanding bug where draft prospects would sometimes have skill labels they shouldn't, only to then lose them in their first season. This could be really annoying, like you'd draft a guy with the 3 point skill, his 3 point shooting rating would increase, and he'd lose the skill? WTF? Fixed now.</li>
+</ul>
+<p>This blog post is getting quite long and confusing.</p>
+<p>Let me now talk about upgrades from existing leagues. This is just in beta now, so it won't affect anything on the main website. When it does, your existing leagues will be migrated by scaling player ratings to be similar to the new distributions. Inevitably, some will get better and some will get worse. I know some of you may prefer to keep things the old way forever, but I just don't have the resources to maintain multiple versions.</p>
+<p>So related to that, one of the things I would appreciate you testing in the beta is the upgrade from old leagues. Export them from <a href="https://play.basketball-gm.com/">the current version</a> and load them into <a href="https://beta.basketball-gm.com/">the beta</a>. And try any custom league files you've made or used.</p>
+<p>In general, I would appreciate any feedback I can get. Is something broken? Some stats weird? Some ratings unrealistic? Please let me know.</p>
+<p>Negative feedback is very welcome. I know that most of you realize this is a free game I make in my spare time, so you're pretty nice to me. But if you think something in the beta sucks, please tell me. Otherwise I just won't know.</p>
+<p><a href="http://www.reddit.com/r/BasketballGM/">The subreddit</a> is the best place for feedback, but you can also <a href="mailto:commissioner@basketball-gm.com">email me</a> or post a message on <a href="https://discord.gg/caPFuM9">Discord</a> or <a href="https://twitter.com/basketball_gm">Twitter</a>.</p>
+<p>For those interested in all the details, <a href="https://github.com/dumbmatter/basketball-gm/compare/player-development">here is all the code changes in the beta</a>.</p>

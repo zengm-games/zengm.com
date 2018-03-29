@@ -1,0 +1,33 @@
+---
+layout: post
+status: publish
+published: true
+title: Game simulation performance improvements
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 416
+wordpress_url: https://basketball-gm.com/?p=416
+date: '2016-04-12 21:27:24 -0400'
+date_gmt: '2016-04-13 01:27:24 -0400'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- Performance
+comments: []
+---
+<p>Performance in leagues with many seasons has long been an embarrassment to me. It should be faster. And as of today, it's at least a little better. Game simulation is now a little slower in new leagues but significantly faster in leagues with many seasons. Although it might be about 5% slower in a new league, the performance improvements are pretty big in old leagues. For example, leagues with 50 seasons are about 25% faster. And that number keeps getting bigger with more seasons.</p>
+<p>Now I'm not claiming all performance problems are solved. It still gets slower the longer you play, and that still sucks. But the rate at which it gets slower has just been decreased a bit.</p>
+<!--more-->
+<p>Now if you want some technical details...</p>
+<p>This performance improvement was obtained through database normalization. Basketball GM uses IndexedDB as its database. IndexedDB is the first NoSQL database I ever used, so I was a bit clueless when doing the original database design. I was a bit perplexed by the lack of joins, so I gave each team a single object which contained all their stats and other seasonal attributes.</p>
+<p>This did make it easy to work with the database, but it also made the team objects grow every season. This made things REALLY FUCKING SLOW because IndexedDB does not give you a way to do a partial read or write of an object. So if you have 200 years of team stats, those were being read from and written to the database frequently, even though the 199 old seasons didn't change.</p>
+<p>Pretty quickly I realized this was not a good idea, but I never fixed it until now. Part of the reason it took so long is because IndexedDB's event-based API is really painful to use. But now that I have <a href="https://github.com/dumbmatter/backboard">a much nicer API to work with</a>, it's actually not that verbose to pull data from multiple different places.</p>
+<p>So now each season is stored separately and everything is much nicer.</p>
+<p>If you're still reading this, <a href="https://github.com/dumbmatter/basketball-gm">come on over to GitHub</a> and help make Basketball GM better!</p>

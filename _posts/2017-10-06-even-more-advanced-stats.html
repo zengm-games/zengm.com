@@ -1,0 +1,36 @@
+---
+layout: post
+status: publish
+published: true
+title: Even more advanced stats!
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 543
+wordpress_url: https://basketball-gm.com/?p=543
+date: '2017-10-06 13:05:25 -0400'
+date_gmt: '2017-10-06 17:05:25 -0400'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- New Feature
+- Stats
+- Advanced Stats
+comments: []
+---
+<p>Earlier this week I <a href="https://basketball-gm.com/blog/2017/10/you-guys-like-stats-right/">added a bunch of advanced stats to Basketball GM</a>. Well, now there's even more.</p>
+<p><b>Team Advanced Stats</b>: Go to Team Stats and switch from Team to Advanced to view stats like Pythagorean wins and losses and offensive and defensive ratings. <a href="https://www.basketball-reference.com/about/glossary.html">Basketball-Reference.com has a good glossary of terms</a> if you don't know what some of the stats are.</p>
+<p><b>Player Win Shares and Ratings</b>: Player pages and the Player Stats page now show <a href="https://www.basketball-reference.com/about/ratings.html">offensive and defensive ratings</a> along with <a href="https://www.basketball-reference.com/about/ws.html">offensive win shares, defensive win shares, win shares, and win shares per 48 minutes</a>.</p>
+<p>Offensive rating is a metric of offensive performance, although you should probably also look at usage rate when evaluating it, otherwise you might think a low usage player like DeAndre Jordan is an offensive star. Defensive rating is a metric of defensive performance, although it has trouble assigning credit to individual players so it is inaccurate for good defenders on bad defensive teams and bad defenders on good defensive teams.</p>
+<p>Win shares (WS) is a holistic stat that aims to condense a player's performance into one number, similar to PER. OWS is the offensive part, DWS is the defensive part, and WS/48 is win shares scaled per 48 minutes played, and a WS/48 of 0.100 is average.</p>
+<p>However it is generally better than PER because PER is really stupid in some scenarios, such as high volume inefficient scorers. Check out this guy:</p>
+<p><a href="/files/per-ws-example.png"><img src="/files/per-ws-example.png" style="width: 100%"></a></p>
+<p>He's an inefficient volume scorer. PER thinks he's a star, but WS thinks he's just a little above average. WS seems more correct to me.</p>
+<p>This presents an interesting opportunity for Basketball GM players! AI logic is heavily based on PER, but WS is often better than PER. Until I improve the AI, you can easily get a leg up by looking at players who are rated differently by PER and WS.</p>
+<p>WS is not perfect though. The main problem is the same thing I mentioned about defensive rating: it will underrate good defenders on bad defensive teams, and it will overrate bad defenders on good defensive teams. So be careful or you might wind up signing the next Enes Kanter to a max contract!</p>

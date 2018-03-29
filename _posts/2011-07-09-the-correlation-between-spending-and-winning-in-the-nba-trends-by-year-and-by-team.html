@@ -1,0 +1,329 @@
+---
+layout: post
+status: publish
+published: true
+title: 'The correlation between spending and winning in the NBA: trends by year and
+  by team'
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 7
+wordpress_url: http://basketball-gm.com/blog/?p=7
+date: '2011-07-09 10:01:18 -0400'
+date_gmt: '2011-07-09 10:01:18 -0400'
+categories:
+- Uncategorized
+tags:
+- Non-BBGM
+- Statistics
+- NBA
+comments:
+- id: 3
+  author: Crow
+  author_email: crow@crow.com
+  author_url: ''
+  date: '2011-10-12 08:10:21 -0400'
+  date_gmt: '2011-10-12 08:10:21 -0400'
+  content: "I found and mentioned your study (today at APBRmetrics and Real GM). One
+    poster at real GM raised the idea of running the correlation of change in money
+    spent on change in winning percentage year to year. http://forums.realgm.com/boards/viewtopic.php?f=6&amp;t=1134016&amp;start=45\r\n\r\nYou
+    have all the data set up. Would you be willing to run and report that? I think
+    it would be interesting to see."
+- id: 4
+  author: Basketball GM Commissioner
+  author_email: jdscheff@gmail.com
+  author_url: ''
+  date: '2011-10-12 10:24:31 -0400'
+  date_gmt: '2011-10-12 10:24:31 -0400'
+  content: 'Crow: That&rsquo;s a very good idea. I&rsquo;d just have to change a couple
+    lines of code to do that. The problem is that I&rsquo;m traveling now and I won&rsquo;t
+    have access to my code until I&rsquo;m home. So, if you (or anyone else) checks
+    back in a couple weeks, I will have done this analysis.'
+- id: 5
+  author: Crow
+  author_email: crow@crow.com
+  author_url: ''
+  date: '2011-10-12 10:53:50 -0400'
+  date_gmt: '2011-10-12 10:53:50 -0400'
+  content: Sounds good. Thanks for the reply.
+- id: 6
+  author: Crow
+  author_email: crow@crow.com
+  author_url: ''
+  date: '2011-10-13 00:08:30 -0400'
+  date_gmt: '2011-10-13 00:08:30 -0400'
+  content: A guy at that Real GM posted a dataset. Given your situation, I took a
+    stab at running this. I posted the results there. Let me know if you&rsquo;d do
+    it differently.
+- id: 7
+  author: Erik Hausen
+  author_email: erik.r.hausen@gmail.com
+  author_url: ''
+  date: '2011-10-22 09:19:36 -0400'
+  date_gmt: '2011-10-22 09:19:36 -0400'
+  content: The R-squared seems to be quite low looking at these numbers, but I am
+    convinced the data is thrown off by rookie contracts. The only two ways I can
+    think of doing this would be by subtracting the win shares of all players under
+    rookie contracts and then doing the same calculation or estimating the contract
+    each rookie would receive today. It would be very difficult to do this estimate,
+    but you could start off by saying anyone playing as good as Joe Johnson deserves
+    a max contract.Even if you added in just the main players under rookie contracts
+    I would expect a substantial difference. OKC could have two max contracts added
+    to their salary and Chicago would have one more max contract added.
+- id: 8
+  author: Basketball GM Commissioner
+  author_email: jdscheff@gmail.com
+  author_url: http://www.basketball-gm.com/
+  date: '2011-10-22 22:24:05 -0400'
+  date_gmt: '2011-10-22 22:24:05 -0400'
+  content: "Crow: Can you link me to your analysis? I just tried it and I don&rsquo;t
+    seem to be seeing any real pattern. I could be screwing things up&hellip; but
+    it also might make sense that just looking at the differences is ignoring a lot
+    of information. A crappy team who cuts payroll can&rsquo;t really fall much further,
+    for instance.\r\n\r\nErik: The problem is that, if you does what you suggest,
+    then you&rsquo;re really addressing a different question. Teams know rookie contracts
+    are cheaper. Frugal teams stockpile them. If a team can be competitive without
+    spending tons of money by taking advantage of rookie contracts, then that is relevant
+    at least as far as the question about spending and winning goes."
+- id: 9
+  author: Crow
+  author_email: crow@crow.com
+  author_url: ''
+  date: '2011-10-29 19:19:20 -0400'
+  date_gmt: '2011-10-29 19:19:20 -0400'
+  content: "Besides the Real GM link above, I and others posted some stuff here\r\nhttp://apbr.org/metrics/viewtopic.php?f=2&amp;t=307&amp;sid=aedb1e89285dbd1fbaba46624da8ac35\r\n\r\nI
+    was brief describing my looking at the year to year differences at real GM because
+    it didn&rsquo;t end up looking correlated / important / helpful. But trends over
+    several years can be found and may be explained and worth noting. Spending picking
+    up 2 years after getting to 45 wins, etc. Spending as helpful for extending a
+    competitive window."
+- id: 10
+  author: Akshay
+  author_email: akip007@hotmail.com
+  author_url: ''
+  date: '2011-12-10 15:13:17 -0500'
+  date_gmt: '2011-12-10 15:13:17 -0500'
+  content: Hey, im doing the exact same project for my school data management class.
+    I think you did an amazing job with this webpage and research. If you don&rsquo;t
+    mind, can you send me the data you used to calculate r on the various graphs,
+    I cant seem to find it on Basketball-reference.com and am not too familiar with
+    Beautiful Soup. Please send it to akip007@hotmail.com it would help me emmensly.
+    Thank you!
+---
+<p>Money is the topic of the moment in the NBA, what with the unfortunate lockout and all. One relevant question is how much the budgets of different teams affect their abilities to win. The Lakers and Knicks, in the two biggest markets, can spend pretty much anything and still turn a profit. The Grizzlies and the Bobcats, not so much.</p>
+<p>But how does spending correlate with winning for NBA teams?</p>
+<!--more-->
+<p>There has been a <a href="http://hawkonomics.blogspot.com/2009/04/nba-payroll-and-performance-for-2008.html">fair</a> <a href="http://sabermetricresearch.blogspot.com/2009/05/why-r-squared-doesnt-tell-you-much.html">amount</a> of <a href="http://xkonk.wordpress.com/2009/09/27/i-apologize-in-advance/">discussion</a> (although it seems I am about 2 years late) on this issue. Naively, most people would probably say yes. More money means you can sign better free agents. Furthermore, having a good team already means good players will want to come play on that team, which is kind of like a positive feedback loop between money and talent. If you have money, you've signed some good players, so you have a good team, so more good players want to play for your team, etc etc etc.</p>
+<p>However, there are plenty of factors that go into winning besides how much a team spends. Luck is a huge factor, with player development, injuries, and most importantly the draft. The draft itself is especially critical because the (now expired) NBA collective bargaining agreement (CBA) mandated that rookies recieve a fixed salary for their first several years in the league. That means that <a href="http://www.shamsports.com/content/pages/data/salaries/bulls.jsp">the league's 2011 MVP made only half as much money as his veteran teammates</a>.</p>
+<p>Based on this, the general principle of the relationship between payroll and wins is: Blindly spending more money doesn't necessarily mean the team will win more, but spending less money does restrict the team's options relative to teams with larger budgets. With this in mind, you can probably guess that there is some positive relationship between payroll and wins, but that it is fairly noisy. Since there is no comprehensive summary of this data anywhere that I could find, I decided to gather the data and run a few calculations on it.</p>
+<p>First, a word on the data. There is no perfect, wonderful source of this kind of data. I scraped player salaries from <a href="http://www.basketball-reference.com/">Basketball-Reference.com</a> (which is probably the most reliable source out there) using <a href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>. Normally I'd post the script and data here, as I'm all about open source and open data, but I don't think Basketball-Reference.com appreciates people scraping their data, and I know they don't allow people to republish their data. So you'll just have to trust that I did it correctly.</p>
+<p>Also, I did try normalizing the data by the annual salary cap, as the salary cap changes every year in the NBA. However, it didn't substantially change any of the correlations, so I'm showing the raw data here as it's more straightforward that way.</p>
+<p>The first figure below shows a scatter plot of wins versus payroll for each of the 30 teams over the past 10 seasons, so there are a total of 300 data points. Results are shown both including and excluding the Knicks, as their fruitless overspending in the last decade could represent an outlier. The lines are linear regressions.</p>
+<p><!--raw--></p>
+<div class="inset">
+<img src="/files/nba_wins_payroll/nba_wins_payroll.png" width="638" height="532" />
+</div>
+<p><!--/raw--></p>
+<p>This figure shows that the Knicks were horribly managed in the 00s, which of course is no surprise. Besides that, it looks like there is a fairly noisy and weak correlation between wins and payroll. Probably about the kind of relationship you'd expect, given all the other sources of variability.</p>
+<p>I made a bunch more plots as well, available from the dropdown menus below. For the first set of images, showing the results broken down by season, results are again shown with and without the Knicks.</p>
+<p><!--raw--></p>
+<div class="inset">
+<form name="seasons" class="inset_top">
+<label>Select a season:</label></p>
+<select name="picture" onChange="document.images.nba_wins_payroll_season.src = document.seasons.picture.options[document.seasons.picture.selectedIndex].value" onKeyUp="document.images.nba_wins_payroll_season.src = document.seasons.picture.options[document.seasons.picture.selectedIndex].value">
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2011.png" selected>2011</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2010.png">2010</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2009.png">2009</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2008.png">2008</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2007.png">2007</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2006.png">2006</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2005.png">2005</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2004.png">2004</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2003.png">2003</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_2002.png">2002</option>
+</select>
+</form>
+<p><img src="/files/nba_wins_payroll/nba_wins_payroll_2011.png" name="nba_wins_payroll_season" width="638" height="532" />
+</div>
+<p><!--/raw--></p>
+<p>If you flip through all of those seasons, even including the Knicks, there is a positive correlation between wins and payroll <em>every season</em>. Yes, sometimes the correlation is small, like in 2005, but it is certainly always positive. It's not entirely unexpected that this happens to some extent, because if there is a correlation in one year there is probably a correlation in the next year, as players don't move around that quickly. But a correlation every year for a decade? When most teams probably don't have any player on their roster in 2011 that was on their roster in 2002? That's a trend.</p>
+<p>The Knicks are also interesting in this series of images. They start off well below the regression line (higher payroll, lower wins) and remain way out there for the first 9 years. But in 2011, suddenly they cut enough salary and won enough cames to move <em>above</em> the line. So this past season, they actually performed better than you would have expected, given their payroll.</p>
+<p>Another apparent trend is that, in the past few seasons, the correlation between wins and payroll is much higher than it was previously. This does fit in with the meme that stars now want to play with other stars on superteams. Or maybe it could be explained by teams getting smarter. If you have a crappy team, why would you spend lots of money on it? In the long term, it makes more sense to bottom out and rebuild cheaply with the draft. Maybe teams are figuring this out more these days. But I wouldn't read too much into this increased correlation trend, as it's a pretty small sample size. If the pattern continues for a few more seasons, that will be interesting. Of course, the new CBA might so significantly change the financial structure of the league that such comparisons may not be easy.</p>
+<p>I also looked at how the correlation looks for individual teams. You really shouldn't read too much into this, as there are only 10 data points and nearby years are likely highly correlated (<i>i.e.</i> a team's salary and skill level doesn't usually change much from year to year). However, this does give you some indication as to which teams are getting results for spending extra money.</p>
+<p><!--raw--></p>
+<div class="inset">
+<form name="teams" class="inset_top">
+<label>Select a team:</label></p>
+<select name="picture" onChange="document.images.nba_wins_payroll_team.src = document.teams.picture.options[document.teams.picture.selectedIndex].value" onKeyUp="document.images.nba_wins_payroll_team.src = document.teams.picture.options[document.teams.picture.selectedIndex].value">
+<option value="/files/nba_wins_payroll/nba_wins_payroll_ATL.png" selected>ATL</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_BOS.png">BOS</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_CHA.png">CHA</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_CHI.png">CHI</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_CLE.png">CLE</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_DAL.png">DAL</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_DEN.png">DEN</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_DET.png">DET</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_GSW.png">GSW</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_HOU.png">HOU</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_IND.png">IND</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_LAC.png">LAC</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_LAL.png">LAL</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_MEM.png">MEM</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_MIA.png">MIA</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_MIL.png">MIL</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_MIN.png">MIN</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_NJN.png">NJN</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_NOH.png">NOH</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_NYK.png">NYK</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_OKC.png">OKC</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_ORL.png">ORL</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_PHI.png">PHI</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_PHO.png">PHO</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_POR.png">POR</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_SAC.png">SAC</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_SAS.png">SAS</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_TOR.png">TOR</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_UTA.png">UTA</option>
+<option value="/files/nba_wins_payroll/nba_wins_payroll_WAS.png">WAS</option>
+</select>
+</form>
+<p><img src="/files/nba_wins_payroll/nba_wins_payroll_ATL.png" name="nba_wins_payroll_team" width="638" height="532" />
+</div>
+<p><!--/raw--></p>
+<p>With Boston, you can see pretty clearly where they got the Big 3, which was when their payroll shot up. Atlanta and Cleveland improved as they added payroll, largely due to improvement in their homegrown talent as they added salary to become contenders. Although, this seems almost tautological. Wouldn't teams always only add payroll when they are on the verge of contending?</p>
+<p>Turns out, no. Several teams have the opposite pattern. The Pistons won a title (and had several good playoff runs) with relatively low payrolls, but their decrease in performance in recent years was not matched by a reduction in payroll. Instead, they signed several expensive free agents who didn't work out. New York and Oklahoma City have the largest negative correlations between winning and spending. For the Knicks, this is because of their incredibly expensive yet abysmal teams of the mid 00s. For the Thunder, it's because their current excellent team is built around cheap rookie contracts for their stars.</p>
+<p>There are also several teams who seem to have absolutely no relationship between how much they spend and how much they win. Sacramento's payroll has been surprisingly constant over the past decade, but they have been near the top and bottom of the league in wins. Maybe this is part of the reason they are struggling financially?</p>
+<p>So, in conclusion, there is a clear and unquestionable positive correlation between spending and winning in the NBA. However, the correlation isn't <em>that</em> strong, and there are plenty of outliers every year (not just the Knicks). Furthermore, it seems like the correlation may be increasing in recent years, but there isn't really enough data to be sure.</p>
+<h3>Update: July 11, 2011</h3>
+<p>As a bonus, semi-unrelated conclusion... I <a href="http://www.reddit.com/r/nba/comments/ilkxi/the_correlation_between_spending_and_winning_in/">submitted this article to reddit</a> and got a fair number of visitors. By checking my server access logs, I can see which teams were viewed most from the second drop down menu, which I guess is a marginally interesting indicator of which teams people care about.</p>
+<div style="margin-bottom: 1em;">
+<table>
+<tr style="align: left;">
+<th></th>
+<th></th>
+<th>Hits</th>
+<th style="padding-left: 4em;"></th>
+<th></th>
+<th>Hits</th>
+<th style="padding-left: 4em;"></th>
+<th></th>
+<th>Hits</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>ATL</td>
+<td>937</td>
+<td style="padding-left: 4em;">11.</td>
+<td>HOU</td>
+<td>29</td>
+<td style="padding-left: 4em;">21.</td>
+<td>MIL</td>
+<td>21</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>BOS</td>
+<td>105</td>
+<td style="padding-left: 4em;">12.</td>
+<td>OKC</td>
+<td>28</td>
+<td style="padding-left: 4em;">22.</td>
+<td>ORL</td>
+<td>21</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>LAL</td>
+<td>88</td>
+<td style="padding-left: 4em;">13.</td>
+<td>TOR</td>
+<td>26</td>
+<td style="padding-left: 4em;">23.</td>
+<td>DEN</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>CHI</td>
+<td>61</td>
+<td style="padding-left: 4em;">14.</td>
+<td>UTA</td>
+<td>25</td>
+<td style="padding-left: 4em;">24.</td>
+<td>NOH</td>
+<td>20</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>DAL</td>
+<td>47</td>
+<td style="padding-left: 4em;">15.</td>
+<td>GSW</td>
+<td>24</td>
+<td style="padding-left: 4em;">25.</td>
+<td>MIN</td>
+<td>19</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>NYK</td>
+<td>47</td>
+<td style="padding-left: 4em;">16.</td>
+<td>SAC</td>
+<td>24</td>
+<td style="padding-left: 4em;">26.</td>
+<td>NJN</td>
+<td>17</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>MIA</td>
+<td>46</td>
+<td style="padding-left: 4em;">17.</td>
+<td>SAS</td>
+<td>24</td>
+<td style="padding-left: 4em;">27.</td>
+<td>POR</td>
+<td>17</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>CLE</td>
+<td>35</td>
+<td style="padding-left: 4em;">18.</td>
+<td>WAS</td>
+<td>23</td>
+<td style="padding-left: 4em;">28.</td>
+<td>PHI</td>
+<td>16</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>CHA</td>
+<td>33</td>
+<td style="padding-left: 4em;">19.</td>
+<td>DET</td>
+<td>22</td>
+<td style="padding-left: 4em;">29.</td>
+<td>PHO</td>
+<td>16</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>LAC</td>
+<td>30</td>
+<td style="padding-left: 4em;">20.</td>
+<td>MEM</td>
+<td>22</td>
+<td style="padding-left: 4em;">30.</td>
+<td>IND</td>
+<td>15</td>
+</tr>
+</table>
+</div>
+<p>Atlanta is a control, as it is the default image so it was loaded for everyone. After that is Boston: a popular team, good position in the alphabetical listing, and specifically mentioned in the text. I also mentioned Cleveland, Detroit, New York, and Oklahoma City as having interesting graphs, but only New York has a particularly high view count, along with all the other popular teams from big cities. So it seems that people cared less about my insightful commentary and more about what their favorite team's graph looks like.</p>

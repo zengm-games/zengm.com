@@ -1,0 +1,99 @@
+---
+layout: post
+status: publish
+published: true
+title: New Improved Trade AI
+author:
+  display_name: Basketball GM Commissioner
+  login: dumbmatter
+  email: jdscheff@gmail.com
+  url: http://basketball-gm.com/
+author_login: dumbmatter
+author_email: jdscheff@gmail.com
+author_url: http://basketball-gm.com/
+wordpress_id: 115
+wordpress_url: http://basketball-gm.com/?p=115
+date: '2014-02-15 12:52:05 -0500'
+date_gmt: '2014-02-15 17:52:05 -0500'
+categories:
+- Uncategorized
+tags:
+- BBGM
+- AI
+- Trades
+comments:
+- id: 2273
+  author: Aaron
+  author_email: ajrozental@gmail.com
+  author_url: ''
+  date: '2014-02-15 19:52:55 -0500'
+  date_gmt: '2014-02-16 00:52:55 -0500'
+  content: AI for trades still isn't working. Whenever I click 'what will make this
+    deal work' or use the trade block the game crashes.
+- id: 2274
+  author: Basketball GM Commissioner
+  author_email: jdscheff@gmail.com
+  author_url: http://basketball-gm.com/
+  date: '2014-02-15 20:27:31 -0500'
+  date_gmt: '2014-02-16 01:27:31 -0500'
+  content: 'Aaron: That bug also existed previously (when you play a league for enough
+    seasons, eventually that stuff stops working), but the recent updates might have
+    made it worse. I''ll have to look into it more closely. Sorry for the trouble!'
+- id: 2295
+  author: Aaron
+  author_email: ajrozental@gmail.com
+  author_url: ''
+  date: '2014-02-16 07:44:04 -0500'
+  date_gmt: '2014-02-16 12:44:04 -0500'
+  content: No worries! Love the game, just trying to help out.
+- id: 2376
+  author: Basketball GM Commissioner
+  author_email: jdscheff@gmail.com
+  author_url: http://basketball-gm.com/
+  date: '2014-02-17 21:48:18 -0500'
+  date_gmt: '2014-02-18 02:48:18 -0500'
+  content: Just so you know, I fixed this bug yesterday. The trading block should
+    be about as fast as it was previously (possibly a little faster).
+- id: 80991
+  author: nick
+  author_email: desouzanic@gmail.com
+  author_url: ''
+  date: '2016-04-05 13:37:00 -0400'
+  date_gmt: '2016-04-05 17:37:00 -0400'
+  content: so this new "improved" trading system wont let me trade 15 second round
+    draft picks and 2 first round draft picks for a future 1st round pick. JUST ONE.
+    This is so unrealistic, 2nd round picks are utterly useless now. There is no good
+    deal you can get in a trade. Even if i don't include the 2 1st round picks, they
+    only offer 1 2nd round pick for my 15. HOW IS THAT FAIR. now im stuck with all
+    these second round picks which are usless (because instead of making the prospects
+    better in the second round to make the picks worth something) you decided to make
+    it impossible to trade draft picks for a good deal. You find me one GM in the
+    history of the NBA who would decline to trade ONE first round pick for FIFTEEN
+    2nd round picks and TWO FIRST ROUND picks. Oh and maybe you try to make the playoffs
+    a little more realistic too by not having pretty much every eight seed beat one
+    seeds. a 40-42 team just beat a 70-12 team 4-0 in the playoffs. No injuries. You
+    have now broken your game and made it utterly impossible to make good trades,
+    even realistic blockbusters. And hey maybe you just increase the salary cap since
+    the NBA actually did that. There were so many areas that needed fixing and trading
+    was not one of them. The whole waiting for 15 days to trade a new player and not
+    being able to trade expiring contracts is completely okay, same with the new contract
+    negotiation. Before it was impossible to make a deal other than what they wanted
+    but now it is a lot better. Those things are good but you have made trading way
+    to difficult.
+---
+<p>The trade AI in Basketball GM has never been <i>that</i> bad, but people still found ways to exploit it. As I fixed those exploits, the code grew and grew and grew to the point where it was too confusing to manage.</p>
+<p>So I ripped it all out and started over. Now, there is a new and (hopefully) improved trade AI. It was always decent at valuing current player production (that's easy, just look at the stats), but my main goal here was to improve how it valued other things. Like draft picks, overvalued/undervalued contracts, injured players, etc.</p>
+<!--more-->
+<p>Specifically, I tried to fix all of the following loopholes:</p>
+<ul>
+<li>You used to be able to trade away expired contracts after the season ended but before re-signing players. That is no longer allowed.</li>
+<li>You used to be able to acquire a player and then immediately trade him, which could be exploited by repeatedly signing free agents and trading them away for draft picks. This has been fixed by requiring 15 games to elapse before you can trade a player who was just signed or traded.</li>
+<li>You used to be able to easily poach undervalued assets from AI teams, mainly far future first round picks and rookies without much playing time. This has been fixed by more appropriately valuing those assets in the AI.</li>
+<li>You used to be able to dump big contracts on pretty much any team with cap space. This has been fixed by making all AI teams much more reluctant to take on bad contracts. So, more realistically, you'll have to include other assets like draft picks and young players if you want to get out of a bad contract.</li>
+<li>You used to be able to easily trade away big contracts during free agency, before other teams filled up their cap space with free agents. This has been fixed by making teams more reluctant to use up their cap space in a trade during free agency.</li>
+<li>You used to be able to steal picks from the AI in good drafts and sell picks to the AI in bad drafts, since the AI treated every draft the same. Now, the AI looks at the draft prospects available and sees if it is a strong draft or not, which impacts how they value draft picks in different years.</li>
+<li>You used to be able to dump your bad long contracts on AI teams in return for bad short contracts, and steal good long contracts in return for good short contracts, but now the AI factors in contract length.</li>
+<li>You used to be able to trade away players with serious injuries without the AI noticing, but now the AI looks at injured players less favorably than healthy players.</li>
+</ul>
+<p>However, with something this complicated, I undoubtedly made some mistakes. Either by not sufficiently fixing the loopholes listed above or by introducing new loopholes.</p>
+<p>So please, if you notice any weirdness about the trade AI, let me know in a comment here or on <a href="http://www.reddit.com/r/BasketballGM/comments/1xztme/new_improved_trade_ai_tons_of_loopholes_fixed_but/">Reddit</a>.</p>
