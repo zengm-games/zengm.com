@@ -1,6 +1,10 @@
 excerpt_separator: <!--more-->
 permalink: /blog/:year/:month/:title/
 
+tag_page_layout: tag-index
+tag_page_dir: blog/tag
+tag_permalink_style: pretty
+
 # This stuff is just used by jekyll-seo-tag
 title: Basketball GM
 description: >-

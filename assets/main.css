@@ -69,11 +69,12 @@ h2 a:hover {
   color: #333;
 }
 
-div#like_buttons {
-  padding: 17px 0 26px 0;
+.like-buttons {
+  padding: 20px 0 30px 0;
 }
-.like_button {
+.like-button {
   float: left;
+  margin-right: 10px;
 }
 
 blockquote p {

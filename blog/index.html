@@ -19,18 +19,8 @@ categories: []
 tags: []
 comments: []
 ---
-
 {%- include blog-teaser.html -%}
 
 {%- for post in site.posts -%}
-  <div class="post">
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-    <p>{{ post.date | date: "%B %-d, %Y" }} - <?php the_tags('', ', ') ?></p>
-
-    {{ post.excerpt }}
-
-    {%- if post.excerpt != post.content -%}
-      <p><a href="{{ post.url | relative_url }}">Read more...</a></p>
-    {%- endif -%}
-  </div>
+  {%- include post.html post=post -%}
 {%- endfor -%}

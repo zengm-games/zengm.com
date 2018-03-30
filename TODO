@@ -1,12 +1,10 @@
 after totally done, delete local database dumbmatter_bbgm
 
-raw - find any references, triage
-- If you are using a language that contains curly braces, you will likely need to place {% raw %} and {% endraw %} tags around your code.
+blog posts
+- make post-header with same values from post include and post layout
 
-tags
-- index pages
-- tag lists on posts and index
-- https://github.com/pattex/jekyll-tagging
+<!--raw--> - find any references, triage
+- If you are using a language that contains curly braces, you will likely need to place {% raw %} and {% endraw %} tags around your code.
 
 pagination
 - tag index pages
@@ -18,12 +16,14 @@ any php references
 
 view source - fix anything in head, etc
 
-comments
-
 clean up front matter
 
-git
+remove BBGM tag, redundant
 
 rss
+- can add per tag https://github.com/pattex/jekyll-tagging see tag_feed_layout
 
 embed reddit comments?
+- show number of comments in post header?
+
+ads.txt

@@ -1,0 +1,8 @@
+<h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+<p>{{ post.date | date: "%B %-d, %Y" }} - {{ post | tags }}</p>
+
+{{ post.excerpt }}
+
+{%- if post.excerpt != post.content -%}
+<p><a href="{{ post.url | relative_url }}">Read more...</a></p>
+{%- endif -%}

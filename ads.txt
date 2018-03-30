@@ -1,0 +1,49 @@
+#Ads.txt file for Basketball-GM.com
+
+#AdSense
+google.com, pub-4363509763909140, DIRECT, f08c47fec0942fa0
+
+#AppNexus
+appnexus.com, 9247, DIRECT
+
+#Conversant
+conversantmedia.com, 33096, DIRECT, 03113cd04947736d
+appnexus.com, 4052, RESELLER
+
+#DistrictM
+districtm.io, 101247, DIRECT
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
+
+#Index
+indexexchange.com, 183743, DIRECT
+
+#PulsePoint
+contextweb.com, 558539, DIRECT
+
+#Sovrn
+sovrn.com, 258411, DIRECT, fafdf38b16bf6b2b
+lijit.com, 258411, DIRECT, fafdf38b16bf6b2b
+gumgum.com, 11645, RESELLER, ffdef49475d318a9
+openx.com, 537120960, RESELLER
+openx.com, 83499, RESELLER
+openx.com, 538959099, RESELLER
+pubmatic.com, 137711, RESELLER
+pubmatic.com, 156212, RESELLER
+pubmatic.com, 62483, RESELLER
+
+# Next Millennium
+nextmillennium.io, 6027, DIRECT
+liqwid.com, 2147483484, DIRECT, 26d4db6b04ea5182
+advertising.com, 22153, RESELLER
+adtech.com, 10861, RESELLER
+aolcloud.net, 10861, RESELLER
+openx.com, 537106719, RESELLER, 6a698e2ec38604c6
+contextweb.com, 561481, RESELLER
+indexexchange.com, 183071, RESELLER
+google.com, pub-7269238500499280, RESELLER, f08c47fec0942fa0
+c.amazon-adsystem.com, 3352, RESELLER, #banner
+districtm.io, 101200, DIRECT
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+appnexus.com, 7944, RESELLER, f5ab79cb980f11d1
+gumgum.com, 13165, DIRECT, ffdef49475d318a9

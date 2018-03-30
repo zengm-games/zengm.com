@@ -4,17 +4,27 @@ base_title: Basketball GM Blog
 ---
 {%- include blog-teaser.html -%}
 
-<h2><a href="{{ page.url | relative_url }}" rel="bookmark">{{ page.title | escape }}</a></h2>
+<h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+<p>{{ page.date | date: "%B %-d, %Y" }} - {{ page | tags }}</p>
 
+{{ content }}
 
-  <header class="post-header">
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-    {{ content }}
+<div class="like-buttons">
+  <div class="like-button">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-like" data-href="<?php urlencode(the_permalink()) ?>" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+  </div>
+  <div class="like-button">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php urlencode(the_permalink()) ?>" data-text="<?php urlencode(the_title()); ?>" data-count="horizontal">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>  
+  </div>
+  <div class="like-button">
+    <script type="text/javascript" src="//www.reddit.com/static/button/button1.js"></script>
+  </div>
+</div>
