@@ -1,31 +1,14 @@
 ---
 layout: post
-status: publish
-published: true
 title: Basketball GM 4.0 technical details - caching, Shared Workers, IndexedDB/Promise
   interactions, Safari being a tease, McDonald's, and more
-author:
-  display_name: Basketball GM Commissioner
-  login: dumbmatter
-  email: jdscheff@gmail.com
-  url: http://basketball-gm.com/
-author_login: dumbmatter
-author_email: jdscheff@gmail.com
-author_url: http://basketball-gm.com/
-wordpress_id: 489
-wordpress_url: https://basketball-gm.com/?p=489
-date: '2017-04-02 19:27:11 -0400'
-date_gmt: '2017-04-02 23:27:11 -0400'
-categories:
-- Uncategorized
+date: 2017-04-02
 tags:
-- BBGM
 - Technical
 - Performance
 - New Feature
 - Project Iverson
 - Safari
-comments: []
 ---
 <p>Google made me do it.</p>
 <p>Basketball GM has always allowed you to open up the same league in multiple tabs, so you can easily view multiple different screens. This was originally implemented by running the entire game in each tab. Game data was always saved to disk via <a href="https://en.wikipedia.org/wiki/Indexed_Database_API">IndexedDB</a>. And when an action resulted in a change to the data (such as playing a game, signing a contract, trading a player, etc), then a signal was sent to all other tabs telling them to update their data. This was kind of a crude approach, but it worked.</p>

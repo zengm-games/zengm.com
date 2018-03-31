@@ -2,14 +2,13 @@ after totally done, delete local database dumbmatter_bbgm
 
 pagination
 - tag index pages - no easy way to do it
+- https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md
 
 confirm quantcast/GA in prod build
 
 view source - fix anything in head, etc
 
-clean up front matter
-
-remove BBGM tag, redundant
+comments - render? delete?
 
 rss
 - can add per tag https://github.com/pattex/jekyll-tagging see tag_feed_layout
