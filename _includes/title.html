@@ -1,7 +1,7 @@
 {%- assign base_title = page.base_title | default: layout.base_title -%}
 
 {%- if page.title -%}
-    <title>{{ page.title }} &laquo; {{ base_title }}</title>
+  <title>{{ page.title }} &laquo; {{ base_title }}</title>
 {%- else -%}
-    <title>{{ base_title }}</title>
+  <title>{{ base_title }}</title>
 {%- endif -%}

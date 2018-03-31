@@ -1,8 +1,7 @@
-<h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-<p>{{ post.date | date: "%B %-d, %Y" }} - {{ post | tags }}</p>
+{%- include post-header.html post=include.post -%}
 
-{{ post.excerpt }}
+{{ include.post.excerpt }}
 
-{%- if post.excerpt != post.content -%}
-<p><a href="{{ post.url | relative_url }}">Read more...</a></p>
+{%- if include.post.excerpt != include.post.content -%}
+  <p><a href="{{ include.post.url | relative_url }}">Read more...</a></p>
 {%- endif -%}

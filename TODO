@@ -1,8 +1,5 @@
 after totally done, delete local database dumbmatter_bbgm
 
-blog posts
-- make post-header with same values from post include and post layout
-
 <!--raw--> - find any references, triage
 - If you are using a language that contains curly braces, you will likely need to place {% raw %} and {% endraw %} tags around your code.
 

@@ -4,8 +4,7 @@ base_title: Basketball GM Blog
 ---
 {%- include blog-teaser.html -%}
 
-<h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
-<p>{{ page.date | date: "%B %-d, %Y" }} - {{ page | tags }}</p>
+{%- include post-header.html post=page -%}
 
 {{ content }}
 
