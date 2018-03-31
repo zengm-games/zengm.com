@@ -70,7 +70,8 @@ h2 a:hover {
 }
 
 .like-buttons {
-  padding: 20px 0 30px 0;
+  height: 18px;
+  margin: 20px 0 10px 0;
 }
 .like-button {
   float: left;
