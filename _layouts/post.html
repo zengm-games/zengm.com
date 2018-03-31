@@ -8,6 +8,8 @@ base_title: Basketball GM Blog
 
 {{ content }}
 
+{% assign escaped_url = page.url | absolute_url | url_escape %}
+
 <div class="like-buttons">
   <div class="like-button">
     <div id="fb-root"></div>
@@ -18,10 +20,10 @@ base_title: Basketball GM Blog
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-like" data-href="<?php urlencode(the_permalink()) ?>" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+    <div class="fb-like" data-href="{{ escaped_url }}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
   </div>
   <div class="like-button">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php urlencode(the_permalink()) ?>" data-text="<?php urlencode(the_title()); ?>" data-count="horizontal">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>  
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ escaped_url }}" data-text="{{ page.title | xml_escape }}" data-count="horizontal">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
   </div>
   <div class="like-button">
     <script type="text/javascript" src="//www.reddit.com/static/button/button1.js"></script>

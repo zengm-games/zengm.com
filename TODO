@@ -6,8 +6,6 @@ pagination
 
 confirm quantcast/GA in prod build
 
-any php references
-
 view source - fix anything in head, etc
 
 clean up front matter
@@ -17,7 +15,11 @@ remove BBGM tag, redundant
 rss
 - can add per tag https://github.com/pattex/jekyll-tagging see tag_feed_layout
 
-embed reddit comments?
-- show number of comments in post header?
+nice quotes/dashes
 
-ads.txt
+after deploy
+- confirm social share buttons work
+
+somewhere save commands
+  bundle exec jekyll server
+  JEKYLL_ENV=production bundle exec jekyll build
