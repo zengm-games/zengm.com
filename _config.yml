@@ -3,6 +3,11 @@ url: https://basketball-gm.com
 excerpt_separator: <!--more-->
 permalink: /blog/:year/:month/:title/
 
+pagination:
+  enabled: true
+  permalink: /page/:num/
+  sort_reverse: true
+
 tag_page_layout: tag-index
 tag_page_dir: blog/tag
 tag_permalink_style: pretty
@@ -25,5 +30,3 @@ social:
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
