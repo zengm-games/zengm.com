@@ -8,8 +8,6 @@ confirm quantcast/GA in prod build
 
 view source - fix anything in head, etc
 
-comments - render? delete?
-
 rss
 - can add per tag https://github.com/pattex/jekyll-tagging see tag_feed_layout
 
