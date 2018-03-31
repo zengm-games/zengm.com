@@ -7,6 +7,9 @@ pagination:
   enabled: true
   permalink: /page/:num/
   sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
 tag_page_layout: tag-index
 tag_page_dir: blog/tag

@@ -9,19 +9,25 @@ pagination:
   {%- include post.html post=post -%}
 {%- endfor -%}
 
+
 {% if paginator.total_pages > 1 %}
-  <p>
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Newer Posts</a>
-    {% endif %}
+  <div style="text-align: center">
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo;</a></li>
+      {% endif %}
 
+      {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li {% if page.url == trail.path %}class="active"{% endif %}>
+            <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
 
-    {% if paginator.previous_page and paginator.next_page %}
-      &#8212;
-    {% endif %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older Posts &raquo;</a>
-    {% endif %}
-  </p>
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
 {% endif %}
