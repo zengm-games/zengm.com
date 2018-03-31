@@ -15,6 +15,10 @@ tag_page_layout: tag-index
 tag_page_dir: blog/tag
 tag_permalink_style: pretty
 
+author: Basketball GM Commissioner
+feed:
+  path: feed/index.xml
+
 # This stuff is just used by jekyll-seo-tag
 title: Basketball GM
 description: >-

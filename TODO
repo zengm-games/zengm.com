@@ -4,9 +4,6 @@ pagination
 - tag index pages - no easy way to do it
 - https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md
 
-rss
-- can add per tag https://github.com/pattex/jekyll-tagging see tag_feed_layout
-
 after deploy
 - confirm social share buttons work
 
