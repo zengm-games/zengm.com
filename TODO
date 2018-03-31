@@ -1,8 +1,5 @@
 after totally done, delete local database dumbmatter_bbgm
 
-<!--raw--> - find any references, triage
-- If you are using a language that contains curly braces, you will likely need to place {% raw %} and {% endraw %} tags around your code.
-
 pagination
 - tag index pages
 - main blog list
