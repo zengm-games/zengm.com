@@ -12,7 +12,7 @@ pagination:
     after: 2
 
 tag_page_layout: tag-index
-tag_page_dir: blog/tag
+tag_page_dir: /blog/tag/
 tag_permalink_style: pretty
 
 author: Basketball GM Commissioner
