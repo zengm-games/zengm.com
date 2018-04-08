@@ -47,3 +47,6 @@ districtm.io, 101200, DIRECT
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
 appnexus.com, 7944, RESELLER, f5ab79cb980f11d1
 gumgum.com, 13165, DIRECT, ffdef49475d318a9
+
+#Optimal AdExchange
+google.com, pub-7467267503911708, DIRECT, f08c47fec0942fa0

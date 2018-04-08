@@ -15,7 +15,8 @@ title: Teams Customization
       "region": "Atlanta",
       "name": "Herons",
       "abbrev": "ATL",
-      "pop": 5.4
+      "pop": 5.4,
+      "stadiumCapacity": 25000
     },
     ...
   ]
@@ -30,6 +31,7 @@ title: Teams Customization
 <li>"name": team name</li>
 <li>"abbrev": team abbreviation, typically 3 upper case letters like ATL for Atlanta</li>
 <li>"pop": population of the region, in millions of people</li>
+<li>"stadiumCapacity": number of people who fit in the team's stadium (default 25000) - weird things might happen financially if you start tweaking this</li>
 <li>"imgURL": URL for a 120x120 image to be displayed on the roster page for a team (optional)</li>
 </ul>
 <p>It is also possible to specify much more information, including results from past seasons and team statistics. To see how those are defined, look at an exported League File from one of your leagues. One caveat: population changes over time, so if you have multiple seasons in each team object, "pop" is specified for each season separately. In that case, you shouldn't include it in the root of the team object like shown above.</p>
