@@ -1,5 +1,3 @@
-#Ads.txt file for Basketball-GM.com
-
 #AdSense
 google.com, pub-4363509763909140, DIRECT, f08c47fec0942fa0
 
@@ -50,3 +48,10 @@ gumgum.com, 13165, DIRECT, ffdef49475d318a9
 
 #Optimal AdExchange
 google.com, pub-7467267503911708, DIRECT, f08c47fec0942fa0
+
+#Oath/AOL
+adtech.com, 10394, DIRECT
+aolcloud.net, 10394, DIRECT
+
+#OpenX
+openx.com, 539660552 , DIRECT, 6a698e2ec38604c6
