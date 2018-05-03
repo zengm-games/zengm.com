@@ -16,6 +16,8 @@ Well now Basketball GM has family relationships! Players can be brothers, father
 
 Currently I have it set that each newly generated player has a 2% chance of being the son of a former player and a 2% chance of being the brother of another player. This seems to work pretty well. It's probably higher than reality, but who care about reality? This is a video game. And you can always change both of these rates in God Mode. Increase them to 100% and things get pretty crazy.
 
-Another unrealistic thing: a father's first son will always have the same first name. So Bob Smith has a son, his name becomes Bob Smith Sr. and his son is Bob Smith Jr. Bob Smith Sr. can have other sons, but the first is always Jr. This is even more fun when you think about future generations. Check back in a few centures and you might see Bob Smith XII!
+Another unrealistic thing: a father's first son will always have the same first name. So Bob Smith has a son, his name becomes Bob Smith Sr. and his son is Bob Smith Jr. Bob Smith Sr. can have other sons, but the first is always Jr. This makes it easier to notice families, and lets names carry on for generations.
 
-Combine that with the name generation system, and it is technically possible that you will see a player named King Louis XIV :)
+Yet another unrealistic thing: when the game picks who the father is, it is biased to be more likely to pick players who have fathers. This makes it more likely to have very long lineages. Check back in a few centures and you might see Bob Smith XII!
+
+Combine this with the name generation system, and it is technically possible that you will see a player named King Louis XIV :)
