@@ -19,6 +19,8 @@ author: Basketball GM Commissioner
 feed:
   path: feed/index.xml
 
+future: true
+
 # This stuff is just used by jekyll-seo-tag
 title: Basketball GM
 description: >-
