@@ -492,6 +492,7 @@ triplelift.com, 5579, DIRECT, 6c33edb13117fd86
 
 #Optimal AdExchange
 google.com, pub-7467267503911708, DIRECT, f08c47fec0942fa0
+google.com, pub-6254331789601537, DIRECT, f08c47fec0942fa0
 
 #AdSense
 google.com, pub-4363509763909140, DIRECT, f08c47fec0942fa0
