@@ -532,3 +532,10 @@ aolcloud.net, 10394, DIRECT
 
 #OpenX
 openx.com, 539660552 , DIRECT, 6a698e2ec38604c6
+
+#OpenX
+openx.com, 540156784, DIRECT, 6a698e2ec38604c6
+
+#AOL
+adtech.com, 11455, DIRECT
+aolcloud.net, 11455, DIRECT
