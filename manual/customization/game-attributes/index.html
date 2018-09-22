@@ -41,8 +41,8 @@ title: Game Attributes Customization
             "value": 2015
         },
         {
-            "key": "numPlayoffRounds",
-            "value": 4
+            "key": "numGamesPlayoffSeries",
+            "value": [7, 7, 7, 7]
         },
         {
             "key": "confs",
@@ -81,7 +81,7 @@ title: Game Attributes Customization
 <p>So by setting the phase, you can pick when your game starts. So if you want to create a League File that starts with the draft, you can do it!</p>
 <p><code>daysLeft</code> only has an effect if you set your phase to 8 (free agency). It defines the number of days left before the preseason starts.</p>
 <p>The values in <code>ownerMood</code> define how the owner feels about you. Positive numbers are good (max for each is 1), negative numbers are bad. If the sum ever drops below -1, you are fired.</p>
-<p><code>numPlayoffRounds</code> sets the number of playoff rounds, which also determines the number of playoff teams (2<sup>numPlayoffRounds</sup>). The default is 4 rounds and 16 teams. If you set this so high that you have more playoff spots than teams, it won't work.</p>
+<p><code>numGamesPlayoffSeries</code> is an array containing the number of games in each round of playoffs. For instance, if you want the old NBA style of a 4 round playoff where the first round is 5 games, set it to <code>[5, 7, 7, 7]</code>. This setting also determines the number of playoff teams, 2<sup>number of rounds</sup>. The default is 4 rounds (16 teams) with 7 games each, but it will auto adjust to fewer rounds if you have fewer than 16 teams. Previously there was a setting called <code>numPlayoffRounds</code> that let you set the number of rounds - you should no longer use that setting, just use <code>numGamesPlayoffSeries</code>.</p>
 <p><a name="confs-divs"></a></p>
 <h3>Conferences and Divisions</h3>
 <p>The <code>confs</code> and <code>divs</code> properties let you change the conferences and divisions in the league. The default ones are shown above. You can have any number of conferences and divisions except 0. Things to remember:</p>
