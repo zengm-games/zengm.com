@@ -9,6 +9,8 @@ tags:
 
 When I make a small improvement to Basketball GM, it feels silly to write a whole blog post about it. But if I don't, some people will never realize what happened. So maybe this is a good idea: a single blog post explaining several recent small improvements.
 
+<!--more-->
+
 **Fixed potential for future draft prospects.** Several people, including myself, had noticed that future draft prospects had unrealistically high potential ratings. I thought I knew why and it would be annoying to fix, but I was wrong. TheZAndMan over on [Discord](https://discord.gg/caPFuM9) noticed that the actual problem was that it was calculating the potential of the future rookie season based on a prospect's current age, not the age he will be when he is a rookie. This was still a little annoying to fix, but it's fixed.
 
 **You can no longer make tons of money with crazy expensive tickets.** This is another one that many people had noticed in the past. If you set your ticket price very high (like a million dollars or so), you can make tons of money. The solution is obvious, make attendance decrease faster as ticket price increases. But for some reason I never got around to it until [this post on the subreddit](https://www.reddit.com/r/BasketballGM/comments/9bvt40/exploit_expensive_tickets_or_how_to_win_rings_on/) spurred me to do it.
