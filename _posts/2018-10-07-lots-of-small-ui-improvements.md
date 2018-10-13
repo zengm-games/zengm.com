@@ -19,6 +19,8 @@ Or, if you're fancy, you can swipe to open or close the menu:
 
 ![Swiping left/right to open/close the mobile BBGM menu](/files/bs4-swipe.gif)
 
+**EDIT 2018-10-12 - I got rid of swiping, it seemed to cause some rare bugs in rare circumstances that were difficult to work around. Sigh.**
+
 I am aware that swiping left/right is not the most convenient thing to do in mobile Safari because it uses that motion for navigating through your browser history. However, you can still open the BBGM menu on Safari with a swipe, just don't start it on the edge of the screen. Or just use the menu button.
 
 Another long-requested feature is some kind of "dark mode" or "night mode". [A user even made a custom stylesheet to do this](https://www.reddit.com/r/BasketballGM/comments/61jfn9/because_the_sheer_whiteness_of_this_game_hurts_my/), but since it requires installing a browser extension to use, its audience was limited.
