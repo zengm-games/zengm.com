@@ -1,0 +1,272 @@
+ul {
+  padding-left: 16px;
+}
+ol {
+  padding-left: 20px;
+}
+
+/* Keep text and footer content centered and with fixed width in large screens */
+.skinny {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Custom page footer */
+.footer-wrapper {
+  color: #ffffff;
+  background-color: #428bca;
+  padding: 0 15px;
+}
+.footer {
+  margin: 0 -15px;
+  padding: 15px 0;
+  color: #ffffff;
+  background-color: #428bca;
+}
+.footer p {
+  margin: 0 15px;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  color: #fff;
+}
+
+/* For everything but the landing page */
+
+.header {
+  text-align: center;
+}
+.header h3 {
+  margin-top: 15px;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 14px;
+}
+.header h3 a {
+  color: #777;
+}
+.header h3 a:hover {
+  color: #777;
+  text-decoration: none;
+}
+
+/* Center pills on small screen */
+.nav-pills > li {
+    float: none;
+    display: inline-block;
+}
+.nav-pills {
+    text-align:center;
+}
+
+h2 a {
+  color: #333;
+}
+h2 a:hover {
+  color: #333;
+}
+
+.like-buttons {
+  height: 18px;
+  margin: 20px 0 10px 0;
+}
+.like-button {
+  float: left;
+  margin-right: 10px;
+}
+
+blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pagination {
+  margin: 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .header .nav {
+    margin-top: 15px;
+    float: right;
+  }
+}
+
+/* Sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.above-footer {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* Just for the landing page */
+
+h1.splash-header {
+  background-color: #428bca;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.logo {
+  padding-top: 15px;
+  max-width: 360px;
+}
+
+/* Wrapper containing the lead text */
+.big {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.lead {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.carousel-inner > .item > h3 {
+  color: #b94a48;
+  font-size: 20px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* Big play button */
+.play {
+  margin: 30px 0;
+  text-align: center;
+}
+.play .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Text describing features */
+.text-wrapper {
+  background-color: #e8e8e8;
+  padding: 0 15px;
+  padding-top: 15px;
+}
+.text-wrapper p + h4 {
+  margin-top: 0;
+}
+
+/* Feedback quotes */
+.controls {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+#prev-feedback {
+  margin-left: 6px;
+}
+#feedback {
+  min-height: 80px; /* Calculated from 3 lines of text */
+}
+.feedback-text {
+  color: #333;
+}
+
+/* Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-bottom: 30px;
+  }
+  .lead {
+    font-size: 18px;
+    padding-top: 25px;
+    text-align: left;
+  }
+  .carousel-inner > .item > h3 {
+    font-size: 30px;
+  }
+  .play .btn {
+    font-size: 48px;
+  }
+  .marketing p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Laptops and desktops */
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  .logo {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .big {
+    margin-bottom: 0;
+  }
+  .lead {
+    padding-top: 0;
+  }
+}
+
+/* Big desktop screens only */
+@media screen and (min-width: 1200px) {
+  .lead {
+    font-size: 20px;
+  }
+  .carousel-inner > .item > h3 {
+    font-size: 34px;
+  }
+}
+
+/* Copied from bootstrap-theme.css */
+.btn-success, {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.btn-success:active,
+.btn-success.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-success {
+  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
+  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  background-repeat: repeat-x;
+  border-color: #3e8f3e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #419641;
+  background-position: 0 -15px;
+}
+
+.btn-success:active,
+.btn-success.active {
+  background-color: #419641;
+  border-color: #3e8f3e;
+}

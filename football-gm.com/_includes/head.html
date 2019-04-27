@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- include title.html -%}
+  {%- seo title=false -%}
+  <link rel="shortcut icon" href="//play.football-gm.com/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//play.football-gm.com/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//play.football-gm.com/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="//play.football-gm.com/ico/apple-touch-icon-57-precomposed.png">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/main.css">
+
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>

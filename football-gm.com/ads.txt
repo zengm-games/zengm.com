@@ -1,0 +1,112 @@
+#Ads.txt file for The SportsWS Network
+
+#AdExchange
+google.com, pub-6254331789601537, DIRECT, f08c47fec0942fa0
+google.com, pub-7747738933157468, DIRECT, f08c47fec0942fa0
+
+#AdSense
+google.com, pub-4363509763909140, DIRECT, f08c47fec0942fa0
+
+#AppNexus
+appnexus.com, 9247, DIRECT
+
+#Conversant
+conversantmedia.com, 33096, DIRECT, 03113cd04947736d
+appnexus.com, 4052, RESELLER
+
+#DistrictM
+districtm.io, 101247, DIRECT
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
+
+#Index
+indexexchange.com, 183743, DIRECT
+
+#PulsePoint
+contextweb.com, 558539, DIRECT
+
+#Sovrn
+sovrn.com, 258411, DIRECT, fafdf38b16bf6b2b
+lijit.com, 258411, DIRECT, fafdf38b16bf6b2b
+appnexus.com, 1360, RESELLER, f5ab79cb980f11d1
+gumgum.com, 11645, RESELLER, ffdef49475d318a9
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+openx.com, 539924617, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156700, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+
+#Oath/AOL
+adtech.com, 11455, direct
+aolcloud.net, 11455, direct
+advertising.com, 27293, DIRECT
+
+#OpenX
+openx.com, 540156784, DIRECT, 6a698e2ec38604c6
+
+#Sonobi
+sonobi.com, 75b09d94ac, DIRECT, d1a215d9eb5aee9e
+rhythmone.com, 1059622079, RESELLER, a670c89d4a324e47
+contextweb.com, 560606, RESELLER, 89ff185a4c4e857c
+
+#33 Across
+33across.com,0010b00002KcizOAAR,DIRECT,bbea06d9c4d2853c
+rubiconproject.com,16414,RESELLER,0bfd66d529a55807
+pubmatic.com,156423,RESELLER,5d62403b186f2ace
+appnexus.com,10239,RESELLER,f5ab79cb980f11d1
+openx.com,537120563,RESELLER,6a698e2ec38604c6
+rhythmone.com,2439829435,RESELLER,a670c89d4a324e47
+indexexchange.com,185506,RESELLER
+emxdgt.com,326,RESELLER,1e1d41537f7cad7f
+gumgum.com, 13318, DIRECT, ffdef49475d318a9
+
+#Saambaa
+saambaa.com, 71021020, RESELLER
+Spotxchange.com, 181067, RESELLER, 7842df1d2fe2db34
+spotx.tv, 181067, RESELLER, 7842df1d2fe2db34
+google.com, pub-6552175488733768, RESELLER, f08c47fec0942fa0
+lkqd.net, 437, RESELLER
+sovrn.com, 252623, DIRECT, fafdf38b16bf6b2b
+lijit.com, 252623, DIRECT, fafdf38b16bf6b2b
+openx.com, 537120960, RESELLER
+openx.com, 83499, RESELLER
+openx.com, 538959099, RESELLER
+pubmatic.com, 137711, RESELLER
+pubmatic.com, 156212, RESELLER
+pubmatic.com, 62483, RESELLER
+pubmatic.com, 156423, RESELLER, 5d62403b186f2ace
+contextweb.com, 558511, RESELLER
+33across.com, 0010b00001shFQpAAM, RESELLER, bbea06d9c4d2853c
+rubiconproject.com, 16414, RESELLER, 0bfd66d529a55807
+districtm.io, 101187, DIRECT
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+EMXDGT.com, 485, DIRECT, 1e1d41537f7cad7f
+Google.com, pub-5995202563537249, RESELLER, f08c47fec0942fa0
+Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
+pubmatic.com, 156917, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156918, RESELLER, 5d62403b186f2ace
+sonobi.com, 5991cfa795, RESELLER
+rhythmone.com, 1059622079, RESELLER, a670c89d4a324e47
+rhythmone.com, 2439829435, RESELLER, a670c89d4a324e47
+contextweb.com, 560606, RESELLER, 89ff185a4c4e857c
+indexexchange.com, 188146, RESELLER, 50b1c356f2c5c8fc
+indexexchange.com, 185506, RESELLER
+openx.com, 540384936, RESELLER, 6a698e2ec38604c6
+appnexus.com, 3153, RESELLER, f5ab79cb980f11d1
+google.com, pub-3805568091292313, RESELLER, f08c47fec0942fa0
+mars.media, 10625, DIRECT
+freewheel.tv, 30189, RESELLER
+freewheel.tv, 64289, RESELLER
+springserve.com, 233, RESELLER, a24eb641fc82e93d
+Advertising.com, 6814, RESELLER
+spotx.tv, 78856, RESELLER
+spotxchange.com, 78856, RESELLER
+beachfront.com, beachfront_805, RESELLER
+rubiconproject.com, 18230, RESELLER
+mediabong.com, 2657, DIRECT
+improvedigital.com, 1210, DIRECT
+resultsmedia.com, 8625, DIRECT
+improvedigital.com, 1221, RESELLER
+33across.com,0010b00002EFnxPAAT,DIRECT,bbea06d9c4d2853c
+33across.com,0010b00002FGhQQAA1,DIRECT,bbea06d9c4d2853c
