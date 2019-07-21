@@ -6,7 +6,8 @@ title: Players Customization
 <p>This is the simplest format to define players in a League File:</p>
 <pre>
 {
-  "version": 27,
+  "version": 33,
+  "startingSeason": 2019,
   "players": [
     {
       "firstName": "Andrew",
@@ -55,6 +56,31 @@ title: Players Customization
           "reb": 44
         }
       ]
+    },
+    {
+      "firstName": "Draft",
+      "lastName": "Prospect",
+      "tid": -2,
+      "ratings": [
+        {
+          "hgt": 27,
+          "stre": 34,
+          "spd": 85,
+          "jmp": 55,
+          "endu": 25,
+          "ins": 46,
+          "dnk": 42,
+          "ft": 42,
+          "fg": 54,
+          "tp": 72,
+          "oiq": 48,
+          "diq": 40,
+          "drb": 72,
+          "pss": 75,
+          "reb": 44
+        }
+      ],
+      "draft": {"year": 2020}
     }
   ]
 }
@@ -64,12 +90,11 @@ title: Players Customization
   <li>tid is the team ID number, ranging from 0 to N (usually 30) for the teams in your league. Additionally,
   <ul>
     <li>-1 is for free agents</li>
-    <li>-2 is for undrafted players the ongoing or upcoming draft</li>
+    <li>-2 is for undrafted players</li>
     <li>-3 is for retired players</li>
-    <li>-4 is for prospects in next year's draft</li>
-    <li>-5 is for prospects in the draft after that.</li>
   </ul>
-  If you specify less than 70 prospects in a draft class, random prospects will be created to reach that limit.
+  <p>If don't include a draft year, draft prospects will appear in the upcoming draft. If you want to specify multiple upcoming drafts, you need to use the <code>draft.year</code> property, like is done for Draft Prospect above. If you do this, make sure to also set <a href="/manual/customization/game-attributes/"><code>startingSeason</code></a>, otherwise your draft classes will shift when the default starting season changes each year.</p>
+  <p>If you specify less than 70 prospects in a draft class, random prospects will be created to reach that limit.</p>
   <li>In the example above, there are only two players defined. If your file doesn't include at least 10 players on each team, then bad things will happen when you try to use it. You should also include a good amount of bad/mediocre young players beyond the 10 man limit or as free agents (maybe 30-60 in total). Otherwise, you might end up running out of free agents before the free agent pool naturally fills up with undrafted prospects and unsigned players, and then bad things will happen.</li>
   <li>Ratings should be on a scale from 0 to 100 with a mean of about 50 and about half of the players between 35 and 65. Descriptions of rating categories:
   <ul>
