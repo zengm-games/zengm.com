@@ -15,11 +15,11 @@ The new achievements are:
 
 <!--more-->
 
-- Longeivity: Play 100 seasons in a single league.
+- Longevity: Play 100 seasons in a single league.
 
-- Longeivity 2: Play 1000 seasons in a single league.
+- Longevity 2: Play 1000 seasons in a single league.
 
-- Longeivity 3: Play 10000 seasons in a single league.
+- Longevity 3: Play 10000 seasons in a single league.
 
 - Clutch Finish: Win game 7 of the finals in OT.
 
