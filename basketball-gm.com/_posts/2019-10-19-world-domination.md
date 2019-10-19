@@ -16,7 +16,7 @@ First of all, there is no single definition of "country", so I'm using a fairly 
 
 Basketball GM has been played by someone in 187 of the 193 countries in the world. That's pretty good!
 
-The vast majority of users come from the USA. Canada, Australia, and the UK are well represented, probably due to their size and common language. The basketball-crazy Philippines is by far highest on the list for countries that do not have English as their official language - it lags the UK a bit in total users, but surpasses it in number of seasons simulated.
+The vast majority of users come from the USA. Canada, Australia, and the UK are well represented, probably due to their size and common language. The basketball-crazy Philippines lags the UK a bit in total users, but surpasses it in number of seasons simulated.
 
 At the other end of the list, there small numbers of users from many tiny and/or impovrished countries like Samoa, Eritrea, Guinea-Bissau, Burundi, Vanuatu, Tonga, South Sudan, etc.
 
