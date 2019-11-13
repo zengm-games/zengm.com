@@ -8,6 +8,8 @@ tags:
 - Player Ratings
 ---
 
+*Update 2019-11-13 - Everything in this blog post is now officially released! The original blog post follows:*
+
 I just updated [the beta site](https://beta.basketball-gm.com/) yet again. Most of the game simulation and stat changes were [already released there](https://old.reddit.com/r/BasketballGM/comments/dqoc8u/game_simulation_improvements_beta/), I just hadn't written a blog post about it. But now that I'm also making some minor changes to the ovr formula, I figured I should blog too.
 
 So here are all the changes in the beta:
