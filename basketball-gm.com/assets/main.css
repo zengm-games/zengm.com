@@ -152,6 +152,10 @@ h1.splash-header {
   text-align: center;
 }
 
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
 /* Big play button */
 .play {
   margin: 30px 0;
