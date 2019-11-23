@@ -1,0 +1,39 @@
+`---
+layout: page
+title: Teams Customization
+---
+<p>If you haven't already, first read <a href="/manual/customization/">the customization overview</a>.</p>
+<p>This is the simplest format to define teams in a League File:</p>
+<pre>
+{
+  "version": 33,
+  "teams": [
+    {
+      "tid": 0,
+      "cid": 0,
+      "did", 0,
+      "region": "Atlanta",
+      "name": "Herons",
+      "abbrev": "ATL",
+      "pop": 5.4,
+      "stadiumCapacity": 70000
+    },
+    ...
+  ]
+}
+</pre>
+<p>The contents of each team object is as follows. Note that imgURL is optional.</p>
+<ul>
+<li>"tid": team ID number (from 0 to N-1 so there are N teams in total, usually N is 30)</li>
+<li>"cid": conference ID number, either 0 (Eastern) or 1 (Western)</li>
+<li>"did": division ID number, from 0 to 5 for the Atlantic, Central, Southeast, Southwest, Northwest, and Pacific divisions, respectively</li>
+<li>"region": team region/city</li>
+<li>"name": team name</li>
+<li>"abbrev": team abbreviation, typically 3 upper case letters like ATL for Atlanta</li>
+<li>"pop": population of the region, in millions of people</li>
+<li>"stadiumCapacity": number of people who fit in the team's stadium (default 70000) - weird things might happen financially if you start tweaking this</li>
+<li>"imgURL": URL for a 120x120 image to be displayed on the roster page for a team (optional)</li>
+</ul>
+<p>It is also possible to specify much more information, including results from past seasons and team statistics. To see how those are defined, look at an exported League File from one of your leagues. One caveat: population changes over time, so if you have multiple seasons in each team object, "pop" is specified for each season separately. In that case, you shouldn't include it in the root of the team object like shown above.</p>
+<p>Football GM works best with 30 teams, 15 in each conference, and 5 in each division. If you have more or less teams, it will still work, but generated schedules (and maybe some other aspects of the game) will be less balanced.</p>
+<p>If you also want to change the number of conferences or divisions, <a href="/manual/customization/game-attributes/#confs-divs">read this</a>.</p>
