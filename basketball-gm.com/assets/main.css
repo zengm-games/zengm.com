@@ -274,3 +274,13 @@ h1.splash-header {
   background-color: #419641;
   border-color: #3e8f3e;
 }
+
+.skill {
+  cursor: default;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.skills-alone {
+  margin-left: -5px;
+}
