@@ -20,9 +20,7 @@ So ignore my current code. You should do it all yourself, from scratch. That's t
 A sports simulation game really just needs a few things:
 
 * A database to store all the data (teams, players, game results, etc)
-
 * Some code that interacts with the data (creating a new league, simulating games, etc)
-
 * A GUI to view the data
 
 There are a million different ways to do each of those things. Basically you need a database, a programming language, and a GUI library.
@@ -35,11 +33,17 @@ For Basketball GM, I picked:
 
 Those are definitely not the easiest choices to work with (particularly IndexedDB is a huge pain). I picked them because they work in a web browser, which makes it easy for people to play my game. But if you're a beginner, I wouldn't recommend it. Instead I would recommend:
 
-* Database: Some SQL database. SQLite is a good choice, unless you're already familiar with one.
+* Database: Some SQL database. They're all pretty similar.
 * Programming language: Literally anything is fine. Whatever you like.
 * GUI library: Same as above, anything is fine.
 
 So you can make a mobile app targeting iOS or Android. You could make a Windows or Mac or Linux desktop app. You could make a web app that runs on the server and renders the GUI in HTML. These all have advantages and disadvantages. If you're already experienced with one stack, you can pick that one. Or pick a new one to learn something new.
+
+If you are still unsure and don't know where to start, try these:
+
+* Database: SQLite, because it's the simplest to set up and use, and it works fine.
+* Programming language: Python, and if you're new to programming, [this is a good free book](https://greenteapress.com/wp/think-python-2e/)
+* GUI library: Just print some text output to the console. You can make something pretty later.
 
 Once you have your technologies selected, then start designing your database schema. It doesn't have to be perfect at this stage. You can always go back and fix it later. For team sports, you might come up with these tables:
 
