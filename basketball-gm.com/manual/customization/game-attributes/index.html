@@ -7,7 +7,7 @@ title: Game Attributes Customization
 <pre>
 {
     "version": 33,
-    "gameAttributes": {
+    "gameAttributes": [
         {
             "key": "userTid",
             "value": 15
@@ -23,9 +23,9 @@ title: Game Attributes Customization
         {
             "key": "ownerMood",
             "value": {
-                wins: 0,
-                playoffs: 0,
-                money: 0
+                "wins": 0,
+                "playoffs": 0,
+                "money": 0
             }
         },
         {
@@ -62,7 +62,7 @@ title: Game Attributes Customization
                 {"did": 5, "cid": 1, "name": "Pacific"}
             ]
         }
-    }
+    ]
 }
 </pre>
 <p><code>userTid</code> is the ID number of the team you are managing, from 0 to 30. Setting it here will make it the default for new leagues created with this League File, but users can still change it if they want.</p>
