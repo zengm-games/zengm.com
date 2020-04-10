@@ -26,7 +26,7 @@ Besides those limitations, the script worked pretty well. And since I already us
 
 However, there were many TypeScript errors with the converted types. It didn't take too long to fix them. However there were a few situations I ran into that were not very nice.
 
-1. [TypeScript is muc worse at type refinements](https://github.com/microsoft/TypeScript/issues/21732) than Flow. Code like `if (obj.hasOwnProperty(key)) { doSomething(obj[key]); }` generally works in Flow but not in TypeScript.
+1. [TypeScript is much worse at type refinements](https://github.com/microsoft/TypeScript/issues/21732) than Flow. Code like `if (obj.hasOwnProperty(key)) { doSomething(obj[key]); }` generally works in Flow but not in TypeScript.
 
 2. React support in TypeScript is quite good, but [I ran into this annoying issue](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/20544).
 
