@@ -41,7 +41,7 @@ I started with alexnoob's rosters. They are the most popular, most comprehensive
 
 2. Based on legal advice, I redacted some information from his rosters. The built-in realistic rosters do not include player pictures, team names, or team logos.
 
-3. I added a special case to the tragic deaths code so that real players are never killed. I love dark humor as much as the next guy, which is why tragic deaths are in the game in the first place. But I am not comfortable doing that to real players without their consent. If any real NBA player is reading this (ha!) and you want to experience tragic deaths in Basketball GM, [let me know](/about/) and I'll make an exception for you!
+3. I added a special case to the tragic deaths code so that real players are never killed. I love dark humor as much as the next guy, which is why tragic deaths are in the game in the first place. But I am not comfortable doing that to real players without their consent. If any real NBA player is reading this (ha!) and you want to experience tragic deaths in Basketball GM, [let me know](/contact/) and I'll make an exception for you!
 
 ### Other changes
 

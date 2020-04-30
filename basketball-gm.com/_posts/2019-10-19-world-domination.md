@@ -18,7 +18,7 @@ Basketball GM has been played by someone in 187 of the 193 countries in the worl
 
 The vast majority of users come from the USA. Canada, Australia, and the UK are well represented, probably due to their size and common language. The basketball-crazy Philippines lags the UK a bit in total users, but surpasses it in number of seasons simulated.
 
-At the other end of the list, there small numbers of users from many tiny and/or impovrished countries like Samoa, Eritrea, Guinea-Bissau, Burundi, Vanuatu, Tonga, South Sudan, etc.
+At the other end of the list, there are small numbers of users from many tiny and/or impovrished countries like Samoa, Eritrea, Guinea-Bissau, Burundi, Vanuatu, Tonga, South Sudan, etc.
 
 The six countries where Basketball GM has not yet been played are:
 
