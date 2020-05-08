@@ -73,8 +73,8 @@ Keep iterating. Refine your schema. Improve your code. Expand your GUI.
 
 Keep at it for long enough and you might wind up with something even better than Basketball GM!
 
-After reading all this, you may still feel overwhelmed. That's okay. Maybe you just need to push through that. Or maybe you need to work on some simpler projects before tackling a sports sim game. I don't know, there's no universal answer. Use your best judgment do what feels right.
+After reading all this, you may still feel overwhelmed. That's okay. Maybe you just need to push through that. Or maybe you need to work on some simpler projects before tackling a sports sim game. I don't know, there's no universal answer. Use your best judgment and do what feels right.
 
-I hope this is helpful information. If you end up trying to make your own game, please [let me know how it goes](/contact/). Feel free to ask me any questions you have too. I love to talk programming! You can also [join the BBGM Discord, which has a channel dedicated to programming](https://discord.gg/E9HUwbq).
+I hope this is helpful information. If you end up trying to make your own game, please [let me know how it goes](/contact/). Feel free to ask me any questions you have too. I love to talk programming! You can also [join the BBGM Discord, which has a channel dedicated to programming](https://discord.gg/P7z3GMf).
 
 (Also you may be interested in a bit more development information that I wrote [in an old blog post](/blog/2013/12/development-history/), and some more info [on the About page](/about/).)
