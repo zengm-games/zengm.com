@@ -1,14 +1,16 @@
 ---
 layout: post
-title: Beta - real rosters back to 1956!
+title: Real rosters back to 1956!
 date: 2020-05-09
 tags:
 - New Feature
 ---
 
+*Update 2020-05-11: This is no longer in beta, you can [play it on the main site](https://play.basketball-gm.com/new_league/real).*
+
 A couple weeks ago I released [real players in Basketball GM back to 2005](/blog/2020/04/real-rosters-back-to-2005/). Why 2005? Because any time before that needs to deal with expansion teams, and I wanted to have a good way of handling that. Additionally, beyond the number of teams, there are many other things that have changed over time - team relocations, changes in style of play, various rule changes - I wanted to have decent ways of handling all those things.
 
-Today I do. At least in a [beta](https://beta.basketball-gm.com/new_league/real). 
+Today I do. At least in a [beta](https://play.basketball-gm.com/new_league/real). 
 
 **Start in any season back to 1956.** Players, teams, rosters, and contracts are generated from real data. Draft classes are included up to today.
 
@@ -16,7 +18,7 @@ Today I do. At least in a [beta](https://beta.basketball-gm.com/new_league/real)
 
 **Every league is different.** Draft prospects always start the same, but they have different career arcs in every league. See busts meet their potentials, see injury-shortened careers play out in full, and see new combinations of players lead to dynasties.
 
-[Go try it out now](https://beta.basketball-gm.com/new_league/real) and [let me know what you think](/contact/). Or read on if you want to know more details.
+[Go try it out now](https://play.basketball-gm.com/new_league/real) and [let me know what you think](/contact/). Or read on if you want to know more details.
 
 <!--more-->
 
@@ -78,7 +80,7 @@ as well as realistic changes to some other settings:
 * Number of games per season
 * Playoff structure, which [changed very frequently in the old days](https://en.wikipedia.org/wiki/NBA_playoffs)
 
-If you don't want these scheduled events, then you can create a [custom league](https://beta.basketball-gm.com/new_league), select the season you want, and then unselect "Scheduled events" on the right.
+If you don't want these scheduled events, then you can create a [custom league](https://play.basketball-gm.com/new_league), select the season you want, and then unselect "Scheduled events" on the right.
 
 <p><img src="/files/1956-scheduled-events.png" class="img-responsive"></p>
 
@@ -96,4 +98,4 @@ Thanks to the help of users on [the BBGM Discord](https://discord.gg/caPFuM9), I
 
 The ratings are not perfect. I would say they are "pretty good". Much work remains, and I'm already planning the next steps. If you look too closely, you will definitely notice some ratings that just seem strange. But if you take a step back and look at the league as a whole, I think you'll find that most players produce pretty realistic stats.
 
-I think this covers most of the changes in the beta. Please [give it a try](https://beta.basketball-gm.com/new_league/real) and [let me how you like it](/contact/)!
+I think this covers most of the changes in the beta. Please [give it a try](https://play.basketball-gm.com/new_league/real) and [let me how you like it](/contact/)!
