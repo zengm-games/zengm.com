@@ -4,6 +4,7 @@ title: Real rosters back to 1956!
 date: 2020-05-09
 tags:
 - New Feature
+- Real Players
 ---
 
 *Update 2020-05-11: This is no longer in beta, you can [play it on the main site](https://play.basketball-gm.com/new_league/real).*

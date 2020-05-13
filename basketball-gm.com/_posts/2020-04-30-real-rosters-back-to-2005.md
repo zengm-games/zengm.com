@@ -4,6 +4,7 @@ title: Real rosters back to 2005
 date: 2020-04-25
 tags:
 - New Feature
+- Real Players
 ---
 
 Last week I released [real players in Basketball GM](/blog/2020/04/real-players/), based on current rosters. Today I'm releasing real players for every season back to 2005. Select the season when [creating a new league](https://play.basketball-gm.com/new_league/real).

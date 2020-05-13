@@ -4,6 +4,7 @@ title: Real players in Basketball GM
 date: 2020-04-25
 tags:
 - New Feature
+- Real Players
 ---
 
 Basketball GM has always been made up of randomly generated players on fake teams. Real teams and players were only available as unofficial third-party custom rosters. A lot of people have done great work there, especially [alexnoob](https://github.com/alexnoob/BasketBall-GM-Rosters/releases) and [nicidob](https://nicidob.github.io/rosters/). But it's still not the same as having real rosters integrated into the game itself.
