@@ -148,7 +148,7 @@ Next, let's look at it team by team:
 
 When all seasons are combined, Utah and Portland seem to be the worst. Looking season by season, most teams don't have a lot of consistency. That makes sense because players change teams so often, although you could imagine coaching having an effect here.
 
-Utah often looks bad, for example in 2013-14. Portland too, especially from 1999-00 to 2001-02 where they were dragged down by careless foot-placers like Damon Stoudamire, Bonzi Wells, Arvydas Sabonis, and Shawn Kemp. But Portalnd has been more middle of the pack since then.
+Utah often looks bad, for example in 2013-14. Portland too, especially from 1999-00 to 2001-02 where they were dragged down by careless foot-placers like Damon Stoudamire, Bonzi Wells, Arvydas Sabonis, and Shawn Kemp. But Portland has been more middle of the pack since then.
 
 The Harden-era Rockets are consistently in the good quadrant, taking tons of three-pointers but not many shots with a foot on the line. Especially the past three seasons, they've clearly been the best in the league. This could be related to Moreyball's focus on the three and analytics in general. It could also be because the Rockets were one of the earliest teams to start taking a significant number of threes from well beyond the line, where there is absolutely no risk of a stray toe costing you a point.
 
