@@ -99,7 +99,6 @@ blockquote p {
   /* Space out the masthead */
   .header {
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 30px;
     text-align: left;
   }
   .header .nav {
