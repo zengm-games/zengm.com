@@ -4,6 +4,7 @@ title: Frivolities
 date: 2019-05-27
 tags:
 - New Feature
+- Frivolities
 ---
 
 One thing I like about Baskebtall Reference is their [Frivolities](https://www.basketball-reference.com/friv/) page. It's a bunch of unrelated tools that are mostly useless unless you have some very specific curiosity. And it's awesome! Not everything needs to have mass market appeal. Not everything needs to be serious and important. Frivolities are great.
