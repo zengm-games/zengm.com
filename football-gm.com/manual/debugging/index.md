@@ -5,7 +5,7 @@ title: Debugging
 
 If you have a problem, please [tell me](/contact/)! I want to make Football GM as bug free as possible.
 
-When you are reporting a problem, please include as much information as possible. At a minium, include this information along with a description of your problem:
+When you are reporting a problem, please include as much information as possible. At a minimum, include this information along with a description of your problem:
 
 * Football GM version (can be seen in the bottom right corner of the game)
 * Browser name and version
