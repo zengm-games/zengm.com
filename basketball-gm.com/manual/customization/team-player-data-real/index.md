@@ -26,7 +26,7 @@ There are two things to customize on [the options page](https://play.basketball-
   },
 ```
 
-If you want to edit it, **do not change that first "SYR"**. That's what BBGM uses internally to identify the team you're editing. But all the other things, including the "SYR" inside `"abbrev": "SYR"`, you can change.
+If you want to edit it, **do not change that first "SYR"**. That's what BBGM uses internally to identify the team you're editing. It's the same three-letter abbrevation used by Basketball Reference to identify teams. But all the other things, including the "SYR" inside `"abbrev": "SYR"`, you can change.
 
 If you'd like to leave some things set to their default values, you can just not include them in the file. For instance, just overriding Syracuse's name and logo:
 
@@ -38,6 +38,20 @@ If you'd like to leave some things set to their default values, you can just not
 ```
 
 Additionally, if you don't care about overriding all of the teams, you do not have to include every team. A partial list of team infos will still get applied to all the teams it contains.
+
+Setting one set of team info per abbreviation lets you change some team info over time. For instance, team relocation or renaming results in a new abbreviation in the file (e.g. MNL -> LAL). But if you want to change some info at a more specific time, such as a logo changing at a specific season, you can add an additional "seasons" property containing that information:
+
+```
+  "SYR": {
+    "imgURL": "Original logo URL, for when the franchise starts in 1949",
+    seasons: {
+      "1951": { imgURL: "New logo URL that applies in 1951" },
+      "1957": { imgURL: "New logo URL that applies in 1957" }
+    }
+  },
+```
+
+In this example I'm only changing the logo for Syracuse, but you can do the same thing for any of the properties shown above. And like mentioned above, it's best if you only include the fields that you're actually overriding.
 
 ### Player Photos
 
