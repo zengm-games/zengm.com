@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+	<title>Zen GM</title>
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+:root {
+	--orange: #f05742;
+	--purple-dark: #695fab;
+	--purple-light: #a89aff;
+	--bg-1: #121212;
+	--bg-2: #121212;
+}
+
+body {
+	background-color: var(--bg-1);
+	color: #fff;
+	opacity: 87%;
+	font-size: 18px;
+}
+
+.top-1 {
+	background-color: var(--orange);
+	height: 10px;
+	width: 100%;
+}
+.top-2 {
+	background-color: var(--purple-dark);
+	height: 10px;
+	width: 100%;
+}
+
+.logo {
+	height: 192px;
+	width: 192px;
+	background-color: var(--orange);
+	color: var(--bg-1);
+	position: relative;
+	text-align: center;
+}
+.zen {
+	font-family: 'Raleway', sans-serif;
+	font-size: 54px;
+	font-weight: 600;
+	position: absolute;
+	width: 100%;
+	top: 21px;
+
+}
+.gm {
+	font-family: 'Raleway', sans-serif;
+	font-size: 72px;
+	font-weight: 600;
+	position: absolute;
+	width: 100%;
+	top: 73px;
+}
+
+
+.container {
+	max-width: 720px;
+}
+.bg-alt {
+	background-color: var(--bg-2);
+}
+
+.headline {
+	color: var(--orange);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+ul {
+	margin-left: -40px;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+ul li::before {
+	content: "\2022";
+	color: var(--orange);
+	font-weight: bold;
+	display: inline-block;
+	width: 20px;
+	margin-left: -20px;
+}
+
+ul.main-list li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+	ul li::before {
+		content: none;
+	}
+}
+
+h1 {
+	font-size: 24px;
+}
+
+a, a:hover {
+	color: var(--purple-light);
+}
+
+.flagship {
+	color: inherit;
+	min-height: 98px;
+}
+.flagship:hover {
+	color: inherit;
+	background-color: #2a2a2a;
+	text-decoration: inherit;
+}
+.flagship img {
+	height: 82px;
+	width: 82px;
+}
+.flagship h2 {
+	font-size: 20px;
+	margin-top: 2px;
+}
+.flagship p {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+.face {
+	height: 150px;
+	width: 100px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@media (max-width: 575px) {
+	.logo {
+		height: 154px;
+		width: 154px;
+	}
+	.zen {
+		font-size: 43px;
+		top: 17px;
+
+	}
+	.gm {
+		font-size: 58px;
+		top: 59px;
+	}
+
+	.face {
+		height: 105px;
+		width: 70px;
+	}
+}
+		</style>
+	</head>
+	<body class="pb-0">
+		<div class="top-1"></div>
+		<div class="top-2"></div>
+		<div class="d-flex align-items-end my-5 mx-1">
+			<div id="face0" class="face ml-auto"></div>
+			<div class="logo rounded-circle mx-2 mx-sm-3 flex-shrink-0">
+				<div class="zen">ZEN</div>
+				<div class="gm">GM</div>
+			</div>
+			<div id="face1" class="face mr-auto"></div>
+		</div>
+		<div class="container">
+			<h1 class="mb-5">Zen GM is an independent video game developer focused on sports management simulation games.</h1>
+
+			<div class="row mb-4">
+				<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+					<a class="flagship d-flex border border-secondary rounded p-2" href="https://basketball-gm.com/">
+						<img src="https://play.basketball-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
+						<div>
+							<h2>Basketball GM</h2>
+							<p>Our first game and still our first priority, since 2008.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-sm-6">
+					<a class="flagship d-flex border border-secondary rounded p-2" href="https://football-gm.com/">
+						<img src="https://play.football-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
+						<div>
+							<h2>Football GM</h2>
+							<p>Released in 2019 and kept in sync with Basketball GM.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="bg-alt py-4">
+			<div class="container">
+				<p>Our games all follow some core principles:</p>
+
+				<ul class="main-list">
+					<li><span class="headline">Actually free</span><br>
+						No in-game purchases, no "pay to win", no microtransactions. You don't even have to log in or make an account to play.</li>
+
+					<li><span class="headline">Customizable</span><br>
+						Our games are deeply customizable through an in-game "God Mode" or custom league files. We also make our <a href="https://github.com/dumbmatter/gm-games">source code</a> available so you can see how our games work and play around with the internals.</li>
+
+					<li><span class="headline">Web-based</span><br>
+						Play our games in any web browser on any device. Desktop, laptop, tablet, mobile - it all works. No downloads, no installation, no special permissions needed.</li>
+
+					<li><span class="headline">Minimal micromanagement</span><br>
+						Simulation games need depth, but they need the right amount of depth with a UI to help you make sense of it. We seek to avoid mandatory micromanagement as much as possible. Video games should be fun, not tedious.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container py-4">
+			<h1>Other Games</h1>
+
+			<p>These games are under less active development than our flagship games. In the future, we hope to bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a> and <a href="https://football-gm.com/">Football GM</a>.</p>
+
+			<div class="row mb-sm-3 font-weight-bold">
+				<div class="col-12 col-sm-6">
+					<ul>
+						<li><a href="https://play.zengm.com/">College Basketball Coach</a></li>
+						<li><a href="https://play.zengm.com/">Baseball GM</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6">
+					<ul>
+						<li><a href="http://store.steampowered.com/app/791990/MOBA_GM/">MOBA GM</a></li>
+						<li><a href="http://lol.zengm.com/">LOL GM</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<ul>
+						<li><a href="http://hockey.zengm.com/">Hockey GM</a></li>
+						<li><a href="http://collegefootball.zengm.com/">College Football Coach</a></li>
+						<li><a href="http://football.zengm.com/">Old Football GM</a></li>
+						<li><a href="http://footballseasons.zengm.com/">Football Seasons</a></li>
+						<li><a href="http://canadianfootball.zengm.com/">Canadian Football GM</a></li>
+						<li><a href="http://arenafootball.zengm.com/">Arena Football GM</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6">
+					<ul>
+						<li><a href="http://usfootball.zengm.com/">US Football GM</a></li>
+						<li><a href="http://baseball.zengm.com/">Old Baseball GM</a></li>
+						<li><a href="http://baseballseasons.zengm.com/">Baseball Seasons</a></li>
+						<li><a href="http://collegebasketball.zengm.com/">Old College Basketball Coach</a></li>
+						<li><a href="http://collegebasketballseasons.zengm.com/">College Basketball Seasons</a></li>
+						<li><a href="http://collegebasketballbigfive.zengm.com/">College Basketball Big Five</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="bg-alt py-4">
+			<div class="container">
+				<h1>About Us</h1>
+				
+				<p>Zen GM is currently just one person, me. My name is Jeremy aka <a href="http://dumbmatter.com/">dumbmatter</a>. You can reach me at <a href="mailto:jeremy@zengm.com">jeremy@zengm.com</a>.</p>
+				
+				<p class="mb-0">I started writing Basketball GM in 2008. Originally it was a hobby project to scratch an itch and hone my programming skills. Over the years it slowly grew into what it is today, a collection of multiple web-based sports simulation games enjoyed by tens of thousands of users. It's been a crazy ride, and I think the best still lies ahead!</p>
+			</div>
+		</div>
+	</body>
+	<script src="http://dumbmatter.com/facesjs/build/bundle.js"></script>
+	<script type="text/javascript">
+var face0 = document.getElementById("face0");
+var face1 = document.getElementById("face1");
+
+function genFace0() {
+	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":"jersey3"}});
+	faces.display("face0", face);
+}
+
+function genFace1() {
+	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":"football2"}});
+	faces.display("face1", face);
+}
+
+genFace0();
+genFace1();
+
+face0.addEventListener("click", genFace0);
+face1.addEventListener("click", genFace1);
+	</script>
+</html>
