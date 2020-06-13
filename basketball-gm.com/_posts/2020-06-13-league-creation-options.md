@@ -45,7 +45,7 @@ What exactly do all of these new options do?
 
   This is useful if you want more parity in your league, or if you want to be able to play as your favorite city without having an advantage/disadvantage because of its size.
 
-* **No starting injuries** - Real players rosters sometimes include injuried players at the beginning of the season. Enabling this option heals those starting injuries.
+* **No starting injuries** - Real players rosters sometimes include injured players at the beginning of the season. Enabling this option heals those starting injuries.
 
 * **Groundhog Day** - Next season will start immediately after the playoffs, with the same exact players and rosters as the previous season. No player development, no persistent transactions.
 
