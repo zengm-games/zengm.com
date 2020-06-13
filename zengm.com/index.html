@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="logo64.png">
+    <link rel="apple-touch-icon" href="logo192.png">
 
 	<title>Zen GM</title>
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 
 	<style type="text/css">
 :root {
@@ -18,7 +18,7 @@
 	--purple-dark: #695fab;
 	--purple-light: #a89aff;
 	--bg-1: #121212;
-	--bg-2: #121212;
+	--bg-2: #272727;
 }
 
 body {
@@ -42,29 +42,7 @@ body {
 .logo {
 	height: 192px;
 	width: 192px;
-	background-color: var(--orange);
-	color: var(--bg-1);
-	position: relative;
-	text-align: center;
 }
-.zen {
-	font-family: 'Raleway', sans-serif;
-	font-size: 54px;
-	font-weight: 600;
-	position: absolute;
-	width: 100%;
-	top: 21px;
-
-}
-.gm {
-	font-family: 'Raleway', sans-serif;
-	font-size: 72px;
-	font-weight: 600;
-	position: absolute;
-	width: 100%;
-	top: 73px;
-}
-
 
 .container {
 	max-width: 720px;
@@ -114,11 +92,12 @@ a, a:hover {
 
 .flagship {
 	color: inherit;
+	background-color: var(--bg-2);
 	min-height: 98px;
 }
 .flagship:hover {
 	color: inherit;
-	background-color: #2a2a2a;
+	background-color: var(--bg-1);
 	text-decoration: inherit;
 }
 .flagship img {
@@ -147,15 +126,6 @@ a, a:hover {
 		height: 154px;
 		width: 154px;
 	}
-	.zen {
-		font-size: 43px;
-		top: 17px;
-
-	}
-	.gm {
-		font-size: 58px;
-		top: 59px;
-	}
 
 	.face {
 		height: 105px;
@@ -169,44 +139,45 @@ a, a:hover {
 		<div class="top-2"></div>
 		<div class="d-flex align-items-end my-5 mx-1">
 			<div id="face0" class="face ml-auto"></div>
-			<div class="logo rounded-circle mx-2 mx-sm-3 flex-shrink-0">
-				<div class="zen">ZEN</div>
-				<div class="gm">GM</div>
-			</div>
+			<img src="logo.svg" class="logo mx-2 mx-sm-3 flex-shrink-0">
 			<div id="face1" class="face mr-auto"></div>
 		</div>
-		<div class="container">
-			<h1 class="mb-5">Zen GM is an independent video game developer focused on sports management simulation games.</h1>
+		<div class="container pb-4">
+			<h1 class="mb-0">Zen GM is an independent video game developer focused on sports management simulation games.</h1>
+		</div>
 
-			<div class="row mb-4">
-				<div class="col-12 col-sm-6 mb-3 mb-sm-0">
-					<a class="flagship d-flex border border-secondary rounded p-2" href="https://basketball-gm.com/">
-						<img src="https://play.basketball-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
-						<div>
-							<h2>Basketball GM</h2>
-							<p>Our first game and still our first priority, since 2008.</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-12 col-sm-6">
-					<a class="flagship d-flex border border-secondary rounded p-2" href="https://football-gm.com/">
-						<img src="https://play.football-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
-						<div>
-							<h2>Football GM</h2>
-							<p>Released in 2019 and kept in sync with Basketball GM.</p>
-						</div>
-					</a>
+		<div class="bg-alt py-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<a class="flagship d-flex border border-secondary rounded p-2" href="https://basketball-gm.com/">
+							<img src="https://play.basketball-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
+							<div>
+								<h2>Basketball GM</h2>
+								<p>Our first game and still our first priority, since 2008.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-12 col-sm-6">
+						<a class="flagship d-flex border border-secondary rounded p-2" href="https://football-gm.com/">
+							<img src="https://play.football-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
+							<div>
+								<h2>Football GM</h2>
+								<p>Released in 2019 and kept in sync with Basketball GM.</p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 
 
-		<div class="bg-alt py-4">
+		<div class="py-4">
 			<div class="container">
 				<p>Our games all follow some core principles:</p>
 
 				<ul class="main-list">
-					<li><span class="headline">Actually free</span><br>
+					<li><span class="headline">Completely free</span><br>
 						No in-game purchases, no "pay to win", no microtransactions. You don't even have to log in or make an account to play.</li>
 
 					<li><span class="headline">Customizable</span><br>
@@ -221,62 +192,66 @@ a, a:hover {
 			</div>
 		</div>
 
-		<div class="container py-4">
-			<h1>Other Games</h1>
-
-			<p>These games are under less active development than our flagship games. In the future, we hope to bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a> and <a href="https://football-gm.com/">Football GM</a>.</p>
-
-			<div class="row mb-sm-3 font-weight-bold">
-				<div class="col-12 col-sm-6">
-					<ul>
-						<li><a href="https://play.zengm.com/">College Basketball Coach</a></li>
-						<li><a href="https://play.zengm.com/">Baseball GM</a></li>
-					</ul>
-				</div>
-				<div class="col-12 col-sm-6">
-					<ul>
-						<li><a href="http://store.steampowered.com/app/791990/MOBA_GM/">MOBA GM</a></li>
-						<li><a href="http://lol.zengm.com/">LOL GM</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-sm-6">
-					<ul>
-						<li><a href="http://hockey.zengm.com/">Hockey GM</a></li>
-						<li><a href="http://collegefootball.zengm.com/">College Football Coach</a></li>
-						<li><a href="http://football.zengm.com/">Old Football GM</a></li>
-						<li><a href="http://footballseasons.zengm.com/">Football Seasons</a></li>
-						<li><a href="http://canadianfootball.zengm.com/">Canadian Football GM</a></li>
-						<li><a href="http://arenafootball.zengm.com/">Arena Football GM</a></li>
-					</ul>
-				</div>
-				<div class="col-12 col-sm-6">
-					<ul>
-						<li><a href="http://usfootball.zengm.com/">US Football GM</a></li>
-						<li><a href="http://baseball.zengm.com/">Old Baseball GM</a></li>
-						<li><a href="http://baseballseasons.zengm.com/">Baseball Seasons</a></li>
-						<li><a href="http://collegebasketball.zengm.com/">Old College Basketball Coach</a></li>
-						<li><a href="http://collegebasketballseasons.zengm.com/">College Basketball Seasons</a></li>
-						<li><a href="http://collegebasketballbigfive.zengm.com/">College Basketball Big Five</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-
 		<div class="bg-alt py-4">
 			<div class="container">
 				<h1>About Us</h1>
 				
 				<p>Zen GM is currently just one person, me. My name is Jeremy aka <a href="http://dumbmatter.com/">dumbmatter</a>. You can reach me at <a href="mailto:jeremy@zengm.com">jeremy@zengm.com</a>.</p>
 				
-				<p class="mb-0">I started writing Basketball GM in 2008. Originally it was a hobby project to scratch an itch and hone my programming skills. Over the years it slowly grew into what it is today, a collection of multiple web-based sports simulation games enjoyed by tens of thousands of users. It's been a crazy ride, and I think the best still lies ahead!</p>
+				<p class="mb-0">I started writing <a href="https://baksetball-gm.com/">Basketball GM</a> in 2008. Originally it was a hobby project to scratch an itch and hone my programming skills. Over the years it slowly grew into what it is today, a collection of multiple web-based sports simulation games enjoyed by tens of thousands of users. It's been a crazy ride, and I think the best still lies ahead!</p>
+			</div>
+		</div>
+
+		<div class="py-4">
+			<div class="container">
+				<h1>Other Games</h1>
+
+				<p>These games are under less active development than our flagship games. In the future, we hope to bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a> and <a href="https://football-gm.com/">Football GM</a>.</p>
+
+				<div class="row mb-3">
+					<div class="col-12 col-sm-6">
+						<ul>
+							<li><a href="https://play.zengm.com/">College Basketball Coach</a></li>
+							<li><a href="https://play.zengm.com/">Baseball GM</a></li>
+							<li><a href="http://hockey.zengm.com/">Hockey GM</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6">
+						<ul>
+							<li><a href="http://store.steampowered.com/app/791990/MOBA_GM/">MOBA GM</a></li>
+							<li><a href="http://lol.zengm.com/">LOL GM</a></li>
+							<li><a href="http://collegefootball.zengm.com/">College Football Coach</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<p>These games are even older and have been replaced by the games linked above, but are still available for users to play in their original form.</p>
+
+				<div class="row">
+					<div class="col-12 col-sm-6">
+						<ul>
+							<li><a href="http://football.zengm.com/">Old Football GM</a></li>
+							<li><a href="http://footballseasons.zengm.com/">Football Seasons</a></li>
+							<li><a href="http://canadianfootball.zengm.com/">Canadian Football GM</a></li>
+							<li><a href="http://arenafootball.zengm.com/">Arena Football GM</a></li>
+							<li><a href="http://usfootball.zengm.com/">US Football GM</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6">
+						<ul>
+							<li><a href="http://baseball.zengm.com/">Old Baseball GM</a></li>
+							<li><a href="http://baseballseasons.zengm.com/">Baseball Seasons</a></li>
+							<li><a href="http://collegebasketball.zengm.com/">Old College Basketball Coach</a></li>
+							<li><a href="http://collegebasketballseasons.zengm.com/">College Basketball Seasons</a></li>
+							<li><a href="http://collegebasketballbigfive.zengm.com/">College Basketball Big Five</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
 	<script src="http://dumbmatter.com/facesjs/build/bundle.js"></script>
-	<script type="text/javascript">
+	<script>
 var face0 = document.getElementById("face0");
 var face1 = document.getElementById("face1");
 
