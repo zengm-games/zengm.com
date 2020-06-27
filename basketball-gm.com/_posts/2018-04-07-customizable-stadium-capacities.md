@@ -3,9 +3,8 @@ layout: post
 title: Customizable stadium capacities
 date: 2018-04-07
 tags:
+- Customization
 - New Feature
-- Player Ratings
-- Player Development
 ---
 
 Minor new feature in version 2018.04.08.66: you can now set the stadium capacity for each team. To do this, enable God Mode (Tools menu) and then go to Tools > Edit Team Info.

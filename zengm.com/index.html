@@ -123,13 +123,13 @@ a, a:hover {
 
 @media (max-width: 575px) {
 	.logo {
-		height: 154px;
-		width: 154px;
+		height: 164px;
+		width: 164px;
 	}
 
 	.face {
-		height: 105px;
-		width: 70px;
+		height: 117px;
+		width: 78px;
 	}
 }
 		</style>
@@ -139,7 +139,7 @@ a, a:hover {
 		<div class="top-2"></div>
 		<div class="d-flex align-items-end my-5 mx-1">
 			<div id="face0" class="face ml-auto"></div>
-			<img src="logo.svg" class="logo mx-2 mx-sm-3 flex-shrink-0">
+			<img src="logo.svg" class="logo mx-2 mx-sm-3">
 			<div id="face1" class="face mr-auto"></div>
 		</div>
 		<div class="container pb-4">
@@ -256,13 +256,17 @@ var face0 = document.getElementById("face0");
 var face1 = document.getElementById("face1");
 
 function genFace0() {
-	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":"jersey3"}});
-	faces.display("face0", face);
+	var jerseys = ["jersey", "jersey2", "jersey3", "jersey4", "jersey5"];
+	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
+	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":jersey}});
+	faces.display(face0, face);
 }
 
 function genFace1() {
-	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":"football2"}});
-	faces.display("face1", face);
+	var jerseys = ["football", "football2", "football3"];
+	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
+	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":jersey}});
+	faces.display(face1, face);
 }
 
 genFace0();
