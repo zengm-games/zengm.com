@@ -97,43 +97,5 @@ title: Game Attributes Customization
 <p>The last three attributes listed above are related to the season. <code>season</code> is the current season. <code>startingSeason</code> is the first season played in this league. <code>gracePeriodEnd</code> is the first season you can get fired after. If you set one of these, you should set all of them. You should also specify seasons for any stats, ratings, and attributes for your <a href="/manual/players/">players</a> and <a href="/manual/teams/">teams</a>.</p>
 <p>However, there is a shortcut to make things easier. Move <code>startingSeason</code> up to the root of the League File (at the same level as <code>gameAttributes</code>) and it will be used to automatically set all of the season variables everywhere. Or just leave <code>startingSeason</code> and all the other seasons out completely and the default value will be used.</p>
 <p><a name="player-names"></a></p>
-<h3>Player Names</h3>
-<p>By default, Football GM uses names and nationalities similar to players in the NBA. (I know this doesn't really make sense! It'll be fixed eventually.) However if you're making a custom league file designed to represent a football league in another country, it is annoying when the new players generated in your league all have names like "John Smith". For this reason, you can specify the first and last names you want randomly generated players to have in your league.</p>
-<p><a href="/files/presidents_names.json">Here is an example.</a> Try using it as the League File when you start a new league. Every player will have a first and last name from a US president. First and last names are handled independently, so you can get "Barack Bush". The format of the names data is like this:</p>
-<pre>
-{
-    "gameAttributes": [
-        {
-            "key": "names",
-            "value": {
-                "first": {
-                    "USA": [
-                        ["George", 1],
-                        ["John", 2],
-                        ["Thomas", 3]
-                    ],
-                    "Canada": [
-                        ["Bob", 1],
-                        ["Aaron", 2],
-                        ["Chad", 3]
-                    ]
-                },
-                "last": {
-                    "USA": [
-                        ["Washington", 1],
-                        ["Adams", 2],
-                        ["Jefferson", 3]
-                    ],
-                    "Canada": [
-                        ["Smith", 1],
-                        ["Jones", 2],
-                        ["Anderson", 3]
-                    ]
-                }
-            }
-        }
-    ]
-}
-</pre>
-<p>You can see how first and last names are defined separately. Each name also has a number associated with it. The number is the relative cumulative frequency. That sounds much more confusing than it is. Basically the purpose is to define the frequency of names, like you might want "John" to be more common than "Ebenezer". The gap between numbers represents the relative frequency of a name. In this case, all the gaps are 1, so all the names appear with equal frequency.</p>
-<p>Another thing to keep in mind - the relative cumulative frequencies must always be increasing or bad things will happen. Besides that, make them whatever you want. Scale doesn't matter. It would work just the same if the numbers above were 0.1, 0.2, and 0.3.</p>
+<h3>Player Names, Countries, and Colleges</h3>
+<p>By default, Basketball GM uses names, nationalities, and countries similar to players in the NBA. All of this is customizable in league files. <a href="/manual/customization/names-countries-colleges/">Here is the documentation on customizing player names, countries, and colleges.</a>
