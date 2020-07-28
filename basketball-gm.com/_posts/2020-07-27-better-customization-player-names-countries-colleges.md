@@ -1,6 +1,6 @@
 ---
 layout: post
-title: More realistic player names, including international players!
+title: Better support for customization of player names, countries, and colleges
 date: 2020-07-27
 tags:
 - Customization
