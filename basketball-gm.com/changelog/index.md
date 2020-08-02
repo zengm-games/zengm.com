@@ -4,6 +4,8 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* **2020-08-01: Players now have jersey numbers, and teams can retire jersey numbers of former players. [[1]](https://basketball-gm.com/blog/2020/08/jersey-numbers/) [[2]](https://old.reddit.com/r/BasketballGM/comments/i1trop/new_feature_official_release_players_now_have/) [[3]](https://old.reddit.com/r/Football_GM/comments/i1trys/players_now_have_jersey_numbers_and_teams_can/)**
+
 * 2020-07-28: Injuries that occur during live games show up in the box score.
 
 * 2020-07-28: When a player retires while (1) still an active player (not a free agent) and (2) still being paid by a team who had previously released him, the remaining amount of his previous contract will no longer be paid.
