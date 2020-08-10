@@ -4,7 +4,7 @@ title: Players now have jersey numbers, and teams can retire jersey numbers of f
 date: 2020-08-01
 tags:
 - Customization
-- New Featre
+- New Feature
 ---
 
 Basketball GM and Football GM now have jersey numbers for players! This is something people have been requesting for a while. It took me so long to do it because I just don't really notice jersey numbers. If you quizzed me on jersey numbers of popular athletes, I would fail horribly. But this isn't about me, it's about you guys! And I know jersey numbers are important to a lot of you.

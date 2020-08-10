@@ -4,6 +4,10 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-08-10: The contract generation algorithm has been rewritten. It should be both more realistic and harder to take advantage of. Most noticeably, you should no longer see players ask for too much money and go unsigned. [[1]](https://basketball-gm.com/blog/2020/08/smarter-contract-generation/) [[2]](https://old.reddit.com/r/BasketballGM/comments/i5qoj3/new_beta_feature_smarter_contracts_no_more_good/) [[3]](https://old.reddit.com/r/BasketballGM/comments/i77k9w/smarter_contract_generation_is_live_in_version/)
+
+* 2020-08-10: In BBGM, the box score will show players who didn't play as DNP (either "Injury" or "Coach's decision") rather than showing a row of all 0s.
+
 * 2020-08-08: Copying the trend in most other basketball sites, the default standings in BBGM are now conference standings, not division standings. FBGM is not changed.
 
 * 2020-08-08: Team records are shown below logos in box scores. And yeah, when you're watching a live game, the records update when the game finishes :) [[1]](https://old.reddit.com/r/BasketballGM/comments/i6792d/in_the_live_game_playbyplay_fouls_show_how_many/)
