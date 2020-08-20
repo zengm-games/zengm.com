@@ -103,3 +103,27 @@ bbgm.iterate(
     },
 );
 ```
+
+#### Change GM History teams
+
+[On August 20, 2020](https://basketball-gm.com/blog/2020/08/gm-history/), a feature was added to view your overall performance as a GM across multiple different past teams. But prior to this update, it did not track which teams you controlled in the past. If you remember, you may want to manually specify your past teams.
+
+The numbers in the `value` part are team ID numbers, which you can see in URLs when you click on a team.
+
+The numbers in the `start` part are the season when you took control of that team. The first one must be `-Infinity`, representing the team you started with in this league.
+
+The last entry must be your current team. If you just took control of the team after controlling another team for the season and playoffs this year, then use next season for `start`.
+
+```
+const history = [
+    { start: -Infinity, value: 5 },
+    { start: 2025, value: 7 },
+    { start: 2028, value: 9 },
+];
+
+bbgm.g.userTid = history;
+await bbgm.idb.cache.gameAttributes.put({
+    key: "userTid",
+    value: history,
+});
+```

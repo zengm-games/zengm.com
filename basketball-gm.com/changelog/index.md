@@ -4,6 +4,24 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-08-20: Added a new "GM History" page in the Team menu, where you can see your performance across all the different franchises you managed in the past. [[1]](https://basketball-gm.com/blog/2020/08/gm-history/) [[2]](https://old.reddit.com/r/BasketballGM/comments/idfn77/added_a_new_gm_history_page_in_the_team_menu/)
+
+* 2020-08-18: If you are successful (high score in the owner's annual performance review) then sometimes other teams will try to hire you. This happens between the playoffs and draft. Previously, the only way to change teams was to get fired or use God Mode. [[1]](https://old.reddit.com/r/BasketballGM/comments/iccozz/if_you_are_successful_high_score_in_the_owners/)
+
+* 2020-08-18: Purely cosmetic player attributes that don't affect gameplay or achievements (name, height (inches), weight (lbs), jersey number, college) are editable outside of God Mode by going to a player's page and clicking Edit Player. [[1]](https://old.reddit.com/r/BasketballGM/comments/iccp0h/purely_cosmetic_player_attributes_that_dont/)
+
+* 2020-08-17: Added TS%, 3PAr, and FTr to the player info popup. [[1]](https://old.reddit.com/r/BasketballGM/comments/ibqgvt/there_have_been_some_requests_for_fg3pft_on_the/)
+
+* 2020-08-17: If you do enough to win an achievement but miss out on it because you used God Mode or easy difficulty, it gives you a notification saying this rather than nothing. [[1]](https://old.reddit.com/r/BasketballGM/comments/ib84ki/a_minor_improvement_from_me_and_more_important/?)
+
+* 2020-08-17: Added "Finals Appearances" and total winning percentage to the Team History page. [[1]](https://old.reddit.com/r/BasketballGM/comments/ib84ki/a_minor_improvement_from_me_and_more_important/?)
+
+* 2020-08-14: New draft type option in God Mode to eliminate the draft and instead have rookies become free agents. [[1]](https://old.reddit.com/r/BasketballGM/comments/i9zhto/version_202008150142_new_draft_type_option_in_god/)
+
+* 2020-08-13: You can watch multiple live games in a single day! Now when you watch a live game, only that one game is simulated. When it's over, the other games from that day will still be waiting to be played. [[1]](https://old.reddit.com/r/BasketballGM/comments/i9a6gm/new_in_version_202008131365_you_can_watch/)
+
+* 2020-08-12: New frivolities: Best Teams, Worst Teams, Best Non-Playoff Teams, Worst Playoff Teams, Worst Finals Teams, and Worst Championship Teams. [[1]](https://old.reddit.com/r/BasketballGM/comments/i884cb/4_new_frivolities_in_version_202008120334_best/) [[2]](https://old.reddit.com/r/BasketballGM/comments/i8r0zo/a_couple_more_building_on_yesterdays_frivolities/)
+
 * 2020-08-11: New frivolity: Draft Class Rankings. [[1]](https://old.reddit.com/r/BasketballGM/comments/i7kyx2/tools_frivolities_draft_class_rankings_new_in/)
 
 * 2020-08-10: The contract generation algorithm has been rewritten. It should be both more realistic and harder to take advantage of. Most noticeably, you should no longer see players ask for too much money and go unsigned. [[1]](https://basketball-gm.com/blog/2020/08/smarter-contract-generation/) [[2]](https://old.reddit.com/r/BasketballGM/comments/i5qoj3/new_beta_feature_smarter_contracts_no_more_good/) [[3]](https://old.reddit.com/r/BasketballGM/comments/i77k9w/smarter_contract_generation_is_live_in_version/)
@@ -218,7 +236,7 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * 2020-01-05: Revamped the UI for page titles, dropdown options, and shortcut links between pages.
 
-* 2020-01-03: Added support for boolean "or" operations in table column filters, like "C|PF" to display centers and power forwards. [[1]](https://old.reddit.com/r/BasketballGM/comments/eji5hf/new_in_version_202001031015_boolean_or_operations/) [[2]](https://old.reddit.com/r/Football_GM/comments/eji5i9/new_in_version_202001031016_boolean_or_operations/)
+* 2020-01-03: Added support for boolean "or" operations in table column filters, like "C||PF" to display centers and power forwards. [[1]](https://old.reddit.com/r/BasketballGM/comments/eji5hf/new_in_version_202001031015_boolean_or_operations/) [[2]](https://old.reddit.com/r/Football_GM/comments/eji5i9/new_in_version_202001031016_boolean_or_operations/)
 
 * 2020-01-02: Fixed bug where loading a league file during a fantasy draft created extra draft prospects.
 
