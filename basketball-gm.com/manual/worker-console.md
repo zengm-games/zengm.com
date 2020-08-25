@@ -51,7 +51,10 @@ for (const p of players) {
     ratings.pss *= 1.2;
 
     // Recompute ovr and pot
-    bbgm.player.develop(p, 0);
+    await bbgm.player.develop(p, 0);
+
+    // Recompute player value
+    await bbgm.player.updateValues
 
     await bbgm.idb.cache.players.put(p);
 }

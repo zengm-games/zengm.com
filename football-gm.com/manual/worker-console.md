@@ -48,16 +48,19 @@ players = await bbgm.idb.cache.players.indexGetAll("playersByTid", bbgm.PLAYER.U
 for (const p of players) {
     const ratings = p.ratings[p.ratings.length - 1];
 
-    ratings.pss *= 1.2;
+    ratings.spd *= 1.2;
 
     // Recompute ovr and pot
-    bbgm.player.develop(p, 0);
+    await bbgm.player.develop(p, 0);
+
+    // Recompute player value
+    await bbgm.player.updateValues
 
     await bbgm.idb.cache.players.put(p);
 }
 ```
 
-That will increase the passing rating by 20% for all draft prospects.
+That will increase the speed rating by 20% for all draft prospects.
 
 You can do other stuff to player ratings. These are the names of all the rating variables:
 
