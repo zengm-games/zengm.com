@@ -4,7 +4,11 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
-* 2020-08-31: Added BPM, DBPM, OBPM, and VORP to the advanced stats in BBGM. Thanks @nicidob! [[1]](https://old.reddit.com/r/BasketballGM/comments/ijszx5/added_bpm_dbpm_obpm_and_vorp_to_the_advanced/)
+* 2020-09-01: Added a stats summary to the top of each player page, similar to Basketball Reference. Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/307) [[1]](https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/)
+
+* 2020-09-01: Clutch plays in the playoffs now contain some info about the series in the text. Thanks @kevbauer! [[1]](https://github.com/dumbmatter/gm-games/pull/308)
+
+* 2020-08-31: Added BPM, DBPM, OBPM, and VORP to the advanced stats in BBGM. Thanks @nicidob! [[1]](https://github.com/dumbmatter/gm-games/pull/297) [[2]](https://old.reddit.com/r/BasketballGM/comments/ijszx5/added_bpm_dbpm_obpm_and_vorp_to_the_advanced/)
 
 * 2020-08-30: Frivolity to show which jersey numbers had the most/best players, and the top players who wore each jersey number. Also added similar lists of top players from each country and college, which you can access from those frivolities. They are all also linked from player profiles and the Player Bios table. [[1]](https://old.reddit.com/r/BasketballGM/comments/ij7fq5/frivolity_to_show_which_jersey_numbers_had_the/)
 
@@ -20,7 +24,7 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * 2020-08-22: New God Mode option: Spectator Mode, where the AI controls all teams and you just watch. It's like auto play, but you can proceed at your own pace. [[1]](https://basketball-gm.com/blog/2020/08/spectator-mode/) [[2]](https://old.reddit.com/r/BasketballGM/comments/ieln8n/new_god_mode_option_spectator_mode_where_the_ai/)
 
-* 2020-08-20: Added a new "GM History" page in the Team menu, where you can see your performance across all the different franchises you managed in the past. [[1]](https://basketball-gm.com/blog/2020/08/gm-history/) [[2]](https://old.reddit.com/r/BasketballGM/comments/idfn77/added_a_new_gm_history_page_in_the_team_menu/)
+* **2020-08-20: Added a new "GM History" page in the Team menu, where you can see your performance across all the different franchises you managed in the past. [[1]](https://basketball-gm.com/blog/2020/08/gm-history/) [[2]](https://old.reddit.com/r/BasketballGM/comments/idfn77/added_a_new_gm_history_page_in_the_team_menu/)**
 
 * 2020-08-18: If you are successful (high score in the owner's annual performance review) then sometimes other teams will try to hire you. This happens between the playoffs and draft. Previously, the only way to change teams was to get fired or use God Mode. [[1]](https://old.reddit.com/r/BasketballGM/comments/iccozz/if_you_are_successful_high_score_in_the_owners/)
 
