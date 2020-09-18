@@ -4,7 +4,15 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
-* 2020-09-01: Added a stats summary to the top of each player page, similar to Basketball Reference. Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/307) [[1]](https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/)
+* **2020-09-17: New player mood system! Most notable improvements are that it's viewable at any time (not just during free agency) and it's much more transparent about what players think about your team. If your star is not happy and doesn't want to re-sign, you'll know ahead of time. [[1]](https://basketball-gm.com/blog/2020/09/player-mood/) [[2]](https://old.reddit.com/r/BasketballGM/comments/iuluuj/the_new_player_mood_system_is_now_live_in_version/)**
+
+* 2020-09-07: New challenge mode "Lose best player every season", where at the end of the playoffs every season, the best player on your team will either retire (if he's a real player) or die a tragic death (if he's a random player). Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/311/files) [[2]](https://old.reddit.com/r/BasketballGM/comments/iod22d/new_challenge_mode_lose_best_player_every_season/)
+
+* 2020-09-07: Added eFG% to stat tables in BBGM. Thanks @domini7! [[1]](https://github.com/dumbmatter/gm-games/pull/310)
+
+* 2020-09-03: Fixed team/player stat distributions pages for FBGM, and added additional stats in BBGM. Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/306)
+
+* 2020-09-01: Added a stats summary to the top of each player page, similar to Basketball Reference. Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/307) [[2]](https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/)
 
 * 2020-09-01: Clutch plays in the playoffs now contain some info about the series in the text. Thanks @kevbauer! [[1]](https://github.com/dumbmatter/gm-games/pull/308)
 
