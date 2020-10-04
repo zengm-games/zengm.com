@@ -54,7 +54,7 @@ for (const p of players) {
     await bbgm.player.develop(p, 0);
 
     // Recompute player value
-    await bbgm.player.updateValues();
+    await bbgm.player.updateValues(p);
 
     await bbgm.idb.cache.players.put(p);
 }

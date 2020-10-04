@@ -4,6 +4,18 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-10-03: New option in God Mode to change the number of draft rounds. This does not change the talent pool - if you add more draft rounds, the additional draft prospects will not be very good. If you remove draft rounds, there will be more good undrafted free agents. [[1]](https://old.reddit.com/r/BasketballGM/comments/j4peh5/new_option_in_god_mode_to_change_the_number_of/)
+
+* 2020-10-01: In honor of our glorious upcoming election, I am introducing the most American option ever added to Basketball GM: a new draft type "No lottery, best to worst" in which the best teams get the best picks in the draft. [[1]](https://old.reddit.com/r/BasketballGM/comments/j3k1g9/in_honor_of_our_glorious_upcoming_election_i_am/)
+
+* 2020-09-22: A few new contract options in God Mode. Set the minimum and maximum length of allowable contracts, and set whether players should be allowed to refuse to negotiate after their rookie contract expires. [[1]](https://old.reddit.com/r/BasketballGM/comments/iy2qo5/a_few_new_contract_options_in_god_mode_set_the/)
+
+* 2020-09-21: Added keyboard shortcuts to the live game sim controls.
+
+* 2020-09-20: Below team logos in playoff box scores, playoff series results are shown rather than regular season records. And yeah, when you're watching a live game, the win total updates when the game finishes :) [[1]](https://old.reddit.com/r/BasketballGM/comments/iw8dv0/below_team_logos_in_playoff_box_scores_playoff/)
+
+* 2020-09-19: In BBGM, new God Mode option to set the number of players on the court. By default it's 5-on-5, but now it can be anything. Extreme values may do weird things. [[1]](https://old.reddit.com/r/BasketballGM/comments/ivlhui/new_god_mode_option_to_set_the_number_of_players/)
+
 * **2020-09-17: New player mood system! Most notable improvements are that it's viewable at any time (not just during free agency) and it's much more transparent about what players think about your team. If your star is not happy and doesn't want to re-sign, you'll know ahead of time. [[1]](https://basketball-gm.com/blog/2020/09/player-mood/) [[2]](https://old.reddit.com/r/BasketballGM/comments/iuluuj/the_new_player_mood_system_is_now_live_in_version/)**
 
 * 2020-09-07: New challenge mode "Lose best player every season", where at the end of the playoffs every season, the best player on your team will either retire (if he's a real player) or die a tragic death (if he's a random player). Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/311/files) [[2]](https://old.reddit.com/r/BasketballGM/comments/iod22d/new_challenge_mode_lose_best_player_every_season/)
