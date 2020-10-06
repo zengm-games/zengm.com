@@ -77,8 +77,11 @@ ul.main-list li:not(:last-child) {
 }
 
 @media (max-width: 767px) {
-	ul li::before {
+	ul.main-list li::before {
 		content: none;
+	}
+	ul li::before {
+		margin-left: 0px;
 	}
 }
 
@@ -154,7 +157,7 @@ a, a:hover {
 							<img src="https://play.basketball-gm.com/ico/icon.svg" class="mr-2 flex-shrink-0">
 							<div>
 								<h2>Basketball GM</h2>
-								<p>Our first game and still our first priority, since 2008.</p>
+								<p>Our first game, continuously updated since 2008.</p>
 							</div>
 						</a>
 					</div>
@@ -171,7 +174,6 @@ a, a:hover {
 			</div>
 		</div>
 
-
 		<div class="py-4">
 			<div class="container">
 				<p>Our games all follow some core principles:</p>
@@ -181,7 +183,7 @@ a, a:hover {
 						No in-game purchases, no "pay to win", no microtransactions. You don't even have to log in or make an account to play.</li>
 
 					<li><span class="headline">Customizable</span><br>
-						Our games are deeply customizable through an in-game "God Mode" or custom league files. We also make our <a href="https://github.com/dumbmatter/gm-games">source code</a> available so you can see how our games work and play around with the internals.</li>
+						Our games are deeply customizable through an in-game "God Mode" or custom league files. We also make our <a href="https://github.com/dumbmatter/gm-games">source </a> <a href="https://github.com/dumbmatter/zengm-legacy">code</a> available so you can see how our games work and play around with the internals.</li>
 
 					<li><span class="headline">Web-based</span><br>
 						Play our games in any web browser on any device. Desktop, laptop, tablet, mobile - it all works. No downloads, no installation, no special permissions needed.</li>
@@ -206,7 +208,7 @@ a, a:hover {
 			<div class="container">
 				<h1>Other Games</h1>
 
-				<p>These games were created in partnership with another developer, but that partnership has ended, so now they are under less active development than our flagship games. In the future, we hope to bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a> and <a href="https://football-gm.com/">Football GM</a>.</p>
+				<p>These games are ports of an old version of <a href="https://basketball-gm.com/">Basketball GM</a> to other sports, made by another developer who is no longer working on the project. Currently they are under less active development than our flagship games, but in the future we will bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a> and <a href="https://football-gm.com/">Football GM</a>.</p>
 
 				<div class="row mb-3">
 					<div class="col-12 col-sm-6">
@@ -218,7 +220,7 @@ a, a:hover {
 					</div>
 					<div class="col-12 col-sm-6">
 						<ul>
-							<li><a href="http://store.steampowered.com/app/791990/MOBA_GM/">MOBA GM</a></li>
+							<li><a href="https://moba.zengm.com/">MOBA GM</a></li>
 							<li><a href="http://lol.zengm.com/">LOL GM</a></li>
 							<li><a href="http://collegefootball.zengm.com/">College Football Coach</a></li>
 						</ul>
