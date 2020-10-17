@@ -33,7 +33,7 @@ This is also true for the current season, so you can create leagues starting tod
 
 ### Starting at the playoffs
 
-If you start at the playoffs, real team records and playoff seeds will be used to set up the playoff bracket. Rosters are a little different too. I did my best to figure out each player's team at the beginning and end of the regular season. It's not perfect, but it works pretty well. So if you start at the playoffs, you start with playoff rosters. 
+If you start at the playoffs, real team records and playoff seeds will be used to set up the first round of the playoffs. Rosters are a little different too. I did my best to figure out each player's team at the beginning and end of the regular season. It's not perfect, but it works pretty well. So if you start at the playoffs, you start with playoff rosters. 
 
 One thing missing is player and team stats from the regular season. I do want to include them at some point, I just had to draw the line somewhere to release this feature, otherwise it would be stuck in development forever. Stats can take up a lot of space too, so it's a concern for mobile performance... that's a lot of extra data that will need to be downloaded. But I will do it eventually!
 
@@ -57,7 +57,7 @@ Since this has been in development for a little while, today I'm also releasing 
 
 * Updates to the 2020 rosters, including roster moves, ratings tweaks, and new draft prospects.
 
-* Added "Won Championship" entries to player awards for past seasons in real players leagues.
+* Added "Won Championship" entries to player awards for past seasons in real players leagues (this isn't necessarily perfect, it's based on the same method to determine playoff rosters mentioned above).
 
 * Some improvements to the trade AI, particularly related to how it values draft picks. [[1]](https://old.reddit.com/r/BasketballGM/comments/ja6095/want_to_test_some_improvements_to_the_trade_ai/) [[2]](https://old.reddit.com/r/Football_GM/comments/ja60au/want_to_test_some_improvements_to_the_trade_ai/)
 
