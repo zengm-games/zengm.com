@@ -14,7 +14,7 @@ In the past, contracts were generated from a simple formula based on factors suc
 
 The problem is, that's simply not how contracts are set in reality, and for good reason. It lacks a global perspective. Like if no team has max cap space, or if there are better free agents they'd rather spend it on, then it doesn't matter if a player thinks he "deserves" a big contract. This resulted in situations where sometimes good players would go unsigned in free agency, because no team had enough money to meet their demands.
 
-Today, there is a new contract generation system in BBGM and FBGM that solves this problem by incorporating a global perspective. Contracts are generated with knowledge of how much cap space teams have and what other players are on the market. So if, due to some random fluke, you find yourself with a very good free agent class in a league without much cap space, players will ask for less money. Or if you find the opposite, a poor free agent class in a league where teams have tons of money, players will ask for more money.
+Today, there is a new contract generation system in BBGM that solves this problem by incorporating a global perspective. Contracts are generated with knowledge of how much cap space teams have and what other players are on the market. So if, due to some random fluke, you find yourself with a very good free agent class in a league without much cap space, players will ask for less money. Or if you find the opposite, a poor free agent class in a league where teams have tons of money, players will ask for more money.
 
 Give it a try and [let me know what you think](/contact/). Or read on for more details about how it works, which is pretty cool.
 
@@ -26,7 +26,7 @@ The general idea is to simulate free agency to see if contract demands are too h
 
 The beauty of that is, it doesn't really matter what a player's initial contract demands are. This iterative algorithm will find a player's true value in the current market, regardless of starting place. That means I was able to completely get rid of the old player contract formula - it's not even used as a starting position. This algorithm sets the contract for every player in the game. Re-signing players, free agency, released players... their contracts are all set by the same algorithm run with slightly different parameters.
 
-As best I can tell, this algorithm is quite robust. It produces reasonable results for many different financial and league settings. The exact same contract code powers both Football GM and Basketball GM, even though they are pretty different financially. In the past they each needed a unique hand-tuned formula. Not any more!
+As best I can tell, this algorithm is quite robust. It produces reasonable results for many different financial and league settings.
 
 But from an end-user perspecitve, the implementation details don't really matter. What matters is gameplay. So in terms of gameplay, you probably will notice that you no longer see good players go unsigned in free agency because nobody has money to sign them. That had long been an exploit in BBGM - keep your eye on good players who go unsigned, wait until their demands decrease during the season, and then sign them to cheap deals. I'm guilty of using that strategy myself when playing BBGM! But it will no longer work.
 
