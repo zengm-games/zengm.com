@@ -130,3 +130,16 @@ await bbgm.idb.cache.gameAttributes.put({
     value: history,
 });
 ```
+
+#### Delete all players at a certain position
+
+```
+players = await bbgm.idb.cache.players.getAll();
+pids = []
+for (const p of players) {
+    if (p.ratings[p.ratings.length - 1].pos === "PG") {
+        pids.push(p.pid);
+    }
+}
+await bbgm.player.remove(pids);
+```
