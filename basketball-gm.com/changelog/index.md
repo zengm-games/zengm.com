@@ -4,6 +4,14 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* **2020-11-15: Transaction logs for trades are now dynamically updated to include the players selected by traded draft picks, and they link to a new Trade Summary page showing more details about completed trades. [[1]](https://basketball-gm.com/blog/2020/11/trade-details/) [[2]](https://old.reddit.com/r/BasketballGM/comments/juzose/transaction_logs_for_trades_are_now_dynamically/)**
+
+* 2020-11-12: Fixed bug in FBGM where "half the distance to the goal" penalties were being assessed wrong, leading to the line of scrimmage being in the endzone. [[1]](https://old.reddit.com/r/Football_GM/comments/jtar0p/will_they_score_a_touchdown_you_have_to_wait_and/)
+
+* 2020-11-12: In FBGM live sims, no more spoilers where scoring plays appeared in the scoring summary before being shown in the play-by-play. [[1]](https://old.reddit.com/r/Football_GM/comments/jtar0p/will_they_score_a_touchdown_you_have_to_wait_and/)
+
+* 2020-11-10: Added a button to easily retire a player's jersey number, next to each player on the Team History page. [[1]](https://old.reddit.com/r/BasketballGM/comments/jryt79/added_a_button_to_easily_retire_a_players_jersey/)
+
 * 2020-11-08: Redesigned league settings page, including more settings available outside of God Mode. [[1]](https://basketball-gm.com/blog/2020/11/settings-redesign/) [[2]](https://old.reddit.com/r/BasketballGM/comments/jqeogt/redesigned_league_settings_page_including_more/)
 
 * 2020-11-02: Added a summary of a player's awards at the top of the player profile page. [[1]](https://old.reddit.com/r/BasketballGM/comments/jn1zc6/added_a_summary_of_a_players_awards_at_the_top_of/)
@@ -84,7 +92,7 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * 2020-08-17: Added TS%, 3PAr, and FTr to the player info popup. [[1]](https://old.reddit.com/r/BasketballGM/comments/ibqgvt/there_have_been_some_requests_for_fg3pft_on_the/)
 
-* 2020-08-17: If you do enough to win an achievement but miss out on it because you used God Mode or easy difficulty, it gives you a notification saying this rather than nothing. [[1]](https://old.reddit.com/r/BasketballGM/comments/ib84ki/a_minor_improvement_from_me_and_more_important/?)
+* 2020-08-17: If you do enough to win an achievement but miss out on it because you used God Mode or easy difficulty, it gives you a notification saying this rather than nothing. [[1]](https://old.reddit.com/r/BasketballGM/comments/ib84ki/a_minor_improvement_from_me_nd_more_important/?)
 
 * 2020-08-17: Added "Finals Appearances" and total winning percentage to the Team History page. [[1]](https://old.reddit.com/r/BasketballGM/comments/ib84ki/a_minor_improvement_from_me_and_more_important/?)
 
