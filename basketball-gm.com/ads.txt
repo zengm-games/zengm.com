@@ -1,9 +1,6 @@
 # Freestar.io ads.txt File
-# Last updated 10-28-20
+# Last updated 11-11-20
 
-# PLEASE DO NOT REMOVE ANYTHING FROM THIS FILE
-# ADD ALL PUBLISHER SPECIFIC ADS.TXT INFO AT THE BOTTOM OF THIS FILE
-# WHERE YOU WILL SEE A COMMENT INDICATING YOU CAN PLACE BELOW THAT COMMENT
 
 # ads.txt to be placed in the root level of the domain
 # example: yourdomain.com/ads.txt
