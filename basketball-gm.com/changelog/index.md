@@ -4,6 +4,12 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-11-19: New setting "AI Teams Retire Jersey Numbers" to control whether AI teams should automatically retire/unretire jersey numbers.
+
+* 2020-11-19: Two new trade frivolities: Biggest Trades (trades involving the best players and prospects) and Most Lopsided Trades (trades where one team's assets produced a lot more value than the other). [[1]](https://basketball-gm.com/blog/2020/11/trade-frivolities/) [[2]](https://old.reddit.com/r/BasketballGM/comments/jxfy8b/two_new_trade_frivolities_biggest_trades_trades/)
+
+* 2020-11-17: Added some charts to the Trade Summary page. [[1]](https://www.reddit.com/r/BasketballGM/comments/jvn292/since_its_now_trading_season_i_added_some_charts/)
+
 * **2020-11-15: Transaction logs for trades are now dynamically updated to include the players selected by traded draft picks, and they link to a new Trade Summary page showing more details about completed trades. [[1]](https://basketball-gm.com/blog/2020/11/trade-details/) [[2]](https://old.reddit.com/r/BasketballGM/comments/juzose/transaction_logs_for_trades_are_now_dynamically/)**
 
 * 2020-11-12: Fixed bug in FBGM where "half the distance to the goal" penalties were being assessed wrong, leading to the line of scrimmage being in the endzone. [[1]](https://old.reddit.com/r/Football_GM/comments/jtar0p/will_they_score_a_touchdown_you_have_to_wait_and/)
