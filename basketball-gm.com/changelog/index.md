@@ -466,6 +466,8 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * **2019-07-07: The Edit Team Info page has been renamed to Manage Teams nad it now includes (very rudimentary) support for adding and removing teams. [[1]](https://old.reddit.com/r/BasketballGM/comments/cafqfp/in_god_mode_the_edit_team_info_page_has_been/)**
 
+* 2019-06-27: Added support for creating a league file from a URL to a JSON file (with the apporpriate Access-Control-Allow-Origin header) rather than just uploading a file.
+
 * 2019-06-25: Highlight HoF players on historical roster pages.
 
 * 2019-06-06: New God Mode option to disable players refusing to negotiate. [[1]](https://old.reddit.com/r/BasketballGM/comments/bxcca8/new_in_v201906060088_a_god_mode_option_to_disable/)
