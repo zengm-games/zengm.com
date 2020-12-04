@@ -1,5 +1,5 @@
 # Freestar.io ads.txt File
-# Last updated 11-11-20
+# Last updated 11-12-20
 
 
 # ads.txt to be placed in the root level of the domain
@@ -102,15 +102,16 @@ appnexus.com, 3539, RESELLER
 appnexus.com, 3540, RESELLER
 
 # JustPremium
-adform.com, 183, RESELLER
 appnexus.com, 7118, RESELLER
+spotx.tv, 108933, RESELLER, 7842df1d2fe2db34
+spotxchange.com, 108933, RESELLER, 7842df1d2fe2db34
+improvedigital.com, 185, RESELLER
+adform.com, 183, RESELLER
 freewheel.tv, 33081, RESELLER
 freewheel.tv, 33601, RESELLER
 google.com, pub-8172268348509349, RESELLER, f08c47fec0942fa0
-improvedigital.com, 185, RESELLER
+indexexchange.com, 189872, RESELLER
 openx.com, 539526431, RESELLER, 6a698e2ec38604c6
-spotx.tv, 108933, RESELLER, 7842df1d2fe2db34
-spotxchange.com, 108933, RESELLER, 7842df1d2fe2db34
 
 # Telaria
 tremorhub.com, 6smwu-uqq50, RESELLER, 1a4e959a1b50034a
@@ -314,6 +315,8 @@ rhythmone.com, 1059622079, RESELLER, a670c89d4a324e47
 contextweb.com, 560606, RESELLER, 89ff185a4c4e857c
 conversantmedia.com, 100032, RESELLER, 03113cd04947736d
 loopme.com, 11172, RESELLER, 6c8d5f95897a5a3b
+
+# PUBLISHER SPECIFIC ADS.TXT INFO BELOW THIS LINE
 
 # PUBLISHER SPECIFIC ADS.TXT INFO BELOW THIS LINE
 
