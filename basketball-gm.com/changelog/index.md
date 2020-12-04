@@ -4,6 +4,18 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-12-03: Added ability to view playoff stats on the roster page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
+
+* 2020-12-03: New "Keep sorted" option on the roster page, to let the AI manage sorting your roster (no more clicking "auto sort" periodically). [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
+
+* 2020-12-03: You can start historical real players leagues at the draft lottery phase. [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
+
+* 2020-12-02: Icons for All-Stars, MVPs, and championships are displayed on the Draft History and Draft Team History pages. Peak ovr and pot values are also shown there. [[1]](https://old.reddit.com/r/BasketballGM/comments/k5od0c/icons_for_allstars_mvps_and_championships_are_now/)
+
+* **2020-11-28: An early version of the 2021 rosters is available when creating a new real players league. Also, you can start a 2020 league after the draft if you want to re-play free agency. [[1]](https://old.reddit.com/r/BasketballGM/comments/k30nhc/an_early_version_of_the_2021_rosters_is_available/)**
+
+* 2020-11-27: Added a "player note" that you can write on player profile pages, if you want to remind yourself of anything about a player in the future. They are also viewable on the Watch List page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k293hf/added_a_player_note_that_you_can_write_on_player/) [[2]](https://old.reddit.com/r/BasketballGM/comments/k2t8rh/minor_addition_to_yesterdays_player_notes_update/)
+
 * 2020-11-19: New setting "AI Teams Retire Jersey Numbers" to control whether AI teams should automatically retire/unretire jersey numbers.
 
 * 2020-11-19: Two new trade frivolities: Biggest Trades (trades involving the best players and prospects) and Most Lopsided Trades (trades where one team's assets produced a lot more value than the other). [[1]](https://basketball-gm.com/blog/2020/11/trade-frivolities/) [[2]](https://old.reddit.com/r/BasketballGM/comments/jxfy8b/two_new_trade_frivolities_biggest_trades_trades/)
