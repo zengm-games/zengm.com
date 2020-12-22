@@ -1,5 +1,5 @@
 # Freestar.io ads.txt File
-# Last updated 11-12-20
+# Last updated 12-10-20
 
 
 # ads.txt to be placed in the root level of the domain
@@ -149,15 +149,14 @@ rubiconproject.com, 22412, RESELLER, 0bfd66d529a55807
 advertising.com, 28650, RESELLER
 
 # 33Across
-33across.com, 0013300001cFpYHAA0, DIRECT, bbea06d9c4d2853c
-rubiconproject.com, 16414, RESELLER, 0bfd66d529a55807
-rubiconproject.com, 21642, RESELLER, 0bfd66d529a55807
-appnexus.com, 10239, RESELLER, f5ab79cb980f11d1
-adtech.com, 12094, RESELLER
-aol.com, 47594, RESELLER, e1a5b5b6e3255540
-indexexchange.com, 183635, RESELLER, 50b1c356f2c5c8fc
-openx.com, 537120563, RESELLER, 6a698e2ec38604c6
-openx.com, 540995201, RESELLER, 6a698e2ec38604c6
+33across.com, 0013300001cFpYHAA0, DIRECT, bbea06d9c4d2853c 
+appnexus.com, 10239, RESELLER, f5ab79cb980f11d1 
+yahoo.com, 57289, RESELLER,Â  e1a5b5b6e3255540 
+rubiconproject.com, 16414, RESELLER, 0bfd66d529a55807 
+openx.com, 537120563, RESELLER, 6a698e2ec38604c6 
+indexexchange.com, 191973, RESELLER, 50b1c356f2c5c8fc 
+rubiconproject.com, 21642, RESELLER, 0bfd66d529a55807 
+pubmatic.com, 156423, RESELLER, 5d62403b186f2ace
 
 # Teads
 teads.tv, 8917, DIRECT, 15a9c44f6d26cbe1
@@ -315,8 +314,6 @@ rhythmone.com, 1059622079, RESELLER, a670c89d4a324e47
 contextweb.com, 560606, RESELLER, 89ff185a4c4e857c
 conversantmedia.com, 100032, RESELLER, 03113cd04947736d
 loopme.com, 11172, RESELLER, 6c8d5f95897a5a3b
-
-# PUBLISHER SPECIFIC ADS.TXT INFO BELOW THIS LINE
 
 # PUBLISHER SPECIFIC ADS.TXT INFO BELOW THIS LINE
 

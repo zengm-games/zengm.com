@@ -4,6 +4,18 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-12-16: Added button to change the schedule of the All-Star Game to Tools > Danger Zone. [[1]](https://old.reddit.com/r/BasketballGM/comments/kepbrj/a_few_little_customization_options_for_the/)
+
+* 2020-12-16: Added button to toggle the current state of the trade deadline to Tools > Danger Zone. [[1]](https://old.reddit.com/r/BasketballGM/comments/kepbrj/a_few_little_customization_options_for_the/)
+
+* 2020-12-16: The time at which the All-Star Game occurs can now be edited at Tools > League Settings. By default it is 70% of the way through the season. [[1]](https://old.reddit.com/r/BasketballGM/comments/kepbrj/a_few_little_customization_options_for_the/)
+
+* 2020-12-12: New "Edit Awards" page available in God Mode, which allows you to edit all the end-of-season award winners. Thanks @luso97! [[1]](https://github.com/dumbmatter/gm-games/pull/331) [[2]](https://old.reddit.com/r/BasketballGM/comments/kbl3m7/new_edit_awards_page_available_in_god_mode_which/)
+
+* 2020-12-09: Added "Randomize Name" button to the Create/Edit Player page, which picks a random name from the currently selected country. [[1]](https://old.reddit.com/r/BasketballGM/comments/k9mugr/just_a_tiny_fun_new_feature_i_added_a_randomize/)
+
+* 2020-12-06: Added next/prev buttons to the season and team top menus, and to the team menu on the trade page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k7pi11/not_totally_sure_if_this_is_a_good_idea_but_i/)
+
 * 2020-12-03: Added ability to view playoff stats on the roster page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
 
 * 2020-12-03: New "Keep sorted" option on the roster page, to let the AI manage sorting your roster (no more clicking "auto sort" periodically). [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
