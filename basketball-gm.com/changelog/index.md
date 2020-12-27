@@ -4,6 +4,10 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2020-12-26: Added a button to delete all players on a team to the roster page.
+
+* 2020-12-26: Added buttons to randomize college and country to the player editor.
+
 * 2020-12-25: A ton of new facial features were added by @TravisJB89 and @domini7. Like 100+ new facial features. [[1]](https://github.com/dumbmatter/facesjs/pull/12) [[2]](https://github.com/dumbmatter/facesjs/pull/11) [[3]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/?)
 
 * 2020-12-25: The concept of "race" was added to the face generator by @icedjuro. Each country in the game is now annotated with a distribution of races so generated faces feel more realistic. Like it's still possible to get a black player from China, but it is much less common. [[1]](https://github.com/dumbmatter/facesjs/pull/10) [[2]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/?)

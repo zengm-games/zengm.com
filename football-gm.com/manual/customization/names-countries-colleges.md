@@ -416,3 +416,33 @@ Here's another example, where "colleges" is set for a country without overriding
     ]
 }
 ```
+
+### Races
+
+Each randomly generated player gets a cartoon face. A face can come from one of 4 "races": Asian, black, brown, and white. The only thing that varies with race is skin color, all other facial features are the same. Each country in the game has its own set of frequencies for the 4 races. You can override them like this, either for built-in countries or for new countries you make:
+
+```
+{
+    "gameAttributes": [
+        {
+            "key": "playerBioInfo",
+            "value": {
+                "countries": {
+                    "Canada": {
+                        "races": {
+                            "asian": 2,
+                            "black": 1,
+                            "brown": 1,
+                            "white": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
+That would change the races for Canadian players to be 40% Asian, 20% black, 20% brown, and 20% white.
+
+If you define a country and don't include races, it will either use the built-in races for that country, or if they don't exist, it will use the built-in races for the USA.
