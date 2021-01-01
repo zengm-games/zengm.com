@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 2019 was awesome
-date: 2020-01-01
+title: 2020 was horrible, but not for Basketball GM
+date: 2021-01-01
 tags:
 - Milestone
 ---
 
 Happy New Year!
 
-2019 was a great year for Basketball GM. The game is better than ever. Well of course I'm a biased source, but it's not just me saying that. The stats speak for themselves.
+I know, everybody's talking about how 2020 sucked and how they hope 2021 will be better. But it's also true that 2020 had at least one redeeming quality - it was a great year for Basketball GM! COVID lockdowns left me with more time to work on development, and it left many of you with more time to play. The end result has been [a ton of new features](/changelog/) that I won't even try to summarize here, and new records in all usage stats:
 
 {:.table}
 | Year | Sessions  | Pageviews   | Total Play Time (years) |
@@ -20,8 +20,11 @@ Happy New Year!
 | 2017 | 1,657,749 | 144,489,273 | 86.79                   |
 | 2018 | 1,868,091 | 184,571,462 | 100.70                  |
 | 2019 | 2,403,039 | 222,568,917 | 136.32                  |
+| 2020 | 3,440,761 | 299,207,611 | 206.10                  |
 
-2019 set new records in all those categories! The last column is the craziest... you guys collectively spent over 136 years playing Basketball GM in 2019. A less impressive way of saying the same thing is that, at any given time during the year, there were on average 136 people playing Basketball GM.
+That's a lot of Basketball GM in 2020! And that's not even including [Football GM](https://football-gm.com/) which of course did a lot better in 2020 than in 2019 because it didn't even exist at the beginning of 2019.
+
+I hope Basketball GM and Football GM brought you all some fun and distraction, I know they did for me. And I promise you, I have even bigger things planned for 2021 :)
 
 <!--more-->
 
@@ -43,6 +46,7 @@ google.charts.setOnLoadCallback(() => {
     ['2017', 1657749],
     ['2018', 1868091],
     ['2019', 2403039],
+    ['2020', 3440761]
   ]);
 
   const data2 = new google.visualization.DataTable();
@@ -56,6 +60,7 @@ google.charts.setOnLoadCallback(() => {
     ['2017', 144489273],
     ['2018', 184571462],
     ['2019', 222568917],
+    ['2020', 299207611]
   ]);
 
   const data3 = new google.visualization.DataTable();
@@ -69,6 +74,7 @@ google.charts.setOnLoadCallback(() => {
     ['2017', 86.79],
     ['2018', 100.70],
     ['2019', 136.32],
+    ['2020', 206.10]
   ]);
 
   const options = {

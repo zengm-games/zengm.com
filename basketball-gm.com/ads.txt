@@ -1,5 +1,5 @@
 # Freestar.io ads.txt File
-# Last updated 12-10-20
+# Last updated 12-21-20
 
 
 # ads.txt to be placed in the root level of the domain
@@ -151,7 +151,7 @@ advertising.com, 28650, RESELLER
 # 33Across
 33across.com, 0013300001cFpYHAA0, DIRECT, bbea06d9c4d2853c 
 appnexus.com, 10239, RESELLER, f5ab79cb980f11d1 
-yahoo.com, 57289, RESELLER,Â  e1a5b5b6e3255540 
+yahoo.com, 57289, RESELLER, e1a5b5b6e3255540
 rubiconproject.com, 16414, RESELLER, 0bfd66d529a55807 
 openx.com, 537120563, RESELLER, 6a698e2ec38604c6 
 indexexchange.com, 191973, RESELLER, 50b1c356f2c5c8fc 
