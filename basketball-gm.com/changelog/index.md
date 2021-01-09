@@ -4,13 +4,25 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2021-01-09: When creating a new Real Players league, there is now a "Real draft prospect ratings" option which allows you to change how draft prospect ratings are defined. The default remains unchanged (ratings are based on rookie season stats), but there is now another option to base ratings purely on draft position. That will result in simulated drafts being much more similar to real drafts. [[1]](https://basketball-gm.com/blog/2021/01/real-draft-prosect-ratings/) [[2]](https://old.reddit.com/r/BasketballGM/comments/ktu8r9/when_creating_a_new_real_players_league_there_is/)
+
+* 2021-01-04: Added "Clear" button to the Draft Scouting page in God Mode to allow you to easily delete all players in a draft class.
+
+* 2021-01-04: Projected cap space is shown on the Upcoming Free Agents page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k49xi4/monthly_suggestions_thread/ggyrl00/)
+
+* 2021-01-04: In expansion drafts, now there is a limit to the number of players that can be selected from each existing team. This number is customizable in expansion draft setup, and defaults to the minimum number required to allow the expansion draft to complete (like if there are 20 existing teams and 4 expansion teams, you need at least 2 players per team for a 10 round expansion draft). [[1]](https://old.reddit.com/r/BasketballGM/comments/kqernl/in_expansion_drafts_now_version_202101041112/)
+
+* 2021-01-03: The number of times a player has won an award is shown in the League History table. [[1]](https://old.reddit.com/r/BasketballGM/comments/kpfnul/a_couple_minor_ui_improvements_on_the_league/)
+
+* 2021-01-03: Team logos are shown in the League History table for the league champion and runner up. [[1]](https://old.reddit.com/r/BasketballGM/comments/kpfnul/a_couple_minor_ui_improvements_on_the_league/)
+
 * 2020-12-26: Added a button to delete all players on a team to the roster page.
 
 * 2020-12-26: Added buttons to randomize college and country to the player editor.
 
-* 2020-12-25: A ton of new facial features were added by @TravisJB89 and @domini7. Like 100+ new facial features. [[1]](https://github.com/dumbmatter/facesjs/pull/12) [[2]](https://github.com/dumbmatter/facesjs/pull/11) [[3]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/?)
+* 2020-12-25: A ton of new facial features were added by @TravisJB89 and @domini7. Like 100+ new facial features. [[1]](https://github.com/dumbmatter/facesjs/pull/12) [[2]](https://github.com/dumbmatter/facesjs/pull/11) [[3]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/)
 
-* 2020-12-25: The concept of "race" was added to the face generator by @icedjuro. Each country in the game is now annotated with a distribution of races so generated faces feel more realistic. Like it's still possible to get a black player from China, but it is much less common. [[1]](https://github.com/dumbmatter/facesjs/pull/10) [[2]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/?)
+* 2020-12-25: The concept of "race" was added to the face generator by @icedjuro. Each country in the game is now annotated with a distribution of races so generated faces feel more realistic. Like it's still possible to get a black player from China, but it is much less common. [[1]](https://github.com/dumbmatter/facesjs/pull/10) [[2]](https://old.reddit.com/r/BasketballGM/comments/kk0vfz/bbgm_christmas_update_version_202012250934/)
 
 * **2020-12-22: You can now add/edit/delete teams in a new Random Players league before creating it, by clicking the "Customize" button under "Pick your team". [[1]](https://old.reddit.com/r/BasketballGM/comments/kiclrx/you_can_now_addeditdelete_teams_in_a_new_random/)**
 
