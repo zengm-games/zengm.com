@@ -4,6 +4,16 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2021-01-19: In the play-by-play during live sims, players can get dunked on.
+
+* 2021-01-18: The "Keep auto sorted" roster option is now per-team rather than global, which may be useful in multi-team mode. This option will also be enabled by default in new leagues.
+
+* 2021-01-16: A few little improvements to FBGM game simulation. Teams will not punt when they're on the verge of losing, and teams will pass more when they're down late. Also fixed a bug where a turnover during a two point conversion resulted in the wrong team kicking off. [[1]](https://old.reddit.com/r/Football_GM/comments/kyvwwa/a_few_little_improvements_to_fbgm_game_simulation/)
+
+* 2021-01-14: Added a new league setting "Number of Periods Per Game" to let you change from the default of 4 quarters to whatever you want. In FBGM, if the number of periods is odd, there is no halftime. In BBGM, I also fixed the logic for which team gets possession at the start of a period (it was actually implemented like football previously which doesn't make any sense, I have no idea what I was thinking when I did that). [[1]](https://old.reddit.com/r/BasketballGM/comments/kxeuym/added_a_new_league_setting_number_of_periods_per/) [[2]](https://old.reddit.com/r/Football_GM/comments/kxev9g/added_a_new_league_setting_number_of_periods_per/)
+
+* 2021-01-11: If you live sim the last game of the playoffs, confetti drops after the game ends. [[1]](https://old.reddit.com/r/BasketballGM/comments/kviwek/if_you_live_sim_the_last_game_of_the_playoffs/)
+
 * 2021-01-09: When creating a new Real Players league, there is now a "Real draft prospect ratings" option which allows you to change how draft prospect ratings are defined. The default remains unchanged (ratings are based on rookie season stats), but there is now another option to base ratings purely on draft position. That will result in simulated drafts being much more similar to real drafts. [[1]](https://basketball-gm.com/blog/2021/01/real-draft-prosect-ratings/) [[2]](https://old.reddit.com/r/BasketballGM/comments/ktu8r9/when_creating_a_new_real_players_league_there_is/)
 
 * 2021-01-04: Added "Clear" button to the Draft Scouting page in God Mode to allow you to easily delete all players in a draft class.
@@ -40,7 +50,7 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * 2020-12-03: Added ability to view playoff stats on the roster page. [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
 
-* 2020-12-03: New "Keep sorted" option on the roster page, to let the AI manage sorting your roster (no more clicking "auto sort" periodically). [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
+* 2020-12-03: New "Keep auto sorted" option on the roster page, to let the AI manage sorting your roster (no more clicking "auto sort" periodically). [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
 
 * 2020-12-03: You can start historical real players leagues at the draft lottery phase. [[1]](https://old.reddit.com/r/BasketballGM/comments/k6ctkt/some_improvements_from_last_months_suggestions/)
 
