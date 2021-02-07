@@ -4,6 +4,10 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2021-02-04: In the Retired Jersey Numbers of the Team History page, it now shows how many championships each player won with this team. [[1]](https://old.reddit.com/r/BasketballGM/comments/lc88pn/number_of_championships_are_shown_for_players/)
+
+* 2021-02-03: Several new facial features in the cartoon face generator from @TravisJB89. [[1]](https://github.com/dumbmatter/facesjs/pull/14)
+
 * 2021-01-19: In the play-by-play during live sims, players can get dunked on.
 
 * 2021-01-18: The "Keep auto sorted" roster option is now per-team rather than global, which may be useful in multi-team mode. This option will also be enabled by default in new leagues.
