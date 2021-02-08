@@ -63,8 +63,8 @@
     "abbrev": "TOR",
     "colors": [
       "#832525",
-      "#5e372c",
-      "#331b16"
+      "#331b16",
+      "#5e372c"
     ],
     "imgURL": "/img/logos/TOR.png",
     "name": "Beavers",
@@ -110,8 +110,8 @@
   "DTF": {
     "abbrev": "DET",
     "colors": [
-      "#3a5eab",
-      "#708fc7",
+      "#3a61b6",
+      "#9eb7e6",
       "#0a1130"
     ],
     "imgURL": "/img/logos/DET.png",
@@ -158,9 +158,9 @@
   "MNL": {
     "abbrev": "MNL",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#00008b",
+      "#ffaf28",
+      "#ff24ee"
     ],
     "imgURL": "/img/logos/LAL.png",
     "name": "Lowriders",
@@ -170,8 +170,8 @@
   "FTW": {
     "abbrev": "FTW",
     "colors": [
-      "#3a5eab",
-      "#708fc7",
+      "#3a61b6",
+      "#9eb7e6",
       "#0a1130"
     ],
     "imgURL": "/img/logos/DET.png",
@@ -182,8 +182,8 @@
   "INJ": {
     "abbrev": "IND",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#e79f02",
+      "#00246d",
       "#ffffff"
     ],
     "imgURL": "/img/logos/IND.png",
@@ -194,8 +194,8 @@
   "INO": {
     "abbrev": "IND",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#e79f02",
+      "#00246d",
       "#ffffff"
     ],
     "imgURL": "/img/logos/IND.png",
@@ -206,8 +206,8 @@
   "SYR": {
     "abbrev": "SYR",
     "colors": [
-      "#bee6f6",
-      "#ffe67b",
+      "#46bae6",
+      "#ffdb33",
       "#3a3a3a"
     ],
     "imgURL": "/img/logos/PHI.png",
@@ -242,9 +242,9 @@
   "SHE": {
     "abbrev": "SHE",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#003600",
+      "#fdc05f",
+      "#007800"
     ],
     "imgURL": "/img/logos/MIL.png",
     "name": "Cheesemakers",
@@ -266,7 +266,7 @@
   "DNN": {
     "abbrev": "DEN",
     "colors": [
-      "#216935",
+      "#2b8643",
       "#163a1c",
       "#a1d297"
     ],
@@ -302,8 +302,8 @@
   "DET": {
     "abbrev": "DET",
     "colors": [
-      "#3a5eab",
-      "#708fc7",
+      "#3a61b6",
+      "#9eb7e6",
       "#0a1130"
     ],
     "imgURL": "/img/logos/DET.png",
@@ -326,9 +326,9 @@
   "LAL": {
     "abbrev": "LAL",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#00008b",
+      "#ffaf28",
+      "#ff24ee"
     ],
     "imgURL": "/img/logos/LAL.png",
     "name": "Lowriders",
@@ -386,8 +386,8 @@
   "PHI": {
     "abbrev": "PHI",
     "colors": [
-      "#bee6f6",
-      "#ffe67b",
+      "#46bae6",
+      "#ffdb33",
       "#3a3a3a"
     ],
     "imgURL": "/img/logos/PHI.png",
@@ -446,9 +446,9 @@
   "MIL": {
     "abbrev": "MIL",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#003600",
+      "#fdc05f",
+      "#007800"
     ],
     "imgURL": "/img/logos/MIL.png",
     "name": "Cheesemakers",
@@ -470,8 +470,8 @@
   "BUF": {
     "abbrev": "BUF",
     "colors": [
-      "#6b6b6b",
-      "#f15d24",
+      "#aeaeae",
+      "#ea4b0f",
       "#dedddd"
     ],
     "imgURL": "/img/logos/LAC.png",
@@ -566,9 +566,9 @@
   "NOJ": {
     "abbrev": "NOM",
     "colors": [
+      "#7c7c7c",
       "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#aea57a"
     ],
     "imgURL": "/img/logos/UTA.png",
     "name": "Missionaries",
@@ -590,9 +590,9 @@
   "NYN": {
     "abbrev": "NYB",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#034757",
+      "#67c7e9",
+      "#b78254"
     ],
     "imgURL": "/img/logos/BKN.png",
     "name": "Bagels",
@@ -614,7 +614,7 @@
   "DEN": {
     "abbrev": "DEN",
     "colors": [
-      "#216935",
+      "#2b8643",
       "#163a1c",
       "#a1d297"
     ],
@@ -626,8 +626,8 @@
   "IND": {
     "abbrev": "IND",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#e79f02",
+      "#00246d",
       "#ffffff"
     ],
     "imgURL": "/img/logos/IND.png",
@@ -638,9 +638,9 @@
   "NJN": {
     "abbrev": "NJ",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#034757",
+      "#67c7e9",
+      "#b78254"
     ],
     "imgURL": "/img/logos/BKN.png",
     "name": "Bagels",
@@ -650,8 +650,8 @@
   "SDC": {
     "abbrev": "SDC",
     "colors": [
-      "#6b6b6b",
-      "#f15d24",
+      "#aeaeae",
+      "#ea4b0f",
       "#dedddd"
     ],
     "imgURL": "/img/logos/LAC.png",
@@ -662,9 +662,9 @@
   "UTA": {
     "abbrev": "UTA",
     "colors": [
+      "#7c7c7c",
       "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#aea57a"
     ],
     "imgURL": "/img/logos/UTA.png",
     "name": "Missionaries",
@@ -686,8 +686,8 @@
   "LAC": {
     "abbrev": "LAC",
     "colors": [
-      "#6b6b6b",
-      "#f15d24",
+      "#aeaeae",
+      "#ea4b0f",
       "#dedddd"
     ],
     "imgURL": "/img/logos/LAC.png",
@@ -710,8 +710,8 @@
   "CHH": {
     "abbrev": "CHQ",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#009e87",
+      "#541f3e",
       "#ffffff"
     ],
     "imgURL": "/img/logos/CHA.png",
@@ -734,9 +734,9 @@
   "ORL": {
     "abbrev": "ORL",
     "colors": [
+      "#dc5000",
       "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#0b7648"
     ],
     "imgURL": "/img/logos/ORL.png",
     "name": "Juice",
@@ -759,8 +759,8 @@
     "abbrev": "TOR",
     "colors": [
       "#832525",
-      "#5e372c",
-      "#331b16"
+      "#331b16",
+      "#5e372c"
     ],
     "imgURL": "/img/logos/TOR.png",
     "name": "Beavers",
@@ -794,9 +794,9 @@
   "MEM": {
     "abbrev": "MEM",
     "colors": [
+      "#ff6c49",
       "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#00aedc"
     ],
     "imgURL": "/img/logos/MEM.png",
     "name": "Blues",
@@ -806,9 +806,9 @@
   "NOH": {
     "abbrev": "NOL",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#195869",
+      "#4edd61",
+      "#0e3e33"
     ],
     "imgURL": "/img/logos/NOL.png",
     "name": "Bayou",
@@ -818,8 +818,8 @@
   "CHA": {
     "abbrev": "CHA",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#009e87",
+      "#541f3e",
       "#ffffff"
     ],
     "imgURL": "/img/logos/CHA.png",
@@ -830,9 +830,9 @@
   "OKC": {
     "abbrev": "OKC",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#610000",
+      "#bbb29e",
+      "#e4dfcf"
     ],
     "imgURL": "/img/logos/OKC.png",
     "name": "66ers",
@@ -842,9 +842,9 @@
   "BRK": {
     "abbrev": "BKN",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#034757",
+      "#67c7e9",
+      "#b78254"
     ],
     "imgURL": "/img/logos/BKN.png",
     "name": "Bagels",
@@ -854,9 +854,9 @@
   "NOP": {
     "abbrev": "NOL",
     "colors": [
-      "#000000",
-      "#cccccc",
-      "#ffffff"
+      "#195869",
+      "#4edd61",
+      "#0e3e33"
     ],
     "imgURL": "/img/logos/NOL.png",
     "name": "Bayou",
@@ -866,8 +866,8 @@
   "CHO": {
     "abbrev": "CHA",
     "colors": [
-      "#000000",
-      "#cccccc",
+      "#009e87",
+      "#541f3e",
       "#ffffff"
     ],
     "imgURL": "/img/logos/CHA.png",
