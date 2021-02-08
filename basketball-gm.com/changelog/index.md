@@ -4,6 +4,8 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2021-02-07: In BBGM, added a new league setting available in God Mode to control the number of fouls in a period before the bonus. Thanks @domini7! This setting automatically changes in historical leagues in 1955 and 1967. [[1]](https://github.com/dumbmatter/gm-games/pull/351) [[2]](https://old.reddit.com/r/BasketballGM/comments/legy0a/udominila_added_a_new_league_setting_available_in/)
+
 * 2021-02-04: In the Retired Jersey Numbers of the Team History page, it now shows how many championships each player won with this team. [[1]](https://old.reddit.com/r/BasketballGM/comments/lc88pn/number_of_championships_are_shown_for_players/)
 
 * 2021-02-03: Several new facial features in the cartoon face generator from @TravisJB89. [[1]](https://github.com/dumbmatter/facesjs/pull/14)
