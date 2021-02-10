@@ -4,6 +4,7 @@ title: "Trade frivolities: biggest trades and most lopsided trades"
 date: 2020-11-19
 tags:
 - Frivolities
+- New Feature
 - Trades
 - UI
 ---

@@ -3,6 +3,7 @@ layout: post
 title: Improved trade details and a new Trade Summary page
 date: 2020-11-15
 tags:
+- New Feature
 - News Feed
 - Trades
 - UI
