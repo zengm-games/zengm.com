@@ -1,29 +1,20 @@
 {
-    "gameAttributes": [
-        {
-            "key": "confs",
-            "value": [
-                {"cid": 0, "name": "Eastern Conference"},
-                {"cid": 1, "name": "Central Conference"},
-                {"cid": 2, "name": "Western Conference"}
-            ]
-        },
-        {
-            "key": "divs",
-            "value": [
-                {"did": 0, "cid": 0, "name": "Northeast"},
-                {"did": 1, "cid": 0, "name": "Southeast"},
-                {"did": 2, "cid": 1, "name": "North"},
-                {"did": 3, "cid": 1, "name": "South"},
-                {"did": 4, "cid": 2, "name": "Northwest"},
-                {"did": 5, "cid": 2, "name": "Southwest"}
-            ]
-        },
-        {
-            "key": "numPlayoffRounds",
-            "value": 2
-        }
-    ],
+    "gameAttributes": {
+        "confs": [
+            {"cid": 0, "name": "Eastern Conference"},
+            {"cid": 1, "name": "Central Conference"},
+            {"cid": 2, "name": "Western Conference"}
+        ],
+        "divs": [
+            {"did": 0, "cid": 0, "name": "Northeast"},
+            {"did": 1, "cid": 0, "name": "Southeast"},
+            {"did": 2, "cid": 1, "name": "North"},
+            {"did": 3, "cid": 1, "name": "South"},
+            {"did": 4, "cid": 2, "name": "Northwest"},
+            {"did": 5, "cid": 2, "name": "Southwest"}
+        ],
+        "numPlayoffRounds": 2
+    },
     "teams": [
         {"tid": 0, "cid": 0, "did": 0, "region": "Baltimore", "name": "Crabs", "abbrev": "BAL", "pop": 2.2},
         {"tid": 1, "cid": 0, "did": 0, "region": "Boston", "name": "Massacre", "abbrev": "BOS", "pop": 4.4},

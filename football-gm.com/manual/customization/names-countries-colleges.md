@@ -12,39 +12,36 @@ Specify custom names like this:
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "USA": {
-                        "first": {
-                            "George": 1,
-                            "John": 10,
-                            "Thomas": 2
-                        },
-                        "last": {
-                            "Washington": 1,
-                            "Adams": 5,
-                            "Jefferson": 1
-                        }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "USA": {
+                    "first": {
+                        "George": 1,
+                        "John": 10,
+                        "Thomas": 2
                     },
-                    "Canada": {
-                        "first": {
-                            "Bob": 3,
-                            "Aaron": 1,
-                            "Chad": 1
-                        },
-                        "last": {
-                            "Smith": 1,
-                            "Jones": 5,
-                            "Anderson": 4
-                        }
+                    "last": {
+                        "Washington": 1,
+                        "Adams": 5,
+                        "Jefferson": 1
+                    }
+                },
+                "Canada": {
+                    "first": {
+                        "Bob": 3,
+                        "Aaron": 1,
+                        "Chad": 1
+                    },
+                    "last": {
+                        "Smith": 1,
+                        "Jones": 5,
+                        "Anderson": 4
                     }
                 }
             }
         }
-    ]
+    }
 }
 ```
 
@@ -82,136 +79,133 @@ The "frequencies" field lets you specify which countries players are drawn from,
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "frequencies": {
-                    "Algeria": 0.2,
-                    "American Samoa": 70,
-                    "Angola": 1,
-                    "Argentina": 1,
-                    "Armenia": 0.2,
-                    "Australia": 108,
-                    "Austria": 5,
-                    "Azerbaijan": 0.2,
-                    "Bahamas": 6,
-                    "Belarus": 0.2,
-                    "Belgium": 1,
-                    "Benin": 0.2,
-                    "Bolivia": 0.2,
-                    "Bosnia and Herzegovina": 0.2,
-                    "Brazil": 2,
-                    "Bulgaria": 0.2,
-                    "Cameroon": 2,
-                    "Canada": 219,
-                    "Cape Verde": 0.2,
-                    "Central African Republic": 0.2,
-                    "Chad": 0.2,
-                    "Chile": 0.2,
-                    "China": 1,
-                    "Colombia": 0.2,
-                    "Congo": 0.2,
-                    "Costa Rica": 0.2,
-                    "Croatia": 0.2,
-                    "Cuba": 0.2,
-                    "Czech Republic": 0.2,
-                    "Denmark": 7,
-                    "Dominican Republic": 1,
-                    "East Timor": 0.2,
-                    "Egypt": 0.2,
-                    "El Salvador": 0.2,
-                    "England": 13,
-                    "Equador": 0.2,
-                    "Estonia": 1,
-                    "Ethiopia": 0.2,
-                    "Finland": 5,
-                    "France": 2,
-                    "French Guiana": 0.2,
-                    "Gabon": 0.2,
-                    "Georgia": 0.2,
-                    "Germany": 31,
-                    "Ghana": 3,
-                    "Greece": 0.2,
-                    "Guadeloupe": 0.2,
-                    "Guatemala": 0.2,
-                    "Guinea": 0.2,
-                    "Guinea-Bissau": 0.2,
-                    "Haiti": 1,
-                    "Honduras": 0.2,
-                    "Hungary": 0.2,
-                    "Iceland": 0.2,
-                    "India": 0.2,
-                    "Indonesia": 0.2,
-                    "Iran": 0.2,
-                    "Ireland": 1,
-                    "Israel": 0.2,
-                    "Italy": 4,
-                    "Ivory Coast": 0.2,
-                    "Jamaica": 0.2,
-                    "Japan": 9,
-                    "Kazakhstan": 0.2,
-                    "Kenya": 1,
-                    "Kosovo": 0.2,
-                    "Kyrgyzstan": 0.2,
-                    "Laos": 0.2,
-                    "Latvia": 1,
-                    "Liberia": 1,
-                    "Lithuania": 0.2,
-                    "Luxembourg": 0.2,
-                    "Macau": 0.2,
-                    "Mali": 0.2,
-                    "Mexico": 10,
-                    "Moldova": 1,
-                    "Montenegro": 0.2,
-                    "Morocco": 0.2,
-                    "Mozambique": 0.2,
-                    "Nepal": 0.2,
-                    "Netherlands": 9,
-                    "New Zealand": 4,
-                    "Nicaragua": 0.2,
-                    "Nigeria": 14,
-                    "North Korea": 0.2,
-                    "North Macedonia": 0.2,
-                    "Norway": 2,
-                    "Pakistan": 0.2,
-                    "Panama": 0.2,
-                    "Papua New Guinea": 0.2,
-                    "Paraguay": 0.2,
-                    "Peru": 0.2,
-                    "Philippines": 0.2,
-                    "Poland": 0.2,
-                    "Portugal": 0.2,
-                    "Puerto Rico": 3,
-                    "Romania": 0.2,
-                    "Russia": 2,
-                    "Samoa": 1,
-                    "Scotland": 2,
-                    "Senegal": 0.2,
-                    "Serbia": 1,
-                    "Slovakia": 1,
-                    "Slovenia": 0.2,
-                    "South Africa": 4,
-                    "South Korea": 1,
-                    "South Sudan": 0.2,
-                    "Spain": 0.2,
-                    "Sudan": 0.2,
-                    "Sweden": 13,
-                    "Switzerland": 2,
-                    "Thailand": 0.2,
-                    "Trinidad and Tobago": 0.2,
-                    "Turkey": 0.2,
-                    "USA": 73489,
-                    "Ukraine": 0.2,
-                    "Uruguay": 0.2,
-                    "Uzbekistan": 0.2,
-                    "Venezuela": 0.2,
-                    "Vietnam": 0.2,
-                    "Virgin Islands": 1
-                }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "frequencies": {
+                "Algeria": 0.2,
+                "American Samoa": 70,
+                "Angola": 1,
+                "Argentina": 1,
+                "Armenia": 0.2,
+                "Australia": 108,
+                "Austria": 5,
+                "Azerbaijan": 0.2,
+                "Bahamas": 6,
+                "Belarus": 0.2,
+                "Belgium": 1,
+                "Benin": 0.2,
+                "Bolivia": 0.2,
+                "Bosnia and Herzegovina": 0.2,
+                "Brazil": 2,
+                "Bulgaria": 0.2,
+                "Cameroon": 2,
+                "Canada": 219,
+                "Cape Verde": 0.2,
+                "Central African Republic": 0.2,
+                "Chad": 0.2,
+                "Chile": 0.2,
+                "China": 1,
+                "Colombia": 0.2,
+                "Congo": 0.2,
+                "Costa Rica": 0.2,
+                "Croatia": 0.2,
+                "Cuba": 0.2,
+                "Czech Republic": 0.2,
+                "Denmark": 7,
+                "Dominican Republic": 1,
+                "East Timor": 0.2,
+                "Egypt": 0.2,
+                "El Salvador": 0.2,
+                "England": 13,
+                "Equador": 0.2,
+                "Estonia": 1,
+                "Ethiopia": 0.2,
+                "Finland": 5,
+                "France": 2,
+                "French Guiana": 0.2,
+                "Gabon": 0.2,
+                "Georgia": 0.2,
+                "Germany": 31,
+                "Ghana": 3,
+                "Greece": 0.2,
+                "Guadeloupe": 0.2,
+                "Guatemala": 0.2,
+                "Guinea": 0.2,
+                "Guinea-Bissau": 0.2,
+                "Haiti": 1,
+                "Honduras": 0.2,
+                "Hungary": 0.2,
+                "Iceland": 0.2,
+                "India": 0.2,
+                "Indonesia": 0.2,
+                "Iran": 0.2,
+                "Ireland": 1,
+                "Israel": 0.2,
+                "Italy": 4,
+                "Ivory Coast": 0.2,
+                "Jamaica": 0.2,
+                "Japan": 9,
+                "Kazakhstan": 0.2,
+                "Kenya": 1,
+                "Kosovo": 0.2,
+                "Kyrgyzstan": 0.2,
+                "Laos": 0.2,
+                "Latvia": 1,
+                "Liberia": 1,
+                "Lithuania": 0.2,
+                "Luxembourg": 0.2,
+                "Macau": 0.2,
+                "Mali": 0.2,
+                "Mexico": 10,
+                "Moldova": 1,
+                "Montenegro": 0.2,
+                "Morocco": 0.2,
+                "Mozambique": 0.2,
+                "Nepal": 0.2,
+                "Netherlands": 9,
+                "New Zealand": 4,
+                "Nicaragua": 0.2,
+                "Nigeria": 14,
+                "North Korea": 0.2,
+                "North Macedonia": 0.2,
+                "Norway": 2,
+                "Pakistan": 0.2,
+                "Panama": 0.2,
+                "Papua New Guinea": 0.2,
+                "Paraguay": 0.2,
+                "Peru": 0.2,
+                "Philippines": 0.2,
+                "Poland": 0.2,
+                "Portugal": 0.2,
+                "Puerto Rico": 3,
+                "Romania": 0.2,
+                "Russia": 2,
+                "Samoa": 1,
+                "Scotland": 2,
+                "Senegal": 0.2,
+                "Serbia": 1,
+                "Slovakia": 1,
+                "Slovenia": 0.2,
+                "South Africa": 4,
+                "South Korea": 1,
+                "South Sudan": 0.2,
+                "Spain": 0.2,
+                "Sudan": 0.2,
+                "Sweden": 13,
+                "Switzerland": 2,
+                "Thailand": 0.2,
+                "Trinidad and Tobago": 0.2,
+                "Turkey": 0.2,
+                "USA": 73489,
+                "Ukraine": 0.2,
+                "Uruguay": 0.2,
+                "Uzbekistan": 0.2,
+                "Venezuela": 0.2,
+                "Vietnam": 0.2,
+                "Virgin Islands": 1
             }
         }
-    ]
+    }
 }
 ```
 
@@ -232,44 +226,41 @@ So to go back to that first example from the "Player Names" section, here it is 
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "USA": {
-                        "first": {
-                            "George": 1,
-                            "John": 10,
-                            "Thomas": 2
-                        },
-                        "last": {
-                            "Washington": 1,
-                            "Adams": 5,
-                            "Jefferson": 1
-                        }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "USA": {
+                    "first": {
+                        "George": 1,
+                        "John": 10,
+                        "Thomas": 2
                     },
-                    "Canada": {
-                        "first": {
-                            "Bob": 3,
-                            "Aaron": 1,
-                            "Chad": 1
-                        },
-                        "last": {
-                            "Smith": 1,
-                            "Jones": 5,
-                            "Anderson": 4
-                        }
+                    "last": {
+                        "Washington": 1,
+                        "Adams": 5,
+                        "Jefferson": 1
                     }
                 },
-                "frequencies": {
-                    "USA": 8,
-                    "Canada": 1,
-                    "Mexico": 1
+                "Canada": {
+                    "first": {
+                        "Bob": 3,
+                        "Aaron": 1,
+                        "Chad": 1
+                    },
+                    "last": {
+                        "Smith": 1,
+                        "Jones": 5,
+                        "Anderson": 4
+                    }
                 }
+            },
+            "frequencies": {
+                "USA": 8,
+                "Canada": 1,
+                "Mexico": 1
             }
         }
-    ]
+    }
 }
 ```
 
@@ -290,20 +281,17 @@ First I'll show "default colleges" and "default fractionSkipCollege":
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "default": {
-                    "colleges": {
-                        "Harvard": 2,
-                        "Yale": 1
-                    },
-                    "fractionSkipCollege": 0.4
-                }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "default": {
+                "colleges": {
+                    "Harvard": 2,
+                    "Yale": 1
+                },
+                "fractionSkipCollege": 0.4
             }
         }
-    ]
+    }
 }
 ```
 
@@ -313,24 +301,21 @@ That will result in Harvard and Yale being the only colleges in the game. The nu
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "USA": {
-                        "fractionSkipCollege": 0.2
-                    },
-                    "Canada": {
-                        "fractionSkipCollege": 0.2
-                    }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "USA": {
+                    "fractionSkipCollege": 0.2
                 },
-                "default": {
+                "Canada": {
                     "fractionSkipCollege": 0.2
                 }
+            },
+            "default": {
+                "fractionSkipCollege": 0.2
             }
         }
-    ]
+    }
 }
 ```
 
@@ -340,50 +325,47 @@ The "colleges" setting is very similar. The only difference is that it applies t
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "USA": {
-                        "first": {
-                            "George": 1,
-                            "John": 10,
-                            "Thomas": 2
-                        },
-                        "last": {
-                            "Washington": 1,
-                            "Adams": 5,
-                            "Jefferson": 1
-                        },
-                        "colleges": {
-                            "Harvard": 2,
-                            "Yale": 1
-                        }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "USA": {
+                    "first": {
+                        "George": 1,
+                        "John": 10,
+                        "Thomas": 2
                     },
-                    "Canada": {
-                        "first": {
-                            "Bob": 3,
-                            "Aaron": 1,
-                            "Chad": 1
-                        },
-                        "last": {
-                            "Smith": 1,
-                            "Jones": 5,
-                            "Anderson": 4
-                        },
-                        "fractionSkipCollege": 0.5
+                    "last": {
+                        "Washington": 1,
+                        "Adams": 5,
+                        "Jefferson": 1
+                    },
+                    "colleges": {
+                        "Harvard": 2,
+                        "Yale": 1
                     }
                 },
-                "default": {
-                    "colleges": {
-                        "Stanford": 1,
-                        "UCLA": 1
-                    }
+                "Canada": {
+                    "first": {
+                        "Bob": 3,
+                        "Aaron": 1,
+                        "Chad": 1
+                    },
+                    "last": {
+                        "Smith": 1,
+                        "Jones": 5,
+                        "Anderson": 4
+                    },
+                    "fractionSkipCollege": 0.5
+                }
+            },
+            "default": {
+                "colleges": {
+                    "Stanford": 1,
+                    "UCLA": 1
                 }
             }
         }
-    ]
+    }
 }
 ```
 
@@ -395,25 +377,22 @@ Here's another example, where "colleges" is set for a country without overriding
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "USA": {
-                        "colleges": {
-                            "Harvard": 2,
-                            "Yale": 1
-                        }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "USA": {
+                    "colleges": {
+                        "Harvard": 2,
+                        "Yale": 1
                     }
-                },
-                "frequencies": {
-                    "USA": 1,
-                    "Canada": 1
                 }
+            },
+            "frequencies": {
+                "USA": 1,
+                "Canada": 1
             }
         }
-    ]
+    }
 }
 ```
 
@@ -423,23 +402,20 @@ Each randomly generated player gets a cartoon face. A face can come from one of 
 
 ```
 {
-    "gameAttributes": [
-        {
-            "key": "playerBioInfo",
-            "value": {
-                "countries": {
-                    "Canada": {
-                        "races": {
-                            "asian": 2,
-                            "black": 1,
-                            "brown": 1,
-                            "white": 1
-                        }
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "Canada": {
+                    "races": {
+                        "asian": 2,
+                        "black": 1,
+                        "brown": 1,
+                        "white": 1
                     }
                 }
             }
         }
-    ]
+    }
 }
 ```
 

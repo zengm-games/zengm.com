@@ -6,65 +6,35 @@ title: Game Attributes Customization
 <p>"Game Attributes" refers to some high-level variables that define the state of your game. When making a League File, don't have to specify them. Any you leave out will just get their default values. Some attributes that might be worth playing with are described here:</p>
 <pre>
 {
-    "version": 33,
-    "gameAttributes": [
-        {
-            "key": "userTid",
-            "value": 15
+    "version": 42,
+    "gameAttributes": {
+        "userTid": 15,
+        "phase": 0,
+        "daysLeft": 0,
+        "ownerMood": {
+            "wins": 0,
+            "playoffs": 0,
+            "money": 0
         },
-        {
-            "key": "phase",
-            "value": 0
-        },
-        {
-            "key": "daysLeft",
-            "value": 0
-        },
-        {
-            "key": "ownerMood",
-            "value": {
-                "wins": 0,
-                "playoffs": 0,
-                "money": 0
-            }
-        },
-        {
-            "key": "season",
-            "value": 2013
-        },
-        {
-            "key": "startingSeason",
-            "value": 2013
-        },
-        {
-            "key": "gracePeriodEnd",
-            "value": 2015
-        },
-        {
-            "key": "numGamesPlayoffSeries",
-            "value": [1, 1, 1, 1]
-        },
-        {
-            "key": "confs",
-            "value": [
-                {"cid": 0, "name": "American Conference"},
-                {"cid": 1, "name": "National Conference"}
-            ]
-        },
-        {
-            "key": "divs",
-            "value": [
-                {"did": 0, "cid": 0, "name": "East"},
-                {"did": 1, "cid": 0, "name": "North"},
-                {"did": 2, "cid": 0, "name": "South"},
-                {"did": 3, "cid": 0, "name": "West"},
-                {"did": 4, "cid": 1, "name": "East"},
-                {"did": 5, "cid": 1, "name": "North"},
-                {"did": 6, "cid": 1, "name": "South"},
-                {"did": 7, "cid": 1, "name": "West"}
-            ]
-        }
-    ]
+        "season": 2013,
+        "startingSeason": 2013,
+        "gracePeriodEnd": 2015,
+        "numGamesPlayoffSeries": [1, 1, 1, 1],
+        "confs": [
+            {"cid": 0, "name": "American Conference"},
+            {"cid": 1, "name": "National Conference"}
+        ],
+        "divs": [
+            {"did": 0, "cid": 0, "name": "East"},
+            {"did": 1, "cid": 0, "name": "North"},
+            {"did": 2, "cid": 0, "name": "South"},
+            {"did": 3, "cid": 0, "name": "West"},
+            {"did": 4, "cid": 1, "name": "East"},
+            {"did": 5, "cid": 1, "name": "North"},
+            {"did": 6, "cid": 1, "name": "South"},
+            {"did": 7, "cid": 1, "name": "West"}
+        ]
+    }
 }
 </pre>
 <p><code>userTid</code> is the ID number of the team you are managing, from 0 to 30. Setting it here will make it the default for new leagues created with this League File, but users can still change it if they want.</p>
