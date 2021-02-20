@@ -33,5 +33,5 @@ Currently these components are:
 * Team performance - regular season and playoff success.
 * Hype - viewable from the Team Finances page, this is how excited your fans are.
 * Loyalty - players who have been on your team for multiple seasons might be loyal to your franchise.
-* Trades - if you trade away tons of players, players will look at that negatively.
+* Trades - if you trade away good players, players will look at that negatively. Trading away bad players or prospects matters much less.
 * Rookie contract - players on rookie contracts are eager to sign their next contract.
