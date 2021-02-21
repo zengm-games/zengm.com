@@ -19,6 +19,7 @@ There are two things to customize on [the options page](https://play.basketball-
       "#ffe67b",
       "#3a3a3a"
     ],
+    "jersey": "jersey3",
     "imgURL": "/img/logos/PHI.png",
     "name": "Cheesesteaks",
     "pop": 0.6,
