@@ -1,0 +1,123 @@
+:root {
+	--orange: #f05742;
+	--purple-dark: #695fab;
+	--purple-light: #a89aff;
+	--bg-1: #121212;
+	--bg-2: #272727;
+}
+
+body {
+	background-color: var(--bg-1);
+	color: #fff;
+	opacity: 87%;
+	font-size: 18px;
+}
+
+.top-1 {
+	background-color: var(--orange);
+	height: 10px;
+	width: 100%;
+}
+.top-2 {
+	background-color: var(--purple-dark);
+	height: 10px;
+	width: 100%;
+}
+
+.logo {
+	height: 192px;
+	width: 192px;
+	cursor: pointer;
+}
+
+.container {
+	max-width: 720px;
+}
+.bg-alt {
+	background-color: var(--bg-2);
+}
+
+.headline {
+	color: var(--orange);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+ul {
+	margin-left: -40px;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+ul li::before {
+	content: "\2022";
+	color: var(--orange);
+	font-weight: bold;
+	display: inline-block;
+	width: 20px;
+	margin-left: -20px;
+}
+
+ul.main-list li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+	ul.main-list li::before {
+		content: none;
+	}
+	ul li::before {
+		margin-left: 0px;
+	}
+}
+
+h1 {
+	font-size: 24px;
+}
+
+a, a:hover {
+	color: var(--purple-light);
+}
+
+.flagship {
+	color: inherit;
+	background-color: var(--bg-2);
+	min-height: 98px;
+}
+.flagship:hover {
+	color: inherit;
+	background-color: var(--bg-1);
+	text-decoration: inherit;
+}
+.flagship img {
+	height: 82px;
+	width: 82px;
+}
+.flagship h2 {
+	font-size: 20px;
+	margin-top: 2px;
+}
+.flagship p {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+.face {
+	height: 150px;
+	width: 100px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@media (max-width: 575px) {
+	.logo {
+		height: 164px;
+		width: 164px;
+	}
+
+	.face {
+		height: 117px;
+		width: 78px;
+	}
+}
