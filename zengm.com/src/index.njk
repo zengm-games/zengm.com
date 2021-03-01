@@ -12,14 +12,14 @@
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-{% include "google-analytics.njk" %}
+	{% include "google-analytics.njk" %}
 
-{% set css %}
-	{% include "index.css" %}
-{% endset %}
-<style>
-{{ css | cssmin | safe }}
-</style>
+	{% set css %}
+		{% include "index.css" %}
+	{% endset %}
+	<style>
+		{{ css | cssmin | safe }}
+	</style>
 	</head>
 	<body class="pb-0">
 		<div class="top-1"></div>
@@ -147,11 +147,11 @@
 			</div>
 		</div>
 	</body>
-<script src="http://dumbmatter.com/facesjs/build/bundle.js"></script>
-{% set js %}
-	{% include "index.js" %}
-{% endset %}
-<script>
-{{ js | jsmin | safe }}
-</script>
+	<script src="http://dumbmatter.com/facesjs/build/bundle.js"></script>
+	{% set js %}
+		{% include "index.js" %}
+	{% endset %}
+	<script>
+		{{ js | jsmin | safe }}
+	</script>
 </html>
