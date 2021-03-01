@@ -35,3 +35,5 @@ The six countries where Basketball GM has not yet been played are:
 North Korea is much bigger than those other countries, but it lacks things like Internet access or even electricity for most people. Even so, given [the popularity of basketball in North Korea](https://www.foxnews.com/sports/north-korea-us-relations-famous-basketball-players), I have to believe that somebody has played Basketball GM. Maybe even the Supreme Leader himself! It could be that Google Analytics simply doesn't store data from North Korea, or maybe North Korea has Google completely blocked.
 
 Besides that... these are just some tiny, tiny countries. My dream of having Basketball GM users in every country is probably far away. But [187](https://www.youtube.com/watch?v=Op9Ml7pS6uA) is not bad!
+
+**Update, 2021-02-22:** Since the original blog post, you can cross Palau and North Korea off the list! Only 4 countries remain...

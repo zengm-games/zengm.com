@@ -4,6 +4,8 @@ title: Changelog
 ---
 This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Football GM](https://football-gm.com/).
 
+* 2021-02-21: Following up on yesterday's jersey styles option, @ClevelandFan went through all the default teams in BBGM and gave them jersey styles that look good. This will only affect new leagues and expansion teams.
+
 * 2021-02-20: At Tools > Manage Teams, it is now possible to change the team jersey styles used for cartoon players. [[1]](https://old.reddit.com/r/BasketballGM/comments/loggnj/shot_locations_tables_are_now_shot_locations_and/)
 
 * 2021-02-20: In BBGM, "Shot Locations" tables are now "Shot Locations and Feats" and they also show double doubles, triple doubles, quadruple doubles, and five by fives. [[1]](https://old.reddit.com/r/BasketballGM/comments/loggnj/shot_locations_tables_are_now_shot_locations_and/)
@@ -552,7 +554,7 @@ This changelog is for both [Basketball GM](https://basketball-gm.com/) and [Foot
 
 * 2019-07-15: Renamed Macedonia to North Macedonia.
 
-* **2019-07-07: The Edit Team Info page has been renamed to Manage Teams nad it now includes (very rudimentary) support for adding and removing teams. [[1]](https://old.reddit.com/r/BasketballGM/comments/cafqfp/in_god_mode_the_edit_team_info_page_has_been/)**
+* **2019-07-07: The Edit Team Info page has been renamed to Manage Teams and it now includes (very rudimentary) support for adding and removing teams. [[1]](https://old.reddit.com/r/BasketballGM/comments/cafqfp/in_god_mode_the_edit_team_info_page_has_been/)**
 
 * 2019-06-27: Added support for creating a league file from a URL to a JSON file (with the apporpriate Access-Control-Allow-Origin header) rather than just uploading a file.
 

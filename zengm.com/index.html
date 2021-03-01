@@ -42,6 +42,7 @@ body {
 .logo {
 	height: 192px;
 	width: 192px;
+	cursor: pointer;
 }
 
 .container {
@@ -142,7 +143,7 @@ a, a:hover {
 		<div class="top-2"></div>
 		<div class="d-flex align-items-end my-5 mx-1">
 			<div id="face0" class="face ml-auto"></div>
-			<img src="logo.svg" class="logo mx-2 mx-sm-3">
+			<img id="logo" class="logo mx-2 mx-sm-3" src="logo.svg">
 			<div id="face1" class="face mr-auto"></div>
 		</div>
 		<div class="container pb-4">
@@ -219,7 +220,7 @@ a, a:hover {
 			<div class="container">
 				<h1>Other Games</h1>
 
-				<p>These games are ports of old versions of <a href="https://basketball-gm.com/">Basketball GM</a> to other sports, made by another developer who is no longer working on the project. Currently they are not under active development, but in the future we will bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a>, <a href="https://football-gm.com/">Football GM</a>, and <a href="https://hockey.zengm.com/">ZenGM Hockey</a>.</p>
+				<p>These games are ports of old versions of <a href="https://basketball-gm.com/">Basketball GM</a> to other sports. Currently they are not under active development, but in the future we will bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a>, <a href="https://football-gm.com/">Football GM</a>, and <a href="https://hockey.zengm.com/">ZenGM Hockey</a>.</p>
 
 				<div class="row mb-3">
 					<div class="col-12 col-sm-6">
@@ -279,8 +280,10 @@ function genFace0() {
 	faces.display(face0, face);
 }
 
+var prevType = Math.random() < 0.5 ? "football" : "hockey";
 function genFace1() {
-	var jerseys = ["football", "football2", "football3", "hockey"];
+	var jerseys = prevType === "hockey" ? ["football", "football2", "football3"] : ["hockey"];
+	prevType = prevType === "hockey" ? "football" : "hockey";
 	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
 	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":jersey}});
 	if (face.hair.color === "#0f0902") {
@@ -295,5 +298,9 @@ genFace1();
 
 face0.addEventListener("click", genFace0);
 face1.addEventListener("click", genFace1);
+document.getElementById("logo").addEventListener("click", function () {
+	genFace0();
+	genFace1();	
+});
 	</script>
 </html>
