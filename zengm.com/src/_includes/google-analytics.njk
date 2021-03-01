@@ -1,0 +1,11 @@
+{% if env.NODE_ENV == "production" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38759330-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-38759330-3', {
+  'cookie_domain': 'zengm.com'
+});
+</script>
+{% endif %}

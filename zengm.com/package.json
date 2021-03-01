@@ -1,8 +1,8 @@
 {
   "name": "zengm.com",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
