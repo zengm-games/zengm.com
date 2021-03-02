@@ -8,7 +8,6 @@ function genFace0() {
 	if (face.hair.color === "#0f0902") {
 		face.hair.color = "#272421";
 	}
-	console.log(face.hair.color);
 	faces.display(face0, face);
 }
 
@@ -21,7 +20,6 @@ function genFace1() {
 	if (face.hair.color === "#0f0902") {
 		face.hair.color = "#272421";
 	}
-	console.log(face.hair.color);
 	faces.display(face1, face);
 }
 

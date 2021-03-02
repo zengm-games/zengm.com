@@ -3,20 +3,55 @@
   <head>
     {% include "head-common.njk" %}
     <title>ZenGM > {{ title }}</title>
-    <link href="starter-template.css" rel="stylesheet">
+    <style>
+#face {
+  height: 48px;
+  width: 36px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.top-nav {
+  background-color: #e9ecef;
+}
+
+.breadcrumb {
+  background-color: inherit;
+}
+    </style>
   </head>
   <body>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
-  </ol>
-</nav>
+<div class="d-flex bg-light mb-3 top-nav">
+  <div id="face" class="ml-3"></div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+    </ol>
+  </nav>
+</div>
       
 <main role="main" class="container">
   {{ content | safe }}
 </main>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script></body>
+
+<script src="http://dumbmatter.com/facesjs/build/bundle.js"></script>
+<script>
+var div = document.getElementById("face");
+
+function genFace() {
+  var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
+  if (face.hair.color === "#0f0902") {
+    face.hair.color = "#272421";
+  }
+  faces.display(div, face);
+}
+
+genFace();
+
+face.addEventListener("click", genFace);
+</script>
+</body>
 </html>
