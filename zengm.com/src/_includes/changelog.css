@@ -1,3 +1,7 @@
 #changelog li {
 	margin-bottom: 1rem;
 }
+
+.changelog-buttons img{
+    vertical-align: -3px;
+}
