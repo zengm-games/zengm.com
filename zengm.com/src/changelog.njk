@@ -1,0 +1,15 @@
+---
+layout: layout.njk
+title: Changelog
+---
+
+<p>This is a user-focused changelog. The entries here are things that affect gameplay, not technical details behind the scenes.</p>
+
+<ul class="changelog">
+  {% for entry in changelog %}
+  <li
+    {% if entry.big %} class="text-highlight"{% endif %}>
+    <p>{{ entry.date }}: {{ entry.text | renderUsingMarkdown | safe}}</p>
+  </li>
+  {% endfor %}
+</ul>

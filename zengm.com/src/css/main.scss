@@ -16,6 +16,18 @@ h5 {
 	font-size: 12px;
 }
 
+:root {
+	--orange: #f05742;
+	--purple-dark: #695fab;
+	--purple-light: #a89aff;
+	--bg-1: #222222;
+	--bg-2: #3b3b3b;
+}
+
 a, a:hover {
 	color: var(--purple-light);
+}
+
+.text-highlight {
+	color: var(--orange);
 }

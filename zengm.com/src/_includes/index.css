@@ -1,11 +1,3 @@
-:root {
-	--orange: #f05742;
-	--purple-dark: #695fab;
-	--purple-light: #a89aff;
-	--bg-1: #222222;
-	--bg-2: #3b3b3b;
-}
-
 body {
 	background-color: var(--bg-1);
 	color: #fff;

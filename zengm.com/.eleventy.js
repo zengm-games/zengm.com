@@ -1,6 +1,8 @@
 const CleanCSS = require("clean-css");
 const htmlmin = require("html-minifier");
 const { minify } = require("terser");
+const MarkdownIt = require("markdown-it");
+const mdRender = new MarkdownIt();
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/files");
@@ -40,6 +42,10 @@ module.exports = function(eleventyConfig) {
         }
 
         return content;
+    });
+
+    eleventyConfig.addFilter("renderUsingMarkdown", function(rawString) {
+         return mdRender.renderInline(rawString);
     });
 
     return {
