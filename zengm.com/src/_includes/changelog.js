@@ -13,11 +13,24 @@ const buttons = {
 
 const list = document.getElementById("changelog");
 
-const hideSport = (sport) => {
+const updateDisplayedEntries = (sport) => {
     for (const child of list.children) {
-        if (child.dataset[sport]) {
-            child.style.display = "none";
+        // Sport displayed?
+        let display = false;
+        for (const sport of Object.keys(buttons)) {
+            if (state[sport] && child.dataset[sport]) {
+                display = true;
+            }
         }
+
+        // Big news
+        if (display) {
+            if (state.onlyBigNews && !child.dataset.big) {
+                display = false;
+            }
+        }
+
+        child.style.display = display ? "" : "none";
     }
 }
 
@@ -32,15 +45,11 @@ const showSport = (sport) => {
 for (const [sport, button] of Object.entries(buttons)) {
     button.addEventListener("click", () => {
         state[sport] = !state[sport];
-        if (state[sport]) {
-            button.classList.add("btn-primary");
-            button.classList.remove("btn-secondary");
-            showSport(sport);
-        } else  {
-            button.classList.add("btn-secondary");
-            button.classList.remove("btn-primary");
-            hideSport(sport);
-        }
+
+        button.classList.toggle("btn-primary");
+        button.classList.toggle("btn-secondary");
+
+        updateDisplayedEntries();
     });
 }
 
@@ -48,22 +57,9 @@ const onlyBigNewsButton = document.getElementById("toggle-only-big-news");
 onlyBigNewsButton.addEventListener("click", () => {
     state.onlyBigNews = !state.onlyBigNews;
 
-    if (state.onlyBigNews) {
-        onlyBigNewsButton.classList.add("btn-primary");
-        onlyBigNewsButton.classList.remove("btn-secondary");
-    } else {
-        onlyBigNewsButton.classList.remove("btn-primary");
-        onlyBigNewsButton.classList.add("btn-secondary");
-    }
+    onlyBigNewsButton.classList.toggle("btn-primary");
+    onlyBigNewsButton.classList.toggle("btn-secondary");
 
-    for (const child of list.children) {
-        if (!child.dataset.big) {
-            if (state.onlyBigNews) {
-                child.style.display = "none";
-            } else {
-                child.style.display = "";
-            }
-        }
-    }
+    updateDisplayedEntries();
 
 });
