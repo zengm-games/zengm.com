@@ -5,9 +5,6 @@ function genFace0() {
 	var jerseys = ["jersey", "jersey2", "jersey3", "jersey4", "jersey5"];
 	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
 	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":jersey}});
-	if (face.hair.color === "#0f0902") {
-		face.hair.color = "#272421";
-	}
 	faces.display(face0, face);
 }
 
@@ -17,9 +14,6 @@ function genFace1() {
 	prevType = prevType === "hockey" ? "football" : "hockey";
 	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
 	var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"],"jersey":{"id":jersey}});
-	if (face.hair.color === "#0f0902") {
-		face.hair.color = "#272421";
-	}
 	faces.display(face1, face);
 }
 

@@ -1,13 +1,16 @@
 {
   "name": "zengm.com",
   "scripts": {
-    "build": "NODE_ENV=production eleventy",
-    "start": "NODE_ENV=development eleventy --serve"
+    "build": "yarn run sass && NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --serve",
+    "sass": "node-sass --style=compressed -o src/css src/css/*.scss"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "bootstrap-dark-4": "^0.0.9",
     "clean-css": "^5.1.0",
     "html-minifier": "^4.0.0",
+    "node-sass": "^5.0.0",
     "terser": "^5.6.0"
   }
 }

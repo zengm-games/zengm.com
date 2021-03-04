@@ -13,7 +13,7 @@
 }
 
 .top-nav {
-  background-color: #e9ecef;
+  background-color: #3b3b3b;
 }
 
 .breadcrumb {
@@ -23,7 +23,7 @@
   </head>
   <body>
 
-<div class="d-flex bg-light mb-3 top-nav">
+<div class="d-flex mb-3 top-nav">
   <div id="face" class="ml-3"></div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb mb-0">
@@ -43,9 +43,6 @@ var div = document.getElementById("face");
 
 function genFace() {
   var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
-  if (face.hair.color === "#0f0902") {
-    face.hair.color = "#272421";
-  }
   faces.display(div, face);
 }
 

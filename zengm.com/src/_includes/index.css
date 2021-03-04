@@ -2,8 +2,8 @@
 	--orange: #f05742;
 	--purple-dark: #695fab;
 	--purple-light: #a89aff;
-	--bg-1: #121212;
-	--bg-2: #272727;
+	--bg-1: #222222;
+	--bg-2: #3b3b3b;
 }
 
 body {
@@ -69,14 +69,6 @@ ul.main-list li:not(:last-child) {
 	ul li::before {
 		margin-left: 0px;
 	}
-}
-
-h1 {
-	font-size: 24px;
-}
-
-a, a:hover {
-	color: var(--purple-light);
 }
 
 .flagship {

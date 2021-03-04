@@ -1,0 +1,21 @@
+@import "../../node_modules/bootstrap-dark-4/dist/bootstrap-night";
+
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 16px;
+}
+h4 {
+	font-size: 14px;
+}
+h5 {
+	font-size: 12px;
+}
+
+a, a:hover {
+	color: var(--purple-light);
+}
