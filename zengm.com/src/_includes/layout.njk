@@ -37,18 +37,12 @@
   {{ content | safe }}
 </main>
 
-<script src="https://dumbmatter.com/facesjs/build/bundle.js"></script>
-<script>
-var div = document.getElementById("face");
-
-function genFace() {
-  var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
-  faces.display(div, face);
-}
-
-genFace();
-
-face.addEventListener("click", genFace);
-</script>
 </body>
+{% include "foot-common.njk" %}
+{% set js %}
+    {% include "layout.js" %}
+{% endset %}
+<script>
+    {{ js | jsmin | safe }}
+</script>
 </html>
