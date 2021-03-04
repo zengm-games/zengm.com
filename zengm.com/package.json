@@ -2,15 +2,20 @@
   "name": "zengm.com",
   "scripts": {
     "build": "yarn run sass && NODE_ENV=production eleventy",
-    "start": "NODE_ENV=development eleventy --serve",
+    "start": "concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --serve\"",
+    "watch-sass": "chokidar \"src/css/*.scss\" -c \"yarn run sass\"",
     "sass": "node-sass --style=compressed -o src/css src/css/*.scss"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "bootstrap-dark-4": "^0.0.9",
+    "chokidar-cli": "^2.1.0",
     "clean-css": "^5.1.0",
     "html-minifier": "^4.0.0",
     "node-sass": "^5.0.0",
     "terser": "^5.6.0"
+  },
+  "dependencies": {
+    "concurrently": "^6.0.0"
   }
 }

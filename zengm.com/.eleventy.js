@@ -6,6 +6,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/files");
     eleventyConfig.addPassthroughCopy("src/css/*.css");
 
+    eleventyConfig.addWatchTarget("src/files");
+    eleventyConfig.addWatchTarget("src/css");
+    eleventyConfig.setUseGitIgnore(false);
+
     eleventyConfig.addFilter("cssmin", function(code) {
         return new CleanCSS({}).minify(code).styles;
     });
