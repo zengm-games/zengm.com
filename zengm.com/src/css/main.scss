@@ -31,3 +31,18 @@ a, a:hover {
 .text-highlight {
 	color: var(--orange);
 }
+
+ul {
+	margin-left: -40px;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+ul li::before {
+	content: "\2022";
+	color: var(--orange);
+	font-weight: bold;
+	display: inline-block;
+	width: 20px;
+	margin-left: -20px;
+}

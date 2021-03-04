@@ -3,13 +3,18 @@ layout: layout.njk
 title: Changelog
 ---
 
-<p>This is a user-focused changelog. The entries here are things that affect gameplay, not technical details behind the scenes.</p>
+{% set css %}
+    {% include "changelog.css" %}
+{% endset %}
+<style>
+    {{ css | cssmin | safe }}
+</style>
 
 <ul class="changelog">
   {% for entry in changelog %}
   <li
     {% if entry.big %} class="text-highlight"{% endif %}>
-    <p>{{ entry.date }}: {{ entry.text | renderUsingMarkdown | safe}}</p>
+    {{ entry.date }}: {{ entry.text | renderUsingMarkdown | safe}}
   </li>
   {% endfor %}
 </ul>
