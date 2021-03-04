@@ -14,7 +14,10 @@ title: Changelog
   {% for entry in changelog %}
   <li
     {% if entry.big %} class="text-highlight"{% endif %}>
-    {{ entry.date }}: {{ entry.text | renderUsingMarkdown | safe}}
+    {{ entry.date }}: {{ entry.text | renderUsingMarkdown | safe}}<br>
+    {% if entry.basketball %}<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18">{% endif %}
+    {% if entry.football %}<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18">{% endif %}
+    {% if entry.hockey %}<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">{% endif %}
   </li>
   {% endfor %}
 </ul>

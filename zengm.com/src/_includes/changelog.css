@@ -1,3 +1,8 @@
 ul.changelog li {
 	margin-bottom: 1rem;
 }
+
+ul.changelog li::before {
+	content: inherit;
+	margin-left: -20px;
+}
