@@ -6,3 +6,5 @@ RewriteCond %{REQUEST_URI} !^/(.well-known)(/|$)
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 ErrorDocument 404 /404/index.html
+
+Redirect 301 /changelog/ https://zengm.com/changelog/
