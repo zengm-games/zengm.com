@@ -1,5 +1,14 @@
 module.exports = [
     {
+        date: "2021-03-05",
+        text: "Added a summary of all current and past injuries in the league at Stats > Injuries.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/ly5vqr/added_a_summary_of_all_current_and_past_injuries/",
+        ],
+        basketball: true,
+        football: true,
+        hockey: true,
+    }, {
         date: "2021-03-03",
         text: "Added support for changing the rate of steals, blocks, turnovers, and offensive rebounds. In historical leagues, they automatically change over time. This was done in part because I recently (2021-02-20) changed the default steal rate to be 10% lower than it was before, which some people did not like.",
         links: [
