@@ -11,3 +11,18 @@
 #changelog li::before {
 	content: inherit;
 }
+
+.changelog-sports {
+    display: inline-block;
+    margin-left: 5px;
+}
+@media (min-width: 1260px) {
+    .changelog-sports {
+        position: absolute;
+        left: -65px;
+        top: -1px;
+        margin: 0;
+        text-align: right;
+        width: 60px;
+    }
+}
