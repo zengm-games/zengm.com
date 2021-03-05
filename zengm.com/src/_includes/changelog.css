@@ -1,7 +1,13 @@
 #changelog li {
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--bg-2);
 }
 
 .changelog-buttons img{
     vertical-align: -3px;
+}
+
+#changelog li::before {
+	content: inherit;
 }
