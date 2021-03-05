@@ -20,14 +20,14 @@ module.exports = function(eleventyConfig) {
         code,
         callback
     ) {
-        try {
-            const minified = await minify(code);
-            callback(null, minified.code);
-        } catch (err) {
-            console.error("Terser error: ", err);
-            // Fail gracefully.
-            callback(null, code);
-        }
+        const minified = await minify(code);
+        callback(null, minified.code);
+    });
+    eleventyConfig.addJavaScriptFunction("jsmin", async function (
+        code
+    ) {
+        const minified = await minify(code);
+        return minified.code;
     });
 
     eleventyConfig.addTransform("htmlmin", function(content, outputPath) {

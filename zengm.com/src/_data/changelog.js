@@ -36,7 +36,7 @@ module.exports = [
         basketball: true,
     }, {
         date: "2021-02-20",
-        text: "decreased the steal rate to be a bit more realistic.",
+        text: "Decreased the steal rate to be a bit more realistic.",
         basketball: true,
     }, {
         date: "2021-02-20",
