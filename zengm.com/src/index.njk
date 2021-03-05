@@ -20,12 +20,12 @@
 			<img id="logo" class="logo mx-2 mx-sm-3" src="/files/logo.svg">
 			<div id="face1" class="face mr-auto"></div>
 		</div>
-		<div class="container pb-4">
+		<div class="container container-main pb-4">
 			<h1 class="mb-0">ZenGM is an independent video game developer focused on sports management simulation games.</h1>
 		</div>
 
 		<div class="bg-alt py-4">
-			<div class="container">
+			<div class="container container-main">
 				<p>Every day, users simulate over 30,000 seasons in our games. Why don't you try one?</p>
 			</div>
 		
@@ -61,7 +61,7 @@
 		</div>
 
 		<div class="py-4">
-			<div class="container">
+			<div class="container container-main">
 				<p>Our games all follow some core principles:</p>
 
 				<ul class="main-list">
@@ -81,7 +81,7 @@
 		</div>
 
 		<div class="bg-alt py-4">
-			<div class="container">
+			<div class="container container-main">
 				<h1>About Us</h1>
 				
 				<p>ZenGM is currently just one person, me. My name is Jeremy aka dumbmatter. You can reach me at <a href="mailto:jeremy@zengm.com">jeremy@zengm.com</a>.</p>
@@ -91,7 +91,7 @@
 		</div>
 
 		<div class="py-4">
-			<div class="container">
+			<div class="container container-main">
 				<h1>Other Games</h1>
 
 				<p>These games are ports of old versions of <a href="https://basketball-gm.com/">Basketball GM</a> to other sports. Currently they are not under active development, but in the future we will bring them up to date with <a href="https://basketball-gm.com/">Basketball GM</a>, <a href="https://football-gm.com/">Football GM</a>, and <a href="https://hockey.zengm.com/">ZenGM Hockey</a>.</p>
@@ -137,6 +137,8 @@
 				</div>
 			</div>
 		</div>
+
+		{% include "footer.njk" %}
 	</body>
 	{% include "facesjs.njk" %}
 	{% set js %}

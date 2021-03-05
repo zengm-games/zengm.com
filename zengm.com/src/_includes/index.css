@@ -22,11 +22,8 @@ body {
 	cursor: pointer;
 }
 
-.container {
+.container-main {
 	max-width: 720px;
-}
-.bg-alt {
-	background-color: var(--bg-2);
 }
 
 .headline {

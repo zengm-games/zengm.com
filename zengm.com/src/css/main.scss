@@ -7,13 +7,7 @@ h2 {
 	font-size: 20px;
 }
 h3 {
-	font-size: 16px;
-}
-h4 {
-	font-size: 14px;
-}
-h5 {
-	font-size: 12px;
+	font-size: 18px;
 }
 
 :root {
@@ -22,6 +16,10 @@ h5 {
 	--purple-light: #a89aff;
 	--bg-1: #222222;
 	--bg-2: #3b3b3b;
+}
+
+.bg-alt {
+	background-color: var(--bg-2);
 }
 
 a, a:hover {
@@ -45,4 +43,29 @@ ul li::before {
 	display: inline-block;
 	width: 20px;
 	margin-left: -20px;
+}
+
+.footer {
+    font-size: smaller;
+
+    ul li::before {
+        content: inherit;
+    }
+
+    .footer-sport-logo {
+        position: absolute;
+        left: -11px;
+        top: 1px;
+        text-align: right;
+    }
+
+    // https://stackoverflow.com/a/53336754/786644
+    .footer-social {
+        width: 18px;
+        height: 18px;
+        filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg) brightness(87%) contrast(85%);
+    }
+    .footer-social:hover, .footer-social:active {
+        filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg) brightness(110%) contrast(100%);
+    }
 }
