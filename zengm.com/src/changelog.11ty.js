@@ -37,20 +37,9 @@ class Changelog {
     <button type="button" class="btn btn-secondary" id="toggle-only-big-news">Only big news</button></div>
 </div>
 
-<div class="mb-3">
-    ${years.map(year => `<a href="#${year}">${year}</a>`).join(" / ")}
-</div>
-
 <ul id="changelog">
     ${changelog.map(entry => {
-        const year = parseInt(entry.date.slice(0, 4));
-        let yearAnchor = "";
-        if (year < highestSeenYear) {
-            highestSeenYear = year;
-            yearAnchor = `<a name="${year}"></a>`;
-        }
-
-        return `${yearAnchor}<li
+        return `<li
     ${entry.basketball ? 'data-basketball="true"' : ""}
     ${entry.football ? 'data-football="true"' : ""}
     ${entry.hockey ? 'data-hockey="true"' : ""}
