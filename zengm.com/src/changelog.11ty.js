@@ -37,14 +37,25 @@ class Changelog {
     <button type="button" class="btn btn-secondary" id="toggle-only-big-news">Only big news</button></div>
 </div>
 
-<ul id="changelog">
+<div class="mb-3">
+    ${years.map(year => `<a href="#${year}">${year}</a>`).join(" / ")}
+</div>
+
+<div id="changelog">
     ${changelog.map(entry => {
-        return `<li
+        const year = parseInt(entry.date.slice(0, 4));
+        let yearAnchor = "";
+        if (year < highestSeenYear) {
+            highestSeenYear = year;
+            yearAnchor = `<a name="${year}"></a>`;
+        }
+
+        return `${yearAnchor}<div
     ${entry.basketball ? 'data-basketball="true"' : ""}
     ${entry.football ? 'data-football="true"' : ""}
     ${entry.hockey ? 'data-hockey="true"' : ""}
     ${entry.big ? 'data-big="true"' : ""}
-    class="position-relative"
+    class="changelog-entry position-relative"
 >
     ${entry.date}
     <div class="changelog-sports">
@@ -57,9 +68,9 @@ class Changelog {
     ${entry.big ? '<span class="text-highlight">' : ""}
     ${this.renderUsingMarkdown(entry.text)}
     ${entry.big ? '</span>' : ""}
-</li>`;
+</div>`;
     }).join("")}
-</ul>
+</div>
 <script>
     ${minifiedJS}
 </script>`;

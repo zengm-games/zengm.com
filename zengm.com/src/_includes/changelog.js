@@ -15,6 +15,11 @@ const list = document.getElementById("changelog");
 
 const updateDisplayedEntries = (sport) => {
     for (const child of list.children) {
+        if (child.tagName !== "DIV") {
+            // Skip over anchors
+            continue;
+        }
+
         // Sport displayed?
         let display = false;
         for (const sport of Object.keys(buttons)) {
