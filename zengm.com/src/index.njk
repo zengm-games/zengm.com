@@ -9,7 +9,7 @@
 		{% include "index.css" %}
 	{% endset %}
 	<style>
-		{{ css | cssmin | safe }}
+		{{ css | safe }}
 	</style>
 	</head>
 	<body class="pb-0">
@@ -145,6 +145,6 @@
 		{% include "index.js" %}
 	{% endset %}
 	<script>
-		{{ js | jsmin | safe }}
+		{{ js | safe }}
 	</script>
 </html>

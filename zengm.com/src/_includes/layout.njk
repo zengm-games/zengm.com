@@ -3,23 +3,6 @@
   <head>
     {% include "head-common.njk" %}
     <title>ZenGM > {{ title }}</title>
-    <style>
-#face {
-  height: 48px;
-  width: 36px;
-	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
-}
-
-.top-nav {
-  background-color: #3b3b3b;
-}
-
-.breadcrumb {
-  background-color: inherit;
-}
-    </style>
   </head>
   <body>
 
@@ -47,6 +30,6 @@
     {% include "layout.js" %}
 {% endset %}
 <script>
-    {{ js | jsmin | safe }}
+    {{ js | safe }}
 </script>
 </html>

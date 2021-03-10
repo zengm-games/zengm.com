@@ -69,3 +69,19 @@ ul li::before {
         filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg) brightness(110%) contrast(100%);
     }
 }
+
+.top-nav {
+    background-color: #3b3b3b;
+
+	.breadcrumb {
+		background-color: inherit;
+	}
+	
+	#face {
+		height: 48px;
+		width: 36px;
+		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+}

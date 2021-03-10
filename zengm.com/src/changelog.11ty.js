@@ -9,7 +9,7 @@ class Changelog {
       };
     }
   
-    async render({ changelog }) {
+    render({ changelog }) {
         const years = [];
         const currentYear = new Date().getFullYear();
         for (let year = currentYear; year >= 2013; year--) {
@@ -19,12 +19,10 @@ class Changelog {
         const css = fs.readFileSync(path.join(__dirname, "_includes", "changelog.css"), "utf8");
         const js = fs.readFileSync(path.join(__dirname, "_includes", "changelog.js"), "utf8");
 
-        const minifiedJS = await this.jsmin(js);
-
         let highestSeenYear = Infinity;
 
         return `<style>
-    ${this.cssmin(css)}
+    ${css}
 </style>
 <div class="mb-3 d-sm-flex changelog-buttons">
     <div class="btn-group mr-sm-3 mb-3 mb-sm-0">
@@ -72,7 +70,7 @@ class Changelog {
     }).join("")}
 </div>
 <script>
-    ${minifiedJS}
+    ${js}
 </script>`;
     }
 }
