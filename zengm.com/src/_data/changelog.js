@@ -1,5 +1,14 @@
 module.exports = [
     {
+        date: "2021-03-10",
+        text: "Added one new jersey option for FBGM, and three for ZGMH. Thanks @TravisJB89!",
+        links: [
+            "https://old.reddit.com/r/ZenGMHockey/comments/m2ig4b/added_some_jersey_options_available_at_tools/",
+        ],
+        basketball: false,
+        football: true,
+        hockey: true,
+    }, {
         date: "2021-03-05",
         text: "Added a summary of all current and past injuries in the league at Stats > Injuries.",
         links: [
@@ -1161,7 +1170,7 @@ module.exports = [
         basketball: true,
     }, {
         date: "2020-05-20",
-        text: "New hair styles!",
+        text: "New hair styles! Thanks @TravisJB89",
         links: [
             "https://old.reddit.com/r/BasketballGM/comments/gnowab/thanks_to_usmileyoaks_there_are_some_new_hair/",
         ],

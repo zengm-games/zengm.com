@@ -61,7 +61,7 @@ class Changelog {
         ${entry.football ? '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18">' : ""}
         ${entry.hockey ? '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">' : ""}
     </div>
-    ${entry.links ? `&nbsp;${entry.links.map((url, i) => `<a href="${url}">[${i + 1}]</a>`).join(" ")}` : ""}
+    ${entry.links && entry.links.length > 0 ? `&nbsp;${entry.links.map((url, i) => `<a href="${url}">[${i + 1}]</a>`).join(" ")}` : ""}
     <br>
     ${entry.big ? '<span class="text-highlight">' : ""}
     ${this.renderUsingMarkdown(entry.text)}

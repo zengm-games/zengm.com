@@ -1,7 +1,7 @@
 {
   "name": "zengm.com",
   "scripts": {
-    "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy",
+    "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph",
     "assetgraph": "rm -rf dist && buildProduction _site/index.html --outroot dist --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" && cp src/static/.htaccess dist/static/.htaccess",
     "start": "concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --serve\"",
     "watch-sass": "chokidar \"src/css/*.scss\" -c \"yarn run sass\"",
