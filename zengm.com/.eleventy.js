@@ -2,6 +2,7 @@ const MarkdownIt = require("markdown-it");
 const mdRender = new MarkdownIt();
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("src/.htaccess");
     eleventyConfig.addPassthroughCopy("src/files");
     eleventyConfig.addPassthroughCopy("src/static");
     eleventyConfig.addPassthroughCopy("src/css/*.css");

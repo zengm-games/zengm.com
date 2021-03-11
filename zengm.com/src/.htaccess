@@ -1,0 +1,2 @@
+Redirect 301 /ads.txt https://a.pub.network/zengm-com/ads.txt
+ErrorDocument 404 /404/index.html
