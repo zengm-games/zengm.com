@@ -1,28 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     {% include "head-common.njk" %}
     <title>ZenGM > {{ title }}</title>
   </head>
-  <body>
+  <body class="h-100">
 
-<div class="mb-3 top-nav">
-  <div class="container d-flex">
-    <div id="face"></div>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
-      </ol>
-    </nav>
+<div class="h-100 d-flex flex-column">
+  <div class="mb-3 top-nav">
+    <div class="container d-flex">
+      <div id="face"></div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+      </nav>
+    </div>
   </div>
-</div>
-      
-<main role="main" class="container">
-  {{ content | safe }}
-</main>
 
-{% include "footer.njk" %}
+  <main role="main" class="container">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+</div>
 
 </body>
 {% include "facesjs.njk" %}
