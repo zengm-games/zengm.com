@@ -68,6 +68,23 @@ ul li::before {
     .footer-social:hover, .footer-social:active {
         filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg) brightness(110%) contrast(100%);
     }
+
+	@media (min-width: 576px) {
+		.container {
+			border-left: 1px solid var(--bg-1);
+			border-right: 1px solid var(--bg-1);
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.row {
+			margin-left: 1em;
+		}
+	}
+	
+	.newsletter {
+		margin-top: 100px;
+	}
 }
 
 .top-nav {
