@@ -1,5 +1,14 @@
 module.exports = [
     {
+        date: "2021-03-11",
+        text: "In the regular season, goalies need rest days or their performance will suffer. Your coach will automatically play your backup goalie when that gives you a better chance to win.",
+        links: [
+            "https://old.reddit.com/r/ZenGMHockey/comments/m370eg/in_the_regular_season_goalies_now_need_rest_days/",
+        ],
+        basketball: false,
+        football: false,
+        hockey: true,
+    }, {
         date: "2021-03-10",
         text: "Added one new jersey option for FBGM, and three for ZGMH. Thanks @TravisJB89!",
         links: [
