@@ -1,12 +1,17 @@
 module.exports = [
     {
+        date: "2021-03-12",
+        text: "New randomization option for real players leagues, \"Random debuts forever\". It's like random debuts, except when it runs out of real players, it repeats them again in random order after it runs out of players.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/m3yt98/new_randomization_option_for_real_players_leagues/",
+        ],
+        basketball: true,
+    }, {
         date: "2021-03-11",
         text: "In the regular season, goalies need rest days or their performance will suffer. Your coach will automatically play your backup goalie when that gives you a better chance to win.",
         links: [
             "https://old.reddit.com/r/ZenGMHockey/comments/m370eg/in_the_regular_season_goalies_now_need_rest_days/",
         ],
-        basketball: false,
-        football: false,
         hockey: true,
     }, {
         date: "2021-03-10",
@@ -14,7 +19,6 @@ module.exports = [
         links: [
             "https://old.reddit.com/r/ZenGMHockey/comments/m2ig4b/added_some_jersey_options_available_at_tools/",
         ],
-        basketball: false,
         football: true,
         hockey: true,
     }, {
