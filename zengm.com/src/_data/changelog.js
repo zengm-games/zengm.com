@@ -1,5 +1,37 @@
 module.exports = [
     {
+        date: "2021-03-13",
+        text: "You can now start real players leagues after the playoffs for seasons where expansion drafts occurred.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/m4m723/a_few_small_updates_in_version_202103140169/",
+        ],
+        basketball: true,
+    }, {
+        date: "2021-03-13",
+        text: "Fixed bug where teams with a lead late in the game were shooting too quickly. A side effect of this is that overtime scoring is now a little lower.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/m4m723/a_few_small_updates_in_version_202103140169/",
+        ],
+        basketball: true,
+    }, {
+        date: "2021-03-13",
+        text: "When generating a relative of an existing player, there is now a 50% chance that the new player will share the same jersey number and college as the existing player.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/m4m723/a_few_small_updates_in_version_202103140169/",
+        ],
+        basketball: true,
+        football: true,
+        hockey: true,
+    }, {
+        date: "2021-03-13",
+        text: "Retired players are now shown on their player profile page wearing the jersey of the team they accumulated the most stats on. If the team wore multiple different jersey styles/colors over that time, a random one is picked each time the page is loaded.",
+        links: [
+            "https://old.reddit.com/r/BasketballGM/comments/m4m723/a_few_small_updates_in_version_202103140169/",
+        ],
+        basketball: true,
+        football: true,
+        hockey: true,
+    }, {
         date: "2021-03-12",
         text: "New randomization option for real players leagues, \"Random debuts forever\". It's like random debuts, except when it runs out of real players, it repeats them again in random order after it runs out of players.",
         links: [
