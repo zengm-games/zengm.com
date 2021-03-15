@@ -11,7 +11,7 @@ class FAQ {
 <h2>My leagues are gone! What happened?</h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
 <p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
-<p>Browsers may also delete data if disk space is running low. To minimize the chance of this happening, go to <a href="https://${websitePlay}/settings">the global settings page</a> and enable Persistent Storage.</p>
+<p>Browsers may also delete data if disk space is running low. To minimize the chance of this happening, go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</p>
 <p>In cases where the data has been deleted from your browser profile, the only way to get it back is if you have a backup. Sorry :(</p>
 
 <hr>
@@ -31,7 +31,7 @@ class FAQ {
 <p><b>Method 3:</b> Open ${gameName} in a single tab in your web browser. Open your browser dev tools (ctrl+shift+i, or ctrl+cmd+i on a Mac) and then do a hard refresh (ctrl+shift+r, or ctrl+cmd+r on a Mac).</p>
 <p><b>Method 4:</b> Open ${gameName} in a single tab in your web browser. Open your browser dev tools (ctrl+shift+i, or ctrl+cmd+i on a Mac). At the top of dev tools panel, click "Application" (if it's too narrow to see, you might have to click the >> to see it) and then click "Service Workers" on the left:</p>
 <p><img src="/files/delete-sw-1.png" class="img-fluid"></p>
-<p>Then click "Unregister" to the right of https://${websitePlay}/:</p>
+<p>Then click "Unregister" to the right of ${websitePlay}:</p>
 <p><img src="/files/delete-sw-2.png" class="img-fluid"></p>
 <p>Finally, reload ${gameName} and hopefully you will see the latest version.</p>
 
@@ -46,6 +46,22 @@ class FAQ {
   <li><p>It is possible to improve the mobile experience of ${gameName} without making an app. The mobile web version can be improved, and it will be improved. But given the above point, it'll take some time. Bear with me :)</p></li>
   <li><p>Finally, I'm not convinced that a tiny cell phone screen is a good place to play a sports management sim. This is a data-heavy game, and I think it's simply better on a laptop or desktop screen. So even if I made a super polished mobile app, I don't know if it would be as good as the current web version is on a computer.</p></li>
 </ol>
+<a name="a2hs"></a>
+<p>However, you can install the web app on your phone so it looks a bit more like a native app. There are different instructions for iOS and Android:</p>
+<h3>iOS (iPad or iPhone)</h3>
+<ol>
+  <li>Open <a href="${websitePlay}">${websitePlay}</a> in Safari.</li>
+  <li>Tap the icon featuring a right-pointing arrow coming out of a box along the top of the Safari window to open a drop-down menu.</li>
+  <li>Tap "Add to Home Screen." The Add to Home dialog box will appear, with the icon that will be used for this website on the left side of the dialog box.</li>
+  <li>Enter the name for the shortcut using the on-screen keyboard and tap "Add". Safari will close automatically and you will be taken to where the icon is located on your desktop.</li>
+</ol>
+<h3>Android</h3>
+<ol>
+  <li>Open <a href="${websitePlay}">${websitePlay}</a> in Chrome.</li>
+  <li>Tap the menu icon (3 dots in upper right-hand corner) and tap Add to homescreen.</li>
+  <li>You’ll be able to enter a name for the shortcut and then Chrome will add it to your home screen.</li>
+</ol>
+<p>(Credit <a href="https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/">this site</a> for most of those instructions.)</p>
 
 <hr>
 

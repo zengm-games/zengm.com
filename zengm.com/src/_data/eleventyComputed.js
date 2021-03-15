@@ -21,8 +21,8 @@ module.exports = {
     }, data.sport) : undefined,
 
     websitePlay: data => data.sport ? bySport({
-        basketball: "play.basketball-gm.com",
-        football: "play.football-gm.com",
-        hockey: "hockey.zengm.com",
+        basketball: "https://play.basketball-gm.com/",
+        football: "https://play.football-gm.com/",
+        hockey: "https://hockey.zengm.com/",
     }, data.sport) : undefined,
 };
