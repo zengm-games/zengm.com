@@ -4,7 +4,8 @@ faq
 
 sport-specific pages
 - confirm links work for faq (added redirect in htaccesses)
-- game name in title
+
+responsive titlebar
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/

@@ -17,6 +17,18 @@ module.exports = function(eleventyConfig) {
          return mdRender.renderInline(rawString);
     });
 
+    eleventyConfig.addShortcode("sportTitle", function (sport) {
+        if (!sport) {
+            return "ZenGM";
+        }
+
+        return bySport({
+            basketball: "Basketball GM",
+            football: "Football GM",
+            hockey: "ZenGM Hockey",
+        }, sport);
+    });
+
     eleventyConfig.addShortcode("sportPicker", function (sport) {
         if (!sport) {
             return "";
@@ -46,7 +58,7 @@ module.exports = function(eleventyConfig) {
     <a class="dropdown-item" href="${urls.football}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football GM</a>
     <a class="dropdown-item" href="${urls.hockey}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey</a>
     </div>
-</div>`
+</div>`;
     });
 
     return {
