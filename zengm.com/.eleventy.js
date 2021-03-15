@@ -48,9 +48,9 @@ module.exports = function(eleventyConfig) {
         // No gap between div and button matters for whitespace, at least in dev mode
         return `<div class="dropdown top-nav-item"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
         ${bySport({
-            basketball: '<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball GM',
-            football: '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football GM',
-            hockey: '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey',
+            basketball: '<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Basketball GM</span>',
+            football: '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Football GM</span>',
+            hockey: '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Hockey</span>',
         }, sport)}
     </button>
     <div class="dropdown-menu">
