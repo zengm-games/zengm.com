@@ -1,6 +1,5 @@
 faq
 - add "add to home screen" to faq https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/
-- images
 
 responsive titlebar
 
@@ -13,6 +12,8 @@ remote js includes in head-common.njk
 - only need for dropdown
 
 contact page
+
+img-responsive -> img-fluid
 
 https://github.com/zengm-games
 

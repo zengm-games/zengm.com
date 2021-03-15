@@ -30,9 +30,9 @@ class FAQ {
 <p><b>Method 2:</b>> Try manually emptying your cache. In Chrome, from the main menu go to "More tools" > "Clear browsing data". Make sure you select "Cached images and files" and <i>do not select</i> "Cookies and other site data" because "other site data" is where ${gameName} stores all your leagues. Then try closing all open tabs with ${gameName} and opening it again, like above.</p>
 <p><b>Method 3:</b> Open ${gameName} in a single tab in your web browser. Open your browser dev tools (ctrl+shift+i, or ctrl+cmd+i on a Mac) and then do a hard refresh (ctrl+shift+r, or ctrl+cmd+r on a Mac).</p>
 <p><b>Method 4:</b> Open ${gameName} in a single tab in your web browser. Open your browser dev tools (ctrl+shift+i, or ctrl+cmd+i on a Mac). At the top of dev tools panel, click "Application" (if it's too narrow to see, you might have to click the >> to see it) and then click "Service Workers" on the left:</p>
-<p><img src="/files/delete-sw-1.png" class="img-responsive"></p>
+<p><img src="/files/delete-sw-1.png" class="img-fluid"></p>
 <p>Then click "Unregister" to the right of https://${websitePlay}/:</p>
-<p><img src="/files/delete-sw-2.png" class="img-responsive"></p>
+<p><img src="/files/delete-sw-2.png" class="img-fluid"></p>
 <p>Finally, reload ${gameName} and hopefully you will see the latest version.</p>
 
 <hr>
