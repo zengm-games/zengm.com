@@ -4,8 +4,6 @@ faq
 - images
 
 sprort-specific pages
-- better way of setting game_name and website_name
-- bySport equivalent
 - links between versions for each sport
   - confirm work for faq (added redirect in htaccesses)
 
