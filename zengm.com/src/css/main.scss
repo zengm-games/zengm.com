@@ -19,6 +19,14 @@ h3 {
 	font-size: 20px;
 }
 
+
+
+@media (min-width: 960px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
 .bg-alt {
 	background-color: var(--bg-2);
 }
@@ -82,7 +90,7 @@ ul li::before {
         filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg) brightness(110%) contrast(100%);
     }
 
-	@media (min-width: 576px) {
+	@media (min-width: 1000px) {
 		.container {
 			border-left: 1px solid var(--bg-1);
 			border-right: 1px solid var(--bg-1);
