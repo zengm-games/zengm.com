@@ -13,6 +13,7 @@
       <nav class="d-flex align-items-center">
           <a href="/">ZenGM</a>
           {% sportPicker sport %}
+          {% if not sport %}<div class="top-nav-item top-nav-separator">/</div>{% endif %}
           <div class="top-nav-item">{{ title }}</div>
       </nav>
     </div>

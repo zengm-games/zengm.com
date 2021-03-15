@@ -116,15 +116,22 @@ ul li::before {
 	}
 
 	.top-nav-item{
-		&::before {
+		// Didn't actually look good, and caused alignment issues with sport dropdown
+		/*&::before {
 			padding-left: 0.5em;
 			padding-right: 0.5em;
 			color: #9e9e9e;
 			content: "/";
-		}
+		}*/
+
+		margin-left: 0.5em;
 
 		img {
 			vertical-align: -3px;
 		}
+	}
+
+	.top-nav-separator {
+		color: #9e9e9e;
 	}
 }

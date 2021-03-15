@@ -45,8 +45,8 @@ module.exports = function(eleventyConfig) {
             hockey: `https://zengm.com/hockey/${afterPrefix}`,
         };
 
-        // No gap between div and button matters for whitespace, at least in dev mode
-        return `<div class="dropdown top-nav-item"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        return `<div class="dropdown top-nav-item">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
         ${bySport({
             basketball: '<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Basketball GM</span>',
             football: '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Football GM</span>',
