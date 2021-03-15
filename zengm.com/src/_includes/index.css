@@ -31,21 +31,6 @@ body {
 	font-weight: bold;
 }
 
-ul {
-	margin-left: -40px;
-	list-style: none;
-	margin-bottom: 0;
-}
-
-ul li::before {
-	content: "\2022";
-	color: var(--orange);
-	font-weight: bold;
-	display: inline-block;
-	width: 20px;
-	margin-left: -20px;
-}
-
 ul.main-list li:not(:last-child) {
 	margin-bottom: 1rem;
 }
@@ -53,9 +38,6 @@ ul.main-list li:not(:last-child) {
 @media (max-width: 767px) {
 	ul.main-list li::before {
 		content: none;
-	}
-	ul li::before {
-		margin-left: 0px;
 	}
 }
 

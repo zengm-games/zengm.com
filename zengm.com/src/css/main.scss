@@ -49,6 +49,15 @@ ul li::before {
 	margin-left: -20px;
 }
 
+@media (max-width: 767px) {
+	ul li::before {
+		margin-left: 0;
+	}
+	ol {
+		margin-left: -23px;
+	}
+}
+
 .footer {
     font-size: smaller;
 
