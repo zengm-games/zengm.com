@@ -2,9 +2,6 @@ faq
 - add "add to home screen" to faq https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/
 - images
 
-sport-specific pages
-- confirm links work for faq (added redirect in htaccesses)
-
 responsive titlebar
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
