@@ -55,7 +55,15 @@ class FAQ {
 <p>It's a chicken and egg problem. Do good young players get more playing time because they're already good? Or do young players become good if they get more playing time? It's obvious that the first scenario happens. But is it obvious that the second scenario happens? I haven't seen any convincing evidence that it does${sport === "basketball" ? ", and there is <a href=\"https://twitter.com/nicidob/status/1152411949059256320\">some evidence that it doesn't</a>" : ""}.</p>
 <p>I know that's not really a fair argument, because it could be that it's a real effect that is just hard to see in the stats we have available. But if it's hard to see in the stats we have available, does it matter for a game like ${gameName}? Because if it's so difficult to notice in reality, it'd be equally difficult to notice in ${gameName}.</p>
 <p>I can make a counterargument, though. ${gameName} is a video game. Its primary purpose is to be fun, not to be realistic. So maybe it'd be fun to give unrealistically large bonuses to young players who get a lot of playing time. I don't know. It could be fun. But I also very much like to keep things simple, so I err on the side of simplicity. And doing nothing is very simple.</p>
-<p>I also am aware that I could be wrong. Maybe there is a convincing, data-driven argument that playing time leads to quantifiable improvement. If so, <a href="/contact">please let me know</a>!</p>`;
+<p>I also am aware that I could be wrong. Maybe there is a convincing, data-driven argument that playing time leads to quantifiable improvement. If so, <a href="/contact">please let me know</a>!</p>
+
+${sport === "hockey" ? `
+<hr>
+
+<a name="hockey-gm"></a>
+<h2 class="text-highlight">Why is it called "ZenGM Hockey" rather than "Hockey GM"?</h2>
+<p>Because <a href="https://hockey-gm.com/">Hockey GM<a/> is already another game from Finland. If you speak Finnish, give it a try!</p>
+` : ""}`;
   }
 }
 

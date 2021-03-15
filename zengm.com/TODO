@@ -1,11 +1,13 @@
 faq
-- why ZenGM Hockey and not Hockey GM
 - add "add to home screen" to faq https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/
 - images
 
-sprort-specific pages
-- links between versions for each sport
-  - confirm work for faq (added redirect in htaccesses)
+sport-specific pages
+- confirm links work for faq (added redirect in htaccesses)
+- game name in title
+
+pathPrefix and url filter to make all URLs point to zengm.com explicitly
+- https://www.11ty.dev/docs/filters/url/
 
 remote js includes in head-common.njk
 - only need for dropdown
