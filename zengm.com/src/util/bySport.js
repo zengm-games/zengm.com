@@ -7,7 +7,7 @@ const bySport = (object, sport) => {
 		return object.default;
 	}
 
-	throw new Error("No value for sport and no default");
+	throw new Error(`No value for sport "${sport}" and no default`);
 };
 
 module.exports = bySport;
