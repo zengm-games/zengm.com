@@ -1,9 +1,27 @@
 faq
 - why ZenGM Hockey and not Hockey GM
 - add "add to home screen" to faq https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/
+- images
+
+sprort-specific pages
+- better way of setting game_name and website_name
+- bySport equivalent
+- links between versions for each sport
+  - confirm work for faq (added redirect in htaccesses)
+
+contact page
 
 https://github.com/zengm-games
 
 add more worker console docs
 - https://discord.com/channels/290013534023057409/290015468939640832/819264526729478174
 - https://discord.com/channels/@me/737113743640625224/819262565032656916
+
+multiple sites
+- https://github.com/11ty/eleventy/issues/662
+- https://www.11ty.dev/docs/pages-from-data/
+  - data could just be the names of the sports, then whatever template language i use could do if/else inline
+- or, use JS templates and write bySport/isSport equivalents
+
+
+tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
