@@ -7,6 +7,9 @@ sprort-specific pages
 - links between versions for each sport
   - confirm work for faq (added redirect in htaccesses)
 
+remote js includes in head-common.njk
+- only need for dropdown
+
 contact page
 
 https://github.com/zengm-games

@@ -10,11 +10,26 @@
   <div class="mb-3 top-nav">
     <div class="container d-flex">
       <div id="face"></div>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0 ml-0">
-          <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
-        </ol>
+      <nav class="d-flex align-items-center">
+          <a href="/">ZenGM</a>
+          {% if sport %}
+            <div class="dropdown top-nav-item"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                {% if sport == "basketball" %}
+                  <img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball GM
+                {% elif sport == "football" %}
+                  <img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football GM
+                {% elif sport == "hockey" %}
+                  <img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey
+                {% endif %}
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball GM</a>
+                <a class="dropdown-item" href="#"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football GM</a>
+                <a class="dropdown-item" href="#"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey</a>
+              </div>
+            </div>
+          {% endif %}
+          <div class="top-nav-item">{{ title }}</div>
       </nav>
     </div>
   </div>
