@@ -3320,14 +3320,14 @@ module.exports = [
         text: "Fixed a bug that allowed AI teams to go over the cap to sign free agents.",
         basketball: true,
     }, {
-        date: "2013-11-25",
+        date: "2013-10-25",
         text: "Fixed various bugs introduced with the recent free agency changes.",
         links: [
             "https://old.reddit.com/r/BasketballGM/comments/1p8ovm/free_agency_fixes/",
         ],
         basketball: true,
     }, {
-        date: "2013-11-22",
+        date: "2013-10-22",
         text: "Revamped free agency, which now gradually happens over 30 days rather than all at once.",
         links: [
             "https://old.reddit.com/r/BasketballGM/comments/1p0sa8/new_feature_extended_free_agency/",
