@@ -13,6 +13,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 ml-0">
           <li class="breadcrumb-item"><a href="/">ZenGM</a></li>
+          {% include sport-breadcrumb.}
           <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
         </ol>
       </nav>
@@ -27,11 +28,16 @@
 </div>
 
 </body>
-{% include "facesjs.njk" %}
-{% set js %}
-    {% include "layout.js" %}
-{% endset %}
 <script>
-    {{ js | safe }}
+var div = document.getElementById("face");
+
+function genFace() {
+  var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
+  faces.display(div, face);
+}
+
+genFace();
+
+face.addEventListener("click", genFace);
 </script>
 </html>
