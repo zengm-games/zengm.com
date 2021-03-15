@@ -1,12 +1,7 @@
-responsive titlebar
-
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
 - use in footer
-
-remote js includes in head-common.njk
-- only need for dropdown
 
 contact page
 
