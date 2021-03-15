@@ -31,6 +31,10 @@ body {
 	font-weight: bold;
 }
 
+ul {
+	margin-bottom: 0;
+}
+
 ul.main-list li:not(:last-child) {
 	margin-bottom: 1rem;
 }

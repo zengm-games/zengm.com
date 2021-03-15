@@ -1,21 +1,22 @@
 @import "../../node_modules/bootstrap-dark-4/dist/bootstrap-night";
 
-h1 {
-	font-size: 24px;
-}
-h2 {
-	font-size: 20px;
-}
-h3 {
-	font-size: 18px;
-}
-
 :root {
 	--orange: #f05742;
 	--purple-dark: #695fab;
 	--purple-light: #a89aff;
 	--bg-1: #222222;
 	--bg-2: #3b3b3b;
+}
+
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 20px;
+	color: var(--orange);
+}
+h3 {
+	font-size: 20px;
 }
 
 .bg-alt {
@@ -37,7 +38,6 @@ ol {
 ul {
 	margin-left: -40px;
 	list-style: none;
-	margin-bottom: 0;
 }
 
 ul li::before {
