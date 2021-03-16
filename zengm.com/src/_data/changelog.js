@@ -1,5 +1,33 @@
 module.exports = [
     {
+        date: "2021-03-16",
+        text: 'The "passes defended" stat can now only be accumulated on incomplete passes and interceptions.',
+        links: [
+            "https://old.reddit.com/r/Football_GM/comments/m6161l/some_game_sim_bug_fixes_in_version_202103160276/",
+        ],
+        football: true,
+    }, {
+        date: "2021-03-16",
+        text: "Fixed bug where stats on failed 4th down conversions were recorded incorrectly. This was most notable on sacks, but also happened on runs and passes.",
+        links: [
+            "https://old.reddit.com/r/Football_GM/comments/m6161l/some_game_sim_bug_fixes_in_version_202103160276/",
+        ],
+        football: true,
+    }, {
+        date: "2021-03-16",
+        text: "Fixed bug where a turnover on downs in overtime would not trigger a check if the game is over (such as if the 1st OT possession is a FG and the 2nd is a turnover on downs, the game should be over, but previously the OT period continued).",
+        links: [
+            "https://old.reddit.com/r/Football_GM/comments/m6161l/some_game_sim_bug_fixes_in_version_202103160276/",
+        ],
+        football: true,
+    }, {
+        date: "2021-03-16",
+        text: "Fixed bug where a fumble recovered by the offense would result in an extra down being charged.",
+        links: [
+            "https://old.reddit.com/r/Football_GM/comments/m6161l/some_game_sim_bug_fixes_in_version_202103160276/",
+        ],
+        football: true,
+    }, {
         date: "2021-03-13",
         text: "You can now start real players leagues after the playoffs for seasons where expansion drafts occurred.",
         links: [
