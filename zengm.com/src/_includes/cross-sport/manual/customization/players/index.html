@@ -1,0 +1,123 @@
+---
+layout: page
+title: Players Customization
+---
+<p>If you haven't already, first read <a href="/manual/customization/">the customization overview</a>.</p>
+<p>This is the simplest format to define players in a League File:</p>
+<pre>
+{
+  "version": 36,
+  "startingSeason": 2019,
+  "players": [
+    {
+      "firstName": "Andrew",
+      "lastName": "Phillips",
+      "tid": 0,
+      "ratings": [
+        {
+          "hgt": 20,
+          "stre": 0,
+          "spd": 85,
+          "jmp": 50,
+          "endu": 55,
+          "ins": 68,
+          "dnk": 45,
+          "ft": 57,
+          "fg": 64,
+          "tp": 16,
+          "oiq": 49,
+          "diq": 37,
+          "drb": 75,
+          "pss": 76,
+          "reb": 39
+        }
+      ]
+    },
+    {
+      "firstName": "Heriberto",
+      "lastName": "Braman",
+      "tid": 0,
+      "ratings": [
+        {
+          "hgt": 27,
+          "stre": 34,
+          "spd": 85,
+          "jmp": 55,
+          "endu": 25,
+          "ins": 46,
+          "dnk": 42,
+          "ft": 42,
+          "fg": 54,
+          "tp": 72,
+          "oiq": 48,
+          "diq": 40,
+          "drb": 72,
+          "pss": 75,
+          "reb": 44
+        }
+      ]
+    },
+    {
+      "firstName": "Draft",
+      "lastName": "Prospect",
+      "tid": -2,
+      "ratings": [
+        {
+          "hgt": 27,
+          "stre": 34,
+          "spd": 85,
+          "jmp": 55,
+          "endu": 25,
+          "ins": 46,
+          "dnk": 42,
+          "ft": 42,
+          "fg": 54,
+          "tp": 72,
+          "oiq": 48,
+          "diq": 40,
+          "drb": 72,
+          "pss": 75,
+          "reb": 44
+        }
+      ],
+      "draft": {"year": 2020}
+    }
+  ]
+}
+</pre>
+<p>Some things you might want to know:</p>
+<ul>
+  <li>tid is the team ID number, ranging from 0 to N (usually 30) for the teams in your league. Additionally,
+  <ul>
+    <li>-1 is for free agents</li>
+    <li>-2 is for undrafted players</li>
+    <li>-3 is for retired players</li>
+  </ul>
+  <p>If don't include a draft year, draft prospects will appear in the upcoming draft. If you want to specify multiple upcoming drafts, you need to use the <code>draft.year</code> property, like is done for Draft Prospect above. If you do this, make sure to also set <a href="/manual/customization/game-attributes/"><code>startingSeason</code></a>, otherwise your draft classes will shift when the default starting season changes each year.</p>
+  <p>If you specify less than 70 prospects in a draft class, random prospects will be created to reach that limit.</p>
+  <li>In the example above, there are only two players defined. If your file doesn't include at least 10 players on each team, then bad things will happen when you try to use it. You should also include a good amount of bad/mediocre young players beyond the 10 man limit or as free agents (maybe 30-60 in total). Otherwise, you might end up running out of free agents before the free agent pool naturally fills up with undrafted prospects and unsigned players, and then bad things will happen.</li>
+  <li>Jersey numbers can be defined at the root of the player object like <code>"jerseyNumber": "25",</code>. For players with stats included, use the same property inside a stats object to override the jersey number for a specific season.</li>
+  <li>Ratings should be on a scale from 0 to 100 with a mean of about 50 and about half of the players between 35 and 65. Descriptions of rating categories:
+  <ul>
+    <li>"hgt": height, which factors into pretty much everything - this is meant to also reflect things like standing reach and wingspan, and it is used in game simulations rather than the player's "true" height in feet/inches. For a realistic professional basketball league, take the player's height in inches, subtract 66, and multiply by 3.70. Then maybe add or subtract a little based on wingspan. This means 0 is 5'6" and 100 is 7'9" (with a little wiggle room for wingspan).</li>
+    <li>"stre": strength, which influences defense, rebounding, and low post scoring</li>
+    <li>"spd": speed, which influences ball handling, fast breaking, and defense</li>
+    <li>"jmp": jumping, which influences finishing at the rim, rebounding, blocking shots, and defense</li>
+    <li>"endu": endurance, which governs how fast a player's skills degrade as he gets tired</li>
+    <li>"ins": low post scoring</li>
+    <li>"dnk": dunking/layups</li>
+    <li>"ft": free throw shooting</li>
+    <li>"fg": 2 point jump shot ability</li>
+    <li>"tp": 3 point shooting</li>
+    <li>"oiq": offensive IQ (affects many aspects of offense)</li>
+    <li>"diq": defensive IQ (affects many aspects of defense)</li>
+    <li>"drb": dribbling (also influences passing, since you can pass easier if you're not worried about losing the ball)</li>
+    <li>"pss": passing</li>
+    <li>"reb": rebounding</li>
+    <li>"pot": estimate of the player's potential future overall rating. This will be computed when players are imported, so there is no need to add it here.</li>
+  </ul>
+  </li>
+  <li>It's best not to specify additional properties in the ratings object, like <code>ovr</code>, <code>pot</code>, <code>pos</code>, and <code>skills</code>. If you simply leave them out, then they will be auto-generated on import.</li>
+  <li>You can optionally include a URL for an image to be used instead of a randomly-generated face by putting "imgURL": "http://www.example.com/img.jpg" in the root of a player object.</li>
+  <li>There are several other pieces of information you can include, maybe most notably stats from previous seasons. Look in an exported League File from one of your leagues to see what else can be added.</li>
+</ul>

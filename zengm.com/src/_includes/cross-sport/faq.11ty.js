@@ -1,4 +1,4 @@
-class FAQ {
+module.exports =  class FAQ {
     data() {
       return {
         layout: "layout.njk",
@@ -82,5 +82,3 @@ ${sport === "hockey" ? `
 ` : ""}`;
   }
 }
-
-module.exports = FAQ;

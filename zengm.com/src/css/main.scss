@@ -16,7 +16,8 @@ h2 {
 	color: var(--orange);
 }
 h3 {
-	font-size: 20px;
+	font-size: 16px;
+	color: var(--orange);
 }
 
 
@@ -106,6 +107,11 @@ ul li::before {
 	.newsletter {
 		margin-top: 100px;
 	}
+
+	h2 {
+		color: inherit;
+		font-size: 18px;
+	}
 }
 
 .top-nav {
@@ -149,3 +155,14 @@ ul.newline-between {
 		margin-bottom: 1em;
 	}
 }
+
+.skill {
+	cursor: default;
+	font-size: 12px;
+	margin-left: 5px;
+}
+  
+.skills-alone {
+	margin-left: -5px;
+}
+  

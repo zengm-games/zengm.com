@@ -1,6 +1,6 @@
 module.exports = [
     {
-        date: "2021-03-17",
+        date: "2021-03-16",
         text: 'Rescaled the "real player development determinism" implementation - before it felt like anything except a very low value was almost the same as setting it to 100%.',
         links: [
             "https://basketball-gm.com/blog/2021/03/rescaled-real-player-development-determinism/",

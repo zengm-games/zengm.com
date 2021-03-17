@@ -19,6 +19,12 @@ module.exports = {
         football: "Football GM",
         hockey: "ZenGM Hockey",
     }, data.sport) : undefined,
+    
+    proLeagueAbbrev: data => data.sport ? bySport({
+        basketball: "NBA",
+        football: "NFL",
+        hockey: "NHL",
+    }, data.sport) : undefined,
 
     websitePlay: data => data.sport ? bySport({
         basketball: "https://play.basketball-gm.com/",
