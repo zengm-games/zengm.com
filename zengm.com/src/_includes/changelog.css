@@ -1,28 +1,28 @@
 .changelog-entry {
 	margin-bottom: 1em;
-    padding-top: 1em;
-    border-top: 1px solid var(--bg-2);
+	padding-top: 1em;
+	border-top: 1px solid var(--bg-2);
 }
 
 .changelog-buttons img {
-    vertical-align: -3px;
+	vertical-align: -3px;
 }
 
 .changelog-sports {
-    display: inline-block;
-    margin-left: 5px;
+	display: inline-block;
+	margin-left: 5px;
 }
 .changelog-sports img {
-    vertical-align: -3px;
+	vertical-align: -3px;
 }
 @media (min-width: 1100px) {
-    .changelog-sports {
-        position: absolute;
-        left: -70px;
-        top: -1px;
-        margin: 0;
-        margin-top: 1em;
-        text-align: right;
-        width: 65px;
-    }
+	.changelog-sports {
+		position: absolute;
+		left: -70px;
+		top: -1px;
+		margin: 0;
+		margin-top: 1em;
+		text-align: right;
+		width: 65px;
+	}
 }

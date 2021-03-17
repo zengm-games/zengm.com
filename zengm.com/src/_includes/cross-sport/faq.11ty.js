@@ -1,13 +1,13 @@
-module.exports =  class FAQ {
-    data() {
-      return {
-        layout: "layout.njk",
-        title: "Frequently Asked Questions",
-      };
-    }
-  
-    render({ gameName, sport, websitePlay }) {
-        return `<a name="missing-leagues"></a>
+module.exports = class FAQ {
+	data() {
+		return {
+			layout: "layout.njk",
+			title: "Frequently Asked Questions",
+		};
+	}
+
+	render({ gameName, sport, websitePlay }) {
+		return `<a name="missing-leagues"></a>
 <h2>My leagues are gone! What happened?</h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
 <p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
@@ -68,17 +68,25 @@ module.exports =  class FAQ {
 <a name="pt"></a>
 <h2>If I give a player more playing time, will he improve faster?</h2>
 <p>No. I'm not convinced that playing time really matters for player development.</p>
-<p>It's a chicken and egg problem. Do good young players get more playing time because they're already good? Or do young players become good if they get more playing time? It's obvious that the first scenario happens. But is it obvious that the second scenario happens? I haven't seen any convincing evidence that it does${sport === "basketball" ? ", and there is <a href=\"https://twitter.com/nicidob/status/1152411949059256320\">some evidence that it doesn't</a>" : ""}.</p>
+<p>It's a chicken and egg problem. Do good young players get more playing time because they're already good? Or do young players become good if they get more playing time? It's obvious that the first scenario happens. But is it obvious that the second scenario happens? I haven't seen any convincing evidence that it does${
+			sport === "basketball"
+				? ', and there is <a href="https://twitter.com/nicidob/status/1152411949059256320">some evidence that it doesn\'t</a>'
+				: ""
+		}.</p>
 <p>I know that's not really a fair argument, because it could be that it's a real effect that is just hard to see in the stats we have available. But if it's hard to see in the stats we have available, does it matter for a game like ${gameName}? Because if it's so difficult to notice in reality, it'd be equally difficult to notice in ${gameName}.</p>
 <p>I can make a counterargument, though. ${gameName} is a video game. Its primary purpose is to be fun, not to be realistic. So maybe it'd be fun to give unrealistically large bonuses to young players who get a lot of playing time. I don't know. It could be fun. But I also very much like to keep things simple, so I err on the side of simplicity. And doing nothing is very simple.</p>
 <p>I also am aware that I could be wrong. Maybe there is a convincing, data-driven argument that playing time leads to quantifiable improvement. If so, <a href="/contact/">please let me know</a>!</p>
 
-${sport === "hockey" ? `
+${
+	sport === "hockey"
+		? `
 <hr>
 
 <a name="hockey-gm"></a>
 <h2>Why is it called "ZenGM Hockey" rather than "Hockey GM"?</h2>
 <p>Because <a href="https://hockey-gm.com/">Hockey GM<a/> is already another game from Finland. If you speak Finnish, give it a try!</p>
-` : ""}`;
-  }
-}
+`
+		: ""
+}`;
+	}
+};

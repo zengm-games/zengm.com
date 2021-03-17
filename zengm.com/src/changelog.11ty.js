@@ -2,26 +2,32 @@ const fs = require("fs");
 const path = require("path");
 
 class Changelog {
-    data() {
-      return {
-        layout: "layout.njk",
-        title: "Changelog",
-      };
-    }
-  
-    render({ changelog }) {
-        const years = [];
-        const currentYear = new Date().getFullYear();
-        for (let year = currentYear; year >= 2013; year--) {
-            years.push(year);
-        }
+	data() {
+		return {
+			layout: "layout.njk",
+			title: "Changelog",
+		};
+	}
 
-        const css = fs.readFileSync(path.join(__dirname, "_includes", "changelog.css"), "utf8");
-        const js = fs.readFileSync(path.join(__dirname, "_includes", "changelog.js"), "utf8");
+	render({ changelog }) {
+		const years = [];
+		const currentYear = new Date().getFullYear();
+		for (let year = currentYear; year >= 2013; year--) {
+			years.push(year);
+		}
 
-        let highestSeenYear = Infinity;
+		const css = fs.readFileSync(
+			path.join(__dirname, "_includes", "changelog.css"),
+			"utf8",
+		);
+		const js = fs.readFileSync(
+			path.join(__dirname, "_includes", "changelog.js"),
+			"utf8",
+		);
 
-        return `<style>
+		let highestSeenYear = Infinity;
+
+		return `<style>
     ${css}
 </style>
 <div class="mb-3 d-sm-flex changelog-buttons">
@@ -40,15 +46,16 @@ class Changelog {
 </div>
 
 <div id="changelog">
-    ${changelog.map(entry => {
-        const year = parseInt(entry.date.slice(0, 4));
-        let yearAnchor = "";
-        if (year < highestSeenYear) {
-            highestSeenYear = year;
-            yearAnchor = `<a name="${year}"></a>`;
-        }
+    ${changelog
+			.map(entry => {
+				const year = parseInt(entry.date.slice(0, 4));
+				let yearAnchor = "";
+				if (year < highestSeenYear) {
+					highestSeenYear = year;
+					yearAnchor = `<a name="${year}"></a>`;
+				}
 
-        return `${yearAnchor}<div
+				return `${yearAnchor}<div
     ${entry.basketball ? 'data-basketball="true"' : ""}
     ${entry.football ? 'data-football="true"' : ""}
     ${entry.hockey ? 'data-hockey="true"' : ""}
@@ -57,22 +64,41 @@ class Changelog {
 >
     ${entry.date}
     <div class="changelog-sports">
-        ${entry.basketball ? '<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18">' : ""}
-        ${entry.football ? '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18">' : ""}
-        ${entry.hockey ? '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">' : ""}
+        ${
+					entry.basketball
+						? '<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18">'
+						: ""
+				}
+        ${
+					entry.football
+						? '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18">'
+						: ""
+				}
+        ${
+					entry.hockey
+						? '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">'
+						: ""
+				}
     </div>
-    ${entry.links && entry.links.length > 0 ? `&nbsp;${entry.links.map((url, i) => `<a href="${url}">[${i + 1}]</a>`).join(" ")}` : ""}
+    ${
+			entry.links && entry.links.length > 0
+				? `&nbsp;${entry.links
+						.map((url, i) => `<a href="${url}">[${i + 1}]</a>`)
+						.join(" ")}`
+				: ""
+		}
     <br>
     ${entry.big ? '<span class="text-highlight">' : ""}
     ${this.renderUsingMarkdown(entry.text)}
-    ${entry.big ? '</span>' : ""}
+    ${entry.big ? "</span>" : ""}
 </div>`;
-    }).join("")}
+			})
+			.join("")}
 </div>
 <script>
     ${js}
 </script>`;
-    }
+	}
 }
 
 module.exports = Changelog;

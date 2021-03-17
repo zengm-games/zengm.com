@@ -20,8 +20,6 @@ h3 {
 	color: var(--orange);
 }
 
-
-
 @media (min-width: 960px) {
 	.container {
 		max-width: 960px;
@@ -32,7 +30,8 @@ h3 {
 	background-color: var(--bg-2);
 }
 
-a, a:hover {
+a,
+a:hover {
 	color: var(--purple-light);
 }
 
@@ -68,28 +67,31 @@ ul li::before {
 }
 
 .footer {
-    font-size: smaller;
+	font-size: smaller;
 
-    ul li::before {
-        content: inherit;
-    }
+	ul li::before {
+		content: inherit;
+	}
 
-    .footer-sport-logo {
-        position: absolute;
-        left: -11px;
-        top: 1px;
-        text-align: right;
-    }
+	.footer-sport-logo {
+		position: absolute;
+		left: -11px;
+		top: 1px;
+		text-align: right;
+	}
 
-    // https://stackoverflow.com/a/53336754/786644
-    .footer-social {
-        width: 18px;
-        height: 18px;
-        filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg) brightness(87%) contrast(85%);
-    }
-    .footer-social:hover, .footer-social:active {
-        filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg) brightness(110%) contrast(100%);
-    }
+	// https://stackoverflow.com/a/53336754/786644
+	.footer-social {
+		width: 18px;
+		height: 18px;
+		filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg)
+			brightness(87%) contrast(85%);
+	}
+	.footer-social:hover,
+	.footer-social:active {
+		filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg)
+			brightness(110%) contrast(100%);
+	}
 
 	@media (min-width: 1000px) {
 		.container {
@@ -103,7 +105,7 @@ ul li::before {
 			margin-left: 1em;
 		}
 	}
-	
+
 	.newsletter {
 		margin-top: 100px;
 	}
@@ -115,12 +117,12 @@ ul li::before {
 }
 
 .top-nav {
-    background-color: var(--bg-2);
+	background-color: var(--bg-2);
 
 	.breadcrumb {
 		background-color: inherit;
 	}
-	
+
 	#face {
 		height: 48px;
 		width: 36px;
@@ -129,7 +131,7 @@ ul li::before {
 		-webkit-user-select: none;
 	}
 
-	.top-nav-item{
+	.top-nav-item {
 		// Didn't actually look good, and caused alignment issues with sport dropdown
 		/*&::before {
 			padding-left: 0.5em;
@@ -161,8 +163,7 @@ ul.newline-between {
 	font-size: 12px;
 	margin-left: 5px;
 }
-  
+
 .skills-alone {
 	margin-left: -5px;
 }
-  

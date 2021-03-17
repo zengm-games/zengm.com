@@ -7,9 +7,9 @@ If you have a problem, please [tell me](/contact/)! I want to make Basketball GM
 
 When you are reporting a problem, please include as much information as possible. At a minimum, include this information along with a description of your problem:
 
-* Basketball GM version (can be seen in the bottom right corner of the game)
-* Browser name and version
-* Operating system name and version
+- Basketball GM version (can be seen in the bottom right corner of the game)
+- Browser name and version
+- Operating system name and version
 
 Additionally, ask yourself a few other questions:
 

@@ -4,6 +4,8 @@ pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - use in footer
 - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
 
+light mode toggle
+
 manual porting
 - markdown - see https://www.11ty.dev/docs/languages/javascript/ templateEngineOverride
 

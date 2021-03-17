@@ -15,10 +15,10 @@ The **probability they will be willing to re-sign** is based on a player's curre
 
 **Mood traits** give players a little bit of personality by altering how important different factors are in their mood score. There are 4 possible values:
 
-* Fame (F) - Player prefers a large market, an engaged fan base, and lots of playing time.
-* Loyalty (L) - Player wants to stay in one place for a long time, doesn't care much about market size, and doesn't like to see you trade away too many of his teammates.
-* Money ($) - Market size and team success are not very important, but nice team facilities give a little boost. Least likely trait to refuse to negotiate.
-* Winning (W) - Team success matters a lot. Willing to accept less playing time and a small market.
+- Fame (F) - Player prefers a large market, an engaged fan base, and lots of playing time.
+- Loyalty (L) - Player wants to stay in one place for a long time, doesn't care much about market size, and doesn't like to see you trade away too many of his teammates.
+- Money ($) - Market size and team success are not very important, but nice team facilities give a little boost. Least likely trait to refuse to negotiate.
+- Winning (W) - Team success matters a lot. Willing to accept less playing time and a small market.
 
 Mood traits are "all or nothing" - every player with the "Money ($)" trait gets the same adjustment to his mood score. There are no partial traits. Additionally, mood traits do not change over time, although you can edit them in the player editor in God Mode. You can also completely disable mood traits in the God Mode options.
 
@@ -28,11 +28,11 @@ If you click the mood button, you see a popup with more detail, including the in
 
 Currently these components are:
 
-* Market size - players generally prefer bigger markets.
-* Facilities - based on your facilities spending over the past 3 seasons.
-* Team performance - regular season and playoff success.
-* Hype - viewable from the Team Finances page, this is how excited your fans are.
-* Loyalty - players who have been on your team for multiple seasons might be loyal to your franchise.
-* Trades - if you trade away good players, players will look at that negatively. Trading away bad players or prospects matters much less.
-* Playing time - players want to play, so if a player doesn't get enough minutes (either due to tanking or because the team has too many other good players), he will be annoyed.
-* Rookie contract - players on rookie contracts are eager to sign their next contract. This gives BBGM something like the NBA's restricted free agency, because it results in your drafted players being less likely to refuse to re-sign.
+- Market size - players generally prefer bigger markets.
+- Facilities - based on your facilities spending over the past 3 seasons.
+- Team performance - regular season and playoff success.
+- Hype - viewable from the Team Finances page, this is how excited your fans are.
+- Loyalty - players who have been on your team for multiple seasons might be loyal to your franchise.
+- Trades - if you trade away good players, players will look at that negatively. Trading away bad players or prospects matters much less.
+- Playing time - players want to play, so if a player doesn't get enough minutes (either due to tanking or because the team has too many other good players), he will be annoyed.
+- Rookie contract - players on rookie contracts are eager to sign their next contract. This gives BBGM something like the NBA's restricted free agency, because it results in your drafted players being less likely to refuse to re-sign.

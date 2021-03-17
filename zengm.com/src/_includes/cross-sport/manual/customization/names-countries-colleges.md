@@ -2,6 +2,7 @@
 layout: page
 title: Customizing Player Names, Countries, and Colleges
 ---
+
 One of the [game attributes](/manual/customization/game-attributes) you can customize is called "playerBioInfo". This lets you specify how biographical information is generated for players, specifically their names, countries, and colleges.
 
 By default, Basketball GM includes a pretty large library of all of those, and picks them in proportion so that random leagues feel realistic. But if you want to simulate a different type of league, such as in a different country, then the defaults are no good.
@@ -275,7 +276,7 @@ There are three different college settings:
 1. "colleges": a list of colleges for players from a certain country
 2. "fractionSkipCollege": the percentage of players from a certain country who skip college
 3. "default colleges": like "colleges" but applies to any country where "colleges" has not been manually set
-3. "default fractionSkipCollege": like "fractionSkipCollege" but applies to any country where "fractionSkipCollege" has not been manually set
+4. "default fractionSkipCollege": like "fractionSkipCollege" but applies to any country where "fractionSkipCollege" has not been manually set
 
 First I'll show "default colleges" and "default fractionSkipCollege":
 
