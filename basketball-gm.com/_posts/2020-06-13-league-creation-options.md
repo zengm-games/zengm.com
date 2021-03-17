@@ -7,6 +7,8 @@ tags:
 - Customization
 - New Feature
 - Player Development
+- Real Player Development Determinism
+- Real Players
 ---
 
 Today I added a bunch of fun new features to Basketball GM and Football GM. They're all available when you create a new league, by clicking the "More options" link at the bottom.

@@ -1,5 +1,13 @@
 module.exports = [
     {
+        date: "2021-03-17",
+        text: 'Rescaled the "real player development determinism" implementation - before it felt like anything except a very low value was almost the same as setting it to 100%.',
+        links: [
+            "https://basketball-gm.com/blog/2021/03/rescaled-real-player-development-determinism/",
+            "https://old.reddit.com/r/BasketballGM/comments/m6pujj/rescaled_the_real_player_development_determinism/",
+        ],
+        basketball: true,
+    }, {
         date: "2021-03-16",
         text: 'The "passes defended" stat can now only be accumulated on incomplete passes and interceptions.',
         links: [
