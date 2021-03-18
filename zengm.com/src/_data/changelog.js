@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		date: "2021-03-18",
+		text:
+			"Country flags indicating the nationality of every player are shown on the roster, player bios, and player profile pages.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/m7jagd/country_flags_are_shown_indicating_the/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/m7jbi4/country_flags_indicating_the_nationality_of_every/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-03-16",
 		text:
 			'Rescaled the "real player development determinism" implementation - before it felt like anything except a very low value was almost the same as setting it to 100%.',
