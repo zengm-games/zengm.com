@@ -2,6 +2,18 @@ module.exports = [
 	{
 		date: "2021-03-18",
 		text:
+			"Draft order now matches the NFL/NHL in Football GM and ZenGM Hockey. For example, the last pick in the first round is now the championship winning team in FBGM and ZGMH.",
+		links: [
+			"https://football-gm.com/blog/2021/03/draft-order/",
+			"https://old.reddit.com/r/Football_GM/comments/m86na9/draft_order_now_matches_the_nflnhl_in_football_gm/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/m86nhf/draft_order_now_matches_the_nflnhl_in_football_gm/",
+		],
+		football: true,
+		hockey: true,
+	},
+	{
+		date: "2021-03-18",
+		text:
 			"Country flags indicating the nationality of every player are shown on the roster, player bios, and player profile pages.",
 		links: [
 			"https://old.reddit.com/r/BasketballGM/comments/m7jagd/country_flags_are_shown_indicating_the/",
