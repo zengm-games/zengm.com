@@ -5,11 +5,96 @@
 
 	<title>ZenGM - Basketball GM, Football GM, and ZenGM Hockey</title>
 
-	{% set css %}
-		{% include "index.css" %}
-	{% endset %}
 	<style>
-		{{ css | safe }}
+body {
+	background-color: var(--bg-1);
+	color: #fff;
+	font-size: 18px;
+}
+
+.top-1 {
+	background-color: var(--orange);
+	height: 10px;
+	width: 100%;
+}
+.top-2 {
+	background-color: var(--purple-dark);
+	height: 10px;
+	width: 100%;
+}
+
+.logo {
+	height: 192px;
+	width: 192px;
+	cursor: pointer;
+}
+
+.container-main {
+	max-width: 720px;
+}
+
+.headline {
+	color: var(--orange);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+ul {
+	margin-bottom: 0;
+}
+
+ul.main-list li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+	ul.main-list li::before {
+		content: none;
+	}
+}
+
+.flagship {
+	color: inherit;
+	background-color: var(--bg-2);
+	min-height: 98px;
+}
+.flagship:hover {
+	color: inherit;
+	background-color: var(--bg-1);
+	text-decoration: inherit;
+}
+.flagship img {
+	height: 82px;
+	width: 82px;
+}
+.flagship h2 {
+	font-size: 20px;
+	margin-top: 2px;
+}
+.flagship p {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+.face {
+	height: 150px;
+	width: 100px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@media (max-width: 575px) {
+	.logo {
+		height: 164px;
+		width: 164px;
+	}
+
+	.face {
+		height: 117px;
+		width: 78px;
+	}
+}
 	</style>
 	</head>
 	<body class="pb-0">
@@ -141,10 +226,41 @@
 		{% include "footer.njk" %}
 	</body>
 	{% include "facesjs.njk" %}
-	{% set js %}
-		{% include "index.js" %}
-	{% endset %}
 	<script>
-		{{ js | safe }}
+var face0 = document.getElementById("face0");
+var face1 = document.getElementById("face1");
+
+function genFace0() {
+	var jerseys = ["jersey", "jersey2", "jersey3", "jersey4", "jersey5"];
+	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
+	var face = faces.generate({
+		teamColors: ["#695FAB", "#f05742", "#cccccc"],
+		jersey: { id: jersey },
+	});
+	faces.display(face0, face);
+}
+
+var prevType = Math.random() < 0.5 ? "football" : "hockey";
+function genFace1() {
+	var jerseys =
+		prevType === "hockey" ? ["football", "football2", "football3"] : ["hockey"];
+	prevType = prevType === "hockey" ? "football" : "hockey";
+	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
+	var face = faces.generate({
+		teamColors: ["#695FAB", "#f05742", "#cccccc"],
+		jersey: { id: jersey },
+	});
+	faces.display(face1, face);
+}
+
+genFace0();
+genFace1();
+
+face0.addEventListener("click", genFace0);
+face1.addEventListener("click", genFace1);
+document.getElementById("logo").addEventListener("click", function () {
+	genFace0();
+	genFace1();
+});
 	</script>
 </html>

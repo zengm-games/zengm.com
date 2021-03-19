@@ -1,6 +1,3 @@
-const fs = require("fs");
-const path = require("path");
-
 class Changelog {
 	data() {
 		return {
@@ -16,19 +13,37 @@ class Changelog {
 			years.push(year);
 		}
 
-		const css = fs.readFileSync(
-			path.join(__dirname, "_includes", "changelog.css"),
-			"utf8",
-		);
-		const js = fs.readFileSync(
-			path.join(__dirname, "_includes", "changelog.js"),
-			"utf8",
-		);
-
 		let highestSeenYear = Infinity;
 
 		return `<style>
-    ${css}
+.changelog-entry {
+	margin-bottom: 1em;
+	padding-top: 1em;
+	border-top: 1px solid var(--bg-2);
+}
+
+.changelog-buttons img {
+	vertical-align: -3px;
+}
+
+.changelog-sports {
+	display: inline-block;
+	margin-left: 5px;
+}
+.changelog-sports img {
+	vertical-align: -3px;
+}
+@media (min-width: 1100px) {
+	.changelog-sports {
+		position: absolute;
+		left: -70px;
+		top: -1px;
+		margin: 0;
+		margin-top: 1em;
+		text-align: right;
+		width: 65px;
+	}
+}
 </style>
 <div class="mb-3 d-sm-flex changelog-buttons">
     <div class="btn-group mr-sm-3 mb-3 mb-sm-0">
@@ -96,7 +111,75 @@ class Changelog {
 			.join("")}
 </div>
 <script>
-    ${js}
+const state = {
+	basketball: true,
+	hockey: true,
+	football: true,
+	onlyBigNews: false,
+};
+
+const buttons = {
+	basketball: document.getElementById("toggle-basketball"),
+	hockey: document.getElementById("toggle-hockey"),
+	football: document.getElementById("toggle-football"),
+};
+
+const list = document.getElementById("changelog");
+
+const updateDisplayedEntries = sport => {
+	for (const child of list.children) {
+		if (child.tagName !== "DIV") {
+			// Skip over anchors
+			continue;
+		}
+
+		// Sport displayed?
+		let display = false;
+		for (const sport of Object.keys(buttons)) {
+			if (state[sport] && child.dataset[sport]) {
+				display = true;
+			}
+		}
+
+		// Big news
+		if (display) {
+			if (state.onlyBigNews && !child.dataset.big) {
+				display = false;
+			}
+		}
+
+		child.style.display = display ? "" : "none";
+	}
+};
+
+const showSport = sport => {
+	for (const child of list.children) {
+		if (child.dataset[sport]) {
+			child.style.display = "";
+		}
+	}
+};
+
+for (const [sport, button] of Object.entries(buttons)) {
+	button.addEventListener("click", () => {
+		state[sport] = !state[sport];
+
+		button.classList.toggle("btn-primary");
+		button.classList.toggle("btn-secondary");
+
+		updateDisplayedEntries();
+	});
+}
+
+const onlyBigNewsButton = document.getElementById("toggle-only-big-news");
+onlyBigNewsButton.addEventListener("click", () => {
+	state.onlyBigNews = !state.onlyBigNews;
+
+	onlyBigNewsButton.classList.toggle("btn-primary");
+	onlyBigNewsButton.classList.toggle("btn-secondary");
+
+	updateDisplayedEntries();
+});
 </script>`;
 	}
 }
