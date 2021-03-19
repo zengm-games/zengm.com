@@ -25,5 +25,6 @@ multiple sites
   - data could just be the names of the sports, then whatever template language i use could do if/else inline
 - or, use JS templates and write bySport/isSport equivalents
 
+redirect basketball-gm.com/files and football-gm.com/files
 
 tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
