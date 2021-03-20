@@ -1,5 +1,78 @@
 module.exports = [
 	{
+		date: "2021-03-20",
+		text: "New live sim fast forward option to play until next goal/score.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		football: true,
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"Increased roster size by 1, to make up a little bit for not having a real minor league system.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"Tweaked trade engine to value individual players less and to value depth more.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"If the hard cap is enabled (default for hockey and football), you are allowed to immediately trade rookies after you sign them.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"Injured players who have not yet been subbed off are now much less likely to accumulate stats.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text: "Tweaked assist rate so defensemen get more assists.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"Adjusted ratings of centers and wingers so that centers tend to be better at defense than wingers.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-03-20",
+		text:
+			"Fixed faceoffs to actually be based on the faceoffs rating - previously they were completely random, my bad!",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/",
+		],
+		hockey: true,
+	},
+	{
 		date: "2021-03-18",
 		text:
 			"Draft order now matches the NFL/NHL in Football GM and ZenGM Hockey. For example, the last pick in the first round is now the championship winning team in FBGM and ZGMH.",
