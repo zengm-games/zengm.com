@@ -52,9 +52,11 @@ ul li::before {
 	content: "\2022";
 	color: var(--orange);
 	font-weight: bold;
-	display: inline-block;
 	width: 20px;
 	margin-left: -20px;
+
+	// So a <p> inside an <li> works, do this instead of inline-block
+	float: left;
 }
 
 @media (max-width: 767px) {
