@@ -1,6 +1,4 @@
-markdown
-- wrap images in p?
-- list
+better code style, for worker console page
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
@@ -18,10 +16,6 @@ sidebar menu
 img-responsive -> img-fluid
 
 https://github.com/zengm-games
-
-add more worker console docs
-- https://discord.com/channels/290013534023057409/290015468939640832/819264526729478174
-- https://discord.com/channels/@me/737113743640625224/819262565032656916
 
 multiple sites
 - https://github.com/11ty/eleventy/issues/662

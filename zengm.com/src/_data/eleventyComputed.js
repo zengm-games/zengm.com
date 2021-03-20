@@ -14,6 +14,18 @@ module.exports = {
 		return undefined;
 	},
 
+	gameAcronym: data =>
+		data.sport
+			? bySport(
+					{
+						basketball: "BBGM",
+						football: "FBGM",
+						hockey: "ZGMH",
+					},
+					data.sport,
+			  )
+			: undefined,
+
 	gameName: data =>
 		data.sport
 			? bySport(
