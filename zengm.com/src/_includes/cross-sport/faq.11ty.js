@@ -84,7 +84,7 @@ ${
 
 <a name="hockey-gm"></a>
 <h2>Why is it called "ZenGM Hockey" rather than "Hockey GM"?</h2>
-<p>Because <a href="https://hockey-gm.com/">Hockey GM<a/> is already another game from Finland. If you speak Finnish, give it a try!</p>
+<p>Because <a href="https://hockey-gm.com/">Hockey GM</a> is already another game from Finland. If you speak Finnish, give it a try!</p>
 `
 		: ""
 }`;

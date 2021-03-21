@@ -53,7 +53,7 @@
 	--orange: #{darken(#f05742, 10%)};
 	--purple-dark: #{darken(#695fab, 10%)};
 	--purple-light: #{darken(#a89aff, 20%)};
-	--bg-1: #ffffff;
+	--bg-1: #fdfdfd;
 	--bg-2: #e8e8e8;
 }
 .dark {
@@ -138,17 +138,9 @@ ul li::before {
 		text-align: right;
 	}
 
-	// https://stackoverflow.com/a/53336754/786644
 	.footer-social {
 		width: 18px;
 		height: 18px;
-		filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg)
-			brightness(87%) contrast(85%);
-	}
-	.footer-social:hover,
-	.footer-social:active {
-		filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg)
-			brightness(110%) contrast(100%);
 	}
 
 	@media (min-width: 1000px) {
@@ -169,8 +161,32 @@ ul li::before {
 	}
 
 	h2 {
-		color: inherit;
 		font-size: 18px;
+		color: inherit;
+	}
+}
+
+// https://stackoverflow.com/a/53336754/786644
+.dark {
+	.footer-social {
+		filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg)
+			brightness(87%) contrast(85%);
+	}
+	.footer-social:hover,
+	.footer-social:active {
+		filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg)
+			brightness(110%) contrast(100%);
+	}
+}
+.light {
+	.footer-social {
+		// Target: var(--secondary)
+		filter: invert(46%) sepia(16%) saturate(252%) hue-rotate(167deg) brightness(94%) contrast(89%);
+	}
+	.footer-social:hover,
+	.footer-social:active {
+		// Target: #212529
+		filter: invert(13%) sepia(8%) saturate(687%) hue-rotate(169deg) brightness(97%) contrast(97%);
 	}
 }
 
