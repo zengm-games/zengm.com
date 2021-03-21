@@ -10,17 +10,20 @@
   <div class="mb-3 top-nav">
     <div class="container d-flex">
       <div id="face"></div>
-      <nav class="d-flex align-items-center">
-          <a href="/">ZenGM</a>
-          {% sportPicker sport %}
-          {% if not sport %}<div class="top-nav-item top-nav-separator">/</div>{% endif %}
-          <div class="top-nav-item">
-            {% if titleShort %}
-              <span class="d-none d-sm-inline">{{ title }}</span><span class="d-sm-none">{{ titleShort }}</span>
-            {% else %}
-              {{ title }}
-            {% endif %}
-          </div>
+      <nav class="d-flex align-items-center w-100">
+        <a href="/">ZenGM</a>
+        {% sportPicker sport %}
+        {% if not sport %}<div class="top-nav-item top-nav-separator">/</div>{% endif %}
+        <div class="top-nav-item">
+          {% if titleShort %}
+            <span class="d-none d-sm-inline">{{ title }}</span><span class="d-sm-none">{{ titleShort }}</span>
+          {% else %}
+            {{ title }}
+          {% endif %}
+        </div>
+        <div class="ml-auto">
+          {% include "theme-switch.njk" %}
+        </div>
       </nav>
     </div>
   </div>

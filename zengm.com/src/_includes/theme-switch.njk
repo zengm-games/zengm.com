@@ -1,0 +1,53 @@
+<style>
+#theme-switch {
+  background-color: inherit;
+  height: 48px;
+}
+#theme-switch img {
+  display: none;
+}
+
+.dark #theme-switch {
+  filter: invert(0.65);
+}
+.dark #theme-switch:hover {
+  filter: invert(1);
+}
+
+.light #theme-switch {
+  filter: invert(0.35);
+}
+.light #theme-switch:hover {
+  filter: invert(0);
+}
+</style>
+
+
+<button class="border-0 py-1" id="theme-switch" title="Toggle theme (light/dark mode)">
+  <img src="/files/theme-switch/moon-fill.svg" width="16" height="16" id="theme-switch-dark">
+  <img src="/files/theme-switch/sun-fill.svg" width="16" height="16" id="theme-switch-light">
+</button>
+
+<script>
+const themeSwitch = document.getElementById("theme-switch");
+const darkIcon = document.getElementById("theme-switch-dark");
+const lightIcon = document.getElementById("theme-switch-light");
+
+if (getTheme() === "light") {
+  darkIcon.style.display = "inline";
+} else {
+  lightIcon.style.display = "inline";
+}
+
+themeSwitch.addEventListener("click", function (event) {
+  if (getTheme() === "light") {
+    setTheme("dark");
+    darkIcon.style.display = "none";
+    lightIcon.style.display = "inline";
+  } else {
+    setTheme("light");
+    darkIcon.style.display = "inline";
+    lightIcon.style.display = "none";
+  }
+});
+</script>

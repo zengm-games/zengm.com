@@ -1,11 +1,36 @@
+<meta name="color-scheme" content="dark light">
+<script>
+function getTheme() {
+    try {
+        var local = localStorage.getItem("theme");
+        if (local !== null) {
+            return local;
+        }
+        return "dark";
+    } catch (err) {
+        return "dark";
+    }
+}
+function setTheme(theme) {
+    theme = theme === "light" ? "light" : "dark";
+    const element = document.getElementsByTagName("html")[0];
+    element.classList.add(theme)
+    element.classList.remove(theme === "light" ? "dark" : "light")
+    localStorage.setItem("theme", theme);
+}
+
+setTheme(getTheme());
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
 <link rel="shortcut icon" href="/files/logo64.png">
 <link rel="apple-touch-icon" href="/files/logo192.png">
-
-<meta name="color-scheme" content="dark light">
 <link href="/css/main.css" rel="stylesheet">
+
 <script src="/files/bootstrap-native-3.0.14-f.min.js"></script>
+
 {% include "google-analytics.njk" %}
