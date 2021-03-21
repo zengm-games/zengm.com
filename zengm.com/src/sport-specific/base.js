@@ -5,12 +5,16 @@ module.exports = {
 		size: 1,
 		alias: "sport",
 	},
-	permalink(data) {
-		let filePathStem = data.page.filePathStem;
-		if (!filePathStem.endsWith("/index")) {
-			filePathStem += "/index";
-		}
 
-		return `${filePathStem.replace("sport-specific", data.sport)}.html`;
+	// Inside eleventyComputed rather than root because of https://github.com/11ty/eleventy/issues/1076#issuecomment-745300512
+	eleventyComputed: {
+		permalink(data) {
+			let filePathStem = data.page.filePathStem;
+			if (!filePathStem.endsWith("/index")) {
+				filePathStem += "/index";
+			}
+
+			return `${filePathStem.replace("sport-specific", data.sport)}.html`;
+		},
 	},
 };

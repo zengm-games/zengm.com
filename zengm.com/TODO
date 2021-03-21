@@ -1,3 +1,6 @@
+permalink and templateEngineOverride error
+- https://github.com/11ty/eleventy/issues/943
+
 make sure there's links to all pages, like debugging
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
