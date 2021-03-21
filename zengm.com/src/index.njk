@@ -17,7 +17,7 @@ body {
 	width: 100%;
 }
 .top-2 {
-	background-color: var(--purple-dark);
+	background-color: var(--logo-purple);
 	height: 10px;
 	width: 100%;
 }
@@ -96,20 +96,28 @@ ul.main-list li:not(:last-child) {
 	}
 }
 
-.theme-switch-wrapper {
+.theme-switch-wrapper-2 {
 	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+}
+
+.theme-switch-wrapper {
 	width: 48px;
 	height: 48px;
-	top: 20px;
-	right: 0px;
 }
 	</style>
 	</head>
 	<body class="pb-0">
 		<div class="top-1"></div>
 		<div class="top-2"></div>
-		<div class="theme-switch-wrapper">
-			{% include "theme-switch.njk" %}
+		<div class="theme-switch-wrapper-2">
+			<div class="container container-main px-0">
+				<div class="theme-switch-wrapper float-right">
+					{% include "theme-switch.njk" %}
+				</div>
+			</div>
 		</div>
 		<div class="d-flex align-items-end my-5 mx-1">
 			<div id="face0" class="face ml-auto"></div>

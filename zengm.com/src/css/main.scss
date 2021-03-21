@@ -50,16 +50,15 @@
 
 :root {
 	--logo-orange: #f05742;
+	--logo-purple: #695fab;
 	--orange: #{darken(#f05742, 10%)};
-	--purple-dark: #{darken(#695fab, 10%)};
-	--purple-light: #{darken(#a89aff, 20%)};
+	--purple: #{darken(#a89aff, 20%)};
 	--bg-1: #fdfdfd;
 	--bg-2: #e8e8e8;
 }
 .dark {
 	--orange: #f05742;
-	--purple-dark: #695fab;
-	--purple-light: #a89aff;
+	--purple: #a89aff;
 	--bg-1: #222222;
 	--bg-2: #3b3b3b;
 }
@@ -88,7 +87,7 @@ h3 {
 
 a,
 a:hover, html.dark a, html.dark a:hover {
-	color: var(--purple-light);
+	color: var(--purple);
 }
 
 .text-highlight {
