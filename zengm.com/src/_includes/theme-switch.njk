@@ -1,31 +1,30 @@
 <style>
 #theme-switch {
   background-color: inherit;
-  height: 48px;
 }
 #theme-switch img {
   display: none;
 }
 
-.dark #theme-switch {
+.dark #theme-switch img {
   filter: invert(0.65);
 }
-.dark #theme-switch:hover {
+.dark #theme-switch:hover img {
   filter: invert(1);
 }
 
-.light #theme-switch {
+.light #theme-switch img {
   filter: invert(0.35);
 }
-.light #theme-switch:hover {
+.light #theme-switch:hover img {
   filter: invert(0);
 }
 </style>
 
 
-<button class="border-0 py-1" id="theme-switch" title="Toggle theme (light/dark mode)">
-  <img src="/files/theme-switch/moon-fill.svg" width="16" height="16" id="theme-switch-dark">
-  <img src="/files/theme-switch/sun-fill.svg" width="16" height="16" id="theme-switch-light">
+<button class="border-0 py-1 h-100 w-100 d-flex align-items-center justify-content-center" id="theme-switch" title="Toggle theme (light/dark mode)">
+  <img src="/files/theme-switch/moon-fill.svg" width="22" height="22" id="theme-switch-dark">
+  <img src="/files/theme-switch/sun-fill.svg" width="22" height="22" id="theme-switch-light">
 </button>
 
 <script>

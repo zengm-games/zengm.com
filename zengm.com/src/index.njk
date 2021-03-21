@@ -95,11 +95,22 @@ ul.main-list li:not(:last-child) {
 		width: 78px;
 	}
 }
+
+.theme-switch-wrapper {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 20px;
+	right: 0px;
+}
 	</style>
 	</head>
 	<body class="pb-0">
 		<div class="top-1"></div>
 		<div class="top-2"></div>
+		<div class="theme-switch-wrapper">
+			{% include "theme-switch.njk" %}
+		</div>
 		<div class="d-flex align-items-end my-5 mx-1">
 			<div id="face0" class="face ml-auto"></div>
 			<img id="logo" class="logo mx-2 mx-sm-3" src="/files/logo.svg">

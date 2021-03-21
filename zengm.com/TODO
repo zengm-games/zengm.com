@@ -1,3 +1,6 @@
+footer h2 color in dark mode
+gray bg
+
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
