@@ -1,7 +1,9 @@
+const base = require("../../base");
+
 module.exports = class {
 	data() {
 		return {
-			layout: "layout.njk",
+			...base,
 			title: "Customization",
 		};
 	}

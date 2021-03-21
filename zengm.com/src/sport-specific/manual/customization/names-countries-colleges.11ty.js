@@ -1,3 +1,4 @@
+const base = require("../../base");
 const bySport = require("../../../util/bySport");
 
 const myStringify = (obj, indentationLevels) => {
@@ -17,14 +18,14 @@ const myStringify = (obj, indentationLevels) => {
 module.exports = class {
 	data() {
 		return {
-			layout: "layout.njk",
+			...base,
 			templateEngineOverride: "11ty.js,md",
 			title: "Customizing Player Names, Countries, and Colleges",
 			titleShort: "Customizing Player Bio Info",
 		};
 	}
 
-	render({ gameAcronym, gameName, sport, websitePlay }) {
+	render({ gameName, sport }) {
 		const defaultCountryFrequencies = bySport(
 			{
 				basketball: {

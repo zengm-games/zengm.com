@@ -1,4 +1,5 @@
-src/sport-specific/manual/debugging
-src/sport-specific/manual/customization
+src/sport-specific/**/*.html
+src/sport-specific/**/*.md
+src/sport-specific/manual/customization/names-countries-colleges.11ty.js
 src/sport-specific/manual/player-mood.11ty.js
 src/sport-specific/manual/worker-console.11ty.js

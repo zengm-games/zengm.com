@@ -1,17 +1,13 @@
 const bySport = require("../../util/bySport");
+const base = require("../base");
 
 module.exports = class {
 	data() {
 		return {
-			layout: "layout.njk",
+			...base,
 			templateEngineOverride: "11ty.js,md",
 			title: "Advanced League Customization in the Worker Console",
 			titleShort: "Worker Console",
-			pagination: {
-				data: "sports",
-				size: 1,
-				alias: "sport",
-			},
 		};
 	}
 
