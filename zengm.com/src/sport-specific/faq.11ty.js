@@ -3,6 +3,14 @@ module.exports = class FAQ {
 		return {
 			layout: "layout.njk",
 			title: "Frequently Asked Questions",
+			pagination: {
+				data: "sports",
+				size: 1,
+				alias: "sport",
+			},
+			permalink(data) {
+				return `/${data.sport}/faq/index.html`;
+			},
 		};
 	}
 
