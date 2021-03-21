@@ -245,5 +245,8 @@ pre {
 	background-color: var(--bg-2);
 	padding: 0.5rem;
 	border-radius: 0.25rem;
-	border: 1px solid var(--secondary);
+	border: 1px solid #ccc;
+}
+.dark pre {
+	border-color: var(--secondary);
 }

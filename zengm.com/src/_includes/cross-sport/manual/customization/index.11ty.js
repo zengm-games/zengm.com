@@ -39,7 +39,7 @@ module.exports = class {
 	>. For team info, go to Tools > Edit Team Info (only available after enabling
 	God Mode).
 </p>
-<h3>Editing League Files</h3>
+<h2>Editing League Files</h2>
 <p>
 	League Files are text files in
 	<a href="https://en.wikipedia.org/wiki/JSON">JSON</a> format. You can
@@ -143,7 +143,7 @@ module.exports = class {
 		large, so it often makes sense to leave it off.
 	</li>
 </ul>
-<h3>Debugging League Files</h3>
+<h2>Debugging League Files</h2>
 <p>
 	Debugging can be tricky. Ultimately, the only way to be sure is to try it out.
 	However there is
