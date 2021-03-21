@@ -22,7 +22,7 @@
 </style>
 
 
-<button class="border-0 py-1 h-100 w-100 d-flex align-items-center justify-content-center" id="theme-switch" title="Toggle theme (light/dark mode)">
+<button class="border-0 py-1 h-100 w-100 d-flex align-items-center justify-content-center" id="theme-switch">
   <img src="/files/theme-switch/moon-fill.svg" width="22" height="22" id="theme-switch-dark">
   <img src="/files/theme-switch/sun-fill.svg" width="22" height="22" id="theme-switch-light">
 </button>
@@ -32,21 +32,27 @@ const themeSwitch = document.getElementById("theme-switch");
 const darkIcon = document.getElementById("theme-switch-dark");
 const lightIcon = document.getElementById("theme-switch-light");
 
-if (getTheme() === "light") {
-  darkIcon.style.display = "inline";
-} else {
-  lightIcon.style.display = "inline";
+function updateIcon(theme) {
+  if (theme === "dark") {
+    darkIcon.style.display = "none";
+    lightIcon.style.display = "inline";
+    themeSwitch.title = "Switch to light mode";
+  } else {
+    darkIcon.style.display = "inline";
+    lightIcon.style.display = "none";
+    themeSwitch.title = "Switch to dark mode";
+  }
 }
+
+updateIcon(getTheme());
 
 themeSwitch.addEventListener("click", function (event) {
   if (getTheme() === "light") {
     setTheme("dark");
-    darkIcon.style.display = "none";
-    lightIcon.style.display = "inline";
+    updateIcon("dark");
   } else {
     setTheme("light");
-    darkIcon.style.display = "inline";
-    lightIcon.style.display = "none";
+    updateIcon("light");
   }
 });
 </script>
