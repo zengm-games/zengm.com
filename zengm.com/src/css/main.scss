@@ -1,5 +1,53 @@
 @import "../../node_modules/bootstrap-dark-4/dist/bootstrap-nightshade";
 
+// nightshade doesn't include the normal Bootstrap CSS variables, for some reason. So I included them here.
+:root {
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+	--primary: #007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--info: #17a2b8;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--dark: #343a40;
+}
+.dark {
+	--blue: #375a7f;
+	--indigo: #6610f2;
+	--purple: #654ea3;
+	--pink: #e83e8c;
+	--red: #e74c3c;
+	--orange: #fd7e14;
+	--yellow: #f39c12;
+	--green: #00bc8c;
+	--teal: #45b5aa;
+	--cyan: #17a2b8;
+	--white: #fafafa;
+	--gray: #7e7e7e;
+	--gray-dark: #121212;
+	--primary: #375a7f;
+	--secondary: #626262;
+	--success: #00bc8c;
+	--info: #17a2b8;
+	--warning: #f39c12;
+	--danger: #e74c3c;
+	--light: #7e7e7e;
+	--dark: #3b3b3b;
+}
+
 :root {
 	--logo-orange: #f05742;
 	--orange: #{darken(#f05742, 10%)};
@@ -8,7 +56,6 @@
 	--bg-1: #ffffff;
 	--bg-2: #e8e8e8;
 }
-
 .dark {
 	--orange: #f05742;
 	--purple-dark: #695fab;
