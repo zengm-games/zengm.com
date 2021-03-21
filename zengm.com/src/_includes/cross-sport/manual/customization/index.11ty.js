@@ -1,11 +1,15 @@
----
-layout: page
-title: Customization
----
+module.exports = class {
+	data() {
+		return {
+			layout: "layout.njk",
+			title: "Customization",
+		};
+	}
 
-<p>
-	Basketball GM is a highly customizable game. Most of this is done through
-	<b>League Files</b>, which contain the data of a Basketball GM league - teams,
+	render({ gameName, subredditName, sport, websitePlay }) {
+		return `<p>
+	${gameName} is a highly customizable game. Most of this is done through
+	<b>League Files</b>, which contain the data of a ${gameName} league - teams,
 	players, stats, etc. League Files have two main purposes:
 </p>
 <ol>
@@ -13,7 +17,7 @@ title: Customization
 		They allow you to use League Files created by others. You might find some of
 		these
 		<a
-			href="http://www.reddit.com/r/BasketballGM/search?q=roster&restrict_sr=on"
+			href="http://www.reddit.com/r/${subredditName}/search?q=roster&amp;restrict_sr=on"
 			>on Reddit</a
 		>.
 	</li>
@@ -25,7 +29,7 @@ title: Customization
 </ol>
 <p>
 	To use a League File, upload it when you
-	<a href="http://play.basketball-gm.com/new_league">create a new league</a>.
+	<a href="${websitePlay}/new_league">create a new league</a>.
 </p>
 <p>
 	It is also possible to import only a draft class or only team info (cities,
@@ -38,7 +42,7 @@ title: Customization
 <h3>Editing League Files</h3>
 <p>
 	League Files are text files in
-	<a href="http://en.wikipedia.org/wiki/Json">JSON</a> format. You can
+	<a href="https://en.wikipedia.org/wiki/JSON">JSON</a> format. You can
 	add/remove/edit nearly any part of it.
 </p>
 <p>
@@ -87,14 +91,18 @@ title: Customization
 <ul>
 	<li>
 		<code>version</code> - an integer specifying the version of the league file.
-		Currently you should use 36, the latest version. If you use anything less
+		Currently the latest version is 43.${
+			sport === "basketball"
+				? ` If you use anything less
 		than 24 or don't specify a version, then
 		<a href="/blog/2017/09/more-extreme-heights/"
 			>player heights will be rescaled on load</a
 		>. If you use anything less than 27 or don't specify a version, then
 		<a href="/blog/2018/02/player-ratings-and-development-beta/"
 			>player ratings will be rescaled on load</a
-		>.
+		>.`
+				: ""
+		}
 	</li>
 	<li>
 		<code>gameAttributes</code> - Mostly internal variables that should be left
@@ -139,11 +147,13 @@ title: Customization
 <p>
 	Debugging can be tricky. Ultimately, the only way to be sure is to try it out.
 	However there is
-	<a href="https://play.basketball-gm.com/files/league-schema.json"
+	<a href="${websitePlay}/files/league-schema.json"
 		>a JSON Schema file</a
 	>
 	you can use to catch some errors.
-	<a href="/manual/customization/json-schema"
+	<a href="/manual/customization/json-schema/"
 		>Here is some documentation on how to use it.</a
 	>
-</p>
+</p>`;
+	}
+};

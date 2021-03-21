@@ -50,6 +50,18 @@ module.exports = {
 			  )
 			: undefined,
 
+	subredditName: data =>
+		data.sport
+			? bySport(
+					{
+						basketball: "BasketballGM",
+						football: "Football_GM",
+						hockey: "ZenGMHockey",
+					},
+					data.sport,
+			  )
+			: undefined,
+
 	websitePlay: data =>
 		data.sport
 			? bySport(
