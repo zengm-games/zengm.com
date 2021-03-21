@@ -87,8 +87,8 @@ h3 {
 }
 
 a,
-a:hover {
-	color: var(--purple-light) !important;
+a:hover, html.dark a, html.dark a:hover {
+	color: var(--purple-light);
 }
 
 .text-highlight {
