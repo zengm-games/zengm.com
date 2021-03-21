@@ -1,6 +1,15 @@
-@import "../../node_modules/bootstrap-dark-4/dist/bootstrap-night";
+@import "../../node_modules/bootstrap-dark-4/dist/bootstrap-nightshade";
 
 :root {
+	--logo-orange: #f05742;
+	--orange: #{darken(#f05742, 10%)};
+	--purple-dark: #{darken(#695fab, 10%)};
+	--purple-light: #{darken(#a89aff, 20%)};
+	--bg-1: #ffffff;
+	--bg-2: #e8e8e8;
+}
+
+.dark {
 	--orange: #f05742;
 	--purple-dark: #695fab;
 	--purple-light: #a89aff;
@@ -32,7 +41,7 @@ h3 {
 
 a,
 a:hover {
-	color: var(--purple-light);
+	color: var(--purple-light) !important;
 }
 
 .text-highlight {
