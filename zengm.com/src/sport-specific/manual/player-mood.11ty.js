@@ -1,4 +1,4 @@
-const bySport = require("../../../util/bySport");
+const bySport = require("../../util/bySport");
 
 module.exports = class {
 	data() {
@@ -6,6 +6,11 @@ module.exports = class {
 			layout: "layout.njk",
 			templateEngineOverride: "11ty.js,md",
 			title: "Player Mood",
+			pagination: {
+				data: "sports",
+				size: 1,
+				alias: "sport",
+			},
 		};
 	}
 

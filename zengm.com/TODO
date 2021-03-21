@@ -1,10 +1,5 @@
 make sure there's links to all pages, like debugging
 
-better way than all these placeholder njk pages in basketball/football/hockey folders?
-- https://www.11ty.dev/docs/pages-from-data/
-  - src/sport/faq.njk containing all of it?
-- https://github.com/11ty/eleventy/issues/620
-
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?

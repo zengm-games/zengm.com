@@ -1,4 +1,4 @@
-const bySport = require("../../../../util/bySport");
+const bySport = require("../../../util/bySport");
 
 const myStringify = (obj, indentationLevels) => {
 	const indentation = "\t".repeat(indentationLevels);

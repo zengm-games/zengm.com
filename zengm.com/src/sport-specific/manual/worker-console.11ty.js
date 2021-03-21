@@ -1,4 +1,4 @@
-const bySport = require("../../../util/bySport");
+const bySport = require("../../util/bySport");
 
 module.exports = class {
 	data() {
@@ -7,6 +7,11 @@ module.exports = class {
 			templateEngineOverride: "11ty.js,md",
 			title: "Advanced League Customization in the Worker Console",
 			titleShort: "Worker Console",
+			pagination: {
+				data: "sports",
+				size: 1,
+				alias: "sport",
+			},
 		};
 	}
 

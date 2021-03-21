@@ -1,9 +1,10 @@
-const bySport = require("../../../util/bySport");
+const bySport = require("../../util/bySport");
+const base = require("../base");
 
 module.exports = class {
 	data() {
 		return {
-			layout: "layout.njk",
+			...base,
 			title: "Manual",
 		};
 	}

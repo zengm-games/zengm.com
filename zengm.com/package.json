@@ -12,13 +12,11 @@
     "assetgraph-builder": "^8.1.1",
     "bootstrap-dark-4": "^0.0.9",
     "chokidar-cli": "^2.1.0",
+    "concurrently": "^6.0.0",
     "husky": "=4",
     "lint-staged": ">=10",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1"
-  },
-  "dependencies": {
-    "concurrently": "^6.0.0"
   },
   "husky": {
     "hooks": {

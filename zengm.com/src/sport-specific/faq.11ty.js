@@ -1,16 +1,10 @@
+const base = require("./base");
+
 module.exports = class FAQ {
 	data() {
 		return {
-			layout: "layout.njk",
+			...base,
 			title: "Frequently Asked Questions",
-			pagination: {
-				data: "sports",
-				size: 1,
-				alias: "sport",
-			},
-			permalink(data) {
-				return `/${data.sport}/faq/index.html`;
-			},
 		};
 	}
 
