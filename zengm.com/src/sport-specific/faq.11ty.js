@@ -3,7 +3,7 @@ const base = require("./base");
 module.exports = class FAQ {
 	data() {
 		return {
-			...base,
+			...base("js"),
 			title: "Frequently Asked Questions",
 		};
 	}

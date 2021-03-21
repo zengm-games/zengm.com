@@ -18,7 +18,7 @@ const myStringify = (obj, indentationLevels) => {
 module.exports = class {
 	data() {
 		return {
-			...base,
+			...base("md"),
 			templateEngineOverride: "11ty.js,md",
 			title: "Customizing Player Names, Countries, and Colleges",
 			titleShort: "Customizing Player Bio Info",

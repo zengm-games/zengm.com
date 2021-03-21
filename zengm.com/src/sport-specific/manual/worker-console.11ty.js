@@ -4,7 +4,7 @@ const base = require("../base");
 module.exports = class {
 	data() {
 		return {
-			...base,
+			...base("md"),
 			templateEngineOverride: "11ty.js,md",
 			title: "Advanced League Customization in the Worker Console",
 			titleShort: "Worker Console",

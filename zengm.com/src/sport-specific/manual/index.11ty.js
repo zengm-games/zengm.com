@@ -4,7 +4,7 @@ const base = require("../base");
 module.exports = class {
 	data() {
 		return {
-			...base,
+			...base("js"),
 			title: "Manual",
 		};
 	}

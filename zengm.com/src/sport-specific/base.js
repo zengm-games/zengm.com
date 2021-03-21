@@ -1,4 +1,6 @@
-module.exports = {
+const sportSpecificURL = require("../util/sportSpecificURL");
+
+module.exports = type => ({
 	layout: "layout.njk",
 	pagination: {
 		data: "sports",
@@ -7,14 +9,16 @@ module.exports = {
 	},
 
 	// Inside eleventyComputed rather than root because of https://github.com/11ty/eleventy/issues/1076#issuecomment-745300512
-	eleventyComputed: {
+	// ...but this doesn't work because of https://github.com/11ty/eleventy/issues/1555 so we need separate ones for JS and MD
+	/*eleventyComputed: {
 		permalink(data) {
-			let filePathStem = data.page.filePathStem;
-			if (!filePathStem.endsWith("/index")) {
-				filePathStem += "/index";
-			}
-
-			return `${filePathStem.replace("sport-specific", data.sport)}.html`;
+			return sportSpecificURL(data.page.filePathStem, data.sport);
 		},
-	},
-};
+	},*/
+	permalink:
+		type === "js"
+			? data => {
+					return sportSpecificURL(data.page.filePathStem, data.sport);
+			  }
+			: "{% sportSpecificURL page.filePathStem, sport %}",
+});
