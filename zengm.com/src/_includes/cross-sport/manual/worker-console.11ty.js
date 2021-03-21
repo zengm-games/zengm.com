@@ -96,6 +96,8 @@ This page explains how to access the console and shows examples of what you can 
 
 ## Code snippets
 
+---
+
 ### Change the jersey number of a player
 
 \`\`\`
@@ -110,6 +112,8 @@ if (p.stats.length > 0) {
 }
 await bbgm.idb.cache.players.put(p);
 \`\`\`
+
+---
 
 ### Buff/nerf draft prospect ratings
 
@@ -140,6 +144,8 @@ ${ratingKeys.join("\n")}
 
 For example...
 
+---
+
 ### Buff/nerf all ratings for a subset of players
 
 Towards the bottom, change \`158, 207, 14\` to a list of player ID numbers you want nerfed/buffed. And change 0.8 to the amount you want each rating multiplied by. Edit the list of ratings in \`keys\` if you don't want it to apply to all ratings
@@ -163,6 +169,8 @@ for (const pid of pids) {
 }
 \`\`\`
 
+---
+
 ### "Lock ratings" for all active players
 
 \`\`\`
@@ -172,6 +180,8 @@ for (const p of players) {
     await bbgm.idb.cache.players.put(p);
 }
 \`\`\`
+
+---
 
 ### List all the players who have died
 
@@ -187,6 +197,8 @@ bbgm.iterate(
     },
 );
 \`\`\`
+
+---
 
 ### Change GM History teams
 
@@ -212,6 +224,8 @@ await bbgm.idb.cache.gameAttributes.put({
 });
 \`\`\`
 
+---
+
 ### Delete all players at a certain position
 
 \`\`\`
@@ -231,6 +245,8 @@ for (const p of players) {
 }
 await bbgm.player.remove(pids);
 \`\`\`
+
+---
 
 ### Kill a player with a custom tragic death
 
