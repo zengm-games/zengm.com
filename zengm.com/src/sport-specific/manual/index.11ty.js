@@ -211,7 +211,7 @@ ${bySport(
 <h2>Advanced League Editing in the Worker Console</h2>
 <p>You can use the JavaScript console in your browser to do pretty much anything. <a href="/${sport}/manual/worker-console/">Read this for more details.</a>
 <h2>FAQ</h2>
-<p><a href="/faq/">Here are the answers to some frequently asked questions.</a></p>
+<p><a href="/${sport}/faq/">Here are the answers to some frequently asked questions.</a></p>
 <h2>Still not sure about something?</h2>
 <p>If you have a question, think you found a bug, or you want to request a feature, <a href="/contact/">let us know</a>.</p>`;
 	}

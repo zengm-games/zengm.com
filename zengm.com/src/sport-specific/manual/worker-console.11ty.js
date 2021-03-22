@@ -5,7 +5,6 @@ module.exports = class {
 	data() {
 		return {
 			...base("md"),
-			templateEngineOverride: "11ty.js,md",
 			title: "Advanced League Customization in the Worker Console",
 			titleShort: "Worker Console",
 		};
