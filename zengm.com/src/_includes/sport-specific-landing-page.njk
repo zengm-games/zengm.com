@@ -24,6 +24,12 @@
   0% {opacity:1;}
   100% {opacity:0;}
 }
+
+.feedback-button {
+  background-color: inherit;
+  border: 0;
+  padding: 0 0.25rem;
+}
 	</style>
 	</head>
     <body>
@@ -144,10 +150,13 @@
         <p>Our only goal is making the best possible {{ sport }} management game!</p>
 
         <h4>
-          Real User Feedback
-          <a id="prev-feedback" href="#prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
-          <a id="play-feedback" href="#play"><span class="glyphicon glyphicon-pause"></span></a>
-          <a id="next-feedback" href="#next"><span class="glyphicon glyphicon-arrow-right"></span></a>
+          <div class="d-flex">
+            <span class="mr-2">Real User Feedback</span>
+            <button id="feedback-prev" class="feedback-button"><img src="/files/bootstrap-icons/arrow-left-short.svg" width="22" height="22" class="svg-button"></button>
+            <button id="feedback-pause" class="feedback-button"><img src="/files/bootstrap-icons/pause.svg" width="22" height="22" class="svg-button"></button>
+            <button id="feedback-play" class="feedback-button" style="display: none"><img src="/files/bootstrap-icons/play.svg" width="22" height="22" class="svg-button"></button>
+            <button id="feedback-next" class="feedback-button"><img src="/files/bootstrap-icons/arrow-right-short.svg" width="22" height="22" class="svg-button"></button>
+          </div>
         </h4>
         <p id="feedback"></p>
       </div>
@@ -174,60 +183,62 @@ function updateFeedback() {
 updateFeedback();
 
 var feedbackIntervalId;
+var state = "play";
 
 function startFeedback() {
+  state = "play";
   feedbackIntervalId = setTimeout(function () {
     elFeedback.classList.add("fade-out");
     elFeedback.addEventListener("animationend", () => {
-      console.log("animationend1");
       updateFeedback();
       elFeedback.classList.remove("fade-out");
       elFeedback.classList.add("fade-in");
       elFeedback.addEventListener("animationend", () => {
-        console.log("animationend2");
         elFeedback.classList.remove("fade-in");
-        startFeedback();
+        if (state === "play") {
+          startFeedback();
+        }
       }, {
         once: true,
       });
     }, {
       once: true,
     });
-  }, 6000);
+  }, 600);
 }
 startFeedback();
 
 // Controls
-document.getElementById("prev-feedback").addEventListener("click", function () {
+var elFeedbackPlay = document.getElementById("feedback-play");
+var elFeedbackPause = document.getElementById("feedback-pause");
+elFeedbackPlay.addEventListener("click", function () {
+  elFeedbackPlay.style.display = "none";
+  elFeedbackPause.style.display = "inline-block";
+  startFeedback();
+});
+elFeedbackPause.addEventListener("click", function () {
+  elFeedbackPlay.style.display = "inline-block";
+  elFeedbackPause.style.display = "none";
   clearTimeout(feedbackIntervalId);
+  state = "pause";
+});
+document.getElementById("feedback-prev").addEventListener("click", function () {
+  clearTimeout(feedbackIntervalId);
+  state = "pause";
   iFeedback -= 2;
   iFeedback = ((iFeedback % feedbacks.length) + feedbacks.length) % feedbacks.length; // http://stackoverflow.com/a/3417242/786644
   updateFeedback();
-  if (elPlayPauseFeedback.hasClass("glyphicon-pause")) {
+  if (elFeedbackPlay.style.display === "none") {
     startFeedback();
   }
-  return false;
 });
-document.getElementById("next-feedback").addEventListener("click", function () {
+document.getElementById("feedback-next").addEventListener("click", function () {
   clearTimeout(feedbackIntervalId);
+  state = "pause";
   updateFeedback();
-  if (elPlayPauseFeedback.hasClass("glyphicon-pause")) {
+  if (elFeedbackPlay.style.display === "none") {
     startFeedback();
   }
-  return false;
-});
-var elPlayPauseFeedback = document.getElementById("play-feedback span");
-document.getElementById("play-feedback").addEventListener("click", function () {
-  if (elPlayPauseFeedback.classList.has("glyphicon-pause")) {
-    clearTimeout(feedbackIntervalId);
-    elPlayPauseFeedback.classList.remove("glyphicon-pause")
-    elPlayPauseFeedback.classList.add("glyphicon-play");
-  } else if (elPlayPauseFeedback.classList.has("glyphicon-play")) {
-    elPlayPauseFeedback.classList.remove("glyphicon-play")
-    elPlayPauseFeedback.classList.add("glyphicon-pause");
-    startFeedback();
-  }
-  return false;
 });
 </script>
     </body>

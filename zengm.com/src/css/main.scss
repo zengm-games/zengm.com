@@ -250,3 +250,17 @@ pre {
 .dark pre {
 	border-color: var(--secondary);
 }
+
+.dark .svg-button {
+	filter: invert(0.65);
+}
+.dark .svg-button:hover {
+	filter: invert(1);
+}
+
+.light .svg-button {
+	filter: invert(0.35);
+}
+.light .svg-button:hover {
+	filter: invert(0);
+}
