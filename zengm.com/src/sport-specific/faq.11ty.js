@@ -79,6 +79,14 @@ module.exports = class FAQ {
 <p>I can make a counterargument, though. ${gameName} is a video game. Its primary purpose is to be fun, not to be realistic. So maybe it'd be fun to give unrealistically large bonuses to young players who get a lot of playing time. I don't know. It could be fun. But I also very much like to keep things simple, so I err on the side of simplicity. And doing nothing is very simple.</p>
 <p>I also am aware that I could be wrong. Maybe there is a convincing, data-driven argument that playing time leads to quantifiable improvement. If so, <a href="/contact/">please let me know</a>!</p>
 
+<hr>
+
+<a name="other-sport"></a>
+<h2>Can you make another sport like baseball or soccer, or college sports?</h2>
+<p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other sports.</p>
+<p>Most likely baseball would be next, because pro baseball is pretty similar to pro basketball/football/hockey. Soccer would require a lot more work to really do it right, since pro soccer is pretty different. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
+<p>But who knows, I'm bad at planning.</p>
+
 ${
 	sport === "hockey"
 		? `
