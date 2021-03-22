@@ -76,7 +76,7 @@ h3 {
 }
 
 @media (min-width: 960px) {
-	.container {
+	.container-lg {
 		max-width: 960px;
 	}
 }
@@ -106,21 +106,12 @@ ul li::marker {
 	color: var(--orange);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991.98px) {
 	ul {
-		margin-left: -23px;
+		margin-left: -20px;
 	}
 	ol {
-		margin-left: -23px;
-	}
-}
-
-@media (max-width: 991px) {
-	ul.bullets-margin-lg {
-		margin-left: -23px;
-	}
-	ol.bullets-margin-lg {
-		margin-left: -23px;
+		margin-left: -20px;
 	}
 }
 
@@ -146,7 +137,7 @@ ul li::marker {
 	}
 
 	@media (min-width: 1000px) {
-		.container {
+		.container-lg {
 			border-left: 1px solid var(--bg-1);
 			border-right: 1px solid var(--bg-1);
 		}
