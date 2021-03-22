@@ -167,23 +167,23 @@ ul li::before {
 
 // https://stackoverflow.com/a/53336754/786644
 .dark {
-	.footer-social {
+	.black-icon {
 		filter: invert(100%) sepia(67%) saturate(281%) hue-rotate(292deg)
 			brightness(87%) contrast(85%);
 	}
-	.footer-social:hover,
-	.footer-social:active {
+	.black-icon:hover,
+	.black-icon:active {
 		filter: invert(100%) sepia(4%) saturate(3%) hue-rotate(253deg)
 			brightness(110%) contrast(100%);
 	}
 }
 .light {
-	.footer-social {
+	.black-icon {
 		// Target: var(--secondary)
 		filter: invert(46%) sepia(16%) saturate(252%) hue-rotate(167deg) brightness(94%) contrast(89%);
 	}
-	.footer-social:hover,
-	.footer-social:active {
+	.black-icon:hover,
+	.black-icon:active {
 		// Target: #212529
 		filter: invert(13%) sepia(8%) saturate(687%) hue-rotate(169deg) brightness(97%) contrast(97%);
 	}
