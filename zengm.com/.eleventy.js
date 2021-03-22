@@ -18,6 +18,21 @@ module.exports = function (eleventyConfig) {
 		return mdRender.renderInline(rawString);
 	});
 
+	eleventyConfig.addShortcode("favicon", function (websitePlay) {
+		let favicon;
+		let appleTouchIcon;
+		if (websitePlay) {
+			favicon = `${websitePlay}ico/icon.svg`;
+			appleTouchIcon = `${websitePlay}ico/apple-touch-icon.png`;
+		} else {
+			favicon = "/files/logo-small.svg";
+			appleTouchIcon = "/files/apple-touch-icon.png";
+		}
+
+		return `<link rel="icon" href="${favicon}">
+<link rel="apple-touch-icon" href="${appleTouchIcon}">`;
+	});
+
 	eleventyConfig.addShortcode("sportTitle", function (sport) {
 		if (!sport) {
 			return "ZenGM";

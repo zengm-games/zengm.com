@@ -2,9 +2,8 @@ make sure there's links to all pages, like debugging
 
 check links to everything in /files
 
-sport-specific favicons, within that subfolder/domain
-
 sport-specific-landing-pages
+- link from footer
 - theme switch
 - carousel images dark mode too!
 - carousel next/prev buttons in light mode
