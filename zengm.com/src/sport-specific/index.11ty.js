@@ -87,7 +87,7 @@ module.exports = class {
 			},
 			{
 				name: "kitkit123",
-				text: "Seriously soooo awesome. I played all day at work : )",
+				text: "Seriously soooo awesome. I played all day at work :)",
 				url:
 					"http://www.reddit.com/r/nba/comments/1j1e6q/i_made_a_singleplayer_basketball_management/cbb7v9d",
 			},
