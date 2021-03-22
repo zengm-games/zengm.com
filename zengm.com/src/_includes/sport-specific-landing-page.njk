@@ -12,6 +12,10 @@
   padding: 0.5rem 0;
 }
 
+.dark .logo {
+  filter: invert(99%) sepia(2%) saturate(92%) hue-rotate(136deg) brightness(115%) contrast(100%);
+}
+
 .play {
   margin: 30px 0;
   text-align: center;
@@ -94,11 +98,7 @@
     <div class="col-md-4">
       <div class="row">
         <div class="col-sm-5 col-md-12">
-          <center>
-            <div class="logo">
-              <img src="/files/logo-{{ sport }}.png" class="img-fluid">
-            </div>
-          </center>
+            <img src="/files/logo-{{ sport }}.png" class="logo img-fluid">
         </div>
         <div class="col-sm-7 col-md-12 mt-3">
             <p class="lead">Have you ever looked at the decisions made by the front office of an {{ proLeagueAbbrev }} team and thought you could do better? Well, now you can! In <a href="{{ websitePlay }}" class="text-success"><b>{{ gameName }}</b></a>, you are the general manager of a {{ sport }} team.</p>
