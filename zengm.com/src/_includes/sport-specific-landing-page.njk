@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	{% include "head-common.njk" %}
+
+	<title>{{ gameName }} - Free online single-player {{ sport }} management simulation video game</title>
+
+	<style>
+.splash-header {
+	background-color: var(--logo-purple);
+}
+
+.fade-in {
+  animation: fadeIn ease 0.4s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+.fade-out {
+  animation: fadeOut ease 0.4s;
+}
+@keyframes fadeOut {
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+	</style>
+	</head>
+    <body>
+<h1 class="d-none d-sm-block splash-header text-center py-2">Run Your Own {{ sport | title }} Team - Play Free Online</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-sm-5 col-md-12">
+          <center>
+            <div class="logo">
+              <img src="/files/logo-{{ sport }}.png" class="img-fluid">
+            </div>
+          </center>
+        </div>
+        <div class="col-sm-7 col-md-12 big">
+            <p class="lead">Have you ever looked at the decisions made by the front office of an {{ proLeagueAbbrev }} team and thought you could do better? Well, now you can! In <a href="{{ websitePlay }}" class="text-success"><b>{{ gameName }}</b></a>, you are the general manager of a {{ sport }} team.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div id="carousel-screenshots" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <h3>Detailed scouting reports and stats.</h3>
+            <img src="/files/screenshots/10.png">
+          </div>
+          <div class="item">
+            <h3>Manage your roster.</h3>
+            <img src="/files/screenshots/3.png">
+          </div>
+          <div class="item">
+            <h3>Guide your team to the playoffs.</h3>
+            <img src="/files/screenshots/12.png">
+          </div>
+          <div class="item">
+            <h3>...and to a championship!</h3>
+            <img src="/files/screenshots/14.png">
+          </div>
+          <div class="item">
+            <h3>Tanking is allowed.</h3>
+            <img src="/files/screenshots/7.png">
+          </div>
+          <div class="item">
+            <h3>...but try not to get fired!</h3>
+            <img src="/files/screenshots/2.png">
+          </div>
+          <div class="item">
+            <h3>Plan ahead to manage the salary cap.</h3>
+            <img src="/files/screenshots/5.png">
+          </div>
+          <div class="item">
+            <h3>Keep track of your revenue and expenses.</h3>
+            <img src="/files/screenshots/4.png">
+          </div>
+          <div class="item">
+            <h3>Build your legacy.</h3>
+            <img src="/files/screenshots/6.png">
+          </div>
+          <div class="item">
+            <h3>Play-by-play live box scores.</h3>
+            <img src="/files/screenshots/8.png">
+          </div>
+          <div class="item">
+            <h3>Team and player advanced stats.</h3>
+            <img src="/files/screenshots/9.png">
+          </div>
+          <div class="item">
+            <h3>Legendary players make the Hall of Fame.</h3>
+            <img src="/files/screenshots/11.png">
+          </div>
+          <div class="item">
+            <h3>Deeply customizable.</h3>
+            <img src="/files/screenshots/13.png">
+          </div>
+          <div class="item">
+            <h3>Create as many leagues as you want.</h3>
+            <img src="/files/screenshots/1.png">
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-screenshots" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-screenshots" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="play">
+    <a class="btn btn-lg btn-success" href="{{ websitePlay }}">Start Playing Now</a>
+  </p>
+</div>
+
+<div class="text-wrapper">
+  <div class="skinny">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>You Set The Strategy</h4>
+        <p>Running a {{ sport }} team requires you to make tough decisions.</p>
+        <ul>
+          <li>Should you re-sign a veteran player, or leave cap space open to sign a free agent?</li>
+          <li>Should you draft a raw player who could be a star, or someone who can contribute right away?</li>
+          <li>Should you trade away next season's draft pick for a player who can help you win now, or stockpile assets for the future?</li>
+          <li>Should you raise ticket prices and annoy your fans, or can you cut part of your budget instead?</li>
+        </ul>
+        <p>Make the right choices and you can build a dynasty. But make the wrong choices and you'll get fired!</p>
+      </div>
+
+      <div class="col-sm-6">
+        <h4>High Quality, No Junk</h4>
+        <p>{{ gameName }} is <b>completely 100% free</b>. You can start as many leagues as you want and play as many seasons as you want. No limits.</p>
+        <p>We won't ask for your email address and send you spam. We won't force you to sign in with your Facebook account and spam your friends. We won't ask you to pay money to keep playing or to buy game-breaking power-ups.</p>
+        <p>Our only goal is making the best possible {{ sport }} management game!</p>
+
+        <h4>
+          Real User Feedback
+          <a id="prev-feedback" href="#prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a id="play-feedback" href="#play"><span class="glyphicon glyphicon-pause"></span></a>
+          <a id="next-feedback" href="#next"><span class="glyphicon glyphicon-arrow-right"></span></a>
+        </h4>
+        <p id="feedback"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.njk" %}
+
+<script>
+//$("#carousel-screenshots").carousel();
+
+var feedbacks = {{ feedbacks | safe }};
+
+var elFeedback = document.getElementById("feedback");
+
+var iFeedback = Math.floor(Math.random() * feedbacks.length)
+
+function updateFeedback() {
+  var feedback = feedbacks[iFeedback];
+  elFeedback.innerHTML = '<a href="' + feedback.url + '">' + feedback.name + '<span class="feedback-text">: "' + feedback.text + '"</span></a>';
+  iFeedback = (iFeedback + 1) % feedbacks.length;
+}
+updateFeedback();
+
+var feedbackIntervalId;
+
+function startFeedback() {
+  feedbackIntervalId = setTimeout(function () {
+    elFeedback.classList.add("fade-out");
+    elFeedback.addEventListener("animationend", () => {
+      console.log("animationend1");
+      updateFeedback();
+      elFeedback.classList.remove("fade-out");
+      elFeedback.classList.add("fade-in");
+      elFeedback.addEventListener("animationend", () => {
+        console.log("animationend2");
+        elFeedback.classList.remove("fade-in");
+        startFeedback();
+      }, {
+        once: true,
+      });
+    }, {
+      once: true,
+    });
+  }, 6000);
+}
+startFeedback();
+
+// Controls
+document.getElementById("prev-feedback").addEventListener("click", function () {
+  clearTimeout(feedbackIntervalId);
+  iFeedback -= 2;
+  iFeedback = ((iFeedback % feedbacks.length) + feedbacks.length) % feedbacks.length; // http://stackoverflow.com/a/3417242/786644
+  updateFeedback();
+  if (elPlayPauseFeedback.hasClass("glyphicon-pause")) {
+    startFeedback();
+  }
+  return false;
+});
+document.getElementById("next-feedback").addEventListener("click", function () {
+  clearTimeout(feedbackIntervalId);
+  updateFeedback();
+  if (elPlayPauseFeedback.hasClass("glyphicon-pause")) {
+    startFeedback();
+  }
+  return false;
+});
+var elPlayPauseFeedback = document.getElementById("play-feedback span");
+document.getElementById("play-feedback").addEventListener("click", function () {
+  if (elPlayPauseFeedback.classList.has("glyphicon-pause")) {
+    clearTimeout(feedbackIntervalId);
+    elPlayPauseFeedback.classList.remove("glyphicon-pause")
+    elPlayPauseFeedback.classList.add("glyphicon-play");
+  } else if (elPlayPauseFeedback.classList.has("glyphicon-play")) {
+    elPlayPauseFeedback.classList.remove("glyphicon-play")
+    elPlayPauseFeedback.classList.add("glyphicon-pause");
+    startFeedback();
+  }
+  return false;
+});
+</script>
+    </body>
+</html>

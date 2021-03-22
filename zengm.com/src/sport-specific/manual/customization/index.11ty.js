@@ -31,7 +31,7 @@ module.exports = class {
 	</li>
 </ol>
 <p>
-	To use a League File, <a href="${websitePlay}/new_league">create a new leauge</a> and select "Upload league file" under "Customize".
+	To use a League File, <a href="${websitePlay}new_league">create a new leauge</a> and select "Upload league file" under "Customize".
 </p>
 <p>
 	It is also possible to import only a draft class or only team info (cities,
@@ -149,7 +149,7 @@ module.exports = class {
 <p>
 	Debugging can be tricky. Ultimately, the only way to be sure is to try it out.
 	However there is
-	<a href="${websitePlay}/files/league-schema.json"
+	<a href="${websitePlay}files/league-schema.json"
 		>a JSON Schema file</a
 	>
 	you can use to catch some errors.

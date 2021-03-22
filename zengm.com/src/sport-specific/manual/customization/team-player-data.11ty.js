@@ -11,9 +11,9 @@ module.exports = class {
 	}
 
 	render({ websitePlay }) {
-		return `By default, leagues using real players do not include real team names, team logos, or player photos. If you would like to override the default values for those fields, you can do that on [the Basketball GM options](https://${websitePlay}/options) by specifying team and player data. This data will automatically be used for any future leagues you create with real players.
+		return `By default, leagues using real players do not include real team names, team logos, or player photos. If you would like to override the default values for those fields, you can do that on [the Basketball GM options](${websitePlay}options) by specifying team and player data. This data will automatically be used for any future leagues you create with real players.
 
-There are two things to customize on [the options page](https://${websitePlay}/options), team info and player photos. In both cases, you need to copy/paste a JSON object containing the data into the form. You can find the data from other Basketball GM users who have shared it online. Or, you read below for how to make it from scratch.
+There are two things to customize on [the options page](${websitePlay}options), team info and player photos. In both cases, you need to copy/paste a JSON object containing the data into the form. You can find the data from other Basketball GM users who have shared it online. Or, you read below for how to make it from scratch.
 
 ## Team Info
 

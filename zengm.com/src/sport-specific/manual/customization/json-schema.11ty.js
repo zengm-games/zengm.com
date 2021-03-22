@@ -72,7 +72,7 @@ module.exports = class {
 </p>
 
 <p>
-	<a href="https://${websitePlay}/files/league-schema.json"
+	<a href="${websitePlay}files/league-schema.json"
 		>Here is a link to the JSON Schema file</a
 	>, in case you want to use it in some external validation tool.
 </p>

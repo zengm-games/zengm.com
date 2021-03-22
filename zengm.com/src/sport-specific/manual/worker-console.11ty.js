@@ -23,7 +23,7 @@ This page explains how to access the console and shows examples of what you can 
 
 1. Open your league in ${gameAcronym}.
 2. Open a new tab, copy chrome://inspect/#workers into the address bar and hit enter.
-3. Click "Inspect" under the URL similar to ${websitePlay}/gen/worker-2020.08.02.0001.js and it will pop up another window where you can run the code snippets below.
+3. Click "Inspect" under the URL similar to ${websitePlay}gen/worker-2020.08.02.0001.js and it will pop up another window where you can run the code snippets below.
 
 **Firefox:**
 
