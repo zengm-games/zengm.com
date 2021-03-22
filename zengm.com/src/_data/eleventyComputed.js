@@ -37,6 +37,71 @@ module.exports = {
 			  )
 			: undefined,
 
+	ratingKeys: data =>
+		data.sport
+			? bySport(
+					{
+						basketball: [
+							"diq",
+							"dnk",
+							"drb",
+							"endu",
+							"fg",
+							"ft",
+							"hgt",
+							"ins",
+							"jmp",
+							"oiq",
+							"pss",
+							"reb",
+							"spd",
+							"stre",
+							"tp",
+						],
+						football: [
+							"hgt",
+							"stre",
+							"spd",
+							"endu",
+							"thv",
+							"thp",
+							"tha",
+							"bsc",
+							"elu",
+							"rtr",
+							"hnd",
+							"rbk",
+							"pbk",
+							"pcv",
+							"tck",
+							"prs",
+							"rns",
+							"kpw",
+							"kac",
+							"ppw",
+							"pac",
+						],
+						hockey: [
+							"hgt",
+							"stre",
+							"spd",
+							"endu",
+							"pss",
+							"wst",
+							"sst",
+							"stk",
+							"oiq",
+							"chk",
+							"blk",
+							"fcf",
+							"diq",
+							"glk",
+						],
+					},
+					data.sport,
+			  )
+			: undefined,
+
 	subredditName: data =>
 		data.sport
 			? bySport(

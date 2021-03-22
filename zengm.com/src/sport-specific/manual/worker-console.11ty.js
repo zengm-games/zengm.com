@@ -10,69 +10,7 @@ module.exports = class {
 		};
 	}
 
-	render({ gameAcronym, gameName, sport, websitePlay }) {
-		const ratingKeys = bySport(
-			{
-				basketball: [
-					"diq",
-					"dnk",
-					"drb",
-					"endu",
-					"fg",
-					"ft",
-					"hgt",
-					"ins",
-					"jmp",
-					"oiq",
-					"pss",
-					"reb",
-					"spd",
-					"stre",
-					"tp",
-				],
-				football: [
-					"hgt",
-					"stre",
-					"spd",
-					"endu",
-					"thv",
-					"thp",
-					"tha",
-					"bsc",
-					"elu",
-					"rtr",
-					"hnd",
-					"rbk",
-					"pbk",
-					"pcv",
-					"tck",
-					"prs",
-					"rns",
-					"kpw",
-					"kac",
-					"ppw",
-					"pac",
-				],
-				hockey: [
-					"hgt",
-					"stre",
-					"spd",
-					"endu",
-					"pss",
-					"wst",
-					"sst",
-					"stk",
-					"oiq",
-					"chk",
-					"blk",
-					"fcf",
-					"diq",
-					"glk",
-				],
-			},
-			sport,
-		);
-
+	render({ gameAcronym, gameName, ratingKeys, sport, websitePlay }) {
 		return `## What is the worker console?
 
 Since ${gameName} runs inside your web browser, you can edit pretty much any part of the game from within your web browser. You do this by using the JavaScript console in your browser to access the core of the game. There, you will find an API that you can use to run little scripts that edit your league.
