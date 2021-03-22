@@ -251,16 +251,16 @@ pre {
 	border-color: var(--secondary);
 }
 
-.dark .svg-button {
+.dark #theme-switch {
 	filter: invert(0.65);
 }
-.dark .svg-button:hover {
+.dark #theme-switch:hover {
 	filter: invert(1);
 }
 
-.light .svg-button {
+.light #theme-switch {
 	filter: invert(0.35);
 }
-.light .svg-button:hover {
+.light #theme-switch:hover {
 	filter: invert(0);
 }
