@@ -9,7 +9,7 @@ module.exports = class {
 		};
 	}
 
-	render({ gameName }) {
+	render({ gameName, sport }) {
 		return `<p>
     If ${gameName} is refusing to allow you to play more, it could be because of
     a quota error. This happens when your browser decides to not let you store any
@@ -26,7 +26,7 @@ module.exports = class {
 </ul>
 <p>
     If none of that works, you can try a
-    <a href="/manual/debugging/hard-reset/">Hard Reset</a> which will delete all
+    <a href="/${sport}/manual/debugging/hard-reset/">Hard Reset</a> which will delete all
     your ${gameName} data and leave you with a completely blank slate. Sometimes
     this is the only way to get Chrome working again due to
     <a href="https://code.google.com/p/chromium/issues/detail?id=488851"
