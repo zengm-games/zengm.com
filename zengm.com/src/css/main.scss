@@ -123,6 +123,15 @@ ul li::before {
 	}
 }
 
+@media (max-width: 991px) {
+	ul.bullets-margin-lg li::before {
+		margin-left: 0;
+	}
+	ol.bullets-margin-lg {
+		margin-left: -23px;
+	}
+}
+
 .footer {
 	font-size: smaller;
 

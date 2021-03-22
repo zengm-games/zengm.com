@@ -6,6 +6,7 @@ sport-specific-landing-pages
 - carousel images dark mode too!
 - carousel next/prev buttons in light mode
 - responsive bullets
+  - multiline indentation
 - https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
