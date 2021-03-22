@@ -2,8 +2,19 @@ make sure there's links to all pages, like debugging
 
 check links to everything in /files
 
+sport-specific favicons, within that subfolder/domain
+
 sport-specific-landing-pages
 - theme switch
+- carousel images dark mode too!
+- carousel next/prev buttons in light mode
+- bg colors on dark mode change - make top alt too, keep button as is
+  - or invert logo
+- bottom part
+  - headers
+  - feedback controls alignment
+  - responsive bullets
+- unused classes?
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
