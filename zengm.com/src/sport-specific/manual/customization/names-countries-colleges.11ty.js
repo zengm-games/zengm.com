@@ -400,7 +400,7 @@ module.exports = class {
 			sport,
 		);
 
-		return `One of the [game attributes](/manual/customization/game-attributes) you can customize is called "playerBioInfo". This lets you specify how biographical information is generated for players, specifically their names, countries, and colleges.
+		return `One of the [game attributes](/${sport}/manual/customization/game-attributes) you can customize is called "playerBioInfo". This lets you specify how biographical information is generated for players, specifically their names, countries, and colleges.
 
 By default, ${gameName} includes a pretty large library of all of those, and picks them in proportion so that random leagues feel realistic. But if you want to simulate a different type of league, such as in a different country, then the defaults are no good.
 

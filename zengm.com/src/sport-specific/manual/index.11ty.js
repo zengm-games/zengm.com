@@ -212,7 +212,9 @@ ${bySport(
 <p>You can use the JavaScript console in your browser to do pretty much anything. <a href="/${sport}/manual/worker-console/">Read this for more details.</a>
 <h2>FAQ</h2>
 <p><a href="/${sport}/faq/">Here are the answers to some frequently asked questions.</a></p>
+<h2>Debugging</h2>
+<p>If you run into a problem, please see <a href="/${sport}/manual/debugging">the debugging instructions</a> for more info.</p>
 <h2>Still not sure about something?</h2>
-<p>If you have a question, think you found a bug, or you want to request a feature, <a href="/contact/">let us know</a>.</p>`;
+<p>If you have a question or feedback <a href="/contact/">let us know</a>.</p>`;
 	}
 };
