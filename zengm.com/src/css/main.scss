@@ -100,23 +100,15 @@ ol {
 
 ul {
 	margin-left: -40px;
-	list-style: none;
 }
 
-ul li::before {
-	content: "\2022";
+ul li::marker {
 	color: var(--orange);
-	font-weight: bold;
-	width: 20px;
-	margin-left: -20px;
-
-	// So a <p> inside an <li> works, do this instead of inline-block
-	float: left;
 }
 
 @media (max-width: 767px) {
-	ul li::before {
-		margin-left: 0;
+	ul {
+		margin-left: -23px;
 	}
 	ol {
 		margin-left: -23px;
@@ -124,8 +116,8 @@ ul li::before {
 }
 
 @media (max-width: 991px) {
-	ul.bullets-margin-lg li::before {
-		margin-left: 0;
+	ul.bullets-margin-lg {
+		margin-left: -23px;
 	}
 	ol.bullets-margin-lg {
 		margin-left: -23px;
@@ -135,8 +127,10 @@ ul li::before {
 .footer {
 	font-size: smaller;
 
-	ul li::before {
-		content: inherit;
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-left: 0;
 	}
 
 	.footer-sport-logo {
