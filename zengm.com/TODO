@@ -5,6 +5,8 @@ make sure there's links to all pages, like debugging
 
 URLs starting in /manual - prefix with ${sport}
 
+links to everything in /files
+
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
