@@ -11,12 +11,13 @@ module.exports = class {
 	render({ gameName, subredditName, sport, websitePlay }) {
 		return `<p>
 	${gameName} is a highly customizable game. Most of this is done through
+	God Mode, where a ton of customization settings are available. However it is possible to go even further by making custom
 	<b>League Files</b>, which contain the data of a ${gameName} league - teams,
 	players, stats, etc. League Files have two main purposes:
 </p>
 <ol>
 	<li>
-		They allow you to use League Files created by others. You might find some of
+		They allow you to use League Files created by others, or create your own to share. You might find some of
 		these
 		<a
 			href="http://www.reddit.com/r/${subredditName}/search?q=roster&amp;restrict_sr=on"
@@ -30,14 +31,13 @@ module.exports = class {
 	</li>
 </ol>
 <p>
-	To use a League File, upload it when you
-	<a href="${websitePlay}/new_league">create a new league</a>.
+	To use a League File, <a href="${websitePlay}/new_league">create a new leauge</a> and select "Upload league file" under "Customize".
 </p>
 <p>
 	It is also possible to import only a draft class or only team info (cities,
 	names, etc) from a League File. For draft classes this is done at Players >
 	Draft > Draft Scouting, and also
-	<a href="/manual/customization/draft-class/">read this for more information</a
+	<a href="/${sport}/manual/customization/draft-class/">read this for more information</a
 	>. For team info, go to Tools > Edit Team Info (only available after enabling
 	God Mode).
 </p>
@@ -78,11 +78,11 @@ module.exports = class {
 <ul>
 	<li>
 		<code>players</code> - Player attributes, ratings, and stats.
-		<a href="/manual/customization/players/">More information.</a>
+		<a href="/${sport}/manual/customization/players/">More information.</a>
 	</li>
 	<li>
 		<code>teams</code> - Team attributes and stats.
-		<a href="/manual/customization/teams/">More information.</a>
+		<a href="/${sport}/manual/customization/teams/">More information.</a>
 	</li>
 </ul>
 <p>
@@ -109,7 +109,7 @@ module.exports = class {
 	<li>
 		<code>gameAttributes</code> - Mostly internal variables that should be left
 		alone, but some might be interesting to tweak.
-		<a href="/manual/customization/game-attributes/">More information.</a>
+		<a href="/${sport}/manual/customization/game-attributes/">More information.</a>
 	</li>
 	<li>
 		<code>releasedPlayers</code> - List of players who have been released from
@@ -153,7 +153,7 @@ module.exports = class {
 		>a JSON Schema file</a
 	>
 	you can use to catch some errors.
-	<a href="/manual/customization/json-schema/"
+	<a href="/${sport}/manual/customization/json-schema/"
 		>Here is some documentation on how to use it.</a
 	>
 </p>`;
