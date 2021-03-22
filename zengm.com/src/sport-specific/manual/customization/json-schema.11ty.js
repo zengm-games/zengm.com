@@ -1,12 +1,18 @@
----
-layout: page
-title: JSON Schema
----
+const base = require("../../base");
 
-<p>
-	If you look in a Basketball GM league export (Tools > Export League) or in the
+module.exports = class {
+	data() {
+		return {
+			...base("js"),
+			title: "JSON Schema",
+		};
+	}
+
+	render({ gameName, sport, websitePlay }) {
+		return `<p>
+	If you look in a ${gameName} league export (Tools > Export League) or in the
 	<a href="/${sport}/manual/customization/">customization documentation</a>, it's clear
-	that Basketball GM league files are fairly complicated. There are a lot of
+	that ${gameName} league files are fairly complicated. There are a lot of
 	different ways that things can go wrong, and some of them can be subtle things
 	that you don't notice immediately.
 </p>
@@ -16,7 +22,7 @@ title: JSON Schema
 	appear (and probably this is what brought you to this page):
 </p>
 
-<img src="1.png" />
+<figure><img src="/files/json-schema-1.png" class="img-fluid" /></figure>
 
 <p>
 	This means there are some problems with your league file. Maybe some required
@@ -29,18 +35,18 @@ title: JSON Schema
 	As an example of how to do this, try loading
 	<a href="/files/schema_errors.json">this file</a>. It should show 2 errors. To
 	view the details of the errors, open the JavaScript console. In Chrome, do
-	this by pressing ctrl+shift+I. Other browsers may have different ways to do
+	this by pressing ctrl+shift+i. Other browsers may have different ways to do
 	it. This will open up a new panel showing some debugging information:
 </p>
 
-<img src="2.png" />
+<figure><img src="/files/json-schema-2.png" class="img-fluid" /></figure>
 
 <p>
 	Click the arrow below "JSON Schema validation errors" to see the details for
 	each of the two errors:
 </p>
 
-<img src="3.png" />
+<figure><img src="/files/json-schema-3.png" class="img-fluid" /></figure>
 
 <p>
 	The first error means that the "tid" property of the 4th team is supposed to
@@ -66,7 +72,7 @@ title: JSON Schema
 </p>
 
 <p>
-	<a href="https://play.basketball-gm.com/files/league-schema.json"
+	<a href="https://${websitePlay}/files/league-schema.json"
 		>Here is a link to the JSON Schema file</a
 	>, in case you want to use it in some external validation tool.
 </p>
@@ -79,4 +85,6 @@ title: JSON Schema
 	team 28 but you only have 20 teams in your league, that is not going to work
 	correctly, but this check will miss it. Some day there will be more
 	comprehensive checks that include stuff like this. Baby steps!
-</p>
+</p>`;
+	}
+};

@@ -37,7 +37,7 @@ module.exports = class {
 					reb: "rebounding",
 				},
 				football: {
-					hgt: "height",
+					hgt: "height. Ranges from 5'4\" (0) to 6'10\" (100).",
 					stre: "strength",
 					spd: "speed",
 					endu: "endurance",
