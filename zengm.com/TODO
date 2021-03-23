@@ -1,17 +1,13 @@
-add jersey types
-
-make sure there's links to all pages, like debugging
-
 check links to everything in /files
+
+blog
+- links to blog
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
 - use in footer
 - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
-
-hockey quotes
-- https://old.reddit.com/r/ZenGMHockey/comments/m9inrx/some_updates_in_version_202103201385/grna043/
 
 sidebar menu
 

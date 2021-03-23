@@ -357,6 +357,13 @@ if (getTheme() === "dark") {
 const facesContainer = document.getElementById("faces");
 const numFaces = Math.ceil(document.documentElement.clientWidth / 76);
 
+const teamColorsAll = {{ teamColors | dump | safe }};
+const jerseys = {{ jerseys[sport] | dump | safe }};
+
+function randomChoice(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 function genFace() {
   let options;
   {% if sport == "hockey" %}
@@ -367,11 +374,9 @@ function genFace() {
   }
   {% endif %}
 
-	const jerseys = {{ jerseys[sport] | dump | safe }};
-	const jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
 	return faces.generate({
-		teamColors: ["#695FAB", "#f05742", "#cccccc"],
-		jersey: { id: jersey },
+		teamColors: randomChoice(teamColorsAll),
+		jersey: { id: randomChoice(jerseys) },
 	}, options);
 }
 
