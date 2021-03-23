@@ -1,4 +1,4 @@
-upgrade deps
+hide horizontal scrollbar when faces overflow
 
 check assetgraph built version
 - minify faces.js
