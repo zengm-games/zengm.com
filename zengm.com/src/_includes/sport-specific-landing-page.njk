@@ -391,46 +391,48 @@ document.getElementById("carousel-screenshots").addEventListener('slid.bs.carous
 
 {% include "facesjs.njk" %}
 <script>
-const facesContainer = document.getElementById("faces");
-const numFaces = Math.ceil(document.documentElement.clientWidth / 76);
+window.onFacesJS = function () {
+  const facesContainer = document.getElementById("faces");
+  const numFaces = Math.ceil(document.documentElement.clientWidth / 76);
 
-const teamColorsAll = {{ teamColors | dump | safe }};
-const jerseys = {{ jerseys[sport] | dump | safe }};
+  const teamColorsAll = {{ teamColors | dump | safe }};
+  const jerseys = {{ jerseys[sport] | dump | safe }};
 
-function randomChoice(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-function genFace() {
-  let options;
-  {% if sport == "hockey" %}
-  if (Math.random() < 0.85) {
-    options = {
-      race: "white"
-    };
+  function randomChoice(array) {
+    return array[Math.floor(Math.random() * array.length)];
   }
-  {% endif %}
 
-	return faces.generate({
-		teamColors: randomChoice(teamColorsAll),
-		jersey: { id: randomChoice(jerseys) },
-	}, options);
-}
+  function genFace() {
+    let options;
+    {% if sport == "hockey" %}
+    if (Math.random() < 0.85) {
+      options = {
+        race: "white"
+      };
+    }
+    {% endif %}
 
-for (let i = 0; i < numFaces; i++) {
-  const faceContainer = document.createElement("div");
-  faceContainer.classList.add("face");
-  faceContainer.classList.add("mx-2");
-  faceContainer.classList.add("flex-shrink-0");
-  facesContainer.appendChild(faceContainer);
+    return faces.generate({
+      teamColors: randomChoice(teamColorsAll),
+      jersey: { id: randomChoice(jerseys) },
+    }, options);
+  }
 
-  const face = genFace();
-  faces.display(faceContainer, face);
+  for (let i = 0; i < numFaces; i++) {
+    const faceContainer = document.createElement("div");
+    faceContainer.classList.add("face");
+    faceContainer.classList.add("mx-2");
+    faceContainer.classList.add("flex-shrink-0");
+    facesContainer.appendChild(faceContainer);
 
-  faceContainer.addEventListener("click", function () {
     const face = genFace();
     faces.display(faceContainer, face);
-  });
+
+    faceContainer.addEventListener("click", function () {
+      const face = genFace();
+      faces.display(faceContainer, face);
+    });
+  }
 }
 </script>
     </body>

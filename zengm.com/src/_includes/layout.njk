@@ -38,15 +38,17 @@
 </body>
 {% include "facesjs.njk" %}
 <script>
-var div = document.getElementById("face");
+window.onFacesJS = function () {
+  var div = document.getElementById("face");
 
-function genFace() {
-  var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
-  faces.display(div, face);
+  function genFace() {
+    var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
+    faces.display(div, face);
+  }
+
+  genFace();
+
+  face.addEventListener("click", genFace);
 }
-
-genFace();
-
-face.addEventListener("click", genFace);
 </script>
 </html>

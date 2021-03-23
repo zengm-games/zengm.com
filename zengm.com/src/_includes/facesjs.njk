@@ -1,1 +1,18 @@
-<script src="https://dumbmatter.com/facesjs/build/bundle.js"></script>
+<script>
+const getScript = function (url, cb) {
+    const head = document.head || document.getElementsByTagName("head")[0];
+    const script = document.createElement("script");
+    script.async = true;
+    script.type = "text/javascript";
+
+    script.onload = cb;
+
+    head.appendChild(script);
+    script.src = url;
+};
+getScript("https://dumbmatter.com/facesjs/build/bundle.js", function () {
+    if (window.onFacesJS) {
+        window.onFacesJS();
+    }
+});
+</script>
