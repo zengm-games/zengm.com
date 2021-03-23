@@ -3,23 +3,25 @@
 function getTheme() {
     try {
         var local = localStorage.getItem("theme");
-        if (local !== null) {
+        if (local === "dark" || local === "light") {
             return local;
         }
-        return "light";
+        return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     } catch (err) {
         return "light";
     }
 }
-function setTheme(theme) {
+function setTheme(theme, noSave) {
     theme = theme === "light" ? "light" : "dark";
     const element = document.getElementsByTagName("html")[0];
-    element.classList.add(theme)
-    element.classList.remove(theme === "light" ? "dark" : "light")
-    localStorage.setItem("theme", theme);
+    element.classList.add(theme);
+    element.classList.remove(theme === "light" ? "dark" : "light");
+    if (!noSave) {
+        localStorage.setItem("theme", theme);
+    }
 }
 
-setTheme(getTheme());
+setTheme(getTheme(), true);
 </script>
 
 <meta charset="utf-8">
