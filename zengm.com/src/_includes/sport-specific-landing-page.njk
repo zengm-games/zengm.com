@@ -341,6 +341,16 @@ document.getElementById("feedback-next").addEventListener("click", function () {
     startFeedback();
   }
 });
+
+window.onNewTheme = function (theme) {
+  console.log(theme);
+  var carouselImages = document.querySelectorAll(".carousel-item img");
+  for (let i = 0; i < carouselImages.length; i++) {
+    var img = carouselImages[i];
+    var prevTheme = theme === "light" ? "dark" : "light";
+    img.src = img.src.replace(prevTheme, theme);
+  }
+};
 </script>
     </body>
 </html>

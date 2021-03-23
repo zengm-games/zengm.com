@@ -33,12 +33,12 @@ function updateIcon(theme) {
 updateIcon(getTheme());
 
 themeSwitch.addEventListener("click", function (event) {
-  if (getTheme() === "light") {
-    setTheme("dark");
-    updateIcon("dark");
-  } else {
-    setTheme("light");
-    updateIcon("light");
+  var newTheme = getTheme() === "light" ? "dark" : "light";
+
+  setTheme(newTheme);
+  updateIcon(newTheme);
+  if (window.onNewTheme) {
+    window.onNewTheme(newTheme);
   }
 });
 </script>
