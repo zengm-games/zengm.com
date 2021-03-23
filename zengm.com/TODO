@@ -1,3 +1,9 @@
+better way to handle light/dark screenshots
+- initial load should know height of image container so controls don't jump
+- switching has a slight lag
+- initial load lag - because of faces.js? was it better before making carousel lazy?
+  - mostly faces.js - make that async everywhere
+
 check links to everything in /files
 
 blog

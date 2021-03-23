@@ -142,72 +142,72 @@
           {% if sport == "basketball" %}
             <div class="carousel-item">
               <h3>Start at any time back to 1947.</h3>
-              <img src="/files/carousel/{{ sport }}-light-0.png" class="d-block w-100">
+              <img data-index="0" class="d-block w-100">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Detailed scouting reports and stats.</h3>
-            <img src="/files/carousel/{{ sport }}-light-1.png" class="d-block w-100">
+            <img data-index="1" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Manage your roster.</h3>
-            <img src="/files/carousel/{{ sport }}-light-2.png" class="d-block w-100">
+            <img data-index="2" class="d-block w-100">
           </div>
           {% if sport == "hockey" %}
             <div class="carousel-item">
               <h3>Set your lines.</h3>
-              <img src="/files/carousel/{{ sport }}-light-15.png" class="d-block w-100">
+              <img data-index="15" class="d-block w-100">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Guide your team to the playoffs.</h3>
-            <img src="/files/carousel/{{ sport }}-light-3.png" class="d-block w-100">
+            <img data-index="3" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>...and to a championship!</h3>
-            <img src="/files/carousel/{{ sport }}-light-4.png" class="d-block w-100">
+            <img data-index="4" class="d-block w-100">
           </div>
           {% if sport != "football" %}
             <div class="carousel-item">
               <h3>Tanking is allowed.</h3>
-              <img src="/files/carousel/{{ sport }}-light-5.png" class="d-block w-100">
+              <img data-index="5" class="d-block w-100">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>...but try not to get fired!</h3>
-            <img src="/files/carousel/{{ sport }}-light-6.png" class="d-block w-100">
+            <img data-index="6" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Plan ahead to manage the salary cap.</h3>
-            <img src="/files/carousel/{{ sport }}-light-7.png" class="d-block w-100">
+            <img data-index="7" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Keep track of your revenue and expenses.</h3>
-            <img src="/files/carousel/{{ sport }}-light-8.png" class="d-block w-100">
+            <img data-index="8" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Build your legacy.</h3>
-            <img src="/files/carousel/{{ sport }}-light-9.png" class="d-block w-100">
+            <img data-index="9" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Play-by-play live box scores.</h3>
-            <img src="/files/carousel/{{ sport }}-light-10.png" class="d-block w-100">
+            <img data-index="10" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Team and player advanced stats.</h3>
-            <img src="/files/carousel/{{ sport }}-light-11.png" class="d-block w-100">
+            <img data-index="11" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Legendary players make the Hall of Fame.</h3>
-            <img src="/files/carousel/{{ sport }}-light-12.png" class="d-block w-100">
+            <img data-index="12" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Deeply customizable.</h3>
-            <img src="/files/carousel/{{ sport }}-light-13.png" class="d-block w-100">
+            <img data-index="13" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Create as many leagues as you want.</h3>
-            <img src="/files/carousel/{{ sport }}-light-14.png" class="d-block w-100">
+            <img data-index="14" class="d-block w-100">
           </div>
         </div>
 
@@ -338,18 +338,55 @@ document.getElementById("feedback-next").addEventListener("click", function () {
   }
 });
 
-window.onNewTheme = function (theme) {
-  var carouselImages = document.querySelectorAll(".carousel-item img");
+var theme = getTheme();
+
+var carouselImages = document.querySelectorAll(".carousel-item img");
+
+window.onNewTheme = function (newTheme) {
+  theme = newTheme;
   for (let i = 0; i < carouselImages.length; i++) {
     var img = carouselImages[i];
     var prevTheme = theme === "light" ? "dark" : "light";
-    img.src = img.src.replace(prevTheme, theme);
+
+    // "includes" because it gets prefixed with the domain name
+    if (img.src.includes(prevTheme)) {
+      img.src = img.src.replace(prevTheme, theme);
+    }
   }
 };
 
-if (getTheme() === "dark") {
+if (theme === "dark") {
   window.onNewTheme("dark");
 }
+
+function showImagesStartingWith(index) {
+  // Load images from index to index + 1
+  for (var i = index; i <= index + 1; i++) {
+    var img = carouselImages[i % carouselImages.length];
+    const src = "/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
+
+    // "includes" because it gets prefixed with the domain name
+    if (!img.src.includes(src)) {
+      img.src = src;
+    }
+  }
+}
+
+function hideImage(index) {
+  var img = carouselImages[index];
+  img.src = "";
+}
+
+showImagesStartingWith(0);
+
+document.getElementById("carousel-screenshots").addEventListener('slide.bs.carousel', function(event) {
+  // Load upcoming image (should already be pre-loaded, but whatever) and the next image
+  showImagesStartingWith(event.to);
+}, false);
+document.getElementById("carousel-screenshots").addEventListener('slid.bs.carousel', function(event) {
+  // Hide the image that just went away
+  hideImage(event.from);
+}, false);
 </script>
 
 {% include "facesjs.njk" %}
