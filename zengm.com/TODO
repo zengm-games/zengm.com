@@ -1,7 +1,6 @@
-check links to everything in /files
-
 blog
 - links to blog
+- links to /files, elsewhere
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
