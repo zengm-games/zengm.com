@@ -1,7 +1,3 @@
-sport landing pages
-- move light mode toggle to top right of logo
-- faces.js beside play button?
-
 make sure there's links to all pages, like debugging
 
 check links to everything in /files
@@ -9,7 +5,7 @@ check links to everything in /files
 sport-specific-landing-pages
 - carousel images dark mode too!
 - carousel next/prev buttons in light mode
-- https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli
+- faces.js beside play button?
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/

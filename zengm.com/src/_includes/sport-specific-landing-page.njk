@@ -54,15 +54,15 @@
   min-height: 72px;
 }
 
-.theme-switch-wrapper-2 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-  z-index: 99999;
-}
-
 .theme-switch-wrapper {
+	position: absolute;
+  top: -0.5rem;
+{% if sport === "football" %}
+  left: 0;
+{% else %}
+  right: 0;
+{% endif %}
+  z-index: 99999;
 	width: 48px;
 	height: 48px;
 }
@@ -81,9 +81,6 @@
   .carousel-item h3, .splash-header {
     font-size: 24px;
   }
-  .theme-switch-wrapper-2 {
-    top: 44px;
-  }
 }
 @media screen and (min-width: 768px) {
   .lead {
@@ -95,9 +92,6 @@
   .play .btn {
     font-size: 48px;
   }
-  .theme-switch-wrapper-2 {
-    top: 48px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .lead {
@@ -105,9 +99,6 @@
   }
   .carousel-item h3, .splash-header {
     font-size: 34px;
-  }
-  .theme-switch-wrapper-2 {
-    top: 52px;
   }
 }
 
@@ -120,19 +111,14 @@
     <body>
 <h1 class="d-none d-sm-block splash-header mb-0">Run Your Own {{ sport | title }} Team - Play Free Online</h1>
 
-<div class="theme-switch-wrapper-2">
-  <div class="container-xl px-0">
-    <div class="theme-switch-wrapper float-right float-sm-left">
-      {% include "theme-switch.njk" %}
-    </div>
-  </div>
-</div>
-
-<div class="container-xl mt-1 mt-sm-3 mt-md-4 position-relative">
+<div class="container-xl mt-2 mt-sm-3 mt-md-4">
   <div class="row">
     <div class="col-md-4">
       <div class="row">
-        <div class="col-sm-5 col-md-12">
+        <div class="col-sm-5 col-md-12 position-relative">
+            <div class="theme-switch-wrapper float-right float-sm-left">
+              {% include "theme-switch.njk" %}
+            </div>
             <img src="/files/logo-{{ sport }}.png" class="logo img-fluid">
         </div>
         <div class="col-sm-7 col-md-12 mt-3">
