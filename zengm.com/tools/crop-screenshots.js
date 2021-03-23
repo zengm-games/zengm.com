@@ -24,7 +24,7 @@ const TOP_BELOW_MORE = 372;
 		5: 400,
 		6: 405,
 		7: 344,
-		8: TOP_BELOW_MORE,
+		8: TOP_BELOW_MORE - 2,
 		9: TOP_BELOW_MORE,
 		10: 387,
 		11: 459,
