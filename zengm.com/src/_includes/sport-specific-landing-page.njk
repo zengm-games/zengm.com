@@ -144,53 +144,67 @@
     <div class="col-md-8">
       <div id="carousel-screenshots" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          {% if sport == "basketball" %}
+            <div class="carousel-item">
+              <h3>Start at any time back to 1947.</h3>
+              <img src="/files/carousel/{{ sport }}-light-0.png" class="d-block w-100">
+            </div>
+          {% endif %}
+          <div class="carousel-item">
             <h3>Detailed scouting reports and stats.</h3>
-            <img src="/files/carousel/{{ sport }}-light-10.png" class="d-block w-100">
+            <img src="/files/carousel/{{ sport }}-light-1.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Manage your roster.</h3>
+            <img src="/files/carousel/{{ sport }}-light-2.png" class="d-block w-100">
+          </div>
+          {% if sport == "hockey" %}
+            <div class="carousel-item">
+              <h3>Set your lines.</h3>
+              <img src="/files/carousel/{{ sport }}-light-15.png" class="d-block w-100">
+            </div>
+          {% endif %}
+          <div class="carousel-item">
+            <h3>Guide your team to the playoffs.</h3>
             <img src="/files/carousel/{{ sport }}-light-3.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <h3>Guide your team to the playoffs.</h3>
-            <img src="/files/carousel/{{ sport }}-light-12.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
             <h3>...and to a championship!</h3>
-            <img src="/files/carousel/{{ sport }}-light-14.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <h3>Tanking is allowed.</h3>
-            <img src="/files/carousel/{{ sport }}-light-7.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <h3>...but try not to get fired!</h3>
-            <img src="/files/carousel/{{ sport }}-light-2.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <h3>Plan ahead to manage the salary cap.</h3>
-            <img src="/files/carousel/{{ sport }}-light-5.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <h3>Keep track of your revenue and expenses.</h3>
             <img src="/files/carousel/{{ sport }}-light-4.png" class="d-block w-100">
           </div>
+          {% if sport != "football" %}
+            <div class="carousel-item">
+              <h3>Tanking is allowed.</h3>
+              <img src="/files/carousel/{{ sport }}-light-5.png" class="d-block w-100">
+            </div>
+          {% endif %}
           <div class="carousel-item">
-            <h3>Build your legacy.</h3>
+            <h3>...but try not to get fired!</h3>
             <img src="/files/carousel/{{ sport }}-light-6.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <h3>Play-by-play live box scores.</h3>
+            <h3>Plan ahead to manage the salary cap.</h3>
+            <img src="/files/carousel/{{ sport }}-light-7.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <h3>Keep track of your revenue and expenses.</h3>
             <img src="/files/carousel/{{ sport }}-light-8.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <h3>Team and player advanced stats.</h3>
+            <h3>Build your legacy.</h3>
             <img src="/files/carousel/{{ sport }}-light-9.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <h3>Legendary players make the Hall of Fame.</h3>
+            <h3>Play-by-play live box scores.</h3>
+            <img src="/files/carousel/{{ sport }}-light-10.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <h3>Team and player advanced stats.</h3>
             <img src="/files/carousel/{{ sport }}-light-11.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <h3>Legendary players make the Hall of Fame.</h3>
+            <img src="/files/carousel/{{ sport }}-light-12.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
             <h3>Deeply customizable.</h3>
@@ -198,7 +212,7 @@
           </div>
           <div class="carousel-item">
             <h3>Create as many leagues as you want.</h3>
-            <img src="/files/carousel/{{ sport }}-light-1.png" class="d-block w-100">
+            <img src="/files/carousel/{{ sport }}-light-14.png" class="d-block w-100">
           </div>
         </div>
 

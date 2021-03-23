@@ -16,7 +16,8 @@
     "husky": "=4",
     "lint-staged": ">=10",
     "node-sass": "^5.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sharp": "^0.27.2"
   },
   "husky": {
     "hooks": {
