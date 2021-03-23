@@ -183,6 +183,12 @@ ul li::marker {
 	}
 }
 
+.face {
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
 .top-nav {
 	background-color: var(--bg-2);
 
@@ -193,9 +199,6 @@ ul li::marker {
 	#face {
 		height: 48px;
 		width: 36px;
-		cursor: pointer;
-		user-select: none;
-		-webkit-user-select: none;
 	}
 
 	.top-nav-item {

@@ -79,9 +79,6 @@ ul.main-list li:not(:last-child) {
 .face {
 	height: 150px;
 	width: 100px;
-	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
 }
 
 @media (max-width: 575.98px) {
@@ -262,7 +259,7 @@ function genFace0() {
 var prevType = Math.random() < 0.5 ? "football" : "hockey";
 function genFace1() {
 	var jerseys =
-		prevType === "hockey" ? ["football", "football2", "football3"] : ["hockey"];
+		prevType === "hockey" ? ["football", "football2", "football3", "football4"] : ["hockey", "hockey2", "hockey3", "hockey4"];
 	prevType = prevType === "hockey" ? "football" : "hockey";
 	var jersey = jerseys[Math.floor(Math.random() * jerseys.length)];
 	var face = faces.generate({
