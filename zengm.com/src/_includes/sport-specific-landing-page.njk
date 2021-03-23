@@ -71,6 +71,14 @@
   text-align: center;
 }
 
+.carousel-item img {
+  display: block;
+
+  /* https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/ - same as img-fluid */
+  width: 100%;
+  height: auto;
+}
+
 .light .carousel-control-next, .light .carousel-control-prev {
     filter: invert(100%);
 }
@@ -128,7 +136,7 @@
             <div class="theme-switch-wrapper float-right float-sm-left">
               {% include "theme-switch.njk" %}
             </div>
-            <img src="/files/logo-{{ sport }}.png" class="logo img-fluid">
+            <img src="/files/logo-{{ sport }}.png" class="logo img-fluid" width="{% bySport 838, 859, 816, sport %}" height="{% bySport 486, 475, 466, sport %}">
         </div>
         <div class="col-sm-7 col-md-12 mt-3">
             <p class="lead">Have you ever looked at the decisions made by the front office of an {{ proLeagueAbbrev }} team and thought you could do better? Well, now you can! In <a href="{{ websitePlay }}"><b>{{ gameName }}</b></a>, you are the general manager of a {{ sport }} team.</p>
@@ -142,72 +150,72 @@
           {% if sport == "basketball" %}
             <div class="carousel-item">
               <h3>Start at any time back to 1947.</h3>
-              <img data-index="0" class="d-block w-100">
+              <img data-index="0" width="730" height="375">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Detailed scouting reports and stats.</h3>
-            <img data-index="1" class="d-block w-100">
+            <img data-index="1" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Manage your roster.</h3>
-            <img data-index="2" class="d-block w-100">
+            <img data-index="2" width="730" height="375">
           </div>
           {% if sport == "hockey" %}
             <div class="carousel-item">
               <h3>Set your lines.</h3>
-              <img data-index="15" class="d-block w-100">
+              <img data-index="15" width="730" height="375">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Guide your team to the playoffs.</h3>
-            <img data-index="3" class="d-block w-100">
+            <img data-index="3" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>...and to a championship!</h3>
-            <img data-index="4" class="d-block w-100">
+            <img data-index="4" width="730" height="375">
           </div>
           {% if sport != "football" %}
             <div class="carousel-item">
               <h3>Tanking is allowed.</h3>
-              <img data-index="5" class="d-block w-100">
+              <img data-index="5" width="730" height="375">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>...but try not to get fired!</h3>
-            <img data-index="6" class="d-block w-100">
+            <img data-index="6" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Plan ahead to manage the salary cap.</h3>
-            <img data-index="7" class="d-block w-100">
+            <img data-index="7" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Keep track of your revenue and expenses.</h3>
-            <img data-index="8" class="d-block w-100">
+            <img data-index="8" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Build your legacy.</h3>
-            <img data-index="9" class="d-block w-100">
+            <img data-index="9" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Play-by-play live box scores.</h3>
-            <img data-index="10" class="d-block w-100">
+            <img data-index="10" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Team and player advanced stats.</h3>
-            <img data-index="11" class="d-block w-100">
+            <img data-index="11" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Legendary players make the Hall of Fame.</h3>
-            <img data-index="12" class="d-block w-100">
+            <img data-index="12" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Deeply customizable.</h3>
-            <img data-index="13" class="d-block w-100">
+            <img data-index="13" width="730" height="375">
           </div>
           <div class="carousel-item">
             <h3>Create as many leagues as you want.</h3>
-            <img data-index="14" class="d-block w-100">
+            <img data-index="14" width="730" height="375">
           </div>
         </div>
 

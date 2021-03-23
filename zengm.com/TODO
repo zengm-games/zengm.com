@@ -1,6 +1,7 @@
 better way to handle light/dark screenshots
-- initial load should know height of image container so controls don't jump
 - switching has a slight lag
+
+default theme color based on media query
 
 minify faces.js
 

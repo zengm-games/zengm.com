@@ -18,6 +18,22 @@ module.exports = function (eleventyConfig) {
 		return mdRender.renderInline(rawString);
 	});
 
+	eleventyConfig.addShortcode(
+		"bySport",
+		function (basketball, football, hockey, sport) {
+			return String(
+				bySport(
+					{
+						basketball,
+						football,
+						hockey,
+					},
+					sport,
+				),
+			);
+		},
+	);
+
 	eleventyConfig.addShortcode("favicon", function (websitePlay) {
 		let favicon;
 		let appleTouchIcon;
