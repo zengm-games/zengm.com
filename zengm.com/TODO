@@ -1,6 +1,7 @@
-minify faces.js
+upgrade deps
 
 check assetgraph built version
+- minify faces.js
 
 check links to everything in /files
 

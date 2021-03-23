@@ -10,7 +10,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "assetgraph-builder": "^8.1.1",
-    "bootstrap-dark-4": "^0.0.9",
     "chokidar-cli": "^2.1.0",
     "concurrently": "^6.0.0",
     "husky": "=4",
@@ -26,5 +25,8 @@
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "bootstrap-dark-4": "^0.0.9"
   }
 }
