@@ -1,6 +1,3 @@
-assetgraph
-- don't minify json files
-
 blog
 - links to blog
 - links to /files, elsewhere
