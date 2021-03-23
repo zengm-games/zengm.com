@@ -87,11 +87,11 @@ module.exports = function (eleventyConfig) {
         ${bySport(
 					{
 						basketball:
-							'<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Basketball GM</span>',
+							'<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Basketball GM</span>',
 						football:
-							'<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Football GM</span>',
+							'<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Football GM</span>',
 						hockey:
-							'<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline"> Hockey</span>',
+							'<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Hockey</span>',
 					},
 					sport,
 				)}
@@ -99,13 +99,13 @@ module.exports = function (eleventyConfig) {
     <div class="dropdown-menu">
     <a class="dropdown-item" href="${
 			urls.basketball
-		}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball GM</a>
+		}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18" class="mr-1">Basketball GM</a>
     <a class="dropdown-item" href="${
 			urls.football
-		}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football GM</a>
+		}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18" class="mr-1">Football GM</a>
     <a class="dropdown-item" href="${
 			urls.hockey
-		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey</a>
+		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="mr-1">Hockey</a>
     </div>
 </div>`;
 	});

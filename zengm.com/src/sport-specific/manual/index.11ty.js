@@ -154,6 +154,7 @@ ${bySport(
 <li><b>70+:</b> All League candidate</li>
 <li><b>60+:</b> Starter</li>
 <li><b>50+:</b> Role player</li>
+<li><b>40+:</b> Backup</li>
 <li><b>lower:</b> Bad player or prospect</li>
 </ul>`,
 	},
