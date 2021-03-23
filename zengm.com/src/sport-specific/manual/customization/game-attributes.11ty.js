@@ -173,8 +173,8 @@ module.exports = class {
     first season played in this league. <code>gracePeriodEnd</code> is the first
     season you can get fired after. If you set one of these, you should set all of
     them. You should also specify seasons for any stats, ratings, and attributes
-    for your <a href="/${sport}/manual/players/">players</a> and
-    <a href="/${sport}/manual/teams/">teams</a>.
+    for your <a href="/${sport}/manual/customization/players/">players</a> and
+    <a href="/${sport}/manual/customization/teams/">teams</a>.
 </p>
 <p>
     However, there is a shortcut to make things easier. Move
