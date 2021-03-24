@@ -18,7 +18,7 @@ title: Blog
   {% endif %}
 
   {% if post.data.page.inputPath.endsWith("md") %}
-    {{ excerpt | renderUsingMarkdown | safe }}
+    {{ excerpt | renderMarkdown | safe }}
   {% else %}
     {{ excerpt | safe }}
   {% endif %}

@@ -104,7 +104,7 @@ class Changelog {
 		}
     <br>
     ${entry.big ? '<span class="text-highlight">' : ""}
-    ${this.renderUsingMarkdown(entry.text)}
+    ${this.renderMarkdownInline(entry.text)}
     ${entry.big ? "</span>" : ""}
 </div>`;
 			})

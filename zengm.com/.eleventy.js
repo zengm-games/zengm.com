@@ -32,7 +32,11 @@ module.exports = function (eleventyConfig) {
 		return dateFormatter.format(date);
 	});
 
-	eleventyConfig.addFilter("renderUsingMarkdown", function (rawString) {
+	eleventyConfig.addFilter("renderMarkdown", function (rawString) {
+		return mdRender.render(rawString);
+	});
+
+	eleventyConfig.addFilter("renderMarkdownInline", function (rawString) {
 		return mdRender.renderInline(rawString);
 	});
 
