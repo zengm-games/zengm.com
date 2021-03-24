@@ -8,7 +8,7 @@ title: Blog
 
 {% import "blog-macros.njk" as blogMacros %}
 
-{%- for post in collections.post -%}
+{%- for post in collections.post | reverse -%}
   {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
 
   {% if post.data.page.excerpt %}

@@ -25,4 +25,4 @@ The cosmetic changes are:
 
 Here's what it looks like:
 
-<a href="/files/league-settings.png"><img src="/files/league-settings.png" class="img-responsive" /></a>
+<a href="/files/league-settings.png"><img src="/files/league-settings.png" class="img-fluid" /></a>

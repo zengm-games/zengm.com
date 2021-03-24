@@ -8,6 +8,8 @@ blog
 - compare with existing blog (teaser, etc)
 - check images
 - social buttons in posts, like old post.html
+- tag with sport and show icon somehow, like changelog?
+- rss feed
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
@@ -16,8 +18,6 @@ pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
 
 sidebar menu
-
-img-responsive -> img-fluid
 
 https://github.com/zengm-games
 

@@ -14,11 +14,11 @@ Now Basketball GM has a very similar feature, also called Game Highs. You can vi
 
 <!--more-->
 
-<a href="/files/game-highs-profile.png"><img src="/files/game-highs-profile.png" class="img-responsive" /></a>
+<a href="/files/game-highs-profile.png"><img src="/files/game-highs-profile.png" class="img-fluid" /></a>
 
 And second, you can also view them by going to the Player Stats page and switching the stat type from "Per Game" to "Game Highs":
 
-<a href="/files/game-highs-stats.png"><img src="/files/game-highs-stats.png" class="img-responsive" /></a>
+<a href="/files/game-highs-stats.png"><img src="/files/game-highs-stats.png" class="img-fluid" /></a>
 
 Since it tracks game highs per season, you can view either single season highs or career highs for each player.
 

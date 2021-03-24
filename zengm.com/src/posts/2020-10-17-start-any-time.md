@@ -10,17 +10,17 @@ tags:
 
 Portland fans, have you ever wondered what would happen if this draft went differently?
 
-<img src="/files/start-any-time-1.png" class="img-responsive" />
+<img src="/files/start-any-time-1.png" class="img-fluid" />
 
 Dallas fans, have you ever wished for another shot at these playoffs?
 
-<img src="/files/start-any-time-2.png" class="img-responsive" />
+<img src="/files/start-any-time-2.png" class="img-fluid" />
 
 One of the fun things you can do in Basketball GM is re-run historical situations. But the ones above were tricky to do, because although you could create a league with real rosters from 1984 or 2007, you could only start at the beginning of the season. Play the whole season again and maybe Portland doesn't wind up with the #2 pick, or maybe Dallas doesn't play Golden State in the first round.
 
 That's why today I'm releasing a new feature. In addition to being able to start each historical season in the preseason, you can also start at the beginning of the playoffs, the draft, or after the draft:
 
-<img src="/files/start-any-time-3.png" class="img-responsive" />
+<img src="/files/start-any-time-3.png" class="img-fluid" />
 
 This is also true for the current season, so you can create leagues starting today, right before the 2020 draft.
 

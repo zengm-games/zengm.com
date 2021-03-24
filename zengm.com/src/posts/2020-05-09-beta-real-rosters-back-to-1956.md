@@ -32,15 +32,15 @@ During the preseason or draft lottery phases, you can go to Tools > Expansion Dr
 
 On the Expansion Draft screen, you can pick any number of teams to be created. Teams can be chosen from a pre-populated list of candidates, or you can start with a blank team and set it up exactly how you want.
 
-<p><img src="/files/1956-expansion-teams.png" class="img-responsive"></p>
+<p><img src="/files/1956-expansion-teams.png" class="img-fluid"></p>
 
 You can customize all of the team settings, even for the built-in teams. And see that little "Switch to controlling this team" checkbox at the bottom? That allows you to quit your GM job with your current team and become the GM of the expansion team. This is actually the first way I've ever added to switch to a new team without being fired first. Why? Because expansion drafts are fun!
 
-<p><img src="/files/1956-expansion-team.png" class="img-responsive"></p>
+<p><img src="/files/1956-expansion-team.png" class="img-fluid"></p>
 
 After selecting your teams and deciding how many players each existing team will get to protect, you move to the Protect Players screen (unless you have switched to an expansion team). This lets you pick which players on your team you want to protect from being selected in the fantasy draft. Similar to the auto sort button on the roster screen, there is a handy "Auto Select" button to help you decide. It is smart enough to favor younger players over slightly better older players.
 
-<p><img src="/files/1956-protect-players.png" class="img-responsive"></p>
+<p><img src="/files/1956-protect-players.png" class="img-fluid"></p>
 
 The actual expansion draft occurs after player protections are finalized. It works quite similar to the normal draft. At the end, all the expansion teams have full rosters.
 
@@ -50,7 +50,7 @@ What about team relocations? Tools > Manage Teams has allowed that for a while, 
 
 Another issue raised by fantasy drafts is conference/division realignment. If we start with 8 teams in 1956, having 6 divisions like today would be silly. But today, having only 2 divisions would be similarly silly. So I added conference/division editor available at Tools > Manage Confs.
 
-<p><img src="/files/1956-manage-confs.png" class="img-responsive"></p>
+<p><img src="/files/1956-manage-confs.png" class="img-fluid"></p>
 
 I also added a division selector to Tools > Manage Teams, because if you're adding teams and divisions over time, you're probably also going to want to move some existing teams to new divisions.
 
@@ -62,7 +62,7 @@ The same applies for changing the number of playoff rounds or first round byes. 
 
 Another thing that has changed over history is style of play. Probably the biggest statistical changes can be seen in pace, shooting, and 3 point shooting. A historical simulation needs to consider those factors. So I added some game simulation settings to the God Mode options, along with the ability to quickly apply values appropriate for any historical season.
 
-<p><img src="/files/1956-game-sim-options.png" class="img-responsive"></p>
+<p><img src="/files/1956-game-sim-options.png" class="img-fluid"></p>
 
 In total, these new features allow you to create a league similar to any season in history, and to make it grow and change over time. That's great.
 
@@ -84,7 +84,7 @@ as well as realistic changes to some other settings:
 
 If you don't want these scheduled events, then you can create a [custom league](https://play.basketball-gm.com/new_league), select the season you want, and then unselect "Scheduled events" on the right.
 
-<p><img src="/files/1956-scheduled-events.png" class="img-responsive"></p>
+<p><img src="/files/1956-scheduled-events.png" class="img-fluid"></p>
 
 Currently it's all or nothing, but eventually I will add a GUI to let you pick and choose which scheduled events to keep, and even to add your own. I will also eventually write some documentation about how it works, so people making custom league files can include their own scheduled events.
 

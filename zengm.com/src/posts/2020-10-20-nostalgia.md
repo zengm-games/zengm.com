@@ -33,11 +33,11 @@ I also feel nostalgic for the very early days. In 2013 when I was preparing to p
 
 You don't remember what it was like? [Check it out.](https://old.basketball-gm.com/) That's the first official version of web-based Basketball GM, released on June 23, 2013. This is what it looked like:
 
-<a href="/files/nostalgia-1.png"><img src="/files/nostalgia-1.png" class="img-responsive" /></a>
+<a href="/files/nostalgia-1.png"><img src="/files/nostalgia-1.png" class="img-fluid" /></a>
 
 The dashboard has been redesigned a couple times, but some other pages look similar to today's BBGM, except utterly stripped down to the bone:
 
-<a href="/files/nostalgia-2.png"><img src="/files/nostalgia-2.png" class="img-responsive" /></a>
+<a href="/files/nostalgia-2.png"><img src="/files/nostalgia-2.png" class="img-fluid" /></a>
 
 But you can still do everything you need to do. Preseason, regular season, playoffs, draft, re-signing, free agency, repeat. It's all there, and nothing more.
 

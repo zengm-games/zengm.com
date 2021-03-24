@@ -22,11 +22,11 @@ To improve on that situation, today's two changes are:
 
 You can this new information by clicking any player's mood button, which now has two tabs, one for your team and one for the player's current team:
 
-<img src="/files/player-mood-ai-re-signings-1.png" class="img-responsive" />
+<img src="/files/player-mood-ai-re-signings-1.png" class="img-fluid" />
 
 You can also see it on several pages, such as by going to Players > Free Agents > Upcoming Free Agents:
 
-<a href="/files/player-mood-ai-re-signings-2.png"><img src="/files/player-mood-ai-re-signings-2.png" class="img-responsive" /></a>
+<a href="/files/player-mood-ai-re-signings-2.png"><img src="/files/player-mood-ai-re-signings-2.png" class="img-fluid" /></a>
 
 So just at a glance, you know Jesse Williams and Jamari Terry are almost guaranteed to be on the market, Charlie Williams is almost definitely going to re-sign with his team, and several other players are in between. Very useful information when you're trying to plan for free agency!
 

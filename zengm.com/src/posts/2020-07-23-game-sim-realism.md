@@ -13,7 +13,7 @@ One of the fun things about Basketball GM is that [you can view the entire sourc
 
 <!--more-->
 
-<img src="/files/ratings-overview.png" class="img-responsive">
+<img src="/files/ratings-overview.png" class="img-fluid">
 
 But what I'm actually here to talk about is some work that [nicidob](https://nicidob.github.io/) recently did on game simulation realism. If you play through seasons quickly you won't even notice this stuff. But if you look a little more in detail at player stats and box scores, you'll probably appreciate these subtle improvements..
 
@@ -27,7 +27,7 @@ In [PR 272](https://github.com/dumbmatter/gm-games/pull/272), nicidob a look at 
 
 As you can see in the figure below, it is much more accurate after his adjustments.
 
-<a href="/files/gamesim-realism-1.png"><img src="/files/gamesim-realism-1.png" class="img-responsive"></a>
+<a href="/files/gamesim-realism-1.png"><img src="/files/gamesim-realism-1.png" class="img-fluid"></a>
 
 ### 2. Teams play differently depending on if they are winning or losing
 
@@ -39,10 +39,10 @@ In [PR 276](https://github.com/dumbmatter/gm-games/pull/276), nicidob addressed 
 
 You can see how the distribution of margin of victory has changed in the figure below.
 
-<img src="/files/gamesim-realism-2.png" class="img-responsive">
+<img src="/files/gamesim-realism-2.png" class="img-fluid">
 
 ### 3. Update the fatigue system for a better distribution of playing time
 
 In [PR 273](https://github.com/dumbmatter/gm-games/pull/273), nicidob made some adjustments to how fatigue is calculated in game simulation. Since fatigue is one of the primary factors the coach uses to influence substitutions, this produced some changes in how playing time is distributed. The most noticeable impact is that good players play a bit more. This is possibly the biggest of the three changes in terms of gameplay, because it will result in your top players being a little more important and your depth being a little less important.
 
-<img src="/files/gamesim-realism-3.png" class="img-responsive">
+<img src="/files/gamesim-realism-3.png" class="img-fluid">

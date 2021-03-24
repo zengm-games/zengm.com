@@ -22,10 +22,10 @@ You can find them within a league at Tools > Frivolities.
 
 Biggest Trades uses an extremely simple formula to identify the biggest trades, but it works well enough. It scans over all past trades, finds the player in the trade with the maximum value of (ovr + 0.25 \* pot), and then uses that to sort all the trades. This does include draft picks, but only after a player is actually selected. Here's what it looks like:
 
-<a href="/files/trade-frivolities-1.png"><img src="/files/trade-frivolities-1.png" class="img-responsive" /></a>
+<a href="/files/trade-frivolities-1.png"><img src="/files/trade-frivolities-1.png" class="img-fluid" /></a>
 
 For Most Lopsided Trades, it finds the trades where one side produced a lot more value after the trade (based on total win shares in BBGM, and approximate value in FBGM). This is the same metric displayed on the [Trade Summary](https://basketball-gm.com/blog/2020/11/trade-details/) page. Here's what it looks like:
 
-<a href="/files/trade-frivolities-2.png"><img src="/files/trade-frivolities-2.png" class="img-responsive" /></a>
+<a href="/files/trade-frivolities-2.png"><img src="/files/trade-frivolities-2.png" class="img-fluid" /></a>
 
 In total, I think all of these historical trade updates this week are going to make it a lot more fun to review the history of your league. If you do that and find an interesting trade, post about it on [Reddit](https://www.reddit.com/r/BasketballGM/), [Twitter](https://twitter.com/basketball_gm/), or [Discord](https://discord.gg/caPFuM9)!
