@@ -1,0 +1,25 @@
+---
+layout: post
+title: Performance Issues in Old Leagues
+date: 2014-01-06
+tags:
+- post
+- Performance
+---
+<p>On my computer, I can simulate a week of games in a new season in 20 seconds. For a league 20 seasons in, a week of games takes about 45 seconds. This is unacceptable, especially since I know that some people play literally hundreds of seasons in the same league.</p>
+<!--more-->
+<p>Due to Basketball GM being a browser-based game, there is only so much I can do about performance issues since most of the low-level stuff is out of my control. One easy quick fix is to simply delete old data, so that old leagues are basically the same as new leagues.</p>
+<h3>Try 1: Delete Old Box Scores</h3>
+<p>Every box score of every game in every season is currently saved. This ends up using a lot of space over time. However, the box scores are mainly independent of the rest of the data, so I anticipate this to mainly just save space without affecting performance.</p>
+<p>Deleting every box score in my 20-year-old league brought the week simulation time down from 45 seconds to 43 seconds. That's something (maybe... I only did this once because I'm too lazy to be statistically rigorous), but 2 seconds isn't anywhere near enough performance improvement.</p>
+<h3>Try 2: Delete Old Team Stats</h3>
+<p>Team stats are stored for each season. This doesn't take up that much space, but it is accessed every time a team plays a game, so this could have a little more impact on performance.</p>
+<p>I tried deleting all stored team stats except the current season. This brought the week simulation time down to 40 seconds, another 3 second improvement above Try 1. Not bad, but there is still much more to try.</p>
+<h3>Try 3: Delete Old Players</h3>
+<p>Players. Now we're getting somewhere. The player database is the biggest, and each time games are played, it's repeatedly read from and written to for every single player. Retired players are only meaningful for their records, they don't impact gameplay. Deleting them will probably speed things up, but it's unfortunate because many people like to look at their old records. I could implement some kind of filter where only non-meaningful players are deleted, but for now, I'm going to try deleting all of them.</p>
+<p>Deleting retired players brought the weekly simulation time down to 38 seconds. So only another 2 seconds beyond Try 1 and Try 2. This is somewhat disappointing. Deleting old box scores, old team stats, and retired players doesn't get me anywhere near the performance of a new league.</p>
+<h3>Try 4: Delete Old Player Stats</h3>
+<p>Each player has stats and ratings from every season stored in the database. Since the active player objects are updated far more than anything else, this is the most plausible place for performance improvements.</p>
+<p>Deleting retired players brought the weekly simulation time down to 26 seconds, a whopping 12 seconds beyond the gains from the first 3 Tries. 26 seconds is at least roughly close to 20 seconds.</p>
+<h3>Try it yourself!</h3>
+<p>If you're feeling brave, you can try all of these things yourself. Within your league, go to Tools > Improve Performance and you can try to speed up your league at the expense of sacrificing your old data.</p>

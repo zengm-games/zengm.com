@@ -1,0 +1,9 @@
+---
+layout: layout.njk
+blog: true
+permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.html"
+---
+<h1><a href="{{ page.url }}">{{ title | escape }}</a></h1>
+<p>{{ page.date | blogPostDate }} - Tags</p>
+
+{{ content | safe }}

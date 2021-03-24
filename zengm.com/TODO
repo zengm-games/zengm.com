@@ -1,6 +1,12 @@
+https://github.com/maxboeck/mxb/blob/master/.eleventy.js
+
 blog
+- tags in blog post
+- tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
 - links to blog
 - links to /files, elsewhere
+- compare with existing blog (teaser, etc)
+- check images
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
@@ -23,3 +29,6 @@ multiple sites
 redirect basketball-gm.com/files and football-gm.com/files
 
 tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
+
+eleventy-plugin-syntaxhighlight
+- can't be used from JS template :(

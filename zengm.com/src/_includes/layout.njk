@@ -15,7 +15,9 @@
         {% sportPicker sport %}
         {% if not sport %}<div class="top-nav-item top-nav-separator">/</div>{% endif %}
         <div class="top-nav-item">
-          {% if titleShort %}
+          {% if blog %}
+            <a href="/blog/">Blog</a>
+          {% elif titleShort %}
             <span class="d-none d-sm-inline">{{ title }}</span><span class="d-sm-none">{{ titleShort }}</span>
           {% else %}
             {{ title }}

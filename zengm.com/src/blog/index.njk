@@ -1,0 +1,9 @@
+---
+layout: layout.njk
+title: Blog
+---
+<ul>
+{%- for post in collections.post -%}
+  <li>{{ post.data.title }}</li>
+{%- endfor -%}
+</ul>

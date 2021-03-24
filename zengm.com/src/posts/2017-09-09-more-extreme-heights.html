@@ -1,0 +1,15 @@
+---
+layout: post
+title: More extreme heights
+date: 2017-09-09
+tags:
+- post
+- New Feature
+---
+<p>One of the cool things about Basketball GM is the time scale. The NBA has been around for 70 years, and in those 70 years all kinds of crazy things have happened - freakish players, lucky shots, huge upsets, tragic deaths, and more. In Basketball GM, you can easily play 700 years - you should get 10x as much craziness as the NBA! And you do get some.</p>
+<p>But one thing that is missing is extremely freakish players. The best players alway feel kind of the same. That's because of the 0-100 rating system - once somebody is near 100 in most categories, he's the same as somebody else who is near 100 in most categories. You could imagine fixing that by abolishing the 0-100 system and letting ratings increase unbounded, but that is a bit too radical for my tastes. A more conservative solution is to decrease the range of normal. Take a 100 rating and make it a 75, then allow anything above 75 to appear only very rarely. That would allow for more unique stars that you might only see after playing thousands of seasons.</p>
+<p>Don't get too excited. I haven't completely done this yet. But <a href="https://github.com/dumbmatter/basketball-gm/pull/232">thanks to some help from Timothy Highley</a>, it's done for height. Short players will no longer have height 0 unless they are <i>really</i> short, and tall players will no longer have height 100 unless they are approaching physiological limits.</p>
+<p>This is an important change for people making custom rosters or running multiplayer leagues. When loading a league file in the new version, player height ratings will be adjusted to reflect the new scale. If you don't want this to happen (such as, if you're building a new roster file and want to specify the heights on the new scale yourself), add this to the root of your JSON object:</p>
+<pre>    "version": 24,</pre>
+<p>In the future, if there are more backwards incompatibly changes in file format, the version parameter will be used similarly in upgrades. For now, it only affects heights.</p>
+<p>If you have any feedback, please <a href="https://www.reddit.com/r/BasketballGM/comments/6z3ql1/more_extreme_heights/">leave a comment on Reddit</a>.</p>
