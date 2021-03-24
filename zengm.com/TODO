@@ -1,13 +1,12 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 blog
-- tags in blog post
 - tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
-- links to blog
 - links to /files, elsewhere
 - compare with existing blog (teaser, etc)
-- check images
+- check every old post
 - social buttons in posts, like old post.html
+- pagination
 - tag with sport and show icon somehow, like changelog?
 - rss feed
 

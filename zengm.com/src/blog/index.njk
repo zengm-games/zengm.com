@@ -1,6 +1,11 @@
 ---
 layout: layout.njk
 title: Blog
+pagination:
+  data: collections.post
+  size: 10
+  alias: posts
+  reverse: true
 ---
 <link href="/css/blog.css" rel="stylesheet">
 
@@ -8,7 +13,7 @@ title: Blog
 
 {% import "blog-macros.njk" as blogMacros %}
 
-{%- for post in collections.post | reverse -%}
+{%- for post in posts -%}
   {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
 
   {% if post.data.page.excerpt %}
