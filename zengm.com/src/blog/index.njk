@@ -9,5 +9,17 @@ title: Blog
 {% import "blog-macros.njk" as blogMacros %}
 
 {%- for post in collections.post -%}
-  {{ blogMacros.postHeader(post.data.url, post.data.title, post.data.date, post.data.tags) }}
+  {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
+
+  {% if post.data.page.excerpt %}
+    {% set excerpt = post.data.page.excerpt %}
+  {% else %}
+    {% set excerpt = post.templateContent %}
+  {% endif %}
+
+  {% if post.data.page.inputPath.endsWith("md") %}
+    {{ excerpt | renderUsingMarkdown | safe }}
+  {% else %}
+    {{ excerpt | safe }}
+  {% endif %}
 {%- endfor -%}

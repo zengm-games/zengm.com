@@ -19,6 +19,11 @@ module.exports = function (eleventyConfig) {
 		return `${year}/${month}`;
 	});
 
+	eleventyConfig.setFrontMatterParsingOptions({
+		excerpt: true,
+		excerpt_separator: "<!--more-->",
+	});
+
 	const dateFormatter = new Intl.DateTimeFormat("en-us", {
 		dateStyle: "long",
 		timeZone: "UTC",
