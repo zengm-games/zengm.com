@@ -1,10 +1,10 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
-purgeCSS
-- check any JS using classList
+build performance
 
 blog
 - links to /files, elsewhere
+  - see "yarn run build" output
 - check every old post
   - jquery in 2013 jump shot post
 - social buttons in posts, like old post.html

@@ -1,6 +1,8 @@
 //const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const fs = require("fs/promises");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const PurgeCSS = require("purgecss").default;
 const bySport = require("./src/util/bySport");
 const sportSpecificURL = require("./src/util/sportSpecificURL");
 
@@ -8,6 +10,8 @@ const sportSpecificURL = require("./src/util/sportSpecificURL");
 const mdRender = new MarkdownIt({
 	html: true,
 }).use(markdownItAttrs);
+
+const purgeCSS = new PurgeCSS();
 
 module.exports = function (eleventyConfig) {
 	//eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -180,6 +184,14 @@ module.exports = function (eleventyConfig) {
 		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="mr-1">Hockey</a>
     </div>
 </div>`;
+	});
+
+	eleventyConfig.on("afterBuild", async () => {
+		const results = await purgeCSS.purge();
+		for (const result of results) {
+			await fs.writeFile(result.file, result.css);
+		}
+		console.log("purgeCSS completed");
 	});
 
 	return {
