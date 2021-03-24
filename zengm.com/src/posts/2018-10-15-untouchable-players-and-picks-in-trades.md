@@ -16,7 +16,7 @@ Previously, on the Trade page there was a checkbox next to each player or pick t
 
 Here is an example of what it looks like. I want a nice young prospect from Chicago, but in return they want my star player, who I am unwilling to part with. So I mark him as untouchable and ask for another offer. With my star off the table, Chicago says I can have their player for two first round draft picks.
 
-[![Example of how to make a player "untouchable" in a trade](/files/untouchable.gif){: .img-responsive }](/files/untouchable.gif)
+<a href="/files/untouchable.gif"><img src="/files/untouchable.gif" class="img-fluid" alt="Example of how to make a player 'untouchable' in a trade"></a>
 
 I hope this makes it easier for you to find good trades!
 

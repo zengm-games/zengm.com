@@ -1,11 +1,12 @@
 const MarkdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 const bySport = require("./src/util/bySport");
 const sportSpecificURL = require("./src/util/sportSpecificURL");
 
 // These are the same options as default for eleventy, just need to define it again so I can use it in filters.
 const mdRender = new MarkdownIt({
 	html: true,
-});
+}).use(markdownItAttrs);
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/.htaccess");

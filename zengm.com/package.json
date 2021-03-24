@@ -14,6 +14,7 @@
     "concurrently": "^6.0.0",
     "husky": "=4",
     "lint-staged": ">=10",
+    "markdown-it-attrs": "^4.0.0",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
     "sharp": "^0.27.2"

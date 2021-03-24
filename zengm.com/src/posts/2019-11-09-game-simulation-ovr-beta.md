@@ -76,24 +76,25 @@ Another change suggested by nicidob was to use the [Z-score](https://en.wikipedi
 
 All in all, I wound up with these relative weights for the importance of ratings, in the old and new ovr formulas
 
-{:.table}
 | Rating | Old Weight | New Weight |
-|--------|------------|------------|
-| Hgt | 5 | 15.9 |
-| dIQ | 3 | 15.9 |
-| oIQ | 7 | 13.3 |
-| Spd | 4 | 12.3 |
-| Str | 1 | 7.77 |
-| TP | 3 | 7.26 |
-| End | 1 | 6.32 |
-| Pss | 3 | 6.2 |
-| Drb | 3 | 5.9 |
-| Jmp | 2 | 5.1 |
-| Dnk | 2 | 2.86 |
-| FT | 1 | 2.02 |
-| Ins | 1 | 1.26 |
-| Reb | 1 | 1 |
-| FG | 1 | 1 |
+| ------ | ---------- | ---------- |
+| Hgt    | 5          | 15.9       |
+| dIQ    | 3          | 15.9       |
+| oIQ    | 7          | 13.3       |
+| Spd    | 4          | 12.3       |
+| Str    | 1          | 7.77       |
+| TP     | 3          | 7.26       |
+| End    | 1          | 6.32       |
+| Pss    | 3          | 6.2        |
+| Drb    | 3          | 5.9        |
+| Jmp    | 2          | 5.1        |
+| Dnk    | 2          | 2.86       |
+| FT     | 1          | 2.02       |
+| Ins    | 1          | 1.26       |
+| Reb    | 1          | 1          |
+| FG     | 1          | 1          |
+
+{.table}
 
 As you can see, for the most part the order of importance didn't change too much. Height, athleticism, three point shooting, and IQ are extremely important in both ovr formulas. But they are even more important in the new formula.
 
