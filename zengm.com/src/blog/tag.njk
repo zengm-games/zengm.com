@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
-title: Blog
+eleventyComputed:
+  title: "{{ tag }}"
 pagination:
   data: collections
   size: 1

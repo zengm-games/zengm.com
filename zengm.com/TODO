@@ -1,17 +1,21 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 blog
-- tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
 - links to /files, elsewhere
-- compare with existing blog (teaser, etc)
 - check every old post
 - social buttons in posts, like old post.html
 - tag with sport and show icon somehow, like changelog?
 - rss feed
-- "read more" link
 - title bar
   - show page # for pagination
   - show tag name when viewing
+  - https://www.11ty.dev/docs/plugins/navigation/
+    - make title too?
+- spider for 404s
+
+about page with a bit more detail?
+- link from zengm.com
+- disclaimer from BBGM
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
@@ -30,8 +34,6 @@ multiple sites
 - or, use JS templates and write bySport/isSport equivalents
 
 redirect basketball-gm.com/files and football-gm.com/files
-
-tag pages https://www.11ty.dev/docs/quicktips/tag-pages/
 
 eleventy-plugin-syntaxhighlight
 - can't be used from JS template :(
