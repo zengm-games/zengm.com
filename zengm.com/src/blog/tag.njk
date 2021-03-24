@@ -12,10 +12,9 @@ pagination:
     - post
   addAllPagesToCollections: true
 permalink: /blog/tag/{{ tag | slug }}/
+showBlogTeaser: true
 ---
 <link href="/css/blog.css" rel="stylesheet">
-
-{% include "blog-teaser.njk" %}
 
 {% import "blog-macros.njk" as blogMacros %}
 
@@ -23,4 +22,5 @@ permalink: /blog/tag/{{ tag | slug }}/
 {% for post in taglist | reverse %}
   {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
   {{ blogMacros.postExcerpt(post) }}
+  <hr>
 {%- endfor -%}

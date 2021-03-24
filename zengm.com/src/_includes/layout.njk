@@ -33,13 +33,20 @@
     </div>
   </div>
 
-  {% if parent and not hideTitle %}
-    <div class="container-lg">
-      <h1>{{ title }}</h1>
-    </div>
+  {% if showBlogTeaser %}
+    <aside class="container-lg">
+      {% include "blog-teaser.njk" %}
+      <hr>
+    </aside>
   {% endif %}
 
   <main role="main" class="container-lg">
+    {% if parent %}
+      <h1>{{ title }}</h1>
+      {% if not hideLineUnderTitle %}
+        <hr>
+      {% endif %}
+    {% endif %}
     {{ content | safe }}
   </main>
 

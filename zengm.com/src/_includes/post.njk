@@ -1,12 +1,11 @@
 ---
 layout: layout.njk
 parent: blog
-hideTitle: true
 permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.html"
+showBlogTeaser: true
+hideLineUnderTitle: true
 ---
 <link href="/css/blog.css" rel="stylesheet">
-
-{% include "blog-teaser.njk" %}
 
 {% import "blog-macros.njk" as blogMacros %}
 

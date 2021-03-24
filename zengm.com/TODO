@@ -4,7 +4,8 @@ titlebar
 - for root pages (like FAQ, Blog, Manual), keep as is (title in header bar)
 - for sub pages, link the category (like Blog or Manual) and put title in <h1>
 - get rid of titleShort
-- get rid of eleventNavigation
+
+purgeCSS
 
 blog
 - links to /files, elsewhere

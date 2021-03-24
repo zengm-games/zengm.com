@@ -1,12 +1,9 @@
 {% macro postHeader(url, title, date, tags, type) %}
-  <hr>
-  <h1>
-    {% if type == "post" %}
-      {{ title | escape }}
-    {% else %}
+  {% if type != "post" %}
+    <h1>
       <a href="{{ url }}">{{ title | escape }}</a>
-    {% endif %}
-  </h1>
+    </h1>
+  {% endif %}
   <div class="mb-3">
     {{ date | blogPostDate }} - <ul class="comma-list">
     {% for tag in tags %}

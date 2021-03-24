@@ -6,18 +6,16 @@ pagination:
   size: 10
   alias: posts
   reverse: true
-eleventyNavigation:
-    key: Blog
+showBlogTeaser: true
 ---
 <link href="/css/blog.css" rel="stylesheet">
-
-{% include "blog-teaser.njk" %}
 
 {% import "blog-macros.njk" as blogMacros %}
 
 {%- for post in posts -%}
   {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
   {{ blogMacros.postExcerpt(post) }}
+  <hr>
 {%- endfor -%}
 
 {% if pagination.pages.length > 1 %}
