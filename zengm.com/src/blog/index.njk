@@ -6,8 +6,8 @@ title: Blog
 
 {% include "blog-teaser.njk" %}
 
-<ul>
+{% import "blog-macros.njk" as blogMacros %}
+
 {%- for post in collections.post -%}
-  <li>{{ post.data.title }}</li>
+  {{ blogMacros.postHeader(post.data.url, post.data.title, post.data.date, post.data.tags) }}
 {%- endfor -%}
-</ul>

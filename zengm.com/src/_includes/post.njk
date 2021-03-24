@@ -7,6 +7,8 @@ permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.ht
 
 {% include "blog-teaser.njk" %}
 
-{% include "post-header.njk" %}
+{% import "blog-macros.njk" as blogMacros %}
+
+{{ blogMacros.postHeader(page.url, title, page.date, tags) }}
 
 {{ content | safe }}
