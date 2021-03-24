@@ -1,8 +1,10 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 build performance
+- --sweep option
 
 blog
+- date off in URL? /blog/2019/12/2019-was-awesome/index.html
 - links to /files, elsewhere
   - see "yarn run build" output
 - check every old post
