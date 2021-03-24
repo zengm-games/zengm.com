@@ -19,7 +19,7 @@ Now you can go to Teams > GM History to view a summary of your overall performan
 
 <a href="/files/gm-history.png"><img src="/files/gm-history.png" class="img-fluid"></a>
 
-One caveat with this. Previously, your past teams were not tracked at all. So for seasons simulated prior to this update, the GM History page will assume that you managed your current team since the beginning of the league. Only future team switches will be tracked. If you want to change that, see [the "Change GM History teams" section on this page](/manual/worker-console/).
+One caveat with this. Previously, your past teams were not tracked at all. So for seasons simulated prior to this update, the GM History page will assume that you managed your current team since the beginning of the league. Only future team switches will be tracked. If you want to change that, see [the "Change GM History teams" section on this page](/basketball/manual/worker-console/).
 
 There's also another new feature! Like I mentioned above, the original ways to change your team were either to get fired or use God Mode. There of course is another way that real GMs switch teams - they do a really good job and get hired by another team. No, this is how it happens in Basketball GM too:
 

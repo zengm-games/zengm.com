@@ -14,7 +14,7 @@ But what if you want more? Like if you want to make a file for the NBA in 2003, 
 
 <!--more-->
 
-As described [on the players customization page of the manual](/manual/customization/players/), you can specify a player in any future draft class by setting his team ID to -2 and setting his draft year to whatever you want it to be.
+As described [on the players customization page of the manual](/basketball/manual/customization/players/), you can specify a player in any future draft class by setting his team ID to -2 and setting his draft year to whatever you want it to be.
 
 Previously, each draft class had a distinct team ID number (-2, -4, and -5 for 1, 2, and 3 years in the future respetively -- the old format is still supported for old league files with a `version` under 33, so don't worry, your existing league files will still work). IIRC, I did this because I had an index on team ID already and in IndexedDB it's kind of annoying to query things that don't have an index. But that's not a good reason, because the added complexity of shuffling players around between team IDs and keeping the team IDs in sync with the draft year caused a variety of bugs over the years, and also prevented me from easily adding support for additional draft classes. So finally, after years of annoyance, I bit the bullet and did it the right way.
 
