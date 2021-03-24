@@ -85,9 +85,11 @@ h3 {
 	background-color: var(--bg-2);
 }
 
-html.light a,
-html.light a:hover, html.dark a, html.dark a:hover {
+a, .pagination a, html.dark a {
 	color: var(--purple);
+	&:hover {
+		color: var(--purple);
+	}
 }
 
 .text-highlight {

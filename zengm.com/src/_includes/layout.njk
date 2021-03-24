@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en" class="h-100">
+{% if eleventyNavigation %}
+  {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+{% endif %}
   <head>
     {% include "head-common.njk" %}
-    <title>{{ title }} &laquo; {% sportTitle sport %}</title>
+    <title>{{ title }} &laquo; {% if blog %}Blog &laquo; {% endif %}{% for page in navPages %}{{ page.title }} &laquo; {% endfor %}{% sportTitle sport %}</title>
   </head>
   <body class="h-100">
 <div class="h-100 d-flex flex-column">
@@ -13,15 +16,12 @@
         <a href="/">ZenGM</a>
         {% sportPicker sport %}
         {% if not sport %}<div class="top-nav-item top-nav-separator">/</div>{% endif %}
-        {% if eleventyNavigation %}
-          {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-          {% for page in navPages %}
-            <div class="d-none d-sm-block top-nav-item">
-              <a href="{{ page.url }}">{{ page.title }}</a>
-            </div>
-            <div class="d-none d-sm-block top-nav-item top-nav-separator">/</div>
-          {% endfor %}
-        {% endif %}
+        {% for page in navPages %}
+          <div class="d-none d-sm-block top-nav-item">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </div>
+          <div class="d-none d-sm-block top-nav-item top-nav-separator">/</div>
+        {% endfor %}
         <div class="top-nav-item">
           {% if blog %}
             <a href="/blog/">Blog</a>
