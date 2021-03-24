@@ -7,6 +7,7 @@ blog
 - links to /files, elsewhere
 - compare with existing blog (teaser, etc)
 - check images
+- social buttons in posts, like old post.html
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/

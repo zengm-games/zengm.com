@@ -2,6 +2,10 @@
 layout: layout.njk
 title: Blog
 ---
+<link href="/css/blog.css" rel="stylesheet">
+
+{% include "blog-teaser.njk" %}
+
 <ul>
 {%- for post in collections.post -%}
   <li>{{ post.data.title }}</li>
