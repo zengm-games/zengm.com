@@ -24,7 +24,6 @@ module.exports = function (eleventyConfig) {
 		timeZone: "UTC",
 	});
 	eleventyConfig.addFilter("blogPostDate", function (date) {
-		console.log(date.toUTCString(), dateFormatter.format(date));
 		return dateFormatter.format(date);
 	});
 

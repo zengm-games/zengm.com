@@ -3,7 +3,19 @@ layout: layout.njk
 blog: true
 permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.html"
 ---
+<link href="/css/blog.css" rel="stylesheet">
+
+<p>ZenGM makes free sports simulation games. Set your roster, make trades, draft prospects, manage your finances, and try to build a dynasty. Try our games now in your browser: <a href="https://basketball-gm.com/">Basketball GM</a>, <a href="https://football-gm.com/">Football GM</a>, and <a href="/hockey/">ZenGM Hockey</a>.
+
 <h1><a href="{{ page.url }}">{{ title | escape }}</a></h1>
-<p>{{ page.date | blogPostDate }} - Tags</p>
+<div class="mb-3">
+    {{ page.date | blogPostDate }} - <ul class="comma-list">
+    {% for tag in tags %}
+        {% if tag !== "post" %}
+            <li><a href="/blog/tag/{{ tag | slug }}/"> {{ tag }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
 
 {{ content | safe }}
