@@ -1,12 +1,26 @@
 {% macro postHeader(url, title, date, tags) %}
-<h1><a href="{{ url }}">{{ title | escape }}</a></h1>
-<div class="mb-3">
+  <h1><a href="{{ url }}">{{ title | escape }}</a></h1>
+  <div class="mb-3">
     {{ date | blogPostDate }} - <ul class="comma-list">
     {% for tag in tags %}
-        {% if tag !== "post" %}
-            <li><a href="/blog/tag/{{ tag | slug }}/"> {{ tag }}</a></li>
-        {% endif %}
+      {% if tag !== "post" %}
+        <li><a href="/blog/tag/{{ tag | slug }}/"> {{ tag }}</a></li>
+      {% endif %}
     {% endfor %}
     </ul>
-</div>
+  </div>
+{% endmacro %}
+
+{% macro postExcerpt(post) %}
+  {% if post.data.page.excerpt %}
+    {% set excerpt = post.data.page.excerpt %}
+  {% else %}
+    {% set excerpt = post.templateContent %}
+  {% endif %}
+
+  {% if post.data.page.inputPath.endsWith("md") %}
+    {{ excerpt | renderMarkdown | safe }}
+  {% else %}
+    {{ excerpt | safe }}
+  {% endif %}
 {% endmacro %}

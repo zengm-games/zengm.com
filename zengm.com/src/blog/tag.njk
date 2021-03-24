@@ -1,0 +1,23 @@
+---
+layout: layout.njk
+title: Blog
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+permalink: /blog/tag/{{ tag | slug }}/
+---
+<link href="/css/blog.css" rel="stylesheet">
+
+{% include "blog-teaser.njk" %}
+
+{% import "blog-macros.njk" as blogMacros %}
+
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+  {{ blogMacros.postHeader(post.url, post.data.title, post.date, post.data.tags) }}
+  {{ blogMacros.postExcerpt(post) }}
+{%- endfor -%}
