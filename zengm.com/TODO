@@ -1,6 +1,10 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
+build/purgeCSS issues
+- top orange bar on main page
+
 build performance
+- 25 minutes
 - --sweep option
 
 blog
