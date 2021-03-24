@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "assetgraph-builder": "^8.1.1",
     "chokidar-cli": "^2.1.0",
     "concurrently": "^6.0.0",

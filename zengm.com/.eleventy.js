@@ -1,3 +1,4 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const bySport = require("./src/util/bySport");
@@ -9,6 +10,8 @@ const mdRender = new MarkdownIt({
 }).use(markdownItAttrs);
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");
 	eleventyConfig.addPassthroughCopy("src/static");

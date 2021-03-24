@@ -8,9 +8,6 @@ blog
 - rss feed
 - title bar
   - show page # for pagination
-  - show tag name when viewing
-  - https://www.11ty.dev/docs/plugins/navigation/
-    - make title too?
 - spider for 404s
 
 about page with a bit more detail?
@@ -24,6 +21,8 @@ pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
 
 sidebar menu
+- use eleventyNavigation?
+  - replace titleShort with whatever the "key" is in eleventyNavigation?
 
 https://github.com/zengm-games
 
