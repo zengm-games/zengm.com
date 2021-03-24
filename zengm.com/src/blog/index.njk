@@ -9,6 +9,13 @@ pagination:
 ---
 <link href="/css/blog.css" rel="stylesheet">
 
+<nav aria-labelledby="my-pagination">
+  <ol>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+  </ol>
+</nav>
+
 {% include "blog-teaser.njk" %}
 
 {% import "blog-macros.njk" as blogMacros %}
@@ -28,3 +35,37 @@ pagination:
     {{ excerpt | safe }}
   {% endif %}
 {%- endfor -%}
+
+{% if pagination.pages.length > 1 %}
+  <nav class="d-flex justify-content-center">
+    <ul class="pagination mx-0">
+      {% if page.url != pagination.href.first %}
+        <li class="page-item" title="First page"><a class="page-link" href="{{ pagination.href.first }}">&laquo;</a></li>
+      {% else %}
+        <li class="page-item disabled" title="First page"><a class="page-link" href="#">&laquo;</a></li>
+      {% endif %}
+
+      {% if pagination.href.previous %}
+        <li class="page-item" title="Previous page"><a class="page-link" href="{{ pagination.href.previous }}">&lsaquo;</a></li>
+      {% else %}
+        <li class="page-item disabled" title="Previous page"><a class="page-link" href="#">&lsaquo;</a></li>
+      {% endif %}
+
+      {%- for pageEntry in pagination.pages %}
+          <li class="page-item{% if page.url == pagination.hrefs[ loop.index0 ] %} active{% endif %}"><a class="page-link" href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+      {%- endfor %}
+
+      {% if pagination.href.next %}
+        <li class="page-item" title="Next page"><a class="page-link" href="{{ pagination.href.next }}">&rsaquo;</a></li>
+      {% else %}
+        <li class="page-item disabled" title="Next page"><a class="page-link" href="#">&rsaquo;</a></li>
+      {% endif %}
+
+      {% if page.url != pagination.href.last %}
+        <li class="page-item" title="Last page"><a class="page-link" href="{{ pagination.href.last }}">&raquo;</a></li>
+      {% else %}
+        <li class="page-item disabled" title="Last page"><a class="page-link" href="#">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
