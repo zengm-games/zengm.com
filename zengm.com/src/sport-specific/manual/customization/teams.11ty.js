@@ -6,6 +6,7 @@ module.exports = class {
 		return {
 			...base("js"),
 			title: "Teams Customization",
+			parent: "customization",
 		};
 	}
 

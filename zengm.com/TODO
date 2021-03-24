@@ -1,15 +1,12 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
-titlebar
-- for root pages (like FAQ, Blog, Manual), keep as is (title in header bar)
-- for sub pages, link the category (like Blog or Manual) and put title in <h1>
-- get rid of titleShort
-
 purgeCSS
+- check any JS using classList
 
 blog
 - links to /files, elsewhere
 - check every old post
+  - jquery in 2013 jump shot post
 - social buttons in posts, like old post.html
 - tag with sport and show icon somehow, like changelog?
 - rss feed
@@ -27,7 +24,7 @@ pathPrefix and url filter to make all URLs point to zengm.com explicitly
 
 sidebar menu
 - use eleventyNavigation?
-  - replace titleShort with whatever the "key" is in eleventyNavigation?
+  - could also use that to replace the hacky parent system i built...
 
 https://github.com/zengm-games
 

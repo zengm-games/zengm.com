@@ -5,7 +5,7 @@ module.exports = class {
 		return {
 			...base("js"),
 			title: "Debugging Quota Errors",
-			titleShort: "Quota Errors",
+			parent: "debugging",
 		};
 	}
 

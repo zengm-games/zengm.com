@@ -1,4 +1,4 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+//const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const bySport = require("./src/util/bySport");
@@ -10,7 +10,7 @@ const mdRender = new MarkdownIt({
 }).use(markdownItAttrs);
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	//eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");
@@ -59,6 +59,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("parentTitle", function (parent) {
 		const titles = {
 			blog: "Blog",
+			customization: "Customization",
+			debugging: "Debugging",
+			manual: "Manual",
 		};
 		if (!titles[parent]) {
 			throw new Error("Unknown parent in parentTitle");
@@ -66,14 +69,17 @@ module.exports = function (eleventyConfig) {
 		return titles[parent];
 	});
 
-	eleventyConfig.addFilter("parentURL", function (parent) {
-		const titles = {
+	eleventyConfig.addFilter("parentURL", function (parent, sport) {
+		const urls = {
 			blog: "/blog/",
+			customization: `/${sport}/manual/customization/`,
+			debugging: `/${sport}/manual/debugging/`,
+			manual: `/${sport}/manual/`,
 		};
-		if (!titles[parent]) {
+		if (!urls[parent]) {
 			throw new Error("Unknown parent in parentURL");
 		}
-		return titles[parent];
+		return urls[parent];
 	});
 
 	eleventyConfig.addFilter("renderMarkdown", function (rawString) {

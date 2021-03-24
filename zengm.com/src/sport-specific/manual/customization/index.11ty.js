@@ -5,6 +5,7 @@ module.exports = class {
 		return {
 			...base("js"),
 			title: "Customization",
+			parent: "manual",
 		};
 	}
 

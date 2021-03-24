@@ -5,6 +5,7 @@ module.exports = class {
 		return {
 			...base("md"),
 			title: "Debugging",
+			parent: "manual",
 		};
 	}
 

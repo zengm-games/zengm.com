@@ -20,7 +20,7 @@ module.exports = class {
 		return {
 			...base("md"),
 			title: "Customizing Player Names, Countries, and Colleges",
-			titleShort: "Customizing Player Bio Info",
+			parent: "customization",
 		};
 	}
 

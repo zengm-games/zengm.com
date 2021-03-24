@@ -6,6 +6,7 @@ module.exports = class {
 		return {
 			...base("md"),
 			title: "Player Mood",
+			parent: "manual",
 		};
 	}
 

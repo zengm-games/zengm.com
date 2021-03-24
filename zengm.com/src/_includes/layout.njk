@@ -21,7 +21,7 @@
         {% endfor %}
         <div class="top-nav-item">
           {% if parent %}
-            <a href="{{ parent | parentURL }}">{{ parent | parentTitle }}</a>
+            <a href="{{ parent | parentURL(sport) }}">{{ parent | parentTitle }}</a>
           {% else %}
             {{ title }}
           {% endif %}

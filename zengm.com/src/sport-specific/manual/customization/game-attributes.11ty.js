@@ -6,6 +6,7 @@ module.exports = class {
 		return {
 			...base("md"),
 			title: "Game Attributes Customization",
+			parent: "customization",
 		};
 	}
 

@@ -6,7 +6,7 @@ module.exports = class {
 		return {
 			...base("md"),
 			title: "Advanced League Customization in the Worker Console",
-			titleShort: "Worker Console",
+			parent: "manual",
 		};
 	}
 

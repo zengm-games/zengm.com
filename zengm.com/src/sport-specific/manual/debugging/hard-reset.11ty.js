@@ -6,10 +6,11 @@ module.exports = class {
 		return {
 			...base("js"),
 			title: "Hard Reset",
+			parent: "debugging",
 		};
 	}
 
-	render({ gameName, sport }) {
+	render({ sport }) {
 		return `<p>
     Sometimes things just get stuck and you never get past the opening
     "Loading..." screen. If this happens, you can completely reset the game (and

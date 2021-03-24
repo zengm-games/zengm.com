@@ -6,7 +6,7 @@ module.exports = class {
 			...base("md"),
 			sports: ["basketball"],
 			title: `Team and player data for "Real Players" leagues`,
-			titleShort: "Real team and player data",
+			parent: "customization",
 		};
 	}
 
