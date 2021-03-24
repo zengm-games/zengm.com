@@ -9,13 +9,6 @@ pagination:
 ---
 <link href="/css/blog.css" rel="stylesheet">
 
-<nav aria-labelledby="my-pagination">
-  <ol>
-    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-  </ol>
-</nav>
-
 {% include "blog-teaser.njk" %}
 
 {% import "blog-macros.njk" as blogMacros %}
@@ -52,7 +45,9 @@ pagination:
       {% endif %}
 
       {%- for pageEntry in pagination.pages %}
+        {% if loop.index0 | isInPageTrail(pagination.hrefs, page.url) %}
           <li class="page-item{% if page.url == pagination.hrefs[ loop.index0 ] %} active{% endif %}"><a class="page-link" href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+        {% endif %}
       {%- endfor %}
 
       {% if pagination.href.next %}

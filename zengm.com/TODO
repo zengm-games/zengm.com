@@ -6,11 +6,12 @@ blog
 - compare with existing blog (teaser, etc)
 - check every old post
 - social buttons in posts, like old post.html
-- pagination
-  - truncate to only 5 pages
 - tag with sport and show icon somehow, like changelog?
 - rss feed
 - "read more" link
+- title bar
+  - show page # for pagination
+  - show tag name when viewing
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/

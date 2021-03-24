@@ -39,6 +39,20 @@ module.exports = function (eleventyConfig) {
 		return dateFormatter.format(date);
 	});
 
+	eleventyConfig.addFilter(
+		"isInPageTrail",
+		function (currentIndex, urls, activeURL) {
+			const NUM_LINKS = 5;
+
+			const activeIndex = urls.indexOf(activeURL);
+			let minIndex = Math.max(0, activeIndex - 2);
+			let maxIndex = Math.min(minIndex + (NUM_LINKS - 1), urls.length - 1);
+			minIndex = Math.max(0, maxIndex - (NUM_LINKS - 1));
+
+			return currentIndex >= minIndex && currentIndex <= maxIndex;
+		},
+	);
+
 	eleventyConfig.addFilter("renderMarkdown", function (rawString) {
 		return mdRender.render(rawString);
 	});
