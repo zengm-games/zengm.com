@@ -1,10 +1,8 @@
 ---
 layout: layout.njk
 eleventyComputed:
-  title: "{{ tag }}"
-  eleventyNavigation:
-    key: "{{ tag }}"
-    parent: Blog
+  title: "Posts tagged \"{{ tag }}\""
+parent: blog
 pagination:
   data: collections
   size: 1

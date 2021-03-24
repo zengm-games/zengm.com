@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en" class="h-100">
-{% if eleventyNavigation %}
-  {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-{% endif %}
   <head>
     {% include "head-common.njk" %}
-    <title>{{ title }} &laquo; {% if blog %}Blog &laquo; {% endif %}{% for page in navPages %}{{ page.title }} &laquo; {% endfor %}{% sportTitle sport %}</title>
+    <title>{{ title }} &laquo; {% if parent %}{{ parent | parentTitle }} &laquo; {% endif %}{% for page in navPages %}{{ page.title }} &laquo; {% endfor %}{% sportTitle sport %}</title>
   </head>
   <body class="h-100">
 <div class="h-100 d-flex flex-column">
@@ -23,10 +20,8 @@
           <div class="d-none d-sm-block top-nav-item top-nav-separator">/</div>
         {% endfor %}
         <div class="top-nav-item">
-          {% if blog %}
-            <a href="/blog/">Blog</a>
-          {% elif titleShort %}
-            <span class="d-none d-sm-inline">{{ title }}</span><span class="d-sm-none">{{ titleShort }}</span>
+          {% if parent %}
+            <a href="{{ parent | parentURL }}">{{ parent | parentTitle }}</a>
           {% else %}
             {{ title }}
           {% endif %}
@@ -37,6 +32,12 @@
       </nav>
     </div>
   </div>
+
+  {% if parent and not hideTitle %}
+    <div class="container-lg">
+      <h1>{{ title }}</h1>
+    </div>
+  {% endif %}
 
   <main role="main" class="container-lg">
     {{ content | safe }}

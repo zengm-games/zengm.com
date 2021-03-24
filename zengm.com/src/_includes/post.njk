@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
-blog: true
+parent: blog
+hideTitle: true
 permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.html"
 ---
 <link href="/css/blog.css" rel="stylesheet">
@@ -9,6 +10,6 @@ permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.ht
 
 {% import "blog-macros.njk" as blogMacros %}
 
-{{ blogMacros.postHeader(page.url, title, page.date, tags) }}
+{{ blogMacros.postHeader(page.url, title, page.date, tags, "post") }}
 
 {{ content | safe }}

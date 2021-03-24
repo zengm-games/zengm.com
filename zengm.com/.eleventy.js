@@ -56,6 +56,26 @@ module.exports = function (eleventyConfig) {
 		},
 	);
 
+	eleventyConfig.addFilter("parentTitle", function (parent) {
+		const titles = {
+			blog: "Blog",
+		};
+		if (!titles[parent]) {
+			throw new Error("Unknown parent in parentTitle");
+		}
+		return titles[parent];
+	});
+
+	eleventyConfig.addFilter("parentURL", function (parent) {
+		const titles = {
+			blog: "/blog/",
+		};
+		if (!titles[parent]) {
+			throw new Error("Unknown parent in parentURL");
+		}
+		return titles[parent];
+	});
+
 	eleventyConfig.addFilter("renderMarkdown", function (rawString) {
 		return mdRender.render(rawString);
 	});
