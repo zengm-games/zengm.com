@@ -1,7 +1,11 @@
 const MarkdownIt = require("markdown-it");
 const bySport = require("./src/util/bySport");
 const sportSpecificURL = require("./src/util/sportSpecificURL");
-const mdRender = new MarkdownIt();
+
+// These are the same options as default for eleventy, just need to define it again so I can use it in filters.
+const mdRender = new MarkdownIt({
+	html: true,
+});
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
@@ -23,6 +27,8 @@ module.exports = function (eleventyConfig) {
 		excerpt: true,
 		excerpt_separator: "<!--more-->",
 	});
+
+	eleventyConfig.setLibrary("md", mdRender);
 
 	const dateFormatter = new Intl.DateTimeFormat("en-us", {
 		dateStyle: "long",
