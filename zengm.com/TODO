@@ -1,15 +1,11 @@
 delete old wordpress files
 
-test logos page in build
-
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 build performance
 - 25 minutes
 
 blog
-- links to /files, elsewhere
-  - see "yarn run build" output
 - rss feed
   - test
 - 301 redirect from BBGM/FBGM for blog and feed
