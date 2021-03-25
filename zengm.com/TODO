@@ -11,11 +11,6 @@ build performance
   - minify css/js
   - compress images
 
-blog
-- rss feed
-  - test
-- 301 redirect from BBGM/FBGM for blog and feed
-
 basketball-gm.com, football-gm.com
 - hacky way - i think this looks better!
   - in src, replace all basketball-gm.com URLs with /basketball/

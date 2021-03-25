@@ -9,3 +9,4 @@ ErrorDocument 404 /404/index.html
 
 Redirect 301 /blog http://zengm.com/blog
 Redirect 301 /faq/ /manual/faq/
+Redirect 301 /feed/index.xml https://zengm.com/blog/feed.xml
