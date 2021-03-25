@@ -1,5 +1,20 @@
 module.exports = [
 	{
+		date: "dev",
+		text:
+			'Added Dean Oliver\'s "Four Factors" (eFG%, TOV%, ORB%, and FT/FGA) to the advanced team stats page. Thanks @domini7!',
+		links: ["https://github.com/dumbmatter/gm-games/pull/369"],
+		basketball: true,
+	},
+	{
+		date: "dev",
+		text:
+			"Added awards for the season leader in some key stats (hockey: goals, assists, points; football: passing yards, rushing yards, receiving yards; yards from scrimmage). I know people might want more, but at some point it'd be too much clutter. This feature has already been in BBGM for a while. Thanks @domini7!",
+		links: ["https://github.com/dumbmatter/gm-games/pull/373"],
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-03-20",
 		text: "New live sim fast forward option to play until next goal/score.",
 		links: [
