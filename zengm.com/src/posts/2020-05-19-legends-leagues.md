@@ -8,7 +8,7 @@ tags:
   - Real Players
 ---
 
-Now that Basketball GM has [real rosters back to 1956](blog/2020/05/beta-real-rosters-back-to-1956/), it's possible to make all kinds of fun fictional rosters using real players. Today I am releasing "Legends" mode, which lets you create a league where each team is filled with the best players from that franchise.
+Now that Basketball GM has [real rosters back to 1956](/blog/2020/05/beta-real-rosters-back-to-1956/), it's possible to make all kinds of fun fictional rosters using real players. Today I am releasing "Legends" mode, which lets you create a league where each team is filled with the best players from that franchise.
 
 You can either start an "All Time" legends league using all players, or pick a decade to be restricted to teams and players from that decade. [Give it a try](https://play.basketball-gm.com/) or read on for more details about how the rosters are generated.
 

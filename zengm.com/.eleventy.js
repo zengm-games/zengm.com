@@ -26,8 +26,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("src/css");
 	eleventyConfig.setUseGitIgnore(false);
 	eleventyConfig.addFilter("blogPostDateURL", function (date) {
-		const year = date.getFullYear();
-		const month = String(date.getMonth() + 1).padStart(2, "0");
+		const year = date.getUTCFullYear();
+		const month = String(date.getUTCMonth() + 1).padStart(2, "0");
 		return `${year}/${month}`;
 	});
 

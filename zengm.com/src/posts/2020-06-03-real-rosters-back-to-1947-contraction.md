@@ -8,7 +8,7 @@ tags:
   - Real Players
 ---
 
-Last month when I added [real historical rosters](/2020/05/beta-real-rosters-back-to-1956/), I didn't go all the way back to the beginning of the league in 1947, I stopped in 1956. Why 1956? Because that's the first year where all the teams remain active until today. Prior to 1956, [it was common for new teams to join the league and existing teams to fold](https://en.wikipedia.org/wiki/List_of_National_Basketball_Association_seasons). I did not have a good way to support contraction of teams in Basketball GM, because many parts of the code assumed that all teams were active.
+Last month when I added [real historical rosters](/blog/2020/05/beta-real-rosters-back-to-1956/), I didn't go all the way back to the beginning of the league in 1947, I stopped in 1956. Why 1956? Because that's the first year where all the teams remain active until today. Prior to 1956, [it was common for new teams to join the league and existing teams to fold](https://en.wikipedia.org/wiki/List_of_National_Basketball_Association_seasons). I did not have a good way to support contraction of teams in Basketball GM, because many parts of the code assumed that all teams were active.
 
 Today that has changed. Basketball GM now supports "inactive" teams, which means it can simulate contraction like occurred prior to 1956. I have extended real rosters back to 1947 and added pre-programmed contraction and expansion for those crazy early years.
 

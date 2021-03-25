@@ -1,14 +1,9 @@
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
-build/purgeCSS issues
-- top orange bar on main page
-
 build performance
 - 25 minutes
-- --sweep option
 
 blog
-- date off in URL? /blog/2019/12/2019-was-awesome/index.html
 - links to /files, elsewhere
   - see "yarn run build" output
 - check every old post
@@ -16,7 +11,6 @@ blog
 - social buttons in posts, like old post.html
 - tag with sport and show icon somehow, like changelog?
 - rss feed
-- spider for 404s
 
 about page with a bit more detail?
 - link from zengm.com
