@@ -1,4 +1,5 @@
 //const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
 const fs = require("fs/promises");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -15,6 +16,7 @@ const purgeCSS = new PurgeCSS();
 
 module.exports = function (eleventyConfig) {
 	//eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(eleventyPluginRSS);
 
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");

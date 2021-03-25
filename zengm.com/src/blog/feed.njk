@@ -1,0 +1,49 @@
+---json
+{
+  "permalink": "/blog/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "eleventyComputed": {
+    "metadata": {
+        "title": "ZenGM Blog",
+        "subtitle": "News about Basketball GM, Football GM, and ZenGM Hockey.",
+        "url": "https://zengm.com/blog/",
+        "feedUrl": "https://zengm.com{{ permalink }}",
+        "author": {
+        "name": "ZenGM",
+        "email": "jeremy@zengm.com"
+        }
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% import "blog-macros.njk" as blogMacros %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {% for post in collections.post | reverse %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <published>{{ post.date | dateToRfc3339 }}</published>
+      <updated>{{ post.date | dateToRfc3339 }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      {% for tag in post.data.tags %}
+        {% if tag != "post" %}
+          <category term="{{ tag }}"/>
+        {% endif %}
+      {% endfor %}
+      <summary type="html">{{ blogMacros.postExcerpt(post) | htmlToAbsoluteUrls(absolutePostUrl) }}</summary>
+    </entry>
+  {% endfor %}
+</feed>

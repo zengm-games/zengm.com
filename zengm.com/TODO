@@ -11,16 +11,20 @@ blog
 - social buttons in posts, like old post.html
 - tag with sport and show icon somehow, like changelog?
 - rss feed
+  - include link somewhere
+- 301 redirect from BBGM/FBGM for blog and feed
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
+- check rss feed too
 - use in footer
 - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
 
 sidebar menu
 - use eleventyNavigation?
   - could also use that to replace the hacky parent system i built...
+    - show main title in <h1> everywhere, and breadcrumbs at top. except maybe blog listing?
 
 https://github.com/zengm-games
 
