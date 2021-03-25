@@ -24,7 +24,7 @@ Additionally, I am aware of concerns about micromanagement. I don't want it to b
 
 With that out of the way, take a look at the UI for the new mood system, from your roster page:
 
-<img src="/files/mood-1.png" class="img-fluid" />
+<figure><img src="/files/mood-1.png" class="img-fluid" /></figure>
 
 There are 3 things you see from left to right: mood score, mood traits, and probability they will be willing to re-sign.
 
@@ -41,7 +41,7 @@ Mood traits are "all or nothing" - every player with the "Money ($)" trait gets 
 
 If you click the mood button, you see a popup with more detail, including the individual components that sum up to the overall **mood score**:
 
-<img src="/files/mood-2.png" class="img-fluid" />
+<figure><img src="/files/mood-2.png" class="img-fluid" /></figure>
 
 Currently these components are:
 

@@ -37,7 +37,7 @@
 {# https://nickjanetakis.com/blog/add-social-share-buttons-to-your-static-site-without-tracking #}
 {# https://crunchify.com/how-to-create-social-sharing-button-without-any-plugin-and-script-loading-wordpress-speed-optimization-goal/ #}
 {% macro socialShareButtons(url_raw, title, position) %}
-  <div class="share-btns-{{position}} d-flex mb-3">
+  <div class="share-btns-{{position}} mb-3">
     {% set share_url = url_raw | absoluteUrl("https://zengm.com/") | urlencode %}
     {% set twitter_text %}{{ title }} by @ZenGMGames{% endset %}
     <a class="share-btn share-btn-twitter"

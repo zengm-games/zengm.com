@@ -20,16 +20,16 @@ It's such a clear and obvious improvement that it went from some random guy's cr
 
 By default, it is only enabled in the All-Star Game. But in the God Mode options, you can enable it for other games too. You can also customize the parameters to decide when the Elam Ending begins and how many points are added to set the target score:
 
-<a href="/files/elam-ending-options.png"><img src="/files/elam-ending-options.png" class="img-fluid" /></a>
+<figure><a href="/files/elam-ending-options.png"><img src="/files/elam-ending-options.png" class="img-fluid" /></a></figure>
 
 There are several changes in the game simulation engine to support the Elam Ending, because it does significantly impact late game strategy. For example, in a normal Basketball GM game, teams will foul when they're down late. But with the Elam Ending enabled, that does not happen.
 
 The live game sim experience has also been enhanced for Elam Ending games. In the fast forward menu, instead of being able to skip to the last 2 minutes of the game, you can skip to the beginning of the Elam Ending:
 
-<img src="/files/elam-ending-fast-forward.png" class="img-fluid" />
+<figure><img src="/files/elam-ending-fast-forward.png" class="img-fluid" /></figure>
 
 And when the Elam Ending begins, the game clock is replaced with a target score:
 
-<img src="/files/elam-ending-target.png" class="img-fluid" />
+<figure><img src="/files/elam-ending-target.png" class="img-fluid" /></figure>
 
 Adding the Elam Ending to Basketball GM is my one tiny contribution towards the larger goal of getting it everywhere. High school, college, pro - they'll all be better when they switch!

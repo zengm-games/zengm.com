@@ -14,13 +14,13 @@ You can view jersey numbers in a few different places: on player profile pages, 
 
 <!--more-->
 
-<img src="/files/jersey-numbers-1.png" class="img-fluid" />
+<figure class="overflow-auto"><img src="/files/jersey-numbers-1.png"></figure>
 
 You can edit jersey numbers by enabling God Mode, going to a player's profile page, and clicking Edit Player. Eventually I will add support for editing jersey numbers (and other things that don't actually impact game results) outside of God Mode.
 
 Additionally, teams can retire jersey numbers. You can do this by going to Team > History. You can retire the jersey number of any of your past players, or add a custom entry for a player on another team (like how all MLB team retired Jackie Robinson's jersey) or really any reason you want (maybe retire number 13 because it's bad luck?).
 
-<a href="/files/jersey-numbers-2.png"><img src="/files/jersey-numbers-2.png" class="img-fluid"></a>
+<figure class="overflow-auto"><img src="/files/jersey-numbers-2.png"></figure>
 
 A little more detail about how jersey numbers work...
 

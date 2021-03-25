@@ -18,23 +18,19 @@ The new types of draft lotteries are:
 
 **Coin flip:** A random coin flip to determine the top 2 picks, like the NBA from 1966-1984.
 
-<p><img src="/files/drafttype-coinFlip.png" class="img-fluid"></p>
-<br><br>
+<figure><img src="/files/drafttype-coinFlip.png" class="img-fluid"></figure>
 
 **Random, lottery only:** Non-playoff teams draft in random order, like the NBA from 1985-1986. You can see why Jerry Krause wanted to tank in 1986 when Jordan was injured for most of the season and the Bulls almost missed the playoffs!
 
-<p><img src="/files/drafttype-randomLottery.png" class="img-fluid"></p>
-<br><br>
+<figure><a href="/files/drafttype-randomLottery.png"><img src="/files/drafttype-randomLottery.png" class="img-fluid"></a></figure>
 
 **Random, first 3:** Random lottery for the top 3 picks, like the NBA from 1987-1989.
 
-<p><img src="/files/drafttype-randomLotteryFirst3.png" class="img-fluid"></p>
-<br><br>
+<figure><a href="/files/drafttype-randomLotteryFirst3.png"><img src="/files/drafttype-randomLotteryFirst3.png" class="img-fluid"></a></figure>
 
 **NBA 1990:** Weighted lottery for the top 3 picks, like the NBA from 1990-1993.
 
-<p><img src="/files/drafttype-nba1990.png" class="img-fluid"></p>
-<br><br>
+<figure><a href="/files/drafttype-nba1990.png"><img src="/files/drafttype-nba1990.png" class="img-fluid"></a></figure>
 
 These 4 new options are in addition to the previous 4 options:
 

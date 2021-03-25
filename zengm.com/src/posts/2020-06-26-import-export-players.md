@@ -12,13 +12,13 @@ New feature! You can export a subset of players from a league, and import them i
 
 Both importing and exporting are quite flexible. For export, you can pick any player in your league's history - current players, players from past seasons, or draft prospects.
 
-<p><a href="/files/export-players.png"><img src="/files/export-players.png" class="img-fluid"></a></p>
+<figure><a href="/files/export-players.png"><img src="/files/export-players.png" class="img-fluid"></a></figure>
 
 Then when importing, you have even more options:
 
 <!--more-->
 
-<p><a href="/files/import-players.png"><img src="/files/import-players.png" class="img-fluid"></a></p>
+<figure><a href="/files/import-players.png"><img src="/files/import-players.png" class="img-fluid"></a></figure>
 
 - You can select all players from an exported file, or only some players.
 - You can assign them to any current team, any future draft class, or make them free agents.

@@ -13,7 +13,7 @@ Well now Basketball GM has family relationships! Players can be brothers, father
 
 <!--more-->
 
-<img src="/files/relatives.png" width="287" height="174" alt="Player info box, including relatives">
+<figure><img class="img-fluid" src="/files/relatives.png" width="287" height="174" alt="Player info box, including relatives"></figure>
 
 Currently I have it set that each newly generated player has a 2% chance of being the son of a former player and a 2% chance of being the brother of another player. This seems to work pretty well. It's probably higher than reality, but who care about reality? This is a video game. And you can always change both of these rates in God Mode. Increase them to 100% and things get pretty crazy.
 

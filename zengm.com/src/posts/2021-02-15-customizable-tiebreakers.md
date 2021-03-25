@@ -57,7 +57,7 @@ This also required a minor change to the "clinched playoffs" system. Previously,
 
 Now let me show an example of what it looks like, 4 games into a season where there are a ton of ties:
 
-<a href="/files/tiebreakers.png"><img src="/files/tiebreakers.png" class="img-fluid" /></a>
+<figure><a href="/files/tiebreakers.png"><img src="/files/tiebreakers.png" class="img-fluid" /></a></figure>
 
 Chicago and Detroit tied for #1, and Chicago got the tiebreaker because the won the division tiebreaker. Why did they win the division tiebreaker? If you switch the standings view from conference to division, it says it's because of their conference records.
 

@@ -20,11 +20,11 @@ That's why today I added an option for this when creating a new Real Players lea
 
 You can set real draft prospect ratings to be generated based on rookie season stats (how it always worked previously):
 
-<img src="/files/real-draft-prospect-ratings-1.png" class="img-fluid" />
+<figure><img src="/files/real-draft-prospect-ratings-1.png" class="img-fluid" /></figure>
 
 Or you can set them to be generated based only on real draft position:
 
-<img src="/files/real-draft-prospect-ratings-2.png" class="img-fluid" />
+<figure><img src="/files/real-draft-prospect-ratings-2.png" class="img-fluid" /></figure>
 
 The goal of this setting is to make draft results look a lot more like they did in reality. So that #1 pick who turned into a bust will still be the top prospect in the draft. That undrafted player who turned into a star will have very low ratings and probably amount to nothing.
 

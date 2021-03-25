@@ -18,21 +18,21 @@ I've gotten many requests to do something about that, and I'm happy to announce 
 
 First, news feed and transaction log entries for trades will now update after draft picks are made to include which players were picked:
 
-<img src="/files/trade-details-1.png" class="img-fluid" />
+<figure><img src="/files/trade-details-1.png" class="img-fluid"></figure>
 
 This also shows up in the Transactions section on player profile pages, even for players selected with traded picks. For example, this screenshot is from Silas Thurmond's profile page, showing that the pick used to draft him was acquired in a prior trade:
 
-<img src="/files/trade-details-2.png" class="img-fluid" />
+<figure><img src="/files/trade-details-2.png" class="img-fluid"></figure>
 
 See that little (Details) link at the end of the log entries in both of those screenshots? That links to a new Trade Summary page:
 
-<a href="/files/trade-details-3.png"><img src="/files/trade-details-3.png" class="img-fluid" /></a>
+<figure class="overflow-auto"><img src="/files/trade-details-3.png"></figure>
 
 The Trade Summary page includes all of the traded assets, the results of traded draft picks, and a quick summary of which traded players had more productive careers after the trade (using WS in BBGM and AV in FBGM).
 
 There is also a link to the Trade Summary page from the Roster page, in the Acquired column for players acquired in trades:
 
-<img src="/files/trade-details-4.png" class="img-fluid" />
+<figure><img src="/files/trade-details-4.png" class="img-fluid"></figure>
 
 Previously those links went to the roster of the other team at the time of the trade, but now they go to the Trade Summary page.
 

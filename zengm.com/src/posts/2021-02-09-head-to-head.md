@@ -16,7 +16,7 @@ But now that has changed! Head-to-head results between teams are now tracked (al
 
 First is the leaguewide overview, which you can see at League > History > Head-to-Head. It looks like this:
 
-<a href="/files/head-to-head-1.png"><img src="/files/head-to-head-1.png" class="img-fluid" /></a>
+<figure class="overflow-auto"><img src="/files/head-to-head-1.png"></figure>
 
 This is showing the winning percentage for every matchup between two franchises. The filters at the top let you filter to an individual season or just the playoffs or regular season, but the default is to show all games from all seasons.
 
@@ -24,7 +24,7 @@ The gradient highlighting is new to BBGM too. Previously there was a crappy vers
 
 There is also a Head-to-Head page for each individual team, showing a bit more detail than on the giant leaguewide table. To get theire, either click the team name in the row of the giant table, or go to Team > History > Head-to-Head. It looks like this:
 
-<a href="/files/head-to-head-2.png"><img src="/files/head-to-head-2.png" class="img-fluid" /></a>
+<figure class="overflow-auto"><img src="/files/head-to-head-2.png"></figure>
 
 This was inspired by [the similar pages for NBA teams available on basketball-reference.com](https://www.basketball-reference.com/teams/BOS/head2head.html), but in BBGM you get a bit more detail, especially about playoff results. And like the league Head-to-Head table, you can filter by season and by regular season or playoffs.
 

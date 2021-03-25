@@ -17,6 +17,6 @@ Meanwhile, I've just been plugging along, working on BBGM in my spare time as I'
 
 So if you enjoy playing BBGM or FBGM today, and if you've been happy with the recent improvements to the games...
 
-<img src="/files/frieza.jpg">
+<figure><img src="/files/frieza.jpg" class="img-fluid"></figure>
 
 Wait and see what I can do working on it full time :)

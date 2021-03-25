@@ -13,7 +13,7 @@ Now, you can easily answer this question on the roster page by looking in the ne
 
 <!--more-->
 
-<a href="/files/acquired.png"><img src="/files/acquired.png"></a>
+<figure><a href="/files/acquired.png"><img src="/files/acquired.png"></a></figure>
 
 In new leagues, it will be blank for the first season. I could fill it in with history from before the league started, but I think it might be even more useful blank because then you can clearly see which players you personally acquired, as opposed to players who were acquired before you started playing.
 

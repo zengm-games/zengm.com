@@ -17,15 +17,15 @@ To address this shortcoming, today I released a new feature called Spectator Mod
 
 To enable Spectator Mode, go to Tools > God Mode and scroll down to the new "Game Modes" section:
 
-<img src="/files/spectator-mode.png" class="img-fluid" />
+<figure><img src="/files/spectator-mode.png" class="img-fluid" /></figure>
 
 When Spectator Mode is enabled, you'll see a very clear visual indicator - the Play button changes from green to red:
 
-<img src="/files/spectator-mode-play.png" class="img-fluid" />
+<figure><img src="/files/spectator-mode-play.png" class="img-fluid" /></figure>
 
 One other minor change... during the draft, I added a "Sim to end of draft" button, so that in Spectator Mode you can just quickly sim through the draft without stopping to watch each of your team's picks:
 
-<img src="/files/to-end-of-draft.png" class="img-fluid" />
+<figure><img src="/files/to-end-of-draft.png" class="img-fluid" /></figure>
 
 I also made that button available outside of Spectator Mode, if you don't care about later rounds of the draft and you just want to let the AI finish it for you.
 

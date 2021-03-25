@@ -16,7 +16,7 @@ Today I added a bunch of fun new features to Basketball GM and Football GM. They
 
 Different types of leagues will have different options available. This is what you see when creating a new "real players" league in Basketball GM, which has almost all of the new options available:
 
-<p><img src="/files/league-creation-options.png" class="img-fluid"></p>
+<figure><img src="/files/league-creation-options.png" class="img-fluid"></figure>
 
 Some of those options (challenge modes and real player development determinism) are also available in God Mode, where you can change them in any existing league.
 

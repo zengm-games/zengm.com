@@ -16,9 +16,16 @@
 
 .pagination .page-item.active .page-link {
   background-color: var(--logo-purple) !important;
+  &:hover {
+    color: #fff;
+  }
+}
+.pagination .page-item .page-link:hover {
+  color: var(--purple);
 }
 
 .share-btns-bottom {
+  display: flex;
   gap: 0.5rem;
 
   a {
@@ -31,6 +38,7 @@
 }
 @media (min-width: 1060px) {
   .share-btns-side {
+    display: flex;
     flex-direction: column;
     width: 50px;
     position: fixed;
@@ -82,4 +90,9 @@
 }
 .share-btn-twitter:hover, .share-btn-twitter:active, html.dark .share-btn-twitter:hover, html.dark .share-btn-twitter:active {
   background-color: rgb(26, 145, 218);
+}
+
+// For legacy blog posts
+html.dark img.dark-invert {
+  filter: invert(100%);
 }

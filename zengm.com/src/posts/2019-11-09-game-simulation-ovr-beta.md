@@ -17,7 +17,7 @@ So here are all the changes in the beta:
 
 <!--more-->
 
-### Game simulation changes
+## Game simulation changes
 
 The main goal here was to improve the play-by-plays that you can see if you go to Play > One day (live). They were really bad in the past. For example, every possession was exactly the same length. And there was no end of game strategy, even for simple things like taking a 3 at the end of the game when you're down 3.
 
@@ -25,7 +25,7 @@ Why was it so bad? Because when I originally wrote the game simulation engine, n
 
 That's not really a great excuse, because it was years ago that I made it possible to view a live play-by-play of a game. But I never went back and improved the realism of game simulation... until now! These are all the game simulation changes I made:
 
-#### Possession length
+### Possession length
 
 - Added some variability, rather than having all possessions be the same length
 - Two for one at end of quarters
@@ -35,34 +35,34 @@ That's not really a great excuse, because it was years ago that I made it possib
 - For possessions at the end of a quarter, the less time there is on the clock for that possession, the lower the fg% and the higher the chance of not getting a shot off
 - The winning team will not take a shot at the buzzer at the end of the game, they'll just dribble out the clock
 
-#### Fouls
+### Fouls
 
 - Intentional foul when down late
 - Non-shooting fouls
 - Bonus (FTs for non-shooting fouls, when appropriate)
 - Fixed bug where FT shooter could be subbed out before shooting FTs if the guy who fouled him fouled out
 
-#### Shot selection
+### Shot selection
 
 - In some situations (4th quarter late game situations depending on score, and last second heaves in other quarters) players shoot more 3s
 
-#### Rotations
+### Rotations
 
 - Bench plays more during blowouts
 - A little more playing time for better players
 
-#### Stats
+### Stats
 
 - Increased pace
 - More imbalanced scoring and rebounding (the best scorers/rebounders get more, the worst get less)
 
 Please [give it a try](https://beta.basketball-gm.com/) and let me know what you think!
 
-### UI changes
+## UI changes
 
 This is really minor, but I added TS% to the advanced team stats table. I'm not sure why it wasn't there in the first place... it is a very useful stat!
 
-### ovr changes
+## ovr changes
 
 For a very long time, the ovr formula has been a linear combination of individual ratings, with the weights roughly determined by linear regression to stats like EWA and WS.
 

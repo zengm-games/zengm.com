@@ -19,10 +19,10 @@ Another change is related to long-term effects of serious injuries. It's actuall
 
 Now you can very clearly see the effects of serious injuries when viewing a player. When a serious injury results in a decline in ratings, he gets a new entry in his Player Ratings table. Here's an example of a player who lost some athleticism due to a torn meniscus:
 
-<img alt="Player ratings change after severe injury" src="/files/injuries-1.png" style="max-width: 100%">
+<figure class="overflow-hidden"><img alt="Player ratings change after severe injury" src="/files/injuries-1.png"></figure>
 
 Additionally, every injury is logged in a new Injuries table on player pages. Here's the same player as above after this one injury:
 
-<img alt="Table showing all past injuries" src="/files/injuries-2.png" style="max-width: 100%">
+<figure><img alt="Table showing all past injuries" src="/files/injuries-2.png" class="img-fluid"></figure>
 
 That's it for now! There are plenty more improvements to injuries that I'd like to make in the future, such as having past injuries leading to increased future injury risk, and letting player play through minor injuries. Some day!

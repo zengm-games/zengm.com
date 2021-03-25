@@ -26,23 +26,27 @@ I'm going to deal with a very important question today. Which NBA players sacrif
 }
 
 .axisRed line{
-  stroke: darkred;
+  stroke: var(--red);
 }
 .axisRed path{
-  stroke: darkred;
+  stroke: var(--red);
 }
 .axisRed text{
-  fill: darkred;
+  fill: var(--red);
 }
 
 .axisBlue line{
-  stroke: steelblue;
+  stroke: var(--cyan);
 }
 .axisBlue path{
-  stroke: steelblue;
+  stroke: var(--cyan);
 }
 .axisBlue text{
-  fill: steelblue;
+  fill: var(--cyan);
+}
+
+svg text {
+  fill: var(--text)
 }
 
 .tooltip {
@@ -63,7 +67,7 @@ But distance and point value alone are not good enough to see if a foot is on th
 
 Fortunately, there is another field in the database that tells you the "zone" that a shot was taken in. Basically, we can identify the zones in this shot chart:
 
-<img src="/files/foot-on-the-line/nba-shot-chart.png" alt="Example NBA shot chart" width="300">
+<figure><img src="/files/foot-on-the-line/nba-shot-chart.png" alt="Example NBA shot chart" width="300" height="282" class="img-fluid"></figure>
 
 That gets us a pretty good estimate of how far away a two-pointer needs to be to have been taken with a foot on the line, although it's still not perfect because the three point distance varies in the baseline zones.
 
@@ -118,7 +122,7 @@ You can see the upward trend for three point attempts in recent years (except th
 
 Next, let's look at it team by team:
 
-<form class="form-inline pull-right">
+<form class="form-inline float-right">
   <select class="form-control" id="figure2season">
     <option>All Seasons</option>
     <option>2018-19</option>
@@ -155,8 +159,8 @@ The Harden-era Rockets are consistently in the good quadrant, taking tons of thr
 
 And finally, let's look at individual player data:
 
-<form class="form-inline pull-right">
-  <select class="form-control" id="figure3season">
+<form class="form-inline float-right">
+  <select class="form-control mr-2" id="figure3season">
     <option>All Seasons</option>
     <option>2018-19</option>
     <option>2017-18</option>
@@ -344,7 +348,7 @@ const figure1 = rows => {
 
   svg
     .append("text")
-    .style("fill", "darkred")
+    .style("fill", "var(--red)")
     .attr("transform", "rotate(-90)")
     .attr("y", -margin.left)
     .attr("x", -(height / 2))
@@ -360,7 +364,7 @@ const figure1 = rows => {
 
   svg
     .append("text")
-    .style("fill", "steelblue")
+    .style("fill", "var(--cyan)")
     .attr("transform", "rotate(90)")
     .attr("y", -(width + margin.right))
     .attr("x", height / 2)
@@ -387,8 +391,8 @@ const figure1 = rows => {
       .attr("r", 5);
   };
 
-  drawLine(line0, "darkred", yScale0, "tpa");
-  drawLine(line1, "steelblue", yScale1, "fol");
+  drawLine(line0, "var(--red)", yScale0, "tpa");
+  drawLine(line1, "var(--cyan)", yScale1, "fol");
 };
 
 // Figure 2: scatter plot of FOL vs 3PA, where each point is a team, with dropdown for season/all
@@ -624,7 +628,7 @@ const figure3 = (rows, season, team) => {
     .attr("cy", d => yScale(d.fol))
     .style("opacity", 0.5)
     .style("fill-opacity", 0.5)
-    .style("fill", "darkred")
+    .style("fill", "var(--red)")
     .style("stroke", "black")
     .on("mouseover", onMouseover)
     .on("mouseout", onMouseout)

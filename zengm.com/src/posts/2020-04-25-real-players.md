@@ -16,7 +16,7 @@ Today, I'm releasing a new version of Basketball GM that, for the first time, in
 
 <!--more-->
 
-### Teams
+## Teams
 
 When creating a "real players" league, you get a different set of default teams, to match real professional basketball teams. This includes 20 teams carried over from the Basketball GM defaults, and 10 new teams:
 
@@ -33,7 +33,7 @@ When creating a "real players" league, you get a different set of default teams,
 
 Thank you to the [people who suggested these names](https://www.reddit.com/r/BasketballGM/comments/g66uz4/team_name_suggestions_for_other_cities/). If you think you have a better idea for one, please [let me know sooner rather than later](/about/), because once I get a logo made for a team I will be much more reluctant to change it!
 
-### Players
+## Players
 
 Making a simulation game involving real players is hard. The simulation engine is never going to exactly represent reality, and neither are the ratings you assign to players. Getting close enough to allow people to suspend their disbelief is difficult. It's a huge challenge even for sports games made by huge corporations with tons of people working on then. And here I am, just one guy!
 
@@ -45,7 +45,7 @@ I started with alexnoob's rosters. They are the most popular, most comprehensive
 
 3. I added a special case to the tragic deaths code so that real players are never killed. I love dark humor as much as the next guy, which is why tragic deaths are in the game in the first place. But I am not comfortable doing that to real players without their consent. If any real NBA player is reading this (ha!) and you want to experience tragic deaths in Basketball GM, [let me know](/contact/) and I'll make an exception for you!
 
-### Other changes
+## Other changes
 
 While working on adding real players ot the game, I made a couple other improvements that I should have made a long time ago.
 
@@ -55,7 +55,7 @@ I also changed the player value formula to value stats and ratings equally. Prev
 
 Both of these changes are things that I have been aware of for a long time but never got around to addressing. With real players in the game, I'm almost forced to address them. It's harder to ignore a problem if it affects a real player in an obviously unrealistic way.
 
-### The future
+## The future
 
 I'm not basing this on alexnoob's rostes to say "alexnoob's rosters are perfect" or "alexnoob is the greatest roster maker in the history of roster makers". It's really just a way to do an initial release with some pretty good rosters. That allows me to set up the infrastructure for creating leagues with real players and get some feedback from users.
 

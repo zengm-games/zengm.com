@@ -9,11 +9,11 @@ tags:
 
 The "dashboard" is the screen you see [here](https://play.basketball-gm.com/) listing all your leagues. I just gave it a facelift. The old one looked like this:
 
-<img alt="Screenshot of old dashboard" src="/files/dashboard-old.png" style="max-width: 100%">
+<figure><a href="/files/dashboard-old.png"><img alt="Screenshot of old dashboard" src="/files/dashboard-old.png" class="img-fluid"></a></figure>
 
 The new one looks like this:
 
-<img alt="Screenshot of new dashboard" src="/files/dashboard-new.png" style="max-width: 100%">
+<figure><a href="/files/dashboard-new.png"><img alt="Screenshot of new dashboard" src="/files/dashboard-new.png" class="img-fluid"></a></figure>
 
 I think the differences are pretty evident from just looking at the screenshots or trying out the new dashboard. But I just want to mention a few of the improvements...
 

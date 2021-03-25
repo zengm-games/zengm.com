@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Achievements
+title: Achievements in Football GM
 date: 2019-07-28
 tags:
   - post

@@ -18,7 +18,7 @@ One of the most common requests I get is to make an app. My response is always t
 
 Or, if you're fancy, you can swipe to open or close the menu:
 
-![Swiping left/right to open/close the mobile BBGM menu](/files/bs4-swipe.gif)
+<figure><img class="img-fluid" src="/files/bs4-swipe.gif" alt="Swiping left/right to open/close the mobile BBGM menu"></figure>
 
 I am aware that swiping left/right is not the most convenient thing to do in mobile Safari because it uses that motion for navigating through your browser history. However, you can still open the BBGM menu on Safari with a swipe, just don't start it on the edge of the screen. Or just use the menu button.
 
@@ -28,7 +28,7 @@ Another long-requested feature is some kind of "dark mode" or "night mode". [A u
 
 Now, you have the option to select a dark theme or a light theme:
 
-![Switching between the dark and light themes](/files/bs4-theme.gif)
+<figure><img class="img-fluid" src="/files/bs4-theme.gif" alt="Switching between the dark and light themes"></figure>
 
 Please let me know if you notice any problems with the UI or if you think of something that could be improved more. I am not a designer!
 

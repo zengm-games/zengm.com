@@ -22,7 +22,7 @@ Regardless of how you activate an inactive team, it will retain all its prior hi
 
 To view the new Team Records page, go to League > History and then click "Team Records" at the top. This isn't a brand new page, but what is new is support for viewing records broken down by different eras of franchise history, inspired by [Basketball Reference](https://www.basketball-reference.com/teams/):
 
-<p><img src="/files/team-records.png" class="img-fluid"></p>
+<figure class="overflow-auto"><img src="/files/team-records.png"></figure>
 
 You can also hide all the historical teams by clicking the "Hide historical teams" button at the top, which will then make it look mostly like the old Team Records page.
 

@@ -1,13 +1,20 @@
+/logos/
+- build
+
+latest version faq - shift first
+
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 build performance
 - 25 minutes
 
+img-responsive -> img-fluid
+- width: 100%
+- <p><img
+
 blog
 - links to /files, elsewhere
   - see "yarn run build" output
-- check every old post
-  - jquery in 2013 jump shot post
 - rss feed
   - test
 - 301 redirect from BBGM/FBGM for blog and feed

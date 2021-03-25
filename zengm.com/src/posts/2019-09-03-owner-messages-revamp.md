@@ -19,7 +19,7 @@ Overall, it was not a great system. Finally, I have replaced it. Instead of the 
 
 <!--more-->
 
-![Owner mood chart](/files/owner-mood-chart.png)
+<figure><img src="/files/owner-mood-chart.png" alt="Owner mood chart" class="img-fluid"></figure>
 
 I know, there's a lot going on here! I am worried it's too complicated! Please [give me your feedback](/contact/) about that, nothing is set in stone. That little info bubble in the top left will hopefully help people understand it. But I'll explain here too.
 
