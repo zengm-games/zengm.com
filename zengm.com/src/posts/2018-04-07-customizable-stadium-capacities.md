@@ -12,4 +12,4 @@ Minor new feature in version 2018.04.08.66: you can now set the stadium capacity
 
 This will probably do weird things to team finances if you change it. You probably shouldn't edit it unless you're making a custom league file.
 
-For people making custom league files, see [the teams customization documentation](/basketball/manual/customization/teams/) for more info.
+For people making custom league files, see [the teams customization documentation](https://basketball-gm.com/manual/customization/teams/) for more info.

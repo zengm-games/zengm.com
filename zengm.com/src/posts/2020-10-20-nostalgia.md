@@ -15,7 +15,7 @@ One thing I noticed was how some things have remained the same over the years. L
 
 The codebase changed so much over the years.
 
-In the [very early days](https://basketball-gm.com/blog/2013/12/development-history/) it was Python, SQLite, and GTK. Then it was a Python web app. Then a JS app with data stored in IndexedDB and a UI made from jQuery and Handlebars. Then jQuery and Knockout.js. Then React. Then the JavaScript was annotated with Flow, and that was eventually replaced with TypeScript.
+In the [very early days](/blog/2013/12/development-history/) it was Python, SQLite, and GTK. Then it was a Python web app. Then a JS app with data stored in IndexedDB and a UI made from jQuery and Handlebars. Then jQuery and Knockout.js. Then React. Then the JavaScript was annotated with Flow, and that was eventually replaced with TypeScript.
 
 The tooling changed so much with JS. From no package manager and vendored dependencies to NPM and then Yarn. From Require.js to Browserify to Rollup.
 

@@ -92,7 +92,7 @@ module.exports = [
 		text:
 			"Draft order now matches the NFL/NHL in Football GM and ZenGM Hockey. For example, the last pick in the first round is now the championship winning team in FBGM and ZGMH.",
 		links: [
-			"https://football-gm.com/blog/2021/03/draft-order/",
+			"https://zengm.com/blog/2021/03/draft-order/",
 			"https://old.reddit.com/r/Football_GM/comments/m86na9/draft_order_now_matches_the_nflnhl_in_football_gm/",
 			"https://old.reddit.com/r/ZenGMHockey/comments/m86nhf/draft_order_now_matches_the_nflnhl_in_football_gm/",
 		],
@@ -116,7 +116,7 @@ module.exports = [
 		text:
 			'Rescaled the "real player development determinism" implementation - before it felt like anything except a very low value was almost the same as setting it to 100%.',
 		links: [
-			"https://basketball-gm.com/blog/2021/03/rescaled-real-player-development-determinism/",
+			"https://zengm.com/blog/2021/03/rescaled-real-player-development-determinism/",
 			"https://old.reddit.com/r/BasketballGM/comments/m6pujj/rescaled_the_real_player_development_determinism/",
 		],
 		basketball: true,
@@ -314,7 +314,7 @@ module.exports = [
 		text:
 			"Non-random tiebreakers, based on things like head-to-head results, strength of schedule, etc. Also it's customizable in God Mode.",
 		links: [
-			"https://basketball-gm.com/blog/2021/02/customizable-tiebreakers/",
+			"https://zengm.com/blog/2021/02/customizable-tiebreakers/",
 			"https://old.reddit.com/r/BasketballGM/comments/lkigp1/version_202102151049_nonrandom_tiebreakers_based/",
 			"https://old.reddit.com/r/Football_GM/comments/lkij5s/version_202102151052_nonrandom_tiebreakers_based/",
 		],
@@ -345,7 +345,7 @@ module.exports = [
 		text:
 			"Head-to-head team results are now viewable at League > History > Head-to-Head and Team > History > Head-to-Head.",
 		links: [
-			"https://basketball-gm.com/blog/2021/02/head-to-head/",
+			"https://zengm.com/blog/2021/02/head-to-head/",
 			"https://old.reddit.com/r/BasketballGM/comments/lgj82n/headtohead_team_results_new_in_version/",
 			"https://old.reddit.com/r/BasketballGM/comments/lis1x8/how_to_add_headtohead_results_for_leagues_from/",
 		],
@@ -450,7 +450,7 @@ module.exports = [
 		text:
 			'When creating a new Real Players league, there is now a "Real draft prospect ratings" option which allows you to change how draft prospect ratings are defined. The default remains unchanged (ratings are based on rookie season stats), but there is now another option to base ratings purely on draft position. That will result in simulated drafts being much more similar to real drafts.',
 		links: [
-			"https://basketball-gm.com/blog/2021/01/real-draft-prosect-ratings/",
+			"https://zengm.com/blog/2021/01/real-draft-prosect-ratings/",
 			"https://old.reddit.com/r/BasketballGM/comments/ktu8r9/when_creating_a_new_real_players_league_there_is/",
 		],
 		basketball: true,
@@ -679,7 +679,7 @@ module.exports = [
 		text:
 			"Two new trade frivolities: Biggest Trades (trades involving the best players and prospects) and Most Lopsided Trades (trades where one team's assets produced a lot more value than the other).",
 		links: [
-			"https://basketball-gm.com/blog/2020/11/trade-frivolities/",
+			"https://zengm.com/blog/2020/11/trade-frivolities/",
 			"https://old.reddit.com/r/BasketballGM/comments/jxfy8b/two_new_trade_frivolities_biggest_trades_trades/",
 		],
 		basketball: true,
@@ -699,7 +699,7 @@ module.exports = [
 		text:
 			"Transaction logs for trades are now dynamically updated to include the players selected by traded draft picks, and they link to a new Trade Summary page showing more details about completed trades.",
 		links: [
-			"https://basketball-gm.com/blog/2020/11/trade-details/",
+			"https://zengm.com/blog/2020/11/trade-details/",
 			"https://old.reddit.com/r/BasketballGM/comments/juzose/transaction_logs_for_trades_are_now_dynamically/",
 		],
 		basketball: true,
@@ -739,7 +739,7 @@ module.exports = [
 		text:
 			"Redesigned league settings page, including more settings available outside of God Mode.",
 		links: [
-			"https://basketball-gm.com/blog/2020/11/settings-redesign/",
+			"https://zengm.com/blog/2020/11/settings-redesign/",
 			"https://old.reddit.com/r/BasketballGM/comments/jqeogt/redesigned_league_settings_page_including_more/",
 		],
 		basketball: true,
@@ -829,7 +829,7 @@ module.exports = [
 		text:
 			"AI teams are affected by player mood when re-signing players, and you can see a player's mood toward his current team.",
 		links: [
-			"https://basketball-gm.com/blog/2020/10/player-mood-ai-re-signings/",
+			"https://zengm.com/blog/2020/10/player-mood-ai-re-signings/",
 			"https://old.reddit.com/r/BasketballGM/comments/jhn2vu/new_in_version_202010250240_ai_teams_are_affected/",
 		],
 		basketball: true,
@@ -841,7 +841,7 @@ module.exports = [
 		text:
 			"New feature in God Mode to select the winner of a game before it's played.",
 		links: [
-			"https://basketball-gm.com/blog/2020/10/force-win/",
+			"https://zengm.com/blog/2020/10/force-win/",
 			"https://old.reddit.com/r/BasketballGM/comments/jd9vyg/new_feature_in_god_mode_to_select_the_winner_of_a/",
 		],
 		basketball: true,
@@ -852,7 +852,7 @@ module.exports = [
 		text:
 			"Start current or historical real players leagues at different times during the season: preseason, playoffs, draft, or after draft.",
 		links: [
-			"https://basketball-gm.com/blog/2020/10/start-any-time/",
+			"https://zengm.com/blog/2020/10/start-any-time/",
 			"https://old.reddit.com/r/BasketballGM/comments/jcwq87/new_feature_start_real_players_leagues_at/",
 		],
 		basketball: true,
@@ -886,7 +886,7 @@ module.exports = [
 		text:
 			"Added a trade deadline, which is customizable in the God Mode options.",
 		links: [
-			"https://basketball-gm.com/blog/2020/10/trade-deadline/",
+			"https://zengm.com/blog/2020/10/trade-deadline/",
 			"https://old.reddit.com/r/BasketballGM/comments/j5tgfk/added_a_trade_deadline_which_is_customizable_in/",
 		],
 		basketball: true,
@@ -952,7 +952,7 @@ module.exports = [
 		text:
 			"New player mood system! Most notable improvements are that it's viewable at any time (not just during free agency) and it's much more transparent about what players think about your team. If your star is not happy and doesn't want to re-sign, you'll know ahead of time.",
 		links: [
-			"https://basketball-gm.com/blog/2020/09/player-mood/",
+			"https://zengm.com/blog/2020/09/player-mood/",
 			"https://old.reddit.com/r/BasketballGM/comments/iuluuj/the_new_player_mood_system_is_now_live_in_version/",
 		],
 		basketball: true,
@@ -1028,7 +1028,7 @@ module.exports = [
 		text:
 			'Single game highs for players are now tracked for all stats in BBGM - points, rebounds, assists, etc. View them on player profile pages or in the main Player Stats table by switching the stat type to "Game Highs".',
 		links: [
-			"https://basketball-gm.com/blog/2020/08/game-highs/",
+			"https://zengm.com/blog/2020/08/game-highs/",
 			"https://old.reddit.com/r/BasketballGM/comments/iiluf2/single_game_highs_for_players_are_now_tracked_for/",
 		],
 		basketball: true,
@@ -1038,7 +1038,7 @@ module.exports = [
 		date: "2020-08-26",
 		text: "Added the Elam Ending as an option for game simulation.",
 		links: [
-			"https://basketball-gm.com/blog/2020/08/elam-ending/",
+			"https://zengm.com/blog/2020/08/elam-ending/",
 			"https://old.reddit.com/r/BasketballGM/comments/ih19y1/new_in_version_202008260936_the_elam_ending_comes/",
 		],
 		basketball: true,
@@ -1077,7 +1077,7 @@ module.exports = [
 		text:
 			"New God Mode option: Spectator Mode, where the AI controls all teams and you just watch. It's like auto play, but you can proceed at your own pace.",
 		links: [
-			"https://basketball-gm.com/blog/2020/08/spectator-mode/",
+			"https://zengm.com/blog/2020/08/spectator-mode/",
 			"https://old.reddit.com/r/BasketballGM/comments/ieln8n/new_god_mode_option_spectator_mode_where_the_ai/",
 		],
 		basketball: true,
@@ -1088,7 +1088,7 @@ module.exports = [
 		text:
 			'Added a new "GM History" page in the Team menu, where you can see your performance across all the different franchises you managed in the past.',
 		links: [
-			"https://basketball-gm.com/blog/2020/08/gm-history/",
+			"https://zengm.com/blog/2020/08/gm-history/",
 			"https://old.reddit.com/r/BasketballGM/comments/idfn77/added_a_new_gm_history_page_in_the_team_menu/",
 		],
 		basketball: true,
@@ -1188,7 +1188,7 @@ module.exports = [
 		text:
 			"The contract generation algorithm has been rewritten. It should be both more realistic and harder to take advantage of. Most noticeably, you should no longer see players ask for too much money and go unsigned.",
 		links: [
-			"https://basketball-gm.com/blog/2020/08/smarter-contract-generation/",
+			"https://zengm.com/blog/2020/08/smarter-contract-generation/",
 			"https://old.reddit.com/r/BasketballGM/comments/i5qoj3/new_beta_feature_smarter_contracts_no_more_good/",
 			"https://old.reddit.com/r/BasketballGM/comments/i77k9w/smarter_contract_generation_is_live_in_version/",
 		],
@@ -1236,7 +1236,7 @@ module.exports = [
 		text:
 			"Players now have jersey numbers, and teams can retire jersey numbers of former players.",
 		links: [
-			"https://basketball-gm.com/blog/2020/08/jersey-numbers/",
+			"https://zengm.com/blog/2020/08/jersey-numbers/",
 			"https://old.reddit.com/r/BasketballGM/comments/i1trop/new_feature_official_release_players_now_have/",
 			"https://old.reddit.com/r/Football_GM/comments/i1trys/players_now_have_jersey_numbers_and_teams_can/",
 		],
@@ -1273,7 +1273,7 @@ module.exports = [
 		text:
 			"Better support for customization of player names, countries, and colleges. And improvements to the built-in names database.",
 		links: [
-			"https://basketball-gm.com/blog/2020/07/better-customization-player-names-countries-colleges/",
+			"https://zengm.com/blog/2020/07/better-customization-player-names-countries-colleges/",
 			"https://old.reddit.com/r/BasketballGM/comments/hyz51u/new_in_version_202007271168_better_support_for/",
 		],
 		basketball: true,
@@ -1294,7 +1294,7 @@ module.exports = [
 		text:
 			"Improvements to game simulation realism: more realistic shooting percentages based on player positions and shot locations; teams change how they play if they are winning or losing; and the distribution of playing time is now more realistic.",
 		links: [
-			"https://basketball-gm.com/blog/2020/07/game-sim-realism/",
+			"https://zengm.com/blog/2020/07/game-sim-realism/",
 			"https://old.reddit.com/r/BasketballGM/comments/hwr0eu/three_improvements_to_game_simulation_realism/",
 		],
 		basketball: true,
@@ -1368,7 +1368,7 @@ module.exports = [
 		date: "2020-07-09",
 		text: "A bunch of small FBGM improvements.",
 		links: [
-			"https://football-gm.com/blog/2020/07/recent-development-av-kickers-punters-future/",
+			"https://zengm.com/blog/2020/07/recent-development-av-kickers-punters-future/",
 			"https://old.reddit.com/r/Football_GM/comments/hogban/recent_development_some_small_improvements/",
 		],
 		football: true,
@@ -1432,7 +1432,7 @@ module.exports = [
 		date: "2020-06-29",
 		text: "Logos for all the new teams!",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/logos-for-the-new-teams/",
+			"https://zengm.com/blog/2020/06/logos-for-the-new-teams/",
 			"https://old.reddit.com/r/BasketballGM/comments/hid1tg/logos_for_all_the_new_teams/",
 		],
 		basketball: true,
@@ -1543,7 +1543,7 @@ module.exports = [
 		text:
 			"A bunch of new options for league creation: challenge modes (no draft picks, no free agents, no trades, no visible ratings), player development realism, and more.",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/league-creation-options/",
+			"https://zengm.com/blog/2020/06/league-creation-options/",
 			"https://old.reddit.com/r/BasketballGM/comments/h8dq90/a_bunch_of_new_options_for_league_creation/",
 			"https://old.reddit.com/r/Football_GM/comments/h8dr1y/a_bunch_of_new_options_for_league_creation/",
 		],
@@ -1574,7 +1574,7 @@ module.exports = [
 		text:
 			"Added the News Feed page, available in the League menu. This incorporates a score for each event that happens, allowing you to filter events by importance. This replaces the old Transactions and Event Log pages.",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/news-feed/",
+			"https://zengm.com/blog/2020/06/news-feed/",
 			"https://old.reddit.com/r/BasketballGM/comments/gyc615/news_feed_changes_are_live_in_version_202006070785/",
 		],
 		basketball: true,
@@ -1586,7 +1586,7 @@ module.exports = [
 		text:
 			'If you use God Mode to retire a player, it checks for Hall of Fame eligibility and notifies you if he makes it. And when you edit a player\'s contract, it also updates the "Salaries" table on player pages and the "Career Earnings" frivolity.',
 		links: [
-			"https://basketball-gm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
+			"https://zengm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
 			"https://old.reddit.com/r/BasketballGM/comments/gvtw5o/new_features_in_version_202006030801_real_rosters/",
 		],
 		basketball: true,
@@ -1597,7 +1597,7 @@ module.exports = [
 		text:
 			"Realistic rosters back to 1947, including contraction of teams occuring automaticaly at appropriate times.",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
+			"https://zengm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
 			"https://old.reddit.com/r/BasketballGM/comments/gvtw5o/new_features_in_version_202006030801_real_rosters/",
 		],
 		basketball: true,
@@ -1608,7 +1608,7 @@ module.exports = [
 		text:
 			"Revamped Team Records page, including team relocations, renames, and contraction.",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
+			"https://zengm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
 			"https://old.reddit.com/r/BasketballGM/comments/gvtw5o/new_features_in_version_202006030801_real_rosters/",
 		],
 		basketball: true,
@@ -1619,7 +1619,7 @@ module.exports = [
 		text:
 			"Support for disabling teams in Tools > Manage Teams. History of disabled teams is preserved and they can come back at a future date, either by re-enabling on Manage Teams or going to Tools > Expansion Draft, where you will see disabled teams as possible expansion teams.",
 		links: [
-			"https://basketball-gm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
+			"https://zengm.com/blog/2020/06/real-rosters-back-to-1947-contraction/",
 			"https://old.reddit.com/r/BasketballGM/comments/gvtw5o/new_features_in_version_202006030801_real_rosters/",
 		],
 		basketball: true,
@@ -1630,7 +1630,7 @@ module.exports = [
 		date: "2020-05-26",
 		text: "Added a ton of new frivolities and redesigned the frivolities page.",
 		links: [
-			"https://basketball-gm.com/blog/2020/05/new-frivolities/",
+			"https://zengm.com/blog/2020/05/new-frivolities/",
 			"https://old.reddit.com/r/BasketballGM/comments/gr57hl/i_just_added_12_new_frivolities_available_within/",
 		],
 		basketball: true,
@@ -1682,7 +1682,7 @@ module.exports = [
 		text:
 			'You can now create a "legends" league filled with the best players in each franchise\'s history.',
 		links: [
-			"https://basketball-gm.com/blog/2020/05/legends-leagues/",
+			"https://zengm.com/blog/2020/05/legends-leagues/",
 			"https://old.reddit.com/r/BasketballGM/comments/gmznsx/new_in_version_202005191391_you_can_now_create_a/",
 		],
 		basketball: true,
@@ -1744,7 +1744,7 @@ module.exports = [
 		text:
 			"Added 4 new draft lottery types, to improve the accuracy of historical leagues.",
 		links: [
-			"https://basketball-gm.com/blog/2020/05/more-draft-lottery-types/",
+			"https://zengm.com/blog/2020/05/more-draft-lottery-types/",
 			"https://old.reddit.com/r/BasketballGM/comments/gildrw/new_in_version_202005121314_four_new_types_of/",
 		],
 		basketball: true,
@@ -1784,7 +1784,7 @@ module.exports = [
 		date: "2020-05-09",
 		text: "Added real historical rosters back to 1956.",
 		links: [
-			"https://basketball-gm.com/blog/2020/05/beta-real-rosters-back-to-1956/",
+			"https://zengm.com/blog/2020/05/beta-real-rosters-back-to-1956/",
 			"https://old.reddit.com/r/BasketballGM/comments/gghq04/real_rosters_back_to_1956_is_officially_in_beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/ghw91z/official_release_real_rosters_back_to_1956/",
 		],
@@ -1865,7 +1865,7 @@ module.exports = [
 		date: "2020-04-30",
 		text: "Added real historical rosters back to 2005.",
 		links: [
-			"https://basketball-gm.com/blog/2020/04/real-rosters-back-to-2005/",
+			"https://zengm.com/blog/2020/04/real-rosters-back-to-2005/",
 			"https://old.reddit.com/r/BasketballGM/comments/gb3etv/new_in_version_202004301213_builtin_rosters_with/",
 		],
 		basketball: true,
@@ -1875,7 +1875,7 @@ module.exports = [
 		date: "2020-04-25",
 		text: "Added an option to create a new league based on real players.",
 		links: [
-			"https://basketball-gm.com/blog/2020/04/real-players/",
+			"https://zengm.com/blog/2020/04/real-players/",
 			"https://old.reddit.com/r/BasketballGM/comments/g7vg6w/new_in_versions_202004250934_built_in_support_for/",
 		],
 		basketball: true,
@@ -1987,7 +1987,7 @@ module.exports = [
 		text:
 			'Added "Acquired" column to the roster, showing how the team acquired each of its players.',
 		links: [
-			"https://basketball-gm.com/blog/2020/02/acquired-column-roster/",
+			"https://zengm.com/blog/2020/02/acquired-column-roster/",
 			"https://old.reddit.com/r/BasketballGM/comments/fbe13e/new_in_version_202002290926_acquired_column_on/",
 			"https://old.reddit.com/r/Football_GM/comments/fbe2du/new_in_version_202002290927_acquired_column_on/",
 		],
@@ -2059,7 +2059,7 @@ module.exports = [
 		date: "2020-02-02",
 		text: "Players are assigned a college when they are generated.",
 		links: [
-			"https://basketball-gm.com/blog/2020/02/colleges/",
+			"https://zengm.com/blog/2020/02/colleges/",
 			"https://old.reddit.com/r/BasketballGM/comments/ey1zqg/new_in_v202002030317_colleges/",
 			"https://old.reddit.com/r/Football_GM/comments/ey20vo/new_in_v202002030318_colleges/",
 		],
@@ -2318,7 +2318,7 @@ module.exports = [
 		date: "2019-11-08",
 		text: "New ovr formula.",
 		links: [
-			"https://basketball-gm.com/blog/2019/11/game-simulation-ovr-beta/",
+			"https://zengm.com/blog/2019/11/game-simulation-ovr-beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/dtyef8/game_simulation_improvements_and_tweaks_to_ovr/",
 		],
 		basketball: true,
@@ -2355,7 +2355,7 @@ module.exports = [
 			"Multiple improvements to game simulation, mostly related to more realistic behavior in the play-by-play.",
 		links: [
 			"https://old.reddit.com/r/BasketballGM/comments/dqoc8u/game_simulation_improvements_beta/",
-			"https://basketball-gm.com/blog/2019/11/game-simulation-ovr-beta/",
+			"https://zengm.com/blog/2019/11/game-simulation-ovr-beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/dtyef8/game_simulation_improvements_and_tweaks_to_ovr/",
 		],
 		basketball: true,
@@ -2366,7 +2366,7 @@ module.exports = [
 		text:
 			"Made long-term effects of injuries viewable on player pages, along with a log of all player injuries.",
 		links: [
-			"https://basketball-gm.com/blog/2019/10/improvements-injury-system/",
+			"https://zengm.com/blog/2019/10/improvements-injury-system/",
 			"https://old.reddit.com/r/BasketballGM/comments/do0jtz/new_in_bbgm_201910271376_more_injury_info_and/",
 			"https://old.reddit.com/r/Football_GM/comments/do0jss/new_in_version_201910271377_more_injury_info_and/",
 		],
@@ -2378,7 +2378,7 @@ module.exports = [
 		date: "2019-10-22",
 		text: "New UI for the dashboard.",
 		links: [
-			"https://basketball-gm.com/blog/2019/10/new-dashboard-ui/",
+			"https://zengm.com/blog/2019/10/new-dashboard-ui/",
 			"https://old.reddit.com/r/BasketballGM/comments/dlpkdr/new_dashboard_ui_in_version_201910221337/",
 			"https://old.reddit.com/r/Football_GM/comments/dlpkqu/new_dashboard_ui_in_version_201910221338/",
 		],
@@ -2475,7 +2475,7 @@ module.exports = [
 		text:
 			"Fixed a big bug in game simulation, where the effect of OL was reversed for passing plays.",
 		links: [
-			"https://football-gm.com/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/",
+			"https://zengm.com/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/",
 			"https://old.reddit.com/r/Football_GM/comments/dd9w6u/i_fucked_up_and_the_importance_of_sanity_checks/",
 		],
 		football: true,
@@ -2484,7 +2484,7 @@ module.exports = [
 		date: "2019-09-30",
 		text: "New feature for BBGM: the All-Star Game!",
 		links: [
-			"https://basketball-gm.com/blog/2019/09/all-star-game/",
+			"https://zengm.com/blog/2019/09/all-star-game/",
 			"https://old.reddit.com/r/BasketballGM/comments/dbj8zt/new_in_version_201909301331_the_allstar_game/",
 			"https://old.reddit.com/r/BasketballGM/comments/d9d7f9/new_feature_for_beta_testing_the_allstar_game_ill/",
 		],
@@ -2539,7 +2539,7 @@ module.exports = [
 		date: "2019-09-03",
 		text: "Revamped owner messages.",
 		links: [
-			"https://basketball-gm.com/blog/2019/09/owner-messages-revamp/",
+			"https://zengm.com/blog/2019/09/owner-messages-revamp/",
 			"https://old.reddit.com/r/BasketballGM/comments/czeyvb/new_in_version_201909040161_revamped_owner/",
 			"https://old.reddit.com/r/Football_GM/comments/czfdup/this_applies_to_football_gm_too/",
 		],
@@ -2552,7 +2552,7 @@ module.exports = [
 		text:
 			"Improvements to schedule and playoff seeding: regular season schedule is more balanced, and division winners are guaranteed a top 4 seed.",
 		links: [
-			"https://football-gm.com/blog/2019/08/schedule-playoffs-improvements/",
+			"https://zengm.com/blog/2019/08/schedule-playoffs-improvements/",
 			"https://old.reddit.com/r/Football_GM/comments/cxwupd/schedule_and_playoff_seeding_improvements/",
 		],
 		football: true,
@@ -2578,7 +2578,7 @@ module.exports = [
 		text:
 			"Many more tables (such as Draft Summary) are searchable, filterable, and downloadable.",
 		links: [
-			"https://basketball-gm.com/blog/2019/08/a-few-small-improvements/",
+			"https://zengm.com/blog/2019/08/a-few-small-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/crv3tj/a_few_small_improvements/)",
 		],
 		basketball: true,
@@ -2588,7 +2588,7 @@ module.exports = [
 		date: "2019-08-17",
 		text: "The AI resets their finance settings after firing you.",
 		links: [
-			"https://basketball-gm.com/blog/2019/08/a-few-small-improvements/",
+			"https://zengm.com/blog/2019/08/a-few-small-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/crv3tj/a_few_small_improvements/)",
 		],
 		basketball: true,
@@ -2599,7 +2599,7 @@ module.exports = [
 		text:
 			"The Hall of Fame cutoff adjusts based on the number of games in a season and the length of a quarter. Previously, short leagues would have empty HoFs and long leagues would have tons of HoFers.",
 		links: [
-			"https://basketball-gm.com/blog/2019/08/a-few-small-improvements/",
+			"https://zengm.com/blog/2019/08/a-few-small-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/crv3tj/a_few_small_improvements/",
 		],
 		basketball: true,
@@ -2609,7 +2609,7 @@ module.exports = [
 		date: "2019-08-14",
 		text: "Achievements.",
 		links: [
-			"https://football-gm.com/blog/2019/07/achievements/",
+			"https://zengm.com/blog/2019/07/achievements/",
 			"https://old.reddit.com/r/Football_GM/comments/cqfe6y/finally_some_achievements/",
 		],
 		football: true,
@@ -2634,7 +2634,7 @@ module.exports = [
 		date: "2019-07-28",
 		text: "Added a bunch of new achievements.",
 		links: [
-			"https://basketball-gm.com/blog/2019/07/new-achievements/",
+			"https://zengm.com/blog/2019/07/new-achievements/",
 			"https://old.reddit.com/r/BasketballGM/comments/ciwyek/new_achievements_in_version_201907280910/",
 		],
 		basketball: true,
@@ -2649,7 +2649,7 @@ module.exports = [
 		text:
 			"Added support for far future draft classes in custom league files. Previously the limit was 3 seasons, now there is no limit.",
 		links: [
-			"https://basketball-gm.com/blog/2019/07/far-future-draft-classes/",
+			"https://zengm.com/blog/2019/07/far-future-draft-classes/",
 			"https://old.reddit.com/r/BasketballGM/comments/cg4ne3/far_future_draft_classes/",
 		],
 		basketball: true,
@@ -2708,7 +2708,7 @@ module.exports = [
 		text:
 			"Frivolities! View family trees, tragic deaths, roster continuity, and the best players who never made the playoffs.",
 		links: [
-			"https://basketball-gm.com/blog/2019/05/frivolities/",
+			"https://zengm.com/blog/2019/05/frivolities/",
 			"https://old.reddit.com/r/BasketballGM/comments/btmrj5/frivolities_view_family_trees_tragic_deaths/",
 		],
 		basketball: true,
@@ -2794,7 +2794,7 @@ module.exports = [
 		text:
 			"Changed the default draft lottery to the NBA's new 4 team lottery, and added an option to switch to the old lottery or disable the lottery entirely. Also improved the lottery for non-standard leagues.",
 		links: [
-			"https://basketball-gm.com/blog/2019/05/draft-lottery-updates/",
+			"https://zengm.com/blog/2019/05/draft-lottery-updates/",
 			"https://old.reddit.com/r/BasketballGM/comments/bjivni/draft_lottery_updates/",
 		],
 		basketball: true,
@@ -2813,7 +2813,7 @@ module.exports = [
 		date: "2019-04-21",
 		text: "Football GM is here!",
 		links: [
-			"https://football-gm.com/blog/2019/04/welcome/",
+			"https://zengm.com/blog/2019/04/welcome/",
 			"https://old.reddit.com/r/BasketballGM/comments/bfxjl0/early_beta_of_the_new_football_gm/",
 			"https://old.reddit.com/r/Football_GM/comments/bfx1dp/football_gm_has_been_created/",
 		],
@@ -2833,7 +2833,7 @@ module.exports = [
 		date: "2018-11-11",
 		text: "New God Mode options: hard/soft cap and playoff byes.",
 		links: [
-			"https://basketball-gm.com/blog/2018/11/new-options-hard-soft-cap-and-playoff-byes/",
+			"https://zengm.com/blog/2018/11/new-options-hard-soft-cap-and-playoff-byes/",
 			"https://old.reddit.com/r/BasketballGM/comments/9w61h5/new_god_mode_options_hardsoft_cap_and_playoff_byes/",
 		],
 		basketball: true,
@@ -2842,7 +2842,7 @@ module.exports = [
 		date: "2018-11-03",
 		text: "More realistic contracts and draft history in new leagues.",
 		links: [
-			"https://basketball-gm.com/blog/2018/11/more-realistic-new-leagues/",
+			"https://zengm.com/blog/2018/11/more-realistic-new-leagues/",
 			"https://old.reddit.com/r/BasketballGM/comments/9u04ov/more_realistic_contracts_and_draft_history_in_new/",
 		],
 		basketball: true,
@@ -2892,7 +2892,7 @@ module.exports = [
 		date: "2018-10-15",
 		text: '"Untouchable" players and picks in trades.',
 		links: [
-			"https://basketball-gm.com/blog/2018/10/untouchable-players-and-picks-in-trades/",
+			"https://zengm.com/blog/2018/10/untouchable-players-and-picks-in-trades/",
 			"https://old.reddit.com/r/BasketballGM/comments/9o9v7g/untouchable_players_and_picks_in_trades/",
 		],
 		basketball: true,
@@ -2902,7 +2902,7 @@ module.exports = [
 		text:
 			"Lots of small UI improvements, including dark mode and a much nicer menu on mobile.",
 		links: [
-			"https://basketball-gm.com/blog/2018/10/lots-of-small-ui-improvements/",
+			"https://zengm.com/blog/2018/10/lots-of-small-ui-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/9m5oyj/lots_of_small_ui_improvements_please_let_me_know/",
 		],
 		basketball: true,
@@ -2934,7 +2934,7 @@ module.exports = [
 		text:
 			"Fixed bug where potential was calculated wrong for draft prospects, leading to inflated values.",
 		links: [
-			"https://basketball-gm.com/blog/2018/09/a-few-recent-minor-improvements/",
+			"https://zengm.com/blog/2018/09/a-few-recent-minor-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/9ch43o/a_few_recent_minor_improvements/",
 		],
 		basketball: true,
@@ -2943,7 +2943,7 @@ module.exports = [
 		date: "2018-09-02",
 		text: "Fixed simulation beyond the year 9999.",
 		links: [
-			"https://basketball-gm.com/blog/2018/09/a-few-recent-minor-improvements/",
+			"https://zengm.com/blog/2018/09/a-few-recent-minor-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/9ch43o/a_few_recent_minor_improvements/",
 		],
 		basketball: true,
@@ -2952,7 +2952,7 @@ module.exports = [
 		date: "2018-09-02",
 		text: "Finals MVP is actually the finals MVP, not the playoffs MVP.",
 		links: [
-			"https://basketball-gm.com/blog/2018/09/a-few-recent-minor-improvements/",
+			"https://zengm.com/blog/2018/09/a-few-recent-minor-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/9ch43o/a_few_recent_minor_improvements/",
 		],
 		basketball: true,
@@ -2962,7 +2962,7 @@ module.exports = [
 		text:
 			"Altered attendance formula so you can no longer make tons of money from a small number of incredibly expensive tickets.",
 		links: [
-			"https://basketball-gm.com/blog/2018/09/a-few-recent-minor-improvements/",
+			"https://zengm.com/blog/2018/09/a-few-recent-minor-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/9ch43o/a_few_recent_minor_improvements/",
 		],
 		basketball: true,
@@ -2985,7 +2985,7 @@ module.exports = [
 		date: "2018-06-24",
 		text: "New feature: difficulty levels.",
 		links: [
-			"https://basketball-gm.com/blog/2018/06/difficulty-levels/",
+			"https://zengm.com/blog/2018/06/difficulty-levels/",
 			"https://old.reddit.com/r/BasketballGM/comments/8tjivq/new_feature_difficulty_levels/",
 		],
 		basketball: true,
@@ -3029,7 +3029,7 @@ module.exports = [
 		date: "2018-05-11",
 		text: "Draft day trades.",
 		links: [
-			"https://basketball-gm.com/blog/2018/05/draft-day-trades/",
+			"https://zengm.com/blog/2018/05/draft-day-trades/",
 			"https://old.reddit.com/r/BasketballGM/comments/8ir6fc/new_feature_released_draft_day_trades/",
 		],
 		basketball: true,
@@ -3046,7 +3046,7 @@ module.exports = [
 		text:
 			"Relatives! Players can be the father, son, or brother of other players.",
 		links: [
-			"https://basketball-gm.com/blog/2018/05/relatives-fathers-sons-and-brothers/",
+			"https://zengm.com/blog/2018/05/relatives-fathers-sons-and-brothers/",
 			"https://old.reddit.com/r/BasketballGM/comments/8guvko/relatives_fathers_sons_and_brothers/",
 		],
 		basketball: true,
@@ -3056,7 +3056,7 @@ module.exports = [
 		date: "2018-04-11",
 		text: "Performance improvements in large leagues.",
 		links: [
-			"https://basketball-gm.com/blog/2018/04/performance-improvements-in-large-leagues/",
+			"https://zengm.com/blog/2018/04/performance-improvements-in-large-leagues/",
 			"https://old.reddit.com/r/BasketballGM/comments/8blmn3/performance_improvements_in_large_leagues/",
 		],
 		basketball: true,
@@ -3065,7 +3065,7 @@ module.exports = [
 		date: "2018-04-07",
 		text: "Customizable stadium capacities.",
 		links: [
-			"https://basketball-gm.com/blog/2018/04/customizable-stadium-capacities/",
+			"https://zengm.com/blog/2018/04/customizable-stadium-capacities/",
 			"https://old.reddit.com/r/BasketballGM/comments/8amnw6/customizable_stadium_capacities/",
 		],
 		basketball: true,
@@ -3083,11 +3083,11 @@ module.exports = [
 		date: "2018-03-07",
 		text: "Big changes to player ratings and development.",
 		links: [
-			"https://basketball-gm.com/blog/2018/02/player-ratings-and-development-beta/",
+			"https://zengm.com/blog/2018/02/player-ratings-and-development-beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/7vzzqt/new_beta_released_today_please_help_me_test_it/",
 			"https://old.reddit.com/r/BasketballGM/comments/7wn1sb/updated_beta_just_released/",
 			"https://old.reddit.com/r/BasketballGM/comments/7ya1yu/any_more_thoughts_on_the_beta/",
-			"https://basketball-gm.com/blog/2018/03/player-ratings-and-development-changes-are-live/",
+			"https://zengm.com/blog/2018/03/player-ratings-and-development-changes-are-live/",
 			"https://old.reddit.com/r/BasketballGM/comments/82tj9s/player_ratings_and_development_changes_are_live_i/",
 		],
 		basketball: true,
@@ -3143,7 +3143,7 @@ module.exports = [
 		date: "2017-12-04",
 		text: "Most Improved Player award.",
 		links: [
-			"https://basketball-gm.com/blog/2017/12/most-improved-player-award/",
+			"https://zengm.com/blog/2017/12/most-improved-player-award/",
 			"https://old.reddit.com/r/BasketballGM/comments/7hlxvj/most_improved_player_award/",
 		],
 		basketball: true,
@@ -3191,7 +3191,7 @@ module.exports = [
 		text:
 			"New advanced stats: offensive rating, defensive rating, win shares, and various team advanced stats.",
 		links: [
-			"https://basketball-gm.com/blog/2017/10/even-more-advanced-stats/",
+			"https://zengm.com/blog/2017/10/even-more-advanced-stats/",
 			"https://old.reddit.com/r/BasketballGM/comments/74ozwx/even_more_advanced_stats/",
 		],
 		basketball: true,
@@ -3202,7 +3202,7 @@ module.exports = [
 		text:
 			"New stats: team opponent stats, team playoff stats, and various player advanced stats.",
 		links: [
-			"https://basketball-gm.com/blog/2017/10/you-guys-like-stats-right/",
+			"https://zengm.com/blog/2017/10/you-guys-like-stats-right/",
 			"https://old.reddit.com/r/BasketballGM/comments/73whjb/you_guys_like_stats_right/",
 			"https://old.reddit.com/r/BasketballGM/comments/73jgbq/coming_soon/",
 		],
@@ -3238,7 +3238,7 @@ module.exports = [
 		text:
 			"More realistic player height distribution, including extreme outliers.",
 		links: [
-			"https://basketball-gm.com/blog/2017/09/more-extreme-heights/",
+			"https://zengm.com/blog/2017/09/more-extreme-heights/",
 			"https://old.reddit.com/r/BasketballGM/comments/6z3ql1/more_extreme_heights/",
 			"https://old.reddit.com/r/BasketballGM/comments/6ptd6g/beta_testers_wanted_more_extreme_heights/",
 		],
@@ -3264,7 +3264,7 @@ module.exports = [
 		date: "2017-07-08",
 		text: "New feature - view the draft lottery live!",
 		links: [
-			"https://basketball-gm.com/blog/2017/07/live-draft-lottery/",
+			"https://zengm.com/blog/2017/07/live-draft-lottery/",
 			"https://old.reddit.com/r/BasketballGM/comments/6m2sf1/new_feature_view_the_draft_lottery_live/",
 		],
 		basketball: true,
@@ -3333,7 +3333,7 @@ module.exports = [
 		date: "2017-04-01",
 		text: "You can apply filters to one or more columns of most tables.",
 		links: [
-			"https://basketball-gm.com/blog/2017/04/basketball-gm-4-0-is-here/",
+			"https://zengm.com/blog/2017/04/basketball-gm-4-0-is-here/",
 			"https://old.reddit.com/r/BasketballGM/comments/61h6gy/people_were_talking_about_table_filtering/",
 		],
 		basketball: true,
@@ -3343,10 +3343,10 @@ module.exports = [
 		text:
 			"Basketball GM 4.0 brings some absolutely massive performance improvements.",
 		links: [
-			"https://basketball-gm.com/blog/2017/04/basketball-gm-4-0-is-here/",
-			"https://basketball-gm.com/blog/2017/03/basketball-gm-4-0-beta/",
-			"https://basketball-gm.com/blog/2017/03/basketball-gm-4-0-beta-2/",
-			"https://basketball-gm.com/blog/2017/04/basketball-gm-4-0-technical-details/",
+			"https://zengm.com/blog/2017/04/basketball-gm-4-0-is-here/",
+			"https://zengm.com/blog/2017/03/basketball-gm-4-0-beta/",
+			"https://zengm.com/blog/2017/03/basketball-gm-4-0-beta-2/",
+			"https://zengm.com/blog/2017/04/basketball-gm-4-0-technical-details/",
 			"https://old.reddit.com/r/BasketballGM/comments/62txdy/basketball_gm_40_is_here_this_is_not_a_joke/",
 			"https://old.reddit.com/r/BasketballGM/comments/5zgrv9/basketball_gm_40_beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/61bwl9/basketball_gm_40_beta_2/",
@@ -3429,7 +3429,7 @@ module.exports = [
 		date: "2016-07-09",
 		text: "Default salary cap is now $90M, max salary is now $30M.",
 		links: [
-			"https://basketball-gm.com/blog/2016/07/default-salary-cap-is-now-90m-max-salary-is-now-30m/",
+			"https://zengm.com/blog/2016/07/default-salary-cap-is-now-90m-max-salary-is-now-30m/",
 			"https://old.reddit.com/r/BasketballGM/comments/4s1z6c/default_salary_cap_is_now_90m/",
 		],
 		basketball: true,
@@ -3450,7 +3450,7 @@ module.exports = [
 		text:
 			"More customization options: conferences, divisions, and playoff length.",
 		links: [
-			"https://basketball-gm.com/blog/2016/06/more-customization-options-conferences-divisions-and-playoff-length/",
+			"https://zengm.com/blog/2016/06/more-customization-options-conferences-divisions-and-playoff-length/",
 			"https://old.reddit.com/r/BasketballGM/comments/4oqxhm/more_customization_options_conferences_divisions/",
 		],
 		basketball: true,
@@ -3468,7 +3468,7 @@ module.exports = [
 		date: "2016-06-13",
 		text: "More realistic player names, including international players!",
 		links: [
-			"https://basketball-gm.com/blog/2016/06/more-realistic-player-names-including-international-players/",
+			"https://zengm.com/blog/2016/06/more-realistic-player-names-including-international-players/",
 			"https://old.reddit.com/r/BasketballGM/comments/4ny7n8/more_realistic_player_names_including/",
 		],
 		basketball: true,
@@ -3478,7 +3478,7 @@ module.exports = [
 		date: "2016-06-04",
 		text: "Logos for default teams.",
 		links: [
-			"https://basketball-gm.com/blog/2016/06/logos-for-default-teams/",
+			"https://zengm.com/blog/2016/06/logos-for-default-teams/",
 			"https://old.reddit.com/r/BasketballGM/comments/4ml7n2/logos_are_done_and_live/",
 		],
 		basketball: true,
@@ -3487,7 +3487,7 @@ module.exports = [
 		date: "2016-05-28",
 		text: 'Improved "Shuffle Rosters" for new leagues.',
 		links: [
-			"https://basketball-gm.com/blog/2016/05/improved-shuffle-rosters-for-new-leagues/",
+			"https://zengm.com/blog/2016/05/improved-shuffle-rosters-for-new-leagues/",
 			"https://old.reddit.com/r/BasketballGM/comments/4lgmfd/improved_shuffle_rosters_for_new_leagues/",
 		],
 		basketball: true,
@@ -3519,7 +3519,7 @@ module.exports = [
 		date: "2016-04-12",
 		text: "Game simulation performance improvements.",
 		links: [
-			"https://basketball-gm.com/blog/2016/04/game-simulation-performance-improvements/",
+			"https://zengm.com/blog/2016/04/game-simulation-performance-improvements/",
 			"https://old.reddit.com/r/BasketballGM/comments/4ejbby/game_simulation_performance_improvements/",
 		],
 		basketball: true,
@@ -3533,7 +3533,7 @@ module.exports = [
 		date: "2016-02-06",
 		text: "Ten new options in God Mode.",
 		links: [
-			"https://basketball-gm.com/blog/2016/02/new-options-in-god-mode/",
+			"https://zengm.com/blog/2016/02/new-options-in-god-mode/",
 			"https://old.reddit.com/r/BasketballGM/comments/44hdzs/new_options_in_god_mode/",
 		],
 		basketball: true,
@@ -3547,7 +3547,7 @@ module.exports = [
 		date: "2016-01-31",
 		text: "Serious injuries can lead to a decrease in athleticism ratings.",
 		links: [
-			"https://basketball-gm.com/blog/2016/01/injuries-can-have-long-term-effects/",
+			"https://zengm.com/blog/2016/01/injuries-can-have-long-term-effects/",
 			"https://old.reddit.com/r/BasketballGM/comments/43jj76/injuries_can_have_longterm_effects/",
 		],
 		basketball: true,
@@ -3636,7 +3636,7 @@ module.exports = [
 		date: "2015-05-21",
 		text: "Fixes to player positions, heights, and weights.",
 		links: [
-			"https://basketball-gm.com/blog/2015/05/fixes-to-player-positions-heights-and-weights/",
+			"https://zengm.com/blog/2015/05/fixes-to-player-positions-heights-and-weights/",
 			"https://old.reddit.com/r/BasketballGM/comments/36tvpo/fixes_to_player_positions_heights_and_weights/",
 		],
 		basketball: true,
@@ -3688,7 +3688,7 @@ module.exports = [
 		date: "2015-03-29",
 		text: "Customize generated player names in a league file.",
 		links: [
-			"https://basketball-gm.com/blog/2015/03/customize-random-names/",
+			"https://zengm.com/blog/2015/03/customize-random-names/",
 			"https://old.reddit.com/r/BasketballGM/comments/30p852/customize_random_names/",
 		],
 		basketball: true,
@@ -3698,7 +3698,7 @@ module.exports = [
 		text:
 			"New feature, Multi Team Mode, that allows you to control more than one team in a league.",
 		links: [
-			"https://basketball-gm.com/blog/2015/03/new-feature-multi-team-mode/",
+			"https://zengm.com/blog/2015/03/new-feature-multi-team-mode/",
 			"https://old.reddit.com/r/BasketballGM/comments/2zvg4q/new_feature_multi_team_mode/",
 		],
 		basketball: true,
@@ -3714,7 +3714,7 @@ module.exports = [
 		text:
 			"Go to Tools > Screenshot and it will save a screenshot of your current page to Imgur.",
 		links: [
-			"https://basketball-gm.com/blog/2015/03/screenshots/",
+			"https://zengm.com/blog/2015/03/screenshots/",
 			"https://old.reddit.com/r/BasketballGM/comments/2z66rh/new_feature_screenshots/",
 		],
 		basketball: true,
@@ -3724,7 +3724,7 @@ module.exports = [
 		text:
 			"Simulate through multiple seasons in one click at Tools > Auto Play Seasons.",
 		links: [
-			"https://basketball-gm.com/blog/2015/02/simulate-through-multiple-seasons-in-one-click/",
+			"https://zengm.com/blog/2015/02/simulate-through-multiple-seasons-in-one-click/",
 			"https://old.reddit.com/r/BasketballGM/comments/2v4o5q/simulate_through_multiple_seasons_in_one_click/",
 		],
 		basketball: true,
@@ -3741,7 +3741,7 @@ module.exports = [
 		text:
 			"New feature: Statistical Feats. Triple doubles, 5x5s, 50 point games, etc. ",
 		links: [
-			"https://basketball-gm.com/blog/2015/02/new-feature-statistical-feats/",
+			"https://zengm.com/blog/2015/02/new-feature-statistical-feats/",
 			"https://old.reddit.com/r/BasketballGM/comments/2upz55/new_feature_statistical_feats/",
 		],
 		basketball: true,
@@ -3751,7 +3751,7 @@ module.exports = [
 		date: "2015-01-31",
 		text: "Easy spreadsheet stats export from Tools > Export Stats.",
 		links: [
-			"https://basketball-gm.com/blog/2015/01/easy-stats-export/",
+			"https://zengm.com/blog/2015/01/easy-stats-export/",
 			"https://old.reddit.com/r/BasketballGM/comments/2ub9zh/new_feature_easy_stats_export_from_tools_export/",
 		],
 		basketball: true,
@@ -3815,8 +3815,8 @@ module.exports = [
 		date: "2014-12-05",
 		text: "20% faster game simulation performance.",
 		links: [
-			"https://basketball-gm.com/blog/2014/12/basketball-gm-3-4-released-20-faster-game-simulations-beta-is-over/",
-			"https://basketball-gm.com/blog/2014/11/20-faster-game-simulation-try-the-beta-now/",
+			"https://zengm.com/blog/2014/12/basketball-gm-3-4-released-20-faster-game-simulations-beta-is-over/",
+			"https://zengm.com/blog/2014/11/20-faster-game-simulation-try-the-beta-now/",
 			"https://old.reddit.com/r/BasketballGM/comments/2of8ll/basketball_gm_34_released_20_faster_game/",
 			"https://old.reddit.com/r/BasketballGM/comments/2l03b5/20_faster_game_simulation_try_the_beta_now/",
 		],
@@ -3832,7 +3832,7 @@ module.exports = [
 		date: "2014-09-28",
 		text: "Revamped player development algorithm.",
 		links: [
-			"https://basketball-gm.com/blog/2014/09/revamped-player-development-algorithm/",
+			"https://zengm.com/blog/2014/09/revamped-player-development-algorithm/",
 			"https://old.reddit.com/r/BasketballGM/comments/2hqitc/revamped_player_development_algorithm_finally/",
 			"https://old.reddit.com/r/BasketballGM/comments/2he7vv/another_update_to_the_player_development_beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/2e1jqv/improved_player_development_beta_updated_please/",
@@ -3900,7 +3900,7 @@ module.exports = [
 		text:
 			"New feature: God Mode, which allows you to have more control over your league.",
 		links: [
-			"https://basketball-gm.com/blog/2014/07/new-feature-god-mode/",
+			"https://zengm.com/blog/2014/07/new-feature-god-mode/",
 			"https://old.reddit.com/r/BasketballGM/comments/29xjb5/new_feature_god_mode/",
 		],
 		basketball: true,
@@ -3910,7 +3910,7 @@ module.exports = [
 		date: "2014-06-15",
 		text: "Custom draft class import.",
 		links: [
-			"https://basketball-gm.com/blog/2014/06/new-customization-features-full-league-importexport-and-draft-class-import/",
+			"https://zengm.com/blog/2014/06/new-customization-features-full-league-importexport-and-draft-class-import/",
 			"https://old.reddit.com/r/BasketballGM/comments/2893s0/new_feature_custom_draft_classes/",
 		],
 		basketball: true,
@@ -3919,7 +3919,7 @@ module.exports = [
 		date: "2014-06-02",
 		text: "Full league import/export.",
 		links: [
-			"https://basketball-gm.com/blog/2014/06/new-customization-features-full-league-importexport-and-draft-class-import/",
+			"https://zengm.com/blog/2014/06/new-customization-features-full-league-importexport-and-draft-class-import/",
 			"https://old.reddit.com/r/BasketballGM/comments/275zwp/fairly_major_new_feature_needs_testing_export/",
 		],
 		basketball: true,
@@ -4012,7 +4012,7 @@ module.exports = [
 		date: "2014-03-03",
 		text: "Achievements! Also, an account system to store achievements.",
 		links: [
-			"https://basketball-gm.com/blog/2014/03/new-feature-achievements/",
+			"https://zengm.com/blog/2014/03/new-feature-achievements/",
 			"https://old.reddit.com/r/BasketballGM/comments/1zggeq/new_feature_achievements/",
 		],
 		basketball: true,
@@ -4040,7 +4040,7 @@ module.exports = [
 		text:
 			"Synergy depends on player rating values, not on skill labels. So a player who barely gets a skill label and a player who barely misses it will be almost identical.",
 		links: [
-			"https://basketball-gm.com/blog/2014/02/what-do-skills-mean/",
+			"https://zengm.com/blog/2014/02/what-do-skills-mean/",
 			"https://old.reddit.com/r/BasketballGM/comments/1ye471/what_do_skills_mean/",
 		],
 		basketball: true,
@@ -4060,7 +4060,7 @@ module.exports = [
 		date: "2014-02-15",
 		text: "New improved trade AI.",
 		links: [
-			"https://basketball-gm.com/blog/2014/02/new-improved-trade-ai/",
+			"https://zengm.com/blog/2014/02/new-improved-trade-ai/",
 			"https://old.reddit.com/r/BasketballGM/comments/1xztme/new_improved_trade_ai_tons_of_loopholes_fixed_but/",
 		],
 		basketball: true,
@@ -4082,7 +4082,7 @@ module.exports = [
 		date: "2014-01-21",
 		text: "New team regions and names.",
 		links: [
-			"https://basketball-gm.com/blog/2014/01/new-team-regions-and-names/",
+			"https://zengm.com/blog/2014/01/new-team-regions-and-names/",
 			"https://old.reddit.com/r/BasketballGM/comments/1vsg92/new_team_regions_and_names_final/",
 		],
 		basketball: true,
@@ -4113,7 +4113,7 @@ module.exports = [
 		text:
 			"Three years of future draft prospects are generated ahead-of-time, and are viewable on the new Draft Scouting page.",
 		links: [
-			"http://basketball-gm.com/blog/2014/01/anyone-want-to-beta-test-new-draft-scouting-features/",
+			"https://zengm.com/blog/2014/01/anyone-want-to-beta-test-new-draft-scouting-features/",
 			"https://old.reddit.com/r/BasketballGM/comments/1uzyzy/anyone_want_to_beta_test_new_draft_scouting/",
 			"https://old.reddit.com/r/BasketballGM/comments/1v56z4/new_draft_scouting_features_are_live_in_all/",
 		],
@@ -4124,7 +4124,7 @@ module.exports = [
 		date: "2014-01-06",
 		text: "Add option to delete old data and improve performance.",
 		links: [
-			"https://basketball-gm.com/blog/2014/01/performance-issues-in-old-leagues/",
+			"https://zengm.com/blog/2014/01/performance-issues-in-old-leagues/",
 			"https://old.reddit.com/r/BasketballGM/comments/1ul7dd/performance_issues_in_old_leagues/",
 		],
 		basketball: true,

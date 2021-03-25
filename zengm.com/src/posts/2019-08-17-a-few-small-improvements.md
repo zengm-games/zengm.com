@@ -9,7 +9,7 @@ tags:
   - UI
 ---
 
-No huge news here, sorry, but there are a few minor improvements in [version 2019.08.18.0097](/basketball/faq/#latest-version):
+No huge news here, sorry, but there are a few minor improvements in [version 2019.08.18.0097](https://basketball-gm.com/faq/#latest-version):
 
 1. A lot more tables (such as Draft Summary) are searchable, filterable, and downloadable. There's still a few that aren't. Let me know if that's a problem. Also let me know if I messed anything up with this change, since the table component is used in many many places!
 

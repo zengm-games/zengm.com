@@ -34,7 +34,7 @@ At its core, the historical rosters are made similarly to [the great work nicido
 
 Here are some known limitations of the current historical rosters:
 
-- I did not include past stats for players because I'm worried about [using too much hard drive space](/basketball/manual/debugging/quota-errors/). That's one of the tradeoffs with making a browser-based game.
+- I did not include past stats for players because I'm worried about [using too much hard drive space](https://basketball-gm.com/manual/debugging/quota-errors/). That's one of the tradeoffs with making a browser-based game.
 
 - There are no changes in play style over time. For instance, back in 2005, three pointers were a lot less common. Basketball GM does not do a great job simulating this.
 

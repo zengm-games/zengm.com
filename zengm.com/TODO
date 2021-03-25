@@ -4,18 +4,33 @@ https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 build performance
 - 25 minutes
+- alternatives
+  - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
+    - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
+  - check expiration in htaccess
+  - minify css/js
+  - compress images
 
 blog
 - rss feed
   - test
 - 301 redirect from BBGM/FBGM for blog and feed
 
-pathPrefix and url filter to make all URLs point to zengm.com explicitly
-- https://www.11ty.dev/docs/filters/url/
-- detect /football/ and /basketball/ URLs?
-- check rss feed too
-- use in footer
-- how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
+basketball-gm.com, football-gm.com
+- hacky way - i think this looks better!
+  - in src, replace all basketball-gm.com URLs with /basketball/
+  - post-process to replace "/basketball/ with "https://basketball-gm.com/
+    - see https://github.com/11ty/eleventy-plugin-rss/blob/master/src/htmlToAbsoluteUrls.js
+  - special case for feed.xml, replace "https://zengm.com/basketball/ with "https://basketball-gm.com/
+  - different depending on if inside the "basketball" or "football" folders, then need to explicitly link to zengm.com
+- less hacky way
+  - in src, replace all basketball-gm.com URLs with /basketball/
+  - custom url filter (similar to built-in https://www.11ty.dev/docs/filters/url/ )
+    - depending on "sport" of current page, handle /basketball, /football, and other links
+    - https://www.11ty.dev/docs/filters/url/
+    - detect /football/ and /basketball/ URLs?
+    - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
+- check rss feed URLs too, they are processed differently to make them absolute already
 
 sidebar menu
 - use eleventyNavigation?

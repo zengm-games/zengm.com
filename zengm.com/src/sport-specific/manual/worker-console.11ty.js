@@ -140,7 +140,7 @@ bbgm.iterate(
 
 ### Change GM History teams
 
-[On August 20, 2020](https://basketball-gm.com/blog/2020/08/gm-history/), a feature was added to view your overall performance as a GM across multiple different past teams. But prior to this update, it did not track which teams you controlled in the past. If you remember, you may want to manually specify your past teams.
+[On August 20, 2020](/blog/2020/08/gm-history/), a feature was added to view your overall performance as a GM across multiple different past teams. But prior to this update, it did not track which teams you controlled in the past. If you remember, you may want to manually specify your past teams.
 
 The numbers in the \`value\` part are team ID numbers, which you can see in URLs when you click on a team.
 

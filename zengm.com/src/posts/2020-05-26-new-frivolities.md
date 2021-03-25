@@ -42,4 +42,4 @@ The new frivolities are:
 
 Most of these ideas were suggested by users. If you have any more frivolities you'd like to see added, please [let me know](/contact/).
 
-It is purely a coincidence that this is just [one day before the 1 year anniversary of the original frivolities feature](https://basketball-gm.com/blog/2019/05/frivolities/). I didn't even notice until I went to write this blog post!
+It is purely a coincidence that this is just [one day before the 1 year anniversary of the original frivolities feature](/blog/2019/05/frivolities/). I didn't even notice until I went to write this blog post!

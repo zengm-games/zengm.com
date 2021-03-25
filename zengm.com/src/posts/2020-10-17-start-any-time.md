@@ -62,4 +62,4 @@ Since this has been in development for a little while, today I'm also releasing 
 
 - Some improvements to the trade AI, particularly related to how it values draft picks. [[1]](https://old.reddit.com/r/BasketballGM/comments/ja6095/want_to_test_some_improvements_to_the_trade_ai/) [[2]](https://old.reddit.com/r/Football_GM/comments/ja60au/want_to_test_some_improvements_to_the_trade_ai/)
 
-[Feedback is welcome on any of these improvements, or anything else on your mind!](https://basketball-gm.com/contact/)
+[Feedback is welcome on any of these improvements, or anything else on your mind!](/contact/)

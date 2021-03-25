@@ -33,7 +33,7 @@ I could go on and on about everything that happened between 2008 and today. And 
 
 <b class="text-highlight">2020:</b> I added built-in support for [real rosters in Basketball GM](/blog/2020/04/real-players/), including [historical rosters back to 1947](/blog/2020/06/real-rosters-back-to-1947-contraction/).
 
-<b class="text-highlight">2020:</b> Basketball GM got its first user from North Korea, meaning it has now been played in [189 of 193 countries in the world](https://basketball-gm.com/blog/2019/10/world-domination/).
+<b class="text-highlight">2020:</b> Basketball GM got its first user from North Korea, meaning it has now been played in [189 of 193 countries in the world](/blog/2019/10/world-domination/).
 
 <b class="text-highlight">2021:</b> [I quit my day job to work on my games full time.](/blog/2021/01/full-time-job/)
 

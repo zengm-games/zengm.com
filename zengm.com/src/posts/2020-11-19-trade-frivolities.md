@@ -10,7 +10,7 @@ tags:
   - UI
 ---
 
-Following up to the [recent](https://basketball-gm.com/blog/2020/11/trade-details/) [updates](https://www.reddit.com/r/BasketballGM/comments/jvn292/since_its_now_trading_season_i_added_some_charts/) that added a lot of detail to historical trades, today I added two new frivolities, in a brand new Trades section:
+Following up to the [recent](/blog/2020/11/trade-details/) [updates](https://www.reddit.com/r/BasketballGM/comments/jvn292/since_its_now_trading_season_i_added_some_charts/) that added a lot of detail to historical trades, today I added two new frivolities, in a brand new Trades section:
 
 **Biggest Trades:** Trades involving the best players and prospects.
 
@@ -24,7 +24,7 @@ Biggest Trades uses an extremely simple formula to identify the biggest trades, 
 
 <figure class="overflow-auto"><img src="/files/trade-frivolities-1.png"></figure>
 
-For Most Lopsided Trades, it finds the trades where one side produced a lot more value after the trade (based on total win shares in BBGM, and approximate value in FBGM). This is the same metric displayed on the [Trade Summary](https://basketball-gm.com/blog/2020/11/trade-details/) page. Here's what it looks like:
+For Most Lopsided Trades, it finds the trades where one side produced a lot more value after the trade (based on total win shares in BBGM, and approximate value in FBGM). This is the same metric displayed on the [Trade Summary](/blog/2020/11/trade-details/) page. Here's what it looks like:
 
 <figure class="overflow-auto"><img src="/files/trade-frivolities-2.png"></figure>
 
