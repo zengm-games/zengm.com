@@ -40,7 +40,7 @@
     </aside>
   {% endif %}
 
-  <main role="main" class="container-lg">
+  <main role="main" class="{% if fullWidth %}mx-3{% else %}container-lg{% endif %}">
     {% if parent %}
       <h1>{{ title }}</h1>
       {% if not hideLineUnderTitle %}
