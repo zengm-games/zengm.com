@@ -76,6 +76,8 @@ Another change suggested by nicidob was to use the [Z-score](https://en.wikipedi
 
 All in all, I wound up with these relative weights for the importance of ratings, in the old and new ovr formulas
 
+<div class="table-responsive">
+
 | Rating | Old Weight | New Weight |
 | ------ | ---------- | ---------- |
 | Hgt    | 5          | 15.9       |
@@ -95,6 +97,8 @@ All in all, I wound up with these relative weights for the importance of ratings
 | FG     | 1          | 1          |
 
 {.table}
+
+</div>
 
 As you can see, for the most part the order of importance didn't change too much. Height, athleticism, three point shooting, and IQ are extremely important in both ovr formulas. But they are even more important in the new formula.
 

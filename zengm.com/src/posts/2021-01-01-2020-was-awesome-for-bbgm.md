@@ -11,6 +11,8 @@ Happy New Year!
 
 I know, everybody's talking about how 2020 sucked and how they hope 2021 will be better. But it's also true that 2020 had at least one redeeming quality - it was a great year for Basketball GM! COVID lockdowns left me with more time to work on development, and it left many of you with more time to play. The end result has been [a ton of new features](/changelog/) that I won't even try to summarize here, and new records in all usage stats:
 
+<div class="table-responsive">
+
 | Year | Sessions  | Pageviews   | Total Play Time (years) |
 | ---- | --------- | ----------- | ----------------------- |
 | 2013 | 135,664   | 13,661,063  | 18.14                   |
@@ -23,6 +25,8 @@ I know, everybody's talking about how 2020 sucked and how they hope 2021 will be
 | 2020 | 3,440,761 | 299,207,611 | 206.10                  |
 
 {.table}
+
+</div>
 
 That's a lot of Basketball GM in 2020! And that's not even including [Football GM](https://football-gm.com/) which of course did a lot better in 2020 than in 2019 because it didn't even exist at the beginning of 2019.
 

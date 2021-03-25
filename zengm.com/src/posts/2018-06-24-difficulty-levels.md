@@ -17,6 +17,7 @@ But ultimately, I don't think that was enough. Some people still found the game 
 
 Like many things in BBGM, I took my inspiration from [Baseball Mogul](http://thegamedesigner.blogspot.com/2017/03/baseball-mogul-cheats.html). Below is a table explaining exactly what the difficulty settings do, although this may change in the future.
 
+<div class="table-responsive">
 <table class="table">
   <thead>
     <tr>
@@ -53,6 +54,7 @@ Like many things in BBGM, I took my inspiration from [Baseball Mogul](http://the
     </tr>
   </tbody>
 </table>
+</div>
 
 And if that's not good enough for you, you can tune the difficulty level to intermediate or more extreme values on the Options page.
 

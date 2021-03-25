@@ -18,7 +18,7 @@ tags:
 <p>First, a word on the data. There is no perfect, wonderful source of this kind of data. I scraped player salaries from <a href="http://www.basketball-reference.com/">Basketball-Reference.com</a> (which is probably the most reliable source out there) using <a href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>. Normally I'd post the script and data here, as I'm all about open source and open data, but I don't think Basketball-Reference.com appreciates people scraping their data, and I know they don't allow people to republish their data. So you'll just have to trust that I did it correctly.</p>
 <p>Also, I did try normalizing the data by the annual salary cap, as the salary cap changes every year in the NBA. However, it didn't substantially change any of the correlations, so I'm showing the raw data here as it's more straightforward that way.</p>
 <p>The first figure below shows a scatter plot of wins versus payroll for each of the 30 teams over the past 10 seasons, so there are a total of 300 data points. Results are shown both including and excluding the Knicks, as their fruitless overspending in the last decade could represent an outlier. The lines are linear regressions.</p>
-<img class="dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll.png" width="638" height="532" />
+<figure><img class="img-fluid dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll.png" width="638" height="532" /></figure>
 <p>This figure shows that the Knicks were horribly managed in the 00s, which of course is no surprise. Besides that, it looks like there is a fairly noisy and weak correlation between wins and payroll. Probably about the kind of relationship you'd expect, given all the other sources of variability.</p>
 <p>I made a bunch more plots as well, available from the dropdown menus below. For the first set of images, showing the results broken down by season, results are again shown with and without the Knicks.</p>
 <form name="seasons" class="inset_top">
@@ -36,7 +36,7 @@ tags:
 <option value="/files/nba_wins_payroll/nba_wins_payroll_2002.png">2002</option>
 </select>
 </form>
-<p><img class="dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll_2011.png" name="nba_wins_payroll_season" width="638" height="532" />
+<figure><img class="img-fluid dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll_2011.png" name="nba_wins_payroll_season" width="638" height="532" /></figure>
 <p>If you flip through all of those seasons, even including the Knicks, there is a positive correlation between wins and payroll <em>every season</em>. Yes, sometimes the correlation is small, like in 2005, but it is certainly always positive. It's not entirely unexpected that this happens to some extent, because if there is a correlation in one year there is probably a correlation in the next year, as players don't move around that quickly. But a correlation every year for a decade? When most teams probably don't have any player on their roster in 2011 that was on their roster in 2002? That's a trend.</p>
 <p>The Knicks are also interesting in this series of images. They start off well below the regression line (higher payroll, lower wins) and remain way out there for the first 9 years. But in 2011, suddenly they cut enough salary and won enough cames to move <em>above</em> the line. So this past season, they actually performed better than you would have expected, given their payroll.</p>
 <p>Another apparent trend is that, in the past few seasons, the correlation between wins and payroll is much higher than it was previously. This does fit in with the meme that stars now want to play with other stars on superteams. Or maybe it could be explained by teams getting smarter. If you have a crappy team, why would you spend lots of money on it? In the long term, it makes more sense to bottom out and rebuild cheaply with the draft. Maybe teams are figuring this out more these days. But I wouldn't read too much into this increased correlation trend, as it's a pretty small sample size. If the pattern continues for a few more seasons, that will be interesting. Of course, the new CBA might so significantly change the financial structure of the league that such comparisons may not be easy.</p>
@@ -76,15 +76,15 @@ tags:
 <option value="/files/nba_wins_payroll/nba_wins_payroll_WAS.png">WAS</option>
 </select>
 </form>
-<p><img class="dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll_ATL.png" name="nba_wins_payroll_team" width="638" height="532" />
+<figure><img class="img-fluid dark-invert" src="/files/nba_wins_payroll/nba_wins_payroll_ATL.png" name="nba_wins_payroll_team" width="638" height="532" /></figure>
 <p>With Boston, you can see pretty clearly where they got the Big 3, which was when their payroll shot up. Atlanta and Cleveland improved as they added payroll, largely due to improvement in their homegrown talent as they added salary to become contenders. Although, this seems almost tautological. Wouldn't teams always only add payroll when they are on the verge of contending?</p>
 <p>Turns out, no. Several teams have the opposite pattern. The Pistons won a title (and had several good playoff runs) with relatively low payrolls, but their decrease in performance in recent years was not matched by a reduction in payroll. Instead, they signed several expensive free agents who didn't work out. New York and Oklahoma City have the largest negative correlations between winning and spending. For the Knicks, this is because of their incredibly expensive yet abysmal teams of the mid 00s. For the Thunder, it's because their current excellent team is built around cheap rookie contracts for their stars.</p>
 <p>There are also several teams who seem to have absolutely no relationship between how much they spend and how much they win. Sacramento's payroll has been surprisingly constant over the past decade, but they have been near the top and bottom of the league in wins. Maybe this is part of the reason they are struggling financially?</p>
 <p>So, in conclusion, there is a clear and unquestionable positive correlation between spending and winning in the NBA. However, the correlation isn't <em>that</em> strong, and there are plenty of outliers every year (not just the Knicks). Furthermore, it seems like the correlation may be increasing in recent years, but there isn't really enough data to be sure.</p>
 <h3>Update: July 11, 2011</h3>
 <p>As a bonus, semi-unrelated conclusion... I <a href="http://www.reddit.com/r/nba/comments/ilkxi/the_correlation_between_spending_and_winning_in/">submitted this article to reddit</a> and got a fair number of visitors. By checking my server access logs, I can see which teams were viewed most from the second drop down menu, which I guess is a marginally interesting indicator of which teams people care about.</p>
-<div style="margin-bottom: 1em;">
-<table>
+<div class="table-responsive">
+<table class="table">
 <tr style="align: left;">
 <th></th>
 <th></th>
