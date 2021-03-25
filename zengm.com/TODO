@@ -8,10 +8,8 @@ blog
   - see "yarn run build" output
 - check every old post
   - jquery in 2013 jump shot post
-- social buttons in posts, like old post.html
-- tag with sport and show icon somehow, like changelog?
 - rss feed
-  - include link somewhere
+  - test
 - 301 redirect from BBGM/FBGM for blog and feed
 
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
@@ -35,6 +33,10 @@ multiple sites
 - or, use JS templates and write bySport/isSport equivalents
 
 redirect basketball-gm.com/files and football-gm.com/files
+
+# later
+
+tag blog posts with sport and show icon somehow, like changelog?
 
 eleventy-plugin-syntaxhighlight
 - can't be used from JS template :(

@@ -32,3 +32,34 @@
     <p><a href="{{ post.url }}">Read more...</a></p>
   {%- endif -%}
 {% endmacro %}
+
+
+{# https://nickjanetakis.com/blog/add-social-share-buttons-to-your-static-site-without-tracking #}
+{# https://crunchify.com/how-to-create-social-sharing-button-without-any-plugin-and-script-loading-wordpress-speed-optimization-goal/ #}
+{% macro socialShareButtons(url_raw, title, position) %}
+  <div class="share-btns-{{position}} d-flex mb-3">
+    {% set share_url = url_raw | absoluteUrl("https://zengm.com/") | urlencode %}
+    {% set twitter_text %}{{ title }} by @ZenGMGames{% endset %}
+    <a class="share-btn share-btn-twitter"
+      rel="noopener"
+      target="_blank"
+      title="Share on Twitter"
+      href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ twitter_text | urlencode }}">
+      <img src="/files/social-icons/twitter.svg" alt="Twitter" width="18" height="18"> {% if position === "bottom" %}Tweet{% endif %}
+    </a>
+    <a class="share-btn share-btn-facebook"
+      rel="noopener"
+      target="_blank"
+      title="Share on Facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}&title={{ title | urlencode }}">
+      <img src="/files/social-icons/facebook.svg" alt="Facebook" width="18" height="18"> {% if position == "bottom" %}Share{% endif %}
+    </a>
+    <a class="share-btn share-btn-reddit"
+      rel="noopener"
+      target="_blank"
+      title="Share on Reddit"
+      href="https://reddit.com/submit?url={{ share_url }}&title={{ title | urlencode }}">
+      <img src="/files/social-icons/reddit.svg" alt="Reddit" width="18" height="18"> {% if position == "bottom" %}Post{% endif %}
+    </a>
+  </div>
+{% endmacro %}
