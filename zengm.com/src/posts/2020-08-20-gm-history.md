@@ -7,7 +7,7 @@ tags:
   - New Feature
 ---
 
-Back in [the old days](/old/), there was no way to switch your team in Basketball GM. If you got fired from your job, it was game over. Try again a new league. In part that was just because I hadn't gotten around to adding that feature yet. But also I thought it might be a good way to ensure a league database never grows too large, because at some point you were bound to get fired.
+Back in [the old days](https://basketball-gm.com/old/), there was no way to switch your team in Basketball GM. If you got fired from your job, it was game over. Try again a new league. In part that was just because I hadn't gotten around to adding that feature yet. But also I thought it might be a good way to ensure a league database never grows too large, because at some point you were bound to get fired.
 
 This turned out to not be a very popular feature. People found it too harsh to be forced to quit playing their league. So eventually I made it so you could switch to a new team after getting fired, and also added the ability to switch at any time in God Mode.
 

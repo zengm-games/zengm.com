@@ -33,7 +33,6 @@ body {
 }
 
 .headline {
-	color: var(--orange);
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -42,14 +41,8 @@ ul {
 	margin-bottom: 0;
 }
 
-ul.main-list li:not(:last-child) {
-	margin-bottom: 1rem;
-}
-
-@media (max-width: 767.98px) {
-	ul.main-list li::before {
-		content: none;
-	}
+ul.main-list li:last-child p {
+	margin-bottom: 0;
 }
 
 .flagship {
@@ -166,17 +159,7 @@ ul.main-list li:not(:last-child) {
 				<p>Our games all follow some core principles:</p>
 
 				<ul class="main-list">
-					<li><span class="headline">Completely free</span><br>
-						No in-game purchases, no "pay to win", no microtransactions. You don't even have to log in or make an account to play.</li>
-
-					<li><span class="headline">Customizable</span><br>
-						Our games are deeply customizable through an in-game "God Mode" or custom league files. We also make our <a href="https://github.com/dumbmatter/gm-games">source</a> <a href="https://github.com/dumbmatter/zengm-legacy">code</a> available so you can see how our games work and play around with the internals.</li>
-
-					<li><span class="headline">Web-based</span><br>
-						Play our games in any web browser on any device. Desktop, laptop, tablet, mobile - it all works. No downloads, no installation, no special permissions needed.</li>
-
-					<li><span class="headline">Minimal micromanagement</span><br>
-						Simulation games need depth, but they need the right amount of depth with a UI to help you make sense of it. We seek to avoid mandatory micromanagement as much as possible. Video games should be fun, not tedious.</li>
+					{% include "principles.njk" %}
 				</ul>
 			</div>
 		</div>
@@ -187,7 +170,9 @@ ul.main-list li:not(:last-child) {
 				
 				<p>ZenGM is currently just one person, me. My name is Jeremy aka dumbmatter. You can reach me at <a href="mailto:jeremy@zengm.com">jeremy@zengm.com</a> or <a href="/contact/">on social media</a>.</p>
 				
-				<p class="mb-0">I started working on <a href="https://baksetball-gm.com/">Basketball GM</a> in 2008. Originally it was a hobby project to scratch an itch and hone my programming skills. Over the years it slowly grew into what it is today, a collection of multiple web-based sports simulation games enjoyed by tens of thousands of users. It's been a crazy ride, and I think the best still lies ahead!</p>
+				<p>I started working on <a href="https://baksetball-gm.com/">Basketball GM</a> in 2008. Originally it was a hobby project to scratch an itch and hone my programming skills. Over the years it slowly grew into what it is today, a collection of multiple web-based sports simulation games enjoyed by tens of thousands of users. It's been a crazy ride, and I think the best still lies ahead!</p>
+
+				<a href="/about/">More info...</a>
 			</div>
 		</div>
 

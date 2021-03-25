@@ -12,10 +12,6 @@ blog
 - tag with sport and show icon somehow, like changelog?
 - rss feed
 
-about page with a bit more detail?
-- link from zengm.com
-- disclaimer from BBGM
-
 pathPrefix and url filter to make all URLs point to zengm.com explicitly
 - https://www.11ty.dev/docs/filters/url/
 - detect /football/ and /basketball/ URLs?
