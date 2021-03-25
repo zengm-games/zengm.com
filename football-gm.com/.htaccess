@@ -7,4 +7,5 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 ErrorDocument 404 /404/index.html
 
+Redirect 301 /blog http://zengm.com/blog
 Redirect 301 /faq/ /manual/faq/
