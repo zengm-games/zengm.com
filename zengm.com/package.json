@@ -2,6 +2,7 @@
   "name": "zengm.com",
   "scripts": {
     "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && bash tools/after-assetgraph.sh",
+    "deploy": "node tools/deploy.js",
     "assetgraph": "rm -rf dist && buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" --sharedbundles",
     "start": "rm -rf _site && concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
     "watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"yarn run sass\"",
@@ -13,6 +14,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "assetgraph-builder": "^8.1.1",
     "chokidar-cli": "^2.1.0",
+    "cloudflare": "^2.7.0",
     "concurrently": "^6.0.0",
     "husky": "=4",
     "lint-staged": ">=10",
