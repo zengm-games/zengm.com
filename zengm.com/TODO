@@ -9,8 +9,8 @@ build performance
   - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
     - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
   - check expiration in htaccess (and get rid of static.htaccess)
-  - minify css/js files
-    - eleventy transform
+  - minify js files
+    - eleventy transform?
   - compress images
 
 basketball-gm.com, football-gm.com

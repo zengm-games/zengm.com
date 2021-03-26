@@ -1,4 +1,5 @@
 //const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const csso = require("csso");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
 const fs = require("fs/promises");
 const htmlmin = require("html-minifier");
@@ -24,6 +25,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");
 	eleventyConfig.addPassthroughCopy("src/css/*.css");
+	eleventyConfig.addPassthroughCopy("src/js/*.js");
 
 	eleventyConfig.addWatchTarget("src/files");
 	eleventyConfig.addWatchTarget("src/css");
@@ -251,9 +253,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.on("afterBuild", async () => {
 		const results = await purgeCSS.purge();
 		for (const result of results) {
-			await fs.writeFile(result.file, result.css);
+			const minifiedCss = csso.minify(result.css).css;
+			await fs.writeFile(result.file, minifiedCss);
 		}
-		console.log("purgeCSS completed");
+		console.log("CSS processing complete");
 	});
 
 	return {

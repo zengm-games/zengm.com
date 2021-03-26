@@ -1,0 +1,302 @@
+yarn run v1.22.5
+warning package.json: No license field
+$ rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && mv dist dist2 && mkdir dist && mv dist2 dist/zengm.com && yarn run split-domains && bash tools/after-assetgraph.sh
+warning package.json: No license field
+$ node-sass -o src/css src/css
+Rendering Complete, saving .css file...
+Wrote CSS to /home/jdscheff/projects/gm-websites/zengm.com/src/css/blog.css
+Rendering Complete, saving .css file...
+Wrote CSS to /home/jdscheff/projects/gm-websites/zengm.com/src/css/main.css
+Wrote 2 CSS files to /home/jdscheff/projects/gm-websites/zengm.com/src/css
+Writing _site/index.html from ./src/index.njk.
+Writing _site/blog/feed.xml from ./src/blog/feed.njk.
+Writing _site/changelog/index.html from ./src/changelog.11ty.js.
+Writing _site/about/index.html from ./src/about.md.
+Writing _site/contact/index.html from ./src/contact.njk.
+Writing _site/404/index.html from ./src/404.njk.
+Writing _site/privacy/index.html from ./src/privacy.njk.
+Writing _site/basketball/faq/index.html from ./src/sport-specific/faq.11ty.js.
+Writing _site/blog/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/meta/index.html from ./src/blog/tag.njk.
+Writing _site/basketball/index.html from ./src/sport-specific/index.11ty.js.
+Writing _site/logos/index.html from ./src/logos/index.njk.
+Writing _site/basketball/manual/index.html from ./src/sport-specific/manual/index.11ty.js.
+Writing _site/basketball/manual/worker-console/index.html from ./src/sport-specific/manual/worker-console.11ty.js.
+Writing _site/basketball/manual/player-mood/index.html from ./src/sport-specific/manual/player-mood.11ty.js.
+Writing _site/basketball/manual/customization/game-attributes/index.html from ./src/sport-specific/manual/customization/game-attributes.11ty.js.
+Writing _site/basketball/manual/customization/draft-class/index.html from ./src/sport-specific/manual/customization/draft-class.11ty.js.
+Writing _site/basketball/manual/customization/json-schema/index.html from ./src/sport-specific/manual/customization/json-schema.11ty.js.
+Writing _site/basketball/manual/customization/players/index.html from ./src/sport-specific/manual/customization/players.11ty.js.
+Writing _site/basketball/manual/customization/names-countries-colleges/index.html from ./src/sport-specific/manual/customization/names-countries-colleges.11ty.js.
+Writing _site/basketball/manual/customization/team-player-data-real/index.html from ./src/sport-specific/manual/customization/team-player-data-real.11ty.js.
+Writing _site/basketball/manual/customization/teams/index.html from ./src/sport-specific/manual/customization/teams.11ty.js.
+Writing _site/basketball/manual/debugging/quota-errors/index.html from ./src/sport-specific/manual/debugging/quota-errors.11ty.js.
+Writing _site/basketball/manual/customization/index.html from ./src/sport-specific/manual/customization/index.11ty.js.
+Writing _site/basketball/manual/debugging/index.html from ./src/sport-specific/manual/debugging/index.11ty.js.
+Writing _site/basketball/manual/debugging/hard-reset/index.html from ./src/sport-specific/manual/debugging/hard-reset.11ty.js.
+Writing _site/blog/2013/12/development-history/index.html from ./src/posts/2013-12-10-development-history.html.
+Writing _site/blog/2011/07/the-correlation-between-spending-and-winning-in-the-nba-trends-by-year-and-by-team/index.html from ./src/posts/2011-07-09-the-correlation-between-spending-and-winning-in-the-nba-trends-by-year-and-by-team.html.
+Writing _site/blog/2013/11/welcome-to-the-basketball-gm-blog/index.html from ./src/posts/2013-11-10-welcome-to-the-basketball-gm-blog.html.
+Writing _site/blog/2014/01/performance-issues-in-old-leagues/index.html from ./src/posts/2014-01-06-performance-issues-in-old-leagues.html.
+Writing _site/blog/2014/01/the-great-realignment/index.html from ./src/posts/2014-01-18-the-great-realignment.html.
+Writing _site/blog/2014/01/anyone-want-to-beta-test-new-draft-scouting-features/index.html from ./src/posts/2014-01-11-anyone-want-to-beta-test-new-draft-scouting-features.html.
+Writing _site/blog/2014/01/new-team-regions-and-names/index.html from ./src/posts/2014-01-21-new-team-regions-and-names.html.
+Writing _site/blog/2014/02/new-improved-trade-ai/index.html from ./src/posts/2014-02-15-new-improved-trade-ai.html.
+Writing _site/blog/2014/02/what-do-skills-mean/index.html from ./src/posts/2014-02-19-what-do-skills-mean.html.
+Writing _site/blog/2014/03/new-feature-achievements/index.html from ./src/posts/2014-03-03-new-feature-achievements.html.
+Writing _site/blog/2013/04/the-effect-of-a-blocked-jump-shot-on-future-jump-shots-in-the-nba/index.html from ./src/posts/2013-04-30-the-effect-of-a-blocked-jump-shot-on-future-jump-shots-in-the-nba.html.
+Writing _site/blog/2014/05/why-ai-teams-are-reluctant-to-trade-away-draft-picks/index.html from ./src/posts/2014-05-16-why-ai-teams-are-reluctant-to-trade-away-draft-picks.html.
+Writing _site/blog/2014/06/new-customization-features-full-league-importexport-and-draft-class-import/index.html from ./src/posts/2014-06-17-new-customization-features-full-league-importexport-and-draft-class-import.html.
+Writing _site/blog/2014/07/new-feature-god-mode/index.html from ./src/posts/2014-07-05-new-feature-god-mode.html.
+Writing _site/blog/2014/09/revamped-player-development-algorithm/index.html from ./src/posts/2014-09-28-revamped-player-development-algorithm.html.
+Writing _site/blog/2014/11/20-faster-game-simulation-try-the-beta-now/index.html from ./src/posts/2014-11-01-20-faster-game-simulation-try-the-beta-now.html.
+Writing _site/blog/2014/12/basketball-gm-3-4-released-20-faster-game-simulations-beta-is-over/index.html from ./src/posts/2014-12-05-basketball-gm-3-4-released-20-faster-game-simulations-beta-is-over.html.
+Writing _site/blog/2015/01/basketball-gm-is-back-on-github-but-not-quite-open-source/index.html from ./src/posts/2015-01-05-basketball-gm-is-back-on-github-but-not-quite-open-source.html.
+Writing _site/blog/2015/01/easy-stats-export/index.html from ./src/posts/2015-01-31-easy-stats-export.html.
+Writing _site/blog/2015/02/simulate-through-multiple-seasons-in-one-click/index.html from ./src/posts/2015-02-07-simulate-through-multiple-seasons-in-one-click.html.
+Writing _site/blog/2015/02/new-feature-statistical-feats/index.html from ./src/posts/2015-02-03-new-feature-statistical-feats.html.
+Writing _site/blog/2015/03/introducing-basketball-gm-gold-no-its-not-evil/index.html from ./src/posts/2015-03-01-introducing-basketball-gm-gold-no-its-not-evil.html.
+Writing _site/blog/2015/03/screenshots/index.html from ./src/posts/2015-03-15-screenshots.html.
+Writing _site/blog/2015/03/new-feature-multi-team-mode/index.html from ./src/posts/2015-03-21-new-feature-multi-team-mode.html.
+Writing _site/blog/2015/03/one-million-seasons/index.html from ./src/posts/2015-03-18-one-million-seasons.html.
+Writing _site/blog/2015/03/customize-random-names/index.html from ./src/posts/2015-03-29-customize-random-names.html.
+Writing _site/blog/2015/04/nba-bracketology-predict-the-nba-playoffs-and-win-20-no-entry-fee/index.html from ./src/posts/2015-04-16-nba-bracketology-predict-the-nba-playoffs-and-win-20-no-entry-fee.html.
+Writing _site/blog/2015/05/fixes-to-player-positions-heights-and-weights/index.html from ./src/posts/2015-05-21-fixes-to-player-positions-heights-and-weights.html.
+Writing _site/blog/2016/02/new-options-in-god-mode/index.html from ./src/posts/2016-02-06-new-options-in-god-mode.html.
+Writing _site/blog/2016/01/injuries-can-have-long-term-effects/index.html from ./src/posts/2016-01-31-injuries-can-have-long-term-effects.html.
+Writing _site/blog/2016/05/improved-shuffle-rosters-for-new-leagues/index.html from ./src/posts/2016-05-28-improved-shuffle-rosters-for-new-leagues.html.
+Writing _site/blog/2016/04/game-simulation-performance-improvements/index.html from ./src/posts/2016-04-12-game-simulation-performance-improvements.html.
+Writing _site/blog/2016/06/more-realistic-player-names-including-international-players/index.html from ./src/posts/2016-06-13-more-realistic-player-names-including-international-players.html.
+Writing _site/blog/2016/06/logos-for-default-teams/index.html from ./src/posts/2016-06-04-logos-for-default-teams.html.
+Writing _site/blog/2016/06/more-customization-options-conferences-divisions-and-playoff-length/index.html from ./src/posts/2016-06-18-more-customization-options-conferences-divisions-and-playoff-length.html.
+Writing _site/blog/2016/07/default-salary-cap-is-now-90m-max-salary-is-now-30m/index.html from ./src/posts/2016-07-09-default-salary-cap-is-now-90m-max-salary-is-now-30m.html.
+Writing _site/blog/2016/08/three-million-seasons-and-one-million-leagues/index.html from ./src/posts/2016-08-16-three-million-seasons-and-one-million-leagues.html.
+Writing _site/blog/2017/03/basketball-gm-4-0-beta/index.html from ./src/posts/2017-03-14-basketball-gm-4-0-beta.html.
+Writing _site/blog/2017/03/basketball-gm-4-0-beta-2/index.html from ./src/posts/2017-03-24-basketball-gm-4-0-beta-2.html.
+Writing _site/blog/2017/04/basketball-gm-4-0-is-here/index.html from ./src/posts/2017-04-01-basketball-gm-4-0-is-here.html.
+Writing _site/blog/2017/07/live-draft-lottery/index.html from ./src/posts/2017-07-08-live-draft-lottery.html.
+Writing _site/blog/2017/04/basketball-gm-4-0-technical-details/index.html from ./src/posts/2017-04-02-basketball-gm-4-0-technical-details.html.
+Writing _site/blog/2014/12/powered-by-the-kirk-hinrich-stack/index.html from ./src/posts/2014-12-21-powered-by-the-kirk-hinrich-stack.html.
+Writing _site/blog/2017/09/more-extreme-heights/index.html from ./src/posts/2017-09-09-more-extreme-heights.html.
+Writing _site/blog/2017/12/most-improved-player-award/index.html from ./src/posts/2017-12-04-most-improved-player-award.html.
+Writing _site/blog/2017/04/making-a-game-10x-faster-changes-how-people-play-it/index.html from ./src/posts/2017-04-07-making-a-game-10x-faster-changes-how-people-play-it.html.
+Writing _site/blog/2017/10/even-more-advanced-stats/index.html from ./src/posts/2017-10-06-even-more-advanced-stats.html.
+Writing _site/blog/2017/10/you-guys-like-stats-right/index.html from ./src/posts/2017-10-02-you-guys-like-stats-right.html.
+Writing _site/blog/2018/03/player-ratings-and-development-changes-are-live/index.html from ./src/posts/2018-03-07-player-ratings-and-development-changes-are-live.html.
+Writing _site/blog/2018/04/performance-improvements-in-large-leagues/index.html from ./src/posts/2018-04-11-performance-improvements-in-large-leagues.md.
+Writing _site/blog/2018/02/player-ratings-and-development-beta/index.html from ./src/posts/2018-02-07-player-ratings-and-development-beta.html.
+Writing _site/blog/2018/04/customizable-stadium-capacities/index.html from ./src/posts/2018-04-07-customizable-stadium-capacities.md.
+Writing _site/blog/2018/05/relatives-fathers-sons-and-brothers/index.html from ./src/posts/2018-05-03-relatives-fathers-sons-and-brothers.md.
+Writing _site/blog/2018/06/difficulty-levels/index.html from ./src/posts/2018-06-24-difficulty-levels.md.
+Writing _site/blog/2018/05/draft-day-trades/index.html from ./src/posts/2018-05-11-draft-day-trades.md.
+Writing _site/blog/2018/06/ten-year-anniversary/index.html from ./src/posts/2018-06-22-ten-year-anniversary.md.
+Writing _site/blog/2018/09/a-few-recent-minor-improvements/index.html from ./src/posts/2018-09-02-a-few-recent-minor-improvements.md.
+Writing _site/blog/2018/10/untouchable-players-and-picks-in-trades/index.html from ./src/posts/2018-10-15-untouchable-players-and-picks-in-trades.md.
+Writing _site/blog/2018/10/lots-of-small-ui-improvements/index.html from ./src/posts/2018-10-07-lots-of-small-ui-improvements.md.
+Writing _site/blog/2018/11/more-realistic-new-leagues/index.html from ./src/posts/2018-11-03-more-realistic-new-leagues.md.
+Writing _site/blog/2018/11/new-options-hard-soft-cap-and-playoff-byes/index.html from ./src/posts/2018-11-11-new-options-hard-soft-cap-and-playoff-byes.md.
+Writing _site/blog/2019/01/2018-was-awesome/index.html from ./src/posts/2019-01-01-2018-was-awesome.md.
+Writing _site/blog/2019/04/welcome/index.html from ./src/posts/2019-04-27-welcome.md.
+Writing _site/blog/2019/07/far-future-draft-classes/index.html from ./src/posts/2019-07-21-far-future-draft-classes.md.
+Writing _site/blog/2019/05/draft-lottery-updates/index.html from ./src/posts/2019-05-01-draft-lottery-updates.md.
+Writing _site/blog/2019/05/frivolities/index.html from ./src/posts/2019-05-27-frivolities.md.
+Writing _site/blog/2019/07/achievements/index.html from ./src/posts/2019-08-14-achievements.md.
+Writing _site/blog/2019/07/so-you-want-to-write-a-sports-sim-game/index.html from ./src/posts/2019-07-08-so-you-want-to-write-a-sports-sim-game.md.
+Writing _site/blog/2019/08/a-few-small-improvements/index.html from ./src/posts/2019-08-17-a-few-small-improvements.md.
+Writing _site/blog/2019/08/foot-on-the-line/index.html from ./src/posts/2019-08-16-foot-on-the-line.md.
+Writing _site/blog/2019/07/new-achievements/index.html from ./src/posts/2019-07-28-new-achievements.md.
+Writing _site/blog/2019/09/owner-messages-revamp/index.html from ./src/posts/2019-09-03-owner-messages-revamp.md.
+Writing _site/blog/2019/08/schedule-playoffs-improvements/index.html from ./src/posts/2019-08-31-schedule-playoffs-improvements.md.
+Writing _site/blog/2019/09/browserify-to-rollup/index.html from ./src/posts/2019-09-17-browserify-to-rollup.md.
+Writing _site/blog/2019/09/all-star-game/index.html from ./src/posts/2019-09-30-all-star-game.md.
+Writing _site/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/index.html from ./src/posts/2019-10-04-i-fucked-up-and-the-importance-of-sanity-checks.md.
+Writing _site/blog/2019/10/world-domination/index.html from ./src/posts/2019-10-19-world-domination.md.
+Writing _site/blog/2019/10/improvements-injury-system/index.html from ./src/posts/2019-10-27-improvements-injury-system.md.
+Writing _site/blog/2019/11/game-simulation-ovr-beta/index.html from ./src/posts/2019-11-09-game-simulation-ovr-beta.md.
+Writing _site/blog/2019/10/new-dashboard-ui/index.html from ./src/posts/2019-10-22-new-dashboard-ui.md.
+Writing _site/blog/2019/11/team-ratings/index.html from ./src/posts/2019-11-20-team-ratings.md.
+Writing _site/blog/2020/01/porting-to-typescript/index.html from ./src/posts/2020-01-30-porting-to-typescript.md.
+Writing _site/blog/2020/01/2019-was-awesome/index.html from ./src/posts/2020-01-01-2019-was-awesome.md.
+Writing _site/blog/2020/02/colleges/index.html from ./src/posts/2020-02-03-colleges.md.
+Writing _site/blog/2020/04/real-players/index.html from ./src/posts/2020-04-25-real-players.md.
+Writing _site/blog/2020/02/acquired-column-roster/index.html from ./src/posts/2020-02-29-acquired-column-roster.md.
+Writing _site/blog/2020/05/legends-leagues/index.html from ./src/posts/2020-05-19-legends-leagues.md.
+Writing _site/blog/2020/05/beta-real-rosters-back-to-1956/index.html from ./src/posts/2020-05-09-beta-real-rosters-back-to-1956.md.
+Writing _site/blog/2020/04/real-rosters-back-to-2005/index.html from ./src/posts/2020-04-30-real-rosters-back-to-2005.md.
+Writing _site/blog/2020/05/new-frivolities/index.html from ./src/posts/2020-05-26-new-frivolities.md.
+Writing _site/blog/2020/05/more-draft-lottery-types/index.html from ./src/posts/2020-05-10-more-draft-lottery-types.md.
+Writing _site/blog/2020/06/news-feed/index.html from ./src/posts/2020-06-07-news-feed.md.
+Writing _site/blog/2020/06/import-export-players/index.html from ./src/posts/2020-06-26-import-export-players.md.
+Writing _site/blog/2020/06/logos-for-the-new-teams/index.html from ./src/posts/2020-06-29-logos-for-the-new-teams.html.
+Writing _site/blog/2015/12/two-million-seasons/index.html from ./src/posts/2015-12-28-two-million-seasons.html.
+Writing _site/blog/2020/06/league-creation-options/index.html from ./src/posts/2020-06-13-league-creation-options.md.
+Writing _site/blog/2020/06/real-rosters-back-to-1947-contraction/index.html from ./src/posts/2020-06-03-real-rosters-back-to-1947-contraction.md.
+Writing _site/blog/2020/07/recent-development-av-kickers-punters-future/index.html from ./src/posts/2020-07-09-recent-development-av-kickers-punters-future.md.
+Writing _site/blog/2020/08/smarter-contract-generation/index.html from ./src/posts/2020-08-10-smarter-contract-generation.md.
+Writing _site/blog/2020/07/game-sim-realism/index.html from ./src/posts/2020-07-23-game-sim-realism.md.
+Writing _site/blog/2020/08/jersey-numbers/index.html from ./src/posts/2020-08-01-jersey-numbers.md.
+Writing _site/blog/2020/07/better-customization-player-names-countries-colleges/index.html from ./src/posts/2020-07-27-better-customization-player-names-countries-colleges.md.
+Writing _site/blog/2020/08/elam-ending/index.html from ./src/posts/2020-08-26-elam-ending.md.
+Writing _site/blog/2020/08/spectator-mode/index.html from ./src/posts/2020-08-22-spectator-mode.md.
+Writing _site/blog/2020/08/gm-history/index.html from ./src/posts/2020-08-20-gm-history.md.
+Writing _site/blog/2020/10/trade-deadline/index.html from ./src/posts/2020-10-05-trade-deadline.md.
+Writing _site/blog/2020/09/player-mood/index.html from ./src/posts/2020-09-17-player-mood.md.
+Writing _site/blog/2020/08/game-highs/index.html from ./src/posts/2020-08-29-game-highs.md.
+Writing _site/blog/2020/10/player-mood-ai-re-signings/index.html from ./src/posts/2020-10-25-player-mood-ai-re-signings.md.
+Writing _site/blog/2020/10/force-win/index.html from ./src/posts/2020-10-18-force-win.md.
+Writing _site/blog/2020/10/start-any-time/index.html from ./src/posts/2020-10-17-start-any-time.md.
+Writing _site/blog/2020/10/nostalgia/index.html from ./src/posts/2020-10-20-nostalgia.md.
+Writing _site/blog/2020/11/trade-frivolities/index.html from ./src/posts/2020-11-19-trade-frivolities.md.
+Writing _site/blog/2021/01/2020-was-awesome-for-bbgm/index.html from ./src/posts/2021-01-01-2020-was-awesome-for-bbgm.md.
+Writing _site/blog/2021/01/real-draft-prosect-ratings/index.html from ./src/posts/2021-01-09-real-draft-prosect-ratings.md.
+Writing _site/blog/2020/11/settings-redesign/index.html from ./src/posts/2020-11-08-settings-redesign.md.
+Writing _site/blog/2021/01/full-time-job/index.html from ./src/posts/2021-01-29-full-time-job.md.
+Writing _site/blog/2020/11/trade-details/index.html from ./src/posts/2020-11-15-trade-details.md.
+Writing _site/blog/2021/03/rescaled-real-player-development-determinism/index.html from ./src/posts/2021-03-16-rescaled-real-player-development-determinism.md.
+Writing _site/blog/2021/02/head-to-head/index.html from ./src/posts/2021-02-09-head-to-head.md.
+Writing _site/blog/2021/02/customizable-tiebreakers/index.html from ./src/posts/2021-02-15-customizable-tiebreakers.md.
+Writing _site/blog/2021/03/draft-order/index.html from ./src/posts/2021-03-18-draft-order.md.
+Writing _site/football/faq/index.html from ./src/sport-specific/faq.11ty.js.
+Writing _site/blog/1/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/technical/index.html from ./src/blog/tag.njk.
+Writing _site/football/index.html from ./src/sport-specific/index.11ty.js.
+Writing _site/football/manual/index.html from ./src/sport-specific/manual/index.11ty.js.
+Writing _site/football/manual/worker-console/index.html from ./src/sport-specific/manual/worker-console.11ty.js.
+Writing _site/football/manual/player-mood/index.html from ./src/sport-specific/manual/player-mood.11ty.js.
+Writing _site/football/manual/customization/game-attributes/index.html from ./src/sport-specific/manual/customization/game-attributes.11ty.js.
+Writing _site/football/manual/customization/draft-class/index.html from ./src/sport-specific/manual/customization/draft-class.11ty.js.
+Writing _site/football/manual/customization/json-schema/index.html from ./src/sport-specific/manual/customization/json-schema.11ty.js.
+Writing _site/football/manual/customization/players/index.html from ./src/sport-specific/manual/customization/players.11ty.js.
+Writing _site/football/manual/customization/names-countries-colleges/index.html from ./src/sport-specific/manual/customization/names-countries-colleges.11ty.js.
+Writing _site/football/manual/customization/teams/index.html from ./src/sport-specific/manual/customization/teams.11ty.js.
+Writing _site/football/manual/debugging/quota-errors/index.html from ./src/sport-specific/manual/debugging/quota-errors.11ty.js.
+Writing _site/football/manual/customization/index.html from ./src/sport-specific/manual/customization/index.11ty.js.
+Writing _site/football/manual/debugging/index.html from ./src/sport-specific/manual/debugging/index.11ty.js.
+Writing _site/football/manual/debugging/hard-reset/index.html from ./src/sport-specific/manual/debugging/hard-reset.11ty.js.
+Writing _site/hockey/faq/index.html from ./src/sport-specific/faq.11ty.js.
+Writing _site/blog/2/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/non-bbgm/index.html from ./src/blog/tag.njk.
+Writing _site/hockey/index.html from ./src/sport-specific/index.11ty.js.
+Writing _site/hockey/manual/index.html from ./src/sport-specific/manual/index.11ty.js.
+Writing _site/hockey/manual/worker-console/index.html from ./src/sport-specific/manual/worker-console.11ty.js.
+Writing _site/hockey/manual/player-mood/index.html from ./src/sport-specific/manual/player-mood.11ty.js.
+Writing _site/hockey/manual/customization/game-attributes/index.html from ./src/sport-specific/manual/customization/game-attributes.11ty.js.
+Writing _site/hockey/manual/customization/draft-class/index.html from ./src/sport-specific/manual/customization/draft-class.11ty.js.
+Writing _site/hockey/manual/customization/json-schema/index.html from ./src/sport-specific/manual/customization/json-schema.11ty.js.
+Writing _site/hockey/manual/customization/players/index.html from ./src/sport-specific/manual/customization/players.11ty.js.
+Writing _site/hockey/manual/customization/names-countries-colleges/index.html from ./src/sport-specific/manual/customization/names-countries-colleges.11ty.js.
+Writing _site/hockey/manual/customization/teams/index.html from ./src/sport-specific/manual/customization/teams.11ty.js.
+Writing _site/hockey/manual/debugging/quota-errors/index.html from ./src/sport-specific/manual/debugging/quota-errors.11ty.js.
+Writing _site/hockey/manual/customization/index.html from ./src/sport-specific/manual/customization/index.11ty.js.
+Writing _site/hockey/manual/debugging/index.html from ./src/sport-specific/manual/debugging/index.11ty.js.
+Writing _site/hockey/manual/debugging/hard-reset/index.html from ./src/sport-specific/manual/debugging/hard-reset.11ty.js.
+Writing _site/blog/3/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/statistics/index.html from ./src/blog/tag.njk.
+Writing _site/blog/4/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/nba/index.html from ./src/blog/tag.njk.
+Writing _site/blog/5/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/performance/index.html from ./src/blog/tag.njk.
+Writing _site/blog/6/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/the-great-realignment/index.html from ./src/blog/tag.njk.
+Writing _site/blog/7/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/beta/index.html from ./src/blog/tag.njk.
+Writing _site/blog/8/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/ai/index.html from ./src/blog/tag.njk.
+Writing _site/blog/9/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/trades/index.html from ./src/blog/tag.njk.
+Writing _site/blog/10/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/simulation/index.html from ./src/blog/tag.njk.
+Writing _site/blog/11/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/achievements/index.html from ./src/blog/tag.njk.
+Writing _site/blog/12/index.html from ./src/blog/index.njk.
+Writing _site/blog/tag/new-feature/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/customization/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/god-mode/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/gold/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/multi-team-mode/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/milestone/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/player-names/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/ui/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/finances/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/project-iverson/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/safari/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/draft/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/awards/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/stats/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/advanced-stats/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/player-ratings/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/player-development/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/bug-fix/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/league-creation/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/realism/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/frivolities/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/all-star/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/injuries/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/game-simulation/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/real-players/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/news-feed/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/challenge-mode/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/real-player-development-determinism/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/contracts/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/github/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/trade/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/player-mood/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/settings/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/head-to-head/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/tiebreakers/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/nfl/index.html from ./src/blog/tag.njk.
+Writing _site/blog/tag/nhl/index.html from ./src/blog/tag.njk.
+Copied 283 files / Wrote 238 files in 3.80 seconds (16.0ms each, v0.12.1)
+purgeCSS completed
+warning package.json: No license field
+$ rm -rf dist && mkdir dist && node --max-old-space-size=24000 node_modules/.bin/buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist/zengm.com --subsetfonts --optimizeimages --browsers ">0.1%, not ie <= 9" --sharedbundles
+Guessing --root from input files: file:///home/jdscheff/projects/gm-websites/zengm.com/_site
+ ✔ 0.002 secs: logEvents
+ ✔ 1.759 secs: loadAssets
+ ✔ 0.005 secs: bundleWebpack
+ ✔ 0.385 secs: populate
+ ✔ 0.029 secs: bundleSystemJs
+ ✔ 0.033 secs: bundleRequireJs
+ ⚠ WARN: ENOENT: no such file or directory, open '_site/files/foot-on-the-line/nba-logos/index.html'
+ ⚠ WARN: inline JavaScript in _site/blog/2021/01/2020-was-awesome-for-bbgm/index.html - Parse error in inline JavaScript in _site/blog/2021/01/2020-was-awesome-for-bbgm/index.html
+         Adjacent JSX elements must be wrapped in an enclosing tag (30:0)
+         Including assets:
+             _site/blog/2021/01/2020-was-awesome-for-bbgm/index.html
+         
+ ⚠ WARN: inline JavaScript in _site/blog/2020/01/2019-was-awesome/index.html - Parse error in inline JavaScript in _site/blog/2020/01/2019-was-awesome/index.html
+         Adjacent JSX elements must be wrapped in an enclosing tag (28:0)
+         Including assets:
+             _site/blog/2020/01/2019-was-awesome/index.html
+         
+ ✔ 203.994 secs: populate
+ ✔ 6.676 secs: populate
+ ✔ 54.654 secs: checkIncompatibleTypes
+ ✔ 0.046 secs: removeRelations
+ ⚠ WARN: ENOENT: no such file or directory, open '_site/files/foot-on-the-line/nba-logos/index.html'
+ ✔ 28.699 secs: populate
+ ✔ 31.420 secs: populate
+ ✔ 35.180 secs: removeRelations
+ ✔ 37.585 secs: addDataVersionAttributeToHtmlElement
+ ✔ 39.355 secs: stripDebug
+ ✔ 82.388 secs: externalizeRelations
+ ✔ 0.005 secs: mergeIdenticalAssets
+ ✔ 0.222 secs: processImages
+ ✔ 36.888 secs: spriteBackgroundImages
+ ✔ 95.889 secs: processImages
+ ✔ 35.330 secs: minifySvgAssetsWithSvgo
+ ✔ 66.764 secs: removeUnreferencedAssets
+ ✔ 37.101 secs: convertCssImportsToHtmlStyles
+ ✔ 36.266 secs: removeDuplicateHtmlStyles
+ ✔ 85.902 secs: mergeIdenticalAssets
+ ℹ INFO: autoprefixer transform: Found 40 css assets, but no autoprefixer module is available. Please use npm to install autoprefixer in your project so the autoprefixer transform can require it.
+         Cannot find module 'autoprefixer/package.json'
+         Require stack:
+         - node_modules/assetgraph/lib/transforms/autoprefixer.js
+         - node_modules/assetgraph/lib/AssetGraph.js
+         - node_modules/assetgraph-builder/lib/AssetGraph.js
+         - node_modules/assetgraph-builder/bin/buildProduction
+ ✔ 33.365 secs: autoprefixer_
+ ✔ 0.000 secs: cloneForEachConditionValue
+ ✔ 31.717 secs: inlineHtmlTemplates
+ ✔ 2896.130 secs: bundleRelations
+ ✔ 9.464 secs: splitCssIfIeLimitIsReached
