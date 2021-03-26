@@ -1,8 +1,6 @@
 easter egg on BBGM page?
 - https://discord.com/channels/@me/682666234604552221/824846659396960256
 
-delete old wordpress files
-
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
 
 build performance
@@ -27,15 +25,11 @@ sidebar menu
 
 https://github.com/zengm-games
 
-multiple sites
-- https://github.com/11ty/eleventy/issues/662
-- https://www.11ty.dev/docs/pages-from-data/
-  - data could just be the names of the sports, then whatever template language i use could do if/else inline
-- or, use JS templates and write bySport/isSport equivalents
-
-redirect basketball-gm.com/files and football-gm.com/files
+404 pages on basketball-gm.com and football-gm.com
 
 # later
+
+redirect basketball-gm.com/files and football-gm.com/files
 
 tag blog posts with sport and show icon somehow, like changelog?
 

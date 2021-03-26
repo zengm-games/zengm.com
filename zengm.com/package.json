@@ -1,7 +1,7 @@
 {
   "name": "zengm.com",
   "scripts": {
-    "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && yarn run split-domains && bash tools/after-assetgraph.sh",
+    "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && mv dist dist2 && mkdir dist && mv dist2 dist/zengm.com && yarn run split-domains && bash tools/after-assetgraph.sh",
     "build-fast": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && rm -rf dist && mkdir dist && cp -r _site dist/zengm.com && yarn run split-domains && bash tools/after-assetgraph.sh",
     "split-domains": "node tools/fix-links.js && mv dist/zengm.com/basketball dist/basketball-gm.com && mv dist/zengm.com/football dist/football-gm.com",
     "deploy": "node tools/deploy.js",
