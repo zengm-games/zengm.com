@@ -1,3 +1,6 @@
+easter egg on BBGM page?
+- https://discord.com/channels/@me/682666234604552221/824846659396960256
+
 delete old wordpress files
 
 https://github.com/maxboeck/mxb/blob/master/.eleventy.js
@@ -7,14 +10,15 @@ build performance
 - alternatives
   - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
     - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
-  - check expiration in htaccess
+  - check expiration in htaccess (and get rid of static.htaccess)
   - minify css/js
   - compress images
 
 basketball-gm.com, football-gm.com
 - include .htaccess files for basketball-gm.com and football-gm.com in build
 - TEST
-- update deploy script, make sure it looks right for new domains
+  - dry-run deploy script
+  - on bbgm deploy, skip bbgm-ads, old, and prebid folders
 
 sidebar menu
 - use eleventyNavigation?

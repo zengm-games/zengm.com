@@ -1,0 +1,17 @@
+Redirect 301 /ads.txt https://a.pub.network/football-gm-com/ads.txt
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/(.well-known)(/|$)
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+ErrorDocument 404 /404/index.html
+
+Redirect 301 /about http://zengm.com/about
+Redirect 301 /advertise http://zengm.com/contact
+Redirect 301 /blog http://zengm.com/blog
+Redirect 301 /contact https://zengm.com/contact
+Redirect 301 /faq/ /manual/faq/
+Redirect 301 /feed/index.xml https://zengm.com/blog/feed.xml
+Redirect 301 /privacy-policy http://zengm.com/privacy
+Redirect 301 /share http://zengm.com

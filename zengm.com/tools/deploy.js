@@ -35,6 +35,9 @@ const deploy = async domain => {
 
 	console.log("Copying other files...");
 	const excludes = [...copyAndKeep, "--exclude", ".well-known"];
+	if (domain === "basketball-gm.com") {
+		excludes.push("bbgm-ads", "old", "prebid");
+	}
 	await mySpawn("rsync", [
 		"-vhrl",
 		"--delete",
