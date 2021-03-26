@@ -1,6 +1,7 @@
 //const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
 const fs = require("fs/promises");
+const htmlmin = require("html-minifier");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const PurgeCSS = require("purgecss").default;
@@ -26,6 +27,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addWatchTarget("src/files");
 	eleventyConfig.addWatchTarget("src/css");
+	eleventyConfig.addWatchTarget("src/js");
 	eleventyConfig.setUseGitIgnore(false);
 	eleventyConfig.addFilter("blogPostDateURL", function (date) {
 		const year = date.getUTCFullYear();
@@ -227,6 +229,23 @@ module.exports = function (eleventyConfig) {
 		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="mr-1">Hockey</a>
     </div>
 </div>`;
+	});
+
+	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
+		if (outputPath.endsWith(".html")) {
+			const minified = htmlmin.minify(content, {
+				collapseBooleanAttributes: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true,
+				removeComments: true,
+				useShortDoctype: true,
+			});
+			return minified;
+		}
+
+		return content;
 	});
 
 	eleventyConfig.on("afterBuild", async () => {

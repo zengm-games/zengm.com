@@ -261,3 +261,10 @@ pre {
 .light #theme-switch:hover {
 	filter: invert(0);
 }
+
+#theme-switch {
+	background-color: inherit;
+}
+#theme-switch img {
+	display: none;
+}

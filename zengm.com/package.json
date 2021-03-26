@@ -19,6 +19,7 @@
     "cloudflare": "^2.7.0",
     "concurrently": "^6.0.0",
     "glob": "^7.1.6",
+    "html-minifier": "^4.0.0",
     "husky": "=4",
     "lint-staged": ">=10",
     "markdown-it-attrs": "^4.0.0",
