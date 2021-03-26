@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyPluginRSS);
 
 	eleventyConfig.addPassthroughCopy("src/.htaccess");
+	eleventyConfig.addPassthroughCopy("src/basketball/.htaccess");
+	eleventyConfig.addPassthroughCopy("src/football/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");
 	eleventyConfig.addPassthroughCopy("src/css/*.css");
 	eleventyConfig.addPassthroughCopy("src/js/*.js");
