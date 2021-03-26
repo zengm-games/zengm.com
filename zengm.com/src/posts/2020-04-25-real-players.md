@@ -12,7 +12,7 @@ Basketball GM has always been made up of randomly generated players on fake team
 
 Today, I'm releasing a new version of Basketball GM that, for the first time, includes real players built-in. Just pick whichever option you want <a href="https://play.basketball-gm.com/">when creating a new league</a>:
 
-<figure><a href="https://play.basketball-gm.com/"><img alt="Screenshot of new league creation optoins" src="/files/dashboard-new-league-buttons.png" class="img-fluid" /></a></figure>
+<figure><a href="https://play.basketball-gm.com/"><img alt="Screenshot of new league creation optoins" src="/files/dashboard-new-league-buttons.png" class="img-fluid"></a></figure>
 
 <!--more-->
 

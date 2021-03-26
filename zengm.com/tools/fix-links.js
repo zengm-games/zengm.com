@@ -5,6 +5,8 @@ const posthtml = require("posthtml");
 const urls = require("posthtml-urls");
 const util = require("util");
 
+// See also myHTMLToAbsoluteUrls
+
 const globAsync = util.promisify(glob);
 
 const fixLinks = async () => {
@@ -17,8 +19,8 @@ const fixLinks = async () => {
 
 	const options = {
 		eachURL: url => {
-			// We only care about relative links
-			if (url.startsWith("http://") || url.startsWith("https://")) {
+			// We only care about relative links to the root (no http://, no mailto:, no #whatever, etc)
+			if (!url.startsWith("/")) {
 				// console.log("Leave alone", url);
 				return url;
 			}

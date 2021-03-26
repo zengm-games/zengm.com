@@ -23,7 +23,7 @@ One caveat with this. Previously, your past teams were not tracked at all. So fo
 
 There's also another new feature! Like I mentioned above, the original ways to change your team were either to get fired or use God Mode. There of course is another way that real GMs switch teams - they do a really good job and get hired by another team. No, this is how it happens in Basketball GM too:
 
-<figure><img src="/files/job-offers.png" class="img-fluid" /></figure>
+<figure><img src="/files/job-offers.png" class="img-fluid"></figure>
 
 It's based on the score you see in your annual performance evaluation. The higher your score, the better your odds of getting offers from other teams, up to 50% for a perfect score.
 

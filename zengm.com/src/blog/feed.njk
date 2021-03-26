@@ -37,13 +37,13 @@
       <published>{{ post.date | dateToRfc3339 }}</published>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
-      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      <content type="html">{{ post.templateContent | myHTMLToAbsoluteUrls }}</content>
       {% for tag in post.data.tags %}
         {% if tag != "post" %}
           <category term="{{ tag }}"/>
         {% endif %}
       {% endfor %}
-      <summary type="html">{{ blogMacros.postExcerpt(post) | htmlToAbsoluteUrls(absolutePostUrl) }}</summary>
+      <summary type="html">{{ blogMacros.postExcerpt(post) | myHTMLToAbsoluteUrls }}</summary>
     </entry>
   {% endfor %}
 </feed>

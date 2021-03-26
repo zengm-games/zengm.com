@@ -4,6 +4,8 @@ const fs = require("fs/promises");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const PurgeCSS = require("purgecss").default;
+const posthtml = require("posthtml");
+const urls = require("posthtml-urls");
 const bySport = require("./src/util/bySport");
 const sportSpecificURL = require("./src/util/sportSpecificURL");
 
@@ -95,6 +97,47 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("renderMarkdownInline", function (rawString) {
 		return mdRender.renderInline(rawString);
 	});
+
+	// Replaces htmlToAbsoluteUrls from eleventy-plugin-rss, and handles /basketball/ and /football/ URLs.
+	// See also tools/fix-links.js
+	eleventyConfig.addNunjucksAsyncFilter(
+		"myHTMLToAbsoluteUrls",
+		async (html, callback) => {
+			try {
+				const options = {
+					eachURL: url => {
+						// We only care about relative links to the root (no http://, no mailto:, no #whatever, etc)
+						if (!url.startsWith("/")) {
+							// console.log("Leave alone", url);
+							return url;
+						}
+
+						// Leave URL alone if it's a link to the same domain as the current file. Otherwise, prefix with domain.
+						let urlSite;
+						let prefix;
+						if (url.startsWith("/basketball/")) {
+							urlSite = "https://basketball-gm.com";
+							prefix = "/basketball";
+						} else if (url.startsWith("/football/")) {
+							urlSite = "https://football-gm.com";
+							prefix = "/football";
+						} else {
+							urlSite = "https://zengm.com";
+							prefix = "";
+						}
+
+						// console.log("Rewrite", url, "=>", `${urlSite}${url.replace(prefix, "")}`);
+						return `${urlSite}${url.replace(prefix, "")}`;
+					},
+				};
+
+				const result = await posthtml().use(urls(options)).process(html);
+				callback(null, result.html);
+			} catch (error) {
+				callback(error);
+			}
+		},
+	);
 
 	eleventyConfig.addShortcode(
 		"bySport",

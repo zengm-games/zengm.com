@@ -15,7 +15,7 @@ module.exports = class {
 
 You can see a player's mood in many places, such as on the roster page or on player profile pages. Player mood looks like this:
 
-<figure><img src="/files/mood-1.png" class="img-fluid" /></figure>
+<figure><img src="/files/mood-1.png" class="img-fluid"></figure>
 
 There are 3 things you see from left to right: mood score, mood traits, and probability they will be willing to re-sign.
 
@@ -35,7 +35,7 @@ Mood traits are "all or nothing" - every player with the "Money ($)" trait gets 
 
 If you click the mood button, you see a popup with more detail, including the individual components that sum up to the overall **mood score**:
 
-<figure><img src="/files/mood-2.png" class="img-fluid" /></figure>
+<figure><img src="/files/mood-2.png" class="img-fluid"></figure>
 
 Currently these components are:
 

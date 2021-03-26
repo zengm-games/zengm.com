@@ -12,11 +12,7 @@ build performance
   - compress images
 
 basketball-gm.com, football-gm.com
-- check all the URLs on basketball-gm.com and football-gm.com - make sure they are redirected to zengm.com
 - include .htaccess files for basketball-gm.com and football-gm.com in build
-- check rss feed URLs too, they are processed differently to make them absolute already
-  - use same logic in feed.xml
-  - see https://github.com/11ty/eleventy-plugin-rss/blob/master/src/htmlToAbsoluteUrls.js
 - TEST
 - update deploy script, make sure it looks right for new domains
 

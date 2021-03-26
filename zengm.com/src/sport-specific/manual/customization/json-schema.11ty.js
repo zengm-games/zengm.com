@@ -23,7 +23,7 @@ module.exports = class {
 	appear (and probably this is what brought you to this page):
 </p>
 
-<figure><img src="/files/json-schema-1.png" class="img-fluid" /></figure>
+<figure><img src="/files/json-schema-1.png" class="img-fluid"></figure>
 
 <p>
 	This means there are some problems with your league file. Maybe some required
@@ -40,14 +40,14 @@ module.exports = class {
 	it. This will open up a new panel showing some debugging information:
 </p>
 
-<figure><img src="/files/json-schema-2.png" class="img-fluid" /></figure>
+<figure><img src="/files/json-schema-2.png" class="img-fluid"></figure>
 
 <p>
 	Click the arrow below "JSON Schema validation errors" to see the details for
 	each of the two errors:
 </p>
 
-<figure><img src="/files/json-schema-3.png" class="img-fluid" /></figure>
+<figure><img src="/files/json-schema-3.png" class="img-fluid"></figure>
 
 <p>
 	The first error means that the "tid" property of the 4th team is supposed to
