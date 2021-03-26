@@ -22,7 +22,7 @@
         <div class="top-nav-item">
           {% if parent %}
             <a href="{{ parent | parentURL(sport) }}">{{ parent | parentTitle }}</a>
-          {% else %}
+          {% elif not sport %}
             {{ title }}
           {% endif %}
         </div>
@@ -41,7 +41,7 @@
   {% endif %}
 
   <main role="main" class="{% if fullWidth %}mx-3{% else %}container-lg{% endif %}">
-    {% if parent %}
+    {% if sport or parent %}
       <h1>{{ title }}</h1>
       {% if not hideLineUnderTitle %}
         <hr>

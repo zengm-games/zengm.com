@@ -1,11 +1,15 @@
 const bySport = require("../../util/bySport");
+const eleventyComputed = require("../../_data/eleventyComputed");
 const base = require("../base");
 
 module.exports = class {
 	data() {
 		return {
 			...base("js"),
-			title: "Manual",
+			eleventyComputed: {
+				...eleventyComputed,
+				title: data => `${data.gameName} Manual`,
+			},
 		};
 	}
 
@@ -48,7 +52,7 @@ module.exports = class {
 			sport,
 		);
 
-		return `<h1>${gameName} Manual</h1><hr><p>${gameName} is a completely free sports management simulation game. You are the general manager of a ${sport} team, tasked with building your roster to compete for a championship while managing your finances. As of now, your goal can be whatever you want: winning the most championships, making the most profit, developing players from rookies to stars, etc. You can make an unlimited number of different leagues from <a href="${websitePlay}">the dashboard</a>, each one with a different set of random players.</p>
+		return `<p>${gameName} is a completely free sports management simulation game. You are the general manager of a ${sport} team, tasked with building your roster to compete for a championship while managing your finances. As of now, your goal can be whatever you want: winning the most championships, making the most profit, developing players from rookies to stars, etc. You can make an unlimited number of different leagues from <a href="${websitePlay}">the dashboard</a>, each one with a different set of random players.</p>
 <h2>User Interface</h2>
 <p>From within a league, the most important user interface element is the Play Menu, which you can access with the big green Play button at the top of the screen. Any context-dependent action, like playing a game or moving from one phase to another, is done from the Play Menu. Everything else about the user interface should (hopefully) be self-explanitory.</p>
 <h2>Gameplay Overview</h2>
