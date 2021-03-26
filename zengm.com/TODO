@@ -1,8 +1,6 @@
 build performance
 - 25 minutes
 - alternatives
-  - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
-    - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
   - check expiration in htaccess (and get rid of static.htaccess)
 
 basketball-gm.com, football-gm.com

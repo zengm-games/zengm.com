@@ -2,6 +2,7 @@
 const csso = require("csso");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
 const fs = require("fs/promises");
+const hasha = require("hasha");
 const htmlmin = require("html-minifier");
 const MarkdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -44,29 +45,39 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.setLibrary("md", mdRender);
 
+	// Similar to https://github.com/google/eleventy-high-performance-blog/blob/eb1f9c11763022719b44ba2715b1e5f60f73baa1/.eleventy.js#L78-L92
+	eleventyConfig.addFilter("addHash", path => {
+		if (path.includes("?")) {
+			throw new Error(
+				"Careful about using addHash when there is already a query string",
+			);
+		}
+
+		const hash = hasha.fromFileSync(`_site${path}`);
+
+		return `${path}?v=${hash.substr(0, 10)}`;
+	});
+
 	const dateFormatter = new Intl.DateTimeFormat("en-us", {
 		dateStyle: "long",
 		timeZone: "UTC",
 	});
-	eleventyConfig.addFilter("blogPostDate", function (date) {
+	eleventyConfig.addFilter("blogPostDate", date => {
 		return dateFormatter.format(date);
 	});
 
-	eleventyConfig.addFilter(
-		"isInPageTrail",
-		function (currentIndex, urls, activeURL) {
-			const NUM_LINKS = 5;
+	eleventyConfig.addFilter("isInPageTrail", (currentIndex, urls, activeURL) => {
+		const NUM_LINKS = 5;
 
-			const activeIndex = urls.indexOf(activeURL);
-			let minIndex = Math.max(0, activeIndex - 2);
-			let maxIndex = Math.min(minIndex + (NUM_LINKS - 1), urls.length - 1);
-			minIndex = Math.max(0, maxIndex - (NUM_LINKS - 1));
+		const activeIndex = urls.indexOf(activeURL);
+		let minIndex = Math.max(0, activeIndex - 2);
+		let maxIndex = Math.min(minIndex + (NUM_LINKS - 1), urls.length - 1);
+		minIndex = Math.max(0, maxIndex - (NUM_LINKS - 1));
 
-			return currentIndex >= minIndex && currentIndex <= maxIndex;
-		},
-	);
+		return currentIndex >= minIndex && currentIndex <= maxIndex;
+	});
 
-	eleventyConfig.addFilter("parentTitle", function (parent) {
+	eleventyConfig.addFilter("parentTitle", parent => {
 		const titles = {
 			blog: "Blog",
 			customization: "Customization",
@@ -79,7 +90,7 @@ module.exports = function (eleventyConfig) {
 		return titles[parent];
 	});
 
-	eleventyConfig.addFilter("parentURL", function (parent, sport) {
+	eleventyConfig.addFilter("parentURL", (parent, sport) => {
 		const urls = {
 			blog: "/blog/",
 			customization: `/${sport}/manual/customization/`,
@@ -143,7 +154,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode(
 		"bySport",
-		function (basketball, football, hockey, sport) {
+		(basketball, football, hockey, sport) => {
 			return String(
 				bySport(
 					{
@@ -157,7 +168,7 @@ module.exports = function (eleventyConfig) {
 		},
 	);
 
-	eleventyConfig.addShortcode("favicon", function (websitePlay) {
+	eleventyConfig.addShortcode("favicon", websitePlay => {
 		let favicon;
 		let appleTouchIcon;
 		if (websitePlay) {
@@ -172,7 +183,7 @@ module.exports = function (eleventyConfig) {
 <link rel="apple-touch-icon" href="${appleTouchIcon}">`;
 	});
 
-	eleventyConfig.addShortcode("sportTitle", function (sport) {
+	eleventyConfig.addShortcode("sportTitle", sport => {
 		if (!sport) {
 			return "ZenGM";
 		}

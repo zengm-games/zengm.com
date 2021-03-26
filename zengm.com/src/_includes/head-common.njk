@@ -30,9 +30,9 @@ setTheme(getTheme(), true);
 <meta name="author" content="">
 
 {% favicon websitePlay %}
-<link href="/css/main.css" rel="stylesheet">
+<link href="{{ "/css/main.css" | addHash}}" rel="stylesheet">
 
-<script src="/js/bootstrap-native-3.0.14-f.min.js"></script>
+<script src="{{ "/js/bootstrap-native-3.0.14-f.min.js" | addHash}}"></script>
 
 {% include "google-analytics.njk" %}
 

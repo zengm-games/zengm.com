@@ -5,7 +5,7 @@ permalink: "/blog/{{ page.date | blogPostDateURL }}/{{ page.fileSlug }}/index.ht
 showBlogTeaser: true
 hideLineUnderTitle: true
 ---
-<link href="/css/blog.css" rel="stylesheet">
+<link href="{{ "/css/blog.css" | addHash}}" rel="stylesheet">
 
 {% import "blog-macros.njk" as blogMacros %}
 
