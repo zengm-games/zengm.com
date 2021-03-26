@@ -21,4 +21,4 @@ I sped this up by using an index that already existed, on player draft year. I f
 
 I'm eagerly waiting for someone to notice an immortal player :)
 
-The downside of all this is that leagues with many seasons are the ones that will take the longest to upgrade when you load them in the new version. Please be patient, it will work! If not, [try this](https://basketball-gm.com/manual/debugging/).
+The downside of all this is that leagues with many seasons are the ones that will take the longest to upgrade when you load them in the new version. Please be patient, it will work! If not, [try this](/basketball/manual/debugging/).

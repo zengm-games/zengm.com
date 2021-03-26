@@ -19,14 +19,16 @@ const mySpawn = (command, args) => {
 	});
 };
 
-const deploy = async () => {
+const deploy = async domain => {
+	const domainFolder = `./dist/${domain}`;
+
 	// Copy files and static separately, because we never want to delete from those folders
 	const copyAndKeep = ["files", "static"]; // MAKE SURE TO EXCLUDE FROM DELETION BELOW
 	for (const folder of copyAndKeep) {
 		console.log(`Copying "${folder}" folder...`);
 		await mySpawn("rsync", [
 			"-vhrl",
-			`./dist/${folder}/`,
+			`${domainFolder}/${folder}/`,
 			`${TARGET}/${folder}/`,
 		]);
 	}
@@ -37,13 +39,20 @@ const deploy = async () => {
 		"-vhrl",
 		"--delete",
 		...excludes.flatMap(folder => ["--exclude", `/${folder}`]),
-		"./dist/",
+		`${domainFolder}/`,
 		TARGET,
 	]);
 
 	console.log("Invalidating Cloudflare cache...");
 
-	const zone = cloudflareConfig.zones.hockey;
+	let zone;
+	if (domain === "basketball-gm.com") {
+		zone = cloudflareConfig.zones.basketball;
+	} else if (domain === "basketball-gm.com") {
+		zone = cloudflareConfig.zones.football;
+	} else {
+		zone = cloudflareConfig.zones.hockey;
+	}
 	if (!zone) {
 		throw new Error("Missing zone in Cloudflare config file");
 	}
@@ -63,4 +72,10 @@ const deploy = async () => {
 	console.log("\nDone!");
 };
 
-deploy();
+async () => {
+	// const domains = ["basketball-gm.com", "football-gm.com", "zengm.com"];
+	const domains = ["zengm.com"];
+	for (const domain of domains) {
+		await deploy(domain);
+	}
+};

@@ -23,10 +23,10 @@ First, I targeted a 0-100 scale rather than "projected number of wins" or "proje
 
 Second, I didn't want to have to estimate rotations. I don't have an easy way to do that now, and I wanted the team ratings to be simple. Instead of estimating rotations, I took data from many seasons of play and [built a linear regression model](https://github.com/dumbmatter/gm-games/tree/22a8daadb71eb558d5571f25a7b483e1e0d76e19/analysis/team-ovr-basketball), fitting the ovr ratings of the top 10 players on each team against their average point differential. This results in an esimated point differential which is very easy to compute. And it works pretty well, the r<sup>2</sup> is 0.71. Then I just take that point differnetial and translate it to a 0-100 scale, where -20 is 0 and +20 is 100.
 
-This linear regression approach was also easy to apply to [Football GM](https://football-gm.com/), although [I had to also include players positions](https://github.com/dumbmatter/gm-games/tree/22a8daadb71eb558d5571f25a7b483e1e0d76e19/analysis/team-ovr-football) to get a similar r<sup>2</sup> because football is not nearly as positionless as basketball.
+This linear regression approach was also easy to apply to [Football GM](/football/), although [I had to also include players positions](https://github.com/dumbmatter/gm-games/tree/22a8daadb71eb558d5571f25a7b483e1e0d76e19/analysis/team-ovr-football) to get a similar r<sup>2</sup> because football is not nearly as positionless as basketball.
 
 Another cool FiveThirtyEight-inspired feature is to incorporate injuries into team ratings. This is very easy with my linear model - if a player is injured, just leave them off the list of top N players used to calculate the team rating!
 
 Like I mentioned above, team ratings are now viewable on the Roster and Power Rankings pages. The power rankings are also much more meaningful now - in the past, they were pretty stupid. And it's also now possible to view the power rankings for past seasons.
 
-As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](https://discord.gg/caPFuM9), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:commissioner@basketball-gm.com).
+As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](https://discord.gg/caPFuM9), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:jeremy@zengm.com).

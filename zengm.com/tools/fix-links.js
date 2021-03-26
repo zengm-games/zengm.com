@@ -10,7 +10,7 @@ const globAsync = util.promisify(glob);
 const fixLinks = async () => {
 	let fileSite;
 
-	const rootFolder = path.join(__dirname, "..", "_site");
+	const rootFolder = path.join(__dirname, "..", "dist", "zengm.com");
 
 	const search = path.join(rootFolder, "**", "*.html");
 	const filenames = await globAsync(search);
@@ -19,7 +19,7 @@ const fixLinks = async () => {
 		eachURL: url => {
 			// We only care about relative links
 			if (url.startsWith("http://") || url.startsWith("https://")) {
-				console.log("Leave alone", url);
+				// console.log("Leave alone", url);
 				return url;
 			}
 
@@ -38,11 +38,11 @@ const fixLinks = async () => {
 			}
 
 			if (fileSite === urlSite) {
-				console.log("Remove prefix", url, url.replace(prefix, ""));
+				// console.log("Remove prefix", url, url.replace(prefix, ""));
 				return url.replace(prefix, "");
 			}
 
-			console.log("Rewrite", url, "=>", `${urlSite}${url.replace(prefix, "")}`);
+			// console.log("Rewrite", url, "=>", `${urlSite}${url.replace(prefix, "")}`);
 			return `${urlSite}${url.replace(prefix, "")}`;
 		},
 	};
@@ -50,7 +50,7 @@ const fixLinks = async () => {
 	const processor = posthtml().use(urls(options));
 
 	for (const filename of filenames) {
-		console.log("\n\n===\n\nProcessing", filename);
+		// console.log("\n\n===\n\nProcessing", filename);
 		if (filename.startsWith(`${rootFolder}/basketball/`)) {
 			fileSite = "https://basketball-gm.com";
 		} else if (filename.startsWith(`${rootFolder}/football/`)) {
@@ -62,7 +62,7 @@ const fixLinks = async () => {
 		const contents = await fs.readFile(filename, "utf8");
 
 		const result = await processor.process(contents);
-		await fs.writeFile(filenae, result.html);
+		await fs.writeFile(filename, result.html);
 	}
 };
 

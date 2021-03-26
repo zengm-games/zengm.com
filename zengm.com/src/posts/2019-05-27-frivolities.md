@@ -10,7 +10,7 @@ tags:
 
 One thing I like about Baskebtall Reference is their [Frivolities](https://www.basketball-reference.com/friv/) page. It's a bunch of unrelated tools that are mostly useless unless you have some very specific curiosity. And it's awesome! Not everything needs to have mass market appeal. Not everything needs to be serious and important. Frivolities are great.
 
-Now Basketball GM (and [Football GM](https://football-gm.com/)) has frivolities too, as of version 2019.05.27.0877. Within a league, go to Tools > Frivolities to see them. Currently there are four tools - two of them inspired by Basketball Reference, and two of my own.
+Now Basketball GM (and [Football GM](/football/)) has frivolities too, as of version 2019.05.27.0877. Within a league, go to Tools > Frivolities to see them. Currently there are four tools - two of them inspired by Basketball Reference, and two of my own.
 
 **Most Games, No Playoffs** - like [Basketball Reference](https://www.basketball-reference.com/friv/most_g_no_playoffs.html), this lists players with the most games played who never made the playoffs.
 

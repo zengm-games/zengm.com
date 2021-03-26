@@ -2,9 +2,9 @@
   "name": "zengm.com",
   "scripts": {
     "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && bash tools/after-assetgraph.sh",
-    "build2": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && node tools/fix-links.js",
+    "build-fast": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && rm -rf dist && mkdir dist && cp -r _site dist/zengm.com && node tools/fix-links.js && mv dist/zengm.com/basketball dist/basketball-gm.com && mv dist/zengm.com/football dist/football-gm.com",
     "deploy": "node tools/deploy.js",
-    "assetgraph": "rm -rf dist && node --max-old-space-size=24000 node_modules/.bin/buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" --sharedbundles",
+    "assetgraph": "rm -rf dist && mkdir dist && node --max-old-space-size=24000 node_modules/.bin/buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist/zengm.com --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" --sharedbundles",
     "start": "rm -rf _site && concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
     "watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"yarn run sass\"",
     "sass": "node-sass -o src/css src/css"

@@ -341,7 +341,7 @@ module.exports = [
 	{
 		date: "2021-02-11",
 		text:
-			"In custom league files, there is a new simpler format for writing \"gameAttributes\". Don't worry, the old format will continue to work, you don't need to change anything! But now you can write it as an object rather than an array, which is generally a lot simpler. See [the manual](https://basketball-gm.com/manual/customization/game-attributes/) for more info.",
+			"In custom league files, there is a new simpler format for writing \"gameAttributes\". Don't worry, the old format will continue to work, you don't need to change anything! But now you can write it as an object rather than an array, which is generally a lot simpler. See [the manual](/basketball/manual/customization/game-attributes/) for more info.",
 		basketball: true,
 		football: true,
 	},
@@ -1696,9 +1696,7 @@ module.exports = [
 		date: "2020-05-18",
 		text:
 			"Added ability to supply real team info and player photos on the Options page, which overrides the defaults in any new league with real players.",
-		links: [
-			"https://basketball-gm.com/manual/customization/real-team-info-player-photos/",
-		],
+		links: ["/basketball/manual/customization/real-team-info-player-photos/"],
 		basketball: true,
 	},
 	{
@@ -3020,7 +3018,7 @@ module.exports = [
 		date: "2018-05-21",
 		text: "Better error checking for custom league files.",
 		links: [
-			"https://basketball-gm.com/manual/customization/json-schema/",
+			"/basketball/manual/customization/json-schema/",
 			"https://old.reddit.com/r/BasketballGM/comments/8l4qm3/better_error_checking_for_custom_league_files/",
 		],
 		basketball: true,

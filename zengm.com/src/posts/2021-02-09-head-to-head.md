@@ -36,4 +36,4 @@ Also included in this latest update are a few more changes that I might as well 
 
 - @nicodob udated the "desired contract length" formula based to feel more realistic. [[1]](https://github.com/dumbmatter/gm-games/pull/356)
 
-As always feedback is welcome on [Reddit](https://www.reddit.com/r/BasketballGM/), [Twitter](https://twitter.com/basketball_gm/), [Discord](https://discord.gg/caPFuM9), or just email me at commissioner@basketball-gm.com :)
+As always feedback is welcome on [Reddit](https://www.reddit.com/r/BasketballGM/), [Twitter](https://twitter.com/basketball_gm/), [Discord](https://discord.gg/caPFuM9), or just email me at jeremy@zengm.com :)

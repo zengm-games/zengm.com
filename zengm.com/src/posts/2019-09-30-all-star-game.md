@@ -39,4 +39,4 @@ If all this sounds horrifying to you, there is also a God Mode option to disable
 
 This is just the beginning! Eventually there will be even more All-Star features. Imagine text-based slam dunk and three point shooting contests, those would be fun.
 
-And this is all only in Basketball GM, not [Football GM](https://football-gm.com/), because an All-Star Game is both more complicated and less important in football. I hope to bring it to Football GM in the future.
+And this is all only in Basketball GM, not [Football GM](/football/), because an All-Star Game is both more complicated and less important in football. I hope to bring it to Football GM in the future.

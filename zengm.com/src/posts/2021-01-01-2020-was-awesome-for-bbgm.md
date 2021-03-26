@@ -28,7 +28,7 @@ I know, everybody's talking about how 2020 sucked and how they hope 2021 will be
 
 </div>
 
-That's a lot of Basketball GM in 2020! And that's not even including [Football GM](https://football-gm.com/) which of course did a lot better in 2020 than in 2019 because it didn't even exist at the beginning of 2019.
+That's a lot of Basketball GM in 2020! And that's not even including [Football GM](/football/) which of course did a lot better in 2020 than in 2019 because it didn't even exist at the beginning of 2019.
 
 I hope Basketball GM and Football GM brought you all some fun and distraction, I know they did for me. And I promise you, I have even bigger things planned for 2021 :)
 

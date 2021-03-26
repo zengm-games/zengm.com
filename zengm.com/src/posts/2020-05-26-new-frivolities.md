@@ -10,7 +10,7 @@ tags:
 
 After you've played several years in a league, it can be fun to go to Tools > Frivolities and ask questions like "which player has the most relatives?" and "who had the longest career without ever making the playoffs?"
 
-If you enjoy the current frivolities, then I think you're going to love the 12 new ones I just added today! All available in the same place, Tools > Frivolities, in both Basketball GM and [Football GM](https://football-gm.com/). The main frivolities page has also been redesigned, and individual frivolities now contain a menu linking to all other frivolities for easier navigation.
+If you enjoy the current frivolities, then I think you're going to love the 12 new ones I just added today! All available in the same place, Tools > Frivolities, in both Basketball GM and [Football GM](/football/). The main frivolities page has also been redesigned, and individual frivolities now contain a menu linking to all other frivolities for easier navigation.
 
 The new frivolities are:
 

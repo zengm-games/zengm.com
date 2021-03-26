@@ -13,7 +13,7 @@ Social media buzz is a crazy thing. Even crazier is that in 2021, every single d
 
 <!--more-->
 
-Meanwhile, I've just been plugging along, working on BBGM in my spare time as I've gone through college, grad school, and a couple different jobs. And as I kept working on BBGM, [BBGM kept growing](/blog/2021/01/2020-was-awesome-for-bbgm/). Finally it has grown to the point where I can't just call it a "side project" anymore. So I quit my job. As of today, my new job is working on Basketball GM, [Football GM](https://football-gm.com/), and maybe even other projects!
+Meanwhile, I've just been plugging along, working on BBGM in my spare time as I've gone through college, grad school, and a couple different jobs. And as I kept working on BBGM, [BBGM kept growing](/blog/2021/01/2020-was-awesome-for-bbgm/). Finally it has grown to the point where I can't just call it a "side project" anymore. So I quit my job. As of today, my new job is working on Basketball GM, [Football GM](/football/), and maybe even other projects!
 
 So if you enjoy playing BBGM or FBGM today, and if you've been happy with the recent improvements to the games...
 

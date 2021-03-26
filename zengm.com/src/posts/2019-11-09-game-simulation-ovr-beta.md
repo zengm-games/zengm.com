@@ -112,4 +112,4 @@ Because this is such a minor change, I am appyling it "lazily" - by that I mean 
 
 Like I said at the top, [this is all in the beta now](https://beta.basketball-gm.com/). If all goes well, I'll release it on the main site some time this week.
 
-As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](https://discord.gg/caPFuM9), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:commissioner@basketball-gm.com).
+As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](https://discord.gg/caPFuM9), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:jeremy@zengm.com).

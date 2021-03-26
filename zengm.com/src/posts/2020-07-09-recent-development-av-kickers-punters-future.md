@@ -7,7 +7,7 @@ tags:
   - New Feature
 ---
 
-Football GM has been in an interesting place in 2020. I haven't given it a lot of direct attention. I've been a lot more focused on [Basketball GM](https://basketball-gm.com/). Despite that, Football GM has gotten a lot of improvements. This is because BBGM and FBGM are built from the same codebase. Except for very sport-specific things, any improvements are made in both games at the same time.
+Football GM has been in an interesting place in 2020. I haven't given it a lot of direct attention. I've been a lot more focused on [Basketball GM](/basketball/). Despite that, Football GM has gotten a lot of improvements. This is because BBGM and FBGM are built from the same codebase. Except for very sport-specific things, any improvements are made in both games at the same time.
 
 All of the recent improvements to FBGM ([individual player import/export](/blog/2020/06/import-export-players/), [challenge modes](/blog/2020/06/league-creation-options/), [the news feed](/blog/2020/06/news-feed/), [more frivolities](/blog/2020/05/new-frivolities/), etc) were made this way. I was focused on improving BBGM, and FBGM just automatically benefited.
 
