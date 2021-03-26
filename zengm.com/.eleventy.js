@@ -211,9 +211,9 @@ module.exports = function (eleventyConfig) {
 		}
 		const afterPrefix = this.page.url.replace(prefix, "");
 		const urls = {
-			basketball: `https://basketball-gm.com/${afterPrefix}`,
-			football: `https://football-gm.com/${afterPrefix}`,
-			hockey: `https://zengm.com/hockey/${afterPrefix}`,
+			basketball: `/basketball/${afterPrefix}`,
+			football: `/football/${afterPrefix}`,
+			hockey: `/hockey/${afterPrefix}`,
 		};
 
 		return `<div class="dropdown top-nav-item">
