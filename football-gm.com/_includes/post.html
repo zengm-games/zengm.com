@@ -1,7 +1,0 @@
-{%- include post-header.html post=include.post -%}
-
-{{ include.post.excerpt }}
-
-{%- if include.post.excerpt != include.post.content -%}
-  <p><a href="{{ include.post.url | relative_url }}">Read more...</a></p>
-{%- endif -%}
