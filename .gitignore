@@ -1,9 +1,7 @@
-*/_site
-*/.sass-cache
-*/.jekyll-metadata
+_site
 node_modules
 yarn-error.log
-zengm.com/src/css/*.css
-zengm.com/dist
-zengm.com/tools/screenshots-raw
-zengm.com/tools/screenshots-cropped
+src/css/*.css
+dist
+tools/screenshots-raw
+tools/screenshots-cropped
