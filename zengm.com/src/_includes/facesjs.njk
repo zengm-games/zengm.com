@@ -1,8 +1,16 @@
-<script async src="{{ "/js/facesjs-3.4.0.js" | addHash }}" id="facesjs-script"></script>
 <script>
-document.getElementById("facesjs-script").addEventListener("load", function () {
+const head = document.head || document.getElementsByTagName("head")[0];
+const script = document.createElement("script");
+script.async = true;
+script.type = "text/javascript";
+
+script.addEventListener("load", function () {
     if (window.onFacesJS) {
         window.onFacesJS();
     }
 });
+
+script.src = "{{ "/js/facesjs-3.4.0.js" | addHash }}";
+
+head.appendChild(script);
 </script>

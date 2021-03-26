@@ -1,9 +1,6 @@
-basketball-gm.com, football-gm.com
-- TEST
-  - backups before
-  - dry-run deploy script
-  - on bbgm deploy, skip bbgm-ads, old, and prebid folders
-  - 404 pages on basketball-gm.com and football-gm.com
+check for any files in bbgm/fbgm folders, then move to root
+
+rename repo
 
 # later
 
@@ -20,3 +17,4 @@ sidebar menu
 - use eleventyNavigation?
   - could also use that to replace the hacky parent system i built...
     - show main title in <h1> everywhere, and breadcrumbs at top. except maybe blog listing?
+    - for non-nested pages (no sport picker), should it show "Zen GM" or the name of the game in the titlebar?
