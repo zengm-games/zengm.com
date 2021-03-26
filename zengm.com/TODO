@@ -1,15 +1,12 @@
 easter egg on BBGM page?
 - https://discord.com/channels/@me/682666234604552221/824846659396960256
 
-https://github.com/maxboeck/mxb/blob/master/.eleventy.js
-
 build performance
 - 25 minutes
 - alternatives
   - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
     - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
   - check expiration in htaccess (and get rid of static.htaccess)
-  - compress images
 
 basketball-gm.com, football-gm.com
 - include .htaccess files for basketball-gm.com and football-gm.com in build
