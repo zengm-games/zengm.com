@@ -1,11 +1,33 @@
 {% if env.NODE_ENV == "production" %}
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38759330-3"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-38759330-3', {
-  'cookie_domain': 'zengm.com'
-});
-</script>
+  {% if sport == "basketball" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38759330-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-38759330-1', {
+      'cookie_domain': 'basketball-gm.com'
+    });
+    </script>
+  {% elif sport == "football" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38759330-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-38759330-2', {
+      'cookie_domain': 'football-gm.com'
+    });
+    </script>
+  {% else %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38759330-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-38759330-3', {
+      'cookie_domain': 'zengm.com'
+    });
+    </script>
+  {% endif %}
 {% endif %}

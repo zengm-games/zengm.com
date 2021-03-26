@@ -373,7 +373,7 @@ function showImagesStartingWith(index) {
   // Load images from index to index + 1
   for (var i = index; i <= index + 1; i++) {
     var img = carouselImages[i % carouselImages.length];
-    const src = "/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
+    const src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
 
     // "includes" because it gets prefixed with the domain name
     if (!img.src.includes(src)) {
