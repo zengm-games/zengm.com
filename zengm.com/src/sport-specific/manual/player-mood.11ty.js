@@ -10,7 +10,7 @@ module.exports = class {
 		};
 	}
 
-	render({ sport }) {
+	render({ gameName, sport }) {
 		return `Player mood only affects contract negotiation. Both the probability that a player will negotiate with you, and the amount of money he asks for. There is no "team chemistry" or "player is upset so he plays worse"... yet :)
 
 You can see a player's mood in many places, such as on the roster page or on player profile pages. Player mood looks like this:
@@ -64,7 +64,8 @@ ${bySport(
 			{
 				basketball:
 					" This gives BBGM something like the NBA's restricted free agency, because it results in your drafted players being less likely to refuse to re-sign.",
-				default: "",
+				football: ` This only applies if you have the \"hard cap\" optoin disabled so rookies are automatically given contracts. In ${gameName} this option is disabled by default.`,
+				hockey: ` This only applies if you have the \"hard cap\" optoin disabled so rookies are automatically given contracts. In ${gameName} this option is disabled by default.`,
 			},
 			sport,
 		)}`;
