@@ -2,8 +2,6 @@ const { spawn } = require("child_process");
 const cloudflare = require("cloudflare");
 const cloudflareConfig = require("../../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 
-const TARGET = "jersch50@garibaldi.dreamhost.com:/home/jersch50/zengm.com";
-
 const mySpawn = (command, args) => {
 	return new Promise(resolve => {
 		console.log(`${command} ${args.join(" ")}`);
@@ -21,21 +19,34 @@ const mySpawn = (command, args) => {
 
 const deploy = async domain => {
 	const domainFolder = `./dist/${domain}`;
+	const target = `jersch50@garibaldi.dreamhost.com:/home/jersch50/${domain}`;
 
-	// Copy files and static separately, because we never want to delete from those folders
-	const copyAndKeep = ["files", "static"]; // MAKE SURE TO EXCLUDE FROM DELETION BELOW
-	for (const folder of copyAndKeep) {
-		console.log(`Copying "${folder}" folder...`);
-		await mySpawn("rsync", [
-			"-vhrl",
-			`${domainFolder}/${folder}/`,
-			`${TARGET}/${folder}/`,
-		]);
+	// Copy "files" separately, because we never want to delete from those folders
+	const copyAndKeep = ["files"];
+	if (domain === "zengm.com") {
+		// "files" folder only gets new stuff on zengm.com
+		for (const folder of copyAndKeep) {
+			console.log(`Copying "${folder}" folder...`);
+			await mySpawn("rsync", [
+				"-vhrl",
+				`${domainFolder}/${folder}/`,
+				`${target}/${folder}/`,
+			]);
+		}
 	}
 
 	console.log("Copying other files...");
-	const excludes = [...copyAndKeep, "--exclude", ".well-known"];
+	const excludes = [
+		...copyAndKeep,
+
+		// Back when assetgraph was used to build site, zengm.com had a "static" folder, might still be used if someone has a cached HTML file
+		"static",
+
+		// Obvious
+		".well-known",
+	];
 	if (domain === "basketball-gm.com") {
+		// Special folders to keep on basketball-gm.com
 		excludes.push("bbgm-ads", "old", "prebid");
 	}
 	await mySpawn("rsync", [
@@ -43,7 +54,7 @@ const deploy = async domain => {
 		"--delete",
 		...excludes.flatMap(folder => ["--exclude", `/${folder}`]),
 		`${domainFolder}/`,
-		TARGET,
+		target,
 	]);
 
 	console.log("Invalidating Cloudflare cache...");
@@ -51,7 +62,7 @@ const deploy = async domain => {
 	let zone;
 	if (domain === "basketball-gm.com") {
 		zone = cloudflareConfig.zones.basketball;
-	} else if (domain === "basketball-gm.com") {
+	} else if (domain === "football-gm.com") {
 		zone = cloudflareConfig.zones.football;
 	} else {
 		zone = cloudflareConfig.zones.hockey;
@@ -75,10 +86,16 @@ const deploy = async domain => {
 	console.log("\nDone!");
 };
 
-async () => {
-	// const domains = ["basketball-gm.com", "football-gm.com", "zengm.com"];
-	const domains = ["zengm.com"];
-	for (const domain of domains) {
+(async () => {
+	const domains = ["basketball-gm.com", "football-gm.com", "zengm.com"];
+	for (let i = 0; i < domains.length; i++) {
+		const domain = domains[i];
+		const header = `Deploying ${domain}`;
+		const separator = "=".repeat(header.length);
+		if (i > 0) {
+			console.log(`\n${separator}`);
+		}
+		console.log(`${header}\n${separator}\n`);
 		await deploy(domain);
 	}
-};
+})();
