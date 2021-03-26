@@ -86,8 +86,17 @@ const deploy = async domain => {
 	console.log("\nDone!");
 };
 
+const DEFAULT_DOMAINS = ["basketball-gm.com", "football-gm.com", "zengm.com"];
+
 (async () => {
-	const domains = ["basketball-gm.com", "football-gm.com", "zengm.com"];
+	const domains =
+		process.argv.length > 2 ? process.argv.slice(2) : DEFAULT_DOMAINS;
+	for (const domain of domains) {
+		if (!DEFAULT_DOMAINS.includes(domain)) {
+			throw new Error(`Invalid domain "${domain}"`);
+		}
+	}
+
 	for (let i = 0; i < domains.length; i++) {
 		const domain = domains[i];
 		const header = `Deploying ${domain}`;
