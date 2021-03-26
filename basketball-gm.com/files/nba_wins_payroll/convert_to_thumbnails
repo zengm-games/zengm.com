@@ -1,7 +1,0 @@
-#!/bin/bash
-# Run this after convert_to_transparent
-for file in `dir -d *.png` ; do
-echo "Processing image $file ..."
-/usr/bin/convert -thumbnail 638 $file $file
-done
-
