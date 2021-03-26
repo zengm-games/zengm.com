@@ -1,37 +1,18 @@
-// Copied from https://dumbmatter.com/facesjs/build/bundle.js
-
-var faces = (function (exports) {
+var faces = (function (s) {
 	"use strict";
-
-	const override = (obj, overrides) => {
-		if (!overrides || !obj) {
-			return;
-		}
-
-		for (
-			var _i = 0, _Object$entries = Object.entries(overrides);
-			_i < _Object$entries.length;
-			_i++
-		) {
-			const [key, value] = _Object$entries[_i];
-
-			if (
-				typeof value === "boolean" ||
-				typeof value === "string" ||
-				typeof value === "number" ||
-				Array.isArray(value)
-			) {
-				obj[key] = value;
-			} else {
-				// @ts-ignore
-				override(obj[key], value);
+	const e = (s, l) => {
+		if (l && s)
+			for (var t = 0, a = Object.entries(l); t < a.length; t++) {
+				const [l, o] = a[t];
+				"boolean" == typeof o ||
+				"string" == typeof o ||
+				"number" == typeof o ||
+				Array.isArray(o)
+					? (s[l] = o)
+					: e(s[l], o);
 			}
-		}
 	};
-
-	// THIS IS A GENERATED FILE, DO NOT EDIT BY HAND!
-	// See tools/process-svgs.js
-	var svgs = {
+	var l = {
 		accessories: {
 			"headband-high":
 				'<g stroke="#000"><path d="M350 280c-10 0-30-90-150-90S60 280 50 280c-10-10-10-40 0-50 0 0 30-90 150-90s150 90 150 90c10 10 10 40 0 50z" fill="$[primary]" stroke-width="4"/><path d="M45 260v-10s35-90 155-90 155 90 155 90v10c-5 0-35-90-155-90S50 260 45 260z" fill="$[secondary]"/></g>',
@@ -589,317 +570,107 @@ var faces = (function (exports) {
 			none: "",
 		},
 	};
-
-	const addWrapper = svgString => `<g>${svgString}</g>`;
-
-	const addTransform = (element, newTransform) => {
-		const oldTransform = element.getAttribute("transform");
-		element.setAttribute(
-			"transform",
-			`${oldTransform ? `${oldTransform} ` : ""}${newTransform}`,
-		);
-	};
-
-	const rotateCentered = (element, angle) => {
-		const bbox = element.getBBox();
-		const cx = bbox.x + bbox.width / 2;
-		const cy = bbox.y + bbox.height / 2;
-		addTransform(element, `rotate(${angle} ${cx} ${cy})`);
-	};
-
-	const scaleStrokeWidthAndChildren = (element, factor) => {
-		const strokeWidth = element.getAttribute("stroke-width");
-
-		if (strokeWidth) {
-			element.setAttribute(
-				"stroke-width",
-				String(parseFloat(strokeWidth) / factor),
-			);
-		}
-
-		const children = element.childNodes;
-
-		for (let i = 0; i < children.length; i++) {
-			scaleStrokeWidthAndChildren(children[i], factor);
-		}
-	}; // Scale relative to the center of bounding box of element e, like in Raphael.
-	// Set x and y to 1 and this does nothing. Higher = bigger, lower = smaller.
-
-	const scaleCentered = (element, x, y) => {
-		const bbox = element.getBBox();
-		const cx = bbox.x + bbox.width / 2;
-		const cy = bbox.y + bbox.height / 2;
-		const tx = (cx * (1 - x)) / x;
-		const ty = (cy * (1 - y)) / y;
-		addTransform(element, `scale(${x} ${y}) translate(${tx} ${ty})`); // Keep apparent stroke width constant, similar to how Raphael does it (I think)
-
-		if (
-			Math.abs(x) !== 1 ||
-			Math.abs(y) !== 1 ||
-			Math.abs(x) + Math.abs(y) !== 2
-		) {
-			const factor = (Math.abs(x) + Math.abs(y)) / 2;
-			scaleStrokeWidthAndChildren(element, factor);
-		}
-	}; // Translate element such that its center is at (x, y). Specifying xAlign and yAlign can instead make (x, y) the left/right and top/bottom.
-
-	const translate = function (element, x, y) {
-		let xAlign =
-			arguments.length > 3 && arguments[3] !== undefined
-				? arguments[3]
-				: "center";
-		let yAlign =
-			arguments.length > 4 && arguments[4] !== undefined
-				? arguments[4]
-				: "center";
-		const bbox = element.getBBox();
-		let cx;
-		let cy;
-
-		if (xAlign === "left") {
-			cx = bbox.x;
-		} else if (xAlign === "right") {
-			cx = bbox.x + bbox.width;
-		} else {
-			cx = bbox.x + bbox.width / 2;
-		}
-
-		if (yAlign === "top") {
-			cy = bbox.y;
-		} else if (yAlign === "bottom") {
-			cy = bbox.y + bbox.height;
-		} else {
-			cy = bbox.y + bbox.height / 2;
-		}
-
-		addTransform(element, `translate(${x - cx} ${y - cy})`);
-	}; // Defines the range of fat/skinny, relative to the original width of the default head.
-
-	const fatScale = fatness => 0.8 + 0.2 * fatness;
-
-	const drawFeature = (svg, face, info) => {
-		const feature = face[info.name];
-
-		if (!feature || !svgs[info.name]) {
-			return;
-		} // @ts-ignore
-
-		let featureSVGString = svgs[info.name][feature.id];
-
-		if (!featureSVGString) {
-			return;
-		} // @ts-ignore
-
-		if (feature.shave) {
-			// @ts-ignore
-			featureSVGString = featureSVGString.replace(
-				"$[faceShave]",
-				feature.shave,
-			);
-		} // @ts-ignore
-
-		if (feature.shave) {
-			// @ts-ignore
-			featureSVGString = featureSVGString.replace(
-				"$[headShave]",
-				feature.shave,
-			);
-		}
-
-		featureSVGString = featureSVGString.replace(
-			"$[skinColor]",
-			face.body.color,
-		);
-		featureSVGString = featureSVGString.replace(
-			/\$\[hairColor\]/g,
-			face.hair.color,
-		);
-		featureSVGString = featureSVGString.replace(
-			/\$\[primary\]/g,
-			face.teamColors[0],
-		);
-		featureSVGString = featureSVGString.replace(
-			/\$\[secondary\]/g,
-			face.teamColors[1],
-		);
-		featureSVGString = featureSVGString.replace(
-			/\$\[accent\]/g,
-			face.teamColors[2],
-		);
-
-		for (let i = 0; i < info.positions.length; i++) {
-			svg.insertAdjacentHTML("beforeend", addWrapper(featureSVGString));
-			const position = info.positions[i];
-
-			if (position !== null) {
-				// Special case, for the pinocchio nose it should not be centered but should stick out to the left or right
-				let xAlign;
-
-				if (feature.id === "nose4" || feature.id === "pinocchio") {
-					// @ts-ignore
-					xAlign = feature.flip ? "right" : "left";
-				} else {
-					xAlign = "center";
+	const t = (s, e) => {
+			const l = s.getAttribute("transform");
+			s.setAttribute("transform", `${l ? `${l} ` : ""}${e}`);
+		},
+		a = (s, e) => {
+			const l = s.getBBox(),
+				a = l.x + l.width / 2,
+				o = l.y + l.height / 2;
+			t(s, `rotate(${e} ${a} ${o})`);
+		},
+		o = (s, e) => {
+			const l = s.getAttribute("stroke-width");
+			l && s.setAttribute("stroke-width", String(parseFloat(l) / e));
+			const t = s.childNodes;
+			for (let s = 0; s < t.length; s++) o(t[s], e);
+		},
+		c = (s, e, l) => {
+			const a = s.getBBox(),
+				c = a.x + a.width / 2,
+				r = a.y + a.height / 2;
+			if (
+				(t(
+					s,
+					`scale(${e} ${l}) translate(${(c * (1 - e)) / e} ${
+						(r * (1 - l)) / l
+					})`,
+				),
+				1 !== Math.abs(e) ||
+					1 !== Math.abs(l) ||
+					Math.abs(e) + Math.abs(l) !== 2)
+			) {
+				const t = (Math.abs(e) + Math.abs(l)) / 2;
+				o(s, t);
+			}
+		},
+		r = function (s, e, l) {
+			let a =
+					arguments.length > 3 && void 0 !== arguments[3]
+						? arguments[3]
+						: "center",
+				o =
+					arguments.length > 4 && void 0 !== arguments[4]
+						? arguments[4]
+						: "center";
+			const c = s.getBBox();
+			let r, h;
+			(r =
+				"left" === a ? c.x : "right" === a ? c.x + c.width : c.x + c.width / 2),
+				(h =
+					"top" === o
+						? c.y
+						: "bottom" === o
+						? c.y + c.height
+						: c.y + c.height / 2),
+				t(s, `translate(${e - r} ${l - h})`);
+		},
+		h = (s, e, t) => {
+			const o = e[t.name];
+			if (!o || !l[t.name]) return;
+			let h = l[t.name][o.id];
+			if (h) {
+				o.shave && (h = h.replace("$[faceShave]", o.shave)),
+					o.shave && (h = h.replace("$[headShave]", o.shave)),
+					(h = h.replace("$[skinColor]", e.body.color)),
+					(h = h.replace(/\$\[hairColor\]/g, e.hair.color)),
+					(h = h.replace(/\$\[primary\]/g, e.teamColors[0])),
+					(h = h.replace(/\$\[secondary\]/g, e.teamColors[1])),
+					(h = h.replace(/\$\[accent\]/g, e.teamColors[2]));
+				for (let l = 0; l < t.positions.length; l++) {
+					s.insertAdjacentHTML("beforeend", `<g>${h}</g>`);
+					const i = t.positions[l];
+					if (null !== i) {
+						let e;
+						(e =
+							"nose4" === o.id || "pinocchio" === o.id
+								? o.flip
+									? "right"
+									: "left"
+								: "center"),
+							r(s.lastChild, i[0], i[1], e);
+					}
+					o.hasOwnProperty("angle") &&
+						a(s.lastChild, (0 === l ? 1 : -1) * o.angle);
+					const d = o.hasOwnProperty("size") ? o.size : 1;
+					if (
+						(o.flip || 1 === l
+							? c(s.lastChild, -d, d)
+							: 1 !== d && c(s.lastChild, d, d),
+						t.scaleFatness && null !== t.positions[0])
+					) {
+						const l = 31 * (1 - e.fatness);
+						r(s.lastChild, l, 0, "left", "top");
+					}
 				}
-
-				translate(svg.lastChild, position[0], position[1], xAlign);
+				t.scaleFatness &&
+					1 === t.positions.length &&
+					null === t.positions[0] &&
+					c(s.lastChild, 0.8 + 0.2 * e.fatness, 1);
 			}
-
-			if (feature.hasOwnProperty("angle")) {
-				// @ts-ignore
-				rotateCentered(svg.lastChild, (i === 0 ? 1 : -1) * feature.angle);
-			} // Flip if feature.flip is specified or if this is the second position (for eyes and eyebrows). Scale if feature.size is specified.
-			// @ts-ignore
-
-			const scale = feature.hasOwnProperty("size") ? feature.size : 1; // @ts-ignore
-
-			if (feature.flip || i === 1) {
-				// @ts-ignore
-				scaleCentered(svg.lastChild, -scale, scale);
-			} else if (scale !== 1) {
-				// @ts-ignore
-				scaleCentered(svg.lastChild, scale, scale);
-			}
-
-			if (info.scaleFatness && info.positions[0] !== null) {
-				// Scale individual feature relative to the edge of the head. If fatness is 1, then there are 47 pixels on each side. If fatness is 0, then there are 78 pixels on each side.
-				const distance = (78 - 47) * (1 - face.fatness); // @ts-ignore
-
-				translate(svg.lastChild, distance, 0, "left", "top");
-			}
-		}
-
-		if (
-			info.scaleFatness &&
-			info.positions.length === 1 &&
-			info.positions[0] === null
-		) {
-			// @ts-ignore
-			scaleCentered(svg.lastChild, fatScale(face.fatness), 1);
-		}
-	};
-
-	const display = (container, face, overrides) => {
-		override(face, overrides);
-		const containerElement =
-			typeof container === "string"
-				? document.getElementById(container)
-				: container;
-
-		if (!containerElement) {
-			throw new Error("container not found");
-		}
-
-		containerElement.innerHTML = "";
-		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-		svg.setAttribute("version", "1.2");
-		svg.setAttribute("baseProfile", "tiny");
-		svg.setAttribute("width", "100%");
-		svg.setAttribute("height", "100%");
-		svg.setAttribute("viewBox", "0 0 400 600");
-		svg.setAttribute("preserveAspectRatio", "xMinYMin meet"); // Needs to be in the DOM here so getBBox will work
-
-		containerElement.appendChild(svg);
-		const featureInfos = [
-			{
-				name: "hairBg",
-				positions: [null],
-				scaleFatness: true,
-			},
-			{
-				name: "body",
-				positions: [null],
-			},
-			{
-				name: "jersey",
-				positions: [null],
-			},
-			{
-				name: "ear",
-				positions: [
-					[55, 325],
-					[345, 325],
-				],
-				scaleFatness: true,
-			},
-			{
-				name: "head",
-				positions: [null],
-				// Meaning it just gets placed into the SVG with no translation
-				scaleFatness: true,
-			},
-			{
-				name: "eyeLine",
-				positions: [null],
-			},
-			{
-				name: "smileLine",
-				positions: [
-					[150, 435],
-					[250, 435],
-				],
-			},
-			{
-				name: "miscLine",
-				positions: [null],
-			},
-			{
-				name: "facialHair",
-				positions: [null],
-				scaleFatness: true,
-			},
-			{
-				name: "eye",
-				positions: [
-					[140, 310],
-					[260, 310],
-				],
-			},
-			{
-				name: "eyebrow",
-				positions: [
-					[140, 270],
-					[260, 270],
-				],
-			},
-			{
-				name: "mouth",
-				positions: [[200, 440]],
-			},
-			{
-				name: "nose",
-				positions: [[200, 370]],
-			},
-			{
-				name: "hair",
-				positions: [null],
-				scaleFatness: true,
-			},
-			{
-				name: "glasses",
-				positions: [null],
-				scaleFatness: true,
-			},
-			{
-				name: "accessories",
-				positions: [null],
-				scaleFatness: true,
-			},
-		];
-
-		for (
-			var _i = 0, _featureInfos = featureInfos;
-			_i < _featureInfos.length;
-			_i++
-		) {
-			const info = _featureInfos[_i];
-			drawFeature(svg, face, info);
-		}
-	};
-
-	// THIS IS A GENERATED FILE, DO NOT EDIT BY HAND!
-	// See tools/process-svgs.js
-	var svgsIndex = {
+		};
+	var i = {
 		accessories: ["headband-high", "headband", "none"],
 		body: ["body", "body2", "body3", "body4", "body5"],
 		ear: ["ear1", "ear2", "ear3"],
@@ -1167,14 +938,8 @@ var faces = (function (exports) {
 		],
 		smileLine: ["line1", "line2", "line3", "line4", "none"],
 	};
-
-	const getID = type => {
-		// @ts-ignore
-		return svgsIndex[type][Math.floor(Math.random() * svgsIndex[type].length)];
-	};
-
-	const colors = {
-		white: {
+	const d = s => i[s][Math.floor(Math.random() * i[s].length)],
+		n = {
 			skin: ["#f2d6cb", "#ddb7a0"],
 			hair: [
 				"#272421",
@@ -1187,139 +952,143 @@ var faces = (function (exports) {
 				"#D7BF91",
 			],
 		},
-		asian: {
-			skin: ["#f5dbad"],
-			hair: ["#272421", "#0f0902"],
-		},
-		brown: {
+		f = { skin: ["#f5dbad"], hair: ["#272421", "#0f0902"] },
+		p = {
 			skin: ["#bb876f", "#aa816f", "#a67358"],
 			hair: ["#272421", "#1c1008"],
 		},
-		black: {
-			skin: ["#ad6453", "#74453d", "#5c3937"],
-			hair: ["#272421"],
-		},
-	};
-	const defaultTeamColors = ["#89bfd3", "#7a1319", "#07364f"];
-
-	const roundTwoDecimals = x => Math.round(x * 100) / 100;
-
-	const generate = (overrides, options) => {
-		const playerRace = (function () {
-			if (options && options.race) {
-				return options.race;
+		k = { skin: ["#ad6453", "#74453d", "#5c3937"], hair: ["#272421"] },
+		z = ["#89bfd3", "#7a1319", "#07364f"],
+		M = s => Math.round(100 * s) / 100;
+	return (
+		(s.display = (s, l, t) => {
+			e(l, t);
+			const a = "string" == typeof s ? document.getElementById(s) : s;
+			if (!a) throw new Error("container not found");
+			a.innerHTML = "";
+			const o = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+			o.setAttribute("version", "1.2"),
+				o.setAttribute("baseProfile", "tiny"),
+				o.setAttribute("width", "100%"),
+				o.setAttribute("height", "100%"),
+				o.setAttribute("viewBox", "0 0 400 600"),
+				o.setAttribute("preserveAspectRatio", "xMinYMin meet"),
+				a.appendChild(o);
+			for (
+				var c = 0,
+					r = [
+						{ name: "hairBg", positions: [null], scaleFatness: !0 },
+						{ name: "body", positions: [null] },
+						{ name: "jersey", positions: [null] },
+						{
+							name: "ear",
+							positions: [
+								[55, 325],
+								[345, 325],
+							],
+							scaleFatness: !0,
+						},
+						{ name: "head", positions: [null], scaleFatness: !0 },
+						{ name: "eyeLine", positions: [null] },
+						{
+							name: "smileLine",
+							positions: [
+								[150, 435],
+								[250, 435],
+							],
+						},
+						{ name: "miscLine", positions: [null] },
+						{ name: "facialHair", positions: [null], scaleFatness: !0 },
+						{
+							name: "eye",
+							positions: [
+								[140, 310],
+								[260, 310],
+							],
+						},
+						{
+							name: "eyebrow",
+							positions: [
+								[140, 270],
+								[260, 270],
+							],
+						},
+						{ name: "mouth", positions: [[200, 440]] },
+						{ name: "nose", positions: [[200, 370]] },
+						{ name: "hair", positions: [null], scaleFatness: !0 },
+						{ name: "glasses", positions: [null], scaleFatness: !0 },
+						{ name: "accessories", positions: [null], scaleFatness: !0 },
+					];
+				c < r.length;
+				c++
+			) {
+				h(o, l, r[c]);
 			}
-
-			switch (Math.floor(Math.random() * 4)) {
-				case 0:
-					return "white";
-
-				case 1:
-					return "asian";
-
-				case 2:
-					return "brown";
-
-				default:
-					return "black";
-			}
-		})();
-
-		const eyeAngle = Math.round(Math.random() * 25 - 10);
-
-		const palette = (function () {
-			switch (playerRace) {
-				case "white":
-					return colors.white;
-
-				case "asian":
-					return colors.asian;
-
-				case "brown":
-					return colors.brown;
-
-				case "black":
-					return colors.black;
-			}
-		})();
-
-		const skinColor =
-			palette.skin[Math.floor(Math.random() * palette.skin.length)];
-		const hairColor =
-			palette.hair[Math.floor(Math.random() * palette.hair.length)];
-		const isFlipped = Math.random() < 0.5;
-		const face = {
-			fatness: roundTwoDecimals(Math.random()),
-			teamColors: defaultTeamColors,
-			hairBg: {
-				id: Math.random() < 0.1 ? getID("hairBg") : "none",
-			},
-			body: {
-				id: getID("body"),
-				color: skinColor,
-			},
-			jersey: {
-				id: getID("jersey"),
-			},
-			ear: {
-				id: getID("ear"),
-				size: roundTwoDecimals(0.5 + Math.random()),
-			},
-			head: {
-				id: getID("head"),
-				shave: `rgba(0,0,0,${
-					Math.random() < 0.25 ? roundTwoDecimals(Math.random() / 5) : 0
-				})`,
-			},
-			eyeLine: {
-				id: Math.random() < 0.75 ? getID("eyeLine") : "none",
-			},
-			smileLine: {
-				id: Math.random() < 0.75 ? getID("smileLine") : "none",
-				size: roundTwoDecimals(0.25 + 2 * Math.random()),
-			},
-			miscLine: {
-				id: Math.random() < 0.5 ? getID("miscLine") : "none",
-			},
-			facialHair: {
-				id: Math.random() < 0.5 ? getID("facialHair") : "none",
-			},
-			eye: {
-				id: getID("eye"),
-				angle: eyeAngle,
-			},
-			eyebrow: {
-				id: getID("eyebrow"),
-				angle: Math.round(Math.random() * 35 - 15),
-			},
-			hair: {
-				id: getID("hair"),
-				color: hairColor,
-				flip: isFlipped,
-			},
-			mouth: {
-				id: getID("mouth"),
-				flip: isFlipped,
-			},
-			nose: {
-				id: getID("nose"),
-				flip: isFlipped,
-				size: roundTwoDecimals(0.5 + Math.random() * 0.75),
-			},
-			glasses: {
-				id: Math.random() < 0.1 ? getID("glasses") : "none",
-			},
-			accessories: {
-				id: Math.random() < 0.2 ? getID("accessories") : "none",
-			},
-		};
-		override(face, overrides);
-		return face;
-	};
-
-	exports.display = display;
-	exports.generate = generate;
-	exports.svgsIndex = svgsIndex;
-
-	return exports;
+		}),
+		(s.generate = (s, l) => {
+			const t = (function () {
+					if (l && l.race) return l.race;
+					switch (Math.floor(4 * Math.random())) {
+						case 0:
+							return "white";
+						case 1:
+							return "asian";
+						case 2:
+							return "brown";
+						default:
+							return "black";
+					}
+				})(),
+				a = Math.round(25 * Math.random() - 10),
+				o = (function () {
+					switch (t) {
+						case "white":
+							return n;
+						case "asian":
+							return f;
+						case "brown":
+							return p;
+						case "black":
+							return k;
+					}
+				})(),
+				c = o.skin[Math.floor(Math.random() * o.skin.length)],
+				r = o.hair[Math.floor(Math.random() * o.hair.length)],
+				h = Math.random() < 0.5,
+				i = {
+					fatness: M(Math.random()),
+					teamColors: z,
+					hairBg: { id: Math.random() < 0.1 ? d("hairBg") : "none" },
+					body: { id: d("body"), color: c },
+					jersey: { id: d("jersey") },
+					ear: { id: d("ear"), size: M(0.5 + Math.random()) },
+					head: {
+						id: d("head"),
+						shave: `rgba(0,0,0,${
+							Math.random() < 0.25 ? M(Math.random() / 5) : 0
+						})`,
+					},
+					eyeLine: { id: Math.random() < 0.75 ? d("eyeLine") : "none" },
+					smileLine: {
+						id: Math.random() < 0.75 ? d("smileLine") : "none",
+						size: M(0.25 + 2 * Math.random()),
+					},
+					miscLine: { id: Math.random() < 0.5 ? d("miscLine") : "none" },
+					facialHair: { id: Math.random() < 0.5 ? d("facialHair") : "none" },
+					eye: { id: d("eye"), angle: a },
+					eyebrow: {
+						id: d("eyebrow"),
+						angle: Math.round(35 * Math.random() - 15),
+					},
+					hair: { id: d("hair"), color: r, flip: h },
+					mouth: { id: d("mouth"), flip: h },
+					nose: { id: d("nose"), flip: h, size: M(0.5 + 0.75 * Math.random()) },
+					glasses: { id: Math.random() < 0.1 ? d("glasses") : "none" },
+					accessories: { id: Math.random() < 0.2 ? d("accessories") : "none" },
+				};
+			return e(i, s), i;
+		}),
+		(s.svgsIndex = i),
+		s
+	);
 })({});

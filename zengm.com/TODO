@@ -9,13 +9,12 @@ build performance
   - https://github.com/google/eleventy-high-performance-blog/blob/main/_includes/layouts/base.njk uses addHash
     - https://github.com/mightyplow/eleventy-plugin-cache-buster looks similar
   - check expiration in htaccess (and get rid of static.htaccess)
-  - minify js files
-    - eleventy transform?
   - compress images
 
 basketball-gm.com, football-gm.com
 - include .htaccess files for basketball-gm.com and football-gm.com in build
 - TEST
+  - backups before
   - dry-run deploy script
   - on bbgm deploy, skip bbgm-ads, old, and prebid folders
 
