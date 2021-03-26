@@ -3,8 +3,7 @@ basketball-gm.com, football-gm.com
   - backups before
   - dry-run deploy script
   - on bbgm deploy, skip bbgm-ads, old, and prebid folders
-
-404 pages on basketball-gm.com and football-gm.com
+  - 404 pages on basketball-gm.com and football-gm.com
 
 # later
 

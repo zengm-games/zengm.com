@@ -218,6 +218,9 @@ module.exports = function (eleventyConfig) {
 			hockey: `/hockey/${afterPrefix}`,
 		};
 
+		// For current sport, link to main page
+		urls[sport] = prefix;
+
 		return `<div class="dropdown top-nav-item">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
         ${bySport(
