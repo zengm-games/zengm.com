@@ -17,7 +17,7 @@ const TOP_BELOW_MORE = 372;
 (async () => {
 	const extractTops = {
 		0: 271,
-		1: TOP_BELOW_SCORES,
+		1: TOP_BELOW_SCORES + 2,
 		2: 649,
 		3: TOP_BELOW_NAVBAR,
 		4: TOP_BELOW_PAGE_TITLE,
