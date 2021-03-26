@@ -413,11 +413,11 @@ window.onFacesJS = function () {
   function genFace() {
     let options;
     {% if sport == "hockey" %}
-    if (Math.random() < 0.85) {
-      options = {
-        race: "white"
-      };
-    }
+      if (Math.random() < 0.85) {
+        options = {
+          race: "white"
+        };
+      }
     {% endif %}
 
     return faces.generate({
@@ -426,12 +426,25 @@ window.onFacesJS = function () {
     }, options);
   }
 
+  {% if sport == "basketball" %}
+    const dmg = {{ davidMcGillian | dump | safe }};
+    const dmgIndex = Math.floor(Math.random() * numFaces);
+  {% endif %}
+
   for (let i = 0; i < numFaces; i++) {
     const faceContainer = document.createElement("div");
     faceContainer.classList.add("face");
     faceContainer.classList.add("mx-2");
     faceContainer.classList.add("flex-shrink-0");
     facesContainer.appendChild(faceContainer);
+
+    {% if sport == "basketball" %}
+      if (i === dmgIndex) {
+        console.log(i, dmg);
+        faces.display(faceContainer, dmg);
+        continue;
+      }
+    {% endif %}
 
     const face = genFace();
     faces.display(faceContainer, face);

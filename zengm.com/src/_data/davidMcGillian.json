@@ -1,0 +1,63 @@
+{
+    "accessories": {
+      "id": "none"
+    },
+    "body": {
+      "color": "#5c3937",
+      "id": "body"
+    },
+    "ear": {
+      "id": "ear1",
+      "size": 0.86
+    },
+    "eye": {
+      "angle": 11,
+      "id": "eye1"
+    },
+    "eyeLine": {
+      "id": "none"
+    },
+    "eyebrow": {
+      "angle": -14,
+      "id": "eyebrow9"
+    },
+    "facialHair": {
+      "id": "goatee5"
+    },
+    "fatness": 0.06,
+    "glasses": {
+      "id": "none"
+    },
+    "hair": {
+      "color": "#272421",
+      "id": "short2"
+    },
+    "head": {
+      "id": "head8",
+      "shave": "rgba(0,0,0,0)"
+    },
+    "jersey": {
+      "id": "jersey3"
+    },
+    "miscLine": {
+      "id": "forehead4"
+    },
+    "mouth": {
+      "flip": true,
+      "id": "straight"
+    },
+    "nose": {
+      "flip": true,
+      "id": "nose3",
+      "size": 0.69
+    },
+    "smileLine": {
+      "id": "none",
+      "size": 0.87
+    },
+    "teamColors": [
+      "#0d435e",
+      "#f0494a",
+      "#cccccc"
+    ]
+  }
