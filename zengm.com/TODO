@@ -18,6 +18,7 @@ basketball-gm.com, football-gm.com
     - see https://github.com/11ty/eleventy-plugin-rss/blob/master/src/htmlToAbsoluteUrls.js
   - special case for feed.xml, replace "https://zengm.com/basketball/ with "https://basketball-gm.com/
   - different depending on if inside the "basketball" or "football" folders, then need to explicitly link to zengm.com
+  - fixLinks should run after assetgraph, and then move to .com folders for each site
 - less hacky way
   - in src, replace all basketball-gm.com URLs with /basketball/
   - custom url filter (similar to built-in https://www.11ty.dev/docs/filters/url/ )
@@ -26,6 +27,7 @@ basketball-gm.com, football-gm.com
     - detect /football/ and /basketball/ URLs?
     - how to use in 11ty.js templates? this.url() should work, i think, see https://www.11ty.dev/docs/languages/javascript/ filters
 - check rss feed URLs too, they are processed differently to make them absolute already
+  - use same logic in feed.xml
 
 sidebar menu
 - use eleventyNavigation?

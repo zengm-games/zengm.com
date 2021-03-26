@@ -2,8 +2,9 @@
   "name": "zengm.com",
   "scripts": {
     "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && yarn run assetgraph && bash tools/after-assetgraph.sh",
+    "build2": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && node tools/fix-links.js",
     "deploy": "node tools/deploy.js",
-    "assetgraph": "rm -rf dist && node --max-old-space-size=16000 node_modules/.bin/buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" --sharedbundles",
+    "assetgraph": "rm -rf dist && node --max-old-space-size=24000 node_modules/.bin/buildProduction _site/index.html _site/404/index.html _site/.htaccess _site/blog/feed.xml _site/files/logo-*.png _site/files/carousel/*.png _site/files/*.json _site/files/*.zip _site/files/foot-on-the-line/* _site/files/foot-on-the-line/**/* _site/files/nba_wins_payroll/* --outroot dist --subsetfonts --optimizeimages --browsers \">0.1%, not ie <= 9\" --sharedbundles",
     "start": "rm -rf _site && concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
     "watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"yarn run sass\"",
     "sass": "node-sass -o src/css src/css"
@@ -16,10 +17,13 @@
     "chokidar-cli": "^2.1.0",
     "cloudflare": "^2.7.0",
     "concurrently": "^6.0.0",
+    "glob": "^7.1.6",
     "husky": "=4",
     "lint-staged": ">=10",
     "markdown-it-attrs": "^4.0.0",
     "node-sass": "^5.0.0",
+    "posthtml": "^0.15.1",
+    "posthtml-urls": "^1.0.0",
     "prettier": "^2.2.1",
     "purgecss": "^4.0.3",
     "sharp": "^0.27.2"
