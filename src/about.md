@@ -41,7 +41,7 @@ I could go on and on about everything that happened between 2008 and today. And 
 
 All throughout that time, my games have been improving and [my userbase has been growing](/blog/2021/01/2020-was-awesome-for-bbgm/). And it's still really fun for me to work on. There's no such thing as a sports simulation game being "done", there's always something to do.
 
-At this point, I think my games have [a pretty clear niche](/#principles):
+At this point, I think my games have a pretty clear niche:
 
 <ul>
 {% include "principles.njk" %}
