@@ -12,7 +12,7 @@ So you want to write a sports simulation game. Great! As someone who has written
 
 I get this question sometimes from people who know a bit of programming and would like to make a sports simulation game, but feel overwhelmed or don't quite know where to start. I know this feeling well. I wanted to make Basketball GM for a long time before I actually felt comfortable trying. Before that, I thought it seemed too complicated for me and I'd fail horribly if I tried.
 
-How do you get past that? Well if I wanted an easy answer, I could say [go look at the Basketball GM source code](https://github.com/dumbmatter/gm-games) and be done with it. But that's a bad answer. If you don't know where to start and feel overwhelmed at the idea of making your own game, you'll feel that even more strongly when trying to understand my code. Basketball GM has been in development for years now, and the codebase has grown large and somewhat complicated. But at its core, a sports simulation game can be much simpler.
+How do you get past that? Well if I wanted an easy answer, I could say [go look at the Basketball GM source code](https://github.com/zengm-games/zengm) and be done with it. But that's a bad answer. If you don't know where to start and feel overwhelmed at the idea of making your own game, you'll feel that even more strongly when trying to understand my code. Basketball GM has been in development for years now, and the codebase has grown large and somewhat complicated. But at its core, a sports simulation game can be much simpler.
 
 <!--more-->
 

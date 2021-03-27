@@ -1,6 +1,6 @@
 const { spawn } = require("child_process");
 const cloudflare = require("cloudflare");
-const cloudflareConfig = require("../../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
+const cloudflareConfig = require("../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 
 const mySpawn = (command, args) => {
 	return new Promise(resolve => {

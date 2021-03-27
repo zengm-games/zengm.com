@@ -8,9 +8,9 @@ tags:
   - Technical
 ---
 
-[Check it out.](https://github.com/dumbmatter/basketball-gm/commit/cb4ae5f1b93dd7ad4e69fcc0c832ed53714e7e3a) Damn, nostalgia. I had just graduated from college and was trying to learn both Python and GTK+ (both technologies long since abandoned by BBGM) while pursuing this crazy idea of making a basketball management sim.
+[Check it out.](https://github.com/zengm-games/zengm/commit/cb4ae5f1b93dd7ad4e69fcc0c832ed53714e7e3a) Damn, nostalgia. I had just graduated from college and was trying to learn both Python and GTK+ (both technologies long since abandoned by BBGM) while pursuing this crazy idea of making a basketball management sim.
 
-Looking at the code, some of it has totally changed, but other parts still have a direct lineage to the code today. For example, the [ridiculously simple initial implementation of game simulation](https://github.com/dumbmatter/basketball-gm/blob/cb4ae5f1b93dd7ad4e69fcc0c832ed53714e7e3a/game_sim.py) is not that different than the [only slightly less simple implementation used today](https://github.com/dumbmatter/basketball-gm/blob/aa187e67ce54077fc7517fa29d465e6e4000baff/src/js/worker/core/GameSim.js). The overall structure is the same, and many of the functions remain quite similar. Example:
+Looking at the code, some of it has totally changed, but other parts still have a direct lineage to the code today. For example, the [ridiculously simple initial implementation of game simulation](https://github.com/zengm-games/zengm/blob/cb4ae5f1b93dd7ad4e69fcc0c832ed53714e7e3a/game_sim.py) is not that different than the [only slightly less simple implementation used today](https://github.com/zengm-games/zengm/blob/aa187e67ce54077fc7517fa29d465e6e4000baff/src/js/worker/core/GameSim.js). The overall structure is the same, and many of the functions remain quite similar. Example:
 
 <!--more-->
 

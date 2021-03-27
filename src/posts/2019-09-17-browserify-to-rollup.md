@@ -46,4 +46,4 @@ One downside that remains - the "watch mode" that I use during development to qu
 
 I guess if it bugs me enough, I could switch back to Browserify, but just during development. Then I'd have the best of both worlds. But I'd really not like to maintain two build configs, so I hope either I can figure out how to make Rollup's watch mode faster, or it won't bug me too much.
 
-If you're still reading, you should [take a look at the Basketball GM and Football GM code on GitHub](https://github.com/dumbmatter/gm-games). It's not perfect, but I'm proud of it!
+If you're still reading, you should [take a look at the Basketball GM and Football GM code on GitHub](https://github.com/zengm-games/zengm). It's not perfect, but I'm proud of it!

@@ -8,14 +8,14 @@ module.exports = [
 		date: "2021-03-25",
 		text:
 			'Added Dean Oliver\'s "Four Factors" (eFG%, TOV%, ORB%, and FT/FGA) to the advanced team stats page. Thanks @domini7!',
-		links: ["https://github.com/dumbmatter/gm-games/pull/369"],
+		links: ["https://github.com/zengm-games/zengm/pull/369"],
 		basketball: true,
 	},
 	{
 		date: "2021-03-25",
 		text:
 			"Added awards for the season leader in some key stats (hockey: goals, assists, points; football: passing yards, rushing yards, receiving yards; yards from scrimmage). I know people might want more, but at some point it'd be too much clutter. This feature has already been in BBGM for a while. Thanks @domini7!",
-		links: ["https://github.com/dumbmatter/gm-games/pull/373"],
+		links: ["https://github.com/zengm-games/zengm/pull/373"],
 		football: true,
 		hockey: true,
 	},
@@ -332,7 +332,7 @@ module.exports = [
 		text:
 			"New challenge mode \"Thanos Mode\": at the end of the playoffs, there's a 20% chance of half the league either dying (if random player) or retiring (if real player). After each event, it can't happen again until three years later. Thanks @domini7!",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/360",
+			"https://github.com/zengm-games/zengm/pull/360",
 			"https://old.reddit.com/r/BasketballGM/comments/lifm6h/new_challenge_mode_thanos_mode_at_the_end_of_the/",
 		],
 		basketball: true,
@@ -369,14 +369,14 @@ module.exports = [
 		date: "2021-02-09",
 		text:
 			'Added new skill label "V" for "Volume Scorer" to BBGM. Thanks @nicidob!',
-		links: ["https://github.com/dumbmatter/gm-games/pull/357"],
+		links: ["https://github.com/zengm-games/zengm/pull/357"],
 		basketball: true,
 	},
 	{
 		date: "2021-02-09",
 		text:
 			'Updated the "desired contract length" formula based to feel more realistic. Thanks @nicidob!',
-		links: ["https://github.com/dumbmatter/gm-games/pull/356"],
+		links: ["https://github.com/zengm-games/zengm/pull/356"],
 		basketball: true,
 		football: true,
 	},
@@ -385,7 +385,7 @@ module.exports = [
 		text:
 			"Added a new league setting available in God Mode to control the number of fouls in a period before the bonus. Thanks @domini7! This setting automatically changes in historical leagues in 1955 and 1967.",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/351",
+			"https://github.com/zengm-games/zengm/pull/351",
 			"https://old.reddit.com/r/BasketballGM/comments/legy0a/udominila_added_a_new_league_setting_available_in/",
 		],
 		basketball: true,
@@ -586,7 +586,7 @@ module.exports = [
 		text:
 			'New "Edit Awards" page available in God Mode, which allows you to edit all the end-of-season award winners. Thanks @luso97!',
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/331",
+			"https://github.com/zengm-games/zengm/pull/331",
 			"https://old.reddit.com/r/BasketballGM/comments/kbl3m7/new_edit_awards_page_available_in_god_mode_which/",
 		],
 		basketball: true,
@@ -969,7 +969,7 @@ module.exports = [
 		text:
 			"New challenge mode \"Lose best player every season\", where at the end of the playoffs every season, the best player on your team will either retire (if he's a real player) or die a tragic death (if he's a random player). Thanks @luso97!",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/311/files",
+			"https://github.com/zengm-games/zengm/pull/311/files",
 			"https://old.reddit.com/r/BasketballGM/comments/iod22d/new_challenge_mode_lose_best_player_every_season/",
 		],
 		basketball: true,
@@ -978,14 +978,14 @@ module.exports = [
 	{
 		date: "2020-09-07",
 		text: "Added eFG% to stat tables. Thanks @domini7!",
-		links: ["https://github.com/dumbmatter/gm-games/pull/310"],
+		links: ["https://github.com/zengm-games/zengm/pull/310"],
 		basketball: true,
 	},
 	{
 		date: "2020-09-03",
 		text:
 			"Fixed team/player stat distributions pages for FBGM, and added additional stats in BBGM. Thanks @luso97!",
-		links: ["https://github.com/dumbmatter/gm-games/pull/306"],
+		links: ["https://github.com/zengm-games/zengm/pull/306"],
 		basketball: true,
 		football: true,
 	},
@@ -994,7 +994,7 @@ module.exports = [
 		text:
 			"Added a stats summary to the top of each player page, similar to Basketball Reference. Thanks @luso97!",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/307",
+			"https://github.com/zengm-games/zengm/pull/307",
 			"https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/",
 		],
 		basketball: true,
@@ -1004,7 +1004,7 @@ module.exports = [
 		date: "2020-09-01",
 		text:
 			"Clutch plays in the playoffs now contain some info about the series in the text. Thanks @kevbauer!",
-		links: ["https://github.com/dumbmatter/gm-games/pull/308"],
+		links: ["https://github.com/zengm-games/zengm/pull/308"],
 		basketball: true,
 		football: true,
 	},
@@ -1013,7 +1013,7 @@ module.exports = [
 		text:
 			"Added BPM, DBPM, OBPM, and VORP to the advanced stats. Thanks @nicidob!",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/297",
+			"https://github.com/zengm-games/zengm/pull/297",
 			"https://old.reddit.com/r/BasketballGM/comments/ijszx5/added_bpm_dbpm_obpm_and_vorp_to_the_advanced/",
 		],
 		basketball: true,
@@ -1053,7 +1053,7 @@ module.exports = [
 		date: "2020-08-26",
 		text:
 			"Tweaks to game simulation in the playoffs, most notably resulting in fewer upsets. Also injuries in the playoffs are shorter, to work around the fact that currently there is no way to have players play through minor injuries.",
-		links: ["https://github.com/dumbmatter/gm-games/pull/293"],
+		links: ["https://github.com/zengm-games/zengm/pull/293"],
 		basketball: true,
 		football: true,
 	},
@@ -1309,7 +1309,7 @@ module.exports = [
 		text:
 			"The ratings summary at the top of individual player pages now shows the difference between last year's ratings and this year's ratings. Thanks @icedjuro!",
 		links: [
-			"https://github.com/dumbmatter/gm-games/pull/280",
+			"https://github.com/zengm-games/zengm/pull/280",
 			"https://old.reddit.com/r/BasketballGM/comments/hv8arf/some_recent_minor_ui_updates/",
 		],
 		basketball: true,

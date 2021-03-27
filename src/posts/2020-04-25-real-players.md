@@ -39,7 +39,7 @@ Making a simulation game involving real players is hard. The simulation engine i
 
 I started with alexnoob's rosters. They are the most popular, most comprehensive, pretty darn good overall, and he graciously gave me his blessing to do it. I did make a few changes:
 
-1. I noticed that his roster has a lot of good role players, which makes it too easy to create deep teams of quality players and results in a glut of talented players in future free agent classes. To work around this, I very stupidly [applied a penalty to ratings based on a player's overall rating](https://github.com/dumbmatter/gm-games/blob/3b198218e85e533b28e1a0aa0725cd09b5c5ec7e/tools/process-rosters/index.js#L9-L38). Top players are left alone, but role players are nerfed.
+1. I noticed that his roster has a lot of good role players, which makes it too easy to create deep teams of quality players and results in a glut of talented players in future free agent classes. To work around this, I very stupidly [applied a penalty to ratings based on a player's overall rating](https://github.com/zengm-games/zengm/blob/3b198218e85e533b28e1a0aa0725cd09b5c5ec7e/tools/process-rosters/index.js#L9-L38). Top players are left alone, but role players are nerfed.
 
 2. Based on legal advice, I redacted some information from his rosters. The built-in realistic rosters do not include player pictures, team names, or team logos.
 

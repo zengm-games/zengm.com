@@ -9,7 +9,7 @@ tags:
 
 Previously, some of you had noticed something strange about team construction and game simulation in Football GM. If you made a team of all one type of player, that team would actually perform pretty well, usually making the playoffs. Obviously that doesn't make any sense.
 
-Looking at it more closely, I noticed that only passing stats were behaving strangely. A team of all kickers was horrible at running and at stopping the run. But they were incredible at passing! So I took a look at the passing code. Turns out the problem was just a small typo. [The effects of pass blocking and pass rushing were reversed for calculating the completion percentage and distance of passes.](https://github.com/dumbmatter/gm-games/commit/05aa4ca97bf055792a4e656852dcd4af6d1d8336) My bad. Small fix.
+Looking at it more closely, I noticed that only passing stats were behaving strangely. A team of all kickers was horrible at running and at stopping the run. But they were incredible at passing! So I took a look at the passing code. Turns out the problem was just a small typo. [The effects of pass blocking and pass rushing were reversed for calculating the completion percentage and distance of passes.](https://github.com/zengm-games/zengm/commit/05aa4ca97bf055792a4e656852dcd4af6d1d8336) My bad. Small fix.
 
 But this is actually really important, and not just for silly things like a team of all kickers!
 
