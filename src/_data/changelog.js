@@ -1,5 +1,20 @@
 module.exports = [
 	{
+		date: "2021-03-27",
+		text:
+			'Two new league settings. "Age of Draft Prospects" lets you customize the min/max age for draft prospects. And "Force Retire at Age" lets you set a maxmimum age limit for your league. See the blog post for more details. Thanks @domini7!',
+		links: [
+			"https://zengm.com/blog/2021/03/age-draft-prospects-force-retire-age/",
+			"https://github.com/zengm-games/zengm/pull/354",
+			"https://old.reddit.com/r/BasketballGM/comments/mes65m/two_new_league_settings_age_of_draft_prospects/",
+			"https://old.reddit.com/r/Football_GM/comments/mes67d/two_new_league_settings_age_of_draft_prospects/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/mes68m/two_new_league_settings_age_of_draft_prospects/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-03-25",
 		text: "Updated the rosters after the trade deadline.",
 		basketball: true,

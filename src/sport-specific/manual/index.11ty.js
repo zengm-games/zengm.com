@@ -84,7 +84,7 @@ ${bySport(
 <li><b>Free agency.</b> Players who are not re-signed become free agents and teams can sign them.</li>
 </ul>
 <h2>League Rules</h2>
-<p>League rules are generally similar on the ${proLeagueAbbrev}, but simplified.</p>
+<p>League rules are generally similar to the ${proLeagueAbbrev}, but simplified.</p>
 <p>You can customize many of the league rules by going to Tools > God Mode within a league.</p>
 <h3>Salary cap</h3>
 ${bySport(

@@ -137,6 +137,19 @@ module.exports = class {
 				: ""
 		}
 </p>
+<p>
+    <code>draftAges</code> is an array containing two numbers: the minimum and maximum ages for draft prospects. Default values are <code>${bySport(
+			{
+				basketball: "[19, 22]",
+				football: "[21, 22]",
+				hockey: "[18, 21]",
+			},
+			sport,
+		)}</code>. <a href="/blog/2021/03/age-draft-prospects-force-retire-age/">See this blog post for more info.</a>
+</p>
+<p>
+    <code>forceRetireAge</code> is an integer specifying a maximum age where players are forced to retire. If it's lower than the minimum value of <code>draftAges</code> (like the default value of 0), it has no effect.
+</p>
 <p><a name="confs-divs"></a></p>
 <h2>Conferences and Divisions</h2>
 <p>
