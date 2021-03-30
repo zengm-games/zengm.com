@@ -120,7 +120,8 @@
 
 .face {
   height: 90px;
-  width: 60px;
+  {% set FACE_WIDTH = 76 %}
+  width: {{ FACE_WIDTH }}px;
 }
 #faces {
   height: 90px;
@@ -403,7 +404,7 @@ document.getElementById("carousel-screenshots").addEventListener('slid.bs.carous
 <script>
 window.onFacesJS = function () {
   const facesContainer = document.getElementById("faces");
-  const numFaces = Math.ceil(document.documentElement.clientWidth / 76);
+  const numFaces = Math.ceil(document.documentElement.clientWidth / {{ FACE_WIDTH }});
 
   const teamColorsAll = {{ teamColors | dump | safe }};
   const jerseys = {{ jerseys[sport] | dump | safe }};
@@ -436,7 +437,7 @@ window.onFacesJS = function () {
   for (let i = 0; i < numFaces; i++) {
     const faceContainer = document.createElement("div");
     faceContainer.classList.add("face");
-    faceContainer.classList.add("mx-2");
+    faceContainer.classList.add("px-2");
     faceContainer.classList.add("flex-shrink-0");
     facesContainer.appendChild(faceContainer);
 
