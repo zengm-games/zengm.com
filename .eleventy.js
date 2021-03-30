@@ -249,6 +249,89 @@ module.exports = function (eleventyConfig) {
 </div>`;
 	});
 
+	eleventyConfig.addShortcode("trafficChartsBBGM", year => {
+		const infos = [
+			{
+				title: "Sessions",
+				color: "red",
+				data: [
+					{ year: 2013, value: 135664 },
+					{ year: 2014, value: 471553 },
+					{ year: 2015, value: 982926 },
+					{ year: 2016, value: 1101256 },
+					{ year: 2017, value: 1657749 },
+					{ year: 2018, value: 1868091 },
+					{ year: 2019, value: 2403039 },
+					{ year: 2020, value: 3440761 },
+				],
+			},
+			{
+				title: "Pageviews",
+				color: "green",
+				data: [
+					{ year: 2013, value: 13661063 },
+					{ year: 2014, value: 39662532 },
+					{ year: 2015, value: 76650999 },
+					{ year: 2016, value: 86009829 },
+					{ year: 2017, value: 144489273 },
+					{ year: 2018, value: 184571462 },
+					{ year: 2019, value: 222568917 },
+					{ year: 2020, value: 299207611 },
+				],
+			},
+			{
+				title: "Total Play Time (years)",
+				color: "blue",
+				data: [
+					{ year: 2013, value: 18.14 },
+					{ year: 2014, value: 42.06 },
+					{ year: 2015, value: 66.73 },
+					{ year: 2016, value: 70.09 },
+					{ year: 2017, value: 86.79 },
+					{ year: 2018, value: 100.7 },
+					{ year: 2019, value: 136.32 },
+					{ year: 2020, value: 206.1 },
+				],
+			},
+		];
+
+		for (const info of infos) {
+			info.data = info.data.filter(row => row.year <= year);
+		}
+
+		// Needs to have no indentation and no line breaks, otherwise parts get parsed as Markdown
+		return `<div id="chart_div_0"></div>
+<div id="chart_div_1"></div>
+<div id="chart_div_2"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(() => {
+const options = {
+legend: { position: 'none' },
+lineWidth: 5,
+pointSize: 20,
+vAxis: { format: 'short' }
+};
+const infos = ${JSON.stringify(infos)};
+for (let i = 0; i < infos.length; i++) {
+const info = infos[i];
+const data = new google.visualization.DataTable();
+data.addColumn("string", "Year");
+data.addColumn("number", "Value");
+data.addRows(info.data.map(row => [String(row.year), row.value]));
+console.log(info.data);
+const chart = new google.visualization.LineChart(document.getElementById("chart_div_" + i));
+chart.draw(data, {
+...options,
+colors: [info.color],
+title: info.title,
+});
+}
+});
+</script>`;
+	});
+
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
 		if (outputPath.endsWith(".html")) {
