@@ -100,3 +100,8 @@
 html.dark img.dark-invert {
   filter: invert(100%);
 }
+
+html.dark .google-chart {
+  // 87% seems to match dark mode bg color
+  filter: invert(87%);
+}

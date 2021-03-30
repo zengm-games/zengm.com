@@ -300,14 +300,15 @@ module.exports = function (eleventyConfig) {
 		}
 
 		// Needs to have no indentation and no line breaks, otherwise parts get parsed as Markdown
-		return `<div id="chart_div_0"></div>
-<div id="chart_div_1"></div>
-<div id="chart_div_2"></div>
+		return `<div id="chart_div_0" class="google-chart"></div>
+<div id="chart_div_1" class="google-chart"></div>
+<div id="chart_div_2" class="google-chart"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(() => {
 const options = {
+backgroundColor: "var(--red)",
 legend: { position: 'none' },
 lineWidth: 5,
 pointSize: 20,
@@ -320,7 +321,6 @@ const data = new google.visualization.DataTable();
 data.addColumn("string", "Year");
 data.addColumn("number", "Value");
 data.addRows(info.data.map(row => [String(row.year), row.value]));
-console.log(info.data);
 const chart = new google.visualization.LineChart(document.getElementById("chart_div_" + i));
 chart.draw(data, {
 ...options,
