@@ -1,5 +1,16 @@
 module.exports = [
 	{
+		date: "2021-03-31",
+		text:
+			"New position formula for BBGM which is hopefully a bit more stable and sensible than the old one. Thanks @nicidob!",
+		links: [
+			"https://zengm.com/blog/2021/03/new-position-formula/",
+			"https://github.com/zengm-games/zengm/issues/375",
+			"https://old.reddit.com/r/BasketballGM/comments/mhmbnu/new_position_formula_from_nicidob_in_version/",
+		],
+		basketball: true,
+	},
+	{
 		date: "2021-03-27",
 		text:
 			'Two new league settings. "Age of Draft Prospects" lets you customize the min/max age for draft prospects. And "Force Retire at Age" lets you set a maxmimum age limit for your league. See the blog post for more details. Thanks @domini7!',

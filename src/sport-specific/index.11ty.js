@@ -163,6 +163,7 @@ const feedbacks = {
 				"https://www.reddit.com/r/BasketballGM/comments/1mves9/new_features_trading_block_and_a_better_what/ccd6uy8",
 		},
 		{
+			name: "gizr",
 			text: "This game is freakin' great! Thanks for making it!!",
 			url:
 				"https://www.reddit.com/r/BasketballGM/comments/1rmthx/thanks_big_smile_here/",
