@@ -1,5 +1,13 @@
 module.exports = [
 	{
+		date: "2021-04-01",
+		text: "W/L/OTL/T records are now tracked for goalies.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/mic4d7/wlotlt_records_are_now_tracked_for_goalies/",
+		],
+		hockey: true,
+	},
+	{
 		date: "2021-03-31",
 		text:
 			"New position formula for BBGM which is hopefully a bit more stable and sensible than the old one. Thanks @nicidob!",
