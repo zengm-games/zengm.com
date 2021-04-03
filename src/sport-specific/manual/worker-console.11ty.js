@@ -31,6 +31,7 @@ This page explains how to access the console and shows examples of what you can 
 2. Open a new tab, copy about:debugging#/runtime/this-firefox into the address bar and hit enter.
 3. Scroll down (maybe way down) until you see the "Shared Workers" section. There should be an entry there similar to /gen/worker-2020.08.02.0001.js.
 4. Click "Inspect" next to it. That will open a new tab where you can run the code snippets below.
+5. **IMPORTANT!** If your code uses the keyword \`await\` (which is almost always true), you need to wrap it in an async function. That means you need to put \`(async () => {\` at the beginning of the code and \`})();\` at the end.
 
 ## Code snippets
 
