@@ -28,7 +28,7 @@ const deploy = async domain => {
 		for (const folder of copyAndKeep) {
 			console.log(`Copying "${folder}" folder...`);
 			await mySpawn("rsync", [
-				"-vhrl",
+				"-hrl",
 				`${domainFolder}/${folder}/`,
 				`${target}/${folder}/`,
 			]);
@@ -50,7 +50,7 @@ const deploy = async domain => {
 		excludes.push("bbgm-ads", "old", "prebid");
 	}
 	await mySpawn("rsync", [
-		"-vhrl",
+		"-hrl",
 		"--delete",
 		...excludes.flatMap(folder => ["--exclude", `/${folder}`]),
 		`${domainFolder}/`,

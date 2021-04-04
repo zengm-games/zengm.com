@@ -1,5 +1,15 @@
 module.exports = [
 	{
+		date: "2021-04-03",
+		text: "Denser settings UI, particularly for larger screens.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mjl810/denser_settings_ui_particularly_for_larger/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-04-01",
 		text: "W/L/OTL/T records are now tracked for goalies.",
 		links: [
