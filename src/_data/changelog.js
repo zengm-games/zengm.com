@@ -1,5 +1,45 @@
 module.exports = [
 	{
+		date: "2021-04-06",
+		text:
+			"On the GM History page, in addition to your entire career results (record, playoff appearances, etc), it also shows all those statistics for each different franchise you controlled.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mlr23v/more_proof_that_i_read_the_monthly_suggestions/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		date: "2021-04-06",
+		text:
+			"On player pages, there is now a double gold border around a jersey if it's retired by that team.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mlr23v/more_proof_that_i_read_the_monthly_suggestions/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		date: "2021-04-06",
+		text:
+			'Added a "totals" row to the bottom of box score tables showing team totals, like is already in BBGM.',
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/mlr904/a_few_little_fixes/",
+		],
+		hockey: true,
+	},
+	{
+		date: "2021-04-06",
+		text:
+			"Made salaries a bit more even, so there are fewer players willing to sign for the minimum.",
+		links: [
+			"https://old.reddit.com/r/ZenGMHockey/comments/mlr904/a_few_little_fixes/",
+		],
+		hockey: true,
+	},
+	{
 		date: "2021-04-03",
 		text: "Denser settings UI, particularly for larger screens.",
 		links: [
