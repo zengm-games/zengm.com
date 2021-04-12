@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		date: "2021-04-12",
+		text:
+			'All league settings can be edited before creating a new league by clicking the new "Customize Settings" button.',
+		links: [
+			"https://zengm.com/blog/2021/04/league-settings-new-league/",
+			"https://old.reddit.com/r/BasketballGM/comments/mpj8wu/all_league_settings_can_be_edited_before_creating/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-04-06",
 		text:
 			"On the GM History page, in addition to your entire career results (record, playoff appearances, etc), it also shows all those statistics for each different franchise you controlled.",
