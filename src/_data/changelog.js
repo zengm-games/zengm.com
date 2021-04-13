@@ -1,5 +1,16 @@
 module.exports = [
 	{
+		version: "2021.04.13.0881",
+		text:
+			"A player's overall rating is now displayed live while editing his ratings.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mq8ugr/a_players_overall_rating_is_now_displayed_live/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		date: "2021-04-12",
 		text:
 			'All league settings can be edited before creating a new league by clicking the new "Customize Settings" button.',

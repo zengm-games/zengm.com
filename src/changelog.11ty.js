@@ -1,3 +1,8 @@
+const getYear = entry => {
+	const dateOrVersion = entry.version ?? entry.date;
+	return parseInt(dateOrVersion.slice(0, 4));
+};
+
 class Changelog {
 	data() {
 		return {
@@ -63,7 +68,7 @@ class Changelog {
 <div id="changelog">
     ${changelog
 			.map(entry => {
-				const year = parseInt(entry.date.slice(0, 4));
+				const year = getYear(entry);
 				let yearAnchor = "";
 				if (year < highestSeenYear) {
 					highestSeenYear = year;
@@ -77,7 +82,7 @@ class Changelog {
     ${entry.big ? 'data-big="true"' : ""}
     class="changelog-entry position-relative"
 >
-    ${entry.date}
+    ${entry.version ? `v${entry.version}` : entry.date}
     <div class="changelog-sports">
         ${
 					entry.basketball
