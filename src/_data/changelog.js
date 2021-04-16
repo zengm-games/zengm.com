@@ -1,5 +1,16 @@
 module.exports = [
 	{
+		version: "2021.04.16.0655",
+		text:
+			'New "Historical Stats" setting allows you to import historical data (player stats, ratings, awards, standings, playoff brackets) in new real players leagues. By default, new leagues on PCs will include all historical data for active players as well as retired players in the Hall of Fame.',
+		links: [
+			"https://zengm.com/blog/2021/04/historical-stats/",
+			"https://old.reddit.com/r/BasketballGM/comments/ms4xuh/new_historical_stats_setting_allows_you_to_import/",
+		],
+		basketball: true,
+		big: true,
+	},
+	{
 		version: "2021.04.13.0881",
 		text:
 			"A player's overall rating is now displayed live while editing his ratings.",
