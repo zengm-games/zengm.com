@@ -24,13 +24,13 @@ But it's hard! When you use a build system for a long time, you accumulate a bun
 
 This is actually my third try at it. My first two tries ultimately failed with automated tests. For a while, I've used [Karma](https://karma-runner.github.io/latest/index.html) to run unit and integration tests in web browsers. [karma-browserify](https://github.com/nikku/karma-browserify) integrated nicely with my Browserify config. For Rollup, the equivalent package is [karma-rollup-preprocessor](https://github.com/jlmakes/karma-rollup-preprocessor), but I couldn't get past some serious performance issues.
 
-So I took a step back. Why am I using Karma in the firt place? I figured that makes sense because that's where the game runs, and it'd be good to catch cross browser compatibility problems. But the last time I actually caught a browser bug this way was years ago. Maybe it's not worth the trouble? This seems to be the consensus of the cool kids these days. Browser testing is out, and Node.js testing is in. Particularly with [Jest](https://jestjs.io/).
+So I took a step back. Why am I using Karma in the first place? I figured that makes sense to run tests in the browser because that's where the game runs, and it'd be good to catch cross browser compatibility problems. But the last time I actually caught a browser-related bug this way was years ago. Maybe it's not worth the trouble? This seems to be the consensus of the cool kids these days. Browser testing is out, and Node.js testing is in. Particularly with [Jest](https://jestjs.io/).
 
 Jest really turns me off though. It has a billion features and does a billion things and has a billion options. I'm a Unix guy, so that type of software is just not my style. But since it's so damn popular, I figured I'd hold my nose and give it a try.
 
-And... it actually was pretty painless to port my tests to Jest. Maybe it is possible to make really complex software if you have the resources of Facebook.
+And... it actually was pretty painless to port my tests to Jest. Maybe it is possible to successfully make really complex software if you have the resources of Facebook.
 
-I still kept Karma around for one "smoke test" which creates a new league and simulates an entire season. I figure if there is a browser issue, that'll probably catch it. And I hopes that karma-rollup-preprocessor would be able to handle running one test at least!
+I still kept Karma around for one "smoke test" which creates a new league and simulates an entire season. I figure if there is a browser issue, that'll probably catch it. And I figure that karma-rollup-preprocessor should be able to handle running one test at least!
 
 Next came actually switching to Rollup. The documentation is good, and there were plugins equivalent to most of my Browserify plugins. I did run into a couple problems:
 

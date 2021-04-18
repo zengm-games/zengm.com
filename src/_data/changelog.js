@@ -1,5 +1,27 @@
 module.exports = [
 	{
+		version: "2021.04.17.1336",
+		text:
+			'New league setting "Hide Inactive Teams" to hide inactive teams from dropdown menus at the top of many pages, such as the roster page.',
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mt48fv/dont_like_all_these_inactive_teams_clogging_up/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.04.17.1336",
+		text:
+			'I also added an "Auto Position" button next to the Position field to the player editor to pick the position that best fits the player\'s current ratings.',
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/mt48fv/dont_like_all_these_inactive_teams_clogging_up/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.04.16.0655",
 		text:
 			'New "Historical Stats" setting allows you to import historical data (player stats, ratings, awards, standings, playoff brackets) in new real players leagues. By default, new leagues on PCs will include all historical data for active players as well as retired players in the Hall of Fame.',
