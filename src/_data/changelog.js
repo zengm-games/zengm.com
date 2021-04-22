@@ -1,5 +1,15 @@
 module.exports = [
 	{
+		version: "2021.04.22.0727",
+		text:
+			"Real players leagues now include contract history and retired jersey numbers.",
+		links: [
+			"https://zengm.com/blog/2021/04/real-contract-history-and-retired-jersey-numbers/",
+			"https://old.reddit.com/r/BasketballGM/comments/mw88v4/real_players_leagues_now_include_contract_history/",
+		],
+		basketball: true,
+	},
+	{
 		version: "2021.04.17.1336",
 		text:
 			'New league setting "Hide Inactive Teams" to hide inactive teams from dropdown menus at the top of many pages, such as the roster page.',

@@ -10,7 +10,7 @@ tags:
   - Stats
 ---
 
-It's almost a year since [real players were added to Basketball GM](/blog/2020/06/league-creation-options/). Today there is another big improvement to this feature: historical stats.
+It's almost a year since [real players were added to Basketball GM](/blog/2020/04/real-players/). Today there is another big improvement to this feature: historical stats.
 
 When starting a new realy players league, there is a new Historical Stats setting:
 
