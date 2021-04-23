@@ -19,6 +19,8 @@ This page explains how to access the console and shows examples of what you can 
 
 ## How do I access the worker console?
 
+You can easily access a simple version of the worker console at <span class="text-highlight">Tools > Danger Zone > Worker Console</span> within any league. However, if you're doing a lot there, you may find it preferable to use your browser's built-in console. It's a little harder to access, but has a lot more functionality. How to access it depends on your browser:
+
 **Chrome:**
 
 1. Open your league in ${gameAcronym}.
@@ -37,27 +39,10 @@ This page explains how to access the console and shows examples of what you can 
 
 ---
 
-### Change the jersey number of a player
-
-\`\`\`
-player_id_number = 150;
-new_jeresy_number = "45";
-
-p = await bbgm.idb.cache.players.get(player_id_number);
-if (p.stats.length > 0) {
-    p.stats[p.stats.length - 1].jerseyNumber = new_jeresy_number;
-} else {
-    p.jerseyNumber = new_jeresy_number;
-}
-await bbgm.idb.cache.players.put(p);
-\`\`\`
-
----
-
 ### Buff/nerf draft prospect ratings
 
 \`\`\`
-players = await bbgm.idb.cache.players.indexGetAll("playersByTid", bbgm.PLAYER.UNDRAFTED);
+var players = await bbgm.idb.cache.players.indexGetAll("playersByTid", bbgm.PLAYER.UNDRAFTED);
 for (const p of players) {
     const ratings = p.ratings[p.ratings.length - 1];
 
@@ -102,7 +87,7 @@ async function nerf(pid, fraction) {
     await bbgm.idb.cache.players.put(p);
 }
 
-pids = [158, 207, 14];
+var pids = [158, 207, 14];
 for (const pid of pids) {
     await nerf(pid, 0.8);
 }
@@ -113,7 +98,7 @@ for (const pid of pids) {
 ### "Lock ratings" for all active players
 
 \`\`\`
-players = await bbgm.idb.cache.players.getAll();
+var players = await bbgm.idb.cache.players.getAll();
 for (const p of players) {
     p.ratings[p.ratings.length - 1].locked = true;
     await bbgm.idb.cache.players.put(p);
@@ -125,7 +110,7 @@ for (const p of players) {
 ### List all the players who have died
 
 \`\`\`
-bbgm.iterate(
+var bbgm.iterate(
     bbgm.idb.league.transaction("players").store,
     undefined,
     undefined,
@@ -150,7 +135,7 @@ The numbers in the \`start\` part are the season when you took control of that t
 The last entry must be your current team. If you just took control of the team after controlling another team for the season and playoffs this year, then use next season for \`start\`.
 
 \`\`\`
-const history = [
+var history = [
     { start: -Infinity, value: 5 },
     { start: 2025, value: 7 },
     { start: 2028, value: 9 },
@@ -168,8 +153,8 @@ await bbgm.idb.cache.gameAttributes.put({
 ### Delete all players at a certain position
 
 \`\`\`
-players = await bbgm.idb.cache.players.getAll();
-pids = []
+var players = await bbgm.idb.cache.players.getAll();
+var pids = []
 for (const p of players) {
     if (p.ratings[p.ratings.length - 1].pos === "${bySport(
 			{
@@ -216,6 +201,23 @@ async function customTragedy(pid, reason) {
 }
 
 customTragedy(155, "died with whatever text you want");
+\`\`\`
+
+---
+
+### Change the jersey number of a player
+
+\`\`\`
+var player_id_number = 150;
+var new_jeresy_number = "45";
+
+var p = await bbgm.idb.cache.players.get(player_id_number);
+if (p.stats.length > 0) {
+    p.stats[p.stats.length - 1].jerseyNumber = new_jeresy_number;
+} else {
+    p.jerseyNumber = new_jeresy_number;
+}
+await bbgm.idb.cache.players.put(p);
 \`\`\``;
 	}
 };

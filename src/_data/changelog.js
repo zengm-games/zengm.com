@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		version: "2021.04.23.0037",
+		text:
+			"New easier way to run commands on the worker console at Tools > Danger Zone.",
+		links: [
+			"https://basketball-gm.com/manual/worker-console/",
+			"https://old.reddit.com/r/BasketballGM/comments/mwnjsn/new_easier_way_to_run_commands_on_the_worker/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.04.22.0727",
 		text:
 			"Real players leagues now include contract history and retired jersey numbers.",
