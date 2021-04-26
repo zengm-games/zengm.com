@@ -1,5 +1,15 @@
 module.exports = [
 	{
+		version: "2021.04.26.0031",
+		text:
+			"Updated allowed jersey numbers per position to match the NFL's new rules.",
+		links: [
+			"https://www.nfl.com/news/nfl-passes-rule-expanding-eligible-jersey-numbers",
+			"https://old.reddit.com/r/Football_GM/comments/mypnqm/tiny_update_in_version_202104260031_i_updated_the/",
+		],
+		football: true,
+	},
+	{
 		version: "2021.04.23.0037",
 		text:
 			"New easier way to run commands on the worker console at Tools > Danger Zone.",
