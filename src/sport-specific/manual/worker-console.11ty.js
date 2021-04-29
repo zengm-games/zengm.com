@@ -110,7 +110,7 @@ for (const p of players) {
 ### List all the players who have died
 
 \`\`\`
-var bbgm.iterate(
+bbgm.iterate(
     bbgm.idb.league.transaction("players").store,
     undefined,
     undefined,

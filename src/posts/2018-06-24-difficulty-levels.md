@@ -56,6 +56,6 @@ Like many things in BBGM, I took my inspiration from [Baseball Mogul](http://the
 </table>
 </div>
 
-And if that's not good enough for you, you can tune the difficulty level to intermediate or more extreme values on the Options page.
+And if that's not good enough for you, you can tune the difficulty level to intermediate or more extreme values on the league settings page.
 
 As always, [feedback is appreciated](https://www.reddit.com/r/BasketballGM/comments/8tjivq/new_feature_difficulty_levels/)!

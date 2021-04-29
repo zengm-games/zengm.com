@@ -1867,7 +1867,7 @@ module.exports = [
 	{
 		date: "2020-05-18",
 		text:
-			"Added ability to supply real team info and player photos on the Options page, which overrides the defaults in any new league with real players.",
+			"Added ability to supply real team info and player photos on the global settings page, which overrides the defaults in any new league with real players.",
 		links: ["/basketball/manual/customization/team-player-data-real/"],
 		basketball: true,
 	},
