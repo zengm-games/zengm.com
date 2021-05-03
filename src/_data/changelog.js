@@ -1,45 +1,63 @@
 module.exports = [
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"New more accurate player and team ovr formulas, and some tweaks to player generation and development.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 		big: true,
 	},
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"Fixed a bug where some generated salaries were lower in the first season of a new league than in subsequent seasons.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 	},
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"After dropping back to pass, QBs now sometimes scramble. This is more common with QBs who are good runners. Furthermore, the player generator now more often generates hybrid QBs who can both run and pass.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 	},
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"New formula for defensive awards, based more directly on box score stats rather than AV.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 	},
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"If the winning team has the ball and can kneel to run out the clock, they now do so.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 	},
 	{
-		version: "",
+		version: "2021.05.02.0641",
 		text:
 			"The retirement age for players is increased, and hopefully you will no longer notice an excessive amount of very good players retiring young.",
-		links: ["https://zengm.com/blog/2021/05/football-updates-ovr/", ""],
+		links: [
+			"https://zengm.com/blog/2021/05/football-updates-ovr/",
+			"https://old.reddit.com/r/Football_GM/comments/n37svo/a_bunch_of_updates_in_version_202105020641_new/",
+		],
 		football: true,
 	},
 	{
