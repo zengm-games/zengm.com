@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		version: "2021.05.03.1348",
+		text:
+			'Improvements to the trade finding algorithm, which affects the trading block, the "What would make this deal work?" button, and AI-to-AI trades.',
+		links: [
+			"https://zengm.com/blog/2021/05/trade-finding-algorithm/",
+			"https://old.reddit.com/r/BasketballGM/comments/n4e1t0/improvements_to_the_trade_finding_algorithm_which/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.02.0641",
 		text:
 			"New more accurate player and team ovr formulas, and some tweaks to player generation and development.",
