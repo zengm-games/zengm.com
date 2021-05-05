@@ -1,4 +1,4 @@
-Redirect 301 /ads.txt https://a.pub.network/basketball-gm-com/ads.txt
+Redirect 301 /ads.txt https://a.pub.network/zengm-com/ads.txt
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
