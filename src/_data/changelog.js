@@ -1,5 +1,30 @@
 module.exports = [
 	{
+		version: "2021.05.08.1255",
+		text:
+			"The AI considers roster fit when making free agent signings and draft picks. Now there will be fewer seasons wasted by the AI signing multiple elite QBs/goalies to sit on the bench.",
+		links: [
+			"https://zengm.com/blog/2021/05/ai-roster-fit/",
+			"https://github.com/zengm-games/zengm/issues/380",
+			"https://old.reddit.com/r/Football_GM/comments/n82yf5/in_version_202105081255_the_ai_considers_roster/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/n82yee/in_version_202105081255_the_ai_considers_roster/",
+		],
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.05.08.1255",
+		text:
+			'Added a "Clear Injury" button to player pages in God Mode. Thanks @domini7!',
+		links: [
+			"https://github.com/zengm-games/zengm/pull/384",
+			"https://old.reddit.com/r/BasketballGM/comments/n82voa/udominila_added_a_clear_injury_button_to_player/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.03.1348",
 		text:
 			'Improvements to the trade finding algorithm, which affects the trading block, the "What would make this deal work?" button, and AI-to-AI trades.',
