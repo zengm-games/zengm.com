@@ -1,5 +1,27 @@
 module.exports = [
 	{
+		version: "2021.05.09.1209",
+		text:
+			"Added shortcuts to partially clear a trade: either only one team, or keeping untradeable assets checked.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/n8r7il/player_profile_pages_combine_regular_season_and/gxjy97h/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.05.09.1209",
+		text:
+			"Player profile pages combine regular season and playoff stats into a single table, with a toggle to switch between them.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/n8r7il/player_profile_pages_combine_regular_season_and/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.08.1255",
 		text:
 			"The AI considers roster fit when making free agent signings and draft picks. Now there will be fewer seasons wasted by the AI signing multiple elite QBs/goalies to sit on the bench.",
