@@ -5,6 +5,8 @@
 
 	<title>{{ gameName }} - Free online single-player {{ sport }} management simulation video game</title>
 
+  <meta name="description" content="Free single-player {{ sport }} management simulation video game game. Build your team into a dynasty, right from your web browser!">
+
 	<style>
 .splash-header {
 	background-color: var(--logo-purple);
@@ -139,7 +141,7 @@
             <div class="theme-switch-wrapper float-right float-sm-left">
               {% include "theme-switch.njk" %}
             </div>
-            <img src="/files/logo-{{ sport }}.png" class="logo img-fluid" width="{% bySport 838, 859, 816, sport %}" height="{% bySport 486, 475, 466, sport %}">
+            <img src="/files/logo-{{ sport }}.png" class="logo img-fluid" width="{% bySport 838, 859, 816, sport %}" height="{% bySport 486, 475, 466, sport %}" alt="{{ gameName }}">
         </div>
         <div class="col-sm-7 col-md-12 mt-3">
             <p class="lead">Have you ever looked at the decisions made by the front office of an {{ proLeagueAbbrev }} team and thought you could do better? Well, now you can! In <a href="{{ websitePlay }}"><b>{{ gameName }}</b></a>, you are the general manager of a {{ sport }} team.</p>
@@ -153,72 +155,72 @@
           {% if sport == "basketball" %}
             <div class="carousel-item">
               <h3>Real rosters for any season<span class="d-none d-sm-inline"> in history</span>.</h3>
-              <img data-index="0" width="730" height="375">
+              <img data-index="0" width="730" height="375" alt="Screenshot">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Detailed scouting reports and stats.</h3>
-            <img data-index="1" width="730" height="375">
+            <img data-index="1" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Manage your roster.</h3>
-            <img data-index="2" width="730" height="375">
+            <img data-index="2" width="730" height="375" alt="Screenshot">
           </div>
           {% if sport == "hockey" %}
             <div class="carousel-item">
               <h3>Set your lines.</h3>
-              <img data-index="15" width="730" height="375">
+              <img data-index="15" width="730" height="375" alt="Screenshot">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>Guide your team to the playoffs.</h3>
-            <img data-index="3" width="730" height="375">
+            <img data-index="3" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>...and to a championship!</h3>
-            <img data-index="4" width="730" height="375">
+            <img data-index="4" width="730" height="375" alt="Screenshot">
           </div>
           {% if sport != "football" %}
             <div class="carousel-item">
               <h3>Tanking is allowed.</h3>
-              <img data-index="5" width="730" height="375">
+              <img data-index="5" width="730" height="375" alt="Screenshot">
             </div>
           {% endif %}
           <div class="carousel-item">
             <h3>...but try not to get fired!</h3>
-            <img data-index="6" width="730" height="375">
+            <img data-index="6" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Plan ahead to manage the salary cap.</h3>
-            <img data-index="7" width="730" height="375">
+            <img data-index="7" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Keep track of your <span class="d-sm-none">finances</span><span class="d-none d-sm-inline">revenue and expenses</span>.</h3>
-            <img data-index="8" width="730" height="375">
+            <img data-index="8" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Build your legacy.</h3>
-            <img data-index="9" width="730" height="375">
+            <img data-index="9" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Play-by-play live box scores.</h3>
-            <img data-index="10" width="730" height="375">
+            <img data-index="10" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Team and player advanced stats.</h3>
-            <img data-index="11" width="730" height="375">
+            <img data-index="11" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Legendary players make the <span class="d-sm-none">HoF</span><span class="d-none d-sm-inline">Hall of Fame</span>.</h3>
-            <img data-index="12" width="730" height="375">
+            <img data-index="12" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Deeply customizable.</h3>
-            <img data-index="13" width="730" height="375">
+            <img data-index="13" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Create as many leagues as you want.</h3>
-            <img data-index="14" width="730" height="375">
+            <img data-index="14" width="730" height="375" alt="Screenshot">
           </div>
         </div>
 
@@ -261,10 +263,10 @@
       <h2>
         <div class="d-flex">
           <span class="mr-2">Real User Feedback</span>
-          <button id="feedback-prev" class="feedback-button black-icon"><img src="/files/bootstrap-icons/arrow-left-short.svg" width="22" height="22" class="svg-button"></button>
-          <button id="feedback-pause" class="feedback-button black-icon"><img src="/files/bootstrap-icons/pause.svg" width="22" height="22" class="svg-button"></button>
-          <button id="feedback-play" class="feedback-button black-icon" style="display: none"><img src="/files/bootstrap-icons/play.svg" width="22" height="22" class="svg-button"></button>
-          <button id="feedback-next" class="feedback-button black-icon"><img src="/files/bootstrap-icons/arrow-right-short.svg" width="22" height="22" class="svg-button"></button>
+          <button id="feedback-prev" class="feedback-button black-icon" aria-label="Previous"><img src="/files/bootstrap-icons/arrow-left-short.svg" width="22" height="22" class="svg-button" alt="Previous"></button>
+          <button id="feedback-pause" class="feedback-button black-icon" aria-label="Pause"><img src="/files/bootstrap-icons/pause.svg" width="22" height="22" class="svg-button" alt="Pause"></button>
+          <button id="feedback-play" class="feedback-button black-icon" style="display: none" aria-label="Resume"><img src="/files/bootstrap-icons/play.svg" width="22" height="22" class="svg-button" alt="Resume"></button>
+          <button id="feedback-next" class="feedback-button black-icon" aria-label="Next"><img src="/files/bootstrap-icons/arrow-right-short.svg" width="22" height="22" class="svg-button" alt="Next"></button>
         </div>
       </h2>
       <p id="feedback"></p>
