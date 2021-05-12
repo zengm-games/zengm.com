@@ -1,5 +1,25 @@
 module.exports = [
 	{
+		version: "2021.05.11.1331",
+		text:
+			"Added a notification when a new version of the game is available, and a button you can click to update.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/nae2r9/future_updates_not_todays_update_but_any_update/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.05.11.1331",
+		text:
+			"Improved the formatting check for imported league files to catch more errors.",
+		links: ["/basketball/manual/customization/json-schema/"],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.09.1209",
 		text:
 			"Added shortcuts to partially clear a trade: either only one team, or keeping untradeable assets checked.",
@@ -134,7 +154,7 @@ module.exports = [
 		text:
 			"New easier way to run commands on the worker console at Tools > Danger Zone.",
 		links: [
-			"https://basketball-gm.com/manual/worker-console/",
+			"/basketball/manual/worker-console/",
 			"https://old.reddit.com/r/BasketballGM/comments/mwnjsn/new_easier_way_to_run_commands_on_the_worker/",
 		],
 		basketball: true,
