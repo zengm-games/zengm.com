@@ -1,5 +1,16 @@
 module.exports = [
 	{
+		version: "2021.05.13.1370",
+		text:
+			"Players from the country of Georgia now are shown with the Georgian flag, rather than the American flag.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/nbysr9/in_version_202105131370_players_from_the_country/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.11.1331",
 		text:
 			"Added a notification when a new version of the game is available, and a button you can click to update.",
