@@ -2,6 +2,7 @@ _site
 node_modules
 yarn-error.log
 src/css/*.css
+src/files/logos.zip
 src/css/*.css.map
 dist
 tools/screenshots-raw
