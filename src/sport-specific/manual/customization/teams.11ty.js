@@ -44,7 +44,7 @@ module.exports = class {
 }
 </pre>
 <p>
-	The contents of each team object is as follows. Note that imgURL is optional.
+	The contents of each team object is as follows.
 </p>
 <ul>
 	<li>
@@ -68,8 +68,10 @@ module.exports = class {
 		${defaultStadiumCapacity}) - weird things might happen financially if you start tweaking this
 	</li>
 	<li>
-		"imgURL": URL for a 120x120 image to be displayed on the roster page for a
-		team (optional)
+		"imgURL": URL for a 256x256 team logo. If your logo is not square or is a different size, that's okay, it will be scaled. (Optional)
+	</li>
+	<li>
+		"imgURLSmall": URL for a 160x160 small team logo, which you can specify in addition to imgURL if you want a different versions of the logo when it is displayed large and small. (Optional, and imgURL will be used if you don't specify imgURLSmall.)
 	</li>
 </ul>
 <p>
