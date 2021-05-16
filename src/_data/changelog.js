@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		version: "",
+		text: "Disabled home field advantage for the finals.",
+		links: [""],
+		football: true,
+	},
+	{
 		version: "2021.05.13.1370",
 		text:
 			"Players from the country of Georgia now are shown with the Georgian flag, rather than the American flag.",

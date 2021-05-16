@@ -28,7 +28,8 @@ There are two things to customize in [the global settings](${websitePlay}setting
       "#3a3a3a"
     ],
     "jersey": "jersey3",
-    "imgURL": "/img/logos/PHI.png",
+    "imgURL": "/img/logos-primary/PHI.png",
+    "imgURLSmall": "/img/logos-secondary/PHI.png",
     "name": "Cheesesteaks",
     "pop": 0.6,
     "region": "Syracuse"
@@ -61,6 +62,8 @@ Setting one set of team info per abbreviation lets you change some team info ove
 \`\`\`
 
 In this example I'm only changing the logo for Syracuse, but you can do the same thing for any of the properties shown above. And like mentioned above, it's best if you only include the fields that you're actually overriding.
+
+(There are actually two logos available to be defined, \`imgURL\` and \`imgURLSmall\`, which are used in different places in the UI. If you specify only \`imgURL\`, it will be used for \`imgURLSmall\` too.)
 
 ## Player Photos
 
