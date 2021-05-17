@@ -1,8 +1,19 @@
 module.exports = [
 	{
-		version: "",
+		version: "2021.05.17.0023",
+		text:
+			"Many updates to the built-in teams, including 8 new teams, secondary logos, and more.",
+		links: [
+			"https://zengm.com/blog/2021/05/built-in-teams-update/",
+			"https://old.reddit.com/r/BasketballGM/comments/ne6r72/new_in_version_202105170023_many_updates_to_the/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.05.17.0023",
 		text: "Disabled home field advantage for the finals.",
-		links: [""],
 		football: true,
 	},
 	{

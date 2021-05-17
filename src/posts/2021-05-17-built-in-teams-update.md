@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Built-in teams update: new teams, secondary logos, and more"
-date: 2021-05-16
+date: 2021-05-17
 tags:
   - post
   - Logos
@@ -9,7 +9,16 @@ tags:
 
 <style>
 .logo-wrapper {
-    gap: 3rem;
+    gap: 2rem;
+}
+.logo-big {
+    max-width: 180px;
+    max-height: 180px;
+}
+.logo-small {
+    margin-left: 1rem;
+    max-width: 90px;
+    max-height: 90px;
 }
 </style>
 
@@ -21,7 +30,7 @@ There's a few new things related to the built-in teams:
 
 - 3 old teams got new logos.
 
-- Most teams now have a more compact secondary/small logo that is used in places where there is not much space.
+- Most teams now have a more compact secondary/small logo that is used in places where there is not much space. For some teams, their old logo is now their small logo.
 
 <!--more-->
 
@@ -32,43 +41,43 @@ Please give a warm welcome to the 8 new teams in the BBGM/FBGM/ZGMH universe.
 <div class="logo-wrapper mb-3 text-center d-flex flex-wrap justify-content-center">
     <div>
         <h4>Austin Armadillos</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/AUS.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/AUS.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/AUS.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/AUS.svg">
     </div>
     <div>
         <h4>Buffalo Wings</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/BUF.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/BUF.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/BUF.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/BUF.svg">
     </div>
     <div>
         <h4>Hawaii Honu</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/HAW.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/HAW.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/HAW.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/HAW.svg">
     </div>
     <div>
         <h4>Jacksonville Gators</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/JAX.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/JAX.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/JAX.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/JAX.svg">
     </div>
     <div>
         <h4>Ottawa Spiders</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/OTT.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/OTT.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/OTT.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/OTT.svg">
     </div>
     <div>
         <h4>San Francisco Unicorns</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/SF.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/SF.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/SF.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/SF.svg">
     </div>
     <div>
         <h4>Toronto Raccoons</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/TOR.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/TOR.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/TOR.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/TOR.svg">
     </div>
     <div>
         <h4>Virginia Beach Colonists</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/VB.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/VB.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/VB.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/VB.svg">
     </div>
 </div>
 
@@ -89,16 +98,17 @@ Some franchises have moved to new cities:
 <div class="logo-wrapper mb-3 text-center d-flex flex-wrap justify-content-center">
     <div>
         <h4>Calgary Mounties</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/CGY.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/CGY.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/CGY.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/CGY.svg">
     </div>
     <div>
         <h4>Montreal Beavers</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/MON.png">
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/MON.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/MON.svg">
     </div>
     <div>
         <h4>San Jose Venture Capitalists</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/SJ.png">
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/SJ.svg">
     </div>
 </div>
 
@@ -117,18 +127,18 @@ A little while ago I asked you guys [what the worst logos in the game were](http
 <div class="logo-wrapper mb-3 text-center d-flex flex-wrap justify-content-center">
     <div>
         <h4>Chicago Whirlwinds</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/CHI.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/CHI.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/CHI.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/CHI.svg">
     </div>
     <div>
         <h4>Seattle Symphony</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/SEA.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/SEA.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/SEA.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/SEA.svg">
     </div>
     <div>
         <h4>St. Louis Spirits</h4>
-        <img src="https://play.basketball-gm.com/img/logos-primary/STL.png">
-        <div><img src="https://play.basketball-gm.com/img/logos-secondary/STL.png" class="mt-3"></div>
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/STL.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/STL.svg">
     </div>
 </div>
 
@@ -137,15 +147,15 @@ I hope you agree that they're all big improvements over the old ones:
 <div class="logo-wrapper mb-3 text-center d-flex flex-wrap justify-content-center">
     <div>
         <h4>Chicago Whirlwinds</h4>
-        <img src="/files/old-logos/CHI.png">
+        <img class="logo-big" src="/files/old-logos/CHI.png">
     </div>
     <div>
         <h4>Seattle Symphony</h4>
-        <img src="/files/old-logos/SEA.png">
+        <img class="logo-big" src="/files/old-logos/SEA.png">
     </div>
     <div>
         <h4>St. Louis Spirits</h4>
-        <img src="/files/old-logos/STL.png">
+        <img class="logo-big" src="/files/old-logos/STL.png">
     </div>
 </div>
 
