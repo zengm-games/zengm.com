@@ -1,5 +1,27 @@
 module.exports = [
 	{
+		version: "2021.05.20.1111",
+		text:
+			"You can now sign free agents or release players even when it takes you outside of the max/min roster size limits. You still need to get your team within the limits before simming any games.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/nhdwdr/couple_little_updates_in_version_202105201111/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
+		version: "2021.05.20.1111",
+		text:
+			"Small team logos now appear in the standings and power rankings tables.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/nhdwdr/couple_little_updates_in_version_202105201111/",
+		],
+		basketball: true,
+		football: true,
+		hockey: true,
+	},
+	{
 		version: "2021.05.17.0023",
 		text:
 			"Many updates to the built-in teams, including 8 new teams, secondary logos, and more.",
