@@ -1,5 +1,13 @@
 module.exports = [
 	{
+		date: "2021.05.22.1293",
+		text: "You can now start a real players league at the 2021 playoffs.",
+		links: [
+			"https://old.reddit.com/r/BasketballGM/comments/nix6qi/you_can_now_start_a_real_players_league_at_the/",
+		],
+		basketball: true,
+	},
+	{
 		version: "2021.05.20.1111",
 		text:
 			"You can now sign free agents or release players even when it takes you outside of the max/min roster size limits. You still need to get your team within the limits before simming any games.",

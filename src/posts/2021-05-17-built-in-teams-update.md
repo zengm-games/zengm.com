@@ -109,6 +109,7 @@ Some franchises have moved to new cities:
     <div>
         <h4>San Jose Venture Capitalists</h4>
         <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/SJ.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/SJ.svg">
     </div>
 </div>
 
