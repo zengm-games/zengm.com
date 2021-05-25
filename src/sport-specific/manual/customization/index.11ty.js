@@ -32,7 +32,7 @@ module.exports = class {
 	</li>
 </ol>
 <p>
-	To use a League File, <a href="${websitePlay}new_league">create a new leauge</a> and select "Upload league file" under "Customize".
+	To use a League File, <a href="${websitePlay}new_league">create a new league</a> and select "Upload league file" under "Customize".
 </p>
 <p>
 	It is also possible to import only a draft class or only team info (cities,

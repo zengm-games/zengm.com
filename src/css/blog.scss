@@ -105,3 +105,14 @@ html.dark .google-chart {
   // 87% seems to match dark mode bg color
   filter: invert(87%);
 }
+
+blockquote {
+  background-color: var(--bg-2);
+  border-left: 5px solid var(--secondary);
+  margin-left: -15px;
+  padding: 0.5rem 0 0.5rem 10px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
