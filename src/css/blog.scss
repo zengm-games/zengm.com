@@ -110,9 +110,15 @@ blockquote {
   background-color: var(--bg-2);
   border-left: 5px solid var(--secondary);
   margin-left: -15px;
-  padding: 0.5rem 0 0.5rem 10px;
+  padding: 0.5rem;
 
   p:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  blockquote {
+    margin-left: 0;
   }
 }
