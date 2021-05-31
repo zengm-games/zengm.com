@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.05.31.0967",
+		"text": "Players can now play through minor injuries.",
+		"links": [
+			"/blog/2021/05/play-through-injuries/",
+			"https://old.reddit.com/r/BasketballGM/comments/npcbmt/players_can_now_play_through_minor_injuries_in/",
+			"https://old.reddit.com/r/Football_GM/comments/npccje/players_can_now_play_through_minor_injuries_in/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/npccfu/players_can_now_play_through_minor_injuries_in/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.05.31.0967",
+		"text": "Historical team abbreviations that changed over time are now shown correctly on player profile pages, rather than just showing the current abbreviations.",
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.05.25.0919",
 		"text": "New \"Auto ticket price\" setting at Team > Finances, enabled by default in all leagues because it's very useful.",
 		"links": [

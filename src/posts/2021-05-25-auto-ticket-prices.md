@@ -6,7 +6,7 @@ tags:
   - post
   - AI
   - Finances
-  - UI
+  - New Feature
 ---
 
 Over at [zengm.com](https://zengm.com/) it says:
@@ -21,7 +21,7 @@ One area where my games have failed in that regard is finances. Finances can be 
 
 At Team > Finances, there is a new checkbox for "Auto ticket price":
 
-<figure><img alt="Screenshot of the auto ticket price checkbox" src="/files/auto-ticket-price-1.png" class="img-fluid"></a></figure>
+<figure><img alt="Screenshot of the auto ticket price checkbox" src="/files/auto-ticket-price-1.png" class="img-fluid"></figure>
 
 When enabled, it will automatically set the ticket price to the highest value that will still usually result in a sellout (there is still game-to-game randomness, so it won't quite be 100% sellouts).
 
