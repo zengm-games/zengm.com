@@ -1,43 +1,43 @@
 {
-  "name": "zengm.com",
-  "scripts": {
-    "build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && rm -rf dist && mkdir dist && cp -r _site dist/zengm.com && yarn run split-domains",
-    "split-domains": "node tools/fix-links.js && mv dist/zengm.com/basketball dist/basketball-gm.com && mv dist/zengm.com/football dist/football-gm.com",
-    "deploy": "yarn run build && node tools/deploy.js",
-    "start": "rm -rf _site && concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
-    "watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"yarn run sass\"",
-    "sass": "sass src/css:src/css"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-navigation": "^0.1.6",
-    "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "chokidar-cli": "^2.1.0",
-    "cloudflare": "^2.7.0",
-    "concurrently": "^6.0.0",
-    "csso": "^4.2.0",
-    "glob": "^7.1.6",
-    "hasha": "^5.2.2",
-    "html-minifier-terser": "^5.1.1",
-    "husky": "=4",
-    "lint-staged": ">=10",
-    "markdown-it-attrs": "^4.0.0",
-    "posthtml": "^0.15.1",
-    "posthtml-urls": "^1.0.0",
-    "prettier": "^2.2.1",
-    "purgecss": "^4.0.3",
-    "sass": "^1.32.11",
-    "sharp": "^0.27.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
-  },
-  "dependencies": {
-    "bootstrap-dark-4": "^0.0.9"
-  }
+	"name": "zengm.com",
+	"scripts": {
+		"build": "rm -rf _site && yarn run sass && NODE_ENV=production eleventy && rm -rf dist && mkdir dist && cp -r _site dist/zengm.com && yarn run split-domains",
+		"split-domains": "node tools/fix-links.js && mv dist/zengm.com/basketball dist/basketball-gm.com && mv dist/zengm.com/football dist/football-gm.com",
+		"deploy": "yarn run build && node tools/deploy.js",
+		"start": "rm -rf _site && concurrently --kill-others \"yarn run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
+		"watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"yarn run sass\"",
+		"sass": "sass src/css:src/css"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-navigation": "^0.1.6",
+		"@11ty/eleventy-plugin-rss": "^1.1.1",
+		"chokidar-cli": "^2.1.0",
+		"cloudflare": "^2.7.0",
+		"concurrently": "^6.0.0",
+		"csso": "^4.2.0",
+		"glob": "^7.1.6",
+		"hasha": "^5.2.2",
+		"html-minifier-terser": "^5.1.1",
+		"husky": "=4",
+		"lint-staged": ">=10",
+		"markdown-it-attrs": "^4.0.0",
+		"posthtml": "^0.15.1",
+		"posthtml-urls": "^1.0.0",
+		"prettier": "^2.2.1",
+		"purgecss": "^4.0.3",
+		"sass": "^1.32.11",
+		"sharp": "^0.27.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,json,css,md}": "prettier --write"
+	},
+	"dependencies": {
+		"bootstrap-dark-4": "^0.0.9"
+	}
 }
