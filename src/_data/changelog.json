@@ -1,5 +1,37 @@
 [
 	{
+		"version": "2021.06.02.0776",
+		"text": "Added a menu to player pages linking between players on the same team or draft class.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/nqqjrj/added_a_menu_to_player_pages_linking_between/",
+			"https://old.reddit.com/r/BasketballGM/comments/n26p6r/monthly_suggestions_thread/gxy01hx/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.06.02.0776",
+		"text": "New league setting \"Hall of Fame Threshold Factor\" to let you control the strictness of HoF eligibility criteria.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/nqqjs0/new_league_setting_hall_of_fame_threshold_factor/",
+			"https://old.reddit.com/r/BasketballGM/comments/n26p6r/monthly_suggestions_thread/gz8z6gh/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.06.02.0776",
+		"text": "\"Trade With\" button on League Finances page to let you easily start a trade with a team after checking their salary cap situation.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/n26p6r/monthly_suggestions_thread/gxy01hx/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.05.31.0967",
 		"text": "Players can now play through minor injuries.",
 		"links": [
