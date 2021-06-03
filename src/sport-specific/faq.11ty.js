@@ -1,4 +1,5 @@
 const base = require("./base");
+const bySport = require("../util/bySport");
 
 module.exports = class FAQ {
 	data() {
@@ -9,6 +10,18 @@ module.exports = class FAQ {
 	}
 
 	render({ gameName, sport, websitePlay }) {
+		const androidAppURL = bySport(
+			{
+				basketball:
+					"https://play.google.com/store/apps/details?id=com.basketball_gm.play.twa",
+				football:
+					"https://play.google.com/store/apps/details?id=com.football_gm.play.twa",
+				hockey:
+					"https://play.google.com/store/apps/details?id=com.zengm.hockey.twa",
+			},
+			sport,
+		);
+
 		return `<a name="missing-leagues"></a>
 <h2>My leagues are gone! What happened?</h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
@@ -41,29 +54,26 @@ module.exports = class FAQ {
 
 <a name="app"></a>
 <h2>Can you make ${gameName} into an app for my phone?</h2>
+<p>${gameName} is now available for Android <a href="${androidAppURL}">in the Google Play Store</a>. But it's no different than playing the game in your mobile browser.</p>
+<p>I could imagine two separate followup questions:</p>
+<p class="text-highlight">Followup 1: Can you release an app for iOS (iPhone or iPad) similar to the Android app?</b></p>
+<p>Maybe some day, but Apple makes it a lot harder to do than Google, so I'm not exactly eager to do it. Also, like I said above, it wouldn't actually make the game any better than just using your mobile browser.</p>
+<p>But what if you just want it to look and feel a little more app-like? You can do that on iOS today, by following these steps:</p>
+<ol>
+  <li><p>Open <a href="${websitePlay}">${websitePlay}</a> in Safari.</p></li>
+  <li><p>Tap the icon featuring a right-pointing arrow coming out of a box along the top of the Safari window to open a drop-down menu.</p></li>
+  <li><p>Tap "Add to Home Screen." The Add to Home dialog box will appear, with the icon that will be used for this website on the left side of the dialog box.</p></li>
+  <li><p>Enter the name for the shortcut using the on-screen keyboard and tap "Add". Safari will close automatically and you will be taken to where the icon is located on your desktop.</p></li>
+</ol>
+<p>(You can also do a similar thing on Android, by going to your browser's menu and tapping "Add to homescreen"... or you could just <a href="${androidAppURL}">install the Android app</a>!)
+<p class="text-highlight">Followup 2: Can you make a better mobile app? Like a native app designed specifically for small screens?</b></p>
 <p>Not in the near future, for several reasons:</p>
 <ol>
-  <li><p>${gameName} already runs on your phone. Just use your browser. I know the interface is not ideal, but it does mean the mobile situation is less dire.</p></li>
+  <li><p>${gameName} already runs on your phone. Just use your browser. I know the interface is not perfect, but it does work.</p></li>
   <li><p>I'm just one guy working on this project. I think it'd be a bad idea for me to split my already limited resources over multiple separate codebases. Instead, I'm focused on making the web verison of ${gameName} as good as possible.</p></li>
   <li><p>It is possible to improve the mobile experience of ${gameName} without making an app. The mobile web version can be improved, and it will be improved. But given the above point, it'll take some time. Bear with me :)</p></li>
   <li><p>Finally, I'm not convinced that a tiny cell phone screen is a good place to play a sports management sim. This is a data-heavy game, and I think it's simply better on a laptop or desktop screen. So even if I made a super polished mobile app, I don't know if it would be as good as the current web version is on a computer.</p></li>
 </ol>
-<a name="a2hs"></a>
-<p>However, you can install the web app on your phone so it looks a bit more like a native app. There are different instructions for iOS and Android:</p>
-<h3>iOS (iPad or iPhone)</h3>
-<ol>
-  <li>Open <a href="${websitePlay}">${websitePlay}</a> in Safari.</li>
-  <li>Tap the icon featuring a right-pointing arrow coming out of a box along the top of the Safari window to open a drop-down menu.</li>
-  <li>Tap "Add to Home Screen." The Add to Home dialog box will appear, with the icon that will be used for this website on the left side of the dialog box.</li>
-  <li>Enter the name for the shortcut using the on-screen keyboard and tap "Add". Safari will close automatically and you will be taken to where the icon is located on your desktop.</li>
-</ol>
-<h3>Android</h3>
-<ol>
-  <li>Open <a href="${websitePlay}">${websitePlay}</a> in Chrome.</li>
-  <li>Tap the menu icon (3 dots in upper right-hand corner) and tap Add to homescreen.</li>
-  <li>You’ll be able to enter a name for the shortcut and then Chrome will add it to your home screen.</li>
-</ol>
-<p>(Credit <a href="https://natomasunified.org/kb/add-website-to-mobile-device-home-screen/">this site</a> for most of those instructions.)</p>
 
 <hr>
 
@@ -83,9 +93,10 @@ module.exports = class FAQ {
 
 <a name="other-sport"></a>
 <h2>Can you make another sport like baseball or soccer, or college sports?</h2>
-<p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other sports.</p>
-<p>Most likely baseball would be next, because pro baseball is pretty similar to pro basketball/football/hockey. Soccer would require a lot more work to really do it right, since pro soccer is pretty different. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
-<p>But who knows, I'm bad at planning.</p>
+<p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other games.</p>
+<p>Most likely baseball would be the next sport, because pro baseball is pretty similar to pro basketball/football/hockey. Soccer would require a lot more work to really do it right, since pro soccer is pretty different. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
+<p>College sports would also be fun to do.</p>
+<p>Will the next new game be a college version of an existing sport, or a pro baseball game? I'm not sure. Like I said, I'm bad at planning. I also am not sure when any of this will happen. Which doesn't necessarily mean it will be a long time. It only took about 6 weeks from me deciding to make ZenGM Hockey to releasing it. There could be a similar timeline for my next game when I decide to start working on it.</p>
 
 ${
 	sport === "hockey"
