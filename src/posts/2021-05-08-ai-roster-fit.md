@@ -23,7 +23,7 @@ But how does it work?
 
 Previously, when making a draft pick or signing a free agent, the AI would take the best player available. Usually that's the right thing to do, but it can result in unbalanced rosters.
 
-Now, there are two different metrics available: how good the player is, and how good the player fits on a team. To compute the fit, it basically computes how the team's overall rating (like on the Power Rankings page) changes before and after adding each player. So if you already have a good QB, adding another will improve your team only as much as a backup QB can. But if you don't have a good QB, then signing a better one will give you a big boost from that starting QB slot.
+Now, there are two different metrics available: how good the player is, and how well the player fits on a team. To compute the fit, it basically compares how the team's overall rating (like on the Power Rankings page) changes before and after adding each player. So if you already have a good QB, adding another will improve your team only as much as a backup QB can. But if you don't have a good QB, then signing a better one will give you a big boost from that starting QB slot.
 
 This whole thing is another idea from [nicidob](https://github.com/zengm-games/zengm/issues/380), but required a bunch of tweaking to get it to behave correctly.
 
