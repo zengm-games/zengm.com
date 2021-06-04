@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.06.04.0716",
+		"text": "Improved performance when advancing from the preseason to the regular season, especially in Firefox.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ns8hkx/version_202106040716_added_more_padding_to_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.06.04.0716",
+		"text": "Added more padding to the Play menu on mobile, to hopefully decrease misclicks.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ns8hkx/version_202106040716_added_more_padding_to_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.03.1397",
 		"text": "Added some league export options to help with performance/stability of exporting large leagues. Unchecking all the new options decreases export size by about 30%.",
 		"links": [
