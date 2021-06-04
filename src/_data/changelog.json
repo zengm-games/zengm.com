@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.06.03.1397",
+		"text": "Added some league export options to help with performance/stability of exporting large leagues. Unchecking all the new options decreases export size by about 30%.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/nrvcom/added_some_league_export_options_to_help_with/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.02.0776",
 		"text": "Added a menu to player pages linking between players on the same team or draft class.",
 		"links": [
