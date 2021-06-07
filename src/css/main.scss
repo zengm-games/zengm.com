@@ -86,13 +86,24 @@ h3 {
 	background-color: var(--bg-2);
 }
 
-a, .pagination a, html.dark a {
+.pagination a {
+	color: var(--purple);
+	text-decoration: none !important;
+}
+a:not(.btn), html.dark a:not(.btn) {
 	color: var(--purple);
 	text-decoration: none;
 	&:hover {
 		color: var(--purple);
 		text-decoration: underline;
 	}
+}
+.dropdown a:not(.btn):hover {
+	color: #212529 !important;
+	text-decoration: none !important;
+}
+html.dark .dropdown a:not(.btn):hover {
+	color: #f8f9fa !important;
 }
 
 .text-highlight {
@@ -109,10 +120,10 @@ ul li::marker {
 
 @media (max-width: 991.98px) {
 	ul {
-		margin-left: -20px;
+		margin-left: -0.5rem;
 	}
 	ol {
-		margin-left: -20px;
+		margin-left: -0.5rem;
 	}
 }
 

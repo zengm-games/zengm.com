@@ -4,9 +4,6 @@ bootstrap 5
 - javascript
   - bundle only what i need
   - delete old bundle
-- carousel
-  - old one disappears when sliding
-- dropdown
 
 redirect basketball-gm.com/files and football-gm.com/files
 

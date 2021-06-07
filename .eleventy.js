@@ -222,15 +222,15 @@ module.exports = function (eleventyConfig) {
 		urls[sport] = prefix;
 
 		return `<div class="dropdown top-nav-item">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         ${bySport(
 					{
 						basketball:
-							'<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Basketball GM</span>',
+							'<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ms-1">Basketball GM</span>',
 						football:
-							'<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Football GM</span>',
+							'<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ms-1">Football GM</span>',
 						hockey:
-							'<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ml-1">Hockey</span>',
+							'<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ms-1">Hockey</span>',
 					},
 					sport,
 				)}
