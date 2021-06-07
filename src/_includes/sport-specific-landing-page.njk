@@ -153,12 +153,12 @@
       <div id="carousel-screenshots" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           {% if sport == "basketball" %}
-            <div class="carousel-item">
+            <div class="carousel-item active">
               <h3>Real rosters for any season<span class="d-none d-sm-inline"> in history</span>.</h3>
               <img data-index="0" width="730" height="375" alt="Screenshot">
             </div>
           {% endif %}
-          <div class="carousel-item">
+          <div class="carousel-item{% if sport != "basketball" %} active{% endif %}">
             <h3>Detailed scouting reports and stats.</h3>
             <img data-index="1" width="730" height="375" alt="Screenshot">
           </div>
@@ -223,15 +223,14 @@
             <img data-index="14" width="730" height="375" alt="Screenshot">
           </div>
         </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-screenshots" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-screenshots" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -371,11 +370,9 @@ if (theme === "dark") {
 }
 
 function showImagesStartingWith(index) {
-  console.log('showImagesStartingWith', index)
   // Load images from index to index + 1
   for (var i = index; i <= index + 1; i++) {
     var img = carouselImages[i % carouselImages.length];
-    console.log(i, img);
     const src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
 
     // "includes" because it gets prefixed with the domain name
