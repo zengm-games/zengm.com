@@ -1,6 +1,7 @@
 //const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const csso = require("csso");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
+const esbuild = require("esbuild");
 const fs = require("fs/promises");
 const hasha = require("hasha");
 const htmlmin = require("html-minifier-terser");
@@ -356,6 +357,13 @@ title: info.title,
 			await fs.writeFile(result.file, minifiedCss);
 		}
 		console.log("CSS processing complete");
+
+		await esbuild.build({
+			entryPoints: ["src/js/bootstrap.js"],
+			bundle: true,
+			minify: true,
+			outfile: "_site/js/bootstrap.js",
+		});
 	});
 
 	return {

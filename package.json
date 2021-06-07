@@ -16,6 +16,7 @@
 		"cloudflare": "^2.7.0",
 		"concurrently": "^6.0.0",
 		"csso": "^4.2.0",
+		"esbuild": "^0.12.6",
 		"glob": "^7.1.6",
 		"hasha": "^5.2.2",
 		"html-minifier-terser": "^5.1.1",
@@ -38,6 +39,8 @@
 		"*.{js,json,css,md}": "prettier --write"
 	},
 	"dependencies": {
+		"@popperjs/core": "^2.9.2",
+		"bootstrap": "^5.0.1",
 		"bootstrap-dark-5": "^1.0.1"
 	}
 }
