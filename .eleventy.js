@@ -20,6 +20,18 @@ const mdRender = new MarkdownIt({
 
 const purgeCSS = new PurgeCSS();
 
+const addHash = path => {
+	if (path.includes("?")) {
+		throw new Error(
+			"Careful about using addHash when there is already a query string",
+		);
+	}
+
+	const hash = hasha.fromFileSync(`_site${path}`);
+
+	return `${path}?v=${hash.substr(0, 10)}`;
+};
+
 module.exports = function (eleventyConfig) {
 	//eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(eleventyPluginRSS);
@@ -49,17 +61,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", mdRender);
 
 	// Similar to https://github.com/google/eleventy-high-performance-blog/blob/eb1f9c11763022719b44ba2715b1e5f60f73baa1/.eleventy.js#L78-L92
-	eleventyConfig.addFilter("addHash", path => {
-		if (path.includes("?")) {
-			throw new Error(
-				"Careful about using addHash when there is already a query string",
-			);
-		}
-
-		const hash = hasha.fromFileSync(`_site${path}`);
-
-		return `${path}?v=${hash.substr(0, 10)}`;
-	});
+	eleventyConfig.addFilter("addHash", addHash);
 
 	const dateFormatter = new Intl.DateTimeFormat("en-us", {
 		dateStyle: "long",
@@ -222,7 +224,8 @@ module.exports = function (eleventyConfig) {
 		// For current sport, link to main page
 		urls[sport] = prefix;
 
-		return `<div class="dropdown top-nav-item">
+		return `<script src="${addHash("/js/dropdown.js")}"></script>
+<div class="dropdown top-nav-item">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         ${bySport(
 					{
@@ -358,12 +361,14 @@ title: info.title,
 		}
 		console.log("CSS processing complete");
 
-		await esbuild.build({
-			entryPoints: ["src/js/bootstrap.js"],
-			bundle: true,
-			minify: true,
-			outfile: "_site/js/bootstrap.js",
-		});
+		for (const file of ["carousel.js", "dropdown.js"]) {
+			await esbuild.build({
+				entryPoints: [`src/js/${file}`],
+				bundle: true,
+				minify: true,
+				outfile: `_site/js/${file}`,
+			});
+		}
 	});
 
 	return {

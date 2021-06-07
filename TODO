@@ -1,9 +1,7 @@
 bootstrap 5
 - check all pages
 - check all blog posts
-- javascript
-  - bundle only what i need
-  - delete old bundle
+- async bootstrap js
 
 redirect basketball-gm.com/files and football-gm.com/files
 
