@@ -98,12 +98,16 @@ a:not(.btn), html.dark a:not(.btn) {
 		text-decoration: underline;
 	}
 }
-.dropdown a:not(.btn):hover {
+.dropdown a:not(.btn) {
 	color: #212529 !important;
 	text-decoration: none !important;
 }
-html.dark .dropdown a:not(.btn):hover {
+html.dark .dropdown a:not(.btn) {
 	color: #f8f9fa !important;
+}
+
+html.dark .btn-success {
+	color: #fff !important;
 }
 
 .text-highlight {
