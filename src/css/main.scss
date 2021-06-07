@@ -1,4 +1,4 @@
-@import "../../node_modules/bootstrap-dark-4/dist/bootstrap-nightshade";
+@import "../../node_modules/bootstrap-dark-5/dist/css/bootstrap-nightshade";
 
 // nightshade doesn't include the normal Bootstrap CSS variables, for some reason. So I included them here.
 :root {
@@ -23,6 +23,9 @@
 	--danger: #dc3545;
 	--light: #f8f9fa;
 	--dark: #343a40;
+
+	// Keep same as Bootstrap 4
+	--bs-font-sans-serif: -system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .dark {
 	--blue: #375a7f;
@@ -85,8 +88,10 @@ h3 {
 
 a, .pagination a, html.dark a {
 	color: var(--purple);
+	text-decoration: none;
 	&:hover {
 		color: var(--purple);
+		text-decoration: underline;
 	}
 }
 
@@ -94,12 +99,8 @@ a, .pagination a, html.dark a {
 	color: var(--orange);
 }
 
-ol {
-	margin-left: -40px;
-}
-
-ul {
-	margin-left: -40px;
+ol, ul {
+	margin-left: -2rem;
 }
 
 ul li::marker {
@@ -126,7 +127,7 @@ ul li::marker {
 
 	.footer-sport-logo {
 		position: absolute;
-		left: -11px;
+		left: -14px;
 		top: 1px;
 		text-align: right;
 	}

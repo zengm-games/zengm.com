@@ -404,17 +404,17 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bootstrap-dark-4@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/bootstrap-dark-4/-/bootstrap-dark-4-0.0.9.tgz#8614a6d3404d08eae89a01eb666833c4d1a0c63f"
-  integrity sha512-/h+X7v8wCtbrCYOyBy7wTPR/VEn3JbKEnxsZx1ALUP0tbOEawU6GzebIL5aDdwr38Gy6bh38+ek9ZUsrA7e2hw==
+bootstrap-dark-5@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-dark-5/-/bootstrap-dark-5-1.0.1.tgz#a8520eaedab12c79b0fe794b96cd1ee7e1458fd1"
+  integrity sha512-wcKS7mUDKznxzT+RclYfJed/pv47yphhmck5G9OS1LuwWNJK38BkjwRUeQmTMfWltm0eDYZiUxcW7ouiANHmdw==
   dependencies:
-    bootstrap "^4.6.0"
+    bootstrap "^5.0.1"
 
-bootstrap@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
-  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+bootstrap@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.1.tgz#e7939d599119dc818a90478a2a299bdaff037e09"
+  integrity sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==
 
 brace-expansion@^1.1.7:
   version "1.1.11"

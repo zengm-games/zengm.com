@@ -51,7 +51,7 @@ class Changelog {
 }
 </style>
 <div class="mb-3 d-sm-flex changelog-buttons">
-    <div class="btn-group mr-sm-3 mb-3 mb-sm-0">
+    <div class="btn-group me-sm-3 mb-3 mb-sm-0">
             <button type="button" class="btn btn-primary" id="toggle-basketball"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball</button>
             <button type="button" class="btn btn-primary" id="toggle-football"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football</button>
             <button type="button" class="btn btn-primary" id="toggle-hockey"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey</button>

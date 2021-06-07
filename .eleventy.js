@@ -238,13 +238,13 @@ module.exports = function (eleventyConfig) {
     <div class="dropdown-menu">
     <a class="dropdown-item" href="${
 			urls.basketball
-		}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18" class="mr-1">Basketball GM</a>
+		}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18" class="me-1">Basketball GM</a>
     <a class="dropdown-item" href="${
 			urls.football
-		}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18" class="mr-1">Football GM</a>
+		}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18" class="me-1">Football GM</a>
     <a class="dropdown-item" href="${
 			urls.hockey
-		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="mr-1">Hockey</a>
+		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="me-1">Hockey</a>
     </div>
 </div>`;
 	});

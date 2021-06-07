@@ -38,6 +38,6 @@
 		"*.{js,json,css,md}": "prettier --write"
 	},
 	"dependencies": {
-		"bootstrap-dark-4": "^0.0.9"
+		"bootstrap-dark-5": "^1.0.1"
 	}
 }

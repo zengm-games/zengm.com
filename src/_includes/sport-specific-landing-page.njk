@@ -138,7 +138,7 @@
     <div class="col-md-4">
       <div class="row">
         <div class="col-sm-5 col-md-12 position-relative">
-            <div class="theme-switch-wrapper float-right float-sm-left">
+            <div class="theme-switch-wrapper float-end float-sm-start">
               {% include "theme-switch.njk" %}
             </div>
             <img src="/files/logo-{{ sport }}.png" class="logo img-fluid" width="{% bySport 838, 859, 816, sport %}" height="{% bySport 486, 475, 466, sport %}" alt="{{ gameName }}">
@@ -150,7 +150,7 @@
     </div>
 
     <div class="col-md-8">
-      <div id="carousel-screenshots" class="carousel slide" data-ride="carousel">
+      <div id="carousel-screenshots" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           {% if sport == "basketball" %}
             <div class="carousel-item">
@@ -226,11 +226,11 @@
 
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+          <span class="visually-hidden">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+          <span class="visually-hidden">Next</span>
         </a>
       </div>
     </div>
@@ -262,7 +262,7 @@
       <p>I know, you've been burned in the past by other "free" games. I know, you think there's some catch. But we really are different, and we've been that way <a href="/about/">ever since we started in 2008</a>.</p>
       <h2>
         <div class="d-flex">
-          <span class="mr-2">Real User Feedback</span>
+          <span class="me-2">Real User Feedback</span>
           <button id="feedback-prev" class="feedback-button black-icon" aria-label="Previous"><img src="/files/bootstrap-icons/arrow-left-short.svg" width="22" height="22" class="svg-button" alt="Previous"></button>
           <button id="feedback-pause" class="feedback-button black-icon" aria-label="Pause"><img src="/files/bootstrap-icons/pause.svg" width="22" height="22" class="svg-button" alt="Pause"></button>
           <button id="feedback-play" class="feedback-button black-icon" style="display: none" aria-label="Resume"><img src="/files/bootstrap-icons/play.svg" width="22" height="22" class="svg-button" alt="Resume"></button>
@@ -277,8 +277,6 @@
 {% include "footer.njk" %}
 
 <script>
-//$("#carousel-screenshots").carousel();
-
 var feedbacks = {{ feedbacks | safe }};
 
 var elFeedback = document.getElementById("feedback");
@@ -373,9 +371,11 @@ if (theme === "dark") {
 }
 
 function showImagesStartingWith(index) {
+  console.log('showImagesStartingWith', index)
   // Load images from index to index + 1
   for (var i = index; i <= index + 1; i++) {
     var img = carouselImages[i % carouselImages.length];
+    console.log(i, img);
     const src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
 
     // "includes" because it gets prefixed with the domain name

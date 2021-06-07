@@ -160,7 +160,7 @@ The Harden-era Rockets are consistently in the good quadrant, taking tons of thr
 And finally, let's look at individual player data:
 
 <form class="form-inline float-right">
-  <select class="form-control mr-2" id="figure3season">
+  <select class="form-control me-2" id="figure3season">
     <option>All Seasons</option>
     <option>2018-19</option>
     <option>2017-18</option>

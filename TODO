@@ -1,3 +1,13 @@
+bootstrap 5
+- check all pages
+- check all blog posts
+- javascript
+  - bundle only what i need
+  - delete old bundle
+- carousel
+  - old one disappears when sliding
+- dropdown
+
 redirect basketball-gm.com/files and football-gm.com/files
 
 tag blog posts with sport and show icon somehow, like changelog?
