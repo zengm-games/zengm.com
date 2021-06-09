@@ -224,7 +224,7 @@ module.exports = function (eleventyConfig) {
 		// For current sport, link to main page
 		urls[sport] = prefix;
 
-		return `<script src="${addHash("/js/dropdown.js")}"></script>
+		return `<script async src="${addHash("/js/dropdown.js")}"></script>
 <div class="dropdown top-nav-item">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         ${bySport(
