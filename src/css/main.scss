@@ -90,23 +90,25 @@ h3 {
 	background-color: var(--bg-2);
 }
 
+a {
+	text-decoration: none;
+}
 .pagination a {
 	color: var(--purple);
 	text-decoration: none !important;
 }
-a:not(.btn), html.dark a:not(.btn) {
+a:not(.btn):not(.share-btn), html.dark a:not(.btn):not(.share-btn) {
 	color: var(--purple);
-	text-decoration: none;
 	&:hover {
 		color: var(--purple);
 		text-decoration: underline;
 	}
 }
-.dropdown a:not(.btn) {
+.dropdown a:not(.btn):not(.share-btn) {
 	color: #212529 !important;
 	text-decoration: none !important;
 }
-html.dark .dropdown a:not(.btn) {
+html.dark .dropdown a:not(.btn):not(.share-btn) {
 	color: #f8f9fa !important;
 }
 
