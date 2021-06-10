@@ -22,8 +22,7 @@ module.exports = class FAQ {
 			sport,
 		);
 
-		return `<a name="missing-leagues"></a>
-<h2>My leagues are gone! What happened?</h2>
+		return `<h2><a href="#missing-leagues" name="missing-leagues">My leagues are gone! What happened?</a></h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
 <p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
 <p>Browsers may also delete data if disk space is running low. To minimize the chance of this happening, go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</p>
@@ -31,15 +30,13 @@ module.exports = class FAQ {
 
 <hr>
 
-<a name="two-computers"></a>
-<h2>How can I play the same league on two computers?</h2>
+<h2><a href="#two-computers" name="two-computers">How can I play the same league on two computers?</a></h2>
 <p>Currently there's no easy way to do this, but it is possible.</p>
 <p>You can export a league (Tools > Export League), copy the file to your other computer, and then create a new league using that file.</p>
 
 <hr>
 
-<a name="latest-version"></a>
-<h2>How do I make sure I'm running the latest version of the game?</h2>
+<h2><a href="#latest-version" name="latest-version">How do I make sure I'm running the latest version of the game?</a></h2>
 <p>Sometimes your browser can get stuck on an old version of ${gameName}. Here are a few things you can try to force an upgrade.</p>
 <p><b>Method 1:</b> Open ${gameName} in a single tab in your web browser. Do a hard refresh (ctrl+shift+r, or ctrl+cmd+r on a Mac). If that didn't work, try again with your browser dev tools open (ctrl+shift+i, or ctrl+cmd+i on a Mac).</p>
 <p><b>Method 2:</b> Close all tabs with ${gameName} open and then open ${gameName} again. Or restart your browser. If this doesn't work the first time, try again.</p>
@@ -52,8 +49,7 @@ module.exports = class FAQ {
 
 <hr>
 
-<a name="app"></a>
-<h2>Can you make ${gameName} into an app for my phone?</h2>
+<h2><a href="#app" name="app">Can you make ${gameName} into an app for my phone?</a></h2>
 <p>${gameName} is now available for Android <a href="${androidAppURL}">in the Google Play Store</a>. But it's no different than playing the game in your mobile browser.</p>
 <p>I could imagine two separate followup questions:</p>
 <p class="text-highlight">Followup 1: Can you release an app for iOS (iPhone or iPad) similar to the Android app?</b></p>
@@ -77,8 +73,7 @@ module.exports = class FAQ {
 
 <hr>
 
-<a name="pt"></a>
-<h2>If I give a player more playing time, will he improve faster?</h2>
+<h2><a href="#pt" name="pt">If I give a player more playing time, will he improve faster?</a></h2>
 <p>No. I'm not convinced that playing time really matters for player development.</p>
 <p>It's a chicken and egg problem. Do good young players get more playing time because they're already good? Or do young players become good if they get more playing time? It's obvious that the first scenario happens. But is it obvious that the second scenario happens? I haven't seen any convincing evidence that it does${
 			sport === "basketball"
@@ -91,8 +86,7 @@ module.exports = class FAQ {
 
 <hr>
 
-<a name="other-sport"></a>
-<h2>Can you make another sport like baseball or soccer, or college sports?</h2>
+<h2><a href="#other-sport" name="other-sport">Can you make another sport like baseball or soccer, or college sports?</a></h2>
 <p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other games.</p>
 <p>Most likely baseball would be the next sport, because pro baseball is pretty similar to pro basketball/football/hockey. Soccer would require a lot more work to really do it right, since pro soccer is pretty different. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
 <p>College sports would also be fun to do.</p>
@@ -103,9 +97,27 @@ ${
 		? `
 <hr>
 
-<a name="hockey-gm"></a>
-<h2>Why is it called "ZenGM Hockey" rather than "Hockey GM"?</h2>
+<h2><a href="#hockey-gm" name="hockey-gm">Why is it called "ZenGM Hockey" rather than "Hockey GM"?</a></h2>
 <p>Because <a href="https://hockey-gm.com/">Hockey GM</a> is already another game from Finland. If you speak Finnish, give it a try!</p>
+`
+		: ""
+}
+
+${
+	sport === "basketball"
+		? `
+<hr>
+
+<h2><a href="#real-draft-classes" name="real-draft-classes">Why are some draft prospects missing or in the wrong draft class when using real players rosters?</a></h2>
+<p>Historical real players rosters only include players who actually have stats, because stats are what's used to determine ratings. Some players without stats may be in the game, but those are manually added. Feel free to <a href="/contact/">request more</a>, if you want!</p>
+<p>Another problem with real players rosters is that sometimes players appear in the wrong draft class. This happens because ${gameName} does not support the concept of "a player's rights are owned by a team, but he's not actually on the team this season". So things like a player being drafted in 2004 but playing in another pro league for a few years before his rookie season in 2007... ${gameName} has no good way to represent that. Until I fix that, there are only bad options, such as:</p>
+<ol>
+<li><p>Put those players on the roster of the team that owns their rights. That's bad for a number of reasons: it's hard to figure out who owns the rights to all prospects at all times; he would either play too early, or have to be marked as injured for a long time; and if he was injured and not playing, the team would still have to pay his salary.</p></li>
+<li><p>Make those players free agents that anyone can sign, and maybe mark them as injured for a long time too.</p></li>
+<li><p>Move those players to the draft class right before their rookie season.</p></li>
+</ol>
+<p>I think that last option is the least bad, so that's what I did.</p>
+<p>This should only apply to players who were not on the team at all. For players who did join a team after the draft but spent the whole year injured or on the bench, those players should be included in the correct draft class. However sometimes it's hard to distinguish between these scenarios, so if you notice someone like that being moved to a later draft class, please <a href="/contact/">let me know</a>.</p>
 `
 		: ""
 }`;
