@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.06.10.1275",
+		"text": "More updates to league export, including the ability to easily export only team metadata and/or league settings.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/nx3tb6/more_updates_to_league_export_including_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.04.0716",
 		"text": "Improved performance when advancing from the preseason to the regular season, especially in Firefox.",
 		"links": [
