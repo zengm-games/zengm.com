@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.06.15.1345",
+		"text": "View player game logs for all games with saved box scores. Access it from a player's profile page, either at the top by clicking \"Overview\" next to the player's name, or by clicking a season in one of the stats/ratings tables.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/o0ulrs/view_player_game_logs_for_all_games_with_saved/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.10.1275",
 		"text": "More updates to league export, including the ability to easily export only team metadata and/or league settings.",
 		"links": [
