@@ -34,7 +34,8 @@
 		],
 		"basketball": true,
 		"football": true,
-		"hockey": true
+		"hockey": true,
+		"big": true
 	},
 	{
 		"version": "2021.06.10.1275",
@@ -139,7 +140,8 @@
 		],
 		"basketball": true,
 		"football": true,
-		"hockey": true
+		"hockey": true,
+		"big": true
 	},
 	{
 		"version": "2021.05.22.1293",
