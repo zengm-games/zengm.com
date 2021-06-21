@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.06.21.0121",
+		"text": "If you click the text at the top by the Play button that says something like \"2021 free agency\" it will now take you to whatever the most relevant page is.",
+		"links": [],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.19.1112",
 		"text": "More realistic awards formulas. Thanks @nicidob!",
 		"links": [
