@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.06.23.0076",
+		"text": "A team's average age (weighted by minutes played) is now shown on the roster, power rankings, team stats, and league stats page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/o668ok/a_teams_average_age_weighted_by_minutes_played_is/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.21.0121",
 		"text": "If you click the text at the top by the Play button that says something like \"2021 free agency\" it will now take you to whatever the most relevant page is.",
 		"links": [],
