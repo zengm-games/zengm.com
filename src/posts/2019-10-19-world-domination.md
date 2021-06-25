@@ -27,10 +27,10 @@ The six countries where Basketball GM has not yet been played are:
 
 | Country         | Population |
 | --------------- | ---------- |
-| Kiribati        | 110,000    |
+| ~~Kiribati~~    | 110,000    |
 | Nauru           | 11,200     |
-| North Korea     | 25,368,620 |
-| Palau           | 21,503     |
+| ~~North Korea~~ | 25,368,620 |
+| ~~Palau~~       | 21,503     |
 | Solomon Islands | 599,419    |
 | Tuvalu          | 11,192     |
 
@@ -42,4 +42,6 @@ North Korea is much bigger than those other countries, but it lacks things like 
 
 Besides that... these are just some tiny, tiny countries. My dream of having Basketball GM users in every country is probably far away. But [187](https://www.youtube.com/watch?v=Op9Ml7pS6uA) is not bad!
 
-**Update, 2021-02-22:** Since the original blog post, you can cross Palau and North Korea off the list! Only 4 countries remain...
+**Update, 2021-02-22:** Since the original blog post, there have been users from Palau and North Korea! Only 4 countries remain...
+
+**Update, 2021-06-25:** Kiribati is now crossed off the list too! Only 3 countries left.
