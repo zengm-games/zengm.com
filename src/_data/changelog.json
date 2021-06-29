@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.06.28.1290",
+		"text": "You can customize the types of injuries in your league at Tools > League Settings > Injury Types.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/o9y62n/you_can_customize_the_types_of_injuries_in_your/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.23.0076",
 		"text": "A team's average age (weighted by minutes played) is now shown on the roster, power rankings, team stats, and league stats page.",
 		"links": [
