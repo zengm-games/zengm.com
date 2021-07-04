@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.07.03.0793",
+		"text": "New feature at Tools > Frivolities: the GOAT Lab! Define your own formula to rank the greatest players of all time, based on career stats and awards.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/od29bb/new_feature_at_tools_frivolities_the_goat_lab/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.06.28.1290",
 		"text": "You can customize the types of injuries in your league at Tools > League Settings > Injury Types.",
 		"links": [
