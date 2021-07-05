@@ -92,6 +92,19 @@ module.exports = class FAQ {
 <p>College sports would also be fun to do.</p>
 <p>Will the next new game be a college version of an existing sport, or a pro baseball game? I'm not sure. Like I said, I'm bad at planning. I also am not sure when any of this will happen. Which doesn't necessarily mean it will be a long time. It only took about 6 weeks from me deciding to make ZenGM Hockey to releasing it. There could be a similar timeline for my next game when I decide to start working on it.</p>
 
+<hr>
+
+<h2><a href="#ovr-ratings" name="ovr-ratings">Why are ovr ratings different than other games like 2k or Madden?</a></h2>
+<p>Many games, including mine, use a 0-100 rating system. However that doesn't mean they are the same scale. ${gameName} generally has lower ovr ratings than other games, so 90+ ovr players will be quite rare. You can see the breakdown of how good players at different ovr ratings are in <a href="/${sport}/manual/#player-ratings">the manual</a>.</p>
+<p>Is this a good thing? My thought process was that if the scale is 0-100, I might as well try to use all of it. If 100 rated players are common, what happens when there is someone even better? On the other hand, maybe I should have made my ratings more similar to other games just for familiarity? I don't know. Actually I think a better system would be unbounded, so average rating would be 0 and players could go above/below that any amount. But that might be too big a change for me to make in my games at this point.</p>
+
+<hr>
+
+<h2><a href="#contracts" name="contracts">Why are contracts in ${gameName} so simple?</a></h2>
+<p>Contracts in ${gameName} are indeed quite simple. They pay the same amount every season, they are all fully guaranteed with no player/team options, there are no restricted free agents, special salary cap exceptions are mostly not present, etc.</p>
+<p>That's certainly unrealistic. I completely understand people who wish that every little contract rule from the real world was included. But I am wary of making the contract system too complicated. Sometimes there is a tradeoff between complexity and fun, and for me personally when I'm playing a game like this, I don't want to have to worry about the ever-changing ridiculously complex contract rules that pro leagues have.</p>
+<p>Maybe some day I will include some of that stuff as options. But that's easier said than done, for something as central to the game as contracts. The AI would need to be smart enough to handle all possible combinations of settings, and the AI struggles enough already!</p>
+
 ${
 	sport === "hockey"
 		? `

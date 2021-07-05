@@ -128,6 +128,7 @@ ${bySport(
 		}</p>
 <p>Rookie contracts are not guaranteed until the regular season starts. That means if you release them (from the Roster page) before the regular season, you don't have to pay their contract. For all other players, contracts are fully guaranteed, and a contract still counts against your budget and your salary cap even after releasing a player.</p>
 <p>Each player has <a href="/${sport}/manual/player-mood/">a combination of "mood traits" that influences how he views your team</a>. This influences contract negotiation, both the probability that a player will negotiate with you, and the amount of money he asks for.</p>
+<a name="player-ratings"></a>
 <h2>Player Ratings</h2>
 ${bySport(
 	{
