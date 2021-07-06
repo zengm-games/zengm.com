@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.07.05.1338",
+		"text": "Inflation settings at Tools > League Settings allow you to specify random yearly changes in the salary cap and other contract/finance settings.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/oelq2b/inflation_settings_at_tools_league_settings_allow/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.07.05.1338",
+		"text": "Random players from USA and Canada now have a random state/province/territory generated for them as well. Frequencies are based on population, except for American hockey players it uses the popularity of the sport by state.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/oelq2b/inflation_settings_at_tools_league_settings_allow/h470buh/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.03.0793",
 		"text": "New feature at Tools > Frivolities: the GOAT Lab! Define your own formula to rank the greatest players of all time, based on career stats and awards.",
 		"links": [
