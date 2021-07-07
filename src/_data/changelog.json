@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.07.06.1246",
+		"text": "Added an \"Undo\" button for when the AI makes a crazy trade counter-offer and you just want to go back to the trade you had before asking.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/of87ih/added_an_undo_button_for_when_the_ai_makes_a/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.05.1338",
 		"text": "Inflation settings at Tools > League Settings allow you to specify random yearly changes in the salary cap and other contract/finance settings.",
 		"links": [
