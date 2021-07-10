@@ -66,7 +66,7 @@ module.exports = class FAQ {
 <p>Not in the near future, for several reasons:</p>
 <ol>
   <li><p>${gameName} already runs on your phone. Just use your browser. I know the interface is not perfect, but it does work.</p></li>
-  <li><p>I'm just one guy working on this project. I think it'd be a bad idea for me to split my already limited resources over multiple separate codebases. Instead, I'm focused on making the web verison of ${gameName} as good as possible.</p></li>
+  <li><p>I'm just one guy working on this project. I think it'd be a bad idea for me to split my already limited resources over multiple separate codebases. Instead, I'm focused on making the web version of ${gameName} as good as possible.</p></li>
   <li><p>It is possible to improve the mobile experience of ${gameName} without making an app. The mobile web version can be improved, and it will be improved. But given the above point, it'll take some time. Bear with me :)</p></li>
   <li><p>Finally, I'm not convinced that a tiny cell phone screen is a good place to play a sports management sim. This is a data-heavy game, and I think it's simply better on a laptop or desktop screen. So even if I made a super polished mobile app, I don't know if it would be as good as the current web version is on a computer.</p></li>
 </ol>

@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.07.10.0948",
+		"text": "You can now clone leagues, under the ... menu in the right column of the leagues table. This is faster than exporting/importing, and should work even on leagues too large to export.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ohpm3d/you_can_now_clone_leagues_under_the_menu_in_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.09.0880",
 		"text": "New frivolities: \"Best Player at Every Pick\", \"Most Games Injured\", and \"Oldest Peaks\".",
 		"links": [
