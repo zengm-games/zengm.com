@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.07.09.0880",
+		"text": "New frivolities: \"Best Player at Every Pick\", \"Most Games Injured\", and \"Oldest Peaks\".",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/oh1xiu/new_frivolities_in_version_202107090880_best/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.06.1246",
 		"text": "Added an \"Undo\" button for when the AI makes a crazy trade counter-offer and you just want to go back to the trade you had before asking.",
 		"links": [
