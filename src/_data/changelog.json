@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2021.07.11.0740",
+		"text": "New option to intelligently randomize teams when creating a new random players league.",
+		"links": [
+			"/blog/2021/07/randomize-built-in-teams/",
+			"https://old.reddit.com/r/BasketballGM/comments/oi7iqw/new_option_to_intelligently_randomize_teams_when/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.10.0948",
 		"text": "You can now clone leagues, under the ... menu in the right column of the leagues table. This is faster than exporting/importing, and should work even on leagues too large to export.",
 		"links": [
