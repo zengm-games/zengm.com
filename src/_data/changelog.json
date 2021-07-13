@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.07.13.0100",
+		"text": "You can disable the playoffs and have the #1 regular season team crowned champion by setting \"# Playoff Games\" to [] on the League Settings page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/oj998i/in_version_202107130100_you_can_disable_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.11.0740",
 		"text": "New option to intelligently randomize teams when creating a new random players league.",
 		"links": [
