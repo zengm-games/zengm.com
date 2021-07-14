@@ -239,7 +239,7 @@
 </div>
 
 <div class="bg-alt text-center pt-4 pt-lg-5 my-4 my-lg-5">
-  <a class="btn btn-lg btn-success play mb-2 mb-lg-3" href="{{ websitePlay }}">Start Playing Now</a>
+  <a class="btn btn-lg btn-success play mb-2 mb-lg-3" href="{{ websitePlay }}" id="start-playing-now">Start Playing Now</a>
   <div id="faces" class="d-flex justify-content-center overflow-hidden"></div>
 </div>
 
@@ -276,6 +276,21 @@
 </div>
 
 {% include "footer.njk" %}
+
+{% if env.NODE_ENV == "production" %}
+  <!-- Google Ads conversion tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-339141212"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-339141212');
+  document.getElementById("start-playing-now").addEventListener("click", () => {
+    gtag("event", "conversion", {"send_to": "{{ googleAdsConversionID }}"})
+  });
+  </script>
+{% endif %}
 
 <script>
 var feedbacks = {{ feedbacks | safe }};
