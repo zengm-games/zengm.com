@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.07.21.1380",
+		"text": "You can now start a real players league at the 2021 draft.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/op5dem/you_can_start_a_real_players_league_at_the_2021/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.07.15.0857",
 		"text": "Improved identification of rookie contracts in real players leagues.",
 		"links": [
