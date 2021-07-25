@@ -199,14 +199,10 @@ module.exports = class {
     default value will be used.
 </p>
 <p><a name="player-names"></a></p>
-<h2>Player Names, Countries, and Colleges</h2>
-<p>
-    By default, ${gameName} uses names, nationalities, and colleges similar to
-    players in the ${proLeagueAbbrev}. All of this is customizable in league files.
-    <a href="/${sport}/manual/customization/names-countries-colleges/"
-        >Here is the documentation on customizing player names, countries, and
-        colleges.</a
-    >
-</p>`;
+<h2>Other</h2>
+<ol>
+    <li><a href="/${sport}/manual/customization/names-countries-colleges/">Customizing player names, countries, and colleges</a></li>
+    <li><a href="/${sport}/manual/customization/schedule-settings/">Customizing the schedule</a></li>
+</ol>`;
 	}
 };
