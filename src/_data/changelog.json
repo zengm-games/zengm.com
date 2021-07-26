@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2021.07.25.1376",
+		"text": "Two new settings \"# Division Games\" and \"# Conference Games\" to give you some control over the schedule, although they only work in certain scenarios..",
+		"links": [
+			"https://basketball-gm.com/manual/customization/schedule-settings/",
+			"https://old.reddit.com/r/BasketballGM/comments/orq2nv/two_new_settings_division_games_and_conference/",
+			"https://old.reddit.com/r/Football_GM/comments/orq9hx/two_new_settings_division_games_and_conference/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/orq8k6/two_new_settings_division_games_and_conference/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.21.1380",
 		"text": "You can now start a real players league at the 2021 draft.",
 		"links": [
