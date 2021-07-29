@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.07.29.0013",
+		"text": "League > Daily Schedule shows all of the games on a day. For past days, it shows scores. For future days, it shows scheduled games. For today, it replaces the old live sim page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/otqaqs/league_daily_schedule_shows_all_of_the_games_on_a/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.07.29.0013",
+		"text": "New \"Youngest Peaks\" frivolity at Tools > Frivolities.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/otqaqs/league_daily_schedule_shows_all_of_the_games_on_a/h6x34z3/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.07.25.1376",
 		"text": "Two new settings \"# Division Games\" and \"# Conference Games\" to give you some control over the schedule, although they only work in certain scenarios..",
 		"links": [
