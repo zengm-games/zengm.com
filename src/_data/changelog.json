@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.07.30.1120",
+		"text": "You can now start a real players league after the 2021 draft.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ouvlf2/start_a_new_league_after_the_2021_draft_in/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.07.29.0013",
 		"text": "League > Daily Schedule shows all of the games on a day. For past days, it shows scores. For future days, it shows scheduled games. For today, it replaces the old live sim page.",
 		"links": [
