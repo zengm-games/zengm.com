@@ -257,50 +257,66 @@ module.exports = function (eleventyConfig) {
 		const infos = [
 			{
 				title: "Sessions",
-				color: "red",
 				data: [
-					{ year: 2013, value: 135664 },
-					{ year: 2014, value: 471553 },
-					{ year: 2015, value: 982926 },
-					{ year: 2016, value: 1101256 },
-					{ year: 2017, value: 1657749 },
-					{ year: 2018, value: 1868091 },
-					{ year: 2019, value: 2403039 },
-					{ year: 2020, value: 3440761 },
+					["Year", "Basketball", "Football", "Hockey"],
+					["2013", 135664, null, null],
+					["2014", 471553, null, null],
+					["2015", 982926, null, null],
+					["2016", 1101256, null, null],
+					["2017", 1657749, null, null],
+					["2018", 1868091, null, null],
+					["2019", 2403039, 233990, null],
+					["2020", 3440761, 565396, null],
 				],
 			},
 			{
 				title: "Pageviews",
-				color: "green",
 				data: [
-					{ year: 2013, value: 13661063 },
-					{ year: 2014, value: 39662532 },
-					{ year: 2015, value: 76650999 },
-					{ year: 2016, value: 86009829 },
-					{ year: 2017, value: 144489273 },
-					{ year: 2018, value: 184571462 },
-					{ year: 2019, value: 222568917 },
-					{ year: 2020, value: 299207611 },
+					["Year", "Basketball", "Football", "Hockey"],
+					["2013", 13661063, null, null],
+					["2014", 39662532, null, null],
+					["2015", 76650999, null, null],
+					["2016", 86009829, null, null],
+					["2017", 144489273, null, null],
+					["2018", 184571462, null, null],
+					["2019", 222568917, 21498972, null],
+					["2020", 299207611, 47256207, null],
 				],
 			},
 			{
 				title: "Total Play Time (years)",
-				color: "blue",
 				data: [
-					{ year: 2013, value: 18.14 },
-					{ year: 2014, value: 42.06 },
-					{ year: 2015, value: 66.73 },
-					{ year: 2016, value: 70.09 },
-					{ year: 2017, value: 86.79 },
-					{ year: 2018, value: 100.7 },
-					{ year: 2019, value: 136.32 },
-					{ year: 2020, value: 206.1 },
+					["Year", "Basketball", "Football", "Hockey"],
+					["2013", 18.14, null, null],
+					["2014", 42.06, null, null],
+					["2015", 66.73, null, null],
+					["2016", 70.09, null, null],
+					["2017", 86.79, null, null],
+					["2018", 100.7, null, null],
+					["2019", 136.32, 12.95, null],
+					["2020", 206.1, 32.93, null],
 				],
 			},
 		];
 
 		for (const info of infos) {
-			info.data = info.data.filter(row => row.year <= year);
+			info.data = info.data.filter(
+				(row, i) => i === 0 || parseInt(row[0]) <= year,
+			);
+
+			// Need to prune any sports with no data in this year?
+			const last = info.data[info.data.length - 1];
+			const pruneCols = new Set();
+			for (let i = 1; i < last.length; i++) {
+				if (last[i] === null) {
+					pruneCols.add(i);
+				}
+			}
+			if (pruneCols.size > 0) {
+				info.data = info.data.map(row => [
+					...row.filter((value, i) => !pruneCols.has(i)),
+				]);
+			}
 		}
 
 		// Needs to have no indentation and no line breaks, otherwise parts get parsed as Markdown
@@ -313,7 +329,7 @@ google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(() => {
 const options = {
 backgroundColor: "var(--red)",
-legend: { position: 'none' },
+legend: { position: 'in' },
 lineWidth: 5,
 pointSize: 20,
 vAxis: { format: 'short' }
@@ -321,14 +337,10 @@ vAxis: { format: 'short' }
 const infos = ${JSON.stringify(infos)};
 for (let i = 0; i < infos.length; i++) {
 const info = infos[i];
-const data = new google.visualization.DataTable();
-data.addColumn("string", "Year");
-data.addColumn("number", "Value");
-data.addRows(info.data.map(row => [String(row.year), row.value]));
+const data = new google.visualization.arrayToDataTable(info.data);
 const chart = new google.visualization.LineChart(document.getElementById("chart_div_" + i));
 chart.draw(data, {
 ...options,
-colors: [info.color],
 title: info.title,
 });
 }
