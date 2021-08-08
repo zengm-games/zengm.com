@@ -253,51 +253,105 @@ module.exports = function (eleventyConfig) {
 </div>`;
 	});
 
-	eleventyConfig.addShortcode("trafficChartsBBGM", year => {
-		const infos = [
-			{
-				title: "Sessions",
-				data: [
-					["Year", "Basketball", "Football", "Hockey"],
-					["2013", 135664, null, null],
-					["2014", 471553, null, null],
-					["2015", 982926, null, null],
-					["2016", 1101256, null, null],
-					["2017", 1657749, null, null],
-					["2018", 1868091, null, null],
-					["2019", 2403039, 233990, null],
-					["2020", 3440761, 565396, null],
-				],
-			},
-			{
-				title: "Pageviews",
-				data: [
-					["Year", "Basketball", "Football", "Hockey"],
-					["2013", 13661063, null, null],
-					["2014", 39662532, null, null],
-					["2015", 76650999, null, null],
-					["2016", 86009829, null, null],
-					["2017", 144489273, null, null],
-					["2018", 184571462, null, null],
-					["2019", 222568917, 21498972, null],
-					["2020", 299207611, 47256207, null],
-				],
-			},
-			{
-				title: "Total Play Time (years)",
-				data: [
-					["Year", "Basketball", "Football", "Hockey"],
-					["2013", 18.14, null, null],
-					["2014", 42.06, null, null],
-					["2015", 66.73, null, null],
-					["2016", 70.09, null, null],
-					["2017", 86.79, null, null],
-					["2018", 100.7, null, null],
-					["2019", 136.32, 12.95, null],
-					["2020", 206.1, 32.93, null],
-				],
-			},
-		];
+	const trafficData = [
+		{
+			title: "Sessions",
+			data: [
+				["Year", "Basketball", "Football", "Hockey"],
+				["2013", 135664, null, null],
+				["2014", 471553, null, null],
+				["2015", 982926, null, null],
+				["2016", 1101256, null, null],
+				["2017", 1657749, null, null],
+				["2018", 1868091, null, null],
+				["2019", 2403039, 233990, null],
+				["2020", 3440761, 565396, null],
+			],
+		},
+		{
+			title: "Pageviews",
+			data: [
+				["Year", "Basketball", "Football", "Hockey"],
+				["2013", 13661063, null, null],
+				["2014", 39662532, null, null],
+				["2015", 76650999, null, null],
+				["2016", 86009829, null, null],
+				["2017", 144489273, null, null],
+				["2018", 184571462, null, null],
+				["2019", 222568917, 21498972, null],
+				["2020", 299207611, 47256207, null],
+			],
+		},
+		{
+			title: "Total Play Time (years)",
+			data: [
+				["Year", "Basketball", "Football", "Hockey"],
+				["2013", 18.14, null, null],
+				["2014", 42.06, null, null],
+				["2015", 66.73, null, null],
+				["2016", 70.09, null, null],
+				["2017", 86.79, null, null],
+				["2018", 100.7, null, null],
+				["2019", 136.32, 12.95, null],
+				["2020", 206.1, 32.93, null],
+			],
+		},
+	];
+
+	eleventyConfig.addShortcode("trafficTable", year => {
+		const sports = trafficData[0].data[0].slice(1);
+		const valueNames = trafficData.map(info => info.title);
+		const years = trafficData[0].data
+			.slice(1)
+			.map(row => parseInt(row[0]))
+			.filter(year2 => year2 <= year);
+
+		let html = `<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Sport</th>
+<th>Year</th>
+${valueNames.map(name => `<th>${name}</th>`).join("")}
+</tr>
+</thead>
+<tbody>`;
+
+		for (const sport of sports) {
+			let firstRowSport = true;
+			const j = sports.indexOf(sport) + 1;
+
+			YEAR_LOOP: for (let i = 0; i < years.length; i++) {
+				const year = years[i];
+				const tableRow = [firstRowSport ? sport : "", year];
+				for (const info of trafficData) {
+					const rows = info.data.slice(1);
+
+					const value = rows[i][j];
+					if (value === null) {
+						continue YEAR_LOOP;
+					}
+
+					tableRow.push(Number(value).toLocaleString());
+
+					firstRowSport = false;
+				}
+
+				html += `<tr>${tableRow
+					.map(value => `<td>${value}</td>`)
+					.join("")}</tr>`;
+			}
+		}
+
+		html += `</tbody>	
+</table>
+</div>`;
+
+		return html;
+	});
+
+	eleventyConfig.addShortcode("trafficCharts", year => {
+		const infos = JSON.parse(JSON.stringify(trafficData));
 
 		for (const info of infos) {
 			info.data = info.data.filter(
@@ -328,7 +382,6 @@ module.exports = function (eleventyConfig) {
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(() => {
 const options = {
-backgroundColor: "var(--red)",
 legend: { position: 'in' },
 lineWidth: 5,
 pointSize: 20,
