@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.08.07.0876",
+		"text": "Player info popover shows past ratings/stats or peak ratings or career stats, when appropriate.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ozytqo/version_202108070876_player_info_popover_shows/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.08.07.0876",
+		"text": "Improved UI for editing jersey colors and styles.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ozytqo/version_202108070876_player_info_popover_shows/h830zc4/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.08.02.1060",
 		"text": "You can rig the draft lottery in God Mode.",
 		"links": [
