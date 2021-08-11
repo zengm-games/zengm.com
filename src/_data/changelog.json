@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2021.08.11.0009",
+		"text": "No more hard cutoff in three point shooting tendency.",
+		"links": [
+			"/blog/2021/08/three-point-cutoff/",
+			"https://old.reddit.com/r/BasketballGM/comments/p25o7y/no_more_hard_cutoff_in_three_point_shooting/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.08.07.0876",
 		"text": "Player info popover shows past ratings/stats or peak ratings or career stats, when appropriate.",
 		"links": [
