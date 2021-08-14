@@ -371,6 +371,23 @@ ${valueNames.map(name => `<th>${name}</th>`).join("")}
 					...row.filter((value, i) => !pruneCols.has(i)),
 				]);
 			}
+			if (info.data[0].length > 2) {
+				info.data.forEach((row, i) => {
+					if (i === 0) {
+						row.splice(1, 0, "Total");
+					} else {
+						let sum = 0;
+						for (let j = 1; j < row.length; j++) {
+							const value = row[j];
+							if (value !== null) {
+								sum += value;
+							}
+						}
+
+						row.splice(1, 0, sum);
+					}
+				});
+			}
 		}
 
 		// Needs to have no indentation and no line breaks, otherwise parts get parsed as Markdown
