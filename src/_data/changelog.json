@@ -1,5 +1,28 @@
 [
 	{
+		"version": "2021.08.14.1172",
+		"text": "New playoff settings: \"Split By Conference\", \"# Guaranteed Per Division\", and \"Reseed Rounds\".",
+		"links": [
+			"/blog/2021/08/playoff-settings/",
+			"https://old.reddit.com/r/BasketballGM/comments/p4inp1/version_202108141172_has_new_playoff_settings/",
+			"https://old.reddit.com/r/Football_GM/comments/p4io69/version_202108141172_includes_playoff_reseeding/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/p4iojw/version_202108141172_includes_3_teams_per/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.08.14.1172",
+		"text": "Revenue is scaled by the number of games in the season, so non-default season lengths will no longer result in all teams making or losing tons of money.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/p4inpx/version_202108141172_revenue_is_scaled_by_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.08.11.0009",
 		"text": "No more hard cutoff in three point shooting tendency.",
 		"links": [
