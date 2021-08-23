@@ -400,7 +400,9 @@ module.exports = class {
 			sport,
 		);
 
-		return `One of the [game attributes](/${sport}/manual/customization/game-attributes) you can customize is called "playerBioInfo". This lets you specify how biographical information is generated for players, specifically their names, countries, and colleges.
+		return `<p class="alert alert-info">When this document was written, the only way to customize any of these things was to edit a JSON file. But now, you can edit it within the normal game UI at Tools > League Settings > Players > Biographical Info. You can still do it like described below in a JSON file if you like, though!</p>
+		
+One of the [game attributes](/${sport}/manual/customization/game-attributes) you can customize is called "playerBioInfo". This lets you specify how biographical information is generated for players, specifically their names, countries, and colleges.
 
 By default, ${gameName} includes a pretty large library of all of those, and picks them in proportion so that random leagues feel realistic. But if you want to simulate a different type of league, such as in a different country, then the defaults are no good.
 
@@ -554,7 +556,7 @@ ${
 
 But you can override all of that.
 
-There are three different college settings:
+There are multiple different college settings:
 
 1. "colleges": a list of colleges for players from a certain country
 2. "fractionSkipCollege": the percentage of players from a certain country who skip college
@@ -705,6 +707,6 @@ Each randomly generated player gets a cartoon face. A face can come from one of 
 
 That would change the races for Canadian players to be 40% Asian, 20% black, 20% brown, and 20% white.
 
-If you define a country and don't include races, it will either use the built-in races for that country, or if they don't exist, it will use the built-in races for the USA.`;
+If you define a country and don't include races, it will either use the built-in races for that country, or if they don't exist, it will use the default races (you have to specify them similar to default colleges above) or built-in races for the USA.`;
 	}
 };

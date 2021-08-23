@@ -1,5 +1,23 @@
 [
 	{
+		"version": "2021.08.22.1034",
+		"text": "An early version of the 2022 rosters is available when creating a new real players league.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/p9l888/customize_the_countries_names_and_colleges_of/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2021.08.22.1034",
+		"text": "Customize the countries, names, and colleges of generated players at Tools > League Settings > Players > Biographical Info.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/p9l888/customize_the_countries_names_and_colleges_of/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.08.14.1172",
 		"text": "New playoff settings: \"Split By Conference\", \"# Guaranteed Per Division\", and \"Reseed Rounds\".",
 		"links": [
