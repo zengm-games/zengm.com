@@ -51,7 +51,11 @@
 }
 
 #feedback {
+{% if sport === "football" %}
+  min-height: 96px;
+{% else %}
   min-height: 72px;
+{% endif %}
 }
 
 .theme-switch-wrapper {
@@ -301,7 +305,7 @@ var iFeedback = Math.floor(Math.random() * feedbacks.length)
 
 function updateFeedback() {
   var feedback = feedbacks[iFeedback];
-  elFeedback.innerHTML = '<a href="' + feedback.url + '">' + feedback.name + '<span class="feedback-text">: "' + feedback.text + '"</span></a>';
+  elFeedback.innerHTML = '"' + feedback.text + '"<br>- <a href="' + feedback.url + '">' + feedback.name + '</span></a>';
   iFeedback = (iFeedback + 1) % feedbacks.length;
 }
 updateFeedback();
