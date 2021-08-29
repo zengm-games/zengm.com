@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.08.28.0675",
+		"text": "Added a notification for luxury tax payments/distributions.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/pdbpx8/added_a_notification_for_luxury_tax/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.08.22.1034",
 		"text": "An early version of the 2022 rosters is available when creating a new real players league.",
 		"links": [
