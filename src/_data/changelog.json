@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2021.09.01.0705",
+		"text": "Added support for the play-in tournament.",
+		"links": [
+			"/blog/2021/09/play-in-tournament/",
+			"https://old.reddit.com/r/BasketballGM/comments/pfwsec/the_playin_tournament_is_finally_here_version/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.08.28.0675",
 		"text": "Added a notification for luxury tax payments/distributions.",
 		"links": [
