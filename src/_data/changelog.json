@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.09.18.1013",
+		"text": "Achievements are now displayed separately for each difficulty level (normal/hard/insane). Past achievements count as \"normal\" because I didn't store the difficulties previously.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/pqudy8/the_cruelest_update_of_all_time_achievements_are/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.09.17.0673",
 		"text": "Settings for the number of All-Star contest participants, with no upper limit.",
 		"links": [
