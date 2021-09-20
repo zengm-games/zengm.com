@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.09.19.1385",
+		"text": "Improved performance in large leagues (like 100+ seasons) for the Season Summary page and advancing to the re-signing phase.",
+		"links": [],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.09.18.1013",
 		"text": "Achievements are now displayed separately for each difficulty level (normal/hard/insane). Past achievements count as \"normal\" because I didn't store the difficulties previously.",
 		"links": [
