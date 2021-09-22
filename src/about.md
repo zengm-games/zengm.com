@@ -15,7 +15,7 @@ When I was a kid, I got hooked on a game called [Baseball Mogul](https://www.spo
 
 For a long time, I had this idea in the back of my head... what if I could make something like Baseball Mogul for my favorite sport, basketball? As a kid, that was an intimidating idea. I didn't really know where to start, and I didn't think I was a good enough programmer to do it. (If you feel the same way today, [read this blog post](/blog/2019/07/so-you-want-to-write-a-sports-sim-game/).)
 
-Finally I decided to give it a shot. In 2008, right after I finished college and right before I started grad school. I thought most likely nothing would come of it - either I would fail to actually complete a game, or it wouldn't be a very good game, or nobody would care about it. I wound up being very wrong about all of those things.
+Finally I decided to give it a shot. In 2008, right after I finished college and right before I started grad school. I thought most likely nothing would come of it - either I would fail to actually complete a game, or it wouldn't be a very good game, or nobody would care about it. Turns out I was wrong about all of those things.
 
 I could go on and on about everything that happened between 2008 and today. And I've done that [before](/blog/2013/12/development-history)... but wow, even that blog post is really old! So here, let me give you a quick timeline of what all happened:
 

@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.09.21.1241",
+		"text": "If a team is down late, they will pull their goalie.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMHockey/comments/psw69x/new_in_version_202109211241_if_a_team_is_down/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2021.09.19.1385",
 		"text": "Improved performance in large leagues (like 100+ seasons) for the Season Summary page and advancing to the re-signing phase.",
 		"links": [],
