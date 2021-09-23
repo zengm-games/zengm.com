@@ -1,5 +1,26 @@
 [
 	{
+		"version": "2021.09.23.0102",
+		"text": "Added support for \"not\" operations and exact searches in table column filters. Like enter !CHI to display all players except those on Chicago. And wrap a search term in quotes for an exact search, like \"C\" will match only C, not FC.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ptoooj/added_support_for_not_operations_in_table_column/",
+			"https://old.reddit.com/r/BasketballGM/comments/ptoooj/added_support_for_not_operations_in_table_column/hdxnnrl/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.09.23.0102",
+		"text": "You can edit your email/username/password from the account page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/ptoooj/added_support_for_not_operations_in_table_column/hdxlnvu/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.09.21.1241",
 		"text": "If a team is down late, they will pull their goalie.",
 		"links": [
