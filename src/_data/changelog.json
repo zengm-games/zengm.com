@@ -1,7 +1,7 @@
 [
 	{
 		"version": "2021.09.23.0102",
-		"text": "Added support for \"not\" operations and exact searches in table column filters. Like enter !CHI to display all players except those on Chicago. And wrap a search term in quotes for an exact search, like \"C\" will match only C, not FC.",
+		"text": "Added support for \"not\" operations and exact searches in table column filters. Enter !CHI to display all players except those on Chicago. And wrap a search term in quotes for an exact search, like \"C\" will match only C, not FC.",
 		"links": [
 			"https://old.reddit.com/r/BasketballGM/comments/ptoooj/added_support_for_not_operations_in_table_column/",
 			"https://old.reddit.com/r/BasketballGM/comments/ptoooj/added_support_for_not_operations_in_table_column/hdxnnrl/"
