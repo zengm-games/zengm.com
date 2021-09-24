@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.09.24.0112",
+		"text": "Before the All-Star draft starts, you can edit All-Star selections in God Mode. There is also a \"Reset draft\" button you can use after the draft has started, as long as the All-Star Game has not been played yet.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/pudk21/before_the_allstar_draft_starts_you_can_edit/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.09.23.0102",
 		"text": "Added support for \"not\" operations and exact searches in table column filters. Enter !CHI to display all players except those on Chicago. And wrap a search term in quotes for an exact search, like \"C\" will match only C, not FC.",
 		"links": [
