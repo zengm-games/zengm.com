@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.10.04.1133",
+		"text": "Much improved handling of penalties (especially multiple penalties on the same play) and other weird situations.",
+		"links": [
+			"/blog/2021/10/football-penalties-rewrite/",
+			"https://old.reddit.com/r/Football_GM/comments/q1hk20/i_rewrote_the_football_game_simulation_engine_to/?"
+		],
+		"football": true,
+		"big": true
+	},
+	{
 		"version": "2021.09.24.0112",
 		"text": "Before the All-Star draft starts, you can edit All-Star selections in God Mode. There is also a \"Reset draft\" button you can use after the draft has started, as long as the All-Star Game has not been played yet.",
 		"links": [
