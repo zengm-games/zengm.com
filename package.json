@@ -13,22 +13,22 @@
 		"@11ty/eleventy-navigation": "^0.3.2",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
 		"chokidar-cli": "^3.0.0",
-		"cloudflare": "^2.7.0",
-		"concurrently": "^6.2.0",
+		"cloudflare": "^2.9.1",
+		"concurrently": "^6.3.0",
 		"csso": "^4.2.0",
-		"esbuild": "^0.12.17",
-		"glob": "^7.1.7",
+		"esbuild": "^0.13.3",
+		"glob": "^7.2.0",
 		"hasha": "^5.2.2",
-		"html-minifier-terser": "^5.1.1",
+		"html-minifier-terser": "^6.0.2",
 		"husky": "=4",
 		"lint-staged": ">=10",
-		"markdown-it-attrs": "^4.0.0",
+		"markdown-it-attrs": "^4.1.0",
 		"posthtml": "^0.16.5",
 		"posthtml-urls": "^1.0.0",
-		"prettier": "^2.3.2",
+		"prettier": "^2.4.1",
 		"purgecss": "^4.0.3",
-		"sass": "^1.32.11",
-		"sharp": "^0.28.3"
+		"sass": "^1.42.1",
+		"sharp": "^0.29.1"
 	},
 	"husky": {
 		"hooks": {
@@ -39,8 +39,8 @@
 		"*.{js,json,css,md}": "prettier --write"
 	},
 	"dependencies": {
-		"@popperjs/core": "^2.9.3",
-		"bootstrap": "^5.1.0",
-		"bootstrap-dark-5": "^1.0.2"
+		"@popperjs/core": "^2.10.2",
+		"bootstrap": "^5.1.1",
+		"bootstrap-dark-5": "^1.1.1"
 	}
 }

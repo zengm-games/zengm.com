@@ -418,10 +418,10 @@ title: info.title,
 </script>`;
 	});
 
-	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+	eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
 		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
 		if (outputPath.endsWith(".html")) {
-			const minified = htmlmin.minify(content, {
+			const minified = await htmlmin.minify(content, {
 				collapseBooleanAttributes: true,
 				collapseWhitespace: true,
 				minifyCSS: true,
