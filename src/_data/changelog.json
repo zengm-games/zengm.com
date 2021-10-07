@@ -1,10 +1,19 @@
 [
 	{
+		"version": "2021.10.06.1387",
+		"text": "Players act differently when they're in foul trouble.",
+		"links": [
+			"/blog/2021/10/foul-trouble/",
+			"https://old.reddit.com/r/BasketballGM/comments/q2zyk0/version_202110061387_players_act_differently_when/?"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.10.04.1133",
 		"text": "Much improved handling of penalties (especially multiple penalties on the same play) and other weird situations.",
 		"links": [
 			"/blog/2021/10/football-penalties-rewrite/",
-			"https://old.reddit.com/r/Football_GM/comments/q1hk20/i_rewrote_the_football_game_simulation_engine_to/?"
+			"https://old.reddit.com/r/Football_GM/comments/q1hk20/i_rewrote_the_football_game_simulation_engine_to/"
 		],
 		"football": true,
 		"big": true
