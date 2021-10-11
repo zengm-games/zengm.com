@@ -1,5 +1,11 @@
 [
 	{
+		"version": "2021.10.10.1358",
+		"text": "New fast forward option in live sim, play until next change of possession.",
+		"links": [],
+		"football": true
+	},
+	{
 		"version": "2021.10.06.1387",
 		"text": "Players act differently when they're in foul trouble.",
 		"links": [
