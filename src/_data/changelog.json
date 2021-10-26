@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2021.10.26.0638",
+		"text": "Exporting leagues now works regardless of the size of the league.",
+		"links": [
+			"/blog/2021/10/size-limit-export/",
+			"https://old.reddit.com/r/BasketballGM/comments/qg7y2v/version_202110260638_no_more_size_limit_for/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2021.10.10.1358",
 		"text": "New fast forward option in live sim, play until next change of possession.",
 		"links": [],
