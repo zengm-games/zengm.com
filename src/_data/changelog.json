@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2021.10.28.0685",
+		"text": "Added FP (fantasy points) stat to box scores and player stats tables.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/qhpjc3/tiny_update_in_version_202110280685_added_fp/"
+		],
+		"football": true
+	},
+	{
 		"version": "2021.10.26.0638",
 		"text": "Exporting leagues now works regardless of the size of the league.",
 		"links": [
