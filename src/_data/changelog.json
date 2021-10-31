@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.10.31.0780",
+		"text": "In addition to the existing \"force win/loss\" options in God Mode, you can now force ties too.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/qjtvfz/in_addition_to_the_existing_force_winloss_options/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.10.28.0685",
 		"text": "Added FP (fantasy points) stat to box scores and player stats tables.",
 		"links": [
@@ -635,7 +645,8 @@
 			"https://old.reddit.com/r/ZenGMHockey/comments/n82yee/in_version_202105081255_the_ai_considers_roster/"
 		],
 		"football": true,
-		"hockey": true
+		"hockey": true,
+		"big": true
 	},
 	{
 		"version": "2021.05.08.1255",
