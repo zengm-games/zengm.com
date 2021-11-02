@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.11.01.1416",
+		"text": "Improved UI for showing upcoming/completed games on the Team Schedule and Daily Schedule pages.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/qkvl3t/improved_ui_for_showing_upcomingcompleted_games/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.10.31.0780",
 		"text": "In addition to the existing \"force win/loss\" options in God Mode, you can now force ties too.",
 		"links": [
