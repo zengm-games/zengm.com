@@ -317,6 +317,7 @@ ${valueNames.map(name => `<th>${name}</th>`).join("")}
 </thead>
 <tbody>`;
 
+		let numSports = 0;
 		for (const sport of sports) {
 			let firstRowSport = true;
 			const j = sports.indexOf(sport) + 1;
@@ -334,7 +335,37 @@ ${valueNames.map(name => `<th>${name}</th>`).join("")}
 
 					tableRow.push(Number(value).toLocaleString());
 
-					firstRowSport = false;
+					if (firstRowSport) {
+						firstRowSport = false;
+						numSports += 1;
+					}
+				}
+
+				html += `<tr>${tableRow
+					.map(value => `<td>${value}</td>`)
+					.join("")}</tr>`;
+			}
+		}
+
+		if (numSports > 1) {
+			for (const year of years) {
+				const tableRow = [year === years[0] ? "Total" : "", year, 0, 0, 0];
+				for (let i = 0; i < trafficData.length; i++) {
+					const info = trafficData[i];
+					const row = info.data.find(row => row[0] === String(year));
+					if (!row) {
+						continue;
+					}
+
+					for (let j = 1; j < row.length; j++) {
+						if (row[j] !== null) {
+							tableRow[i + 2] += row[j];
+						}
+					}
+				}
+
+				for (let i = 2; i < tableRow.length; i++) {
+					tableRow[i] = tableRow[i].toLocaleString();
 				}
 
 				html += `<tr>${tableRow
@@ -393,7 +424,7 @@ ${valueNames.map(name => `<th>${name}</th>`).join("")}
 		// Needs to have no indentation and no line breaks, otherwise parts get parsed as Markdown
 		return `<div id="chart_div_0" class="google-chart"></div>
 <div id="chart_div_1" class="google-chart"></div>
-<div id="chart_div_2" class="google-chart"></div>
+<div id="chart_div_2" class="google-chart mb-3"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 google.charts.load('current', {packages: ['corechart', 'line']});
