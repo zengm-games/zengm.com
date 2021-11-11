@@ -1,5 +1,23 @@
 [
 	{
+		"version": "2021.11.11.0013",
+		"text": "New setting to switch fantasy points between standard, PPR, and half PPR.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/qrdoav/very_tiny_update_in_version_202111110013_new/"
+		],
+		"football": true
+	},
+	{
+		"version": "2021.11.08.1318",
+		"text": "Select \"All Seasons\" on the Player Stats page to see the all-time single season stat leaders.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/qpu9z9/version_202111081318_select_all_seasons_on_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.11.01.1416",
 		"text": "Improved UI for showing upcoming/completed games on the Team Schedule and Daily Schedule pages.",
 		"links": [
