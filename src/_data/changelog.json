@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2021.11.15.1148",
+		"text": "New \"Season Preview\" page lets you quickly see the top players/teams as well as who is getting better and who is getting worse.",
+		"links": [
+			"/blog/2021/11/season-preview/",
+			"https://old.reddit.com/r/BasketballGM/comments/quuh4w/new_season_preview_page_lets_you_quickly_see_the/?"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.11.11.0013",
 		"text": "New setting to switch fantasy points between standard, PPR, and half PPR.",
 		"links": [
