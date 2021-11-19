@@ -1,10 +1,20 @@
 [
 	{
+		"version": "2021.11.18.1307",
+		"text": "You can now sim individual games from the Daily Schedule without watching the live play-by-plays.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/qx6j3d/you_can_now_sim_individual_games_from_the_daily/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.11.15.1148",
 		"text": "New \"Season Preview\" page lets you quickly see the top players/teams as well as who is getting better and who is getting worse.",
 		"links": [
 			"/blog/2021/11/season-preview/",
-			"https://old.reddit.com/r/BasketballGM/comments/quuh4w/new_season_preview_page_lets_you_quickly_see_the/?"
+			"https://old.reddit.com/r/BasketballGM/comments/quuh4w/new_season_preview_page_lets_you_quickly_see_the/"
 		],
 		"basketball": true,
 		"football": true,
