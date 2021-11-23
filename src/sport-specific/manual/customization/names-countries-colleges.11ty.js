@@ -707,6 +707,26 @@ Each randomly generated player gets a cartoon face. A face can come from one of 
 
 That would change the races for Canadian players to be 40% Asian, 20% black, 20% brown, and 20% white.
 
-If you define a country and don't include races, it will either use the built-in races for that country, or if they don't exist, it will use the default races (you have to specify them similar to default colleges above) or built-in races for the USA.`;
+If you define a country and don't include races, it will either use the built-in races for that country, or if they don't exist, it will use the default races (you have to specify them similar to default colleges above) or built-in races for the USA.
+
+## Flags
+
+The default countries (and [some more](https://flagicons.lipis.dev/)) have built-in flags. If you'd like to override a default flag or add a flag for a country that does not have a built-in flag, such as a historical or fictional country, you can do this:
+
+\`\`\`
+{
+    "gameAttributes": {
+        "playerBioInfo": {
+            "countries": {
+                "Canada": {
+                    "flag": "http://example.com/flag-image.png"
+                }
+            }
+        }
+    }
+}
+\`\`\`
+
+You can also use \`"none"\` instead of a URL if you want to remove the flag of a country with a built-in flag.`;
 	}
 };

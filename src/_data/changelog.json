@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.11.22.0854",
+		"text": "You can customize country flags at Tools > League Settings > Players > Biographical Info.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/qztfpn/you_can_customize_country_flags_at_tools_league/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.11.18.1307",
 		"text": "You can now sim individual games from the Daily Schedule without watching the live play-by-plays.",
 		"links": [
