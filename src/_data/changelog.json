@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.12.01.0062",
+		"text": "Columns in box score tables are now sortable.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/r680hi/columns_in_box_score_tables_are_now_sortable/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.12.01.0062",
+		"text": "The \"watch player\" toggle button now works on every page. Previously there were some where it did not, such as box scores and frivolities.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/r680hi/columns_in_box_score_tables_are_now_sortable/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.11.22.0854",
 		"text": "You can customize country flags at Tools > League Settings > Players > Biographical Info.",
 		"links": [
