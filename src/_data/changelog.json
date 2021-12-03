@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2021.12.03.0648",
+		"text": "Save leagues to your Dropbox account with one click from the Export League page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/r82b3w/save_leagues_to_your_dropbox_account_with_one/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2021.12.01.0062",
 		"text": "Columns in box score tables are now sortable.",
 		"links": [
