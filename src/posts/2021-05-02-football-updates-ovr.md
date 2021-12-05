@@ -8,6 +8,7 @@ tags:
   - New Feature
   - Player Development
   - Player Ratings
+  - Team Ovr
 ---
 
 Football GM has long deserved some updates to the core of the game. Here are some.

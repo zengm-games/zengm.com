@@ -24,7 +24,7 @@ How exactly do they work?
 
   The defaults for Basketball GM (0) and Football GM (1) are unchanged, but the new default for ZenGM Hockey is 3, which was not possible previously.
 
-- <span class="text-highlight">Reseed Rounds</span> - In a normal playoff bracket, matchups in the next round are based on the matchups in the previous round. But imagine and 8 team bracket, where the 8 seed upsets the 1 seed and all the other favorites win. Now the 2 seed has to play the 3 seed in the next round, but the 4 seed gets an easier matchup with the 8 seed. Is that fair? Or would it be more fair if the best seed always played the worst seed, and the matchups were 2-7 and 3-4?
+- <span class="text-highlight">Reseed Rounds</span> - In a normal playoff bracket, matchups in the next round are based on the matchups in the previous round. But imagine and 8 team bracket, where the 8 seed upsets the 1 seed and all the other favorites win. Now the 2 seed has to play the 3 seed in the next round, but the 4 seed gets an easier matchup with the 8 seed. Is that fair? Or would it be more fair if the best seed always played the worst seed, and the matchups were 2-8 and 3-4?
 
   That's what this setting does. Enable it and every round of the playoffs will be "reseeded" so the best team seed plays the worst seed. This is now the default for Football GM, but you can enable it in the other games if you want.
 

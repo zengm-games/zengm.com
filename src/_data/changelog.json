@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2021.12.04.1335",
+		"text": "There are separate team ovr formulas for the playoffs and regular season, and you can now see which teams are expected to get better or worse in the playoffs on the Power Rankings page.",
+		"links": [
+			"/blog/2021/11/playoff-power-rankings/",
+			"https://old.reddit.com/r/BasketballGM/comments/r968cw/some_teams_play_better_or_worse_in_the_playoffs/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2021.12.03.0648",
 		"text": "Save leagues to your Dropbox account with one click from the Export League page.",
 		"links": [
@@ -1926,7 +1935,7 @@
 	},
 	{
 		"date": "2020-08-26",
-		"text": "Tweaks to game simulation in the playoffs, most notably resulting in fewer upsets. Also injuries in the playoffs are shorter, to work around the fact that currently there is no way to have players play through minor injuries.",
+		"text": "Tweaks to game simulation in the playoffs, most notably resulting in fewer upsets. Also injuries in the playoffs are shorter, to work around the fact that currently there is no way to have players play through minor injuries. Thanks @nicidob!",
 		"links": ["https://github.com/zengm-games/zengm/pull/293"],
 		"basketball": true,
 		"football": true
