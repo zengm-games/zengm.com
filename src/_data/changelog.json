@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2021.12.09.0025",
+		"text": "Before simming any playoff games, you can edit the playoff teams in God Mode.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rcaoid/before_simming_any_playoff_games_you_can_edit_the/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.04.1335",
 		"text": "There are separate team ovr formulas for the playoffs and regular season, and you can now see which teams are expected to get better or worse in the playoffs on the Power Rankings page.",
 		"links": [
