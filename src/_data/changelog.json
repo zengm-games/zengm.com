@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2021.12.15.0047",
+		"text": "The Draft Team History page now includes information about how each pick moved in the draft lottery so you can see how lucky or unlucky you've been.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rgs06l/see_how_lucky_your_team_has_been_in_past_draft/"
+		],
+		"basketball": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.09.0025",
 		"text": "Before simming any playoff games, you can edit the playoff teams in God Mode.",
 		"links": [
