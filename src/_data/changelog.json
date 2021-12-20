@@ -1,5 +1,26 @@
 [
 	{
+		"version": "2021.12.18.1208",
+		"text": "Improved performance of the Hall of Fame page, particularly in very large leagues.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rjldkg/improved_performance_of_the_hall_of_fame_page/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.12.16.0687",
+		"text": "The score bar at the top is scrollable back to the beginning of the current season. Also game simulation is no longer slower while the bar is open. Thanks @mhgamboa!",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rhufn4/the_score_bar_at_the_top_is_scrollable_back_to/",
+			"https://github.com/zengm-games/zengm/pull/400"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.15.0047",
 		"text": "The Draft Team History page now includes information about how each pick moved in the draft lottery so you can see how lucky or unlucky you've been.",
 		"links": [
