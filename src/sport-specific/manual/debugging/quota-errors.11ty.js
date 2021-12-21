@@ -31,7 +31,7 @@ module.exports = class {
     this is the only way to get Chrome working again due to
     <a href="https://code.google.com/p/chromium/issues/detail?id=488851"
         >this bug</a
-    >.
+    > where there is some delay between you deleting data and the browser actually recognizing the old data is gone and it should now let you store more data.
 </p>
 <p>
     And if all else fails, you can try using another browser.
