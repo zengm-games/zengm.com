@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2021.12.21.0061",
+		"text": "More compact navbar on mobile.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rl7xdf/version_202112210061_more_compact_navbar_on/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2021.12.21.0061",
+		"text": "Improved performance of the Watch List page, particularly in very large leagues.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rl7xdf/version_202112210061_more_compact_navbar_on/hpe7wmx/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.18.1208",
 		"text": "Improved performance of the Hall of Fame page, particularly in very large leagues.",
 		"links": [
