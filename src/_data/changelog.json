@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2021.12.30.1370",
+		"text": "A bunch of new achievements, including rebuilds where you have to take one of the worst real historical teams, rebuild them, and lead them to glory.",
+		"links": [
+			"/blog/2021/12/achievements-rebuilds/",
+			"https://old.reddit.com/r/BasketballGM/comments/rskt7q/i_added_a_bunch_of_new_achievements_in_version/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.21.0061",
 		"text": "More compact navbar on mobile.",
 		"links": [

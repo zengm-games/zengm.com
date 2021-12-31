@@ -35,8 +35,8 @@ module.exports = class {
 </p>
 <p>
     And if all else fails, you can try using another browser.
-    <a href="https://www.mozilla.org/en-US/firefox/desktop/">Firefox</a> works
-    best.
+    <a href="https://www.google.com/chrome/">Chrome</a> and <a href="https://firefox.com/">Firefox</a> work
+    best, but it runs in any web browser.
 </p>
 <p>
     If you need help, <a href="/contact/">send an email or post to Reddit</a>.

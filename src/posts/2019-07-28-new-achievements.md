@@ -5,7 +5,6 @@ date: 2019-07-28
 tags:
   - post
   - Achievements
-  - New Feature
 ---
 
 Today I added some new achievements to Basketball GM. You can see them on [your account page](https://play.basketball-gm.com/account).
