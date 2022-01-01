@@ -5,7 +5,6 @@ date: 2019-07-28
 tags:
   - post
   - Achievements
-  - New Feature
 ---
 
 Today I added some achievements to Football GM. You can see them on [your account page](https://play.football-gm.com/account). Most of them were copied over from Basketball GM with some small modifications.

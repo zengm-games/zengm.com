@@ -253,19 +253,22 @@ module.exports = function (eleventyConfig) {
 </div>`;
 	});
 
+	// See ~/Documents/ZenGM/Annual Traffic, from GA.ods
+	// Sessions are from "Non-Bounce Sessions"
 	const trafficData = [
 		{
 			title: "Sessions",
 			data: [
 				["Year", "Basketball", "Football", "Hockey"],
-				["2013", 135664, null, null],
-				["2014", 471553, null, null],
-				["2015", 982926, null, null],
-				["2016", 1101256, null, null],
-				["2017", 1657749, null, null],
-				["2018", 1868091, null, null],
-				["2019", 2403039, 233990, null],
-				["2020", 3440761, 565396, null],
+				["2013", 121094, null, null],
+				["2014", 424209, null, null],
+				["2015", 887680, null, null],
+				["2016", 965031, null, null],
+				["2017", 1243975, null, null],
+				["2018", 1662975, null, null],
+				["2019", 2265825, 225262, null],
+				["2020", 3233971, 532886, null],
+				["2021", 4221550, 835771, 179351],
 			],
 		},
 		{
@@ -280,6 +283,7 @@ module.exports = function (eleventyConfig) {
 				["2018", 184571462, null, null],
 				["2019", 222568917, 21498972, null],
 				["2020", 299207611, 47256207, null],
+				["2021", 363650045, 61465730, 12222619],
 			],
 		},
 		{
@@ -294,6 +298,7 @@ module.exports = function (eleventyConfig) {
 				["2018", 100.7, null, null],
 				["2019", 136.32, 12.95, null],
 				["2020", 206.1, 32.93, null],
+				["2021", 273.53, 51.15, 9.97],
 			],
 		},
 	];
@@ -431,8 +436,8 @@ google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(() => {
 const options = {
 legend: { position: 'in' },
-lineWidth: 5,
-pointSize: 20,
+lineWidth: 4,
+pointSize: 12,
 vAxis: { format: 'short' }
 };
 const infos = ${JSON.stringify(infos)};
