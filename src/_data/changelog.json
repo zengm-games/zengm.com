@@ -1,5 +1,23 @@
 [
 	{
+		"version": "2022.01.04.1183",
+		"text": "On the Achievements page, there are now quick links to create new leagues for each of the rebuild achievements. Also, rebuild achievements are available back to the 1980 season.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rw9kkk/version_202201041183_on_the_achievements_page/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2022.01.04.1183",
+		"text": "Added \"Sim to pick\" buttons in the draft UI to let you advance the draft to any point in one click.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/r62efc/monthly_suggestions_thread/hnj4izv/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2021.12.30.1370",
 		"text": "A bunch of new achievements, including rebuilds where you have to take one of the worst real historical teams, rebuild them, and lead them to glory.",
 		"links": [
