@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.01.06.1208",
+		"text": "Draft round/pick/team can be edited on the Create/Edit Player page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/rxumhz/version_202201061208_draft_roundpickteam_can_be/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.01.04.1183",
 		"text": "On the Achievements page, there are now quick links to create new leagues for each of the rebuild achievements. Also, rebuild achievements are available back to the 1980 season.",
 		"links": [
