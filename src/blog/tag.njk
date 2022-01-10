@@ -11,7 +11,7 @@ pagination:
     - all
     - post
   addAllPagesToCollections: true
-permalink: /blog/tag/{{ tag | slug }}/
+permalink: /blog/tag/{{ tag | slugify }}/
 showBlogTeaser: true
 ---
 <link href="{{ "/css/blog.css" | addHash}}" rel="stylesheet">

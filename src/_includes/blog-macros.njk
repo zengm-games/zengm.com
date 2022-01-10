@@ -5,7 +5,7 @@
     </h1>
   {% endif %}
   <div class="mb-3">
-    {{ date | blogPostDate }}<span class="mx-1">-</span><ul class="comma-list">{% for tag in tags %}{% if tag !== "post" %}<li><a href="/blog/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endif %}{% endfor %}
+    {{ date | blogPostDate }}<span class="mx-1">-</span><ul class="comma-list">{% for tag in tags %}{% if tag !== "post" %}<li><a href="/blog/tag/{{ tag | slugify }}/">{{ tag }}</a></li>{% endif %}{% endfor %}
     </ul>
   </div>
 {% endmacro %}
