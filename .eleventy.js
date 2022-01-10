@@ -472,21 +472,31 @@ title: info.title,
 	});
 
 	eleventyConfig.on("afterBuild", async () => {
-		const results = await purgeCSS.purge();
-		for (const result of results) {
-			const minifiedCss = csso.minify(result.css).css;
-			await fs.writeFile(result.file, minifiedCss);
-		}
-		console.log("CSS processing complete");
+		const promises = [];
+
+		promises.push(
+			(async () => {
+				const results = await purgeCSS.purge();
+				for (const result of results) {
+					const minifiedCss = csso.minify(result.css).css;
+					await fs.writeFile(result.file, minifiedCss);
+				}
+				console.log("CSS processing complete");
+			})(),
+		);
 
 		for (const file of ["carousel.js", "dropdown.js"]) {
-			await esbuild.build({
-				entryPoints: [`src/js/${file}`],
-				bundle: true,
-				minify: true,
-				outfile: `_site/js/${file}`,
-			});
+			promises.push(
+				esbuild.build({
+					entryPoints: [`src/js/${file}`],
+					bundle: true,
+					minify: true,
+					outfile: `_site/js/${file}`,
+				}),
+			);
 		}
+
+		await Promise.all(promises);
 	});
 
 	return {
