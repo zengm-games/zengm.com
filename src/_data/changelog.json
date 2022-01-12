@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.01.10.1334",
+		"text": "Added new Living Dangerously achievements, for when you win a championship with all playoff games being close.",
+		"links": [],
+		"football": true
+	},
+	{
+		"version": "2022.01.10.1334",
+		"text": "Star players are more likely to retire a bit earlier, rather than sticking around for a very long time as role players.",
+		"links": [],
+		"basketball": true
+	},
+	{
 		"version": "2022.01.08.0021",
 		"text": "You can customize the types of tragic deaths in your league at Tools > League Settings > Tragic Death Types.",
 		"links": [

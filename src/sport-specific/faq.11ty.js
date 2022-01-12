@@ -121,7 +121,7 @@ ${
 		? `
 <hr>
 
-<h2><a href="#real-draft-classes" name="real-draft-classes">Why are some draft prospects missing or in the wrong draft class when using real players rosters?</a></h2>
+<h2><a href="#real-draft-classes" name="real-draft-classes">Why are some draft prospects missing or in the wrong draft class in real players leagues?</a></h2>
 <p>Historical real players rosters only include players who actually have stats, because stats are what's used to determine ratings. Some players without stats may be in the game, but those are manually added. Feel free to <a href="/contact/">request more</a>, if you want!</p>
 <p>Another problem with real players rosters is that sometimes players appear in the wrong draft class. This happens because ${gameName} does not support the concept of "a player's rights are owned by a team, but he's not actually on the team this season". So things like a player being drafted in 2004 but playing in another pro league for a few years before his rookie season in 2007... ${gameName} has no good way to represent that. Until I fix that, there are only bad options, such as:</p>
 <ol>
@@ -131,6 +131,16 @@ ${
 </ol>
 <p>I think that last option is the least bad, so that's what I did.</p>
 <p>This should only apply to players who were not on the team at all. For players who did join a team after the draft but spent the whole year injured or on the bench, those players should be included in the correct draft class. However sometimes it's hard to distinguish between these scenarios, so if you notice someone like that being moved to a later draft class, please <a href="/contact/">let me know</a>.</p>
+
+<hr>
+
+<h2><a href="#real-contracts" name="real-contracts">Why are contracts inaccurate in real players leagues?</a></h2>
+<p>Two main reasons:</p>
+<ol>
+<li><p>${gameName} doesn't have various things like player/team options and contracts with different $ each season, so some compromise must be made when representing real contracts in ${gameName}. For more details about this, see <a href="#contracts" name="contracts">Why are contracts in ${gameName} so simple?</a></p></li>
+<li><p>The contract data I have just has what players are paid each season, not start/end dates of contracts. So I wrote some code to try to guess the start/end dates based on contract length and when there are big jumps in contract value, but it cannot accurately detect when players re-sign to similar contracts. Which happens a lot, especially for max contract players.</p></li>
+</ol>
+<p>At some point I'd like to create a better historical contract database, maybe by crowdsourcing and letting you guys help me do it :)</p>
 `
 		: ""
 }`;
