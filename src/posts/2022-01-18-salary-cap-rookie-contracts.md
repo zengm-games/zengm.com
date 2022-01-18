@@ -17,13 +17,15 @@ That's the big picture summary. More details follow. First, about the salary cap
 
 <!--more-->
 
+<figure><img src="/files/salary-cap-rookie-contracts-1.png" class="img-fluid"></figure>
+
 Even if you set the "Salary Cap Type" to "None", there is still a "Salary Cap" setting and it still does matter. It kind of sets the overall economic state of the league. Like teams will still struggle to make profit if they exceed the "salary cap" even though there is no rule preventing them from going over the cap.
 
 In real players leagues, just like what happened in history, leagues created before 1985 have no salary cap and will only recieve a salary cap in 1985.
 
-The rookie contract stuff is a bit more complicated. There is a whole new section in the Leauge Settings page for it:
+The rookie contract stuff is a bit more complicated. There is a whole new section in the League Settings page for it:
 
-<figure><a href="/files/salary-cap-rookie-contracts.png"><img src="/files/salary-cap-rookie-contracts.png" class="img-fluid"></a></figure>
+<figure><a href="/files/salary-cap-rookie-contracts-2.png"><img src="/files/salary-cap-rookie-contracts-2.png" class="img-fluid"></a></figure>
 
 Well, the "Rookie Contract Lengths" setting is not new, but it fits better with these other ones. Because these settings all have something in common: <span class="text-highlight">they only do something if the "Rookie Salary Scale" is enabled</span>. If you disable that setting, then you get behavior similar to the old hard cap system: your drafted players will appear in your list of players to re-sign, and you have to negotiate their contract. That is now true even if you have a soft cap or no cap.
 

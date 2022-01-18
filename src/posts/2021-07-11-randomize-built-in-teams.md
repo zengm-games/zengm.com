@@ -12,7 +12,7 @@ There are now [50 different built-in teams](/logos/). But when starting a new ra
 
 Now in version 2021.07.11.0740, there is an easy way to randomize the teams in your league, and it's pretty cool how it works. Thank you [nicidob](https://nicidob.github.io/) for the idea!
 
-Access it by clicking "Customize" next to the list of teams when creating a new random players leauge:
+Access it by clicking "Customize" next to the list of teams when creating a new random players league:
 
 <!--more-->
 

@@ -1,8 +1,12 @@
 [
 	{
-		"version": "",
+		"version": "2022.01.18.0650",
 		"text": "New settings allow you to disable the salary cap and have more control over rookie contracts.",
-		"links": [""],
+		"links": [
+			"/blog/2022/01/salary-cap-rookie-contracts/",
+			"https://old.reddit.com/r/BasketballGM/comments/s70njl/version_202201180650_new_settings_allow_you_to/",
+			"https://old.reddit.com/r/Football_GM/comments/s70om1/nonguaranteed_rookie_contracts_before_the_1st/"
+		],
 		"basketball": true,
 		"football": true,
 		"hockey": true
