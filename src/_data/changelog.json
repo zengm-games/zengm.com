@@ -1,5 +1,23 @@
 [
 	{
+		"version": "",
+		"text": "New settings allow you to disable the salary cap and have more control over rookie contracts.",
+		"links": [""],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.01.13.1084",
+		"text": "Override default settings for new leagues at Tools > Global Settings > Default New League Settings.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/s3cj7w/version_202201131084_override_default_settings/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.01.10.1334",
 		"text": "Added new Living Dangerously achievements, for when you win a championship with all playoff games being close.",
 		"links": [],
