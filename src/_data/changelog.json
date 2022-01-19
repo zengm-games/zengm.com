@@ -24,13 +24,11 @@
 	{
 		"version": "2022.01.10.1334",
 		"text": "Added new Living Dangerously achievements, for when you win a championship with all playoff games being close.",
-		"links": [],
 		"football": true
 	},
 	{
 		"version": "2022.01.10.1334",
 		"text": "Star players are more likely to retire a bit earlier, rather than sticking around for a very long time as role players.",
-		"links": [],
 		"basketball": true
 	},
 	{
@@ -274,7 +272,6 @@
 	{
 		"version": "2021.10.10.1358",
 		"text": "New fast forward option in live sim, play until next change of possession.",
-		"links": [],
 		"football": true
 	},
 	{
@@ -336,7 +333,6 @@
 	{
 		"version": "2021.09.19.1385",
 		"text": "Improved performance in large leagues (like 100+ seasons) for the Season Summary page and advancing to the re-signing phase.",
-		"links": [],
 		"basketball": true,
 		"football": true,
 		"hockey": true
@@ -636,7 +632,6 @@
 	{
 		"version": "2021.06.21.0121",
 		"text": "If you click the text at the top by the Play button that says something like \"2021 free agency\" it will now take you to whatever the most relevant page is.",
-		"links": [],
 		"basketball": true,
 		"football": true,
 		"hockey": true
@@ -5378,9 +5373,6 @@
 	{
 		"date": "2013-06-07",
 		"text": "Support for starting a league with custom rosters and exporting the rosters from a current league.",
-		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/1fw4il/custom_rosters_exporting_rosters/"
-		],
 		"basketball": true
 	},
 	{
