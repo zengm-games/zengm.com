@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.01.20.0705",
+		"text": "Press ctrl+k or cmd+k to open the command palette, which allows easy keyboard navigation of your league.",
+		"links": [
+			"/blog/2022/01/command-palette/",
+			"https://old.reddit.com/r/BasketballGM/comments/s8na2r/version_202201200705_press_ctrlk_or_cmdk_to_open/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.01.18.0650",
 		"text": "New settings allow you to disable the salary cap and have more control over rookie contracts.",
 		"links": [
