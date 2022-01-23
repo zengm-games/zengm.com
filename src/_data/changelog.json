@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.01.23.0669",
+		"text": "The Team Stats table has a footer showing league averages.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sax3qu/just_a_little_update_and_bug_fixes_and_maybe_new/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.01.20.0705",
 		"text": "Press ctrl+k or cmd+k to open the command palette, which allows easy keyboard navigation of your league.",
 		"links": [
