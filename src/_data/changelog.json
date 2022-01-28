@@ -1,5 +1,31 @@
 [
 	{
+		"version": "2022.01.28.0050",
+		"text": "On the League Leaders page you can view all seasons at once, as separate seasons or career totals.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sejlfq/version_202201280050_on_the_league_leaders_page/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.01.28.0050",
+		"text": "Basketballs in the default team logos have been removed or replaced by footballs. Thank you @Buck#4498 from Discord for doing this!",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/sejmtw/basketballs_in_the_default_team_logos_have_been/"
+		],
+		"football": true
+	},
+	{
+		"version": "2022.01.28.0050",
+		"text": "Basketballs in some of the default team logos have been removed. Hopefully more will be removed or replaced with hockey imagery soon. Thank you @Buck#4498 from Discord for doing this!",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/sejmtw/basketballs_in_the_default_team_logos_have_been/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2022.01.23.0669",
 		"text": "The Team Stats table has a footer showing league averages.",
 		"links": [
