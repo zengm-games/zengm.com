@@ -1,4 +1,5 @@
 Redirect 301 /ads.txt https://a.pub.network/basketball-gm-com/ads.txt
+RedirectMatch "^/discord" "https://discord.gg/caPFuM9"
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on

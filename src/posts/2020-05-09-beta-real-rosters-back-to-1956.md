@@ -96,7 +96,7 @@ Those play style changes are important. Basketball GM with default settings does
 
 So I decided to build a separate player ratings model for each historical season, based on those game simulation settings. That would help for players with stat lines that look bizarre by today's standards. The challenge there is that there are 65 seasons between 1956 and today, and I need at least a few hundred simulated seasons of BBGM data to train a model. That's a lot of simulated seasons!
 
-Thanks to the help of users on [the BBGM Discord](https://discord.gg/caPFuM9), I crowdsourced my training data. Thank you to everyone who helped, especially Lerotri and wagalien who each did several seasons. In the end, I got my data, I trained my model, and I generated player ratings for every season back to 1956.
+Thanks to the help of users on [the BBGM Discord](/discord/), I crowdsourced my training data. Thank you to everyone who helped, especially Lerotri and wagalien who each did several seasons. In the end, I got my data, I trained my model, and I generated player ratings for every season back to 1956.
 
 The ratings are not perfect. I would say they are "pretty good". Much work remains, and I'm already planning the next steps. If you look too closely, you will definitely notice some ratings that just seem strange. But if you take a step back and look at the league as a whole, I think you'll find that most players produce pretty realistic stats.
 

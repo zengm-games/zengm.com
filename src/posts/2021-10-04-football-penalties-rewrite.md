@@ -33,6 +33,6 @@ Same thing for other tricky situations, like multiple penalties on the same play
 
 Finally, a new God Mode setting "Penalty Rate Factor" lets you control the rate of penalties, which is useful both for testing out the new functionality and for customizing your league:
 
-The only bad part of all this is the likelihood that I introduced some new bugs along with all these changes. I did a lot of testing, and beta testers on [Discord](https://discord.gg/caPFuM9) helped a lot too. But I'm sure it's not perfect. If you notice anything funny, [please let me know](/contact/). Hopefully I am correct about the new game sim engine resulting in bugs being easier to fix.
+The only bad part of all this is the likelihood that I introduced some new bugs along with all these changes. I did a lot of testing, and beta testers on [Discord](/discord/) helped a lot too. But I'm sure it's not perfect. If you notice anything funny, [please let me know](/contact/). Hopefully I am correct about the new game sim engine resulting in bugs being easier to fix.
 
 And I also hope that this is a better foundation to build on in the future, because there are still a lot of other improvements I want to bring to Football GM, and honestly these fundamental issues with the game simulation engine were really blocking me from doing a lot of it. I didn't want to keep building on the old engine, but rewriting it would be hard. Well, that excuse is no more!
