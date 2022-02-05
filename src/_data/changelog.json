@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.02.04.1107",
+		"text": "A bunch of little UI improvements suggested by users.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/skrrl0/some_little_improvements_from_your_suggestions_in/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.01.29.1002",
 		"text": "Added the Yearly Leaders page showing the top 10 for a single stat for every year in league history on one page. Access it at Stats > League Leaders > Yearly Leaders, or from the ctrl+k menu.",
 		"links": [
