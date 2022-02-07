@@ -25,18 +25,6 @@ module.exports = {
 			  )
 			: undefined,
 
-	googleAdsConversionID: data =>
-		data.sport
-			? bySport(
-					{
-						basketball: "AW-339141212/t1hzCMK-g9YCENzE26EB",
-						football: "AW-339141212/CtisCO6hh9YCENzE26EB",
-						hockey: "AW-339141212/6vk0CL6th9YCENzE26EB",
-					},
-					data.sport,
-			  )
-			: undefined,
-
 	proLeagueAbbrev: data =>
 		data.sport
 			? bySport(

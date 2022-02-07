@@ -282,21 +282,6 @@
 
 {% include "footer.njk" %}
 
-{% if env.NODE_ENV == "production" %}
-  <!-- Google Ads conversion tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-339141212"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-339141212');
-  document.getElementById("start-playing-now").addEventListener("click", () => {
-    gtag("event", "conversion", {"send_to": "{{ googleAdsConversionID }}"})
-  });
-  </script>
-{% endif %}
-
 <script>
 var feedbacks = {{ feedbacks | safe }};
 
