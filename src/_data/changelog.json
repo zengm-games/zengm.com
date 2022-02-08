@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.02.07.1351",
+		"text": "If you have a large screen (not mobile), the trading block has a new UI. It also shows offers from all teams at once.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sn9w72/version_202202071351_if_you_have_a_large_screen/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.04.1107",
 		"text": "A bunch of little UI improvements suggested by users.",
 		"links": [
