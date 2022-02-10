@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.02.09.1124",
+		"text": "Mobile UI improvements for tables, including sticky columns on the left.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sorkb0/version_202202091124_mobile_ui_improvements_for/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.07.1351",
 		"text": "If you have a large screen (not mobile), the trading block has a new UI. It also shows offers from all teams at once.",
 		"links": [
