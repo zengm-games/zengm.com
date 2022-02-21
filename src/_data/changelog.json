@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2022.02.20.1292",
+		"text": "Tables showing abbreviated player names will show additional characters when needed to distinguish two players, like \"John Smith\" and \"Jason Smith\" will be \"Jo. Smith\" and \"Ja. Smith\".",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sxicpn/version_202202201292_tables_showing_abbreviated/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.02.17.1376",
+		"text": "Added the Progressive Leaders page showing the current and career leaders in a single stat for every year in league history on one page. Access it at Stats > League Leaders > Progressive Leaders, or from the ctrl+k menu.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/sv89fj/version_202202171376_progressive_leaders_page/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.09.1124",
 		"text": "Mobile UI improvements for tables, including sticky columns on the left.",
 		"links": [

@@ -23,7 +23,7 @@ First, you can search. It does a kind of fuzzy search (using [this great library
 
 That may sound a bit weird if you've never seen a search box work like this, but it's very nice to use. And if the search doesn't return the thing you want as the #1 result, you can use the arrow keys to scroll through the results.
 
-You can also access more pages here than are in the menus. Normally, you'd have to to League > History > All-Star Records to get to that page. 3 clicks, gross. Now just tyle ctrl+k and then "all" and hit enter:
+You can also access more pages here than are in the menus. Normally, you'd have to to League > History > All-Star History to get to that page. 3 clicks, gross. Now just tyle ctrl+k and then "all" and hit enter:
 
 <figure><img src="/files/command-palette-3.png" class="img-fluid"></figure>
 
