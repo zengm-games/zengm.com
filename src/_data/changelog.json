@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2022.02.22.0718",
+		"text": "Due to popular demand, I added a setting on the Global Settings page to disable the mobile player name/skill abbreviation introduced a couple weeks ago.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/syseeg/version_202202220718_due_to_popular_demand_i/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.02.22.0718",
+		"text": "The All-Star History page shows how many times a player won a contest/award.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/syseeg/version_202202220718_due_to_popular_demand_i/hxzflgc/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.20.1292",
 		"text": "Tables showing abbreviated player names will show additional characters when needed to distinguish two players, like \"John Smith\" and \"Jason Smith\" will be \"Jo. Smith\" and \"Ja. Smith\".",
 		"links": [
