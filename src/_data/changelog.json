@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.02.23.0837",
+		"text": "Change in team ovr for a potential trade is shown on the Trade and Trading Block pages for both your team and the other team.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/szozay/version_202202230837_change_in_team_ovr_for_a/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.22.0718",
 		"text": "Due to popular demand, I added a setting on the Global Settings page to disable the mobile player name/skill abbreviation introduced a couple weeks ago.",
 		"links": [
