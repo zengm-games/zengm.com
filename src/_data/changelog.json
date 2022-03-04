@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.03.03.0723",
+		"text": "Number of championships won is shown for all players on the Team History and GM History pages.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/t5w9b5/just_a_tiny_ui_update_in_version_202203030723/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.02.23.0837",
 		"text": "Change in team ovr for a potential trade is shown on the Trade and Trading Block pages for both your team and the other team.",
 		"links": [
@@ -25,9 +35,7 @@
 		"links": [
 			"https://old.reddit.com/r/BasketballGM/comments/syseeg/version_202202220718_due_to_popular_demand_i/hxzflgc/"
 		],
-		"basketball": true,
-		"football": true,
-		"hockey": true
+		"basketball": true
 	},
 	{
 		"version": "2022.02.20.1292",
