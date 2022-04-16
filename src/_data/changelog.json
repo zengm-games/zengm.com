@@ -1,5 +1,47 @@
 [
 	{
+		"version": "2022.04.16.0072",
+		"text": "You can now start a real players league at the 2022 playoffs.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/u4qmu4/you_can_now_start_a_real_players_league_at_the/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2022.04.16.0072",
+		"text": "On player profile pages for real players, added a link to the player's Basketball Reference page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/u4qmu4/you_can_now_start_a_real_players_league_at_the/i4xapgf/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2022.04.16.0072",
+		"text": "Added a quick \"Cancel\" button to each row in the re-signing players table.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/u4qmu4/you_can_now_start_a_real_players_league_at_the/i4xapgf/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.04.16.0072",
+		"text": "Added some key team stats (passing yards, rushing yards, penalties, and turnovers) to the top of the box score.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/u4qnwk/added_some_key_team_stats_passing_yards_rushing/"
+		],
+		"football": true
+	},
+	{
+		"version": "2022.04.16.0072",
+		"text": "Added some key team stats (shots, powerplay success, takeaways, giveaways, faceoff win percentage) to the top of the box score.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMHockey/comments/u4qocp/added_some_key_team_stats_shots_powerplay_success/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2022.03.03.0723",
 		"text": "Number of championships won is shown for all players on the Team History and GM History pages.",
 		"links": [
