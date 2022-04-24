@@ -235,6 +235,40 @@ if (p.stats.length > 0) {
     p.jerseyNumber = new_jeresy_number;
 }
 await bbgm.idb.cache.players.put(p);
-\`\`\``;
+\`\`\`
+
+---
+
+### Add custom award to a player
+
+This will show up only on the player profile page, not on any other award screens.
+
+\`\`\`
+var player_id_number = 150;
+var p = await bbgm.idb.cache.players.get(player_id_number);
+p.awards.push({
+    season: 2025,
+    type: "My Custom Award",
+});
+await bbgm.idb.cache.players.put(p);
+\`\`\`
+
+To remove that custom award:
+
+\`\`\`
+var player_id_number = 150;
+var p = await bbgm.idb.cache.players.get(player_id_number);
+p.awards = p.awards.filter(award => {
+    if (award.season === 2025 && award.type === "My Custom Award") {
+        return false;
+    }
+
+    return true;
+});
+await bbgm.idb.cache.players.put(p);
+\`\`\`
+
+
+`;
 	}
 };
