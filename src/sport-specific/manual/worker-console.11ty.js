@@ -39,14 +39,18 @@ You can easily access a simple version of the worker console at <span class="tex
 
 ---
 
-### Buff/nerf draft prospect ratings
+### Buff/nerf player ratings
 
 \`\`\`
-var players = await bbgm.idb.cache.players.indexGetAll("playersByTid", bbgm.PLAYER.UNDRAFTED);
+var players = await bbgm.idb.cache.players.getAll();
 for (const p of players) {
-    const ratings = p.ratings[p.ratings.length - 1];
+    const ratings = p.ratings.at(-1);
 
-    ratings.spd *= 1.2;
+    // Increase speed by 20%
+    ratings.spd = bbgm.player.limitRating(ratings.spd * 1.2);
+
+    // Decrease height by 10
+    ratings.hgt = bbgm.player.limitRating(ratings.hgt - 10);
 
     // Recompute ovr and pot
     await bbgm.player.develop(p, 0);
@@ -58,7 +62,7 @@ for (const p of players) {
 }
 \`\`\`
 
-That will increase the speed rating by 20% for all draft prospects.
+That will increase the speed rating by 20% and decrease the height rating by 10, while bounding them to the normal 0-100 range.
 
 You can do other stuff to player ratings. These are the names of all the rating variables:
 
@@ -66,34 +70,47 @@ You can do other stuff to player ratings. These are the names of all the rating 
 ${ratingKeys.join("\n")}
 \`\`\`
 
-For example...
-
----
-
-### Buff/nerf all ratings for a subset of players
-
-Towards the bottom, change \`158, 207, 14\` to a list of player ID numbers you want nerfed/buffed. And change 0.8 to the amount you want each rating multiplied by. Edit the list of ratings in \`keys\` if you don't want it to apply to all ratings
+The above code runs on all active players and draft prospects. If instead you want to run on some subset of players, you can. Generally, this code looks like:
 
 \`\`\`
-async function nerf(pid, fraction) {
-    const p = await bbgm.idb.cache.players.get(pid);
-    const ratings = p.ratings[p.ratings.length - 1];
-    const keys = ${JSON.stringify(ratingKeys)};
-    for (const key of keys) {
-        ratings[key] = Math.round(fraction * ratings[key]);
+var players = await bbgm.idb.cache.players.getAll();
+for (const p of players) {
+    if (SOME_CONDITION) {
+        const ratings = p.ratings.at(-1);
+        ratings.spd = bbgm.player.limitRating(ratings.spd * 1.2);
+        ratings.hgt = bbgm.player.limitRating(ratings.hgt - 10);
+        await bbgm.player.develop(p, 0);
+        await bbgm.player.updateValues(p);
+        await bbgm.idb.cache.players.put(p);
     }
-    await bbgm.player.develop(p, 0);
-    await bbgm.player.updateValues(p);
-    await bbgm.idb.cache.players.put(p);
-}
-
-var pids = [158, 207, 14];
-for (const pid of pids) {
-    await nerf(pid, 0.8);
 }
 \`\`\`
 
----
+That's saying if \`SOME_CONDITION\` is true, only then run the code to update the ratings. But what is \`SOME_CONDITION\`? Some examples:
+
+- All draft prospects: \`if (p.tid === bbgm.PLAYER.UNDRAFTED) {\`
+- All free agents: \`if (p.tid === bbgm.PLAYER.FREE_AGENT) {\`
+- All players on one specific team: \`if (p.tid === 5) {\` (5 is the team ID number)
+- All players at one position: \`if (ratings.pos === "${bySport(
+			{
+				basketball: "PG",
+				football: "WR",
+				hockey: "C",
+			},
+			sport,
+		)}") {\`
+- Only a specific subset of player ID numbers: \`if ([158, 207, 14].includes(p.pid)) {\`
+
+You can combine these conditions too, like this is all draft prospects at one position: \`if (p.tid === bbgm.PLAYER.UNDRAFTED && ratings.pos === "${bySport(
+			{
+				basketball: "PG",
+				football: "WR",
+				hockey: "C",
+			},
+			sport,
+		)}") {\`
+
+Conditions like this can similarly be used for many of the code snippets below too.
 
 ### "Lock ratings" for all active players
 
