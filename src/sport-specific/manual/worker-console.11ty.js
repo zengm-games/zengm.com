@@ -241,7 +241,7 @@ await bbgm.idb.cache.players.put(p);
 
 ### Add custom award to a player
 
-This will show up only on the player profile page, not on any other award screens.
+This will show up only on the player profile page, not on any other pages in the game.
 
 \`\`\`
 var player_id_number = 150;
