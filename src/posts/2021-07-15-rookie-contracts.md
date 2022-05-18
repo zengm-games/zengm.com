@@ -6,6 +6,7 @@ tags:
   - post
   - Contracts
   - Player Mood
+  - Rookie Contracts
 ---
 
 The new [player mood system introduced last year](/blog/2020/09/player-mood/) is working pretty well overall, but there are some small issues with it. One is related to a mood bonus given to players on rookie contracts, where it says "Eager to sign first non-rookie contract" and gives a big +8 bonus. This gives BBGM something like the NBA's restricted free agency, because it results in your drafted players being less likely to refuse to re-sign. (For FBGM and ZGMH, it only applies if you diasble the hard cap setting.)
