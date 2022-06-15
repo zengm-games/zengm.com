@@ -39,6 +39,8 @@ I could go on and on about everything that happened between 2008 and today. And 
 
 <b class="text-highlight">2021:</b> [ZenGM Hockey](https://www.reddit.com/r/ZenGMHockey/comments/lw79il/oh_shit_new_zengm_hockey_out_now_the_past_6_years/) was released, built from the same codebase as Basketball GM and Football GM.
 
+<b class="text-highlight">2022:</b> ZenGM Baseball was released, built from the same codebase as Basketball GM, Football GM, and ZenGM Hockey.
+
 All throughout that time, my games have been improving and [my userbase has been growing](/blog/tag/milestone/). And it's still really fun for me to work on. There's no such thing as a sports simulation game being "done", there's always something to do.
 
 At this point, I think my games have a pretty clear niche:
