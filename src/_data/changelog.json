@@ -1,5 +1,11 @@
 [
 	{
+		"version": "",
+		"text": "Some more tweaking of the default team logos by @Buck#4498 from Discord to make them better for hockey.",
+		"links": [],
+		"hockey": true
+	},
+	{
 		"version": "2022.04.16.0072",
 		"text": "You can now start a real players league at the 2022 playoffs.",
 		"links": [
