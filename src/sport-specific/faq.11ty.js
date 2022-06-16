@@ -12,6 +12,8 @@ module.exports = class FAQ {
 	render({ gameName, sport, websitePlay }) {
 		const androidAppURL = bySport(
 			{
+				baseball:
+					"https://play.google.com/store/apps/details?id=com.zengm.baseball.twa",
 				basketball:
 					"https://play.google.com/store/apps/details?id=com.basketball_gm.play.twa",
 				football:

@@ -15,16 +15,27 @@ module.exports = class {
 
 		const ratingDescriptions = bySport(
 			{
+				baseball: {
+					hgt: "height, which impacts defense some",
+					spd: "speed, which affects baserunning and defense",
+					hpw: "hitting power",
+					con: "contact hitting",
+					eye: "eye, determines how good a batter is at identifying balls and strikes",
+					gnd: "ground ball defense",
+					fly: "fly ball defense",
+					thr: "throwing strength",
+					cat: "catcher defense",
+					ppw: "pitching power",
+					ctl: "pitching control",
+					mov: "pitching movement",
+					endu: "pitching endurance",
+				},
 				basketball: {
 					hgt: `height, which factors into pretty much everything - this is meant to also reflect things like standing reach and wingspan, and it is used in game simulations rather than the player's "true" height in feet/inches. For a realistic professional basketball league, take the player's height in inches, subtract 66, and multiply by 3.70. Then maybe add or subtract a little based on wingspan. This means 0 is 5'6" and 100 is 7'9" (with a little wiggle room for wingspan).`,
-					stre:
-						"strength, which influences defense, rebounding, and low post scoring",
-					spd:
-						"speed, which influences ball handling, fast breaking, and defense",
-					jmp:
-						"jumping, which influences finishing at the rim, rebounding, blocking shots, and defense",
-					endu:
-						"endurance, which governs how fast a player's skills degrade as he gets tired",
+					stre: "strength, which influences defense, rebounding, and low post scoring",
+					spd: "speed, which influences ball handling, fast breaking, and defense",
+					jmp: "jumping, which influences finishing at the rim, rebounding, blocking shots, and defense",
+					endu: "endurance, which governs how fast a player's skills degrade as he gets tired",
 					ins: "low post scoring",
 					dnk: "dunking/layups",
 					ft: "free throw shooting",
@@ -32,8 +43,7 @@ module.exports = class {
 					tp: "3 point shooting",
 					oiq: "offensive IQ (affects many aspects of offense)",
 					diq: "defensive IQ (affects many aspects of defense)",
-					drb:
-						"dribbling (also influences passing, since you can pass easier if you're not worried about losing the ball)",
+					drb: "dribbling (also influences passing, since you can pass easier if you're not worried about losing the ball)",
 					pss: "passing",
 					reb: "rebounding",
 				},
@@ -62,25 +72,19 @@ module.exports = class {
 				},
 				hockey: {
 					hgt: "height. Ranges from 5'4\" (0) to 6'10\" (100).",
-					stre:
-						"strength. Influences many parts of the game, particularly defense.",
-					spd:
-						"speed. Influences many parts of the game, particularly scoring and playmaking.",
-					endu:
-						"endurance. Governs how fast a player's skills degrade as he gets tired (does not apply to goalies).",
+					stre: "strength. Influences many parts of the game, particularly defense.",
+					spd: "speed. Influences many parts of the game, particularly scoring and playmaking.",
+					endu: "endurance. Governs how fast a player's skills degrade as he gets tired (does not apply to goalies).",
 					pss: "passing. Increases the quality of shots that teammates get.",
 					wst: "wristshot",
 					sst: "slapshot",
-					stk:
-						"stickhandling. Influences many parts of the game, particularly scoring and playmaking.",
+					stk: "stickhandling. Influences many parts of the game, particularly scoring and playmaking.",
 					oiq: "offensive IQ. Influences all offensive parts of the game.",
-					chk:
-						"checking. When a player is hit, his fatigue goes up and his performance goes down.",
+					chk: "checking. When a player is hit, his fatigue goes up and his performance goes down.",
 					blk: "shot blocking",
 					fcf: "faceoffs",
 					diq: "defensive IQ. Influences all defensive parts of the game.",
-					glk:
-						"goalkeeping. This is the only rating that matters for goalies currently.",
+					glk: "goalkeeping. This is the only rating that matters for goalies currently.",
 				},
 			},
 			sport,
@@ -94,6 +98,7 @@ module.exports = class {
 
 		const numPlayersPerDraftClass = bySport(
 			{
+				baseball: 175,
 				basketball: 70,
 				football: 261,
 				hockey: 149,
@@ -103,6 +108,7 @@ module.exports = class {
 
 		const minRosterSize = bySport(
 			{
+				baseball: 35,
 				basketball: 10,
 				football: 40,
 				hockey: 24,

@@ -3,7 +3,7 @@ const sportSpecificURL = require("../util/sportSpecificURL");
 module.exports = type => {
 	const data = {
 		layout: "layout.njk",
-		sports: ["basketball", "football", "hockey"],
+		sports: ["baseball", "basketball", "football", "hockey"],
 		pagination: {
 			data: "sports",
 			size: 1,

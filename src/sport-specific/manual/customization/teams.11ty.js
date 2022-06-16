@@ -13,6 +13,7 @@ module.exports = class {
 	render({ gameName, subredditName, sport, websitePlay }) {
 		const defaultStadiumCapacity = bySport(
 			{
+				baseball: 50000,
 				basketball: 25000,
 				football: 70000,
 				hockey: 17500,
@@ -84,6 +85,7 @@ module.exports = class {
 <p>
 	${gameName} works best with ${bySport(
 			{
+				baseball: "30 teams, 15 in each conference, and 5 in each division",
 				basketball: "30 teams, 15 in each conference, and 5 in each division",
 				football: "32 teams, 16 in each conference, and 4 in each division",
 				hockey: "32 teams, 16 in each conference, and 8 in each division",

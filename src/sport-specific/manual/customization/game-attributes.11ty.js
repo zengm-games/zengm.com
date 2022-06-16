@@ -41,6 +41,7 @@ module.exports = class {
         "gracePeriodEnd": 2015,
         "numGamesPlayoffSeries": ${bySport(
 					{
+						baseball: "[3, 5, 7, 7]",
 						basketball: "[7, 7, 7, 7]",
 						football: "[1, 1, 1, 1]",
 						hockey: "[7, 7, 7, 7]",
@@ -49,6 +50,18 @@ module.exports = class {
 				)},
         ${bySport(
 					{
+						baseball: `"confs": [
+            {"cid": 0, "name": "American Conference"},
+            {"cid": 1, "name": "National Conference"}
+        ],
+        "divs": [
+            {"did": 0, "cid": 0, "name": "East"},
+            {"did": 1, "cid": 0, "name": "Central"},
+            {"did": 2, "cid": 0, "name": "West"},
+            {"did": 3, "cid": 1, "name": "East"},
+            {"did": 4, "cid": 1, "name": "Central"},
+            {"did": 5, "cid": 1, "name": "West"}
+        ]`,
 						basketball: `"confs": [
             {"cid": 0, "name": "Eastern Conference"},
             {"cid": 1, "name": "Western Conference"}
@@ -140,6 +153,7 @@ module.exports = class {
 <p>
     <code>draftAges</code> is an array containing two numbers: the minimum and maximum ages for draft prospects. Default values are <code>${bySport(
 			{
+				baseball: "[18, 22]",
 				basketball: "[19, 22]",
 				football: "[21, 22]",
 				hockey: "[18, 21]",

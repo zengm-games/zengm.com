@@ -93,6 +93,7 @@ That's saying if \`SOME_CONDITION\` is true, only then run the code to update th
 - All players on one specific team: \`if (p.tid === 5) {\` (5 is the team ID number)
 - All players at one position: \`if (ratings.pos === "${bySport(
 			{
+				baseball: "LF",
 				basketball: "PG",
 				football: "WR",
 				hockey: "C",
@@ -103,6 +104,7 @@ That's saying if \`SOME_CONDITION\` is true, only then run the code to update th
 
 You can combine these conditions too, like this is all draft prospects at one position: \`if (p.tid === bbgm.PLAYER.UNDRAFTED && ratings.pos === "${bySport(
 			{
+				baseball: "LF",
 				basketball: "PG",
 				football: "WR",
 				hockey: "C",
@@ -175,6 +177,7 @@ var pids = []
 for (const p of players) {
     if (p.ratings[p.ratings.length - 1].pos === "${bySport(
 			{
+				baseball: "LF",
 				basketball: "PG",
 				football: "WR",
 				hockey: "C",

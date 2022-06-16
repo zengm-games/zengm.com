@@ -34,6 +34,7 @@ module.exports = class {
     <li>
         Within that folder, there will be some other folder with "${bySport(
 					{
+						baseball: "zengm",
 						basketball: "basketball-gm",
 						football: "football-gm",
 						hockey: "zengm",

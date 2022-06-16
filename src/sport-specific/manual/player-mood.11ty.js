@@ -62,10 +62,11 @@ ${bySport(
 
 - Rookie contract - players on rookie contracts are eager to sign their next contract.${bySport(
 			{
+				baseball: ` This only applies if you enable the "Rookie Salary Scale" setting, which is disabled by default.`,
 				basketball:
 					" This gives BBGM something like the NBA's restricted free agency, because it results in your drafted players being less likely to refuse to re-sign.",
-				football: ` This only applies if you have the \"hard cap\" option disabled so rookies are automatically given contracts. In ${gameName} this option is disabled by default.`,
-				hockey: ` This only applies if you have the \"hard cap\" option disabled so rookies are automatically given contracts. In ${gameName} this option is disabled by default.`,
+				football: ` This only applies if you enable the "Rookie Salary Scale" setting, which is disabled by default.`,
+				hockey: "",
 			},
 			sport,
 		)}`;

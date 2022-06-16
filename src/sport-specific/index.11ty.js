@@ -3,6 +3,7 @@ const eleventyComputed = require("../_data/eleventyComputed");
 const base = require("./base");
 
 const feedbacks = {
+	baseball: [],
 	basketball: [
 		{
 			name: "Stanners, gmgames.org",

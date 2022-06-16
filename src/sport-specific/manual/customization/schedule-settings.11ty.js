@@ -1,4 +1,3 @@
-const bySport = require("../../../util/bySport");
 const base = require("../../base");
 
 module.exports = class {

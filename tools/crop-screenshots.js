@@ -42,6 +42,7 @@ const TOP_BELOW_MORE = 372;
 		let outFilenames;
 		if (filename.startsWith("all-")) {
 			outFilenames = [
+				filename.replace("all-", "baseball-"),
 				filename.replace("all-", "basketball-"),
 				filename.replace("all-", "football-"),
 				filename.replace("all-", "hockey-"),

@@ -5,6 +5,7 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: "ZGMB",
 						basketball: "BBGM",
 						football: "FBGM",
 						hockey: "ZGMH",
@@ -17,6 +18,7 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: "ZenGM Baseball",
 						basketball: "Basketball GM",
 						football: "Football GM",
 						hockey: "ZenGM Hockey",
@@ -29,6 +31,7 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: "MLB",
 						basketball: "NBA",
 						football: "NFL",
 						hockey: "NHL",
@@ -41,6 +44,21 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: [
+							"hgt",
+							"spd",
+							"hpw",
+							"con",
+							"eye",
+							"gnd",
+							"fly",
+							"thr",
+							"cat",
+							"ppw",
+							"ctl",
+							"mov",
+							"endu",
+						],
 						basketball: [
 							"diq",
 							"dnk",
@@ -106,6 +124,7 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: "ZenGMBaseball",
 						basketball: "BasketballGM",
 						football: "Football_GM",
 						hockey: "ZenGMHockey",
@@ -118,6 +137,7 @@ module.exports = {
 		data.sport
 			? bySport(
 					{
+						baseball: "https://baseball.zengm.com/",
 						basketball: "https://play.basketball-gm.com/",
 						football: "https://play.football-gm.com/",
 						hockey: "https://hockey.zengm.com/",

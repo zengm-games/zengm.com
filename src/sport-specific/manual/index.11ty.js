@@ -16,6 +16,22 @@ module.exports = class {
 	render({ gameName, proLeagueAbbrev, sport, websitePlay }) {
 		const skills = bySport(
 			{
+				baseball: {
+					Pp: "Power Pitcher",
+					Pf: "Finesse Pitcher",
+					Pw: "Workhorse Pitcher",
+					Ri: "Infield Range",
+					Ro: "Outfield Range",
+					Dc: "Catcher Defense",
+					D1: "First Base Defense",
+					Dg: "Ground Ball Fielding",
+					Df: "Fly Ball Fielding",
+					A: "Strong Arm",
+					Hp: "Power Hitter",
+					Hc: "Contact Hitter",
+					E: "Good Eye",
+					S: "Speed",
+				},
 				basketball: {
 					3: "Three Point Shooter",
 					A: "Athlete",
@@ -59,17 +75,10 @@ module.exports = class {
 <ul>
 <li><b>Preseason.</b> Players develop/age (<i>i.e.</i> their ratings change). Young players tend to get better, old players tend to get worse.</li>
 <li><b>Regular season.</b> Regular season games are played, at the pace you choose through the Play menu.</li>
-<li><b>Playoffs.</b> Teams that made the playoffs ${bySport(
-			{
-				basketball:
-					"(top 8 in each conference) progress through the bracket playing best-of-7 series until a champion emerges",
-				football: "progress through the bracket until a champion emerges",
-				hockey: "progress through the bracket until a champion emerges",
-			},
-			sport,
-		)}.</li>
+<li><b>Playoffs.</b> Teams that made the playoffs progress through the bracket until a champion emerges.</li>
 ${bySport(
 	{
+		baseball: "",
 		basketball:
 			"<li><b>Draft lottery.</b> After the playoffs end, the draft order is set with a lottery.</li>",
 		football: "",
@@ -88,6 +97,9 @@ ${bySport(
 <h3>Salary cap</h3>
 ${bySport(
 	{
+		baseball: `<p>By default there is no salary cap, but there is a luxury tax limit of $200 million. Beyond that, you have to pay a luxury tax penalty equal to 150% of your excess spending. This is based on your payroll at the end of the year, so you have until the trade deadline to get under the limit</p>
+		<p>There is also a minimum salary limit of $150 million. If you are below this limit, then you have to pay a penalty equal to the difference between your payroll and the limit.</p>
+		<p>There is currently no minor league, but the default roster size is larger than the MLB to allow you to keep prospects on your team while waiting for them to develop.</p>`,
 		basketball: `<p>The salary cap is $90 million. This is a soft cap, meaning that if you are over the salary cap, you can still:</p>
 <ul>
 <li>Draft players</li>
@@ -107,6 +119,7 @@ ${bySport(
 <h3>Contracts</h3>
 <p>The maximum contract amount is $${bySport(
 			{
+				baseball: "30",
 				basketball: "30",
 				football: "30",
 				hockey: "13",
@@ -115,6 +128,7 @@ ${bySport(
 		)} million per year and the maximum contract length is 5 years.</p>
 <p>The minimum contract amount is $${bySport(
 			{
+				baseball: "500",
 				basketball: "750",
 				football: "500",
 				hockey: "500",
@@ -132,6 +146,16 @@ ${bySport(
 <h2>Player Ratings</h2>
 ${bySport(
 	{
+		baseball: `<p>Player ratings for a variety of categories are on a scale from 0-100. The whole scale is used, so a typical value for a rating is 50. Roughly, the overall ("ovr") player rating means:</p>
+<ul>
+<li><b>90+:</b> All-time great</li>
+<li><b>80+:</b> MVP candidate</li>
+<li><b>70+:</b> All League candidate</li>
+<li><b>60+:</b> Starter</li>
+<li><b>50+:</b> Role player</li>
+<li><b>40+:</b> Backup</li>
+<li><b>lower:</b> Bad player or prospect</li>
+</ul>`,
 		basketball: `<p>Player ratings for a variety of categories (shooting, rebounding, passing, dribbling, etc.) are on a scale from 0-100. The whole scale is used, so a typical value for a rating is 50. Roughly, the overall ("ovr") player rating means:</p>
 <ul>
 <li><b>85+:</b> All-time great</li>
@@ -190,6 +214,10 @@ ${Object.entries(skills)
 </ul>
 ${bySport(
 	{
+		baseball: `<h3>Batting Order, Defense, and Pitching</h3>
+<p>Go to Team > Batting Order to set your batting order, or leave it set to default which is for the AI to auto set it.</p>
+<p>To set your starters, go to Team > Defense. If you play a player out of position, his rating will go down. But at similar positions (like playing a SS at 3B) the penalty will generally be small.</p>
+<p>At Team > Pitching you can set your starting pitchers (currently always a 5 man rotation) and relievers. You are allowed to carry more relievers than MLB teams so you don't have to micromanage moving players to your active roster.</p>`,
 		basketball: "",
 		football: `<h3>Depth Chart</h3>
 <p>Go to Team > Depth Chart to see select which players to start at every position. You can do crazy things if you want, like starting 5 kickers as your offensive line. Just don't expect that to go well! You can also auto-sort your depth chart, which is the default setting.</p>
@@ -207,6 +235,7 @@ ${bySport(
 <h2>Custom Rosters</h2>
 ${bySport(
 	{
+		baseball: `<p>By default, all players are completely randomly generated. You might be able to find some custom rosters people have made <a href="https://www.reddit.com/r/ZenGMBaseball/">on Reddit</a>. You can also make your own: <a href="/${sport}/manual/customization/">click here for more info about custom rosters.</a></p>`,
 		basketball: `<p>In addition to the built-in real players rosters in the game, you can find some user made rosters on <a href="https://www.reddit.com/r/BasketballGM/">Reddit</a>. You can also make your own: <a href="/${sport}/manual/customization/">click here for more info about custom rosters.</a></p>`,
 		football: `<p>By default, all players are completely randomly generated. You might be able to find some custom rosters people have made <a href="https://www.reddit.com/r/Football_GM/">on Reddit</a>. You can also make your own: <a href="/${sport}/manual/customization/">click here for more info about custom rosters.</a></p>`,
 		hockey: `<p>By default, all players are completely randomly generated. You might be able to find some custom rosters people have made <a href="https://www.reddit.com/r/ZenGMHockey/">on Reddit</a>. You can also make your own: <a href="/${sport}/manual/customization/">click here for more info about custom rosters.</a></p>`,

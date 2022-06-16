@@ -159,10 +159,11 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode(
 		"bySport",
-		(basketball, football, hockey, sport) => {
+		(baseball, basketball, football, hockey, sport) => {
 			return String(
 				bySport(
 					{
+						baseball,
 						basketball,
 						football,
 						hockey,
@@ -195,6 +196,7 @@ module.exports = function (eleventyConfig) {
 
 		return bySport(
 			{
+				baseball: "ZenGM Baseball",
 				basketball: "Basketball GM",
 				football: "Football GM",
 				hockey: "ZenGM Hockey",
@@ -216,6 +218,7 @@ module.exports = function (eleventyConfig) {
 		}
 		const afterPrefix = this.page.url.replace(prefix, "");
 		const urls = {
+			baseball: `/baseball/${afterPrefix}`,
 			basketball: `/basketball/${afterPrefix}`,
 			football: `/football/${afterPrefix}`,
 			hockey: `/hockey/${afterPrefix}`,
@@ -229,6 +232,8 @@ module.exports = function (eleventyConfig) {
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         ${bySport(
 					{
+						baseball:
+							'<img src="https://baseball.zengm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ms-1">Baseball</span>',
 						basketball:
 							'<img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"><span class="d-none d-sm-inline ms-1">Basketball GM</span>',
 						football:
@@ -240,16 +245,19 @@ module.exports = function (eleventyConfig) {
 				)}
     </button>
     <div class="dropdown-menu">
-    <a class="dropdown-item" href="${
-			urls.basketball
-		}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18" class="me-1">Basketball GM</a>
-    <a class="dropdown-item" href="${
-			urls.football
-		}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18" class="me-1">Football GM</a>
-    <a class="dropdown-item" href="${
+    	<a class="dropdown-item" href="${
+				urls.basketball
+			}"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18" class="me-1">Basketball GM</a>
+    	<a class="dropdown-item" href="${
+				urls.football
+			}"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18" class="me-1">Football GM</a>
+		<a class="dropdown-item" href="${
+			urls.baseball
+		}"><img src="https://baseball.zengm.com/ico/logo.png" width="18" height="18" class="me-1">Baseball</a>
+		<a class="dropdown-item" href="${
 			urls.hockey
 		}"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18" class="me-1">Hockey</a>
-    </div>
+	</div>
 </div>`;
 	});
 
