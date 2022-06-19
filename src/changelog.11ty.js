@@ -54,6 +54,7 @@ class Changelog {
     <div class="btn-group me-sm-3 mb-3 mb-sm-0">
             <button type="button" class="btn btn-primary" id="toggle-basketball"><img src="https://play.basketball-gm.com/ico/logo.png" width="18" height="18"> Basketball</button>
             <button type="button" class="btn btn-primary" id="toggle-football"><img src="https://play.football-gm.com/ico/logo.png" width="18" height="18"> Football</button>
+            <button type="button" class="btn btn-primary" id="toggle-baseball"><img src="https://baseball.zengm.com/ico/logo.png" width="18" height="18"> Baseball</button>
             <button type="button" class="btn btn-primary" id="toggle-hockey"><img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18"> Hockey</button>
     </div>
 
@@ -76,7 +77,8 @@ class Changelog {
 				}
 
 				return `${yearAnchor}<div
-    ${entry.basketball ? 'data-basketball="true"' : ""}
+	${entry.baseball ? 'data-baseball="true"' : ""}
+	${entry.basketball ? 'data-basketball="true"' : ""}
     ${entry.football ? 'data-football="true"' : ""}
     ${entry.hockey ? 'data-hockey="true"' : ""}
     ${entry.big ? 'data-big="true"' : ""}
@@ -94,11 +96,16 @@ class Changelog {
 						? '<img src="https://play.football-gm.com/ico/logo.png" width="18" height="18">'
 						: ""
 				}
-        ${
-					entry.hockey
-						? '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">'
-						: ""
-				}
+		${
+			entry.baseball
+				? '<img src="https://baseball.zengm.com/ico/logo.png" width="18" height="18">'
+				: ""
+		}
+		${
+			entry.hockey
+				? '<img src="https://hockey.zengm.com/ico/logo.png" width="18" height="18">'
+				: ""
+		}
     </div>
     ${
 			entry.links && entry.links.length > 0
@@ -117,6 +124,7 @@ class Changelog {
 </div>
 <script>
 const state = {
+	baseball: true,
 	basketball: true,
 	hockey: true,
 	football: true,
@@ -124,6 +132,7 @@ const state = {
 };
 
 const buttons = {
+	baseball: document.getElementById("toggle-baseball"),
 	basketball: document.getElementById("toggle-basketball"),
 	hockey: document.getElementById("toggle-hockey"),
 	football: document.getElementById("toggle-football"),
