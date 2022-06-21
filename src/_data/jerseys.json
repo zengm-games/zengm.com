@@ -1,5 +1,30 @@
 {
-    "basketball":  ["jersey", "jersey2", "jersey3", "jersey4", "jersey5"],
-    "football": ["football", "football2", "football3", "football4"],
-    "hockey": ["hockey", "hockey2", "hockey3", "hockey4"]
+	"baseball": {
+		"allowEyeBlack": false,
+		"allowGlasses": false,
+		"baseballHat": true,
+		"forceWhiteFraction": 0,
+		"jerseys": ["baseball", "baseball2", "baseball3", "baseball4"]
+	},
+	"basketball": {
+		"allowEyeBlack": false,
+		"allowGlasses": true,
+		"baseballHat": false,
+		"forceWhiteFraction": 0,
+		"jerseys": ["jersey", "jersey2", "jersey3", "jersey4", "jersey5"]
+	},
+	"football": {
+		"allowEyeBlack": true,
+		"allowGlasses": false,
+		"baseballHat": false,
+		"forceWhiteFraction": 0,
+		"jerseys": ["football", "football2", "football3", "football4"]
+	},
+	"hockey": {
+		"allowEyeBlack": false,
+		"allowGlasses": false,
+		"baseballHat": false,
+		"forceWhiteFraction": 0.85,
+		"jerseys": ["hockey", "hockey2", "hockey3", "hockey4"]
+	}
 }

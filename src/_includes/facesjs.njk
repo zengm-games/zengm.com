@@ -10,7 +10,7 @@ script.addEventListener("load", function () {
     }
 });
 
-script.src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}{{ "/js/facesjs-3.5.0.js" | addHash }}";
+script.src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}{{ "/js/facesjs-3.7.3.js" | addHash }}";
 
 head.appendChild(script);
 </script>
