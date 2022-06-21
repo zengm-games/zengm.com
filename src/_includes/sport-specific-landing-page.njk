@@ -413,27 +413,6 @@ window.onFacesJS = function () {
   const numFaces = Math.ceil(document.documentElement.clientWidth / {{ FACE_WIDTH }});
 
   const teamColorsAll = {{ teamColors | dump | safe }};
-  const jerseys = {{ jerseys[sport] | dump | safe }};
-
-  function randomChoice(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
-
-  function genFace() {
-    let options;
-    {% if sport == "hockey" %}
-      if (Math.random() < 0.85) {
-        options = {
-          race: "white"
-        };
-      }
-    {% endif %}
-
-    return faces.generate({
-      teamColors: randomChoice(teamColorsAll),
-      jersey: { id: randomChoice(jerseys) },
-    }, options);
-  }
 
   {% if sport == "basketball" %}
     const dmg = {{ davidMcGillian | dump | safe }};
@@ -447,20 +426,20 @@ window.onFacesJS = function () {
     faceContainer.classList.add("flex-shrink-0");
     facesContainer.appendChild(faceContainer);
 
-    {% if sport == "basketball" %}
+    {% if sport === "basketball" %}
       if (i === dmgIndex) {
         faces.display(faceContainer, dmg);
         continue;
       }
     {% endif %}
 
-    const face = genFace();
-    faces.display(faceContainer, face);
-
-    faceContainer.addEventListener("click", function () {
-      const face = genFace();
+    function genFaceAndDisplay() {
+      var face = genFace("{{ sport }}", teamColorsAll[Math.floor(Math.random() * teamColorsAll.length)]);
       faces.display(faceContainer, face);
-    });
+    }
+
+    genFaceAndDisplay()
+    faceContainer.addEventListener("click", genFaceAndDisplay);
   }
 }
 </script>

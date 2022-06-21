@@ -6,6 +6,53 @@ script.type = "text/javascript";
 
 script.addEventListener("load", function () {
     if (window.onFacesJS) {
+	    var allJerseys = {{ jerseys | dump | safe }};
+        var allSports = Object.keys(allJerseys);
+
+        window.genFace = function (sport, teamColors) {
+            if (!sport) {
+                sport = allSports[Math.floor(Math.random() * allSports.length)];
+            }
+
+            var info = allJerseys[sport];
+			var jersey = info.jerseys[Math.floor(Math.random() * info.jerseys.length)];
+
+			var options;
+			if (info.forceWhiteFraction > 0 && Math.random() < info.forceWhiteFraction) {
+				options = {
+					race: "white"
+				};
+			}
+
+			var overrides = {
+				teamColors: teamColors || ["#695FAB", "#f05742", "#cccccc"],
+				jersey: { id: jersey },
+			};
+
+			if (!info.allowGlasses) {
+				overrides.glasses = {
+					id: "none",
+				};
+			}
+
+			var face = faces.generate(overrides, options);
+
+			if (info.baseballHat) {
+				var hats = ["hat", "hat2", "hat3"];
+				face.accessories.id = hats[Math.floor(Math.random() * hats.length)];
+			} else {
+				if (face.accessories.id.startsWith("hat")) {
+					face.accessories.id = "none";
+				}
+			}
+
+			if (!info.allowEyeBlack && face.accessories.id === "eye-black") {
+				face.accessories.id = "none";
+			}
+
+            return face;
+        }
+
         window.onFacesJS();
     }
 });

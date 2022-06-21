@@ -244,48 +244,11 @@ window.onFacesJS = function () {
 	var face0 = document.getElementById("face0");
 	var face1 = document.getElementById("face1");
 
-	var allJerseys = {{ jerseys | dump | safe }};
-
 	function genFaceFactory(container, sport0, sport1) {
 		var prevType = Math.random() < 0.5 ? sport0 : sport1;
 		return function () {
-			var info = prevType === sport0 ? allJerseys[sport1] : allJerseys[sport0];
 			prevType = prevType === sport0 ? sport1 : sport0;
-			var jersey = info.jerseys[Math.floor(Math.random() * info.jerseys.length)];
-
-			var options;
-			if (info.forceWhiteFraction > 0 && Math.random() < info.forceWhiteFraction) {
-				options = {
-					race: "white"
-				};
-			}
-
-			var overrides = {
-				teamColors: ["#695FAB", "#f05742", "#cccccc"],
-				jersey: { id: jersey },
-			};
-
-			if (!info.allowGlasses) {
-				overrides.glasses = {
-					id: "none",
-				};
-			}
-
-			var face = faces.generate(overrides, options);
-
-			if (info.baseballHat) {
-				var hats = ["hat", "hat2", "hat3"];
-				face.accessories.id = hats[Math.floor(Math.random() * hats.length)];
-			} else {
-				if (face.accessories.id.startsWith("hat")) {
-					face.accessories.id = "none";
-				}
-			}
-
-			if (!info.allowEyeBlack && face.accessories.id === "eye-black") {
-				face.accessories.id = "none";
-			}
-
+			var face = genFace(prevType);
 			faces.display(container, face);
 		}
 	}

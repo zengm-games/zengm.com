@@ -59,14 +59,13 @@
 window.onFacesJS = function () {
   var div = document.getElementById("face");
 
-  function genFace() {
-    var face = faces.generate({"teamColors":["#695FAB","#f05742","#cccccc"]});
+  function genFaceAndDisplay() {
+    var face = genFace("{{ sport }}");
     faces.display(div, face);
   }
 
-  genFace();
-
-  face.addEventListener("click", genFace);
+  genFaceAndDisplay();
+  face.addEventListener("click", genFaceAndDisplay);
 }
 </script>
 </html>
