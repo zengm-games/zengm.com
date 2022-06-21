@@ -187,7 +187,7 @@
             <h3>...and to a championship!</h3>
             <img data-index="4" width="730" height="375" alt="Screenshot">
           </div>
-          {% if sport != "football" %}
+          {% if sport != "baseball" and sport != "football" %}
             <div class="carousel-item">
               <h3>Tanking is allowed.</h3>
               <img data-index="5" width="730" height="375" alt="Screenshot">
@@ -198,7 +198,7 @@
             <img data-index="6" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
-            <h3>Plan ahead to manage the salary cap.</h3>
+            <h3>Plan ahead to manage the {% if sport === "baseball" %}luxury tax{% else %}salary cap{% endif %}.</h3>
             <img data-index="7" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">

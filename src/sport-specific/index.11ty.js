@@ -3,7 +3,13 @@ const eleventyComputed = require("../_data/eleventyComputed");
 const base = require("./base");
 
 const feedbacks = {
-	baseball: [],
+	baseball: [
+		{
+			name: "dumbmatter",
+			text: "This game is brand new, I hope you like it.",
+			url: "https://zengm.com/",
+		},
+	],
 	basketball: [
 		{
 			name: "Stanners, gmgames.org",

@@ -34,10 +34,24 @@ const TOP_BELOW_MORE = 372;
 		15: 607,
 	};
 
+	const baseballAdjustments = {
+		1: 9,
+		2: -649 + extractTops[1] + 9,
+		7: 15,
+		9: 20,
+		11: -20,
+	};
+
 	const filenames = fs.readdirSync(path.join(__dirname, "screenshots-raw"));
 
 	for (const filename of filenames) {
+		const isBaseball = filename.startsWith("baseball-");
+
 		const number = filename.split("-")[2].replace(".png", "");
+
+		if (!filename.startsWith("all-") && !isBaseball) {
+			// continue;
+		}
 
 		let outFilenames;
 		if (filename.startsWith("all-")) {
@@ -59,8 +73,10 @@ const TOP_BELOW_MORE = 372;
 
 			await sharp(inPath)
 				.extract({
-					left: 25,
-					top: extractTops[number],
+					left: isBaseball ? 22 : 25,
+					top:
+						extractTops[number] +
+						(isBaseball ? baseballAdjustments[number] ?? 0 : 0),
 					width: 730,
 					height: 375,
 				})
