@@ -38,15 +38,15 @@ class Changelog {
 .changelog-sports img {
 	vertical-align: -3px;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1050px) {
 	.changelog-sports {
 		position: absolute;
-		left: -70px;
+		left: -46px;
 		top: -1px;
 		margin: 0;
 		margin-top: 1em;
 		text-align: right;
-		width: 65px;
+		width: 41px;
 	}
 }
 </style>

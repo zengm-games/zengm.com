@@ -1,5 +1,20 @@
 [
 	{
+		"version": "2022.06.22.0706",
+		"text": "ZenGM Baseball is here!",
+		"links": [
+			"https://baseball.zengm.com/",
+			"/blog/2022/06/zengm-baseball/",
+			"https://old.reddit.com/r/ZenGMBaseball/comments/vi8eib/new_zengm_baseball_out_now/",
+			"https://old.reddit.com/r/BasketballGM/comments/vi8h30/did_you_notice_the_lack_of_updates_lately_ive/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2022.06.17.1399",
 		"text": "You can now start a real players league at the 2022 draft.",
 		"links": [
