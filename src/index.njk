@@ -47,28 +47,34 @@ ul.main-list li:last-child p {
 	margin-bottom: 0;
 }
 
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .flagship {
 	color: inherit !important;
 	background-color: var(--bg-2);
-	min-height: 98px;
+	min-height: 80px;
 	text-decoration: none !important;
 }
 .flagship:hover {
 	color: inherit;
 	background-color: var(--bg-1);
 }
+.flagship:hover img {
+	animation-play-state: running;
+}
 .flagship img {
-	height: 82px;
-	width: 82px;
+	animation: spin 2s linear infinite;
+	animation-play-state: paused;
+	height: 64px;
+	width: 64px;
 }
 .flagship h2 {
-	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
 	margin-top: 2px;
-}
-.flagship p {
-	margin-bottom: 0;
-	font-size: 16px;
 }
 
 .face {
@@ -128,39 +134,27 @@ ul.main-list li:last-child p {
 			<div class="container container-main">
 				<div class="row">
 					<div class="col-12 col-sm-6">
-						<a class="flagship d-flex border border-secondary rounded p-2" href="/basketball/">
-							<img src="https://play.basketball-gm.com/ico/icon.svg" class="me-2 flex-shrink-0" alt="">
-							<div>
-								<h2>Basketball GM</h2>
-								<p>Our first game, continuously updated since 2008.</p>
-							</div>
+						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/basketball/">
+							<img src="https://play.basketball-gm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
+							<h2>Basketball GM</h2>
 						</a>
 					</div>
 					<div class="col-12 col-sm-6 mt-3 mt-sm-0">
-						<a class="flagship d-flex border border-secondary rounded p-2" href="/football/">
-							<img src="https://play.football-gm.com/ico/icon.svg" class="me-2 flex-shrink-0" alt="">
-							<div>
-								<h2>Football GM</h2>
-								<p>Released in 2019 and kept in sync with Basketball GM.</p>
-							</div>
+						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/football/">
+							<img src="https://play.football-gm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
+							<h2>Football GM</h2>
 						</a>
 					</div>
 					<div class="col-12 col-sm-6 mt-3">
-						<a class="flagship d-flex border border-secondary rounded p-2" href="/baseball/">
-							<img src="https://baseball.zengm.com/ico/icon.svg" class="me-2 flex-shrink-0" alt="">
-							<div>
-								<h2>ZenGM Baseball</h2>
-								<p>Released in 2022 and kept in sync with Basketball GM.</p>
-							</div>
+						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/baseball/">
+							<img src="https://baseball.zengm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
+							<h2>ZenGM Baseball</h2>
 						</a>
 					</div>
 					<div class="col-12 col-sm-6 mt-3">
-						<a class="flagship d-flex border border-secondary rounded p-2" href="/hockey/">
-							<img src="https://hockey.zengm.com/ico/icon.svg" class="me-2 flex-shrink-0" alt="">
-							<div>
-								<h2>ZenGM Hockey</h2>
-								<p>Released in 2021 and kept in sync with Basketball GM.</p>
-							</div>
+						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/hockey/">
+							<img src="https://hockey.zengm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
+							<h2>ZenGM Hockey</h2>
 						</a>
 					</div>
 				</div>

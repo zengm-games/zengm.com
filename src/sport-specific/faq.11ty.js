@@ -90,9 +90,8 @@ module.exports = class FAQ {
 
 <h2><a href="#other-sport" name="other-sport">Can you make another sport like baseball or soccer, or college sports?</a></h2>
 <p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other games.</p>
-<p>Most likely baseball would be the next sport, because pro baseball is pretty similar to pro basketball/football/hockey. Soccer would require a lot more work to really do it right, since pro soccer is pretty different. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
-<p>College sports would also be fun to do.</p>
-<p>Will the next new game be a college version of an existing sport, or a pro baseball game? I'm not sure. Like I said, I'm bad at planning. I also am not sure when any of this will happen. Which doesn't necessarily mean it will be a long time. It only took about 6 weeks from me deciding to make ZenGM Hockey to releasing it. There could be a similar timeline for my next game when I decide to start working on it.</p>
+<p>Now that I've done the 4 major American sports, there's no more low hanging fruit, since other pro sports tend to have different types of leagues. For example, consider soccer. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
+<p>College sports would also be fun to do, and could be my next "big" project, although I'm not exactly sure when. There's also a lot I could do to improve the existing games.</p>
 
 <hr>
 
