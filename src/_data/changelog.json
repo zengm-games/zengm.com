@@ -1,5 +1,19 @@
 [
 	{
+		"version": "2022.06.24.1334",
+		"text": "You can now start a real players league after the 2022 draft.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vk4j90/you_can_now_start_a_real_players_league_after_the/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2022.06.24.1331",
+		"text": "Fixed bug in steals logic - previously fast runners were the least successful at stealing bases.",
+		"links": [],
+		"baseball": true
+	},
+	{
 		"version": "2022.06.22.0706",
 		"text": "ZenGM Baseball is here!",
 		"links": [
