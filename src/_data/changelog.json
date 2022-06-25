@@ -1,5 +1,19 @@
 [
 	{
+		"version": "2022.06.25.1047",
+		"text": "Added semifinals MVP awards.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vkowb3/added_semifinals_mvp_awards_version_202206251047/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2022.06.25.0896",
+		"text": "Fixed some defensive bugs resulting in lower (and more realistic) importance of fielding, particularly for outfielders.",
+		"links": [],
+		"baseball": true
+	},
+	{
 		"version": "2022.06.24.1334",
 		"text": "You can now start a real players league after the 2022 draft.",
 		"links": [
