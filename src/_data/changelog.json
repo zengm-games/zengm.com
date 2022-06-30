@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2022.06.29.1217",
+		"text": "Fixed runs scoring on inning-ending double plays and fielder's choices.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/vnul3l/fixed_runs_scoring_on_inningending_double_plays/"
+		],
+		"baseball": true
+	},
+	{
+		"version": "2022.06.29.1217",
+		"text": "Relatives editor improvements - type to search player names, and any time you add/edit/delete a relation, the other player gets automatically updated too.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vnukwa/relatives_editor_improvements_type_to_search/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.06.27.0041",
 		"text": "On large screens, the sidebar is now collapsible.",
 		"links": [
@@ -48,9 +67,6 @@
 			"https://old.reddit.com/r/BasketballGM/comments/vi8h30/did_you_notice_the_lack_of_updates_lately_ive/"
 		],
 		"baseball": true,
-		"basketball": true,
-		"football": true,
-		"hockey": true,
 		"big": true
 	},
 	{
