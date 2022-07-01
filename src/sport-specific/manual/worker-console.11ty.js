@@ -91,7 +91,7 @@ That's saying if \`SOME_CONDITION\` is true, only then run the code to update th
 - All draft prospects: \`if (p.tid === bbgm.PLAYER.UNDRAFTED) {\`
 - All free agents: \`if (p.tid === bbgm.PLAYER.FREE_AGENT) {\`
 - All players on one specific team: \`if (p.tid === 5) {\` (5 is the team ID number)
-- All players at one position: \`if (ratings.pos === "${bySport(
+- All players at one position: \`if (p.ratings.at(-1).pos === "${bySport(
 			{
 				baseball: "LF",
 				basketball: "PG",
@@ -102,7 +102,7 @@ That's saying if \`SOME_CONDITION\` is true, only then run the code to update th
 		)}") {\`
 - Only a specific subset of player ID numbers: \`if ([158, 207, 14].includes(p.pid)) {\`
 
-You can combine these conditions too, like this is all draft prospects at one position: \`if (p.tid === bbgm.PLAYER.UNDRAFTED && ratings.pos === "${bySport(
+You can combine these conditions too, like this is all draft prospects at one position: \`if (p.tid === bbgm.PLAYER.UNDRAFTED && p.ratings.at(-1).pos === "${bySport(
 			{
 				baseball: "LF",
 				basketball: "PG",
