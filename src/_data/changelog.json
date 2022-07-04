@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.07.04.1001",
+		"text": "Fixed a performance bug that was in some cases causing the game to run significantly slower than normal.",
+		"links": [
+			"/blog/2022/07/investigating-a-tricky-performance-bug/",
+			"https://old.reddit.com/r/BasketballGM/comments/vrgrot/version_202207040989_fixed_a_performance_bug_that/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.06.29.1217",
 		"text": "Fixed runs scoring on inning-ending double plays and fielder's choices.",
 		"links": [
