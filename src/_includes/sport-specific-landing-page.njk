@@ -254,7 +254,7 @@
       <h2>You Set The Strategy</h2>
       <p>Running a {{ sport }} team requires you to make tough decisions.</p>
       <ul>
-        <li>Should you re-sign a veteran player, or leave cap space open to sign a free agent?</li>
+        <li>Should you re-sign a veteran player, or {% if sport === "baseball" %}save the money for a free agent{% else %}leave cap space open to sign a free agent{% endif %}?</li>
         <li>Should you draft a raw player who could be a star, or someone who can contribute right away?</li>
         <li>Should you trade away next season's draft pick for a player who can help you win now, or stockpile assets for the future?</li>
         <li>Should you raise ticket prices and annoy your fans, or can you cut part of your budget instead?</li>
