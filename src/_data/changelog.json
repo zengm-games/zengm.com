@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.07.05.1384",
+		"text": "A couple new frivolities made by @maxkarnold - Oldest and Youngest Championship Teams.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vsfstf/a_couple_new_frivolities_in_version_202207051384/",
+			"https://github.com/zengm-games/zengm/pull/425"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.04.1001",
 		"text": "Fixed a performance bug that was in some cases causing the game to run significantly slower than normal.",
 		"links": [
