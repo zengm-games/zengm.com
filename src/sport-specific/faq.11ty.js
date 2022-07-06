@@ -9,7 +9,7 @@ module.exports = class FAQ {
 		};
 	}
 
-	render({ gameName, sport, websitePlay }) {
+	render({ gameAcronym, gameName, sport, websitePlay }) {
 		const androidAppURL = bySport(
 			{
 				baseball:
@@ -27,8 +27,12 @@ module.exports = class FAQ {
 		return `<h2><a href="#missing-leagues" name="missing-leagues">My leagues are gone! What happened?</a></h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
 <p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
-<p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers. To minimize the chance of this happening, go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</p>
+<p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers, especially on iPhones. To minimize the chance of this happening, go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</p>
 <p>In cases where the data has been deleted from your browser profile, the only way to get it back is if you have a backup. Sorry :(</p>
+<p class="text-highlight">Followup: Why is this a problem for ${gameName} but not for most other games?</b></p>
+<p>Most other games don't have this problem of browsers deleting data because most games don't store their data inside the browser itself. So why does ${gameName} different? There are tradeoffs.</p>
+<p>The current method has some big advantages. Since the data is stored on your computer rather than on my server, my server costs are extremely low, which is what allows me to make this game free and unlimited. But still, you may think of other purely local apps that don't have this data loss problem. ${gameName} is different because it runs in a web browser. A normal game you install from Steam or a mobile app store stores controls how it stores data on your hard drive, but ${gameAcronym} does not really control its own data, the web browser does. So why not make ${gameAcronym} a "normal game"? Two reasons. First, it's really nice to just be able to type a URL into your browser and start playing immediately, without installing anything. That even lets you play on devices where you are not allowed to install apps. And second, it's really nice that a web game runs on any device. As a solo developer, it'd be a lot of work to make separate UIs of the game for iOS, Android, Windows, Mac, Linux, etc.</p>
+<p>So basically - it's all tradeoffs. I hope in the future web browsers have ways to more robustly store local data, to better support apps like ${gameName}. The "Persistent Storage" option mentioned above is supposed to be that, but it doesn't always work.</p>
 
 <hr>
 
@@ -88,7 +92,7 @@ module.exports = class FAQ {
 
 <hr>
 
-<h2><a href="#other-sport" name="other-sport">Can you make another sport like baseball or soccer, or college sports?</a></h2>
+<h2><a href="#other-sport" name="other-sport">Can you make another sport like soccer, or college sports?</a></h2>
 <p>I am very bad at planning, so I'm not going to commit to any timeline. But I would like to do other games.</p>
 <p>Now that I've done the 4 major American sports, there's no more low hanging fruit, since other pro sports tend to have different types of leagues. For example, consider soccer. There's multiple competing leagues, cross-league tournaments, buying/selling players, relegation... a soccer management game would be a little unsatisfying without all those features.</p>
 <p>College sports would also be fun to do, and could be my next "big" project, although I'm not exactly sure when. There's also a lot I could do to improve the existing games.</p>
