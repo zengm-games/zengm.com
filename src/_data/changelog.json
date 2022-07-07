@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.07.07.0819",
+		"text": "Added new draft type options: MLB 2022 (new default for baseball), NHL 2021 (new default for hockey), and Custom, which lets you determine how many picks are selected in the lottery and what odds each team has.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vtoboy/added_new_draft_lottery_options_mlb_2022_new/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.05.1384",
 		"text": "A couple new frivolities made by @maxkarnold - Oldest and Youngest Championship Teams.",
 		"links": [
