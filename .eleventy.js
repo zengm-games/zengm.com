@@ -40,6 +40,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/basketball/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/football/.htaccess");
 	eleventyConfig.addPassthroughCopy("src/files");
+	eleventyConfig.addPassthroughCopy(
+		"src/universal-draft-lottery-simulator/assets",
+	);
 	eleventyConfig.addPassthroughCopy("src/css/*.css");
 	eleventyConfig.addPassthroughCopy("src/js/*.js");
 
