@@ -1,3 +1,5 @@
+// v3.7.4
+
 var faces = (function (exports) {
 	"use strict";
 
@@ -1361,7 +1363,7 @@ var faces = (function (exports) {
 				id: Math.random() < 0.1 ? getID("glasses") : "none",
 			},
 			accessories: {
-				id: Math.random() < 1 ? getID("accessories") : "none", // id: Math.random() < 0.2 ? getID('accessories') : 'none',
+				id: Math.random() < 0.2 ? getID("accessories") : "none",
 			},
 		};
 		override(face, overrides);
