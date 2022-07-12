@@ -1,5 +1,29 @@
 [
 	{
+		"version": "2022.07.11.1241",
+		"text": "There is now an All-Star Game in all sports, not just basketball!",
+		"links": [
+			"/blog/2022/07/all-star-game-all-sports/",
+			"https://old.reddit.com/r/BasketballGM/comments/vwxygu/new_allstar_settings_including_the_ability_to/",
+			"https://old.reddit.com/r/Football_GM/comments/vwxznr/fbgm_finally_has_an_allstar_game_in_new_leagues/",
+			"https://old.reddit.com/r/ZenGMBaseball/comments/vwy0kr/version_202207111241_adds_an_allstar_game/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/vwy0ri/version_202207111241_adds_an_allstar_game/"
+		],
+		"baseball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
+		"version": "2022.07.11.1241",
+		"text": "New All-Star settings, including the ability to pick the teams by conference, which is now the default in pre-2017 historical leagues.",
+		"links": [
+			"/blog/2022/07/all-star-game-all-sports/",
+			"https://old.reddit.com/r/BasketballGM/comments/vwxygu/new_allstar_settings_including_the_ability_to/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.07.07.0819",
 		"text": "Added new draft type options: MLB 2022 (new default for baseball), NHL 2021 (new default for hockey), and Custom, which lets you determine how many picks are selected in the lottery and what odds each team has.",
 		"links": [
