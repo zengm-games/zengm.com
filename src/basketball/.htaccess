@@ -14,7 +14,7 @@ Redirect 301 /blog http://zengm.com/blog
 Redirect 301 /changelog https://zengm.com/changelog
 Redirect 301 /contact https://zengm.com/contact
 Redirect 301 /logos https://zengm.com/logos
-Redirect 301 /manual/faq/ /faq/
+Redirect 301 /manual/faq /faq
 Redirect 301 /feed/index.xml https://zengm.com/blog/feed.xml
 Redirect 301 /presskit http://zengm.com
 Redirect 301 /privacy-policy http://zengm.com/privacy

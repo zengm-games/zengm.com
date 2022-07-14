@@ -12,7 +12,7 @@ Redirect 301 /about http://zengm.com/about
 Redirect 301 /advertise http://zengm.com/contact
 Redirect 301 /blog http://zengm.com/blog
 Redirect 301 /contact https://zengm.com/contact
-Redirect 301 /manual/faq/ /faq/
+Redirect 301 /manual/faq /faq
 Redirect 301 /feed/index.xml https://zengm.com/blog/feed.xml
 Redirect 301 /privacy-policy http://zengm.com/privacy
 Redirect 301 /share http://zengm.com

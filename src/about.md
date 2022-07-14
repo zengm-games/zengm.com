@@ -53,8 +53,16 @@ At this point, I think my games have a pretty clear niche:
 
 What's next? Who knows. Since I'm my own boss now, in theory I should know what's next, but I'm really bad at planning. I can only promise that ZenGM will continue to grow and improve!
 
-(This feels kind of out of place, but I don't know where else to put it... <a href="/logos/">click here to view or download all the default team logos</a>.)
+---
 
-<hr>
+Links to some pages hosted on zengm.com that I'm not sure where else to put:
+
+- [View or download all the default team logos](/logos/)
+
+- [Universal Draft Lottery Simulator](/universal-draft-lottery-simulator/) - see [this blog post](https://zengm.com/blog/2022/07/universal-draft-lottery-simulator/) for details
+
+- [faces.js main page](/facesjs/) and [editor](/facesjs/editor/)
+
+---
 
 **Disclaimer:** Basketball GM is not sponsored by or endorsed by the National Basketball Association, the National Basketball Players Association, any individual NBA players, or any of their affiliates. All league trademarks are property of their respective owners and are used under the doctrine of trademark nominative fair use.
