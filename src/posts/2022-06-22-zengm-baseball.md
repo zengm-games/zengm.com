@@ -8,7 +8,7 @@ tags:
   - Milestone
 ---
 
-When I was a kid, I was obsessed with baseball. My dad says this dates back to watching the Mets win the 1986 World Series when I was a baby, but I don't remember that. I do remember my favorite childhood book. This was back before normal people had the Internet, and sites like baseball-reference didn't exist yet. But I had this giant book of baseball stats going back to the beginning of professional baseball. Just page after page of tables - standings, stats, playoff results, awards, etc. I would just sit there reading those tables of stats without ever getting bored.
+When I was a kid, I was obsessed with baseball. My dad says this dates back to watching the Mets win the 1986 World Series when I was a baby, but I don't remember that. I do remember my favorite childhood book. This was back before normal people had the Internet, and sites like baseball-reference didn't exist yet. But I had this giant book of baseball stats going back to the beginning of professional baseball. Just page after page of tables - standings, stats, playoff results, awards, etc. I would sit there reading those tables of stats without ever getting bored.
 
 Naturally, I got into baseball simulation games too. Except, they didn't exist yet. Well, they did exist even before computers as [tabletop games](https://en.wikipedia.org/wiki/Strat-O-Matic), but I didn't know about them. The first real baseball simulation game that I heard of was Baseball Mogul back in the late 90s. It's [still being updated today](https://www.sportsmogul.com/), you should check it out. I've talked about Baseball Mogul before as a big inspiration for Basketball GM, since as a got older I grew to like basketball more than baseball and I wanted a similar game for basketball.
 

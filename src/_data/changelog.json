@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.07.13.1415",
+		"text": "Added some summary info for each draft class to the top of the Draft History page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/vym3x3/added_some_summary_info_for_each_draft_class_to/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.11.1241",
 		"text": "There is now an All-Star Game in all sports, not just basketball!",
 		"links": [
