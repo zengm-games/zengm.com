@@ -148,6 +148,25 @@ ${
 <p>At some point I'd like to create a better historical contract database, maybe by crowdsourcing and letting you guys help me do it :)</p>
 `
 		: ""
+}
+
+${
+	sport === "baseball"
+		? `
+<hr>
+
+<h2><a href="#war" name="war">How is WAR calculated?</a></h2>
+<p>In general, WAR is more of a concept than a specific formula. Fangraphs and Baseball Reference both have their own formulas for WAR which are not exactly the same. And neither one of them fully publish the details of their formulas, which are quite complicated. Because of that, I use a less well-known but simpler method of calculating WAR that is fully specified in <a href="https://scholarship.shu.edu/locus/vol3/iss1/7/">this paper</a>, which includes formulas for all the WAR components you see in the advanced stats table:</p>
+<ul>
+<li>Rbat: batting runs</li>
+<li>Rbr: baserunning runs</li>
+<li>Rfld: fielding runs</li>
+<li>Rpos: positional adjustment runs</li>
+<li>Rpit: pitching runs saved</li>
+</ul>
+<p>Add those up and you get RAA (runs above average). Scale that based on how many runs are scored per game and you get WAA (wins above average). To compare against replacement level rather than average, also add in Rrep (runs from replacement level) and then you have RAR (runs above replacement). Scaling that by runs scored gives WAR (wins above replacement).</p>
+`
+		: ""
 }`;
 	}
 };
