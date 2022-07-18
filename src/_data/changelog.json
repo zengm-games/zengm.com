@@ -1,5 +1,35 @@
 [
 	{
+		"version": "2022.07.17.1369",
+		"text": "Added options for sorting retired jersey numbers on the Team history page, and sorting countries/names/colleges in the player bio info editor in League Settings.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.07.17.1369",
+		"text": "Added a \"Trade away pick\" button for each of your picks on the draft page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.07.17.1369",
+		"text": "Fixed bug where stats were not correctly rolled back after offsetting penalties result in a replayed down.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/w1olud/bug_fix_in_version_202207171369_stats_were_not/?"
+		],
+		"football": true
+	},
+	{
 		"version": "2022.07.13.1415",
 		"text": "Added some summary info for each draft class to the top of the Draft History page.",
 		"links": [
