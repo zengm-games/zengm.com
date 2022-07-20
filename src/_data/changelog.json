@@ -1,9 +1,20 @@
 [
 	{
+		"version": "2022.07.19.0879",
+		"text": "On player profile pages for players who change teams mid season, combined season stats are shown as TOT along with the stats for each team.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w301nx/version_202207190879_on_player_profile_pages_for/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.17.1369",
 		"text": "Added options for sorting retired jersey numbers on the Team history page, and sorting countries/names/colleges in the player bio info editor in League Settings.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/?"
+			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/"
 		],
 		"baseball": true,
 		"basketball": true,
@@ -14,7 +25,7 @@
 		"version": "2022.07.17.1369",
 		"text": "Added a \"Trade away pick\" button for each of your picks on the draft page.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/?"
+			"https://old.reddit.com/r/BasketballGM/comments/w1olo8/a_few_little_updates_in_version_202207171369/"
 		],
 		"baseball": true,
 		"basketball": true,
@@ -25,7 +36,7 @@
 		"version": "2022.07.17.1369",
 		"text": "Fixed bug where stats were not correctly rolled back after offsetting penalties result in a replayed down.",
 		"links": [
-			"https://old.reddit.com/r/Football_GM/comments/w1olud/bug_fix_in_version_202207171369_stats_were_not/?"
+			"https://old.reddit.com/r/Football_GM/comments/w1olud/bug_fix_in_version_202207171369_stats_were_not/"
 		],
 		"football": true
 	},
