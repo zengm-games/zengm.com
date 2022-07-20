@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2022.07.20.0103",
+		"text": "Significantly improved performance for advancing from the regular season to playoffs in large leagues with many more teams than default.",
+		"links": [],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.19.0879",
 		"text": "On player profile pages for players who change teams mid season, combined season stats are shown as TOT along with the stats for each team.",
 		"links": [
