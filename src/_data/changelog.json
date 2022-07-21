@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.07.20.1021",
+		"text": "Added buttons to show/hide sections of the player profile page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w3xfx8/added_buttons_to_showhide_sections_of_the_player/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.20.0103",
 		"text": "Significantly improved performance for advancing from the regular season to playoffs in large leagues with many more teams than default.",
 		"links": [],
