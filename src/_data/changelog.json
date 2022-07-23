@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.07.22.0731",
+		"text": "An early version of the 2023 rosters is available when creating a new real players league.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w5eh62/an_early_version_of_the_2023_rosters_is_available/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.07.20.1021",
 		"text": "Added buttons to show/hide sections of the player profile page.",
 		"links": [
