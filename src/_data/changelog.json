@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2022.07.25.1219",
+		"text": "Added buttons to the Manage Teams page to let you quickly relocate or rebrand a team to any of the built-in cities.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w84uxj/version_202207251219_added_buttons_to_the_manage/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.07.25.1219",
+		"text": "More compact scrollbars on laptops/desktops.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/w84uxj/version_202207251219_added_buttons_to_the_manage/ihng63b/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.07.22.0731",
 		"text": "An early version of the 2023 rosters is available when creating a new real players league.",
 		"links": [
