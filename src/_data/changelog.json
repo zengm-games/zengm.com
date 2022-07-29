@@ -1,5 +1,35 @@
 [
 	{
+		"version": "2022.07.28.0926",
+		"text": "Added a confirmation dialog when you propose a trade where you receive nothing, because those are often mistakes.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/waiv3i/version_202207280926_added_a_confirmation_dialog/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.07.28.0926",
+		"text": "Improved performance for very large leagues (100+ teams) by falling back to simpler/worse algorithms for determining some things such as contract and schedule generation.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/waiv3i/version_202207280926_added_a_confirmation_dialog/ii13kzv/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.07.28.0926",
+		"text": "Relief pitchers with low endurance who start games pitch fewer innings. And in the playoffs, pitchers need a little less rest, so it's more likely your best pitchers will play.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/waj0ox/version_202207280926_relief_pitchers_with_low/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2022.07.25.1219",
 		"text": "Added buttons to the Manage Teams page to let you quickly relocate or rebrand a team to any of the built-in cities.",
 		"links": [
