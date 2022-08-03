@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.08.02.1357",
+		"text": "Increased the odds of calling a running play near the goalline, leading to more rushing TDs and fewer passing TDs.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/weurbr/version_202208021357_increased_the_odds_of/"
+		],
+		"football": true
+	},
+	{
 		"version": "2022.07.28.0926",
 		"text": "Added a confirmation dialog when you propose a trade where you receive nothing, because those are often mistakes.",
 		"links": [
