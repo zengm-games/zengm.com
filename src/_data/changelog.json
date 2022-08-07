@@ -1,5 +1,36 @@
 [
 	{
+		"version": "2022.08.07.0604",
+		"text": "If you have a few minutes, please fill out this survey to let me know how you play and what you'd like to see improved in the future.",
+		"links": ["https://forms.gle/EHRv8nbM9MPa5yyV8"],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.08.07.0604",
+		"text": "New option on the Global Settings page to disable automatic redirects, like how it automatically redirects to the playoffs page at the end of the regular season.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/wigjnw/version_202208070604_new_option_on_the_global/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.08.07.0604",
+		"text": "Added a list of top rookies to the season preview.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/wigjnw/version_202208070604_new_option_on_the_global/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.08.02.1357",
 		"text": "Increased the odds of calling a running play near the goalline, leading to more rushing TDs and fewer passing TDs.",
 		"links": [
