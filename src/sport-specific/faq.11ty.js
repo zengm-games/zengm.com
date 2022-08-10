@@ -25,9 +25,14 @@ module.exports = class FAQ {
 		);
 
 		return `<h2><a href="#missing-leagues" name="missing-leagues">My leagues are gone! What happened?</a></h2>
-<p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>.</p>
+<p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>. This is true even if you're logged into an account - league data is currently stored only locally, not in your account.</p>
 <p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
-<p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers, especially on iPhones. To minimize the chance of this happening, go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</p>
+<p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers, especially on iPhones. To minimize the chance of this happening, you can:</p>
+<ul>
+	<li>Go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</li>
+	<li>If you're on Android, install the <a href="${androidAppURL}">${gameAcronym} app</a>. If you're on iOS, <a href="#a2hs">add it to your home screen</a>.</li>
+	<li>Make a backup of a league at Tools > Export League</li>
+</ul>
 <p>In cases where the data has been deleted from your browser profile, the only way to get it back is if you have a backup. Sorry :(</p>
 <p class="text-highlight">Followup: Why is this a problem for ${gameName} but not for most other games?</b></p>
 <p>Most other games don't have this problem of browsers deleting data because most games don't store their data inside the browser itself. So why does ${gameName} different? There are tradeoffs.</p>
@@ -60,6 +65,7 @@ module.exports = class FAQ {
 <p>I could imagine two separate followup questions:</p>
 <p class="text-highlight">Followup 1: Can you release an app for iOS (iPhone or iPad) similar to the Android app?</b></p>
 <p>Maybe some day, but Apple makes it a lot harder to do than Google, so I'm not exactly eager to do it. Also, like I said above, it wouldn't actually make the game any better than just using your mobile browser.</p>
+<a name="a2hs"></a>
 <p>But what if you just want it to look and feel a little more app-like? You can do that on iOS today, by following these steps:</p>
 <ol>
   <li><p>Open <a href="${websitePlay}">${websitePlay}</a> in Safari.</p></li>

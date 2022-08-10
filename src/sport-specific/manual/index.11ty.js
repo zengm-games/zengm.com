@@ -13,7 +13,7 @@ module.exports = class {
 		};
 	}
 
-	render({ gameName, proLeagueAbbrev, sport, websitePlay }) {
+	render({ gameAcronym, gameName, proLeagueAbbrev, sport, websitePlay }) {
 		const skills = bySport(
 			{
 				baseball: {
@@ -193,7 +193,8 @@ ${bySport(
 				? " (<i>e.g.</i> a good rebounder doesn't help your team as much if you already have a few other good rebounders)"
 				: ""
 		}.</p>
-<p>The potential ("pot") rating is also important. This is an estimate of the player's future overall rating. Just like in real life, most players never reach their potential, but some do reach it and some even exceed it. (Potential is calculated by simulating career arcs for a player and picking the 75th percentile ovr, so on average a player should exceed his pot 25% of the time.)</p>
+<a name="pot"></a>
+<p>Each player also has a potential ("pot") rating. In ${gameAcronym} potential doesn't actually do anything to influence player development, it's just an estimate from your scouts about how good a player's overall rating might become. Player development/progs are based on the player's current ratings, age, and your coaching rank. Potential is calculated by simulating career arcs for a player and picking the 75th percentile ovr, so on average a player should exceed his pot 25% of the time. Just like in real life, most players never reach their potential, but some do reach it and some even exceed it.</p>
 <p>Also, you might notice that the height ("hgt") rating is not always proportional to the height in feet/inches of a player, because the hgt rating also includes wingspan and standing reach - basically how much a player's height/length impacts the game. The hgt rating is what's used in the simulations. The heights in feet/inches are just for show.</p>
 <p>The displayed ratings are not the real ratings. They are estimates from your scouts. Increase the scouting budget to see more accurate ratings. This is a gradual effect over 3 seasons; you don't instantly see more accurate ratings by increasing spending.</p>
 <p>Finally, little symbols you see next to a player's name like <span class="skills-alone">${Object.entries(
