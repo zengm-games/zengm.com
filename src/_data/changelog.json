@@ -1,5 +1,29 @@
 [
 	{
+		"version": "2022.08.18.1191",
+		"text": "New team: the Oakland Blue Oaks",
+		"links": [
+			"/blog/2022/08/oakland-blue-oaks/",
+			"https://old.reddit.com/r/BasketballGM/comments/wryqs2/bug_fix_for_trading_picks_during_the_draft_and/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.08.18.1191",
+		"text": "Fixed bug related to the trade value of draft picks during the draft.",
+		"links": [
+			"/blog/2022/08/bug-fix-trading-picks-during-draft/",
+			"https://old.reddit.com/r/BasketballGM/comments/wryqs2/bug_fix_for_trading_picks_during_the_draft_and/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.08.07.0604",
 		"text": "New option on the Global Settings page to disable automatic redirects, like how it automatically redirects to the playoffs page at the end of the regular season.",
 		"links": [
