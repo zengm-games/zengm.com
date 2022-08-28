@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.08.27.0648",
+		"text": "Play exhibition games between any two teams from any seasons in any of your leagues, including historical real teams in BBGM.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/wz4q06/version_202208270648_play_exhibition_games/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2022.08.20.0014",
 		"text": "Fast receivers are more likely to catch long passes, and speed is more important for receivers.",
 		"links": [
