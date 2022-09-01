@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.08.31.1112",
+		"text": "More star icons! Added a star icon to trade summary graphs for seasons when a team won a championship, along with a tooltip containing season info. Also added All-Star/MVP/champ icons to the player stats, ratings, bios, and injuries tables.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/x2qs4o/version_202208311112_more_star_icons_added_a_star/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.08.27.0648",
 		"text": "Play exhibition games between any two teams from any seasons in any of your leagues, including historical real teams in BBGM.",
 		"links": [
