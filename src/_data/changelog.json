@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2022.09.07.0706",
+		"text": "Create leagues from a mix of teams - random teams, real current/historical teams (BBGM only), and teams from your existing leagues.",
+		"links": [
+			"/blog/2022/09/create-leagues-mix/",
+			"https://old.reddit.com/r/BasketballGM/comments/x88k5z/create_leagues_from_a_mix_of_teams_random_teams/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2022.08.31.1112",
 		"text": "More star icons! Added a star icon to trade summary graphs for seasons when a team won a championship, along with a tooltip containing season info. Also added All-Star/MVP/champ icons to the player stats, ratings, bios, and injuries tables.",
 		"links": [

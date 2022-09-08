@@ -8,6 +8,7 @@ tags:
   - Customization
   - New Feature
   - Player Development
+  - Random Debuts
   - Real Player Development Determinism
   - Real Players
 ---
