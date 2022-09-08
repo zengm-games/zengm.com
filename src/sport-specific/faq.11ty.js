@@ -61,8 +61,7 @@ module.exports = class FAQ {
 <hr>
 
 <h2><a href="#app" name="app">Can you make ${gameName} into an app for my phone?</a></h2>
-<p>${gameName} is now available for Android <a href="${androidAppURL}">in the Google Play Store</a>. But it's no different than playing the game in your mobile browser.</p>
-<p>I could imagine two separate followup questions:</p>
+<p>${gameName} is now available for Android <a href="${androidAppURL}">in the Google Play Store</a>. But it's no different than playing the game in your mobile browser, which works fine on iOS too.</p>
 <p class="text-highlight">Followup 1: Can you release an app for iOS (iPhone or iPad) similar to the Android app?</b></p>
 <p>Maybe some day, but Apple makes it a lot harder to do than Google, so I'm not exactly eager to do it. Also, like I said above, it wouldn't actually make the game any better than just using your mobile browser.</p>
 <a name="a2hs"></a>
@@ -75,13 +74,9 @@ module.exports = class FAQ {
 </ol>
 <p>(You can also do a similar thing on Android, by going to your browser's menu and tapping "Add to homescreen"... or you could just <a href="${androidAppURL}">install the Android app</a>!)
 <p class="text-highlight">Followup 2: Can you make a better mobile app? Like a native app designed specifically for small screens?</b></p>
-<p>Not in the near future, for several reasons:</p>
-<ol>
-  <li><p>${gameName} already runs on your phone. Just use your browser. I know the interface is not perfect, but it does work.</p></li>
-  <li><p>I'm just one guy working on this project. I think it'd be a bad idea for me to split my already limited resources over multiple separate codebases. Instead, I'm focused on making the web version of ${gameName} as good as possible.</p></li>
-  <li><p>It is possible to improve the mobile experience of ${gameName} without making an app. The mobile web version can be improved, and it will be improved. But given the above point, it'll take some time. Bear with me :)</p></li>
-  <li><p>Finally, I'm not convinced that a tiny cell phone screen is a good place to play a sports management sim. This is a data-heavy game, and I think it's simply better on a laptop or desktop screen. So even if I made a super polished mobile app, I don't know if it would be as good as the current web version is on a computer.</p></li>
-</ol>
+<p>${gameName} already runs on your phone, in your mobile web browser. I know the UI is not perfect, but I am working on it and it has improved over the years. This is going to continue.</p>
+<p>Making a separate native app with a very different UI than the current web app - that is not going to happen any time soon. I'm just one guy working on this project, and it'd be too much work to maintain multiple different UIs for the game at the same time. That's the beauty of the web version, it runs on any device.</p>
+<p>If you notice something specific about the mobile UI that you think should be improved, <a href="/contact/">please let me know</a>!</p>
 
 <hr>
 
