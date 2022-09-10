@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.09.09.1380",
+		"text": "New team: the Albuquerque Thunderbirds.",
+		"links": [
+			"/blog/2022/09/albuquerque-thunderbirds/",
+			"https://old.reddit.com/r/BasketballGM/comments/xaec56/new_team_the_albuquerque_thunderbirds/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.09.07.0706",
 		"text": "Create leagues from a mix of teams - random teams, real current/historical teams (BBGM only), and teams from your existing leagues.",
 		"links": [
