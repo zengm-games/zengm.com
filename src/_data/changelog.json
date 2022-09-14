@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2022.09.13.1380",
+		"text": "More new teams: the Anchorage Glaciers and the Quebec Voyageurs.",
+		"links": [
+			"/blog/2022/09/anchorage-and-quebec/",
+			"https://old.reddit.com/r/BasketballGM/comments/xdqouh/new_teams_in_anchorage_and_quebec/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.09.09.1380",
 		"text": "New team: the Albuquerque Thunderbirds.",
 		"links": [
