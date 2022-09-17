@@ -1,10 +1,33 @@
 [
 	{
+		"version": "2022.09.16.1438",
+		"text": "When randomizing teams in a new league, you can choose to only use teams in North America.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/xgbzzc/little_update_after_adding_the_new_international/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2022.09.16.1159",
+		"text": "Sorry for all the new team updates lately, but here are 10 more!",
+		"links": [
+			"/blog/2022/09/zengm-goes-international/",
+			"https://old.reddit.com/r/BasketballGM/comments/xg6an6/sorry_for_all_the_new_team_updates_lately_but/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.09.13.1380",
 		"text": "More new teams: the Anchorage Glaciers and the Quebec Voyageurs.",
 		"links": [
 			"/blog/2022/09/anchorage-and-quebec/",
-			"https://old.reddit.com/r/BasketballGM/comments/xdqouh/new_teams_in_anchorage_and_quebec/?"
+			"https://old.reddit.com/r/BasketballGM/comments/xdqouh/new_teams_in_anchorage_and_quebec/"
 		],
 		"baseball": true,
 		"basketball": true,
