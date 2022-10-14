@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2022.10.14.0869",
+		"text": "Added a button to export retired players as a draft class (useful for people simming college leagues) and you can now retire/unretire a player's jersey number by simply clicking the jersey icon on their player page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/y41j23/version_202210140869_added_a_button_to_export/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.09.16.1438",
 		"text": "When randomizing teams in a new league, you can choose to only use teams in North America.",
 		"links": [
