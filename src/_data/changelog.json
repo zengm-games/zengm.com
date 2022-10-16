@@ -1,5 +1,11 @@
 [
 	{
+		"version": "2022.10.16.1045",
+		"text": "Updated the default salary cap in random players leagues to $125M, to make it feel more realistic. Other things like max contract are scaled by the same amount, so gameplay is not changed, the numbers are just higher. This only affects new random players leagues.",
+		"links": [],
+		"basketball": true
+	},
+	{
 		"version": "2022.10.14.0869",
 		"text": "Added a button to export retired players as a draft class (useful for people simming college leagues) and you can now retire/unretire a player's jersey number by simply clicking the jersey icon on their player page.",
 		"links": [
