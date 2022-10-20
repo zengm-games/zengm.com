@@ -147,6 +147,14 @@ ${
 <li><p>The contract data I have just has what players are paid each season, not start/end dates of contracts. So I wrote some code to try to guess the start/end dates based on contract length and when there are big jumps in contract value, but it cannot accurately detect when players re-sign to similar contracts. Which happens a lot, especially for max contract players.</p></li>
 </ol>
 <p>At some point I'd like to create a better historical contract database, maybe by crowdsourcing and letting you guys help me do it :)</p>
+
+<hr>
+
+<h2><a href="#real-ratings-weird" name="real-ratings-weird">In real player leagues, why is Player X rated higher than Player Y, when I know that Player Y is much better in real life?</a></h2>
+<p>Sometimes the answer is that the ratings just suck and need to be adjusted. But usually, that's not the answer, or at least not the main answer.</p>
+<p>The main answer is that, sadly, the basketball simulation algorithm in BBGM is not identical to real basketball. Certain types of players may be overvalued or undervalued in BBGM. Or certain stats might be easier or harder to accumulate in BBGM. Ultimately I do want to fix these issues and make BBGM more realistic, but it'll never be perfect.</p>
+<p>When this situation happens and it's hard to set good ratings for a player, there are two options. You can set the ratings such that player performance (stats) matches reality as best possible. Or you can set the ratings such that the ratings seem to make sense if you look at them without stats, for example making the list of top players sorted by "ovr" be similar to how people rank players in real life.</p>
+<p>In an unfortunate situation like that, where you are forced to make a player either have unrealistic stats or have unrealistic ratings, I think it's better to have unrealistic ratings. I understand some people disagree with that, and if you do, you are free to make your own ratings! Just don't be surprised if players start putting up weird stats :)</p>
 `
 		: ""
 }
