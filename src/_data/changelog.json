@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.11.01.1325",
+		"text": "Fixed advanced stats and league leaders in leagues with long Elam Endings, and fixed a bug where revenue was too low after the recent salary cap increase.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/yjsimu/a_couple_bug_fixes_in_version_202211011325_fixed/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.10.16.1045",
 		"text": "Updated the default salary cap in random players leagues to $125M, to make it feel more realistic. Other things like max contract are scaled by the same amount, so gameplay is not changed, the numbers are just higher. This only affects new random players leagues.",
 		"links": [],
