@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2022.11.09.1073",
+		"text": "Added settings to control game simulation, allowing you to simulate leagues with different styles of play.",
+		"links": [
+			"/blog/2022/11/game-sim-settings/",
+			"https://old.reddit.com/r/Football_GM/comments/yqya2p/version_202211091073_added_settings_to_control/",
+			"https://old.reddit.com/r/ZenGMBaseball/comments/yqya1r/version_202211091073_added_settings_to_control/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/yqya4j/version_202211091073_added_settings_to_control/"
+		],
+		"baseball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.11.01.1325",
 		"text": "Fixed advanced stats and league leaders in leagues with long Elam Endings, and fixed a bug where revenue was too low after the recent salary cap increase.",
 		"links": [
