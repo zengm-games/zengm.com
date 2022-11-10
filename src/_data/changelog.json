@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.11.10.0777",
+		"text": "League assist rate is now customizable in the Game Simulation section of League Settings.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/yrmrkv/version_202211100777_league_assist_rate_is_now/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.11.09.1073",
 		"text": "Added settings to control game simulation, allowing you to simulate leagues with different styles of play.",
 		"links": [
