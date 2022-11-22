@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2022.11.21.1313",
+		"text": "Added two new advanced stats: +/- per 100 possessions, and on-off +/- per 100 possessions.",
+		"links": [
+			"/blog/2022/11/better-plus-minus-stats/",
+			"https://old.reddit.com/r/BasketballGM/comments/z1ifvj/version_202211211313_added_two_new_advanced_stats/",
+			"https://github.com/zengm-games/zengm/pull/433"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.11.10.0777",
 		"text": "League assist rate is now customizable in the Game Simulation section of League Settings.",
 		"links": [
