@@ -24,7 +24,7 @@ This is what it looks like in the advanced stats table on player profiles:
 
 <figure><img src="/files/better-plus-minus-stats.png" class="img-fluid"></figure>
 
-In that example, the player's On-Off is higher than his base +/-, meaning that his teams performed better when he was on the floor than on the bench. But it's a fairly noisy stat - you can see how much it varies year to year, and some years in his prime his team was actually better with him on the bench. Most likely that is just noise. This is not a perfect stat!
+For example, look at the 2nd year in that table. +8.6 On-Off is really good, despite a -2.9 +/-. That is what you see when there is a good player on a bad team - the team is losing even when their good player plays, but they lose by even more when he sits. It's not until the last two years of his career when his On-Off becomes negative, meaning that the team performed worse with him on the court than on the bench.
 
 More stuff:
 
