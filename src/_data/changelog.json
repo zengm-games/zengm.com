@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.12.07.1123",
+		"text": "Added a new setting to replace the normal overtime period with an Elam Ending period, similar to what the G League does.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/zfi8jt/version_202212071123_added_a_new_setting_to/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2022.11.21.1313",
 		"text": "Added two new advanced stats: +/- per 100 possessions, and on-off +/- per 100 possessions.",
 		"links": [
