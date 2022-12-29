@@ -1,0 +1,63 @@
+{
+	"fatness": 0.76,
+	"teamColors": ["#89bfd3", "#7a1319", "#07364f"],
+	"hairBg": {
+		"id": "none"
+	},
+	"body": {
+		"id": "body4",
+		"color": "#9d5939"
+	},
+	"jersey": {
+		"id": "football5"
+	},
+	"ear": {
+		"id": "ear2",
+		"size": 1.28
+	},
+	"head": {
+		"id": "head14",
+		"shave": "rgba(0,0,0,0)"
+	},
+	"eyeLine": {
+		"id": "none"
+	},
+	"smileLine": {
+		"id": "none",
+		"size": 1.85
+	},
+	"miscLine": {
+		"id": "none"
+	},
+	"facialHair": {
+		"id": "mustache-thin"
+	},
+	"eye": {
+		"id": "eye3",
+		"angle": 0
+	},
+	"eyebrow": {
+		"id": "eyebrow5",
+		"angle": 0
+	},
+	"hair": {
+		"id": "afro2",
+		"color": "#272421",
+		"flip": false
+	},
+	"mouth": {
+		"id": "straight",
+		"flip": false
+	},
+	"nose": {
+		"id": "nose12",
+		"flip": false,
+		"size": 0.9
+	},
+	"glasses": {
+		"id": "none"
+	},
+	"accessories": {
+		"id": "none"
+	}
+}

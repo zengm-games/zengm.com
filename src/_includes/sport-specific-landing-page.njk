@@ -415,8 +415,11 @@ window.onFacesJS = function () {
   const teamColorsAll = {{ teamColors | dump | safe }};
 
   {% if sport == "basketball" %}
-    const dmg = {{ davidMcGillian | dump | safe }};
-    const dmgIndex = Math.floor(Math.random() * numFaces);
+    const easterEgg = {{ davidMcGillian | dump | safe }};
+    const easterEggIndex = Math.floor(Math.random() * numFaces);
+  {% elif sport == "football" %}
+    const easterEgg = {{ malik | dump | safe }};
+    const easterEggIndex = Math.floor(Math.random() * numFaces);
   {% endif %}
 
   for (let i = 0; i < numFaces; i++) {
@@ -426,9 +429,9 @@ window.onFacesJS = function () {
     faceContainer.classList.add("flex-shrink-0");
     facesContainer.appendChild(faceContainer);
 
-    {% if sport === "basketball" %}
-      if (i === dmgIndex) {
-        faces.display(faceContainer, dmg);
+    {% if (sport === "basketball") or (sport === "football") %}
+      if (i === easterEggIndex) {
+        faces.display(faceContainer, easterEgg);
         continue;
       }
     {% endif %}
