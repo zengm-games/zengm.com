@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2022.12.29.1094",
+		"text": "Improved performance: simming an entire season is now 20% faster",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/zyjuoi/version_202212291094_brings_a_performance/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2022.12.07.1123",
 		"text": "Added a new setting to replace the normal overtime period with an Elam Ending period, similar to what the G League does.",
 		"links": [
