@@ -1,5 +1,35 @@
 [
 	{
+		"version": "2023.01.10.1044",
+		"text": "Added a new setting \"Trade Salary Match\" that lets you customize how much salary a team over the soft cap can take on in a trade (default is 125%, same as it's always been).",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/108n2pi/a_few_updates_in_version_202301101044/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.01.10.1044",
+		"text": "The relatives page for an individual player now shows the entire family tree, rather than just immediate family.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/108n2pi/a_few_updates_in_version_202301101044/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.01.10.1044",
+		"text": "Added a button to the Customize Player page to pick a random jersey number that does not conflict with any teammate.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/108n2pi/a_few_updates_in_version_202301101044/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.01.09.1283",
 		"text": "Improvements to AI valuation of their own draft picks in trades.",
 		"links": [
