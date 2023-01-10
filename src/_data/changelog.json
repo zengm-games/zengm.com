@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2023.01.09.1283",
+		"text": "Improvements to AI valuation of their own draft picks in trades.",
+		"links": [
+			"/blog/2023/01/ai-draft-pick-valuation/",
+			"https://old.reddit.com/r/BasketballGM/comments/107xvp3/version_202301091283_improvements_to_ai_valuation/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.01.09.1283",
+		"text": "Draft pick numbers are shown next to team names in the draft lottery table.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/107xvr5/also_version_202301091283_draft_pick_numbers_are/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"hockey": true
+	},
+	{
 		"version": "2022.12.29.1094",
 		"text": "Improved performance: simming an entire season is now 20% faster",
 		"links": [
