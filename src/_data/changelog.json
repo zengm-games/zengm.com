@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2023.02.09.1042",
+		"text": "View trade offers from AI teams at Players > Trade Proposals.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/10y86x2/version_202302091042_view_trade_offers_from_ai/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.01.10.1044",
 		"text": "Added a new setting \"Trade Salary Match\" that lets you customize how much salary a team over the soft cap can take on in a trade (default is 125%, same as it's always been).",
 		"links": [
