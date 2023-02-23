@@ -478,10 +478,10 @@
 	},
 	"NJN": {
 		"abbrev": "NJ",
-		"colors": ["#034757", "#67c7e9", "#b78254"],
-		"imgURL": "/img/logos-primary/BKN.svg",
-		"imgURLSmall": "/img/logos-secondary/BKN.svg",
-		"name": "Bagels",
+		"colors": ["#23c3be", "#9436c6", "#ea4242"],
+		"imgURL": "/img/logos-primary/NJ.svg",
+		"imgURLSmall": "/img/logos-secondary/NJ.svg",
+		"name": "Swamp Dragons",
 		"pop": 4.6,
 		"region": "New Jersey"
 	},
