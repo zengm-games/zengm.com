@@ -1,9 +1,15 @@
 [
 	{
-		"version": "",
+		"version": "2023.02.25.0669",
 		"text": "You can now create women's leagues.",
-		"links": ["/blog/2023/02/womens-leagues/", ""],
-		"basketball": true
+		"links": [
+			"/blog/2023/02/womens-leagues/",
+			"https://old.reddit.com/r/BasketballGM/comments/11bolyd/version_202302250669_you_can_now_make_womens/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
 	},
 	{
 		"version": "2023.02.09.1042",

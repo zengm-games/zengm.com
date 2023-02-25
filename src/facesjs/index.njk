@@ -129,7 +129,7 @@ display("my-div-id", face);
       <h2>More</h2>
       <p>
         See all the available options in
-        <a href="editor">the faces.js editor</a>.
+        <a href="editor.html">the faces.js editor</a>.
       </p>
       <p>
         For more documentation and information,
@@ -146,12 +146,14 @@ display("my-div-id", face);
         alt="Fork me on GitHub"
     /></a>
 
-    <script src="{{ "/js/faces.js" | addHash }}"></script>
+    <script src="build/bundle.js"></script>
     <script>
       function newFace(i) {
         document.getElementById("c" + i).style.backgroundImage =
           "linear-gradient(0deg, rgba(240, 240, 240, 0.25) , rgba(125, 125, 125, 0.25))";
-        var face = faces.generate();
+        var face = faces.generate(undefined, {
+          gender: Math.random() < 0.5 ? "male" : "female",
+        });
         faces.display("c" + i, face);
       }
 
