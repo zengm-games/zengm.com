@@ -1,5 +1,11 @@
 [
 	{
+		"version": "",
+		"text": "You can now create women's leagues.",
+		"links": ["/blog/2023/02/womens-leagues/", ""],
+		"basketball": true
+	},
+	{
 		"version": "2023.02.09.1042",
 		"text": "View trade offers from AI teams at Players > Trade Proposals.",
 		"links": [
