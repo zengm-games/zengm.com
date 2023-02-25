@@ -16,6 +16,22 @@ Every ZenGM game now supports women's leagues! You can set the gender of a leagu
 
 <!--more-->
 
+<div id="female-face" style="width: 200px; height: 300px; cursor: pointer; user-select: none;"></div>
+
+<script>
+window.onFacesJS.push(function () {
+  var div = document.getElementById("female-face");
+
+  function genFaceAndDisplay() {
+    var face = genFace("basketball", undefined, "female");
+    faces.display(div, face);
+  }
+
+  genFaceAndDisplay();
+  div.addEventListener("click", genFaceAndDisplay);
+});
+</script>
+
 Women's leagues in ZenGM are the same as men's leagues, just with some cosmetic differences. That means ratings are the same and stats are the same. For this reason, there is no real support of a mixed women+men league because the players are not rated on the same scale. But you can use God Mode to create a player of any gender in any league, and you can switch the gender of an existing league if you want, just for fun.
 
 The purely cosmetic differences between male and female leagues are:
