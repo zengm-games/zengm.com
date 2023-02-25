@@ -408,7 +408,7 @@ document.getElementById("carousel-screenshots").addEventListener('slid.bs.carous
 
 {% include "facesjs.njk" %}
 <script>
-window.onFacesJS = function () {
+window.onFacesJS.push(function () {
   const facesContainer = document.getElementById("faces");
   const numFaces = Math.ceil(document.documentElement.clientWidth / {{ FACE_WIDTH }});
 
@@ -444,7 +444,7 @@ window.onFacesJS = function () {
     genFaceAndDisplay()
     faceContainer.addEventListener("click", genFaceAndDisplay);
   }
-}
+});
 </script>
     </body>
 </html>

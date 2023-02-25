@@ -234,7 +234,7 @@ ul.main-list li:last-child p {
 	</body>
 	{% include "facesjs.njk" %}
 	<script>
-window.onFacesJS = function () {
+window.onFacesJS.push(function () {
 	var face0 = document.getElementById("face0");
 	var face1 = document.getElementById("face1");
 
@@ -259,6 +259,6 @@ window.onFacesJS = function () {
 		genFace0();
 		genFace1();
 	});
-}
+});
 	</script>
 </html>

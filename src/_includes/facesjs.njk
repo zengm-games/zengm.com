@@ -5,7 +5,7 @@ script.async = true;
 script.type = "text/javascript";
 
 script.addEventListener("load", function () {
-    if (window.onFacesJS) {
+    if (window.onFacesJS.length > 0) {
 	    var allJerseys = {{ jerseys | dump | safe }};
         var allSports = Object.keys(allJerseys);
 
@@ -58,7 +58,9 @@ script.addEventListener("load", function () {
             return face;
         }
 
-        window.onFacesJS();
+		for (var callback of window.onFacesJS) {
+        	callback();
+		}
     }
 });
 
