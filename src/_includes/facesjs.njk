@@ -9,7 +9,7 @@ script.addEventListener("load", function () {
 	    var allJerseys = {{ jerseys | dump | safe }};
         var allSports = Object.keys(allJerseys);
 
-        window.genFace = function (sport, teamColors) {
+        window.genFace = function (sport, teamColors, gender) {
             if (!sport) {
                 sport = allSports[Math.floor(Math.random() * allSports.length)];
             }
@@ -17,11 +17,16 @@ script.addEventListener("load", function () {
             var info = allJerseys[sport];
 			var jersey = info.jerseys[Math.floor(Math.random() * info.jerseys.length)];
 
-			var options;
+			var options = {};
+
 			if (info.forceWhiteFraction > 0 && Math.random() < info.forceWhiteFraction) {
-				options = {
-					race: "white"
-				};
+				options.race = "white"
+			}
+
+			if (gender !== undefined) {
+				options.gender = gender;
+			} else if (Math.random() < 0.2) {
+				options.gender = "female";
 			}
 
 			var overrides = {
