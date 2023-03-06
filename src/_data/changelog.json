@@ -1,5 +1,28 @@
 [
 	{
+		"version": "2023.03.05.1128",
+		"text": "On player profile pages, league leading stats are shown in bold.",
+		"links": [
+			"/blog/2023/03/bold-league-leaders/",
+			"https://old.reddit.com/r/BasketballGM/comments/11ji2a5/version_202303051128_on_player_profile_pages/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.02.28.0706",
+		"text": "Added Height Factor and Weight Factor settings to let you control the displayed heights/weights of players.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/11edf8m/version_202302280706_added_height_factor_and/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.02.25.0669",
 		"text": "You can now create women's leagues.",
 		"links": [
