@@ -10,7 +10,7 @@ tags:
 
 Inspired by [baskeball-reference.com](https://www.basketball-reference.com/players/c/curryst01.html), on player profile pages I added bold/highlighted text for each stat a player leads the league in. Most players don't lead the league in anything, in which case there is no change for them. But for the top players in your league, it gives you a quick glance at just how dominant they've been.
 
-<figure class="overflow-scroll"><img src="/files/bold-league-leaders-1.png"></figure>
+<figure class="overflow-auto"><img src="/files/bold-league-leaders-1.png"></figure>
 
 It works on all the stat tables on the player page - regular stats, advanced stats, playoff stats, etc. It also works on player ratings, and even ages to show you the oldest player in the league.
 
@@ -36,6 +36,6 @@ Yet another challenge is God Mode. Normally when you see player ratings, they ha
 
 And finally, there is a little UI issue in dark mode. For whatever reason, bold black text on white background seems to stand out more than bold white text on black background. So I made the leaders highlight slightly yellow in dark mode, to make it more visible.
 
-<figure class="overflow-scroll"><img src="/files/bold-league-leaders-2.png"></figure>
+<figure class="overflow-auto"><img src="/files/bold-league-leaders-2.png"></figure>
 
 I think that's about everything. It's just a little UI feature, but little UI features can be a lot of work!
