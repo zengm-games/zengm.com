@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2023.03.13.1274",
+		"text": "Better handling of players with gaps in their career in historical real players leagues.",
+		"links": [
+			"/blog/2023/03/real-players-gaps/",
+			"https://old.reddit.com/r/BasketballGM/comments/11qscsa/version_202303131274_better_handling_of_players/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.03.05.1128",
 		"text": "On player profile pages, league leading stats are shown in bold.",
 		"links": [
