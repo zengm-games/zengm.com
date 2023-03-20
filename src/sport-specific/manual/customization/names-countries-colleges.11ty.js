@@ -150,6 +150,7 @@ module.exports = class {
 					Venezuela: 101,
 					Vietnam: 1,
 					"Virgin Islands": 1,
+					Wales: 0.2,
 				},
 				basketball: {
 					Algeria: 1,
@@ -274,6 +275,7 @@ module.exports = class {
 					Venezuela: 13,
 					Vietnam: 0.2,
 					"Virgin Islands": 10,
+					Wales: 0.2,
 				},
 				football: {
 					Algeria: 0.2,
@@ -398,6 +400,7 @@ module.exports = class {
 					Venezuela: 0.2,
 					Vietnam: 0.2,
 					"Virgin Islands": 1,
+					Wales: 0.2,
 				},
 				hockey: {
 					Algeria: 0.2,
@@ -522,6 +525,7 @@ module.exports = class {
 					Venezuela: 1,
 					Vietnam: 0.2,
 					"Virgin Islands": 0.2,
+					Wales: 0.2,
 				},
 			},
 			sport,
