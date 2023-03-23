@@ -28,6 +28,7 @@ module.exports = class {
 		const defaultCountryFrequencies = bySport(
 			{
 				baseball: {
+					Albania: 0.2,
 					Algeria: 0.2,
 					"American Samoa": 1,
 					Angola: 0.2,
@@ -153,6 +154,7 @@ module.exports = class {
 					Wales: 0.2,
 				},
 				basketball: {
+					Albania: 0.2,
 					Algeria: 1,
 					"American Samoa": 0.2,
 					Angola: 8,
@@ -278,6 +280,7 @@ module.exports = class {
 					Wales: 0.2,
 				},
 				football: {
+					Albania: 0.2,
 					Algeria: 0.2,
 					"American Samoa": 70,
 					Angola: 1,
@@ -403,6 +406,7 @@ module.exports = class {
 					Wales: 0.2,
 				},
 				hockey: {
+					Albania: 0.2,
 					Algeria: 0.2,
 					"American Samoa": 0.2,
 					Angola: 0.2,
