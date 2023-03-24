@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2023.03.24.0592",
+		"text": "Goalies now get cross-game fatigue in the playoffs too, not just the regular season.",
+		"links": [
+			"/blog/2023/03/goalie-fatigue-playoffs/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/120l6h6/version_202303240592_goalies_now_get_crossgame/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2023.03.13.1274",
 		"text": "Better handling of players with gaps in their career in historical real players leagues.",
 		"links": [
