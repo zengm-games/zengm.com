@@ -1,5 +1,57 @@
 [
 	{
+		"version": "2023.04.13.1087",
+		"text": "Improved mobile live sim UI - score and game sim controls are always visible at the top of the screen.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/12l7yjf/version_202304131087_improved_mobile_live_sim_ui/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.04.13.1087",
+		"text": "New setting \"Give Me The Worst Roster\" when creating a new league, which swaps your roster with the roster of the team with the lowest ovr rating.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/12l7yjf/version_202304131087_improved_mobile_live_sim_ui/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.04.13.1087",
+		"text": "New setting \"# Watch List Colors\" to let you use multiple different colors of watch list flags if you want to group different sets of players.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/12l7yjf/version_202304131087_improved_mobile_live_sim_ui/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.04.13.1087",
+		"text": "New setting \"Minimum Retirement Age\" to prevent young players who go unsigned from retiring when there's still a chance they could improve. Default is 26.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/12l7yjf/version_202304131087_improved_mobile_live_sim_ui/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.04.13.1087",
+		"text": "Added settings to disable the dunk and three point contests. In real players leagues, these are now set to disabled prior to 1984 and 1986 respectively.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/12l7yjf/version_202304131087_improved_mobile_live_sim_ui/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.04.10.1013",
 		"text": "Updated real players rosters so you can start a league at the 2023 playoffs. Also, for seasons with the play-in tournament, starting at the playoffs now starts before the play-in tournament, rather than after.",
 		"links": [
