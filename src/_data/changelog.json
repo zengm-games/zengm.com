@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2023.04.19.0688",
+		"text": "New setting \"Group Games Into Series\" which attempts to group the schedule into 3-4 game series between teams, similar to MLB. It's enabled by default in baseball.",
+		"links": [
+			"/blog/2023/04/group-games-series/",
+			"https://old.reddit.com/r/ZenGMBaseball/comments/12ry78u/version_202304190688_new_setting_group_games_into/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2023.04.13.1087",
 		"text": "Improved mobile live sim UI - score and game sim controls are always visible at the top of the screen.",
 		"links": [

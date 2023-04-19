@@ -122,6 +122,11 @@ html.dark .btn-success {
 
 ol, ul {
 	margin-left: -2rem;
+
+	// Handle nested lists
+	ol {
+		margin-left: -0.5rem;
+	}
 }
 
 ul li::marker {
