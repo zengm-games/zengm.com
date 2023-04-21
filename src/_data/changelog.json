@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2023.04.20.1325",
+		"text": "AI teams do a better job of ensuring they always have a healthy player at certain unique positions that other players can't really fill in for (QB/K/P in football, G in hockey).",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/12tn31s/version_202304201325_ai_teams_do_a_better_job_of/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/12tn3b5/version_202304201325_ai_teams_do_a_better_job_of/"
+		],
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.04.19.0688",
 		"text": "New setting \"Group Games Into Series\" which attempts to group the schedule into 3-4 game series between teams, similar to MLB. It's enabled by default in baseball.",
 		"links": [
