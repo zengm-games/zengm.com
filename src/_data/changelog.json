@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2023.05.02.0981",
+		"text": "Added a new challenge mode: Sisyphus Mode, where once you reach the top of the mountain (i.e. win a championship), your roster is swapped with the worst team in the league. Also the Thanos Mode probability is now configurable.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/135z4mo/version_202305020981_adds_a_new_challenge_mode/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.04.20.1325",
 		"text": "AI teams do a better job of ensuring they always have a healthy player at certain unique positions that other players can't really fill in for (QB/K/P in football, G in hockey).",
 		"links": [
