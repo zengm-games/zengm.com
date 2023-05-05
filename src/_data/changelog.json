@@ -1,5 +1,38 @@
 [
 	{
+		"version": "2023.05.04.0893",
+		"text": "Trade summaries now include stats of traded players just with the team they were traded to, in addition to totals for the rest of their careers.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/137wce5/version_202305040893_trade_summaries_now_include/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.05.04.0893",
+		"text": "If all normal jersey numbers (0-99) are used by teammates and retired jersey numbers, it will use 3+ digit numbers rather than giving players no jersey number.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/137wce5/version_202305040893_trade_summaries_now_include/jiv6s0v/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.05.04.0893",
+		"text": "When editing/creating a player, you can easily specify whether you want their default position to be overridden or not.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/137wce5/version_202305040893_trade_summaries_now_include/jiv6s0v/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.05.02.0981",
 		"text": "Added a new challenge mode: Sisyphus Mode, where once you reach the top of the mountain (i.e. win a championship), your roster is swapped with the worst team in the league. Also the Thanos Mode probability is now configurable.",
 		"links": [
