@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2023.05.11.1252",
+		"text": "New frivolities: Best Rookies, Career Progs (biggest ovr improvement from prospect to peak), and GOAT Season (like GOAT Lab but for individual seasons rather than careers).",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/13f5szv/new_frivolities_in_version_202305111252_best/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.05.04.0893",
 		"text": "Trade summaries now include stats of traded players just with the team they were traded to, in addition to totals for the rest of their careers.",
 		"links": [
