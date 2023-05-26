@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2023.05.25.0959",
+		"text": "New feature Player Graphs, view scatter plots of any two stats/ratings. Thanks @luso97 for making the initial version of this!",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/13rrod3/new_feature_in_version_202305250959_player_graphs/",
+			"https://github.com/zengm-games/zengm/pull/438"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.05.11.1252",
 		"text": "New frivolities: Best Rookies, Career Progs (biggest ovr improvement from prospect to peak), and GOAT Season (like GOAT Lab but for individual seasons rather than careers).",
 		"links": [
@@ -137,8 +149,8 @@
 		"version": "2023.04.10.1013",
 		"text": "Added a \"Heal injuries\" button to team roster pages in God Mode. Thanks @domini7!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/443",
-			"https://old.reddit.com/r/BasketballGM/comments/12hvwqo/version_202304101013_updated_real_players_rosters/jfqtj0u/"
+			"https://old.reddit.com/r/BasketballGM/comments/12hvwqo/version_202304101013_updated_real_players_rosters/jfqtj0u/",
+			"https://github.com/zengm-games/zengm/pull/443"
 		],
 		"baseball": true,
 		"basketball": true,
@@ -2591,8 +2603,8 @@
 		"date": "2020-12-12",
 		"text": "New \"Edit Awards\" page available in God Mode, which allows you to edit all the end-of-season award winners. Thanks @luso97!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/331",
-			"https://old.reddit.com/r/BasketballGM/comments/kbl3m7/new_edit_awards_page_available_in_god_mode_which/"
+			"https://old.reddit.com/r/BasketballGM/comments/kbl3m7/new_edit_awards_page_available_in_god_mode_which/",
+			"https://github.com/zengm-games/zengm/pull/331"
 		],
 		"basketball": true,
 		"football": true,
@@ -2938,8 +2950,8 @@
 		"date": "2020-09-07",
 		"text": "New challenge mode \"Lose best player every season\", where at the end of the playoffs every season, the best player on your team will either retire (if he's a real player) or die a tragic death (if he's a random player). Thanks @luso97!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/311/files",
-			"https://old.reddit.com/r/BasketballGM/comments/iod22d/new_challenge_mode_lose_best_player_every_season/"
+			"https://old.reddit.com/r/BasketballGM/comments/iod22d/new_challenge_mode_lose_best_player_every_season/",
+			"https://github.com/zengm-games/zengm/pull/311/files"
 		],
 		"basketball": true,
 		"football": true
@@ -2961,8 +2973,8 @@
 		"date": "2020-09-01",
 		"text": "Added a stats summary to the top of each player page, similar to Basketball Reference. Thanks @luso97!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/307",
-			"https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/"
+			"https://old.reddit.com/r/BasketballGM/comments/ikx5nk/version_202009020058_stats_summary_at_the_top_of/",
+			"https://github.com/zengm-games/zengm/pull/307"
 		],
 		"basketball": true,
 		"football": true
@@ -2978,8 +2990,8 @@
 		"date": "2020-08-31",
 		"text": "Added BPM, DBPM, OBPM, and VORP to the advanced stats. Thanks @nicidob!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/297",
-			"https://old.reddit.com/r/BasketballGM/comments/ijszx5/added_bpm_dbpm_obpm_and_vorp_to_the_advanced/"
+			"https://old.reddit.com/r/BasketballGM/comments/ijszx5/added_bpm_dbpm_obpm_and_vorp_to_the_advanced/",
+			"https://github.com/zengm-games/zengm/pull/297"
 		],
 		"basketball": true
 	},
@@ -3248,8 +3260,8 @@
 		"date": "2020-07-20",
 		"text": "The ratings summary at the top of individual player pages now shows the difference between last year's ratings and this year's ratings. Thanks @icedjuro!",
 		"links": [
-			"https://github.com/zengm-games/zengm/pull/280",
-			"https://old.reddit.com/r/BasketballGM/comments/hv8arf/some_recent_minor_ui_updates/"
+			"https://old.reddit.com/r/BasketballGM/comments/hv8arf/some_recent_minor_ui_updates/",
+			"https://github.com/zengm-games/zengm/pull/280"
 		],
 		"basketball": true,
 		"football": true
