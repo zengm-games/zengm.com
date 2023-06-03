@@ -1,4 +1,4 @@
-const { spawn } = require("child_process");
+const { spawn } = require("node:child_process");
 const cloudflare = require("cloudflare");
 const cloudflareConfig = require("../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 

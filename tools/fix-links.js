@@ -1,13 +1,10 @@
-const glob = require("glob");
-const fs = require("fs/promises");
-const path = require("path");
+const { glob } = require("glob");
+const fs = require("node:fs/promises");
+const path = require("node:path");
 const posthtml = require("posthtml");
 const urls = require("posthtml-urls");
-const util = require("util");
 
 // See also myHTMLToAbsoluteUrls
-
-const globAsync = util.promisify(glob);
 
 const fixLinks = async () => {
 	let fileSite;
@@ -15,7 +12,7 @@ const fixLinks = async () => {
 	const rootFolder = path.join(__dirname, "..", "dist", "zengm.com");
 
 	const search = path.join(rootFolder, "**", "*.html");
-	const filenames = await globAsync(search);
+	const filenames = await glob(search);
 
 	const options = {
 		eachURL: url => {
