@@ -122,8 +122,8 @@ You can see the upward trend for three point attempts in recent years (except th
 
 Next, let's look at it team by team:
 
-<form class="form-inline float-right">
-  <select class="form-control" id="figure2season">
+<form class="d-flex float-end">
+  <select class="form-select" id="figure2season">
     <option>All Seasons</option>
     <option>2018-19</option>
     <option>2017-18</option>
@@ -159,8 +159,8 @@ The Harden-era Rockets are consistently in the good quadrant, taking tons of thr
 
 And finally, let's look at individual player data:
 
-<form class="form-inline float-right">
-  <select class="form-control me-2" id="figure3season">
+<form class="d-flex float-end">
+  <select class="form-select me-2" id="figure3season">
     <option>All Seasons</option>
     <option>2018-19</option>
     <option>2017-18</option>
@@ -184,7 +184,7 @@ And finally, let's look at individual player data:
     <option>1999-00</option>
     <option>1998-99</option>
   </select>
-  <select class="form-control" id="figure3team">
+  <select class="form-select" id="figure3team">
     <option>All Teams</option>
     <option>Atlanta Hawks</option>
     <option>Boston Celtics</option>

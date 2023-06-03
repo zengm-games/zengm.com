@@ -16,23 +16,27 @@ Looking at the code, some of it has totally changed, but other parts still have 
 
 **10 years ago:**
 
-    def do_steal(self):
-        ratios = self.rating_array('steal_ratio', self.d)
-        p = self.players_on_court[self.d][self.pick_player(ratios)]
-        self.team[self.d].player[p].record_stat('steals')
+```
+def do_steal(self):
+    ratios = self.rating_array('steal_ratio', self.d)
+    p = self.players_on_court[self.d][self.pick_player(ratios)]
+    self.team[self.d].player[p].record_stat('steals')
+```
 
 **Today:**
 
-    doStl(pStoleFrom: number) {
-        const ratios = this.ratingArray("stealing", this.d, 5);
-        const p = this.playersOnCourt[this.d][pickPlayer(ratios)];
-        this.recordStat(this.d, p, "stl");
-        this.recordPlay("stl", this.d, [
-            this.team[this.d].player[p].name,
-            this.team[this.o].player[pStoleFrom].name,
-        ]);
+```
+doStl(pStoleFrom: number) {
+    const ratios = this.ratingArray("stealing", this.d, 5);
+    const p = this.playersOnCourt[this.d][pickPlayer(ratios)];
+    this.recordStat(this.d, p, "stl");
+    this.recordPlay("stl", this.d, [
+        this.team[this.d].player[p].name,
+        this.team[this.o].player[pStoleFrom].name,
+    ]);
 
-        return "stl";
-    }
+    return "stl";
+}
+```
 
 This anniversary doesn't mean BBGM has had 10 years of consistent development, because for most of the first 4 years I did nothing with it. But for the past 6 things have progressed pretty steadily. If that continues, the next 10 years should be even better than the first!

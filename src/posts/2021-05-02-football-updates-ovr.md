@@ -39,7 +39,9 @@ That's the big improvement. But there's a bunch of smaller ones too, some of whi
 
 - Previously, all awards were based on the [approximate value (AV)](https://www.pro-football-reference.com/blog/index37a8.html) stat. AV is a nifty stat, but sometimes the results seem a bit funny, especially on defense. So for defensive awards, I replaced it with a hand-tuned formula. I'm sure this formula will get some tweaking over time, and feel free to suggest changes. But the initial version is:
 
-      AV + 1.5 * Sk + Tck / 12 + 4 * Int + PD + 5 * (FmbTD + IntTD + Sfty) + (2 point bonus for LBs)
+  ```
+  AV + 1.5 * Sk + Tck / 12 + 4 * Int + PD + 5 * (FmbTD + IntTD + Sfty) + (2 point bonus for LBs)
+  ```
 
   The end result is that defensive awards will tend to go to players with dominant statistical seasons, rather than sometimes to players with mundane stat lines on good defensive teams.
 
