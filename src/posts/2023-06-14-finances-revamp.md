@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Finances revamp (beta)
-date: 2023-06-10
+title: Finances revamp
+date: 2023-06-14
 tags:
   - post
   - Finances
 ---
-
-**This is live only on the [Basketball GM beta site](https://beta.basketball-gm.com/) to collect some [feedback](https://zengm.com/contact/).**
 
 The finances system in Basketball GM (and the other games) has been basically unchanged for a long time. I think there are various parts of it that don't really make much sense, or aren't very fun, or are exploitable, or are confusing due to poor UI. So I set out to fix all of those problems at once. The end result is not actually that different in terms of gameplay, but I think it does make things better in all of the aforementioned areas.
 
@@ -107,7 +105,7 @@ Then after the first season, the AI teams will be free to change their expense l
 
 ## Multiplayer leagues
 
-I admit I don't pay too much attention to people doing multiplayer leauges. I love you guys, but my games are primarily single-player because personally I don't really enjoy multiplayer games! But I do want everything to work well for multiplayer leagues, so [please let me know](https://zengm.com/contact/) if you have any thoughts.
+I admit I don't pay too much attention to people doing multiplayer leauges. I love you guys, but my games are primarily single-player because personally I don't really enjoy multiplayer games! But I do want everything to work well for multiplayer leagues, so [please let me know](/contact/) if you have any thoughts.
 
 My understanding is that most multiplayer leagues just set everyone to the same expenses, so nobody gains an advantage there and they don't have to micromanage eBay-style bidding wars for certain ranks.
 
@@ -129,4 +127,4 @@ But in the new system, that exploit is no longer possible. When a new league is 
 
 ## Feedback?
 
-This is a long complicated blog post for a somewhat mundane feature, so thank you for reading all the way down here! Feedback is welcome at [all the normal places](https://zengm.com/contact/). Depending on how that goes, we'll see how long this remains in beta before being officially released.
+This is a long complicated blog post for a somewhat mundane feature, so thank you for reading all the way down here! Feedback is welcome at [all the normal places](/contact/).

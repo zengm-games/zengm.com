@@ -1,5 +1,35 @@
 [
 	{
+		"version": "2023.06.14.0568",
+		"text": "Big changes to the finances system! Set expenses by level rather than $, and the UI shows much more detail.",
+		"links": [
+			"https://zengm.com/blog/2023/06/finances-revamp/",
+			"https://old.reddit.com/r/BasketballGM/comments/1468cbp/finances_revamp_beta/",
+			"https://old.reddit.com/r/BasketballGM/comments/14980ci/version_202306140568_team_finances_revamp_new/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
+		"version": "2023.06.14.0568",
+		"text": "Updated real players rosters so you can start a league after the 2023 playoffs.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/14980ci/version_202306140568_team_finances_revamp_new/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.06.14.0568",
+		"text": "Added 2 new rebuild achiements: 2022 Washington and 2023 San Antonio.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/14980ci/version_202306140568_team_finances_revamp_new/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.05.25.0959",
 		"text": "New feature Player Graphs, view scatter plots of any two stats/ratings. Thanks @luso97 for making the initial version of this!",
 		"links": [
