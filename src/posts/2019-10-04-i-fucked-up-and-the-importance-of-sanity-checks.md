@@ -5,6 +5,7 @@ date: 2019-10-04
 tags:
   - post
   - Bug Fix
+  - Funny Glitches
 ---
 
 Previously, some of you had noticed something strange about team construction and game simulation in Football GM. If you made a team of all one type of player, that team would actually perform pretty well, usually making the playoffs. Obviously that doesn't make any sense.
