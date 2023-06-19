@@ -1,11 +1,12 @@
 ---
 layout: post
 title: The permanent pulled goalie bug
-date: 2019-10-04
+date: 2023-06-18
 tags:
   - post
   - Bug Fixes
   - Funny Glitches
+  - Hockey
 ---
 
 There are plenty of bugs in my game. Usually it's something like "when I click on X it shows an error message" or "when I change two settings at the same time, it breaks" or "the simulation is doing really stupid stuff". Usually bugs are not very fun, they're just annoying. Maybe the funniest bug previously was [when the effect of OL was reversed in Football GM, so playing a bunch of kickers at OL made your team dominate](/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/). The problem was that, in addition to being funny, it was also a game-breaking bug. Too serious to truly be funny.
@@ -20,7 +21,7 @@ And Boston pulling their goalie actually works! They score the tying goal with 1
 
 But then... the goalie doesn't get subbed back into the game! So it's a tie game with 1 minute left, and Boston is playing with an empty net! Finally with 8 seconds left, Washington scores the go-ahead empty net goal and wins a trip to the finals.
 
-<figure><img src="/files/permanent-pulled-goalie-1.png" class="img-fluid"></figure>
+<figure><img src="/files/permanent-pulled-goalie.png" class="img-fluid"></figure>
 
 So what happened? Is it just an aggressive strategy where sometimes teams pull the goalie in a tied game? No, that would be too crazy. I did not intent for there to be a pulled goalie in a tied game. It is indeed a bug.
 
@@ -40,7 +41,7 @@ Before actually fixing the bug I wondered, how crazy is that situation? It is a 
 
 1. A team pulls their goalie (okay, this isn't that rare, but it doesn't happen every game!)
 2. That team actually scores the tying goal
-3. That team has a player in the penalty box, leading to the goalie staying pulled
+3. That team has a player in the penalty box, and the player they leave off the ice due to this happens to be a center, leading to the goalie staying pulled
 4. The other team takes advantage and scores (otherwise you probably wouldn't notice)
 
 \#4 is actually quite rare because often there is not a lot of time left in the game when the tying goal happens.

@@ -1,9 +1,18 @@
 [
 	{
+		"version": "2023.06.18.1346",
+		"text": "Fixed a very rare bug where a team would pull their goalie but then not put him back in after tying the game.",
+		"links": [
+			"/blog/2023/06/permanent-pulled-goalie/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/14d2ae3/version_202306181346_contains_a_fix_for_a_kind_of/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2023.06.14.0568",
 		"text": "Big changes to the finances system! Set expenses by level rather than $, and the UI shows much more detail.",
 		"links": [
-			"https://zengm.com/blog/2023/06/finances-revamp/",
+			"/blog/2023/06/finances-revamp/",
 			"https://old.reddit.com/r/BasketballGM/comments/1468cbp/finances_revamp_beta/",
 			"https://old.reddit.com/r/BasketballGM/comments/14980ci/version_202306140568_team_finances_revamp_new/"
 		],
