@@ -15,7 +15,7 @@ First, let me go over how the current finance system works and what I think its 
 
 ## The old finances system
 
-You have 4 expense categories (scouting, coaching, health, facilities) that all impact different areas of the game. The effects are based on the _rank_ of your total spending over the past 3 seasons. So once you're #1, it doesn't do you any good to spend more. And once you're last, you might as well spend $0.
+You have 4 expense categories (scouting, coaching, health, facilities) that all impact different areas of the game. The effects are based on the _rank_ of your total spending over the past 3 seasons. So once you're #1, it doesn't do you any good to spend more. And once you're last, you might as well spend $0 (which is basically an exploit that lets you save way too much money).
 
 The reason for this average over the past 3 seasons is both for realism (you can't instantly improve any of these things, it takes time) and for gameplay (it would be unfair to switch categories between the min/max values and instantly reap the benefits). A problem with the 3 year average is that it's not transparent in the UI that that's how it works, or what the 3 year average value actually is, which is pretty dumb.
 

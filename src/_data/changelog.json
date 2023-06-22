@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2023.06.21.1277",
+		"text": "Several small stat/simulation improvements.",
+		"links": [
+			"/blog/2023/06/small-football-sim-improvements/",
+			"https://old.reddit.com/r/Football_GM/comments/14fpecy/version_202306211277_several_small_statsimulation/"
+		],
+		"football": true
+	},
+	{
 		"version": "2023.06.18.1346",
 		"text": "Fixed a very rare bug where a team would pull their goalie but then not put him back in after tying the game.",
 		"links": [
