@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2023.06.23.0721",
+		"text": "Updated real players rosters so you can start a league after the 2023 draft.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/14h2c6s/version_202306230721_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.06.21.1277",
 		"text": "Several small stat/simulation improvements.",
 		"links": [
