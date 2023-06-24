@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2023.06.24.1075",
+		"text": "New league type: cross-era leagues, made up of historical teams from different years. (Not actually a new feature, just an easier UI to an existing feature!)",
+		"links": [
+			"/blog/2023/06/cross-era/",
+			"https://play.basketball-gm.com/new_league/cross_era",
+			"https://old.reddit.com/r/BasketballGM/comments/14i4u0w/new_league_type_in_version_202306241075_crossera/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.06.23.0721",
 		"text": "Updated real players rosters so you can start a league after the 2023 draft.",
 		"links": [
