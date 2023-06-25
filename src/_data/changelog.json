@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2023.06.25.0862",
+		"text": "The All-Star Game is now simulated differently than a normal game: more shots, more goals, fewer penalties, fewer blocks/hits, and more balanced playing time.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMHockey/comments/14itdhc/small_update_in_version_202306250862_the_allstar/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2023.06.24.1075",
 		"text": "New league type: cross-era leagues, made up of historical teams from different years. (Not actually a new feature, just an easier UI to an existing feature!)",
 		"links": [
