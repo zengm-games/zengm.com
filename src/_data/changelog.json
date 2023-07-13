@@ -1,5 +1,41 @@
 [
 	{
+		"version": "2023.07.13.0046",
+		"text": "Slightly more realistic contracts for real players (although they still have some limitations).",
+		"links": [
+			"/blog/2023/07/slightly-more-realistic-contracts-real-players/",
+			"https://old.reddit.com/r/BasketballGM/comments/14yb0cr/version_202307130046_slightly_more_realistic/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.07.13.0046",
+		"text": "Currency values above $999.99 quadrillion are shown in scientific notation like $5.21e18.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/14yb0cr/version_202307130046_slightly_more_realistic/jrrkekd/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.06.28.0612",
+		"text": "Added a new type of random debuts mode that lets you keep the current rosters of teams in your league while randomizing all other players into future draft classes.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/14lao2n/version_202306280612_added_a_new_type_of_random/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.06.28.0612",
+		"text": "Improved 4th down play calling late in the 4th quarter - if a FG will take the lead or substantially improve an existing lead (like going from a one score lead to a two score lead), teams will now always attempt the FG if there is a decent chance of making it.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/14laopc/version_202306280612_improved_4th_down_play/"
+		],
+		"football": true
+	},
+	{
 		"version": "2023.06.25.0862",
 		"text": "The All-Star Game is now simulated differently than a normal game: more shots, more goals, fewer penalties, fewer blocks/hits, and more balanced playing time.",
 		"links": [
