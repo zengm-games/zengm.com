@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2023.07.17.1321",
+		"text": "Updated real players rosters so you can start a league at the 2024 preseason.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/152l4t1/version_202307171321_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2023.07.13.0046",
 		"text": "Slightly more realistic contracts for real players (although they still have some limitations).",
 		"links": [
