@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2023.08.02.1178",
+		"text": "11 new built-in teams and logos.",
+		"links": [
+			"/blog/2023/08/11-new-teams-logos/",
+			"https://old.reddit.com/r/BasketballGM/comments/15gnuj5/verison_202308021178_11_new_teamslogos_and_an/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.07.28.0997",
 		"text": "New option to have some probability of a team relocating in the offseason.",
 		"links": [
