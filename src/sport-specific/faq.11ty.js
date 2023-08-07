@@ -150,11 +150,19 @@ ${
 
 <hr>
 
-<h2><a href="#real-ratings-weird" name="real-ratings-weird">In real player leagues, why is Player X rated higher than Player Y, when I know that Player Y is much better in real life?</a></h2>
+<h2><a href="#real-ratings-weird" name="real-ratings-weird">In real player leagues, why are the ratings for some players weird?</a></h2>
 <p>Sometimes the answer is that the ratings just suck and need to be adjusted. But usually, that's not the answer, or at least not the main answer.</p>
 <p>The main answer is that, sadly, the basketball simulation algorithm in BBGM is not identical to real basketball. Certain types of players may be overvalued or undervalued in BBGM. Or certain stats might be easier or harder to accumulate in BBGM. Ultimately I do want to fix these issues and make BBGM more realistic, but it'll never be perfect.</p>
 <p>When this situation happens and it's hard to set good ratings for a player, there are two options. You can set the ratings such that player performance (stats) matches reality as best possible. Or you can set the ratings such that the ratings seem to make sense if you look at them without stats, for example making the list of top players sorted by "ovr" be similar to how people rank players in real life.</p>
 <p>In an unfortunate situation like that, where you are forced to make a player either have unrealistic stats or have unrealistic ratings, I think it's better to have unrealistic ratings. I understand some people disagree with that, and if you do, you are free to make your own ratings! Just don't be surprised if players start putting up weird stats :)</p>
+
+<hr>
+
+<h2><a href="#real-ages-wrong" name="real-ages-wrong">In real player leagues, why are some player ages wrong?</a></h2>
+<p>BBGM does not have dates, so for a player's age, it just takes the difference between the current year and the player's birth year.</p>
+<p>Imagine a player born on December 31, 1980. In BBGM, he's born in 1980. Then in the 2005 season, he is 25. But IRL, the "2005 season" actually starts in late 2004. In late 2004, the player IRL was only 23 years old.</p>
+<p>That's the worst case scenario (2 year difference), and there are also a lot of players who will have a 1 year difference.</p>
+<p>This may be annoying because in BBGM progs depend a lot on age, so if a prospect is 19 or 21, that's a big deal. However, it's also true that in BBGM young players prog more than they do IRL. That's because in random player rosters, rookies are worse than IRL. Eventually I should fix this, but in the mean time it kind of offsets the age difference.</p>
 `
 		: ""
 }
