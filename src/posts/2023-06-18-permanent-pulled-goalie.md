@@ -4,7 +4,7 @@ title: The permanent pulled goalie bug
 date: 2023-06-18
 tags:
   - post
-  - Bug Fixes
+  - Bug Fix
   - Funny Glitches
   - Hockey
 ---

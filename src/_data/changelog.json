@@ -1,10 +1,22 @@
 [
 	{
+		"version": "2023.08.14.0732",
+		"text": "Fixed a bug where the effects of coaching and health spending were 3x larger after the finances update a couple months ago.",
+		"links": [
+			"/blog/2023/08/finances-revamp-bug/",
+			"https://old.reddit.com/r/BasketballGM/comments/15qz49u/version_202308140732_fixed_a_bug_where_the/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.08.02.1178",
 		"text": "11 new built-in teams and logos.",
 		"links": [
 			"/blog/2023/08/11-new-teams-logos/",
-			"https://old.reddit.com/r/BasketballGM/comments/15gnuj5/verison_202308021178_11_new_teamslogos_and_an/?"
+			"https://old.reddit.com/r/BasketballGM/comments/15gnuj5/verison_202308021178_11_new_teamslogos_and_an/"
 		],
 		"baseball": true,
 		"basketball": true,
