@@ -1,5 +1,33 @@
 [
 	{
+		"version": "2023.08.20.1126",
+		"text": "Legends leagues now work with the random debuts settings, and random debuts is enabled by default in legends leagues.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/15wpkvp/a_few_small_updates_in_version_202308201126/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.08.20.1126",
+		"text": "Added new \"FT Accuracy Factor\" setting, and set it to lower values in real players leagues from the 40s/50s.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/15wpkvp/a_few_small_updates_in_version_202308201126/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.08.20.1126",
+		"text": "New \"Force Retire After Seasons\" setting which makes all players retire after playing some number of years (with one redshirt year with no GP allowed). Thanks @snzow!",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/15wpkvp/a_few_small_updates_in_version_202308201126/",
+			"https://github.com/zengm-games/zengm/pull/455"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.08.14.0732",
 		"text": "Fixed a bug where the effects of coaching and health spending were 3x larger after the finances update a couple months ago.",
 		"links": [
