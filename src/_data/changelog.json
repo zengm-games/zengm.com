@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2023.08.23.0767",
+		"text": "New \"players only\" Groundhog Day mode, where player ages/ratings never change but players can switch teams during trades and free agency.",
+		"links": [
+			"/blog/2023/08/groundhog-day-improvements/",
+			"https://old.reddit.com/r/BasketballGM/comments/15z9f1e/version_202308230767_new_players_only_groundhog/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.08.20.1126",
 		"text": "Legends leagues now work with the random debuts settings, and random debuts is enabled by default in legends leagues.",
 		"links": [
