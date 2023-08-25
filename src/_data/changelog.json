@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2023.08.24.1271",
+		"text": "For teams above the luxury tax limit or below the minimum payroll limit, projected penalties are shown on the roster and team finances pages. The roster page also shows payroll and penalties for past seasons.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/160klgi/version_202308241271_for_teams_above_the_luxury/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.08.23.0767",
 		"text": "New \"players only\" Groundhog Day mode, where player ages/ratings never change but players can switch teams during trades and free agency.",
 		"links": [
