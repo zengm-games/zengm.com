@@ -26,4 +26,4 @@ That is now available in the new "players only" Groundhog Day mode:
 
 "Players and rosters" is just how it used to work. Any existing leagues with Groundhog Day enabled will be switched to that option.
 
-Additionally, I made one other improvement that affects both Groundhog Day modes. In both modes, potential doesn't matter, because ratings never change. But previously potential and age were being used when computing a player's value (used for trades, contracts, etc.), no different than a normal league. Now, when Groundhog Day is enabled, player value is based only on their current ratings/stats, not on potential or age.
+Additionally, I made one other improvement that affects both Groundhog Day modes. In both modes, potential doesn't matter, because ratings never change. But previously potential and age were being used when computing a player's value (used for trades, contracts, etc.), no different than a normal league. Now, when Groundhog Day is enabled, player value is based only on their current ratings/stats, not on potential or age. **Update 2023-08-27:** this now only applies to the new "players only" mode.

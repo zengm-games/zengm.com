@@ -90,6 +90,7 @@ for (const p of players) {
 That's saying if \`SOME_CONDITION\` is true, only then run the code to update the ratings. But what is \`SOME_CONDITION\`? Some examples:
 
 - All draft prospects: \`if (p.tid === bbgm.PLAYER.UNDRAFTED) {\`
+- One specific draft class: \`if (p.draft.year === 2026) {\`
 - All free agents: \`if (p.tid === bbgm.PLAYER.FREE_AGENT) {\`
 - All players on one specific team: \`if (p.tid === 5) {\` (5 is the team ID number)
 - All players at one position: \`if (p.ratings.at(-1).pos === "${bySport(
