@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2023.08.30.1000",
+		"text": "View combined playoff and regular season stats on player profile pages, the Player Stats page, and many other pages.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/165q3mu/version_202308301000_view_combined_playoff_and/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.08.24.1271",
 		"text": "For teams above the luxury tax limit or below the minimum payroll limit, projected penalties are shown on the roster and team finances pages. The roster page also shows payroll and penalties for past seasons.",
 		"links": [
