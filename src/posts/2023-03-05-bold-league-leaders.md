@@ -8,7 +8,7 @@ tags:
   - UI
 ---
 
-Inspired by [baskeball-reference.com](https://www.basketball-reference.com/players/c/curryst01.html), on player profile pages I added bold/highlighted text for each stat a player leads the league in. Most players don't lead the league in anything, in which case there is no change for them. But for the top players in your league, it gives you a quick glance at just how dominant they've been.
+Inspired by [basketball-reference.com](https://www.basketball-reference.com/players/c/curryst01.html), on player profile pages I added bold/highlighted text for each stat a player leads the league in. Most players don't lead the league in anything, in which case there is no change for them. But for the top players in your league, it gives you a quick glance at just how dominant they've been.
 
 <figure class="overflow-auto"><img src="/files/bold-league-leaders-1.png"></figure>
 
