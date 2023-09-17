@@ -1,5 +1,29 @@
 [
 	{
+		"version": "2023.09.16.1234",
+		"text": "In cross-era leagues, you can specify a range of seasons to select teams from, rather than it always being all seasons back to 1947.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/16kmy7c/version_202309161234_in_crossera_leagues_you_can/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2023.09.16.1234",
+		"text": "Pitchers and catchers field more batted balls on defense.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/16kmyz4/a_couple_game_sim_updates_in_version_202309161234/"
+		],
+		"baseball": true
+	},
+	{
+		"version": "2023.09.16.1234",
+		"text": "Closers are more likely to be reserved for actual save opportunities.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/16kmyz4/a_couple_game_sim_updates_in_version_202309161234/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2023.09.03.1113",
 		"text": "New option to have some probability of expansion teams joining the league in the offseason.",
 		"links": [
