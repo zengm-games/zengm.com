@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2023.09.28.0962",
+		"text": "Added a search filter to the League Settings page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/16upzef/version_202309280962_added_a_search_filter_to_the/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.09.28.0962",
+		"text": "Rookie of the Year is shown on the Draft History page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/16upzef/version_202309280962_added_a_search_filter_to_the/k2mhxaz/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.09.16.1234",
 		"text": "In cross-era leagues, you can specify a range of seasons to select teams from, rather than it always being all seasons back to 1947.",
 		"links": [
