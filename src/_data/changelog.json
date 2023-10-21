@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2023.10.20.1033",
+		"text": "New setting \"Max # Overtime Periods\" that lets you set how many overtime periods to play before a game ends in a tie.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/17clos1/version_202310201033_new_setting_max_overtime/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2023.10.20.1033",
+		"text": "Updated playoff overtime rules - both teams must possess the ball before the game ends.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/17clott/in_addition_to_this_new_setting_that_lest_you/"
+		],
+		"football": true
+	},
+	{
 		"version": "2023.09.28.0962",
 		"text": "Added a search filter to the League Settings page.",
 		"links": [
