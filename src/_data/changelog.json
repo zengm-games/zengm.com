@@ -1,8 +1,11 @@
 [
 	{
-		"version": "",
+		"version": "2023.11.12.0683",
 		"text": "New drive chart UI during live sim, plus several other small improvements.",
-		"links": ["/blog/2023/11/football-drive-chart/", ""],
+		"links": [
+			"/blog/2023/11/football-drive-chart/",
+			"https://old.reddit.com/r/Football_GM/comments/17tnpwu/big_fbgm_live_sim_update_in_version_202311120683/"
+		],
 		"football": true,
 		"big": true
 	},
