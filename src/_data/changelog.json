@@ -1,5 +1,12 @@
 [
 	{
+		"version": "",
+		"text": "New drive chart UI during live sim, plus several other small improvements.",
+		"links": ["/blog/2023/11/football-drive-chart/", ""],
+		"football": true,
+		"big": true
+	},
+	{
 		"version": "2023.10.20.1033",
 		"text": "New setting \"Max # Overtime Periods\" that lets you set how many overtime periods to play before a game ends in a tie.",
 		"links": [
