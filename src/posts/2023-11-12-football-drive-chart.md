@@ -23,8 +23,6 @@ The screenshot above shows a "normal" drive. But what if other stuff happens, li
 
 It's similar for kickoffs and punts, but with a gray bar instead of red.
 
-After a change of possession, the direction of the field switches so the offense is always going to the right.
-
 For penalties, when there is a flag on the play it is shown in yellow next to the play bar. After the play when the penalty is revealed and a decision is made to accept/decline it, then the flag turns to either red (accepted) or gray (declined). You can also hover over the flag to see what the penalty was exactly.
 
 <div class="d-flex gap-3 flex-wrap mb-3">
