@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2023.11.29.1342",
+		"text": "Improved play-by-play UI in live sim games.",
+		"links": [
+			"/blog/2023/11/play-by-play-redesign/",
+			"https://old.reddit.com/r/BasketballGM/comments/1878i7h/improved_playbyplay_ui_in_live_sim_games_in/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.11.12.0683",
 		"text": "New drive chart UI during live sim, plus several other small improvements.",
 		"links": [
