@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2023.12.25.0513",
+		"text": "5 new international teams, 3 new American teams, and 4 rebranded teams.",
+		"links": [
+			"/blog/2023/12/new-logos/",
+			"https://old.reddit.com/r/BasketballGM/comments/18qitu9/merry_christmas_my_present_to_you_12_new_logos/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.12.20.1237",
 		"text": "Many improvements to how the clock works in game sim, particularly in late game situations.",
 		"links": [
