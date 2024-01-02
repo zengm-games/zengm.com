@@ -265,7 +265,6 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// See ~/Documents/ZenGM/Annual Traffic, from GA.ods
-	// Sessions are from "Non-Bounce Sessions"
 	const trafficData = [
 		{
 			title: "Sessions",
@@ -281,6 +280,7 @@ module.exports = function (eleventyConfig) {
 				["2020", 3233971, 532886, null, null],
 				["2021", 4209234, 835771, 179351, null],
 				["2022", 5582796, 1327709, 242945, 210681],
+				["2023", 6037834, 1525607, 304899, 363971],
 			],
 		},
 		{
@@ -297,6 +297,7 @@ module.exports = function (eleventyConfig) {
 				["2020", 299207611, 47256207, null, null],
 				["2021", 354828366, 61465730, 12222619, null],
 				["2022", 420082784, 85928529, 15757811, 11813891],
+				["2023", 512141366, 106477587, 19796988, 21253512],
 			],
 		},
 		{
@@ -313,6 +314,7 @@ module.exports = function (eleventyConfig) {
 				["2020", 206.1, 32.93, null, null],
 				["2021", 264.51, 51.15, 9.97, null],
 				["2022", 298.12, 71.53, 12.59, 10.8],
+				["2023", 335.36, 83.57, 15.86, 18.82],
 			],
 		},
 	];
