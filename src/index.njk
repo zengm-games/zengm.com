@@ -33,6 +33,16 @@ body {
 .container-main {
 	max-width: 720px;
 }
+@media (max-width: 767.98px) {
+	.container-main-expand-md {
+		max-width: 720px;
+	}
+}
+@media (max-width: 1399.98px) {
+	.container-main-expand-xxl {
+		max-width: 720px;
+	}
+}
 
 .headline {
 	font-size: 20px;
@@ -43,7 +53,7 @@ ul {
 	margin-bottom: 0;
 }
 
-ul.main-list li:last-child p {
+.main-list li:last-child p {
 	margin-bottom: 0;
 }
 
@@ -131,27 +141,27 @@ ul.main-list li:last-child p {
 				<p>Every day, users simulate over 60,000 seasons in our games. Why don't you try one?</p>
 			</div>
 		
-			<div class="container container-main">
+			<div class="container container-main-expand-xxl">
 				<div class="row">
-					<div class="col-12 col-sm-6">
+					<div class="col-12 col-sm-6 col-xxl-3">
 						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/basketball/">
 							<img src="https://play.basketball-gm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
 							<h2>Basketball GM</h2>
 						</a>
 					</div>
-					<div class="col-12 col-sm-6 mt-3 mt-sm-0">
+					<div class="col-12 col-sm-6 mt-3 mt-sm-0 col-xxl-3">
 						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/football/">
 							<img src="https://play.football-gm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
 							<h2>Football GM</h2>
 						</a>
 					</div>
-					<div class="col-12 col-sm-6 mt-3">
+					<div class="col-12 col-sm-6 mt-3 mt-xxl-0 col-xxl-3">
 						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/baseball/">
 							<img src="https://baseball.zengm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
 							<h2>ZenGM Baseball</h2>
 						</a>
 					</div>
-					<div class="col-12 col-sm-6 mt-3">
+					<div class="col-12 col-sm-6 mt-3 mt-xxl-0 col-xxl-3">
 						<a class="flagship d-flex align-items-center border border-secondary rounded p-2" href="/hockey/">
 							<img src="https://hockey.zengm.com/ico/icon.svg" class="me-3 flex-shrink-0" alt="">
 							<h2>ZenGM Hockey</h2>
@@ -162,12 +172,17 @@ ul.main-list li:last-child p {
 		</div>
 
 		<div class="py-4">
-			<div class="container container-main">
+			<div class="container container-main-expand-md">
 				<p>Our games all follow some core principles:</p>
 
-				<ul class="main-list">
-					{% include "principles.njk" %}
-				</ul>
+				<div class="main-list row">
+					<div class="col-lg-6">
+						{% include "principles-1.njk" %}
+					</div>
+					<div class="col-lg-6">
+						{% include "principles-2.njk" %}
+					</div>
+				</div>
 			</div>
 		</div>
 

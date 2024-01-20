@@ -45,9 +45,8 @@ All throughout that time, my games have been improving and [my userbase has been
 
 At this point, I think my games have a pretty clear niche:
 
-<ul>
-{% include "principles.njk" %}
-</ul>
+{% include "principles-1.njk" %}
+{% include "principles-2.njk" %}
 
 [There's plenty of other great sports sim games out there filling different niches](https://gmgames.org/), many of which are superior to my games in various ways. But I don't think any of them quite check all the same boxes as my games.
 
