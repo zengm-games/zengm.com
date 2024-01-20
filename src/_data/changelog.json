@@ -1,10 +1,21 @@
 [
 	{
+		"version": "2024.01.11.1310",
+		"text": "New \"Saved Trades\" page under the Players menu. Save a trade for later by clicking the flag icon on the Trade, Trading Block, or Trade Proposals page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/194kdbc/new_saved_trades_page_under_the_players_menu_save/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2023.12.25.0513",
 		"text": "5 new international teams, 3 new American teams, and 4 rebranded teams.",
 		"links": [
 			"/blog/2023/12/new-logos/",
-			"https://old.reddit.com/r/BasketballGM/comments/18qitu9/merry_christmas_my_present_to_you_12_new_logos/?"
+			"https://old.reddit.com/r/BasketballGM/comments/18qitu9/merry_christmas_my_present_to_you_12_new_logos/"
 		],
 		"baseball": true,
 		"basketball": true,
