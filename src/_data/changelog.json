@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2024.01.21.0915",
+		"text": "The Season Preview page now shows the top 10 players on new teams.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/19ccm6y/version_202401210915_the_season_preview_page_now/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.01.11.1310",
 		"text": "New \"Saved Trades\" page under the Players menu. Save a trade for later by clicking the flag icon on the Trade, Trading Block, or Trade Proposals page.",
 		"links": [
