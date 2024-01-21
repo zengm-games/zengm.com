@@ -25,6 +25,8 @@ script.addEventListener("load", function () {
 
 			if (gender !== undefined) {
 				options.gender = gender;
+			} else if (Math.random() < 0.01) {
+				options.gender = "female";
 			}
 
 			var overrides = {
