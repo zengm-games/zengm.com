@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2024.02.12.1378",
+		"text": "Added tracking of number of shifts (SHFT) to player stats",
+		"links": [
+			"https://old.reddit.com/r/ZenGMHockey/comments/1apkaq3/added_tracking_of_number_of_shifts_shft_to_player/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2024.01.21.0915",
 		"text": "The Season Preview page now shows the top 10 players on new teams.",
 		"links": [
