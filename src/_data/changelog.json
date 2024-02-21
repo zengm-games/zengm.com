@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2024.02.21.0132",
+		"text": "It's still not ideal handling of bye weeks, but there are now fewer bye weeks and more compact regular season schedules (1-2 weeks shorter on average, for default settings).",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/1aw5z5q/version_202402210132_its_still_not_ideal_handling/"
+		],
+		"football": true
+	},
+	{
 		"version": "2024.02.12.1378",
 		"text": "Added tracking of number of shifts (SHFT) to player stats",
 		"links": [
