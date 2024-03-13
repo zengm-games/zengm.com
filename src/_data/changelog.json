@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2024.03.13.0000",
+		"text": "New \"Compare Players\" feature, showing bio/ratings/stats/awards compared between 2 or more players.",
+		"links": [
+			"/blog/2024/03/compare-players/",
+			"https://old.reddit.com/r/BasketballGM/comments/1bdi7eg/version_202403130000_new_compare_players_feature/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2024.02.21.0132",
 		"text": "It's still not ideal handling of bye weeks, but there are now fewer bye weeks and more compact regular season schedules (1-2 weeks shorter on average, for default settings).",
 		"links": [
@@ -56,7 +69,8 @@
 			"/blog/2023/12/basketball-game-clock-rewrite/",
 			"https://old.reddit.com/r/BasketballGM/comments/18nb4gj/version_202312201237_many_improvements_to_how_the/"
 		],
-		"basketball": true
+		"basketball": true,
+		"big": true
 	},
 	{
 		"version": "2023.11.29.1342",
@@ -68,7 +82,8 @@
 		"baseball": true,
 		"basketball": true,
 		"football": true,
-		"hockey": true
+		"hockey": true,
+		"big": true
 	},
 	{
 		"version": "2023.11.12.0683",
