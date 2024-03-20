@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2024.03.19.1220",
+		"text": "Added several new achievements and redesigned the \"Switch Team\" page.",
+		"links": [
+			"/blog/2024/03/new-achievements/",
+			"https://old.reddit.com/r/BasketballGM/comments/1bj0727/version_202403191220_added_several_new/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.03.13.0000",
 		"text": "New \"Compare Players\" feature, showing bio/ratings/stats/awards compared between 2 or more players.",
 		"links": [
