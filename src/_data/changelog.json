@@ -1,5 +1,26 @@
 [
 	{
+		"version": "2024.04.16.0485",
+		"text": "New feature - shootouts to decide tie games. In all sports, not just hockey!",
+		"links": [
+			"/blog/2024/04/shootouts/",
+			"https://old.reddit.com/r/BasketballGM/comments/1c5egx3/new_feature_in_version_202404160485_shootouts_to/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/1c5enim/shootouts/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.04.16.0485",
+		"text": "Missed field goals are shown in the scoring summary of box scores.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/1c5emrr/special_fbgm_feature_in_the_shootouts_update/"
+		],
+		"football": true
+	},
+	{
 		"version": "2024.04.15.0736",
 		"text": "Updated real players rosters so you can start a league at the 2024 playoffs.",
 		"links": [
