@@ -1,5 +1,17 @@
 [
 	{
+		"version": "",
+		"text": "New UI for the face editor. Thanks @tomkennedy22!",
+		"links": [
+			"/facesjs/editor/",
+			"https://old.reddit.com/r/BasketballGM/comments/1cbiueh/new_face_editor/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.04.16.0485",
 		"text": "New feature - shootouts to decide tie games. In all sports, not just hockey!",
 		"links": [
