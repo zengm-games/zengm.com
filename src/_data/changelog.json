@@ -1,6 +1,15 @@
 [
 	{
-		"version": "",
+		"version": "2024.04.27.1260",
+		"text": "During live sim, the number of timeouts remaining is shown below team names.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1ceu3n4/version_202404271260_during_live_sim_the_number/"
+		],
+		"basketball": true,
+		"football": true
+	},
+	{
+		"version": "2024.04.27.1260",
 		"text": "New UI for the face editor. Thanks @tomkennedy22!",
 		"links": [
 			"/facesjs/editor/",
