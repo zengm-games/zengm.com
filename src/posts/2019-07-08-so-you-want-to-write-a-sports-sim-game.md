@@ -43,7 +43,7 @@ So you can make a mobile app targeting iOS or Android. You could make a Windows 
 If you are still unsure and don't know where to start, try these:
 
 - Database: SQLite, because it's the simplest to set up and use, and it works fine.
-- Programming language: Python, and if you're new to programming, [this is a good free book](https://greenteapress.com/wp/think-python-2e/)
+- Programming language: Python, and if you're new to programming, [this is a good free book](https://allendowney.github.io/ThinkPython/)
 - GUI library: Just print some text output to the console. You can make something pretty later.
 
 Once you have your technologies selected, then start designing your database schema. It doesn't have to be perfect at this stage. You can always go back and fix it later. For team sports, you might come up with these tables:
