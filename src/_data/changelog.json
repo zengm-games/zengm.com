@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2024.05.17.0541",
+		"text": "The Roster Continuity page loads 10x faster in leagues with many seasons.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1cu4nv9/a_couple_small_updates_in_version_202405170541_in/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.05.17.0541",
+		"text": "In real players leagues, the luxury tax is disabled before 2001.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1cu4nv9/a_couple_small_updates_in_version_202405170541_in/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2024.05.10.1123",
 		"text": "New feature: Team Graphs, view scatter plots of any two team stats, plus other stuff like finance data, power rankings, etc.",
 		"links": [
