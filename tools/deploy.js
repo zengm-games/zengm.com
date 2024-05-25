@@ -1,5 +1,5 @@
 const { spawn } = require("node:child_process");
-const cloudflare = require("cloudflare");
+const Cloudflare = require("cloudflare");
 const cloudflareConfig = require("../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 
 const mySpawn = (command, args) => {
@@ -71,15 +71,16 @@ const deploy = async domain => {
 		throw new Error("Missing zone in Cloudflare config file");
 	}
 
-	const cf = cloudflare({
-		email: "jdscheff@gmail.com",
-		key: cloudflareConfig.apiKey,
+	const cloudflare = new Cloudflare({
+		apiEmail: "jdscheff@gmail.com",
+		apiKey: cloudflareConfig.apiKey,
 	});
-
-	const response = await cf.zones.purgeCache(zone, {
+	const response = await cloudflare.cache.purge({
+		zone_id: zone,
 		purge_everything: true,
 	});
-	if (!response.success) {
+	if (!response || JSON.stringify(response) !== JSON.stringify({ id: zone })) {
+		console.log("WEIRD RESPONSE FROM CLOUDFLARE:");
 		console.log(response);
 	}
 

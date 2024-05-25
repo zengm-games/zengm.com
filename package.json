@@ -15,29 +15,29 @@
 		"@11ty/eleventy-navigation": "^0.3.5",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"chokidar-cli": "^3.0.0",
-		"cloudflare": "^2.9.1",
-		"concurrently": "^8.1.0",
+		"cloudflare": "^3.2.0",
+		"concurrently": "^8.2.2",
 		"csso": "^5.0.5",
-		"esbuild": "^0.17.19",
-		"glob": "^10.2.6",
+		"esbuild": "^0.21.4",
+		"glob": "^10.4.1",
 		"hasha": "^5.2.2",
 		"html-minifier-terser": "^7.2.0",
-		"husky": "^8.0.3",
-		"lint-staged": ">=13.2.2",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.5",
 		"markdown-it-attrs": "^4.1.6",
 		"posthtml": "^0.16.6",
 		"posthtml-urls": "^1.0.0",
-		"prettier": "^2.8.8",
-		"purgecss": "^5.0.0",
-		"sass": "^1.62.1",
-		"sharp": "^0.32.1"
+		"prettier": "^3.2.5",
+		"purgecss": "^6.0.0",
+		"sass": "^1.77.2",
+		"sharp": "^0.33.4"
 	},
 	"lint-staged": {
 		"*.{js,json,css,md}": "prettier --write"
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
-		"bootstrap": "5.2.*",
+		"bootstrap": "5.3.3",
 		"bootstrap-dark-5": "^1.1.3"
 	}
 }
