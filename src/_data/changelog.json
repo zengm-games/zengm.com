@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2024.05.25.1021",
+		"text": "You can now view signed free agents (not just available ones) on the Free Agents page, for this season and past seasons.",
+		"links": [
+			"/blog/2024/05/signed-free-agents/",
+			"https://old.reddit.com/r/BasketballGM/comments/1d0liwd/version_202405251021_you_can_now_view_signed_free/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.05.17.0541",
 		"text": "The Roster Continuity page loads 10x faster in leagues with many seasons.",
 		"links": [
