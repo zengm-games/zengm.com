@@ -23,7 +23,7 @@ But then... the goalie doesn't get subbed back into the game! So it's a tie game
 
 <figure><img src="/files/permanent-pulled-goalie.png" class="img-fluid"></figure>
 
-So what happened? Is it just an aggressive strategy where sometimes teams pull the goalie in a tied game? No, that would be too crazy. I did not intent for there to be a pulled goalie in a tied game. It is indeed a bug.
+So what happened? Is it just an aggressive strategy where sometimes teams pull the goalie in a tied game? No, that would be too crazy. I did not intend for there to be a pulled goalie in a tied game. It is indeed a bug.
 
 When I first got the bug report, I almost didn't believe it. I had never heard of this problem before, and it seems like the kind of thing someone would notice.
 
@@ -52,7 +52,7 @@ For it to happen in game 7 of the conference finals... well that constraint make
 
 Okay, so it's a super rare bug that happened to first be noticed in a super important game. But how do I actually fix it?
 
-When a penalty happens, it does a line change, putting in a new line that is randomly missing one of the forwards. The missing player could be a center or a winger - the bug in question only happens if it's a center. The line change gode also looks for a pulled goalie and puts an extra forward out as a 2nd center - except if a center was selected to be missing from the line due to a penalty, then this is actually the 1st center!
+When a penalty happens, it does a line change, putting in a new line that is randomly missing one of the forwards. The missing player could be a center or a winger - the bug in question only happens if it's a center. The line change code also looks for a pulled goalie and puts an extra forward out as a 2nd center - except if a center was selected to be missing from the line due to a penalty, then this is actually the 1st center!
 
 The solution is to pick some other player to sub off if there is no 2nd center. I guess that could still fail in theory if all 6 players were in the penalty box, but that situation is already not supported by the game :)
 
