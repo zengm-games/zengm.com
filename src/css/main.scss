@@ -97,18 +97,18 @@ a {
 	color: var(--purple);
 	text-decoration: none !important;
 }
-a:not(.btn):not(.share-btn), html.dark a:not(.btn):not(.share-btn) {
+a:not(.btn), html.dark a:not(.btn) {
 	color: var(--purple);
 	&:hover {
 		color: var(--purple);
 		text-decoration: underline;
 	}
 }
-.dropdown a:not(.btn):not(.share-btn) {
+.dropdown a:not(.btn) {
 	color: #212529 !important;
 	text-decoration: none !important;
 }
-html.dark .dropdown a:not(.btn):not(.share-btn) {
+html.dark .dropdown a:not(.btn) {
 	color: #f8f9fa !important;
 }
 
