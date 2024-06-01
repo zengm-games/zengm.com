@@ -29,7 +29,7 @@ const feedbacks = {
 		{
 			name: "Tommy Smokes, Barstool Sports",
 			text: "One of the best kept secrets on the Internet.",
-			url: "https://twitter.com/TomScibelli/status/1394737047114424326",
+			url: "https://x.com/TomScibelli/status/1394737047114424326",
 		},
 		{
 			name: "KOT4Q",

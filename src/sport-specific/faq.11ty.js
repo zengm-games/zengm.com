@@ -84,7 +84,7 @@ module.exports = class FAQ {
 <p>No. I'm not convinced that playing time really matters for player development.</p>
 <p>It's a chicken and egg problem. Do good young players get more playing time because they're already good? Or do young players become good if they get more playing time? It's obvious that the first scenario happens. But is it obvious that the second scenario happens? I haven't seen any convincing evidence that it does${
 			sport === "basketball"
-				? ', and there is <a href="https://twitter.com/nicidob/status/1152411949059256320">some evidence that it doesn\'t</a>'
+				? ', and there is <a href="https://x.com/nicidob/status/1152411949059256320">some evidence that it doesn\'t</a>'
 				: ""
 		}.</p>
 <p>I know that's not really a fair argument, because it could be that it's a real effect that is just hard to see in the stats we have available. But if it's hard to see in the stats we have available, does it matter for a game like ${gameName}? Because if it's so difficult to notice in reality, it'd be equally difficult to notice in ${gameName}.</p>

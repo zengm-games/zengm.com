@@ -16,7 +16,7 @@ To improve on that situation, today's two changes are:
 
 <!--more-->
 
-1. AI teams obey the same player mood system that you do. If a player is upset and doens't want to re-sign, he will become a free agent. If a player is willing to re-sign, the AI team will re-sign him if he makes the team better. Thanks [nicidob](https://twitter.com/nicidob) for pushing me to do this - I was planning to do this ever since the original mood implementation years ago, just never did!
+1. AI teams obey the same player mood system that you do. If a player is upset and doens't want to re-sign, he will become a free agent. If a player is willing to re-sign, the AI team will re-sign him if he makes the team better. Thanks [nicidob](https://x.com/nicidob) for pushing me to do this - I was planning to do this ever since the original mood implementation years ago, just never did!
 
 2. You can see players mood towards their current team, not just your team.
 

@@ -28,4 +28,4 @@ For Most Lopsided Trades, it finds the trades where one side produced a lot more
 
 <figure class="overflow-auto"><img src="/files/trade-frivolities-2.png"></figure>
 
-In total, I think all of these historical trade updates this week are going to make it a lot more fun to review the history of your league. If you do that and find an interesting trade, post about it on [Reddit](https://www.reddit.com/r/BasketballGM/), [Twitter](https://twitter.com/basketball_gm/), or [Discord](/discord/)!
+In total, I think all of these historical trade updates this week are going to make it a lot more fun to review the history of your league. If you do that and find an interesting trade, post about it on [Reddit](https://www.reddit.com/r/BasketballGM/), [Twitter](https://x.com/basketball_gm/), or [Discord](/discord/)!

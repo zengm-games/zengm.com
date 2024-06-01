@@ -29,4 +29,4 @@ Another cool FiveThirtyEight-inspired feature is to incorporate injuries into te
 
 Like I mentioned above, team ratings are now viewable on the Roster and Power Rankings pages. The power rankings are also much more meaningful now - in the past, they were pretty stupid. And it's also now possible to view the power rankings for past seasons.
 
-As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](/discord/), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:jeremy@zengm.com).
+As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](/discord/), [Twitter](https://x.com/basketball_gm), and [email](mailto:jeremy@zengm.com).

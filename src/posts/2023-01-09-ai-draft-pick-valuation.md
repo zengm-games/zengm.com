@@ -10,7 +10,7 @@ tags:
 
 There have been a lot of blog posts about the trade AI in the past - just click that Trades tag above if you don't believe me! And yet, the trade AI remains flawed.
 
-The most ambitious (and so far failed) attempt at improving the trade AI came from [nicidob](https://twitter.com/nicidob), where he tried to come up with a model to predict how the various "assets" a team owns (not just players and picks, but also cap space) contribute to the likelihood of winning a championship over the next several years.
+The most ambitious (and so far failed) attempt at improving the trade AI came from [nicidob](https://x.com/nicidob), where he tried to come up with a model to predict how the various "assets" a team owns (not just players and picks, but also cap space) contribute to the likelihood of winning a championship over the next several years.
 
 <!--more-->
 

@@ -66,7 +66,7 @@ This is really minor, but I added TS% to the advanced team stats table. I'm not 
 
 For a very long time, the ovr formula has been a linear combination of individual ratings, with the weights roughly determined by linear regression to stats like EWA and WS.
 
-Earlier this year, the homie [nicidob](https://twitter.com/nicidob) pointed out that it would make more sense to look at +/-, since the actual impact of a player on the outcome of the game is a better metric of his performance than some aggregate box score stat.
+Earlier this year, the homie [nicidob](https://x.com/nicidob) pointed out that it would make more sense to look at +/-, since the actual impact of a player on the outcome of the game is a better metric of his performance than some aggregate box score stat.
 
 My initial response was "ugh but +/- is such a noisy stat". I mean think about it, your performance in +/- depends so much on your teammates and your opponent, how can it be meaningful unless you do some complex adjustment? But that was just me being stupid. BBGM is a simulation game. It's easy to simulate thousands of seasons. With thousands of seasons of data, it doesn't matter that +/- for a game (or even for multiple seasons) is noisy. It all averages out.
 
@@ -112,4 +112,4 @@ Because this is such a minor change, I am appyling it "lazily" - by that I mean 
 
 Like I said at the top, [this is all in the beta now](https://beta.basketball-gm.com/). If all goes well, I'll release it on the main site some time this week.
 
-As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](/discord/), [Twitter](https://twitter.com/basketball_gm), and [email](mailto:jeremy@zengm.com).
+As always, feedback is welcome on [Reddit](http://www.reddit.com/r/BasketballGM/), [Discord](/discord/), [Twitter](https://x.com/basketball_gm), and [email](mailto:jeremy@zengm.com).
