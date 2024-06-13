@@ -1,5 +1,33 @@
 [
 	{
+		"version": "2024.06.13.0520",
+		"text": "You can now use gzip compression when exporting/importing leagues, which produces much smaller file sizes.",
+		"links": [
+			"/blog/2024/06/gzip/",
+			"https://old.reddit.com/r/BasketballGM/comments/1dey2nr/version_202406130520_you_can_now_use_gzip/"
+		],
+		"hockey": true
+	},
+	{
+		"date": "2024.06.13.0520",
+		"text": "Added support for logical \"and\" operations in table column filters, like >40&<60 to display players with a rating between 40 and 60, or !DP&!FA to remove draft prospects and free agents from the Player Ratings table.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1dey2nr/version_202406130520_you_can_now_use_gzip/l8f1t25/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.06.13.0520",
+		"text": "Fixed GAA calculation so it's based on minutes played rather than GP.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1dey2nr/version_202406130520_you_can_now_use_gzip/l8f1t25/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2024.05.25.1021",
 		"text": "You can now view signed free agents (not just available ones) on the Free Agents page, for this season and past seasons.",
 		"links": [
@@ -4475,7 +4503,7 @@
 	},
 	{
 		"date": "2020-01-03",
-		"text": "Added support for boolean \"or\" operations in table column filters, like \"C|PF\" to display centers and power forwards.",
+		"text": "Added support for logical \"or\" operations in table column filters, like \"C|PF\" to display centers and power forwards.",
 		"links": [
 			"https://old.reddit.com/r/BasketballGM/comments/eji5hf/new_in_version_202001031015_boolean_or_operations/",
 			"https://old.reddit.com/r/Football_GM/comments/eji5i9/new_in_version_202001031016_boolean_or_operations/"

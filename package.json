@@ -4,7 +4,7 @@
 		"build": "rm -rf _site && pnpm run sass && NODE_ENV=production eleventy && rm -rf dist && mkdir dist && cp -r _site dist/zengm.com && pnpm run split-domains",
 		"split-domains": "node tools/fix-links.js && mv dist/zengm.com/basketball dist/basketball-gm.com && mv dist/zengm.com/football dist/football-gm.com",
 		"deploy": "pnpm run build && node tools/deploy.js",
-		"start": "rm -rf _site && concurrently --kill-others \"pnpm run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
+		"dev": "rm -rf _site && concurrently --kill-others \"pnpm run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
 		"watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"pnpm run sass\"",
 		"sass": "sass src/css:src/css",
 		"prepare": "husky install"
