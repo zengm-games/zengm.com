@@ -6,6 +6,9 @@
 			"/blog/2024/06/gzip/",
 			"https://old.reddit.com/r/BasketballGM/comments/1dey2nr/version_202406130520_you_can_now_use_gzip/"
 		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
 		"hockey": true
 	},
 	{
