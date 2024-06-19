@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2024.06.18.0756",
+		"text": "Updated real players rosters so you can start a league after the 2024 playoffs.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1div44o/version_202406180756_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2024.06.18.0756",
+		"text": "Slight change to player mood for re-signing superstars (they are more likely to be willing to re-sign).",
+		"links": [
+			"/blog/2024/06/superstar-fickleness/",
+			"https://old.reddit.com/r/BasketballGM/comments/1div57b/version_202406180756_slight_change_to_player_mood/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.06.13.0520",
 		"text": "You can now use gzip compression when exporting/importing leagues, which produces much smaller file sizes.",
 		"links": [
