@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2024.06.25.1347",
+		"text": "New league setting \"Always Show Country\" which shows a player's country flag next to their name basically everywhere.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1donrjp/version_202406251347_new_league_setting_always/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.06.18.0756",
 		"text": "Updated real players rosters so you can start a league after the 2024 playoffs.",
 		"links": [
