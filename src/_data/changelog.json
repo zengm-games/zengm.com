@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2024.06.28.0972",
+		"text": "Updated real players rosters so you can start a league after the 2024 draft.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1dqt2ij/version_202406280972_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2024.06.25.1347",
 		"text": "New league setting \"Always Show Country\" which shows a player's country flag next to their name basically everywhere.",
 		"links": [
