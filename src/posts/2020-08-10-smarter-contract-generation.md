@@ -6,6 +6,7 @@ tags:
   - post
   - Contracts
   - Finances
+  - Free Agency
   - New Feature
 ---
 

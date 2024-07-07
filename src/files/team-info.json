@@ -1,18 +1,18 @@
 {
 	"PRO": {
 		"abbrev": "PRO",
-		"colors": ["#1c73bb", "#ffd600", "#0c5983"],
-		"imgURL": "/img/logos-primary/LV.svg",
-		"imgURLSmall": "/img/logos-secondary/LV.svg",
-		"name": "Blue Chips",
-		"pop": 0.2,
+		"colors": ["#303443", "#ffff00", "#4f3ad5"],
+		"imgURL": "/img/logos-primary/PRO.svg",
+		"imgURLSmall": "/img/logos-secondary/PRO.svg",
+		"name": "Shoggoths",
+		"pop": 1.6,
 		"region": "Providence"
 	},
 	"BOS": {
 		"abbrev": "BOS",
-		"colors": ["#0d435e", "#f0494a", "#cccccc"],
+		"colors": ["#ffffff", "#e70000", "#003188"],
 		"imgURL": "/img/logos-primary/BOS.svg",
-		"imgURLSmall": "/img/logos-primary/BOS.svg",
+		"imgURLSmall": "/img/logos-secondary/BOS.svg",
 		"name": "Massacre",
 		"pop": 7.3,
 		"region": "Boston"
@@ -82,9 +82,9 @@
 	},
 	"DTF": {
 		"abbrev": "DET",
-		"colors": ["#3a61b6", "#9eb7e6", "#0a1130"],
+		"colors": ["#007681", "#d6d6d6", "#ffa400"],
 		"imgURL": "/img/logos-primary/DET.svg",
-		"imgURLSmall": "/img/logos-primary/DET.svg",
+		"imgURLSmall": "/img/logos-secondary/DET.svg",
 		"name": "Muscle",
 		"pop": 4,
 		"region": "Detroit"
@@ -127,9 +127,9 @@
 	},
 	"FTW": {
 		"abbrev": "FTW",
-		"colors": ["#3a61b6", "#9eb7e6", "#0a1130"],
+		"colors": ["#007681", "#d6d6d6", "#ffa400"],
 		"imgURL": "/img/logos-primary/DET.svg",
-		"imgURLSmall": "/img/logos-primary/DET.svg",
+		"imgURLSmall": "/img/logos-secondary/DET.svg",
 		"name": "Muscle",
 		"pop": 0.4,
 		"region": "Fort Wayne"
@@ -163,7 +163,7 @@
 	},
 	"TRI": {
 		"abbrev": "TRI",
-		"colors": ["#5c4a99", "#f0e81c", "#211e1e"],
+		"colors": ["#291091", "#ae7c00", "#00d1df"],
 		"imgURL": "/img/logos-primary/ATL.svg",
 		"imgURLSmall": "/img/logos-secondary/ATL.svg",
 		"name": "Gold Club",
@@ -208,7 +208,7 @@
 	},
 	"MLH": {
 		"abbrev": "MLG",
-		"colors": ["#5c4a99", "#f0e81c", "#211e1e"],
+		"colors": ["#291091", "#ae7c00", "#00d1df"],
 		"imgURL": "/img/logos-primary/ATL.svg",
 		"imgURLSmall": "/img/logos-secondary/ATL.svg",
 		"name": "Gold Club",
@@ -217,7 +217,7 @@
 	},
 	"STL": {
 		"abbrev": "STL",
-		"colors": ["#5c4a99", "#f0e81c", "#211e1e"],
+		"colors": ["#291091", "#ae7c00", "#00d1df"],
 		"imgURL": "/img/logos-primary/ATL.svg",
 		"imgURLSmall": "/img/logos-secondary/ATL.svg",
 		"name": "Gold Club",
@@ -226,9 +226,9 @@
 	},
 	"DET": {
 		"abbrev": "DET",
-		"colors": ["#3a61b6", "#9eb7e6", "#0a1130"],
+		"colors": ["#007681", "#d6d6d6", "#ffa400"],
 		"imgURL": "/img/logos-primary/DET.svg",
-		"imgURLSmall": "/img/logos-primary/DET.svg",
+		"imgURLSmall": "/img/logos-secondary/DET.svg",
 		"name": "Muscle",
 		"pop": 4,
 		"region": "Detroit"
@@ -325,7 +325,7 @@
 	},
 	"ATL": {
 		"abbrev": "ATL",
-		"colors": ["#5c4a99", "#f0e81c", "#211e1e"],
+		"colors": ["#291091", "#ae7c00", "#00d1df"],
 		"imgURL": "/img/logos-primary/ATL.svg",
 		"imgURLSmall": "/img/logos-secondary/ATL.svg",
 		"name": "Gold Club",
@@ -505,7 +505,7 @@
 	},
 	"DAL": {
 		"abbrev": "DAL",
-		"colors": ["#be2026", "#2b2e81", "#ffffff"],
+		"colors": ["#000000", "#e08200", "#436431"],
 		"imgURL": "/img/logos-primary/DAL.svg",
 		"imgURLSmall": "/img/logos-secondary/DAL.svg",
 		"name": "Snipers",
