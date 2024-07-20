@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2024.07.20.1055",
+		"text": "The \"Advanced Player Search\" page (in the Stats menu) lets you view ratings, stats, and bios of players all in one table. And it does a lot more too!",
+		"links": [
+			"/blog/2024/07/advanced-player-search/",
+			"https://old.reddit.com/r/BasketballGM/comments/1e86aew/version_202407201055_new_advanced_player_search/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2024.06.28.0972",
 		"text": "Updated real players rosters so you can start a league after the 2024 draft.",
 		"links": [
