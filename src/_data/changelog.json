@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2024.07.21.1255",
+		"text": "Updated real players rosters so you can start a league at the 2025 preseason.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1e91kfw/version_202407211255_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2024.07.20.1055",
 		"text": "The \"Advanced Player Search\" page (in the Stats menu) lets you view ratings, stats, and bios of players all in one table. And it does a lot more too!",
 		"links": [
