@@ -1,5 +1,28 @@
 [
 	{
+		"version": "2024.07.26.1089",
+		"text": "New \"Team Notes\" feature that lets you write custom text on a team's roster page, like if you want to write something to remember about a special team.",
+		"links": [
+			"/blog/2024/07/team-notes/",
+			"https://old.reddit.com/r/BasketballGM/comments/1ed0gpf/version_202407261089_new_team_notes_feature_that/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.07.26.1089",
+		"text": "Improved performance of past seasons Roster and Power Rankings pages for leagues with roughly 200+ seasons.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1ed0gpf/version_202407261089_new_team_notes_feature_that/lf3qnri/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.07.21.1255",
 		"text": "Updated real players rosters so you can start a league at the 2025 preseason.",
 		"links": [

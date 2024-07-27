@@ -4,6 +4,7 @@ title: Advanced Player Search
 date: 2024-07-20
 tags:
   - post
+  - New Feature
   - UI
 ---
 
