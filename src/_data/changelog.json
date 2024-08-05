@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2024.08.04.1229",
+		"text": "New setting to play playoff or finals games at a neutral site.",
+		"links": [
+			"/blog/2024/08/neutral-site/",
+			"https://old.reddit.com/r/BasketballGM/comments/1ekagjc/small_new_feature_in_version_202408041229_play/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.07.26.1089",
 		"text": "New \"Team Notes\" feature that lets you write custom text on a team's roster page, like if you want to write something to remember about a special team.",
 		"links": [
