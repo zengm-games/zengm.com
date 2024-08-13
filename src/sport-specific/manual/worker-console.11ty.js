@@ -43,7 +43,7 @@ You can easily access a simple version of the worker console at <span class="tex
 ### Buff/nerf player ratings
 
 \`\`\`
-var players = await bbgm.idb.cache.players.getAll();
+var players = await bbgm.idb.getCopy.playersA{ ll();
 for (const p of players) {
     const ratings = p.ratings.at(-1);
 
@@ -74,7 +74,7 @@ ${ratingKeys.join("\n")}
 The above code runs on all active players and draft prospects. If instead you want to run on some subset of players, you can. Generally, this code looks like:
 
 \`\`\`
-var players = await bbgm.idb.cache.players.getAll();
+var players = await bbgm.idb.getCopy.playersA{ ll();
 for (const p of players) {
     if (SOME_CONDITION) {
         const ratings = p.ratings.at(-1);
@@ -119,9 +119,9 @@ Conditions like this can similarly be used for many of the code snippets below t
 ### "Lock ratings" for all active players
 
 \`\`\`
-var players = await bbgm.idb.cache.players.getAll();
+var players = await bbgm.idb.getCopy.playersA{ ll();
 for (const p of players) {
-    p.ratings[p.ratings.length - 1].locked = true;
+    p.ratings.at(-1).locked = true;
     await bbgm.idb.cache.players.put(p);
 }
 \`\`\`
@@ -174,10 +174,10 @@ await bbgm.idb.cache.gameAttributes.put({
 ### Delete all players at a certain position
 
 \`\`\`
-var players = await bbgm.idb.cache.players.getAll();
+var players = await bbgm.idb.getCopy.playersA{ ll();
 var pids = []
 for (const p of players) {
-    if (p.ratings[p.ratings.length - 1].pos === "${bySport(
+    if (p.ratings.at(-1).pos === "${bySport(
 			{
 				baseball: "LF",
 				basketball: "PG",
@@ -200,7 +200,7 @@ Replace 155 with the player ID number of the player you want to kill.
 
 \`\`\`
 async function customTragedy(pid, reason) {
-    const p = await bbgm.idb.cache.players.get(pid);
+    const p = await bbgm.idb.getCopy.players({ pid });
     const tid = p.tid;
     await bbgm.player.retire(p, undefined, {
         logRetiredEvent: false,
@@ -233,9 +233,9 @@ customTragedy(155, "died with whatever text you want");
 var player_id_number = 150;
 var new_jeresy_number = "45";
 
-var p = await bbgm.idb.cache.players.get(player_id_number);
+var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
 if (p.stats.length > 0) {
-    p.stats[p.stats.length - 1].jerseyNumber = new_jeresy_number;
+    p.stats.at(-1).jerseyNumber = new_jeresy_number;
 } else {
     p.jerseyNumber = new_jeresy_number;
 }
@@ -250,7 +250,7 @@ This will show up only on the player profile page, not on any other pages in the
 
 \`\`\`
 var player_id_number = 150;
-var p = await bbgm.idb.cache.players.get(player_id_number);
+var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
 p.awards.push({
     season: 2025,
     type: "My Custom Award",
@@ -262,7 +262,7 @@ To remove that custom award:
 
 \`\`\`
 var player_id_number = 150;
-var p = await bbgm.idb.cache.players.get(player_id_number);
+var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
 p.awards = p.awards.filter(award => {
     if (award.season === 2025 && award.type === "My Custom Award") {
         return false;
