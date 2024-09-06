@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2024.09.05.1233",
+		"text": "Added next season's projected salary cap increase to real player rosters. This makes 2025 free agency more normal, rather than everyone being over the cap.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1fa2670/version_202409051233_added_next_seasons_projected/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2024.08.20.1370",
+		"text": "On the Trade Summary page, the next transaction for each player is shown, allowing you to explore the entire tree of trades stemming from one initial trade.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1exeqsp/version_202408201370_on_the_trade_summary_page/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.08.04.1229",
 		"text": "New setting to play playoff or finals games at a neutral site.",
 		"links": [
