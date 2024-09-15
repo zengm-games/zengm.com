@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2024.09.14.1190",
+		"text": "Add custom player mood entries from the Edit Player page.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1fgzgl3/version_202409141190_add_custom_player_mood/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.09.14.1190",
+		"text": "You can edit the Player Biographical Info settings outside of God Mode.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1fgzgl3/version_202409141190_add_custom_player_mood/ln647l5/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.09.05.1233",
 		"text": "Added next season's projected salary cap increase to real player rosters. This makes 2025 free agency more normal, rather than everyone being over the cap.",
 		"links": [
