@@ -43,7 +43,7 @@ You can easily access a simple version of the worker console at <span class="tex
 ### Buff/nerf player ratings
 
 \`\`\`
-var players = await bbgm.idb.getCopy.playersA{ ll();
+var players = await bbgm.idb.cache.players.getAll();
 for (const p of players) {
     const ratings = p.ratings.at(-1);
 
@@ -74,7 +74,7 @@ ${ratingKeys.join("\n")}
 The above code runs on all active players and draft prospects. If instead you want to run on some subset of players, you can. Generally, this code looks like:
 
 \`\`\`
-var players = await bbgm.idb.getCopy.playersA{ ll();
+var players = await bbgm.idb.cache.players.getAll();
 for (const p of players) {
     if (SOME_CONDITION) {
         const ratings = p.ratings.at(-1);
@@ -119,7 +119,7 @@ Conditions like this can similarly be used for many of the code snippets below t
 ### "Lock ratings" for all active players
 
 \`\`\`
-var players = await bbgm.idb.getCopy.playersA{ ll();
+var players = await bbgm.idb.cache.players.getAll();
 for (const p of players) {
     p.ratings.at(-1).locked = true;
     await bbgm.idb.cache.players.put(p);
@@ -174,7 +174,7 @@ await bbgm.idb.cache.gameAttributes.put({
 ### Delete all players at a certain position
 
 \`\`\`
-var players = await bbgm.idb.getCopy.playersA{ ll();
+var players = await bbgm.idb.cache.players.getAll();
 var pids = []
 for (const p of players) {
     if (p.ratings.at(-1).pos === "${bySport(
