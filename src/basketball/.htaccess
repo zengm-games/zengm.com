@@ -1,4 +1,4 @@
-Redirect 301 /ads.txt https://a.pub.network/basketball-gm-com/ads.txt
+Redirect 301 /ads.txt https://ads.adthrive.com/sites/64b02c6a66495b53bc728959/ads.txt
 RedirectMatch "^/discord" "https://discord.gg/caPFuM9"
 
 RewriteEngine On

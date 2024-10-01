@@ -7,30 +7,30 @@
 		"dev": "rm -rf _site && concurrently --kill-others \"pnpm run watch-sass\" \"NODE_ENV=development eleventy --quiet --serve\"",
 		"watch-sass": "chokidar --initial \"src/css/*.scss\" -c \"pnpm run sass\"",
 		"sass": "sass src/css:src/css",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"private": true,
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-navigation": "^0.3.5",
-		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
 		"chokidar-cli": "^3.0.0",
-		"cloudflare": "^3.2.0",
-		"concurrently": "^8.2.2",
+		"cloudflare": "^3.5.0",
+		"concurrently": "^9.0.1",
 		"csso": "^5.0.5",
-		"esbuild": "^0.21.4",
-		"glob": "^10.4.1",
+		"esbuild": "^0.24.0",
+		"glob": "^10.4.5",
 		"hasha": "^5.2.2",
 		"html-minifier-terser": "^7.2.0",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.5",
-		"markdown-it-attrs": "^4.1.6",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"markdown-it-attrs": "^4.2.0",
 		"posthtml": "^0.16.6",
 		"posthtml-urls": "^1.0.0",
-		"prettier": "^3.2.5",
+		"prettier": "^3.3.3",
 		"purgecss": "^6.0.0",
-		"sass": "^1.77.2",
-		"sharp": "^0.33.4"
+		"sass": "1.77.6",
+		"sharp": "^0.33.5"
 	},
 	"lint-staged": {
 		"*.{js,json,css,md}": "prettier --write"
