@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2024.10.03.0628",
+		"text": "Fewer games are started by relievers, and starters are more likely to pitch in order once every 5 games.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1fv94ni/version_202410030628_fewer_games_are_started_by/?"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2024.09.14.1190",
 		"text": "Add custom player mood entries from the Edit Player page.",
 		"links": [
