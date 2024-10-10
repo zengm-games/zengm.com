@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2024.10.09.1291",
+		"text": "At Tools > Danger Zone, console scripts can now use the console.log and console.table commands to view output, which previously required messing around in your browser debug tools and was not possible at all in some browsers.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1g07s4g/version_202410091291_at_tools_danger_zone_console/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.10.03.0628",
 		"text": "Fewer games are started by relievers, and starters are more likely to pitch in order once every 5 games.",
 		"links": [
