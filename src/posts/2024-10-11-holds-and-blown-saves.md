@@ -33,11 +33,11 @@ All of this is very confusing and I probably make some mistakes or missed some e
 
 And also, here are some examples of what you'll now see in ZenGM Baseball.
 
-Here's a nice traditional hold for maintaining the lead in the 8th inning:
+Here's a nice traditional hold for maintaining the lead in the 7th and 8th innings:
 
 <figure class="overflow-auto"><img src="/files/holds-and-blown-saves-1.png"></figure>
 
-This next one looks the same as above, but there's no save! Why? Because the offense increased the lead to 4 in the top of the 9th, so it was no longer a save situation by the bottom of the 9th!
+This next one looks similar, but there's no save! Why? Because the offense increased the lead to 4 in the top of the 9th, so it was no longer a save situation by the bottom of the 9th!
 
 <figure class="overflow-auto"><img src="/files/holds-and-blown-saves-2.png"></figure>
 
