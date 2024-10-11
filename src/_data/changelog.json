@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2024.10.11.0840",
+		"text": "Added holds and blown saves stats for relief pitchers.",
+		"links": [
+			"/blog/2024/10/holds-and-blown-saves/",
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1g1g1ld/version_202410110840_added_holds_and_blown_saves/?"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2024.10.09.1291",
 		"text": "At Tools > Danger Zone, console scripts can now use the console.log and console.table commands to view output, which previously required messing around in your browser debug tools and was not possible at all in some browsers.",
 		"links": [
@@ -14,7 +23,7 @@
 		"version": "2024.10.03.0628",
 		"text": "Fewer games are started by relievers, and starters are more likely to pitch in order once every 5 games.",
 		"links": [
-			"https://old.reddit.com/r/ZenGMBaseball/comments/1fv94ni/version_202410030628_fewer_games_are_started_by/?"
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1fv94ni/version_202410030628_fewer_games_are_started_by/"
 		],
 		"baseball": true
 	},
