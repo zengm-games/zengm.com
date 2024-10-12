@@ -131,16 +131,11 @@ for (const p of players) {
 ### List all the players who have died
 
 \`\`\`
-bbgm.iterate(
-    bbgm.idb.league.transaction("players").store,
-    undefined,
-    undefined,
-    player => {
-        if (typeof player.diedYear === "number") {
-            console.log(player.firstName + " " + player.lastName + " (" + player.born.year + " - " + player.diedYear + ")");
-        }
-    },
-);
+for await (const { value: p } of bbgm.idb.league.transaction("players").store) {
+    if (typeof p.diedYear === "number") {
+        console.log(\`\${p.firstName} \${p.lastName} (\${p.born.year}-\${p.diedYear})\`);
+    }
+}
 \`\`\`
 
 ---
