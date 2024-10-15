@@ -1,10 +1,27 @@
 [
 	{
+		"version": "2024.10.15.1107",
+		"text": "Improved UI for the four factors in box scores.",
+		"links": [
+			"/blog/2024/10/four-factors-improvements/",
+			"https://old.reddit.com/r/BasketballGM/comments/1g4kc9m/improved_ui_for_the_four_factors_in_box_scores/"
+		],
+		"baseball": true
+	},
+	{
+		"version": "2024.10.14.1177",
+		"text": "Improved batting order when a starter is injured - now it will only reorder the batting order starting with the injured player's spot, rather than the whole lineup.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1g3u4s3/version_202410141177_improved_batting_order_when/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2024.10.11.0840",
 		"text": "Added holds and blown saves stats for relief pitchers.",
 		"links": [
 			"/blog/2024/10/holds-and-blown-saves/",
-			"https://old.reddit.com/r/ZenGMBaseball/comments/1g1g1ld/version_202410110840_added_holds_and_blown_saves/?"
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1g1g1ld/version_202410110840_added_holds_and_blown_saves/"
 		],
 		"baseball": true
 	},
