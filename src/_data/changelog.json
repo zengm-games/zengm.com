@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2024.10.16.1343",
+		"text": "On the Edit Player page, added a button to give a player a random injury (or heal their current injury, if one exists). Also made the entire form take up less space on mobile.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1g5gldk/version_202410161343_on_the_edit_player_page/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.10.16.1343",
+		"text": "Teams use a 4 man pitching rotation in the playoffs, so now the 5th starter is treated as a reliever in the playoffs rather than never playing.",
+		"links": [
+			"https://old.reddit.com/r/ZenGMBaseball/comments/1g5glpl/version_202410161343_teams_use_a_4_man_pitching/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2024.10.15.1107",
 		"text": "Improved UI for the four factors in box scores.",
 		"links": [
