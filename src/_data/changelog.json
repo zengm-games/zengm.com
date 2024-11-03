@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2024.10.29.0725",
+		"text": "Added a button you can click to refresh trade proposals, rather than waiting until they automatically refresh every 10 games.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1gey9he/version_202410290725_added_a_button_you_can_click/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2024.10.29.0725",
+		"text": "Defensive players are more likely to win Finals MVP, which was almost impossible previously.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/1gey9iy/version_202410290725_defensive_players_are_more/"
+		],
+		"football": true
+	},
+	{
 		"version": "2024.10.16.1343",
 		"text": "On the Edit Player page, added a button to give a player a random injury (or heal their current injury, if one exists). Also made the entire form take up less space on mobile.",
 		"links": [

@@ -5,7 +5,7 @@ date: 2019-08-16
 tags:
   - post
   - NBA
-  - Non-BBGM
+  - Non-ZenGM
   - Statistics
 ---
 
