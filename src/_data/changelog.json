@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2024.11.07.0931",
+		"text": "On mobile, added a menu to the Trading Block, Saved Trades, and Trade Proposals pages to switch between table view and list view. Previously list view was only on mobile and table view was only on desktop.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1gm0cxj/version_202411070931_on_mobile_added_a_menu_to/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.11.05.1313",
 		"text": "The Trading Block now remembers trade proposals even if you navigate away.",
 		"links": [
