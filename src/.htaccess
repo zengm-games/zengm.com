@@ -1,6 +1,6 @@
 Redirect 301 /ads.txt https://a.pub.network/zengm-com/ads.txt
 Redirect 301 /facesjs/editor.html /facesjs/editor/
-RedirectMatch "^/discord" "https://discord.gg/caPFuM9"
+RedirectMatch "^/discord" "https://discord.gg/basketball-gm-and-zengm-290013534023057409"
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
