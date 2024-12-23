@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2024.12.23.0568",
+		"text": "Improvements to the contract negotiation UI, and some other small fixes.",
+		"links": [
+			"/blog/2024/12/small-improvements/",
+			"https://old.reddit.com/r/BasketballGM/comments/1hkox2g/version_202412230568_improvements_to_the_contract/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2024.11.07.0931",
 		"text": "On mobile, added a menu to the Trading Block, Saved Trades, and Trade Proposals pages to switch between table view and list view. Previously list view was only on mobile and table view was only on desktop.",
 		"links": [
