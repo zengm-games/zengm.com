@@ -116,6 +116,73 @@ You can combine these conditions too, like this is all draft prospects at one po
 
 Conditions like this can similarly be used for many of the code snippets below too.
 
+### Generate a random player
+
+\`\`\`
+async function createPlayer(age, ovr, country) {
+    const name = await bbgm.player.name(country);
+    const p = bbgm.player.generate(bbgm.PLAYER.FREE_AGENT, age, bbgm.g.get("season") - 1, false, 34, name);
+    await bbgm.player.develop(p, 0);
+    const ratings = p.ratings.at(-1);
+    ratings.season = bbgm.g.get("season");
+
+    // Adjust ratings up/down
+    const maxTries = 100;
+    let i = 0;
+    if (ratings.ovr > ovr) {
+        while (ratings.ovr > ovr) {
+            for (const key of bbgm.RATINGS) {
+                ratings[key] = bbgm.player.limitRating(ratings[key] - 1);
+                await bbgm.player.develop(p, 0);
+                if (ratings.ovr <= ovr) {
+                    break;
+                }
+            }
+        }
+        await bbgm.player.updateValues(p);
+    } else if (ratings.ovr < ovr) {
+        while (ratings.ovr < ovr) {
+            for (const key of bbgm.RATINGS) {
+                ratings[key] = bbgm.player.limitRating(ratings[key] + 1);
+                await bbgm.player.develop(p, 0);
+                if (ratings.ovr >= ovr) {
+                    break;
+                }
+            }
+        }
+        await bbgm.player.updateValues(p);
+    }
+
+    return p;
+}
+
+var age = 25;
+var ovr = 70;
+var p = await createPlayer(age, ovr, "England");
+
+await bbgm.idb.cache.players.put(p);
+console.log(\`Created \${p.firstName} \${p.lastName}\`);
+\`\`\`
+
+That part at the bottom is customizable. The above code creates a 25 year old 70 ovr player from England. You could also do something like this:
+
+\`\`\`
+var age = bbgm.random.randInt(25, 30);
+var ovr = bbgm.random.randInt(50, 70);
+var p = await createPlayer(age, ovr);
+p.tid = 5;
+p.contract = {
+    amount: 5000,
+    exp: 2028,
+};
+p.college = "Nebraska";
+
+await bbgm.idb.cache.players.put(p);
+console.log(\`Created \${p.firstName} \${p.lastName}\`);
+\`\`\`
+
+That creates a 25-30 year old player with 50-70 ovr from a random country, and puts him on team 5 (based on team ID number) with a $5M/year contract expiring in 2028. And it also sets his college to Nebraska.
+
 ### "Lock ratings" for all active players
 
 \`\`\`
