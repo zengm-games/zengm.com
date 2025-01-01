@@ -265,9 +265,13 @@ module.exports = function (eleventyConfig) {
 </div>`;
 	});
 
+	// Estimate of events lost by GA, compared to my new SQL tracker
+	const seasonsSimmedGAFactor = 1.25;
+
 	// See ~/Documents/ZenGM/Annual Traffic, from GA.ods
 	const trafficData = [
 		{
+			// Take data from Non-Bounce Sessions!!!
 			title: "Sessions",
 			data: [
 				["Year", "Basketball", "Football", "Hockey", "Baseball"],
@@ -280,11 +284,12 @@ module.exports = function (eleventyConfig) {
 				["2019", 2265825, 225262, null, null],
 				["2020", 3233971, 532886, null, null],
 				["2021", 4209234, 835771, 179351, null],
-				["2022", 5582796, 1327709, 242945, 210681],
-				["2023", 6037834, 1525607, 304899, 363971],
+				["2022", 4804554, 1136121, 219768, 181754],
+				["2023", 4873255, 1214634, 237702, 282542],
+				["2024", 4605106, 1338584, 265473, 333059],
 			],
 		},
-		{
+		/*{
 			title: "Pageviews",
 			data: [
 				["Year", "Basketball", "Football", "Hockey", "Baseball"],
@@ -298,7 +303,56 @@ module.exports = function (eleventyConfig) {
 				["2020", 299207611, 47256207, null, null],
 				["2021", 354828366, 61465730, 12222619, null],
 				["2022", 420082784, 85928529, 15757811, 11813891],
-				["2023", 512141366, 106477587, 19796988, 21253512],
+				["2023", 512152630, 106479944, 19797050, 21253770],
+				["2024", 502188433, 117211577, 21033870, 22859560],
+			],
+		},*/
+		{
+			title: "Seasons Simulated",
+			data: [
+				["Year", "Basketball", "Football", "Hockey", "Baseball"],
+				["2013", Math.round(seasonsSimmedGAFactor * 332684), null, null, null],
+				["2014", Math.round(seasonsSimmedGAFactor * 965891), null, null, null],
+				["2015", Math.round(seasonsSimmedGAFactor * 1866662), null, null, null],
+				["2016", Math.round(seasonsSimmedGAFactor * 2094575), null, null, null],
+				["2017", Math.round(seasonsSimmedGAFactor * 3518710), null, null, null],
+				["2018", Math.round(seasonsSimmedGAFactor * 4873239), null, null, null],
+				[
+					"2019",
+					Math.round(seasonsSimmedGAFactor * 6418079),
+					Math.round(seasonsSimmedGAFactor * 298515),
+					null,
+					null,
+				],
+				[
+					"2020",
+					Math.round(seasonsSimmedGAFactor * 8751905),
+					Math.round(seasonsSimmedGAFactor * 646723),
+					null,
+					null,
+				],
+				[
+					"2021",
+					Math.round(seasonsSimmedGAFactor * 10409799),
+					Math.round(seasonsSimmedGAFactor * 1005804),
+					Math.round(seasonsSimmedGAFactor * 248425),
+					null,
+				],
+				[
+					"2022",
+					Math.round(seasonsSimmedGAFactor * 12008046),
+					Math.round(seasonsSimmedGAFactor * 1514495),
+					Math.round(seasonsSimmedGAFactor * 320806),
+					Math.round(seasonsSimmedGAFactor * 222685),
+				],
+				[
+					"2023",
+					Math.round(seasonsSimmedGAFactor * 14139524),
+					Math.round(seasonsSimmedGAFactor * 1930638),
+					Math.round(seasonsSimmedGAFactor * 452250),
+					Math.round(seasonsSimmedGAFactor * 443270),
+				],
+				["2024", 17501562, 2454771, 530665, 619663],
 			],
 		},
 		{
@@ -315,7 +369,8 @@ module.exports = function (eleventyConfig) {
 				["2020", 206.1, 32.93, null, null],
 				["2021", 264.51, 51.15, 9.97, null],
 				["2022", 298.12, 71.53, 12.59, 10.8],
-				["2023", 335.36, 83.57, 15.86, 18.82],
+				["2023", 335.37, 83.55, 15.88, 18.81],
+				["2024", 304.43, 85.88, 15.91, 19.24],
 			],
 		},
 	];
