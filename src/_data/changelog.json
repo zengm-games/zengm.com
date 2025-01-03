@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.01.03.0917",
+		"text": "Added a new setting \"RPD Affects Potential\" which is useful in some types of historical sims.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1hsvxwi/version_202501030917_new_setting_rpd_affects/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2024.12.23.0568",
 		"text": "Improvements to the contract negotiation UI, and some other small fixes.",
 		"links": [
