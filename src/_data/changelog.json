@@ -1,5 +1,18 @@
 [
 	{
+		"version": "2025.01.10.1070",
+		"text": "Trading block filters! Specify what type of assets you want the AI to offer you.",
+		"links": [
+			"/blog/2025/01/trading-block-filters/",
+			"https://old.reddit.com/r/BasketballGM/comments/1hyhdzi/trading_block_filters_new_feature_in_version/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true,
+		"big": true
+	},
+	{
 		"version": "2025.01.03.0917",
 		"text": "Added a new setting \"RPD Affects Potential\" which is useful in some types of historical sims.",
 		"links": [
