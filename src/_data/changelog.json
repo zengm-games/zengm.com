@@ -1,5 +1,21 @@
 [
 	{
+		"version": "2025.01.15.1007",
+		"text": "TFL fixes: sacks count as TFL; fewer TFL on other plays; and tackles are assigned to different positions based on distance from scrimmage.",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/1i28tde/version_202501151007_added_more_team_stats_tables/m7cgnke/"
+		],
+		"football": true
+	},
+	{
+		"version": "2025.01.15.1007",
+		"text": "Added more Team Stats tables, showing some data that was not easy to see previously, and some that was not even recorded previously (two-point conversions and attempts).",
+		"links": [
+			"https://old.reddit.com/r/Football_GM/comments/1i28tde/version_202501151007_added_more_team_stats_tables/"
+		],
+		"football": true
+	},
+	{
 		"version": "2025.01.10.1070",
 		"text": "Trading block filters! Specify what type of assets you want the AI to offer you.",
 		"links": [
