@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.01.17.1115",
+		"text": "During live games, clicking a player info button no longer has spoilers - until the game is over, it will only show stats from before the game.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1i3u38b/version_202501171115_during_live_games_clicking_a/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.01.15.1007",
 		"text": "TFL fixes: sacks count as TFL; fewer TFL on other plays; and tackles are assigned to different positions based on distance from scrimmage.",
 		"links": [
