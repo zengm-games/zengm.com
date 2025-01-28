@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.01.28.0819",
+		"text": "Select multiple rows of a table and apply bulk actions, like comparing players, exporting players, adding players to the watch list, and more.",
+		"links": [
+			"/blog/2025/01/bulk-actions/",
+			"https://old.reddit.com/r/BasketballGM/comments/1ic8qni/version_202501280819_select_multiple_rows_of_a/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.01.17.1115",
 		"text": "During live games, clicking a player info button no longer has spoilers - until the game is over, it will only show stats from before the game.",
 		"links": [
