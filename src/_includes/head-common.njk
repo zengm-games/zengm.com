@@ -16,6 +16,7 @@ function setTheme(theme, noSave) {
     const element = document.getElementsByTagName("html")[0];
     element.classList.add(theme);
     element.classList.remove(theme === "light" ? "dark" : "light");
+    document.documentElement.style.colorScheme = theme;
     if (!noSave) {
         localStorage.setItem("theme", theme);
     }
