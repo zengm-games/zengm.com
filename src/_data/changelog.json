@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.02.02.0634",
+		"text": "View career totals/averages for ranges of seasons on player profile pages.",
+		"links": [
+			"/blog/2025/02/player-profile-stat-ranges/",
+			"https://old.reddit.com/r/BasketballGM/comments/1ifzsa4/version_202502020634_view_career_totalsaverages/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.01.28.0819",
 		"text": "Select multiple rows of a table and apply bulk actions, like comparing players, exporting players, adding players to the watch list, and more.",
 		"links": [
