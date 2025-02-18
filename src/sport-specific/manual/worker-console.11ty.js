@@ -11,7 +11,8 @@ module.exports = class {
 	}
 
 	render({ gameAcronym, gameName, ratingKeys, sport, websitePlay }) {
-		return `## What is the worker console?
+		return (
+			`## What is the worker console?
 
 Since ${gameName} runs inside your web browser, you can edit pretty much any part of the game from within your web browser. You do this by using the JavaScript console in your browser to access the core of the game. There, you will find an API that you can use to run little scripts that edit your league.
 
@@ -94,25 +95,25 @@ That's saying if \`SOME_CONDITION\` is true, only then run the code to update th
 - All free agents: \`if (p.tid === bbgm.PLAYER.FREE_AGENT) {\`
 - All players on one specific team: \`if (p.tid === 5) {\` (5 is the team ID number)
 - All players at one position: \`if (p.ratings.at(-1).pos === "${bySport(
-			{
-				baseball: "LF",
-				basketball: "PG",
-				football: "WR",
-				hockey: "C",
-			},
-			sport,
-		)}") {\`
+				{
+					baseball: "LF",
+					basketball: "PG",
+					football: "WR",
+					hockey: "C",
+				},
+				sport,
+			)}") {\`
 - Only a specific subset of player ID numbers: \`if ([158, 207, 14].includes(p.pid)) {\`
 
 You can combine these conditions too, like this is all draft prospects at one position: \`if (p.tid === bbgm.PLAYER.UNDRAFTED && p.ratings.at(-1).pos === "${bySport(
-			{
-				baseball: "LF",
-				basketball: "PG",
-				football: "WR",
-				hockey: "C",
-			},
-			sport,
-		)}") {\`
+				{
+					baseball: "LF",
+					basketball: "PG",
+					football: "WR",
+					hockey: "C",
+				},
+				sport,
+			)}") {\`
 
 Conditions like this can similarly be used for many of the code snippets below too.
 
@@ -231,6 +232,10 @@ await bbgm.idb.cache.gameAttributes.put({
 });
 \`\`\`
 
+If you want some period of time where your history shows no team under your control (similar to starting a real players league with all historical data loaded), then use a value of ` -
+			7`. You can either do this from the start of the league (` -
+			Infinity`) or in any of the other parts, like if you want a gap in between controlling teams.
+
 ---
 
 ### Delete all players at a certain position
@@ -336,6 +341,7 @@ await bbgm.idb.cache.players.put(p);
 \`\`\`
 
 
-`;
+`
+		);
 	}
 };
