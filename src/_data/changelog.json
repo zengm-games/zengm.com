@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2025.02.18.1316",
+		"text": "Missing values in real historical data now show up as blank rather than zeros.",
+		"links": [
+			"/blog/2025/02/null-historical-stats/",
+			"https://old.reddit.com/r/BasketballGM/comments/1isv8wa/version_202502181316_missing_values_in_real/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.02.02.0634",
 		"text": "View career totals/averages for ranges of seasons on player profile pages.",
 		"links": [

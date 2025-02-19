@@ -11,17 +11,17 @@ tags:
 
 On player profile pages, you can now view career totals/averages for ranges of seasons. First you click this button below any player stats table (except fielding in baseball, cause I didn't want to have to worry about multiple positions):
 
-<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-1.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-1.png"></figure>
 
 Then you get an extra row at the bottom of the table where you can select a range of seasons to sum over:
 
 <!--more-->
 
-<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-2.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-2.png"></figure>
 
 This is inspired by the [Sports Reference](https://www.sports-reference.com/) sites where you can click on two rows of player stats to activate a similar feature:
 
-<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-3.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/player-profile-stat-ranges-3.png"></figure>
 
 However their implementation has always annoyed me a little.
 

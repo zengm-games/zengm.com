@@ -22,11 +22,11 @@ Access this feature by clicking the ... feature to the top right of a table, and
 
 <!--more-->
 
-<figure class="overflow-auto"><img src="/files/bulk-actions-1.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/bulk-actions-1.png"></figure>
 
 Then a column of checkboxes appears on the left side of the table, and the action buttons are right above them:
 
-<figure class="overflow-auto"><img src="/files/bulk-actions-2.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/bulk-actions-2.png"></figure>
 
 For more details and examples, watch this video:
 

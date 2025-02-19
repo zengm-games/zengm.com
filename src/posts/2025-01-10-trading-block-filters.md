@@ -12,7 +12,7 @@ tags:
 
 The trading block is one of the most commonly used features in BBGM, and one of the most common feature requests for the trading block is to add some way to filter trades. Currently teams give you a mix of different types of assets, but in some situations maybe you want to trade for draft picks, or maybe you want to trade for a point guard, or maybe you want to trade for some interior defense. Previously there was no good way to do this, but now there is! Behold, trading block filters:
 
-<figure class="overflow-auto"><img src="/files/trading-block-filters.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/trading-block-filters.png"></figure>
 
 <!--more-->
 
