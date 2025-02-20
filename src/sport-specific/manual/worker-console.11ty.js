@@ -239,7 +239,7 @@ If you want some period of time where your history shows no team under your cont
 
 \`\`\`
 var players = await bbgm.idb.cache.players.getAll();
-var pids = []
+var pids = [];
 for (const p of players) {
     if (p.ratings.at(-1).pos === "${bySport(
 			{
