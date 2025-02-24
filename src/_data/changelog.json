@@ -1,5 +1,34 @@
 [
 	{
+		"version": "2025.02.24.1037",
+		"text": "Two new frivolities: Oldest MVPs and Youngest MVPs. Thanks @jdabapo!",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1ixes99/version_202502241037_has_two_new_frivolities/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.02.24.1037",
+		"text": "Somewhat better free agent contracts that dynamically respond to market conditions.",
+		"links": [
+			"/blog/2025/02/free-agent-contract-fixes/",
+			"https://reddit.com/r/Football_GM/comments/1ixeu3h/version_202502241037_somewhat_better_free_agent/"
+		],
+		"football": true
+	},
+	{
+		"version": "2025.02.24.1037",
+		"text": "Simming through the regular season is about 40% faster.",
+		"links": [
+			"/blog/2025/02/free-agent-contract-fixes/",
+			"https://old.reddit.com/r/ZenGMHockey/comments/1ixevme/version_202502241037_simming_through_the_regular/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2025.02.18.1316",
 		"text": "Missing values in real historical data now show up as blank rather than zeros.",
 		"links": [
