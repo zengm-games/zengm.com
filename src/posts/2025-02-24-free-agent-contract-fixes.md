@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free agenct contract fixes for football and hockey
+title: Free agent contract fixes for football and hockey
 date: 2025-02-24
 tags:
   - post
