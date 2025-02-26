@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2025.02.26.0845",
+		"text": "Player notes are shown in the stats/ratings popup. Thanks @jdabapo!",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1iyvevx/version_202502260845_player_notes_are_shown_in/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.02.26.0845",
+		"text": "Added blocks against (BA) to historical stats back to 1997 in real players leagues.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1iyvevx/version_202502260845_player_notes_are_shown_in/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.02.24.1037",
 		"text": "Two new frivolities: Oldest MVPs and Youngest MVPs. Thanks @jdabapo!",
 		"links": [
