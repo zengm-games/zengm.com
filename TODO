@@ -1,3 +1,5 @@
+switch to sass-embedded for performance, only after i can upgrade to sass 1.78 or higher, because that's the first version which includes the CLI. probably requires another version of bootstrap to be released, since that's the limiting factor keeping it pinned now
+
 redirect basketball-gm.com/files and football-gm.com/files
 
 tag blog posts with sport and show icon somehow, like changelog?

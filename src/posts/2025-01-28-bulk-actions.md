@@ -30,4 +30,4 @@ Then a column of checkboxes appears on the left side of the table, and the actio
 
 For more details and examples, watch this video:
 
-<iframe width="700" height="394" src="//www.youtube.com/embed/SMKPSUt0I5k" frameborder="0" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16 / 9; width: 100% !important; max-width: 700px" src="//www.youtube.com/embed/SMKPSUt0I5k" frameborder="0" allowfullscreen></iframe>
