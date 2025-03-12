@@ -1,5 +1,38 @@
 [
 	{
+		"version": "2025.03.11.1114",
+		"text": "New Draft Picks page, available from Players > Draft > Draft Picks, showing all the future draft picks you own and some relevant info about them.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1j93rev/version_202503111114_new_draft_picks_page/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.03.11.1114",
+		"text": "Added Cap% column for players on the Team Finances page, showing the percentage of the salary cap that their contract takes up.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1j93rev/version_202503111114_new_draft_picks_page/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.03.03.0550",
+		"text": "Added tooltip with season details to the annual owner mood chart, and star icons for years you won the championship.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1j2jj9e/version_202503030550_added_tooltip_with_season/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.02.26.0845",
 		"text": "Player notes are shown in the stats/ratings popup. Thanks @jdabapo!",
 		"links": [
