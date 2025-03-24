@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.03.23.1350",
+		"text": "Face updates - relatives now look similar rather than having completely random faces, and it's much easier to save changes you make in the face editor.",
+		"links": [
+			"/blog/2025/03/face-updates/",
+			"https://reddit.com/r/BasketballGM/comments/1jigmyc/face_updates_relatives_and_save_changes_easily/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.03.11.1114",
 		"text": "New Draft Picks page, available from Players > Draft > Draft Picks, showing all the future draft picks you own and some relevant info about them.",
 		"links": [
