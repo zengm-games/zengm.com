@@ -1,10 +1,32 @@
 [
 	{
+		"version": "2025.04.02.0886",
+		"text": "You can add a text note associated with individual box scores (in the Game Log) or draft picks (on the Draft Picks page), similar to the ones you can already add for players and team seasons, and you can view all types of notes at League > Notes.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1jpwg4w/version_202504020886_players_get_a_mood_bonus_if/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.04.02.0886",
+		"text": "Players get a mood bonus if they have a relative on a team.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1jpwg4w/version_202504020886_players_get_a_mood_bonus_if/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.03.23.1350",
 		"text": "Face updates - relatives now look similar rather than having completely random faces, and it's much easier to save changes you make in the face editor.",
 		"links": [
 			"/blog/2025/03/face-updates/",
-			"https://reddit.com/r/BasketballGM/comments/1jigmyc/face_updates_relatives_and_save_changes_easily/?"
+			"https://reddit.com/r/BasketballGM/comments/1jigmyc/face_updates_relatives_and_save_changes_easily/"
 		],
 		"baseball": true,
 		"basketball": true,
