@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2025.04.14.0921",
+		"text": "Updated real players rosters so you can start a league after the 2024 playoffs.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1jz7hbc/version_202504140921_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2025.04.10.1232",
+		"text": "Improved UI of Draft Lottery page. Now it shows non-lottery picks too, so you can see how close other teams are to the lottery. Also team logos!",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1jwd8bl/version_202504101232_improved_ui_of_draft_lottery/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.04.02.0886",
 		"text": "You can add a text note associated with individual box scores (in the Game Log) or draft picks (on the Draft Picks page), similar to the ones you can already add for players and team seasons, and you can view all types of notes at League > Notes.",
 		"links": [
