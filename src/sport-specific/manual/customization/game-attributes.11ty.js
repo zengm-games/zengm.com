@@ -38,7 +38,6 @@ module.exports = class {
         },
         "season": 2013,
         "startingSeason": 2013,
-        "gracePeriodEnd": 2015,
         "numGamesPlayoffSeries": ${bySport(
 					{
 						baseball: "[3, 5, 7, 7]",
@@ -165,7 +164,7 @@ module.exports = class {
     <code>forceRetireAge</code> is an integer specifying a maximum age where players are forced to retire. If it's lower than the minimum value of <code>draftAges</code> (like the default value of 0), it has no effect.
 </p>
 <p><a name="confs-divs"></a></p>
-<h2>Conferences and Divisions</h2>
+<h2>Conferences and divisions</h2>
 <p>
     The <code>confs</code> and <code>divs</code> properties let you change the
     conferences and divisions in the league. The default ones are shown above. You
@@ -194,23 +193,20 @@ module.exports = class {
         >this league file with 3 conferences and 12 teams</a
     >.
 </p>
-<h2>Confusing Season Stuff</h2>
+<h2>Setting the season</h2>
 <p>
-    The last three attributes listed above are related to the season.
+    Two attributes listed above are related to the season.
     <code>season</code> is the current season. <code>startingSeason</code> is the
-    first season played in this league. <code>gracePeriodEnd</code> is the first
-    season you can get fired after. If you set one of these, you should set all of
-    them. You should also specify seasons for any stats, ratings, and attributes
+    first season played in this league. Often those are the same, unless you have historical seasons in your file. You should also specify seasons for any stats, ratings, and attributes
     for your <a href="/${sport}/manual/customization/players/">players</a> and
     <a href="/${sport}/manual/customization/teams/">teams</a>.
 </p>
 <p>
-    However, there is a shortcut to make things easier. Move
+    Additionally, there is a shortcut to make things easier. Move
     <code>startingSeason</code> up to the root of the League File (at the same
     level as <code>gameAttributes</code>) and it will be used to automatically set
-    all of the season variables everywhere. Or just leave
-    <code>startingSeason</code> and all the other seasons out completely and the
-    default value will be used.
+    all of the season variables everywhere. Or just leave <code>season</code> anda
+    <code>startingSeason</code> out completely and the default value will be used.
 </p>
 <p><a name="player-names"></a></p>
 <h2>Other</h2>
