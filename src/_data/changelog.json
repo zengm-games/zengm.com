@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.05.06.0951",
+		"text": "New \"Save Old Box Scores\" setting, which gives you a lot more control over which box scores are saved.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1kgdx37/version_202505060951_new_save_old_box_scores/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.04.25.1139",
 		"text": "Edit the complete order of the draft in God Mode.",
 		"links": [
