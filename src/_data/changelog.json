@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2025.05.08.1027",
+		"text": "The Draft Picks page now includes a table for outgoing picks (picks that originally belonged to your team but have since been traded away).",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1ki1b9k/version_202505081027_the_draft_picks_page_now/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2025.05.08.1027",
+		"text": "New \"Penalty Rate Factor\" setting to control how often penalties occur (upper limit is still 2 players in the penalty box per team).",
+		"links": [
+			"https://reddit.com/r/ZenGMHockey/comments/1ki1btt/version_202505081027_new_penalty_rate_factor/"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2025.05.06.0951",
 		"text": "New \"Save Old Box Scores\" setting, which gives you a lot more control over which box scores are saved.",
 		"links": [
