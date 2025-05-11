@@ -28,7 +28,7 @@ module.exports = class {
 <p>This is the simplest format to define teams in a League File:</p>
 <pre>
 {
-  "version": 43,
+  "version": 66,
   "teams": [
     {
       "tid": 0,
@@ -69,10 +69,10 @@ module.exports = class {
 		${defaultStadiumCapacity}) - weird things might happen financially if you start tweaking this
 	</li>
 	<li>
-		"imgURL": URL for a 256x256 team logo. If your logo is not square or is a different size, that's okay, it will be scaled. (Optional)
+		"imgURL": optional URL for a 256x256 team logo. If your logo is not square or is a different size, that's okay, it will be scaled. <a href="/${sport}/manual/customization/player-photos-team-logos/">More information.</a>
 	</li>
 	<li>
-		"imgURLSmall": URL for a 160x160 small team logo, which you can specify in addition to imgURL if you want a different versions of the logo when it is displayed large and small. (Optional, and imgURL will be used if you don't specify imgURLSmall.)
+		"imgURLSmall": optional URL for a 160x160 small team logo, which you can specify in addition to imgURL if you want a different versions of the logo when it is displayed large and small. <a href="/${sport}/manual/customization/player-photos-team-logos/">More information.</a>
 	</li>
 </ul>
 <p>
@@ -84,14 +84,14 @@ module.exports = class {
 </p>
 <p>
 	${gameName} works best with ${bySport(
-			{
-				baseball: "30 teams, 15 in each conference, and 5 in each division",
-				basketball: "30 teams, 15 in each conference, and 5 in each division",
-				football: "32 teams, 16 in each conference, and 4 in each division",
-				hockey: "32 teams, 16 in each conference, and 8 in each division",
-			},
-			sport,
-		)}. If you have more or less teams, it will still work, but generated
+		{
+			baseball: "30 teams, 15 in each conference, and 5 in each division",
+			basketball: "30 teams, 15 in each conference, and 5 in each division",
+			football: "32 teams, 16 in each conference, and 4 in each division",
+			hockey: "32 teams, 16 in each conference, and 8 in each division",
+		},
+		sport,
+	)}. If you have more or less teams, it will still work, but generated
 	schedules (and maybe some other aspects of the game) will be less balanced.
 </p>
 <p>

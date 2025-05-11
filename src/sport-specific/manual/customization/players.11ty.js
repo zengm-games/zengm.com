@@ -123,7 +123,7 @@ module.exports = class {
 <p>This is the simplest format to define players in a League File:</p>
 <pre>
 {
-  "version": 43,
+  "version": 66,
   "startingSeason": 2019,
   "players": [
     {
@@ -216,7 +216,7 @@ module.exports = class {
 <p>
 	You can optionally include a URL for an image to be used instead of a
 	randomly-generated face by putting "imgURL":
-	"http://www.example.com/img.jpg" in the root of a player object.
+	"http://www.example.com/img.jpg" in the root of a player object. <a href="/${sport}/manual/customization/player-photos-team-logos/">More information.</a>
 </p>
 <p>
 	There are several other pieces of information you can include, such as stats from previous seasons. Look in an exported League File from

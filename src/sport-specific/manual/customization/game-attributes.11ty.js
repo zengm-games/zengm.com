@@ -26,7 +26,7 @@ module.exports = class {
 </p>
 <pre>
 {
-    "version": 43,
+    "version": 66,
     "gameAttributes": {
         "userTid": 15,
         "phase": 0,
