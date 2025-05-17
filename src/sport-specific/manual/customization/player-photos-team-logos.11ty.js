@@ -11,16 +11,6 @@ module.exports = class {
 	}
 
 	render({ gameAcronym, gameName, subredditName, sport, websitePlay }) {
-		const defaultStadiumCapacity = bySport(
-			{
-				baseball: 50000,
-				basketball: 25000,
-				football: 70000,
-				hockey: 17500,
-			},
-			sport,
-		);
-
 		return `${gameName} supports using custom images for player profile pictures and team logos. For both of these, you need to first upload your custom image somewhere, and then copy the URL into ${gameName}
 
 ## Where to upload images

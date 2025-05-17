@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2025.05.17.0869",
+		"text": "Real players leagues created during the current playoffs now include draft lottery results.",
+		"links": [
+			"/blog/2025/05/real-players-playoffs-draft-lottery/",
+			"https://reddit.com/r/BasketballGM/comments/1koztad/version_202505170869_real_players_leagues_created/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.05.08.1027",
 		"text": "The Draft Picks page now includes a table for outgoing picks (picks that originally belonged to your team but have since been traded away).",
 		"links": [
