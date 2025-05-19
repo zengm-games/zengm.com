@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.05.18.1263",
+		"text": "In leagues using \"Random debuts forever\", player profile pages now contain a quick link to compare all versions of a player.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1kpzdvp/version_202505181263_in_leagues_using_random/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.05.17.0869",
 		"text": "Real players leagues created during the current playoffs now include draft lottery results.",
 		"links": [
