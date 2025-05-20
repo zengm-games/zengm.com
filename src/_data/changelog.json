@@ -1,5 +1,16 @@
 [
 	{
+		"version": "",
+		"text": "Added new Most Retired Jersey Numbers frivolity for players with multiple numbers retired. Also players now can have their number retired by multiple AI teams when appropriate, previously it would just pick the top team.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1kquxm0/version_202505191393_added_new_most_retired/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.05.18.1263",
 		"text": "In leagues using \"Random debuts forever\", player profile pages now contain a quick link to compare all versions of a player.",
 		"links": [
