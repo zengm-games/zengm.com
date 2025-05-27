@@ -1,9 +1,26 @@
 [
 	{
-		"version": "",
+		"version": "2025.05.26.1259",
+		"text": "New \"Import Real Players\" feature lets you select real players from any historical season and import them into your league. Use it to add an individual player to your league, or to create whole teams of real players from different seasons!",
+		"links": [
+			"/blog/2025/05/import-real-players/",
+			"https://reddit.com/r/BasketballGM/comments/1kwal9w/version_202505261259_new_import_real_players/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2025.05.26.1259",
+		"text": "Added some rate stats (like \"Goals Per 60 Minutes\") to the Advanced stats table.",
+		"links": [
+			"https://reddit.com/r/ZenGMHockey/comments/1kwalwm/version_202505261259_added_some_rate_stats_like/"
+		],
+		"hockey": true
+	},
+	{
+		"version": "2025.05.19.1393",
 		"text": "Added new Most Retired Jersey Numbers frivolity for players with multiple numbers retired. Also players now can have their number retired by multiple AI teams when appropriate, previously it would just pick the top team.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/1kquxm0/version_202505191393_added_new_most_retired/"
+			"https://reddit.com/r/BasketballGM/comments/1kquxm0/version_202505191393_added_new_most_retired/"
 		],
 		"baseball": true,
 		"basketball": true,
@@ -14,7 +31,7 @@
 		"version": "2025.05.18.1263",
 		"text": "In leagues using \"Random debuts forever\", player profile pages now contain a quick link to compare all versions of a player.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/1kpzdvp/version_202505181263_in_leagues_using_random/"
+			"https://reddit.com/r/BasketballGM/comments/1kpzdvp/version_202505181263_in_leagues_using_random/"
 		],
 		"basketball": true
 	},
