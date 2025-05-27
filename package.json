@@ -11,33 +11,33 @@
 	},
 	"private": true,
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0",
-		"@11ty/eleventy-navigation": "^0.3.5",
-		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy": "^3.1.0",
+		"@11ty/eleventy-navigation": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"chokidar-cli": "^3.0.0",
-		"cloudflare": "^3.5.0",
-		"concurrently": "^9.0.1",
+		"cloudflare": "^4.3.0",
+		"concurrently": "^9.1.2",
 		"csso": "^5.0.5",
-		"esbuild": "^0.24.0",
+		"esbuild": "^0.25.4",
 		"glob": "^10.4.5",
 		"hasha": "^5.2.2",
 		"html-minifier-terser": "^7.2.0",
-		"husky": "^9.1.6",
-		"lint-staged": "^15.2.10",
-		"markdown-it-attrs": "^4.2.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.0.0",
+		"markdown-it-attrs": "^4.3.1",
 		"posthtml": "^0.16.6",
 		"posthtml-urls": "^1.0.0",
-		"prettier": "^3.3.3",
-		"purgecss": "^6.0.0",
+		"prettier": "^3.5.3",
+		"purgecss": "^7.0.2",
 		"sass": "1.77.6",
-		"sharp": "^0.33.5"
+		"sharp": "^0.34.2"
 	},
 	"lint-staged": {
 		"*.{cjs,mjs,js,jsx,ts,tsx,json,css,md}": "prettier --write"
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
-		"bootstrap": "5.3.3",
+		"bootstrap": "5.3.6",
 		"bootstrap-dark-5": "^1.1.3"
 	}
 }
