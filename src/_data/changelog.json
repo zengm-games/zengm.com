@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.06.17.1333",
+		"text": "Added new Currency Format setting for if you want to display money as something besides US dollars.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1le5mhk/version_202506171333_added_new_currency_format/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.05.26.1259",
 		"text": "New \"Import Real Players\" feature lets you select real players from any historical season and import them into your league. Use it to add an individual player to your league, or to create whole teams of real players from different seasons!",
 		"links": [
