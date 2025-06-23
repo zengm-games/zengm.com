@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.06.23.0759",
+		"text": "Updated real players rosters so you can start a league at the 2025 draft.",
+		"links": [
+			"https://reddit.com/r/BasketballGM/comments/1lilh48/version_202506230759_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.06.17.1333",
 		"text": "Added new Currency Format setting for if you want to display money as something besides US dollars.",
 		"links": [
