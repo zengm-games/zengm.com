@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.07.07.0660",
+		"text": "Added several new achievements.",
+		"links": [
+			"/blog/2025/07/new-achievements/",
+			"https://old.reddit.com/r/BasketballGM/comments/1ltwhd4/version_202507070660_added_several_new/?"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.06.27.0691",
 		"text": "Updated real players rosters so you can start a league after the 2025 draft.",
 		"links": [
