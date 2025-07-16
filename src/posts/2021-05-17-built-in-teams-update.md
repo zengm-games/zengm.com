@@ -128,8 +128,8 @@ A little while ago I asked you guys [what the worst logos in the game were](http
 <div class="logo-wrapper mb-3 text-center d-flex flex-wrap justify-content-center">
     <div>
         <h4>Chicago Whirlwinds</h4>
-        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/CHI.svg">
-        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/CHI.svg">
+        <img class="logo-big" src="https://play.basketball-gm.com/img/logos-primary/CHW.svg">
+        <img class="logo-small" src="https://play.basketball-gm.com/img/logos-secondary/CHW.svg">
     </div>
     <div>
         <h4>Seattle Symphony</h4>
