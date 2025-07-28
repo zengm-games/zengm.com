@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.07.27.1025",
+		"text": "Updated real players rosters so you can start a league at the 2026 preseason.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1maxl69/version_202507271025_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.07.24.1273",
 		"text": "Improved live sim UI on desktop/laptop - current score is always visible at the top, similar to the mobile UI.",
 		"links": [
