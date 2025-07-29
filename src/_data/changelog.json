@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.07.29.0609",
+		"text": "Point spreads for upcoming games correctly factor in the \"Play Through Injuries\" setting, rather than assuming no injured players will play. Also point spreads for future games on the Schedule page account for injuries healing over time.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1mccgkp/version_202507290609_point_spreads_for_upcoming/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.07.27.1025",
 		"text": "Updated real players rosters so you can start a league at the 2026 preseason.",
 		"links": [
