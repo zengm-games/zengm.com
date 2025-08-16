@@ -55,10 +55,10 @@
 	},
 	"CHS": {
 		"abbrev": "CHI",
-		"colors": ["#272b2a", "#84d5f4", "#84d5f4"],
+		"colors": ["#33607a", "#271919", "#a9daf6"],
 		"imgURL": "/img/logos-primary/CHI.svg",
 		"imgURLSmall": "/img/logos-secondary/CHI.svg",
-		"name": "Whirlwinds",
+		"name": "Gangsters",
 		"pop": 9.1,
 		"region": "Chicago"
 	},
@@ -298,10 +298,10 @@
 	},
 	"CHI": {
 		"abbrev": "CHI",
-		"colors": ["#272b2a", "#84d5f4", "#84d5f4"],
+		"colors": ["#33607a", "#271919", "#a9daf6"],
 		"imgURL": "/img/logos-primary/CHI.svg",
 		"imgURLSmall": "/img/logos-secondary/CHI.svg",
-		"name": "Whirlwinds",
+		"name": "Gangsters",
 		"pop": 9.1,
 		"region": "Chicago"
 	},
