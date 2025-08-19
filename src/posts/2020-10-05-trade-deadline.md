@@ -5,7 +5,7 @@ date: 2020-10-05
 tags:
   - post
   - New Feature
-  - Trade
+  - Trades
 ---
 
 I just added a trade deadline to Basketball GM and Football GM. By default, it happens 60% of the way through the season, but you can change the timing or completely disable it in the God Mode settings under "Trade Deadline".

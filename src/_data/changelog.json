@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.08.18.1259",
+		"text": "The AI will now trade more than 2 draft picks at a time.",
+		"links": [
+			"/blog/2025/08/ai-draft-pick-trade-limit/",
+			"https://www.reddit.com/r/BasketballGM/comments/1mu49hb/version_202508181259_the_ai_will_now_trade_more/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.07.29.0609",
 		"text": "Point spreads for upcoming games correctly factor in the \"Play Through Injuries\" setting, rather than assuming no injured players will play. Also point spreads for future games on the Schedule page account for injuries healing over time.",
 		"links": [
