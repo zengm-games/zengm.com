@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.09.01.1319",
+		"text": "To increase 4th down drama a bit, in the live play-by-play there is an extra event before 4th down plays to show what players are on the field (offense/FG/punt).",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1n67att/version_202509011319_to_increase_4th_down_drama_a/"
+		],
+		"football": true
+	},
+	{
 		"version": "2025.08.18.1259",
 		"text": "The AI will now trade more than 2 draft picks at a time.",
 		"links": [
