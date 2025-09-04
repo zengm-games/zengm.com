@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.09.04.0525",
+		"text": "Added some new functionality to the \"Randomize teams\" feature when customizing the teams during new league creation.",
+		"links": [
+			"/blog/2025/09/randomize-teams-improvements/",
+			"https://www.reddit.com/r/BasketballGM/comments/1n8969m/version_202509040525_added_some_new_functionality/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.01.1319",
 		"text": "To increase 4th down drama a bit, in the live play-by-play there is an extra event before 4th down plays to show what players are on the field (offense/FG/punt).",
 		"links": [
