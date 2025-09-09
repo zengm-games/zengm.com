@@ -1,5 +1,15 @@
 [
 	{
+		"version": "2025.09.08.0607",
+		"text": "New settings: Overtime Period Length and Playoff Overtime Period Length, rather than automatically basing those values on the normal period length.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1nboq9p/new_settings_in_version_202509080607_overtime/"
+		],
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.04.0525",
 		"text": "Added some new functionality to the \"Randomize teams\" feature when customizing the teams during new league creation.",
 		"links": [
