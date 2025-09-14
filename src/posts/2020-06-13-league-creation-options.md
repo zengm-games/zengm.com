@@ -9,7 +9,7 @@ tags:
   - New Feature
   - Player Development
   - Random Debuts
-  - Real Player Development Determinism
+  - Real Player Determinism
   - Real Players
 ---
 

@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2025.09.14.1044",
+		"text": "Two new settings which let you run some fun historical sims: Force Retire Real Players (players retire the same age as IRL) and Force Historical Rosters (players are moved to their IRL team every season).",
+		"links": [
+			"/blog/2025/09/force-historical-rosters/",
+			"https://old.reddit.com/r/BasketballGM/comments/1nh3dkd/two_new_settings_in_version_202509141044_which/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.09.08.0607",
 		"text": "New settings: Overtime Period Length and Playoff Overtime Period Length, rather than automatically basing those values on the normal period length.",
 		"links": [

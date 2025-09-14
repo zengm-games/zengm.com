@@ -5,7 +5,7 @@ date: 2021-03-16
 tags:
   - post
   - Player Development
-  - Real Player Development Determinism
+  - Real Player Determinism
   - Real Players
 ---
 
