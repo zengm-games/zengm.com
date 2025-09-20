@@ -1,8 +1,10 @@
 [
 	{
-		"version": "",
+		"version": "2025.09.20.0856",
 		"text": "Added \"Take control of this team\" button to roster pages in God Mode to let you quickly switch between teams.",
-		"links": [""],
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1nm5evf/version_202509200856_added_take_control_of_this/"
+		],
 		"baseball": true,
 		"basketball": true,
 		"football": true,
