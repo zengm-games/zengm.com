@@ -187,7 +187,7 @@
             <h3>...and to a championship!</h3>
             <img data-index="4" width="730" height="375" alt="Screenshot">
           </div>
-          {% if sport != "baseball" and sport != "football" %}
+          {% if sport != "football" %}
             <div class="carousel-item">
               <h3>Tanking is allowed.</h3>
               <img data-index="5" width="730" height="375" alt="Screenshot">
@@ -224,6 +224,18 @@
           <div class="carousel-item">
             <h3>Deeply customizable.</h3>
             <img data-index="13" width="730" height="375" alt="Screenshot">
+          </div>
+          <div class="carousel-item">
+            <h3>Graph any data.</h3>
+            <img data-index="16" width="730" height="375" alt="Screenshot">
+          </div>
+          <div class="carousel-item">
+            <h3>Search through historical stats.</h3>
+            <img data-index="17" width="730" height="375" alt="Screenshot">
+          </div>
+          <div class="carousel-item">
+            <h3>Tons of tools for analysis.</h3>
+            <img data-index="18" width="730" height="375" alt="Screenshot">
           </div>
           <div class="carousel-item">
             <h3>Create as many leagues as you want.</h3>
@@ -380,7 +392,7 @@ function showImagesStartingWith(index) {
   // Load images from index to index + 1
   for (var i = index; i <= index + 1; i++) {
     var img = carouselImages[i % carouselImages.length];
-    const src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".png";
+    const src = "{% if env.NODE_ENV == "production" %}https://zengm.com{% endif %}/files/carousel/{{ sport }}-" + theme + "-" + img.dataset.index + ".avif";
 
     // "includes" because it gets prefixed with the domain name
     if (!img.src.includes(src)) {

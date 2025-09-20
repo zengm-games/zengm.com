@@ -1,5 +1,14 @@
 [
 	{
+		"version": "",
+		"text": "Added \"Take control of this team\" button to roster pages in God Mode to let you quickly switch between teams.",
+		"links": [""],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.14.1044",
 		"text": "Two new settings which let you run some fun historical sims: Force Retire Real Players (players retire the same age as IRL) and Force Historical Rosters (players are moved to their IRL team every season).",
 		"links": [
