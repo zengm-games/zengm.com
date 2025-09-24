@@ -1,9 +1,20 @@
 [
 	{
+		"version": "2025.09.23.0719",
+		"text": "Improved UI for the Manage Conferences page.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1nolbw2/version_202509230719_improved_ui_for_the_manage/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.20.0856",
 		"text": "Added \"Take control of this team\" button to roster pages in God Mode to let you quickly switch between teams.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/1nm5evf/version_202509200856_added_take_control_of_this/"
+			"https://www.reddit.com/r/BasketballGM/comments/1nm5evf/version_202509200856_added_take_control_of_this/"
 		],
 		"baseball": true,
 		"basketball": true,
@@ -15,7 +26,7 @@
 		"text": "Two new settings which let you run some fun historical sims: Force Retire Real Players (players retire the same age as IRL) and Force Historical Rosters (players are moved to their IRL team every season).",
 		"links": [
 			"/blog/2025/09/force-historical-rosters/",
-			"https://old.reddit.com/r/BasketballGM/comments/1nh3dkd/two_new_settings_in_version_202509141044_which/"
+			"https://www.reddit.com/r/BasketballGM/comments/1nh3dkd/two_new_settings_in_version_202509141044_which/"
 		],
 		"basketball": true
 	},
@@ -380,7 +391,7 @@
 		"text": "Simming through the regular season is about 40% faster.",
 		"links": [
 			"/blog/2025/02/free-agent-contract-fixes/",
-			"https://old.reddit.com/r/ZenGMHockey/comments/1ixevme/version_202502241037_simming_through_the_regular/"
+			"https://www.reddit.com/r/ZenGMHockey/comments/1ixevme/version_202502241037_simming_through_the_regular/"
 		],
 		"hockey": true
 	},
