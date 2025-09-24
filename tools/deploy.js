@@ -2,19 +2,36 @@ const { spawn } = require("node:child_process");
 const Cloudflare = require("cloudflare");
 const cloudflareConfig = require("../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 
-const mySpawn = (command, args) => {
-	return new Promise(resolve => {
+const NUM_RETRIES = 10;
+const mySpawn = async (command, args) => {
+	for (let attempt = 0; attempt <= NUM_RETRIES; attempt++) {
 		console.log(`${command} ${args.join(" ")}`);
 
-		const cmd = spawn(command, args, { shell: true, stdio: "inherit" });
-		cmd.on("close", code => {
-			if (code !== 0) {
-				console.log(`child process exited with code ${code}`);
-				process.exit(code);
-			}
-			resolve();
+		const exitCode = await new Promise((resolve, reject) => {
+			const cmd = spawn(command, args, { stdio: "inherit" });
+
+			cmd.on("error", error => {
+				reject(error);
+			});
+			cmd.on("close", code => {
+				resolve(code);
+			});
 		});
-	});
+
+		if (exitCode === 0) {
+			// Success!
+			return;
+		}
+
+		if (exitCode === 255 && attempt < NUM_RETRIES) {
+			await setTimeout(2000);
+			console.log(
+				`Retrying after error code ${exitCode} (attempt #${attempt + 1})`,
+			);
+		} else {
+			throw new Error(`child process exited with code ${exitCode}`);
+		}
+	}
 };
 
 const deploy = async domain => {
