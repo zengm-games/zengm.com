@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.09.26.1213",
+		"text": "The \"Split By Conference\" playoff setting now works for any power of 2. So not just 2 conferences, it also works for 4, 8, 16, etc.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1nrh776/version_202509261213_the_split_by_conference/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.23.0719",
 		"text": "Improved UI for the Manage Conferences page.",
 		"links": [
