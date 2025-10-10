@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.10.09.1366",
+		"text": "On Player Bios/Ratings/Stats/Injuries pages, you can select \"Remaining Playoff Teams\" to only show players on teams who are still alive in the playoffs. Also, added a column to the Injuries table showing if a player is playing through his current injury.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1o2pfno/version_202510091366_on_player/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.09.26.1213",
 		"text": "The \"Split By Conference\" playoff setting now works for any power of 2. So not just 2 conferences, it also works for 4, 8, 16, etc.",
 		"links": [
