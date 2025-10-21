@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming JSON parsing
+title: Streaming JSON parsing with the Web Streams API
 date: 2025-10-21
 tags:
   - post
@@ -20,7 +20,7 @@ This has worked fine for years, but it's always annoyed me for a little that the
 
 I won't rehash the README here, you can go over to [GitHub](https://github.com/zengm-games/json-web-streams) and read it if you want, but I think it's a pretty nifty library.
 
-The first thing I did was add a bunch of tests to see if my parser was actually correctly following the JSON spec. Well, I already knew it wasn't in some cases, it accepts some files that aren't valid JSON. But through some thorough testing I found a few more edge cases where it failed and fixed all those. This may actually be a negative for ZenGM if people were taking advantage of those bugs to load invalid JSON files that will no longer work, but if that's a problem and people complain, I can always revert some of those changes to make it less strict.
+The first thing I did was add a bunch of tests (mostly from [this repo](https://github.com/nst/JSONTestSuite)) to see if my parser was actually correctly following the JSON spec. Well, I already knew it wasn't in some cases, it accepts some files that aren't valid JSON. But through some fairly thorough testing I found a few more edge cases where it failed and fixed all those. This may actually be a negative for ZenGM if people were taking advantage of those bugs to load invalid JSON files that will no longer work, but if that's a problem and people complain, I can always revert some of those changes to make it less strict.
 
 But that was the easy part. The hard part was writing something that:
 
@@ -30,6 +30,12 @@ But that was the easy part. The hard part was writing something that:
 
 That's tricky to do! My old JSON parsing code had a really ugly and confusing API that allowed me to tightly integrate it with ZenGM, and that was great for performance. But nobody else would want to use it. (Heck I don't even want to use it, that's why I'm doing this!)
 
-So I iterated on the API for a little while before landing on what you currently see in the README. Unfortunately, this nice API was slow. Yet I knew that in theory it was possible for the nice API to run as fast as my old code. It just required a lot of careful optimization, which took me several days to do. But I am happy to say that I think I finally did it, and the new parser with the nice API is now actually a little bit faster than the old one! For example, a file that previously took 70 seconds to validate now only takes 60 seconds. That's probably not a big enough improvement for anyone to consciously notice, but I'm still proud of it.
+So I iterated on the API for a little while before landing on what you currently see in the README. Unfortunately, this nice API was slow. Yet I knew that in theory it was possible for the nice API to run as fast as my old code. It just required a lot of careful optimization, which took me several days to do. The biggest optimizations I made were:
+
+- Avoiding creating a new array and destructuring another in a function that is called many many times. This is the type of that usually doesn't matter, but it does when you have a function that's called tons of times.
+
+- Precomputing as much information as possible, so that I can minimize the amount of work done in that function that is called many many times. Mostly this is related to determining "is the current object one of the ones we're looking for, and if so which one is it"? Like in the `players` section of a BBGM league file, ideally we just check once to see that it's the `players` section and not any other section, right when we hit `"players": {` in the JSON file. Implementing the logic to correctly do that, while remaining flexible about letting the user define the locations of the objects they are looking for - tricky stuff! The type of stuff where you make one little mistake and it looks like everything is broken. But when it works, it's nice!
+
+Ultimately, I am happy to say that I think I succeeded, and the new parser with the nice API is even a little bit faster than the old one! For example, a file that previously took 70 seconds to validate now only takes 60 seconds. That's probably not a big enough improvement for anyone to consciously notice, but I'm still proud of it.
 
 If you're still reading at this point, please [go give me a star on Github](https://github.com/zengm-games/json-web-streams) :)
