@@ -4,7 +4,7 @@ title: No more size limit for exporting leagues
 date: 2021-10-26
 tags:
   - post
-  - League Export
+  - League Import/Export
   - Technical
 ---
 
