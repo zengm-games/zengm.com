@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2025.10.24.1250",
+		"text": "New schedule editor feature at Tools > Schedule Editor!",
+		"links": [
+			"/blog/2025/10/schedule-editor/",
+			"https://www.reddit.com/r/BasketballGM/comments/1ofecyl/version_202510241250_new_schedule_editor_feature/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.10.09.1366",
 		"text": "On Player Bios/Ratings/Stats/Injuries pages, you can select \"Remaining Playoff Teams\" to only show players on teams who are still alive in the playoffs. Also, added a column to the Injuries table showing if a player is playing through his current injury.",
 		"links": [
