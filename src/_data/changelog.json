@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.10.26.0959",
+		"text": "Injuries given to players in God Mode now display correctly in all parts of the UI.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1ogucma/version_202510260959_injuries_given_to_players_in/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.10.24.1250",
 		"text": "New schedule editor feature at Tools > Schedule Editor!",
 		"links": [
