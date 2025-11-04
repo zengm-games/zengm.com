@@ -1,9 +1,17 @@
 [
 	{
+		"version": "2025.11.04.0812",
+		"text": "The Team Advanced Stats page now shows the Defensive Four Factors, in addition to the offensive ones which were already there.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1oof7zu/version_202511040812_the_team_advanced_stats_page/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2025.10.26.0959",
 		"text": "Injuries given to players in God Mode now display correctly in all parts of the UI.",
 		"links": [
-			"https://old.reddit.com/r/BasketballGM/comments/1ogucma/version_202510260959_injuries_given_to_players_in/"
+			"https://www.reddit.com/r/BasketballGM/comments/1ogucma/version_202510260959_injuries_given_to_players_in/"
 		],
 		"baseball": true,
 		"basketball": true,
