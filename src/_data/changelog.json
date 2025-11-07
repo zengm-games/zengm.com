@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2025.11.07.0536",
+		"text": "Imported players now have past season stats from their original league, with all the teams listed as DNE (does not exist).",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1oqv2qr/version_202511070536_imported_players_now_have/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.11.04.0812",
 		"text": "The Team Advanced Stats page now shows the Defensive Four Factors, in addition to the offensive ones which were already there.",
 		"links": [
