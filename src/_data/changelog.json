@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.11.12.0731",
+		"text": "For leagues with the default number of confs/divs/teams and default schedule settings, generated schedules are much more compact and realistic - 18 weeks of games with accurate bye weeks.",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1ovb0tf/version_202511120731_for_leagues_with_the_default/"
+		],
+		"football": true
+	},
+	{
 		"version": "2025.11.07.0536",
 		"text": "Imported players now have past season stats from their original league, with all the teams listed as DNE (does not exist).",
 		"links": [
