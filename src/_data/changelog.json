@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.11.14.1320",
+		"text": "Added new \"Kickoff Touchback Yards\" setting, with a default value of 35 yards. The likelihood of a touchback is now influenced both by this setting and the kicker's rating, whereas previously all kickers performed the same on kickoffs. Also added various stats for kickoffs.",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1oxgpqk/version_202511141320_added_new_kickoff_touchback/"
+		],
+		"football": true
+	},
+	{
 		"version": "2025.11.12.0731",
 		"text": "For leagues with the default number of confs/divs/teams and default schedule settings, generated schedules are much more compact and realistic - 18 weeks of games with accurate bye weeks.",
 		"links": [
