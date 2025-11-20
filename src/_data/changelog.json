@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.11.19.1260",
+		"text": "Projected starting pitchers are shown in the schedule, rather than the best player on each team.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1p1quyj/version_202511191260_projected_starting_pitchers/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2025.11.14.1320",
 		"text": "Added new \"Kickoff Touchback Yards\" setting, with a default value of 35 yards. The likelihood of a touchback is now influenced both by this setting and the kicker's rating, whereas previously all kickers performed the same on kickoffs. Also added various stats for kickoffs.",
 		"links": [
