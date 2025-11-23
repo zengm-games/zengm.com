@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2025.11.22.1285",
+		"text": "In game 7s and elimination game 6s of playoff series, backup goalies are less likely to play.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMHockey/comments/1p4b5mk/version_202511221285_in_game_7s_and_elimination/?"
+		],
+		"hockey": true
+	},
+	{
 		"version": "2025.11.21.1249",
 		"text": "Projected starting goalies are shown in the schedule, rather than the best player on each team.",
 		"links": [
