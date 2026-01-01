@@ -3,6 +3,8 @@ const csso = require("csso");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
 const esbuild = require("esbuild");
 const fs = require("node:fs/promises");
+const { existsSync } = require("node:fs");
+const { setTimeout } = require("node:timers/promises");
 const hasha = require("hasha");
 const htmlmin = require("html-minifier-terser");
 const MarkdownIt = require("markdown-it");
@@ -20,14 +22,22 @@ const mdRender = new MarkdownIt({
 
 const purgeCSS = new PurgeCSS();
 
-const addHash = path => {
+const addHash = async path => {
+	const fullPath = `_site${path}`;
+
+	// idk why this shit started being necessary lol. I guess addPassthroughCopy is not guaranteed to complete before templates are processed.
+	while (!existsSync(fullPath)) {
+		console.log(`Waiting for ${path}...`);
+		await setTimeout(1000);
+	}
+
 	if (path.includes("?")) {
 		throw new Error(
 			"Careful about using addHash when there is already a query string",
 		);
 	}
 
-	const hash = hasha.fromFileSync(`_site${path}`);
+	const hash = hasha.fromFileSync(fullPath);
 
 	return `${path}?v=${hash.substr(0, 10)}`;
 };
@@ -65,7 +75,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", mdRender);
 
 	// Similar to https://github.com/google/eleventy-high-performance-blog/blob/eb1f9c11763022719b44ba2715b1e5f60f73baa1/.eleventy.js#L78-L92
-	eleventyConfig.addFilter("addHash", addHash);
+	eleventyConfig.addAsyncFilter("addHash", addHash);
 
 	const dateFormatter = new Intl.DateTimeFormat("en-us", {
 		dateStyle: "long",
