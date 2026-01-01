@@ -30,6 +30,7 @@ module.exports = class FAQ {
 <p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers, especially on iPhones. To minimize the chance of this happening, you can:</p>
 <ul>
 	<li>Go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</li>
+	<li>If you are low on disk space, delete some other data.</li>
 	<li>If you're on Android, install the <a href="${androidAppURL}">${gameAcronym} app</a>. If you're on iOS, <a href="#a2hs">add it to your home screen</a>.</li>
 	<li>Make a backup of a league at Tools > Export League</li>
 </ul>

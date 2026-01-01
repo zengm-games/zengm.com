@@ -9,7 +9,7 @@ tags:
   - Hockey
 ---
 
-There are plenty of bugs in my game. Usually it's something like "when I click on X it shows an error message" or "when I change two settings at the same time, it breaks" or "the simulation is doing really stupid stuff". Usually bugs are not very fun, they're just annoying. Maybe the funniest bug previously was [when the effect of OL was reversed in Football GM, so playing a bunch of kickers at OL made your team dominate](/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/). The problem was that, in addition to being funny, it was also a game-breaking bug. Too serious to truly be funny.
+There are plenty of bugs in my games. Usually it's something like "when I click on X it shows an error message" or "when I change two settings at the same time, it breaks" or "the simulation is doing really stupid stuff". Usually bugs are not very fun, they're just annoying. Maybe the funniest bug previously was [when the effect of OL was reversed in Football GM, so playing a bunch of kickers at OL made your team dominate](/blog/2019/10/i-fucked-up-and-the-importance-of-sanity-checks/). The problem was that, in addition to being funny, it was also a game-breaking bug. Too serious to truly be funny.
 
 Now I think I have seen (and fixed!) a funnier bug. This is a bug in [ZenGM Hockey](https://hockey.zengm.com/) that only rarely happens. It's so rare that in the 2+ years ZenGM Hockey has existed, nobody ever noticed it. But recently it was noticed for the first time... when it happened with 8 seconds left in game 7 of the conference finals in a multiplayer league!
 
