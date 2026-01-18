@@ -221,7 +221,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode("sportSpecificURL", sportSpecificURL);
 
-	eleventyConfig.addShortcode("sportPicker", function (sport) {
+	eleventyConfig.addShortcode("sportPicker", async function (sport) {
 		if (!sport) {
 			return "";
 		}
@@ -241,7 +241,7 @@ module.exports = function (eleventyConfig) {
 		// For current sport, link to main page
 		urls[sport] = prefix;
 
-		return `<script async src="${addHash("/js/dropdown.js")}"></script>
+		return `<script async src="${await addHash("/js/dropdown.js")}"></script>
 <div class="dropdown top-nav-item">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         ${bySport(
