@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.01.18.0930",
+		"text": "Exporting player bio info is less confusing.",
+		"links": [
+			"/blog/2026/01/better-player-bio-export/",
+			"https://www.reddit.com/r/BasketballGM/comments/1qgjhke/version_202601180930_exporting_player_bio_info_is/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2025.11.22.1285",
 		"text": "In game 7s and elimination game 6s of playoff series, backup goalies are less likely to play.",
 		"links": [
