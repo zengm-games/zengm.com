@@ -1,5 +1,41 @@
 [
 	{
+		"version": "2026.02.01.1044",
+		"text": "Game sim tweaks: nerfed fast WR, WR depth is more important, buffed good tackling LB, and some special teams fixes.",
+		"links": [
+			"/blog/2026/02/super-bowl-bye-week/",
+			"https://www.reddit.com/r/Football_GM/comments/1qtcvqs/fbgm_updates_to_keep_you_busy_on_super_bowl_bye/"
+		],
+		"football": true
+	},
+	{
+		"version": "2026.02.01.1044",
+		"text": "Better clock management in some late game situations.",
+		"links": [
+			"/blog/2026/02/super-bowl-bye-week/",
+			"https://www.reddit.com/r/Football_GM/comments/1qtcvqs/fbgm_updates_to_keep_you_busy_on_super_bowl_bye/"
+		],
+		"football": true
+	},
+	{
+		"version": "2026.02.01.1044",
+		"text": "New settings: enable/disable two-point conversions; and overtime type to set if overtime is sudden death, sudden death except for a FG on the first drive, or both teams must possess the ball",
+		"links": [
+			"/blog/2026/02/super-bowl-bye-week/",
+			"https://www.reddit.com/r/Football_GM/comments/1qtcvqs/fbgm_updates_to_keep_you_busy_on_super_bowl_bye/"
+		],
+		"football": true
+	},
+	{
+		"version": "2026.02.01.1044",
+		"text": "Added player \"awards\" for league leaders in sacks, interceptions, and total (non-passing) TD",
+		"links": [
+			"/blog/2026/02/super-bowl-bye-week/",
+			"https://www.reddit.com/r/Football_GM/comments/1qtcvqs/fbgm_updates_to_keep_you_busy_on_super_bowl_bye/"
+		],
+		"football": true
+	},
+	{
 		"version": "2026.01.18.0930",
 		"text": "Exporting player bio info is less confusing.",
 		"links": [
@@ -15,7 +51,7 @@
 		"version": "2025.11.22.1285",
 		"text": "In game 7s and elimination game 6s of playoff series, backup goalies are less likely to play.",
 		"links": [
-			"https://www.reddit.com/r/ZenGMHockey/comments/1p4b5mk/version_202511221285_in_game_7s_and_elimination/?"
+			"https://www.reddit.com/r/ZenGMHockey/comments/1p4b5mk/version_202511221285_in_game_7s_and_elimination/"
 		],
 		"hockey": true
 	},
