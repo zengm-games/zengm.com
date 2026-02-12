@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.02.11.1207",
+		"text": "Customize keyboard shortcuts at Tools > Global Settings > Keyboard Shortcuts.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1r2fnjq/version_202602111207_customize_keyboard_shortcuts/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.02.01.1044",
 		"text": "Game sim tweaks: nerfed fast WR, WR depth is more important, buffed good tackling LB, and some special teams fixes.",
 		"links": [
