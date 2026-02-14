@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.02.13.1302",
+		"text": "The home team's logo is shown at midfield during live games.",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1r48y2q/version_202602131302_the_home_teams_logo_is_shown/"
+		],
+		"football": true
+	},
+	{
 		"version": "2026.02.11.1207",
 		"text": "Customize keyboard shortcuts at Tools > Global Settings > Keyboard Shortcuts.",
 		"links": [
