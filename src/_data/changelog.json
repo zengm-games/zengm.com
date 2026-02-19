@@ -1,5 +1,25 @@
 [
 	{
+		"version": "2026.02.19.0793",
+		"text": "New anti-tanking draft type: Carry-Over Lottery Allocation (COLA).",
+		"links": [
+			"/blog/2026/02/cola-draft-type/",
+			"https://www.reddit.com/r/BasketballGM/comments/1r96r7s/version_202602190793_adds_a_new_antitanking_draft/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.02.19.0793",
+		"text": "Added new \"Error Factor\" tendency setting to modify the amount of errors in your league.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1r96qi1/version_202602190793_added_new_error_factor/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2026.02.13.1302",
 		"text": "The home team's logo is shown at midfield during live games.",
 		"links": [

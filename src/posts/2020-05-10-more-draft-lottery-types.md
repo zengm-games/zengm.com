@@ -5,7 +5,7 @@ date: 2020-05-12
 tags:
   - post
   - New Feature
-  - Draft
+  - Draft Lottery
 ---
 
 Part of the fun of using [real rosters back to 1956](/blog/2020/05/beta-real-rosters-back-to-1956/) is watching league rules change over time. Historically, [the draft lottery sure changed a lot](https://en.wikipedia.org/wiki/NBA_draft_lottery#History). And today, Basketball GM just got much better support for historical draft lotteries.
