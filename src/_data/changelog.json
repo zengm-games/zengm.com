@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.02.27.0514",
+		"text": "Totals for key stats are shown in the play-by-play log. Thanks @jdabapo!",
+		"links": [
+			"/blog/2026/02/totals-play-by-play/",
+			"https://www.reddit.com/r/BasketballGM/comments/1rg6vwd/version_202602270514_totals_for_key_stats_are/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.02.19.0793",
 		"text": "New anti-tanking draft type: Carry-Over Lottery Allocation (COLA).",
 		"links": [

@@ -31,7 +31,7 @@ And these are only in Basketball GM:
 
 I also added some more info to be displayed when you're picking a new team:
 
-<figure class="overflow-auto"><a href="/files/new-achievements.png"><img src="/files/new-achievements.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/new-achievements.png"></figure>
 
 Some of that is intended to make the Around the World achievements a little more manageable, but mostly I think it's just useful to know this stuff.
 

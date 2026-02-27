@@ -12,7 +12,7 @@ The [new football drive charts](/blog/2023/11/football-drive-chart/) made me thi
 
 Here is my attempt at redesigning the play-by-play log for all of the sports:
 
-<figure class="overflow-auto"><a href="/files/play-by-play-redesign-1.png"><img src="/files/play-by-play-redesign-1.png"></a></figure>
+<figure class="overflow-auto"><img src="/files/play-by-play-redesign-1.png"></figure>
 
 <!--more-->
 
