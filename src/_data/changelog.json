@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2026.03.02.0790",
+		"text": "The total number of playoff teams is shown when editing playoff settings.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1rj0cgb/version_202603020790_the_total_number_of_playoff/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.03.02.0790",
+		"text": "The roster page shows conference/league rank and number of games back from the leader.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1rj0cgb/version_202603020790_the_total_number_of_playoff/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.02.27.0514",
 		"text": "Totals for key stats are shown in the play-by-play log. Thanks @jdabapo!",
 		"links": [
