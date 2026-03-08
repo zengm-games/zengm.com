@@ -1,5 +1,20 @@
 [
 	{
+		"version": "2026.03.08.0954",
+		"text": "Offensive line stats!",
+		"links": [
+			"/blog/2026/03/offensive-line-stats/",
+			"https://www.reddit.com/r/Football_GM/comments/1roeoxt/ol_stats_in_fbgm/"
+		],
+		"football": true
+	},
+	{
+		"version": "",
+		"text": "Better batting order generation, rather than just putting the best hitters first.",
+		"links": [""],
+		"baseball": true
+	},
+	{
 		"version": "2026.03.02.0790",
 		"text": "The total number of playoff teams is shown when editing playoff settings.",
 		"links": [
