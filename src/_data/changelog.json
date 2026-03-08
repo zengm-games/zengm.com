@@ -9,9 +9,11 @@
 		"football": true
 	},
 	{
-		"version": "",
+		"version": "2026.03.08.0954",
 		"text": "Better batting order generation, rather than just putting the best hitters first.",
-		"links": [""],
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1rogtc0/version_202603080954_better_batting_order/?"
+		],
 		"baseball": true
 	},
 	{
