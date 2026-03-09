@@ -9,7 +9,7 @@ tags:
   - Stats
 ---
 
-Offensie line (OL) is an interesting position in football because it's extremely important but there are no traditioanl stats for OLs. Like if you go to [the player page for an OL on espn.com](https://www.espn.com/nfl/player/_/id/4035662/garett-bolles) you see literally no stats. There are some non-standard or advanced stats people use for OL, but they tend to be either qualitative or not very informative.
+Offensive line (OL) is an interesting position in football because it's extremely important but there are no traditioanl stats for OLs. Like if you go to [the player page for an OL on espn.com](https://www.espn.com/nfl/player/_/id/4035662/garett-bolles) you see literally no stats. There are some non-standard or advanced stats people use for OL, but they tend to be either qualitative or not very informative.
 
 FBGM has never had OL stats. I did it this way because of what I wrote above - I felt like OL stats were kind of weird and uncommon, so nobody would miss them. But I was wrong about that. Many users have asked me for OL stats, and it does make sense that people want some way to get insight into what their OL are doing.
 
