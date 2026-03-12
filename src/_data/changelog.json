@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2026.03.12.0869",
+		"text": "Added an Offensive Player of the Year (OPOY) award.",
+		"links": [
+			"/blog/2026/03/opoy-award/",
+			"https://www.reddit.com/r/Football_GM/comments/1rryxw0/version_202603120869_added_an_offensive_player_of/"
+		],
+		"football": true
+	},
+	{
 		"version": "2026.03.08.0954",
 		"text": "Offensive line stats!",
 		"links": [
