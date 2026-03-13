@@ -1,4 +1,5 @@
-const LAST_VERSION_BEFORE_THIS_EXISTED = "2021.05.25.0919";
+// Keep in sync with checkChanges.ts
+const FETCH_LIMIT = 10;
 
 class ChangelogPHP {
 	data() {
@@ -8,9 +9,36 @@ class ChangelogPHP {
 	}
 
 	render({ changelog }) {
-		const filteredChangelog = changelog.filter(
-			row => row.version !== undefined, // && row.version > LAST_VERSION_BEFORE_THIS_EXISTED,
-		);
+		// Keep at least 10 changelog entries for each sport
+		const keptBySport = {
+			baseball: 0,
+			basketball: 0,
+			football: 0,
+			hockey: 0,
+		};
+		let doneAll = false;
+		const filteredChangelog = changelog.filter(row => {
+			if (row.version === undefined || doneAll) {
+				return false;
+			}
+
+			let someNotDone = false;
+			for (const sport of Object.keys(keptBySport)) {
+				if (row[sport]) {
+					keptBySport[sport] += 1;
+				}
+
+				if (keptBySport[sport] < FETCH_LIMIT) {
+					someNotDone = true;
+				}
+			}
+
+			if (!someNotDone) {
+				doneAll = true;
+			}
+
+			return true;
+		});
 
 		return `<?php
 if ($_SERVER["REQUEST_METHOD"] !== "GET") {
