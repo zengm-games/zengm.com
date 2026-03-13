@@ -14,10 +14,10 @@ Well, as the guy writing the code for FBGM, I have the opportunity to make the l
 
 <!--more-->
 
-**If a defensive player wins MVP**, then OPOY is the best offensive player. That's pretty simple.
+**If a defensive player wins MVP**, then OPOY is the best non-QB offensive player.
 
-**If a QB wins OPOY**, then the OPOY is the best non-QB offensive player. But there is an exception! If the QB had a way better season than the other candidate, then the QB wins both MVP and OPOY.
+**If a QB wins MVP**, then the OPOY is the best non-QB offensive player. But there is an exception! If the QB had a way better season than the other candidate, then the QB wins both MVP and OPOY. I set the cutoff so that winning both MVP and OPOY should be rare, like once every 25 years in a league with default settings.
 
-**If a non-QB wins OPOY**, then the OPOY is the best other offensive player. Same exception as above applies though, so the MVP could win OPOY if they are dominant enough.
+**If a non-QB wins MVP**, then he also wins OPOY.
 
-I set the cutoff so that winning both MVP and OPOY should be rare, like once every 25 years in a league with default settings.
+So when you're looking at career award totals, QBs get MVPs for great seasons and also win OPOY for spectacular seasons. And other offensive players get OPOYs for great seasons and also win MVP for spectacular seasons.
