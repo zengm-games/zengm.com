@@ -16,7 +16,7 @@ Well, as the guy writing the code for FBGM, I have the opportunity to make the l
 
 **If a defensive player wins MVP**, then OPOY is the best non-QB offensive player.
 
-**If a QB wins MVP**, then the OPOY is the best non-QB offensive player. But there is an exception! If the QB had a way better season than anyone else in the league, then the QB wins both MVP and OPOY. I set the cutoff so that winning both MVP and OPOY should be rare, like once every 25 years in a league with default settings.
+**If a QB wins MVP**, then the OPOY is the best non-QB offensive player. But there is an exception! If the QB had a way better season than anyone else in the league, then the QB wins both MVP and OPOY. I set the cutoff so that a QB winning both MVP and OPOY should be rare, like once every 25 years in a league with default settings.
 
 **If a non-QB wins MVP**, then he also wins OPOY.
 
