@@ -1,9 +1,21 @@
 [
 	{
+		"version": "2026.04.01.1238",
+		"text": "Trades made after a player is a free agent no longer affect willingness to sign.",
+		"links": [
+			"/blog/2026/04/trades-free-agent-mood/",
+			"https://www.reddit.com/r/BasketballGM/comments/1sa2o1t/version_202604011238_trades_made_after_a_player/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.03.25.1037",
 		"text": "RBW and PBW are tracked for TE and RB, in addition to OL.",
 		"links": [
-			"https://www.reddit.com/r/Football_GM/comments/1s3noxy/rbw_and_pbw_are_tracked_for_te_and_rb_in_addition/?"
+			"https://www.reddit.com/r/Football_GM/comments/1s3noxy/rbw_and_pbw_are_tracked_for_te_and_rb_in_addition/"
 		],
 		"football": true
 	},
