@@ -1,5 +1,22 @@
 [
 	{
+		"version": "2026.04.09.0603",
+		"text": "In real players leagues, added expansion teams in Seattle and Las Vegas for the 2029 season.",
+		"links": [
+			"/blog/2026/04/2029-expansion-teams/",
+			"https://www.reddit.com/r/BasketballGM/comments/1sgqkpf/version_202604090603_in_real_players_leagues/"
+		],
+		"basketball": true
+	},
+	{
+		"version": "2026.04.09.0603",
+		"text": "When there is a walk-off win with a live ball (like a base hit or error, not a HR), the game ends when the winning run scores and the batter has reached first safely, rather than allowing additional runs to score.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1sgqlec/version_202604090603_when_there_is_a_walkoff_win/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2026.04.01.1238",
 		"text": "Trades made after a player is a free agent no longer affect willingness to sign.",
 		"links": [
