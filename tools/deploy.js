@@ -1,4 +1,5 @@
 const { spawn } = require("node:child_process");
+const { setTimeout } = require("node:timers/promises");
 const Cloudflare = require("cloudflare");
 const cloudflareConfig = require("../../../.config/cloudflare.json"); // eslint-disable-line import/no-unresolved
 

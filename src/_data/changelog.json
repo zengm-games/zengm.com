@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.04.19.1274",
+		"text": "Redesigned contract negotiations - same UI, but as a popup rather than a separate page.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1sqaxlt/version_202604191274_redesigned_contract/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.04.13.0731",
 		"text": "Updated real players rosters so you can start a league at the 2026 playoffs.",
 		"links": [
