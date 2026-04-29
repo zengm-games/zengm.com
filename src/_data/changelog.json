@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.04.24.0772",
+		"text": "Added game score (GSc) stat for starting pitchers, which rates individual games on a scale of roughly 0-100.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1sulbyb/version_202604240772_added_game_score_gsc_stat/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2026.04.19.1274",
 		"text": "Redesigned contract negotiations - same UI, but as a popup rather than a separate page.",
 		"links": [
