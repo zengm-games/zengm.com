@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.05.10.1298",
+		"text": "Real players leagues created during the 2026 playoffs now include the real draft lottery results.",
+		"links": [
+			"https://old.reddit.com/r/BasketballGM/comments/1t9p7dp/version_202605101298_real_players_leagues_created/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.04.24.0772",
 		"text": "Added game score (GSc) stat for starting pitchers, which rates individual games on a scale of roughly 0-100.",
 		"links": [
