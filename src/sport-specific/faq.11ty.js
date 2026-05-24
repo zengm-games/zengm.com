@@ -26,8 +26,16 @@ module.exports = class FAQ {
 
 		return `<h2><a href="#missing-leagues" name="missing-leagues">My leagues are gone! What happened?</a></h2>
 <p>${gameName} stores all game data on your computer, in your browser profile. This means that you can't play one league on multiple devices unless you export it (from the Tools menu) and then create a new league with that file. So first, <b>make sure you're using the same browser on the same computer</b>. This is true even if you're logged into an account - league data is currently stored only locally, not in your account.</p>
-<p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. This can happen in places like schools and libraries that set browsers to automatically delete everything when they are closed. It also happens if you manually delete your browser data. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues.</a></p>
-<p>Browsers may also delete data if disk space is running low. I've never seen this happen on a desktop/laptop, but it does sometimes happen on mobile browsers, especially on iPhones. To minimize the chance of this happening, you can:</p>
+<p>If you are using the same browser on the same computer and your leagues are missing, the game data has probably been deleted. There are unfortunately several different ways data might be lost:</p>
+<ul>
+	<li>Schools and libraries may configure browsers to automatically delete everything when they are closed.</li>
+	<li>Especially on mobile, data can be deleted if you are running low on disk space or if you don't play the game for a while.</li>
+	<li>You might manually delete your browser data without realizing it affects ${gameName}. For example, in Chrome, if you go to More tools > Clear browsing data... > Cookies and other site data, that will delete all your ${gameName} data. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=340821">This is true even if you tell it to only delete data from today - if you played ${gameName} at all today, it will completely delete all your leagues, and the Chrome devs do not consider this to be a bug.</a></li>
+	<li>If you run some kind of "PC cleaner" or "system optimizer" software like CCleaner or BleachBit, that may delete browser data depending on your settings.</li>
+	<li>There can even be a hardware glitch (like a faulty hard drive) or a bug in your web browser that results in lost data.</li>
+</ul>
+<p>Many users will never run into a problem like this, but for some it can be a recurring issue. This is most common on mobile, especially on iOS which is very aggressive about deleting data from unused web apps.</p>
+<p>To minimize the chance of data loss, you can:</p>
 <ul>
 	<li>Go to <a href="${websitePlay}settings">the global settings page</a> and enable Persistent Storage.</li>
 	<li>If you are low on disk space, delete some other data.</li>
@@ -112,6 +120,18 @@ module.exports = class FAQ {
 <p>That's certainly unrealistic. I completely understand people who wish that every little contract rule from the real world was included. But I am wary of making the contract system too complicated. Sometimes there is a tradeoff between complexity and fun, and for me personally when I'm playing a game like this, I don't want to have to worry about the ever-changing ridiculously complex contract rules that pro leagues have.</p>
 <p>Maybe some day I will include some of that stuff as options. But that's easier said than done, for something as central to the game as contracts. The AI would need to be smart enough to handle all possible combinations of settings, and the AI struggles enough already!</p>
 
+<hr>
+
+<h2><a href="#tendencies" name="tendencies">Can you add "tendencies" to the game in addition to ratings, to more easily control how often players do certain things?</a></h2>
+<p>A lot of the problems people want to solve with "tendencies" would be better solved by having more realistic ratings, and more realistic game simulation based on those ratings. ${gameAcronym} is far from ideal in those aspects right now. But adding a layer of tendencies on top of the current system is not a good solution - it just masks the problem, and then you have another problem of how you set the tendencies, which is probably just as hard if not harder than the initial problem of making the ratings/sim good!</p>
+<p>The only thing tendencies are fundamentally good for is to let you simulate guys who play stupidly, like a player in BBGM who takes a lot of bad shots. In this post-moneyball world, those types of players are not very common, to the point where many people might not even notice if they didn't exist in the game. Their absence would be most apparent in historical sims, as if you look through history there were a lot of guys who in retrospect took a lot more/less shots than they should have. But possibly even players like that could be simulated with appropriate ratings such as the oIQ/dIQ ratings in BBGM.</p>
+
+<hr>
+
+<h2><a href="#coaches" name="coaches">Can you add more stuff to the game? Like coaches, training camps, in-game decision making, etc.</a></h2>
+<p>Maybe. But in general, I am wary of adding too much micromanagement, because that is something that often annoys me in other games. I like the streamlined gameplay my games have now.</p>
+<p>These features would also pose some challenges for balancing the game. Like you don't want one coaching strategy to always be the best for pretty much any situation. And you don't want it to make it too obvious what the best strategy is (then it's no fun, might as well not even be there) but you also don't want to make it too hard to figure out (then the user is basically just guessing). I'm sure you've seen other games that struggle with these kinds of issues.</p>
+
 ${
 	sport === "hockey"
 		? `
@@ -183,6 +203,14 @@ ${
 <li>Rpit: pitching runs saved</li>
 </ul>
 <p>Add those up and you get RAA (runs above average). Scale that based on how many runs are scored per game and you get WAA (wins above average). To compare against replacement level rather than average, also add in Rrep (runs from replacement level) and then you have RAR (runs above replacement). Scaling that by runs scored gives WAR (wins above replacement).</p>
+
+<hr>
+
+<h2><a href="#positions" name="positions">How does the game decide what position a player plays, and why does it sometimes change from one season to the next?</a></h2>
+<p>In ${gameName}, a player's position is based on their ratings. For each position, defensive ability depends on certain ratings. For example, the Ground Ball Fielding (Gnd) rating is very important for a shortstop, but not for an outfielder.</p>
+<p>This means that as player ratings change from year to year, their position may change too. Like a SS who loses a little athleticism might become a 2B or 3B.</p>
+<p>However you can also play players out of position. In general if you move a player from a more difficult position to a less difficult position (like SS -> 2B or CF -> LF/RF) they will be fine, and may even do better than someone whose best position is one of the easier positions. (I believe this is also true IRL.) And moving a player in the opposite direction to a more difficult position may still be worthwhile if it helps your offense enough.</p>
+<p>You may also wonder if "experience" matters for defense, like if you move an outfielder to 1B do they get better at 1B over time? And for ${gameAcronym} the answer is no, defensive ability is just based on ratings, not based on playing experience. I know other games do consider experience and it probably is realistic and I did think about implementing it that way, but ultimately decided against it for simplicity.</p>
 `
 		: ""
 }`;
