@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.05.25.0839",
+		"text": "Added quality starts (QS) stat for starting pitchers and added season leader awards for batting average, OPS, ERA, and saves.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1tngs5q/version_202605250839_added_quality_starts_qs_stat/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2026.05.10.1298",
 		"text": "Real players leagues created during the 2026 playoffs now include the real draft lottery results.",
 		"links": [
