@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2026.05.30.1213",
+		"text": "New \"NBA 2027 (3-2-1)\" draft type, which is now the default in new random players leagues and in new real players leagues once they reach 2027.",
+		"links": [
+			"/blog/2026/05/nba2027-draft-type/",
+			"https://www.reddit.com/r/BasketballGM/comments/1tsfw7c/the_new_321_lottery_is_now_in_bbgm_version/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.05.25.0839",
 		"text": "Added quality starts (QS) stat for starting pitchers and added season leader awards for batting average, OPS, ERA, and saves.",
 		"links": [
