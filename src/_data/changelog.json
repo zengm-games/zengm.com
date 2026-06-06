@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.06.05.0594",
+		"text": "Ratings on player profile pages are color-coded similar to the player info popup.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1txlnxo/version_202606050594_ratings_on_player_profile/",
+			"https://www.reddit.com/r/BasketballGM/comments/1ty1sgr/update_to_the_player_profile_ratings_colors/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.05.30.1213",
 		"text": "New \"NBA 2027 (3-2-1)\" draft type, which is now the default in new random players leagues and in new real players leagues once they reach 2027.",
 		"links": [
