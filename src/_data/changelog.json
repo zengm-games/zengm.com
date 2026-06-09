@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.06.09.0776",
+		"text": "Import/export the schedule as a CSV file from the Schedule Editor. Thanks @aneeshg5!",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1u1atl2/version_202606090776_importexport_the_schedule_as/",
+			"https://github.com/zengm-games/zengm/pull/513"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.06.05.0594",
 		"text": "Ratings on player profile pages are color-coded similar to the player info popup.",
 		"links": [
