@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.06.11.0965",
+		"text": "New historical fantasy draft feature inspired by 82-0: in any league, enable God Mode, then go to Tools > 82-0 Draft. Thanks @mvanhorn!",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1u39wcb/version_202606110965_new_historical_fantasy_draft/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.06.09.0776",
 		"text": "Import/export the schedule as a CSV file from the Schedule Editor. Thanks @aneeshg5!",
 		"links": [
