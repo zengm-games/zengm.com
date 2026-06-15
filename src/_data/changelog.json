@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.06.15.0649",
+		"text": "Updated real players rosters so you can start a league at the 2026 draft.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1u6irth/version_202606150649_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.06.14.1364",
 		"text": "Improved draft lottery probability calculation. Thanks @wiigeneral!",
 		"links": [
