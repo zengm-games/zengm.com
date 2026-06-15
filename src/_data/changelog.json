@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.06.14.1364",
+		"text": "Improved draft lottery probability calculation. Thanks @wiigeneral!",
+		"links": [
+			"/blog/2026/06/draft-lottery-probability-calculation/",
+			"https://www.reddit.com/r/BasketballGM/comments/1u64hl3/version_202606141364_improved_draft_lottery/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.06.11.0965",
 		"text": "New historical fantasy draft feature inspired by 82-0: in any league, enable God Mode, then go to Tools > 82-0 Draft. Thanks @mvanhorn!",
 		"links": [
