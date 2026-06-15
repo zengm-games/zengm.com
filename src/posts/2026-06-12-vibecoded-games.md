@@ -48,7 +48,7 @@ Of particular relevance to me, a lot of the vibecoded games are web-based games 
 
 Things have certainly changed since 2012. Back then I was taking on a huge challenge to make a web-based sports sim game. But now that's the easy path. That explanation I wrote above about how maybe nobody has really competed with BBGM because it didn't make econmomic sense? The economics have changed. Now everyone is trying to compete with me!
 
-And yet nothing has really changed for me right now. BBGM is still about as popular as it was the past few year. It's actually making a little more money this year, due to the ad market improving. But I no longer feel comfortable sitting here in my niche. It's like the enemy is approaching my city walls, and nothing has really changed yet, the siege has not begun, the battle has not started. But it's coming.
+And yet nothing has really changed for me right now. BBGM is still about as popular as it was the past few years. It's actually making a little more money this year, due to the ad market improving. But I no longer feel comfortable sitting here in my niche. It's like the enemy is approaching my city walls, and nothing has really changed yet, the siege has not begun, the battle has not started. But it's coming.
 
 How long until someone makes something that's just as good as BBGM? How long until someone makes something that's significantly better? Yogi Berra's quote about predictions is very wise, so I don't know the answer to these questions, but if forced to guess I'd say maybe a year or two? Something like that? Who knows.
 
