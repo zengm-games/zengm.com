@@ -1,5 +1,27 @@
 [
 	{
+		"version": "2026.06.17.0679",
+		"text": "Championship banners are now also shown on the Team History and GM History pages.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1u8d58x/version_202606170679_championship_banners_are_now/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.06.16.0699",
+		"text": "On the Playoffs page, a championship banner is shown for the winning team.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1u7h31t/version_202606160699_on_the_playoffs_page_a/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.06.15.0649",
 		"text": "Updated real players rosters so you can start a league at the 2026 draft.",
 		"links": [
