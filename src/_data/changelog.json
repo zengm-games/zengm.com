@@ -1,5 +1,29 @@
 [
 	{
+		"version": "2026.06.20.0955",
+		"text": "Added columns to the Hall of Fame table showing the number of MVPs and championships won. Thanks @aneeshg5!",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1ub5w72/two_little_ui_updates_in_version_202606200955/",
+			"https://github.com/zengm-games/zengm/pull/525"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.06.20.0955",
+		"text": "Players' previous contracts are shown in the Re-sign Players table. Thanks @aneeshg5!",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1ub5w72/two_little_ui_updates_in_version_202606200955/",
+			"https://github.com/zengm-games/zengm/pull/524"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.06.17.0679",
 		"text": "Championship banners are now also shown on the Team History and GM History pages.",
 		"links": [
