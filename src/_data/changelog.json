@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.06.25.0546",
+		"text": "Updated real players rosters so you can start a league after the 2026 draft.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1uf9ije/version_202606250546_updated_real_players_rosters/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.06.20.0955",
 		"text": "Added columns to the Hall of Fame table showing the number of MVPs and championships won. Thanks @aneeshg5!",
 		"links": [
