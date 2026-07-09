@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2026.07.09.0710",
+		"text": "When you ask for a counter-offer of a trade, new assets added to the trade have an icon next to them.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1uru7tc/version_202607090710_when_you_ask_for_a/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.07.09.0710",
+		"text": "Added a rebuild achievement for the 2026 season: Sacramento.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1uru7tc/version_202607090710_when_you_ask_for_a/owihxdr/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.06.25.0546",
 		"text": "Updated real players rosters so you can start a league after the 2026 draft.",
 		"links": [
