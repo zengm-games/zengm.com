@@ -1,5 +1,14 @@
 [
 	{
+		"version": "2026.07.13.1345",
+		"text": "Updated default injuries.",
+		"links": [
+			"/blog/2026/07/updated-default-injuries/",
+			"https://www.reddit.com/r/BasketballGM/comments/1uvvvt6/version_202607131345_updated_default_injuries/"
+		],
+		"basketball": true
+	},
+	{
 		"version": "2026.07.09.0710",
 		"text": "When you ask for a counter-offer of a trade, new assets added to the trade have an icon next to them.",
 		"links": [
