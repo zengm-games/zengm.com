@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.07.15.0836",
+		"text": "When you sign a free agent or release a re-signing player, you can undo the action in case you made a mistake.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1uxdehe/version_202607150836_when_you_sign_a_free_agent/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.07.13.1345",
 		"text": "Updated default injuries.",
 		"links": [
