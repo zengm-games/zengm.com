@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.10.07.0804",
+		"text": "Draft pick trade value accounts for lottery and playoff settings.",
+		"links": [
+			"/blog/2026/10/draft-pick-trade-value/",
+			"https://www.reddit.com/r/BasketballGM/comments/1x02nck/version_202610070804_draft_pick_trade_value/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.09.22.0930",
 		"text": "Fewer late-game non-shooting fouls when tied or up by 1-2 points.",
 		"links": [
