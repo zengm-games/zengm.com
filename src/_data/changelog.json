@@ -6234,7 +6234,7 @@
 		"football": true
 	},
 	{
-		"date": "2020-09-14",
+		"date": "2019-09-14",
 		"text": "Fixed rare bug where injured or fouled out players would sometimes play even when someone else was available.",
 		"basketball": true
 	},

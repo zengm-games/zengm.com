@@ -39,7 +39,7 @@ const addHash = async path => {
 
 	const hash = hasha.fromFileSync(fullPath);
 
-	return `${path}?v=${hash.substr(0, 10)}`;
+	return `${path}?v=${hash.slice(0, 10)}`;
 };
 
 module.exports = function (eleventyConfig) {
