@@ -166,14 +166,6 @@ const updateDisplayedEntries = sport => {
 	}
 };
 
-const showSport = sport => {
-	for (const child of list.children) {
-		if (child.dataset[sport]) {
-			child.style.display = "";
-		}
-	}
-};
-
 for (const [sport, button] of Object.entries(buttons)) {
 	button.addEventListener("click", () => {
 		state[sport] = !state[sport];
