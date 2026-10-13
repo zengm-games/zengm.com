@@ -6,6 +6,7 @@ tags:
   - post
   - New Feature
   - Real Players
+  - Scheduled Events
 ---
 
 _Update 2020-05-11: This is no longer in beta, you can [play it on the main site](https://play.basketball-gm.com/new_league/real)._

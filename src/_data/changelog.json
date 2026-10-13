@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.10.13.1002",
+		"text": "Scheduled events editor at Tools > Scheduled Events.",
+		"links": [
+			"/blog/2026/10/scheduled-events-editor/",
+			"https://www.reddit.com/r/BasketballGM/comments/1x586yp/version_202610131002_scheduled_events_editor_at/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.10.07.0804",
 		"text": "Draft pick trade value accounts for lottery and playoff settings.",
 		"links": [
