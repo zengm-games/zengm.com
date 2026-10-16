@@ -15,7 +15,7 @@ const players = await bbgm.idb.cache.players.getAll();
 This gets all players, including retired players (but this may be very slow or crash in very large leagues, so only use it when necessary):
 
 ```
-const players = await bbgm.idb.getCopies.players();
+const players = await bbgm.idb.merged.players.getAll();
 ```
 
 In both cases, `players` is an array of `Player` objects that looks like this:
@@ -146,7 +146,7 @@ The `pid` property is the primary key, a unique number identifying the player.
 If you want to fetch only one player, you need to know his `pid`:
 
 ```
-const p = await bbgm.idb.getCopy.players({ pid: 5 });
+const p = await bbgm.idb.merged.players.get(5);
 ```
 
 `p` will be `undefined` if the `pid` is invalid.
@@ -448,7 +448,7 @@ Replace 155 with the player ID number of the player you want to kill.
 
 ```
 async function customTragedy(pid, reason) {
-    const p = await bbgm.idb.getCopy.players({ pid });
+    const p = await bbgm.idb.merged.players.get(pid);
     const tid = p.tid;
     await bbgm.player.retire(p, undefined, {
         logRetiredEvent: false,
@@ -481,7 +481,7 @@ customTragedy(155, "died with whatever text you want");
 var player_id_number = 150;
 var new_jeresy_number = "45";
 
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 if (p.stats.length > 0) {
     p.stats.at(-1).jerseyNumber = new_jeresy_number;
 } else {
@@ -498,7 +498,7 @@ This will show up only on the player profile page, not on any other pages in the
 
 ```
 var player_id_number = 150;
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 p.awards.push({
     season: 2025,
     type: "My Custom Award",
@@ -510,7 +510,7 @@ To remove that custom award:
 
 ```
 var player_id_number = 150;
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 p.awards = p.awards.filter(award => {
     if (award.season === 2025 && award.type === "My Custom Award") {
         return false;

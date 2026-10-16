@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.10.16.0673",
+		"text": "Many pages containing a lot of data (such as Player Stats for all seasons or career totals) load faster, especially in large leagues. Although at some point they may still crash if your league is large enough.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1x7iwvo/version_202610160673_many_pages_containing_a_lot/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.10.13.1002",
 		"text": "Scheduled events editor at Tools > Scheduled Events.",
 		"links": [

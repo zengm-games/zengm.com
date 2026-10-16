@@ -46,8 +46,8 @@ var backup = 0;
 var fa = 0;
 for (let season = 2021; season < bbgm.g.get("season"); season++) {
 	console.log(season);
-	const players = await bbgm.idb.getCopies.playersPlus(
-		await bbgm.idb.getCopies.players({
+	const players = await bbgm.player.formatAll(
+		await bbgm.idb.merged.players.getAll({
 			activeSeason: season,
 		}),
 		{

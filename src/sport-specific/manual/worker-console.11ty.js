@@ -264,7 +264,7 @@ Replace 155 with the player ID number of the player you want to kill.
 
 \`\`\`
 async function customTragedy(pid, reason) {
-    const p = await bbgm.idb.getCopy.players({ pid });
+    const p = await bbgm.idb.merged.players.get(pid);
     const tid = p.tid;
     await bbgm.player.retire(p, undefined, {
         logRetiredEvent: false,
@@ -297,7 +297,7 @@ customTragedy(155, "died with whatever text you want");
 var player_id_number = 150;
 var new_jeresy_number = "45";
 
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 if (p.stats.length > 0) {
     p.stats.at(-1).jerseyNumber = new_jeresy_number;
 } else {
@@ -314,7 +314,7 @@ This will show up only on the player profile page, not on any other pages in the
 
 \`\`\`
 var player_id_number = 150;
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 p.awards.push({
     season: 2025,
     type: "My Custom Award",
@@ -326,7 +326,7 @@ To remove that custom award:
 
 \`\`\`
 var player_id_number = 150;
-var p = await bbgm.idb.getCopy.players({ pid: player_id_number });
+var p = await bbgm.idb.merged.players.get(player_id_number);
 p.awards = p.awards.filter(award => {
     if (award.season === 2025 && award.type === "My Custom Award") {
         return false;
