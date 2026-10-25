@@ -655,5 +655,23 @@
 		"name": "Queens",
 		"pop": 1.5,
 		"region": "Charlotte"
+	},
+	"_SET": {
+		"abbrev": "SET",
+		"colors": ["#47ff47", "#112e5b", "#8f8f8f"],
+		"imgURL": "/img/logos-primary/SEA.svg",
+		"imgURLSmall": "/img/logos-secondary/SEA.svg",
+		"name": "Symphony",
+		"pop": 3.8,
+		"region": "Seattle"
+	},
+	"_LV": {
+		"abbrev": "LV",
+		"colors": ["#1c73bb", "#ffd600", "#0c5983"],
+		"imgURL": "/img/logos-primary/LV.svg",
+		"imgURLSmall": "/img/logos-secondary/LV.svg",
+		"name": "Blue Chips",
+		"pop": 2.1,
+		"region": "Las Vegas"
 	}
 }

@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.10.25.0998",
+		"text": "Late in the game if a player on the winning team has the ball in the open field (such as after a turnover or a first down) they will choose to go down rather than trying to advance further and score a TD if that will allow them to kneel and run out the clock, to avoid giving the ball back to the other team.",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1xfd5zh/version_202610250998_late_in_the_game_if_a_player/"
+		],
+		"football": true
+	},
+	{
 		"version": "2026.10.16.0673",
 		"text": "Many pages containing a lot of data (such as Player Stats for all seasons or career totals) load faster, especially in large leagues. Although at some point they may still crash if your league is large enough.",
 		"links": [

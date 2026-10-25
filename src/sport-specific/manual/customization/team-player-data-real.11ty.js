@@ -67,7 +67,7 @@ In this example I'm only changing the logo for Syracuse, but you can do the same
 
 ## Player Photos
 
-[Here is a template for player photos.](/files/player-photos.json) Within that file, you need to replace the text like "URL to photo of Some Guy (1995 draft class)" with a URL to a photo of that player.
+[Here is a template for player photos.](/files/player-photos.json) Within that file, you need to replace the text like "Image URL or face object for Some Guy (1995 draft class)" with either a string containing the URL to a photo of that player or a [faces.js JSON face object](https://zengm.com/facesjs/editor/) if you want to use custom cartoon faces.
 
 This template file contains every player in BBGM, which currently goes back to 1956. If you only care about a subset of them, that's fine. You can delete the players you don't care about and only enter URLs for the remaining players.`;
 	}
