@@ -6,6 +6,7 @@ tags:
   - post
   - New Feature
   - Real Players
+  - Settings
 ---
 
 In Real Players leagues, player ratings are based on player stats. It's not perfect, but it works fairly well.

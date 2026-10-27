@@ -4,9 +4,9 @@ title: FBGM updates to keep you busy on Super Bowl bye week
 date: 2026-02-01
 tags:
   - post
-  - Customization
   - Game Simulation
   - Football
+  - Settings
 ---
 
 Lately I've been working on a bunch of little improvements for FBGM and I'm releasing them all today, since there are no real football games today so maybe you are looking for something else to do :)
