@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.10.30.1323",
+		"text": "Added a button to the Team History page to show only the seasons you controlled the team.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1xjy56c/version_202610301323_added_a_button_to_the_team/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.10.27.0851",
 		"text": "More settings for real draft prospect ratings.",
 		"links": [
