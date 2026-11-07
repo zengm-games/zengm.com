@@ -1,5 +1,17 @@
 [
 	{
+		"version": "2026.11.06.1212",
+		"text": "Partial support for contracts that change over time.",
+		"links": [
+			"/blog/2026/11/variable-contracts/",
+			"https://www.reddit.com/r/BasketballGM/comments/1xptqtg/version_202611061212_partial_support_for/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.10.30.1323",
 		"text": "Added a button to the Team History page to show only the seasons you controlled the team.",
 		"links": [
@@ -15,7 +27,7 @@
 		"text": "More settings for real draft prospect ratings.",
 		"links": [
 			"/blog/2026/10/more-real-draft-prospect-ratings/",
-			"https://zengm.com/blog/2026/10/more-real-draft-prospect-ratings/"
+			"https://www.reddit.com/r/BasketballGM/comments/1xh067y/version_202610270851_more_settings_for_real_draft/"
 		],
 		"basketball": true
 	},
