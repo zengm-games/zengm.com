@@ -1,5 +1,28 @@
 [
 	{
+		"version": "2026.11.12.0805",
+		"text": "When customizing settings while creating a new league, you can now go back to the main \"New League\" page and keep your edited settings, for instance if you realize you want to change your team or league type after you've already changed some settings.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1xukhwp/version_202611120805_minor_ui_updates/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.11.12.0805",
+		"text": "Option to heal injuries when playing an exhibition game. Also in baseball, you can select the starting pitcher.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1xukhwp/version_202611120805_minor_ui_updates/",
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1xukjtv/version_202611120805_select_a_starting_pitcher_in/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.11.06.1212",
 		"text": "Partial support for contracts that change over time.",
 		"links": [
