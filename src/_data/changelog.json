@@ -1,5 +1,13 @@
 [
 	{
+		"version": "2026.11.16.0777",
+		"text": "Play-by-play shows more detail about penalty enforcement.",
+		"links": [
+			"https://www.reddit.com/r/Football_GM/comments/1xxw8ku/version_202611160777_playbyplay_shows_more_detail/"
+		],
+		"football": true
+	},
+	{
 		"version": "2026.11.12.0805",
 		"text": "When customizing settings while creating a new league, you can now go back to the main \"New League\" page and keep your edited settings, for instance if you realize you want to change your team or league type after you've already changed some settings.",
 		"links": [
