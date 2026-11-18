@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.11.18.0904",
+		"text": "New \"Randomize contracts\" feature at Tools > Danger Zone to regenerate all contracts, similar to a new random players league.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1xzpaqd/version_202611180904_new_randomize_contracts/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.11.16.0777",
 		"text": "Play-by-play shows more detail about penalty enforcement.",
 		"links": [
