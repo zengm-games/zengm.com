@@ -1,5 +1,24 @@
 [
 	{
+		"version": "2026.11.20.0766",
+		"text": "Playoff/title odds on the Power Rankings page, game odds in the schedule (switch back to spread by clicking the percentage), and live win probability during game sim.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1y19vr9/version_202611200766_playofftitle_odds_on_the/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
+		"version": "2026.11.20.0766",
+		"text": "AI teams build more balanced rosters.",
+		"links": [
+			"https://www.reddit.com/r/ZenGMBaseball/comments/1y19xt6/version_202611200766_ai_teams_build_more_balanced/"
+		],
+		"baseball": true
+	},
+	{
 		"version": "2026.11.18.0904",
 		"text": "New \"Randomize contracts\" feature at Tools > Danger Zone to regenerate all contracts, similar to a new random players league.",
 		"links": [
