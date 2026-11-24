@@ -1,5 +1,16 @@
 [
 	{
+		"version": "2026.11.23.1317",
+		"text": "Career totals on player profile pages include separate rows for each team.",
+		"links": [
+			"https://www.reddit.com/r/BasketballGM/comments/1y42492/version_202611231317_career_totals_on_player/"
+		],
+		"baseball": true,
+		"basketball": true,
+		"football": true,
+		"hockey": true
+	},
+	{
 		"version": "2026.11.20.0766",
 		"text": "Playoff/title odds on the Power Rankings page, game odds in the schedule (switch back to spread by clicking the percentage), and live win probability during game sim.",
 		"links": [
